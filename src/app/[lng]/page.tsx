@@ -3,7 +3,9 @@ import React from 'react'
 import { Nav } from '@/components/nav'
 import { useTranslation } from '@/i18n'
 
-interface PageParam {params: { lng: string }}
+interface PageParam {
+  params: { lng: string }
+}
 
 const Page = async ({ params: { lng } }: PageParam): Promise<React.ReactElement> => {
   const { t } = await useTranslation(lng)
