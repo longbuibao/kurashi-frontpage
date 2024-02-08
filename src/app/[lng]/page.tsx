@@ -1,10 +1,14 @@
 import React from 'react'
 
 import { Nav } from '@/components/nav'
+import { useTranslation } from '@/i18n'
 
-const Page = (): React.ReactElement => {
+interface PageParam {params: { lng: string }}
+
+const Page = async ({ params: { lng } }: PageParam): Promise<React.ReactElement> => {
+  const { t } = await useTranslation(lng)
   return (
-    <Nav links={[{ label: 'home', url: '#' }]} />
+    <Nav links={[{ label: t('home'), url: '#' }]} />
   )
 }
 
