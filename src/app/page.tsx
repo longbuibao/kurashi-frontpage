@@ -4,7 +4,7 @@ import { Nav } from '@/components/nav'
 
 const Page = (): React.ReactElement => {
   return (
-    <Nav links={[]} />
+    <Nav links={[{ label: 'home', url: '#' }]} />
   )
 }
 

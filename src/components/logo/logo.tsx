@@ -7,7 +7,7 @@ interface LogoProps {
 }
 
 const Logo: FC<LogoProps> = ({ imgSrc, width, height }) => {
-  return <img className={`w-[${width}px]`} src={imgSrc} alt='The logo' />
+  return <img width={width} className={`w-[${width}px]`} src={imgSrc} alt='Kurashi logo' />
 }
 
 export default Logo
