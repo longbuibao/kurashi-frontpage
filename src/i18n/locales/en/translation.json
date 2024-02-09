@@ -1,3 +1,7 @@
 {
-	"home": "Home"
+	"home": "Home",
+	"products": "Products",
+	"catalog": "Catalog",
+	"contact": "Contact",
+	"contact-using-zalo": "Contact Zalo"
 }

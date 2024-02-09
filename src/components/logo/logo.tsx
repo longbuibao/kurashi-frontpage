@@ -6,8 +6,8 @@ interface LogoProps {
   height?: number
 }
 
-const Logo: FC<LogoProps> = ({ imgSrc, width, height }) => {
-  return <img width={width} className={`w-[${width}px]`} src={imgSrc} alt='Kurashi logo' />
+const Logo: FC<LogoProps> = ({ imgSrc, width, height = -1 }) => {
+  return <img width={width} height={height} className={`w-[${width}px] h-[${height}px]`} src={imgSrc} alt='Kurashi logo' />
 }
 
 export default Logo

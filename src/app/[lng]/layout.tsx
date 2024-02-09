@@ -5,13 +5,6 @@ export const metadata = {
   title: 'Home'
 }
 
-const languages = ['vi', 'en', 'ja']
-
-interface LanguageParam { lng: string }
-export async function generateStaticParams (): Promise<LanguageParam[]> {
-  return languages.map((lng) => ({ lng }))
-}
-
 interface RootProps { children: React.ReactNode, params: { lng: string } }
 const RootLayout: React.FC<RootProps> = ({ children, params }): React.ReactElement => {
   return (
