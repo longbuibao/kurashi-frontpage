@@ -16,7 +16,7 @@ interface NavProps {
 
 const Nav: FC<NavProps> = ({ links, t }) => {
   return (
-    <header className='py-8 mx-auto z-10 w-3/4'>
+    <header>
       <nav className='flex justify-between items-center'>
         <Link href='/' className='items-start mx-5'>
           <Logo imgSrc='/assets/logo/kurashi-logo.png' width={450} height={157} />
@@ -29,7 +29,7 @@ const Nav: FC<NavProps> = ({ links, t }) => {
               </li>
             )
           })}
-          <li className='text-nowrap rounded-md bg-main px-3 py-2 text-secondary font-semibold'>
+          <li className='text-nowrap mb-2 rounded-md bg-main px-3 py-2 text-secondary font-semibold'>
             <div>
               <Link href='#zalolink'>{t('contact-using-zalo')}</Link>
               <div className='ml-3 inline-block'>

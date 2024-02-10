@@ -1,8 +1,39 @@
 'use client'
-import React from 'react'
+import React, { CSSProperties } from 'react'
+import { Carousel } from 'react-responsive-carousel'
+import 'react-responsive-carousel/lib/styles/carousel.min.css'
 
-const CarouselSlider: React.FC = () => {
-  return <></>
+interface CarouselProps {
+  items: React.ReactElement[]
+  indicatorStyles: CSSProperties
+}
+
+const CarouselSlider: React.FC<CarouselProps> = ({ items, indicatorStyles }) => {
+  return (
+    <Carousel
+      renderIndicator={(onClickHandler, isSelected, index, label): React.ReactElement => {
+        if (isSelected) {
+          return <li style={{ ...indicatorStyles }} />
+        }
+        return (
+          <li
+            style={indicatorStyles}
+            onClick={onClickHandler}
+            onKeyDown={onClickHandler}
+            value={index}
+            key={index}
+            role='button'
+            tabIndex={0}
+          />
+        )
+      }}
+      infiniteLoop
+      showThumbs={false}
+      showStatus={false}
+    >
+      {items}
+    </Carousel>
+  )
 }
 
 export default CarouselSlider
