@@ -13,7 +13,7 @@ const CarouselSlider: React.FC<CarouselProps> = ({ items, indicatorStyles }) => 
     <Carousel
       renderIndicator={(onClickHandler, isSelected, index, label): React.ReactElement => {
         if (isSelected) {
-          return <li style={{ ...indicatorStyles }} />
+          return <li style={{ ...indicatorStyles, background: '#437254' }} />
         }
         return (
           <li
