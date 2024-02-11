@@ -2,6 +2,8 @@ import { FC } from 'react'
 import Link from 'next/link'
 
 import { Logo } from '@/components/logo'
+import { KurashiDiv } from '@/components/kurashi-div'
+import { KurashiLink } from '@/components/kurashi-link'
 import { TFunction } from 'i18next'
 
 interface LinkItem {
@@ -24,18 +26,20 @@ const Nav: FC<NavProps> = ({ links, t }) => {
         <ul className='flex-1 flex justify-center items-center gap-16 max-lg:hidden'>
           {links.map(link => {
             return (
-              <li className='text-nowrap pb-2 hover:text-main hover:border-b-2' key={link.label}>
-                <Link href={`${link.url}`}>{link.label}</Link>
-              </li>
+              <KurashiLink key={link.label}>
+                <li>
+                  <Link href={`${link.url}`}>{link.label}</Link>
+                </li>
+              </KurashiLink>
             )
           })}
-          <li className='text-nowrap mb-2 rounded-md bg-main px-3 py-2 text-secondary font-semibold'>
-            <div>
+          <li>
+            <KurashiDiv>
               <Link href='#zalolink'>{t('contact-using-zalo')}</Link>
               <div className='ml-3 inline-block'>
                 <i className='fa-solid fa-chevron-right' />
               </div>
-            </div>
+            </KurashiDiv>
           </li>
         </ul>
         <div className='hidden max-lg:block'>

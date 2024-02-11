@@ -2,6 +2,8 @@ import React from 'react'
 
 import { Nav } from '@/components/nav'
 import { CarouselSlider } from '@/components/carousel-slider'
+import { KurashiDiv } from '@/components/kurashi-div'
+import { KurashiLink } from '@/components/kurashi-link'
 import { useTranslation } from '@/i18n'
 import { navItems, carouselSliderImages } from '@/constants'
 
@@ -28,6 +30,19 @@ const Page = async ({ params: { lng } }: PageParam): Promise<React.ReactElement>
       <div className='w-4/5 mx-auto max-lg:w-full'>
         <CarouselSlider items={carouselSliders} indicatorStyles={carouselCssDotIndicator} />
       </div>
+      <div className='text-5xl w-fit mx-auto my-10'>
+        <KurashiLink>
+          <h3>
+            {t('products')}
+          </h3>
+        </KurashiLink>
+      </div>
+      <div className='w-fit mx-auto mt-16'>
+        <KurashiDiv>
+          <div className='px-12 text-2xl'>{t('japan-authentic')}</div>
+        </KurashiDiv>
+      </div>
+
     </main>
   )
 }
