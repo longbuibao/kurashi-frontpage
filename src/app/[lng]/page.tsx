@@ -1,11 +1,10 @@
-import React from 'react'
+import React, { Suspense } from 'react'
 
-import { Nav } from '@/components/nav'
 import { CarouselSlider } from '@/components/carousel-slider'
 import { KurashiDiv } from '@/components/kurashi-div'
 import { KurashiLink } from '@/components/kurashi-link'
 import { useTranslation } from '@/i18n'
-import { navItems, carouselSliderImages } from '@/constants'
+import { carouselSliderImages } from '@/constants'
 
 interface PageParam {
   params: { lng: string }
@@ -24,9 +23,6 @@ const Page = async ({ params: { lng } }: PageParam): Promise<React.ReactElement>
 
   return (
     <main>
-      <div className='pb-1 mx-auto z-10 w-3/4'>
-        <Nav t={t} links={navItems.map(item => { return { label: t(item.label), url: item.url } })} />
-      </div>
       <div className='w-4/5 mx-auto max-lg:w-full'>
         <CarouselSlider items={carouselSliders} indicatorStyles={carouselCssDotIndicator} />
       </div>
@@ -42,6 +38,7 @@ const Page = async ({ params: { lng } }: PageParam): Promise<React.ReactElement>
           <div className='px-12 text-2xl'>{t('japan-authentic')}</div>
         </KurashiDiv>
       </div>
+      <div />
 
     </main>
   )

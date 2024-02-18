@@ -10,3 +10,9 @@ export const carouselSliderImages = [
   '/assets/carousel-sliders/Slider_02.jpg',
   '/assets/carousel-sliders/Slider_03.jpg'
 ]
+
+export const categories = [
+  { label: 'bathroom-accessories', url: '#' },
+  { label: 'floor-drain', url: '#' },
+  { label: 'bathroom-tiles', url: '#' }
+]

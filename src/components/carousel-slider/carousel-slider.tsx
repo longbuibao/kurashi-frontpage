@@ -30,6 +30,7 @@ const CarouselSlider: React.FC<CarouselProps> = ({ items, indicatorStyles }) => 
       infiniteLoop
       showThumbs={false}
       showStatus={false}
+      autoPlay
     >
       {items}
     </Carousel>
