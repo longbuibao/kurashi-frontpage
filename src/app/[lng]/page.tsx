@@ -2,12 +2,10 @@ import React, { Suspense } from 'react'
 
 import { CarouselSlider } from '@/components/carousel-slider'
 import { KurashiDiv } from '@/components/kurashi-div'
-import { KurashiLink } from '@/components/kurashi-link'
 import { useTranslation } from '@/i18n'
 import { carouselSliderImages } from '@/constants'
 import { KurashiCategory } from '@/types/kurashi-category'
-import KurashiCategoriesSkeleton from '@/components/skeleton/categories-skeleton'
-import KurashiLeftBorder from '@/components/kurashi-div/kurashi-left-border'
+import KurashiTabs from '@/components/kurashi-tabs/kurashi-tabs'
 
 interface PageParam {
   params: { lng: string }
@@ -53,35 +51,11 @@ const Page = async ({ params: { lng } }: PageParam): Promise<React.ReactElement>
           <div className='px-12 text-2xl'>{t('japan-authentic')}</div>
         </KurashiDiv>
       </div>
-      <div className='w-full'>
-        <Suspense fallback={<KurashiCategoriesSkeleton hasCollection numsOfCategories={3} />}>
-          <div className='flex flex-row w-1/2 mx-auto justify-around mt-20'>
-            {categories.map(category => (
-              <div key={category.categoryName} className='hover:cursor-pointer'>
-                {/* todo: what the fuck? the borderBottomStyle='dotted' somehow not dotted */}
-                <KurashiLink borderBottomStyle='dotted'>
-                  <div>
-                    {t(category.categoryName)}
-                  </div>
-                </KurashiLink>
-                {category.kurashiCollection.hasKurashiCollection &&
-                  <div className='hover:cursor-default -ml-40 mt-10'>
-                    <div>
-                      <KurashiLeftBorder>{category.kurashiCollection.collectionName} </KurashiLeftBorder>
-                    </div>
-                    <div>
-                      {category.kurashiCollection.collectionCategories.map(collectionCategory =>
-                        <div key={collectionCategory.name}>
-                          <div>{t(collectionCategory.name)}</div>
-                          <div><img src={collectionCategory.thumbnail} alt='collection thumbnail' /></div>
-                        </div>)}
-                    </div>
-                  </div>}
-              </div>
-            ))}
-          </div>
-        </Suspense>
-      </div>
+      <Suspense fallback={<p>Loading</p>}>
+        <div className='mt-4'>
+          <KurashiTabs kurashiCategoriesName={categories.map(category => t(category.categoryName))} />
+        </div>
+      </Suspense>
     </main>
   )
 }
