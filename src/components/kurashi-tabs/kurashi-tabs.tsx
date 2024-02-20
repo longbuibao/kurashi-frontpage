@@ -5,17 +5,21 @@ import 'react-tabs/style/react-tabs.css'
 
 import { KurashiCategory } from '@/types/kurashi-category'
 import { KurashiLink } from '@/components/kurashi-link'
+import { useTranslationClient } from '@/i18n/client-side'
 
 interface KurashiTabsProps {
-  kurashiCategoriesName: string[]
+  kurashiCategory: KurashiCategory[]
+  lng: string
 }
 
-const KurashiTabs: React.FC<KurashiTabsProps> = ({ kurashiCategoriesName }) => {
+const KurashiTabs: React.FC<KurashiTabsProps> = ({ lng, kurashiCategory }) => {
+  const { t } = useTranslationClient(lng, 'translation-client', {})
+  const categories = kurashiCategory.map(category => category.categoryName).map(categoryName => t(categoryName))
   return (
     <div>
       <Tabs className='w-2/3 mx-auto' selectedTabClassName='none'>
         <TabList className='w-full flex flex-row justify-center'>
-          {kurashiCategoriesName.map(categoryName => <Tab key={categoryName}><KurashiLink>{categoryName}</KurashiLink></Tab>)}
+          {categories.map(categoryName => <Tab key={categoryName}><KurashiLink>{categoryName}</KurashiLink></Tab>)}
         </TabList>
         <TabPanel>1</TabPanel>
         <TabPanel>2</TabPanel>

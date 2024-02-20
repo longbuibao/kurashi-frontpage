@@ -1,0 +1,51 @@
+'use client'
+
+import { useEffect, useState } from 'react'
+import i18next from 'i18next'
+import { initReactI18next, useTranslation as useTranslationOrg } from 'react-i18next'
+import { useCookies } from 'react-cookie'
+import resourcesToBackend from 'i18next-resources-to-backend'
+import LanguageDetector from 'i18next-browser-languagedetector'
+import { getOptions, languages, cookieName } from '@/i18n/settings'
+
+const runsOnServerSide = typeof window === 'undefined'
+
+i18next
+  .use(initReactI18next)
+  .use(LanguageDetector)
+  .use(resourcesToBackend(async (language: string, namespace: string) => await import(`./locales/${language}/${namespace}.json`)))
+  .init({
+    ...getOptions(),
+    lng: undefined,
+    detection: {
+      order: ['path', 'htmlTag', 'cookie', 'navigator']
+    },
+    preload: runsOnServerSide ? languages : []
+  })
+  .then(() => console.log('successfully init i18next client side'))
+  .catch((e) => console.log('!! cannot init i18next client side !!'))
+
+export function useTranslationClient (lng: string, ns: string, options: any): any {
+  const [cookies, setCookie] = useCookies([cookieName])
+  const ret = useTranslationOrg(ns, options)
+  const { i18n } = ret
+  if (runsOnServerSide && (lng !== null || lng !== '' || lng !== undefined) && i18n.resolvedLanguage !== lng) {
+    i18n.changeLanguage(lng).then(() => console.log('successfully change language on client side')).catch(e => console.log('!! cannot change language on client side !!'))
+  } else {
+    const [activeLng, setActiveLng] = useState(i18n.resolvedLanguage)
+    useEffect(() => {
+      if (activeLng === i18n.resolvedLanguage) return
+      setActiveLng(i18n.resolvedLanguage)
+    }, [activeLng, i18n.resolvedLanguage])
+
+    useEffect(() => {
+      if (!(lng !== null || lng !== '' || lng !== undefined) || i18n.resolvedLanguage === lng) return
+      i18n.changeLanguage(lng).then(() => console.log('successfully change language on client side')).catch(e => console.log('!! cannot change language on client side !!'))
+    }, [lng, i18n])
+    useEffect(() => {
+      if (cookies.i18next === lng) return
+      setCookie(cookieName, lng, { path: '/' })
+    }, [lng, cookies.i18next])
+  }
+  return ret
+}

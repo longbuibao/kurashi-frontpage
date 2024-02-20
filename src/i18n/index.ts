@@ -2,6 +2,7 @@ import { createInstance, FlatNamespace, KeyPrefix, i18n, TFunction } from 'i18ne
 import resourcesToBackend from 'i18next-resources-to-backend'
 import { initReactI18next } from 'react-i18next/initReactI18next'
 import { FallbackNs } from 'react-i18next'
+
 import { getOptions } from '@/i18n/settings'
 
 const initI18next = async (lng: string, ns: string | string[]): Promise<i18n> => {
