@@ -1,31 +1,34 @@
 'use client'
 import React from 'react'
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs'
-import 'react-tabs/style/react-tabs.css'
+import '@/components/kurashi-tabs/react-tabs.css'
 
 import { KurashiCategory } from '@/types/kurashi-category'
-import { KurashiLink } from '@/components/kurashi-link'
 import { useTranslationClient } from '@/i18n/client-side'
+import { defaultClientNS } from '@/i18n/settings'
 
 interface KurashiTabsProps {
-  kurashiCategory: KurashiCategory[]
+  kurashiCategories: KurashiCategory[]
   lng: string
 }
 
-const KurashiTabs: React.FC<KurashiTabsProps> = ({ lng, kurashiCategory }) => {
-  const { t } = useTranslationClient(lng, 'translation-client', {})
-  const categories = kurashiCategory.map(category => category.categoryName).map(categoryName => t(categoryName))
+const KurashiTabs: React.FC<KurashiTabsProps> = ({ lng, kurashiCategories }) => {
+  const { t } = useTranslationClient(lng, defaultClientNS, {})
+  const categories = kurashiCategories.map(category => category.categoryName).map(categoryName => t(categoryName))
   return (
-    <div>
-      <Tabs className='w-2/3 mx-auto' selectedTabClassName='none'>
-        <TabList className='w-full flex flex-row justify-center'>
-          {categories.map(categoryName => <Tab key={categoryName}><KurashiLink>{categoryName}</KurashiLink></Tab>)}
-        </TabList>
-        <TabPanel>1</TabPanel>
-        <TabPanel>2</TabPanel>
-        <TabPanel>3</TabPanel>
-      </Tabs>
-    </div>
+    <Tabs className='w-2/3 mx-auto my-11'>
+      <TabList className='w-full flex flex-row justify-around'>
+        {categories.map(categoryName => <Tab className='pb-2 text-2xl font-semibold hover:cursor-default' key={categoryName}>{categoryName}</Tab>)}
+      </TabList>
+      {kurashiCategories.map(kurashiCategory => (
+        <TabPanel key={kurashiCategory.categoryName}>{kurashiCategory.subCategories.map(subCategory => (
+          <div key={subCategory.name}>
+            <div>{subCategory.name}</div><div>{subCategory.thumbnail}</div>
+          </div>
+        ))}
+        </TabPanel>
+      ))}
+    </Tabs>
   )
 }
 

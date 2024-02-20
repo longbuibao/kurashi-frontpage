@@ -1,7 +1,7 @@
 export interface KurashiCategory {
   categoryName: string
   kurashiCollection: KurashiCollection
-  subCategories?: SubCategory[]
+  subCategories: SubCategory[]
 }
 
 export interface KurashiCollection {

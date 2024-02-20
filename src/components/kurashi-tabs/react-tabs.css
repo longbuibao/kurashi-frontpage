@@ -1,0 +1,10 @@
+.react-tabs__tab,
+.react-tabs__tab:hover {
+	cursor: default;
+}
+
+.react-tabs__tab--selected,
+.react-tabs__tab--selected:focus {
+	border-bottom: 1px dotted #437254;
+	color: #437254
+}

@@ -52,8 +52,8 @@ const Page = async ({ params: { lng } }: PageParam): Promise<React.ReactElement>
         </KurashiDiv>
       </div>
       <Suspense fallback={<p>Loading</p>}>
-        <div className='mt-4'>
-          <KurashiTabs lng={lng} kurashiCategory={categories} />
+        <div className='mt-5'>
+          <KurashiTabs lng={lng} kurashiCategories={categories} />
         </div>
       </Suspense>
     </main>
