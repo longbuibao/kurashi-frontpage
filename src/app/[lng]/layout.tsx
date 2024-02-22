@@ -22,9 +22,7 @@ const RootLayout: React.FC<RootProps> = async ({ children, params }): Promise<Re
           <Nav t={t} links={navItems.map(item => { return { label: t(item.label), url: item.url } })} />
         </div>
         {children}
-        <div>
-          footer
-        </div>
+        <div />
       </body>
     </html>
   )

@@ -6,6 +6,7 @@ import '@/components/kurashi-tabs/react-tabs.css'
 import { KurashiCategory } from '@/types/kurashi-category'
 import { useTranslationClient } from '@/i18n/client-side'
 import { defaultClientNS } from '@/i18n/settings'
+import Link from 'next/link'
 
 interface KurashiTabsProps {
   kurashiCategories: KurashiCategory[]
@@ -16,15 +17,18 @@ const KurashiTabs: React.FC<KurashiTabsProps> = ({ lng, kurashiCategories }) => 
   const { t } = useTranslationClient(lng, defaultClientNS, {})
   const categories = kurashiCategories.map(category => category.categoryName).map(categoryName => t(categoryName))
   return (
-    <Tabs className='w-2/3 mx-auto my-11'>
-      <TabList className='w-full flex flex-row justify-around'>
-        {categories.map(categoryName => <Tab className='pb-2 text-2xl font-semibold hover:cursor-default' key={categoryName}>{categoryName}</Tab>)}
+    <Tabs defaultIndex={0} className='w-2/3 mx-auto my-11'>
+      <TabList className='w-full flex flex-row justify-around mb-5'>
+        {categories.map(categoryName => <Tab className='pb-2 text-2xl font-semibold hover:cursor-pointer' key={categoryName}>{categoryName}</Tab>)}
       </TabList>
       {kurashiCategories.map(kurashiCategory => (
         <TabPanel key={kurashiCategory.categoryName}>{kurashiCategory.subCategories.map(subCategory => (
-          <div key={subCategory.name}>
-            <div>{subCategory.name}</div><div>{subCategory.thumbnail}</div>
-          </div>
+          <Link key={subCategory.name} href={subCategory.url}>
+            <div className='flex flex-col items-center'>
+              <div className='mb-3 hover:cursor-default'>{t(subCategory.name)}</div>
+              <img className='w-64' src={subCategory.thumbnail} alt='product thumbnail' />
+            </div>
+          </Link>
         ))}
         </TabPanel>
       ))}

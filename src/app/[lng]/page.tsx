@@ -15,7 +15,7 @@ const getCategories = async (): Promise<KurashiCategory[]> => {
   let url = process.env.NODE_ENV === 'development' ? process.env.DEVELOPMENT_BACKEND : process.env.PRODUCTION_BACKEND
   if (url === undefined || url === null) url = 'stupid ts standard'
   else {
-    const res = await fetch(url)
+    const res = await fetch(url, process.env.NODE_ENV === 'development' ? { cache: 'no-store' } : {})
     if (!res.ok) {
       throw new Error('Failed to fetch data')
     }
@@ -38,10 +38,10 @@ const Page = async ({ params: { lng } }: PageParam): Promise<React.ReactElement>
 
   return (
     <main>
-      {/* <div className='w-4/5 mx-auto max-lg:w-full'>
+      <div className='w-4/5 mx-auto max-lg:w-full'>
         <CarouselSlider items={carouselSliders} indicatorStyles={carouselCssDotIndicator} />
-      </div> */}
-      <div className='text-5xl w-fit mx-auto my-10 hover:cursor-default pb-10 border-b-2 border-x-main'>
+      </div>
+      <div className='text-5xl w-fit mx-auto my-10 hover:cursor-default pb-5 border-b-2 border-x-main'>
         <h3>
           {t('products')}
         </h3>
@@ -51,7 +51,7 @@ const Page = async ({ params: { lng } }: PageParam): Promise<React.ReactElement>
           <div className='px-12 text-2xl'>{t('japan-authentic')}</div>
         </KurashiDiv>
       </div>
-      <Suspense fallback={<p>Loading</p>}>
+      <Suspense fallback={<p>LoadingLoadingLoadingLoadingLoadingLoadingLoadingLoadingLoadingLoadingLoadingLoadingLoadingLoadingLoadingLoadingLoadingLoadingLoading</p>}>
         <div className='mt-5'>
           <KurashiTabs lng={lng} kurashiCategories={categories} />
         </div>

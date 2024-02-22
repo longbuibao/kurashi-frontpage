@@ -18,4 +18,5 @@ export interface CollectionCategory {
 export interface SubCategory {
   name: string
   thumbnail: string
+  url: string
 }

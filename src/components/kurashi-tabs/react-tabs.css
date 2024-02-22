@@ -1,10 +1,17 @@
 .react-tabs__tab,
 .react-tabs__tab:hover {
-	cursor: default;
+	cursor: pointer;
 }
 
 .react-tabs__tab--selected,
 .react-tabs__tab--selected:focus {
 	border-bottom: 1px dotted #437254;
 	color: #437254
+}
+
+.react-tabs__tab-panel {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 2rem;
 }
