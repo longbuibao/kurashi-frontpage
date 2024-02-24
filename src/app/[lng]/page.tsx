@@ -1,4 +1,4 @@
-import React, { Suspense } from 'react'
+import React from 'react'
 
 import { CarouselSlider } from '@/components/carousel-slider'
 import { KurashiDiv } from '@/components/kurashi-div'
@@ -51,11 +51,9 @@ const Page = async ({ params: { lng } }: PageParam): Promise<React.ReactElement>
           <div className='px-12 text-2xl'>{t('japan-authentic')}</div>
         </KurashiDiv>
       </div>
-      <Suspense fallback={<p>LoadingLoadingLoadingLoadingLoadingLoadingLoadingLoadingLoadingLoadingLoadingLoadingLoadingLoadingLoadingLoadingLoadingLoadingLoading</p>}>
-        <div className='mt-5'>
-          <KurashiTabs lng={lng} kurashiCategories={categories} />
-        </div>
-      </Suspense>
+      <div className='mt-5'>
+        <KurashiTabs lng={lng} kurashiCategories={categories} />
+      </div>
     </main>
   )
 }
