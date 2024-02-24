@@ -1,5 +1,6 @@
 import './globals.css'
 import { dir } from 'i18next'
+import { Suspense } from 'react'
 
 import { Nav } from '@/components/nav'
 import { navItems } from '@/constants'
@@ -21,7 +22,9 @@ const RootLayout: React.FC<RootProps> = async ({ children, params }): Promise<Re
         <div className='pb-1 mx-auto z-10 w-3/4'>
           <Nav t={t} links={navItems.map(item => { return { label: t(item.label), url: item.url } })} />
         </div>
-        {children}
+        <Suspense>
+          {children}
+        </Suspense>
         <div />
       </body>
     </html>

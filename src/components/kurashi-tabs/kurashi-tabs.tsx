@@ -18,15 +18,15 @@ const KurashiTabs: React.FC<KurashiTabsProps> = ({ lng, kurashiCategories }) => 
   const categories = kurashiCategories.map(category => category.categoryName).map(categoryName => t(categoryName))
   return (
     <Tabs defaultIndex={0} className='w-2/3 mx-auto my-11'>
-      <TabList className='w-full flex flex-row justify-around mb-5'>
+      <TabList className='w-full flex flex-row justify-around mb-10'>
         {categories.map(categoryName => <Tab className='pb-2 text-2xl font-semibold hover:cursor-pointer' key={categoryName}>{categoryName}</Tab>)}
       </TabList>
       {kurashiCategories.map(kurashiCategory => (
         <TabPanel key={kurashiCategory.categoryName}>{kurashiCategory.subCategories.map(subCategory => (
           <Link key={subCategory.name} href={subCategory.url}>
             <div className='flex flex-col items-center'>
-              <div className='mb-3 hover:cursor-default'>{t(subCategory.name)}</div>
               <img className='w-64' src={subCategory.thumbnail} alt='product thumbnail' />
+              <div className='mt-3 hover:cursor-pointer font-semibold hover:text-main'>{t(subCategory.name)}</div>
             </div>
           </Link>
         ))}
