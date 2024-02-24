@@ -33,7 +33,7 @@ const createCarouselItemImage = (imageSrc: string): React.ReactElement => (
 const Page = async ({ params: { lng } }: PageParam): Promise<React.ReactElement> => {
   const { t } = await useTranslation(lng)
   const carouselSliders = carouselSliderImages.map(createCarouselItemImage)
-  const carouselCssDotIndicator = { border: 'solid #000 1px', background: '#e5e5e5', width: 200, height: 8, display: 'inline-block' }
+  const carouselCssDotIndicator = { border: 'solid #598765 1px', background: '#e5e5e5', width: 200, height: 8, display: 'inline-block' }
   const categories = await getCategories()
 
   return (

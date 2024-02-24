@@ -11,8 +11,29 @@ export const carouselSliderImages = [
   '/assets/carousel-sliders/Slider_03.jpg'
 ]
 
-export const categories = [
-  { label: 'bathroom-accessories', url: '#' },
-  { label: 'floor-drain', url: '#' },
-  { label: 'bathroom-tiles', url: '#' }
+export const footerLinks = [
+  {
+    label: 'company',
+    links: [
+      { label: 'home', url: '#' },
+      { label: 'about-kurashi', url: '#' },
+      { label: 'products', url: '#' },
+      { label: 'career', url: '#' },
+      { label: 'contact', url: '#' }
+    ]
+  },
+  {
+    label: 'support-info',
+    links: [
+      { label: 'catalog', url: '#' },
+      { label: 'blog', url: '#' }
+    ]
+  },
+  {
+    label: 'policy',
+    links: [
+      { label: 'warranty-policy', url: '#' },
+      { label: 'your-info', url: '#' }
+    ]
+  }
 ]

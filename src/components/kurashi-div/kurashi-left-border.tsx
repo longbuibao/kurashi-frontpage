@@ -5,7 +5,7 @@ interface KurashiLeftBorderProps {
 }
 
 const KurashiLeftBorder: React.FC<KurashiLeftBorderProps> = ({ children }) => {
-  return <div className='border-l-main border-l-2 pl-4'>{children}</div>
+  return <div className='border-l-main border-l-2 pl-4 hover:cursor-default'>{children}</div>
 }
 
 export default KurashiLeftBorder

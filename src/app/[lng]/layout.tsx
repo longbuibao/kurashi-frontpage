@@ -3,6 +3,7 @@ import { dir } from 'i18next'
 import { Suspense } from 'react'
 
 import { Nav } from '@/components/nav'
+import { Footer } from '@/components/footer'
 import { navItems } from '@/constants'
 import { useTranslation } from '@/i18n'
 
@@ -25,7 +26,7 @@ const RootLayout: React.FC<RootProps> = async ({ children, params }): Promise<Re
         <Suspense>
           {children}
         </Suspense>
-        <div />
+        <Footer t={t} />
       </body>
     </html>
   )
