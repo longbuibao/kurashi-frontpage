@@ -10,15 +10,16 @@ import { defaultNS } from '@/i18n/settings'
 import Link from 'next/link'
 import Loading from '@/app/[lng]/loading'
 import { KurashiError } from '@/components/kurashi-error'
+import { kurashiFetcher } from '@/utils/kurashi-fetcher'
 
 interface KurashiTabsProps {
   lng: string
-  kurashiUrl: string
+  kurashiCategoriesUrl: string
 }
 
-const KurashiTabs: React.FC<KurashiTabsProps> = ({ lng, kurashiUrl }) => {
+const KurashiTabs: React.FC<KurashiTabsProps> = ({ lng, kurashiCategoriesUrl }) => {
   const { t } = useTranslationClient(lng, defaultNS, {})
-  const { data: kurashiCategories, isLoading, error } = useSWR<KurashiCategory[]>(kurashiUrl, async (url: string) => { return await fetch(kurashiUrl, { cache: 'no-store' }).then(async (res) => await res.json()) })
+  const { data: kurashiCategories, isLoading, error } = useSWR<KurashiCategory[]>(kurashiCategoriesUrl, kurashiFetcher)
   const categories = kurashiCategories?.map(category => category.categoryName).map(categoryName => t(categoryName))
   if (isLoading) return <Loading />
   if (error) return <KurashiError message={t('error-message')} />

@@ -5,6 +5,7 @@ import { KurashiDiv } from '@/components/kurashi-div'
 import { useTranslation } from '@/i18n'
 import { carouselSliderImages } from '@/constants'
 import KurashiTabs from '@/components/kurashi-tabs/kurashi-tabs'
+import { KurashiBlogs } from '@/components/blog-card'
 import { SectionTitle } from '@/components/section-title'
 
 interface PageParam {
@@ -34,9 +35,12 @@ const Page = async ({ params: { lng } }: PageParam): Promise<React.ReactElement>
         </KurashiDiv>
       </div>
       <div className='mt-5'>
-        <KurashiTabs lng={lng} kurashiUrl='http://localhost:3001' />
+        <KurashiTabs lng={lng} kurashiCategoriesUrl='http://localhost:3001' />
       </div>
-      <SectionTitle title={t('blog')} />
+      <div className='p-5 w-4/5 mx-auto'>
+        <SectionTitle title={t('blog')} />
+        <KurashiBlogs kurashiBlogsUrl='http://localhost:3001/blogs' lng={lng} />
+      </div>
     </main>
   )
 }

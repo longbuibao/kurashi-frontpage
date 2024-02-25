@@ -1,20 +1,28 @@
 import React from 'react'
+import Link from 'next/link'
+
+import { KurashiLink } from '@/components/kurashi-link'
 
 interface BlogCardProps {
   imgSrc: string
   title: string
   content: React.ReactNode
   dateUpload: string
+  url: string
 }
 
-const BlogCard: React.FC<BlogCardProps> = ({ imgSrc, content, title, dateUpload }) => {
+const BlogCard: React.FC<BlogCardProps> = ({ imgSrc, content, title, dateUpload, url }) => {
   return (
-    <div className='flex flex-row'>
-      <div><img src={imgSrc} alt='Blog Image' /></div>
-      <div className='flex flex-col justify-center items-center'>
-        <div>{title}</div>
-        <div>{content}</div>
-        <div>{dateUpload}</div>
+    <div className='flex flex-row gap-3'>
+      <img src={imgSrc} alt='Blog Image' className='w-1/2' />
+      <div className='flex flex-col justify-center items-center gap-5 hover:cursor-default'>
+        <KurashiLink>
+          <Link href={url}>
+            <div className='text-2xl font-semibold text-center'>{title.toLocaleUpperCase()}</div>
+          </Link>
+        </KurashiLink>
+        <div className='text-center'>{content}</div>
+        <div className='text-center mt-5'>{dateUpload}</div>
       </div>
     </div>
   )
