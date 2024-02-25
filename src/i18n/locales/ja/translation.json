@@ -27,5 +27,6 @@
 	"glass-door-handle": "浴室のタイル",
 	"long-floor-drain": "浴室のタイル",
 	"tiles-floor-drain": "浴室のタイル",
-	"hang-scarf": "浴室のタイル"
+	"hang-scarf": "浴室のタイル",
+	"error-message": "これをロード中にエラーが発生しました。"
 }

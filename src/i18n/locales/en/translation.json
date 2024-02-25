@@ -27,5 +27,6 @@
 	"glass-door-handle": "Glass Door Handle",
 	"long-floor-drain": "Long Floor Drain",
 	"tiles-floor-drain": "Tiles Floor Drain",
-	"hang-scarf": "Hang Scarf"
+	"hang-scarf": "Hang Scarf",
+	"error-message": "There is an error while loading this."
 }
