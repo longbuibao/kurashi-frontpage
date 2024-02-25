@@ -6,6 +6,7 @@ import { useTranslation } from '@/i18n'
 import { carouselSliderImages } from '@/constants'
 import { KurashiCategory } from '@/types/kurashi-category'
 import KurashiTabs from '@/components/kurashi-tabs/kurashi-tabs'
+import { SectionTitle } from '@/components/section-title'
 
 interface PageParam {
   params: { lng: string }
@@ -41,11 +42,7 @@ const Page = async ({ params: { lng } }: PageParam): Promise<React.ReactElement>
       <div className='w-4/5 mx-auto max-lg:w-full'>
         <CarouselSlider items={carouselSliders} indicatorStyles={carouselCssDotIndicator} />
       </div>
-      <div className='text-5xl w-fit mx-auto my-10 hover:cursor-default pb-5 border-b-2 border-x-main'>
-        <h3>
-          {t('products')}
-        </h3>
-      </div>
+      <SectionTitle title={t('products')} />
       <div className='w-fit mx-auto mt-16 hover:cursor-default'>
         <KurashiDiv>
           <div className='px-12 text-2xl'>{t('japan-authentic')}</div>
@@ -54,6 +51,7 @@ const Page = async ({ params: { lng } }: PageParam): Promise<React.ReactElement>
       <div className='mt-5'>
         <KurashiTabs lng={lng} kurashiCategories={categories} />
       </div>
+      <SectionTitle title={t('blog')} />
     </main>
   )
 }
