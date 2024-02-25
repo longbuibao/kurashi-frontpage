@@ -5,7 +5,7 @@ import '@/components/kurashi-tabs/react-tabs.css'
 
 import { KurashiCategory } from '@/types/kurashi-category'
 import { useTranslationClient } from '@/i18n/client-side'
-import { defaultClientNS } from '@/i18n/settings'
+import { defaultNS } from '@/i18n/settings'
 import Link from 'next/link'
 
 interface KurashiTabsProps {
@@ -14,7 +14,7 @@ interface KurashiTabsProps {
 }
 
 const KurashiTabs: React.FC<KurashiTabsProps> = ({ lng, kurashiCategories }) => {
-  const { t } = useTranslationClient(lng, defaultClientNS, {})
+  const { t } = useTranslationClient(lng, defaultNS, {})
   const categories = kurashiCategories.map(category => category.categoryName).map(categoryName => t(categoryName))
   return (
     <Tabs defaultIndex={0} className='w-2/3 mx-auto my-11'>
