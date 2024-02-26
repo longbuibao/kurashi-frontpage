@@ -12,6 +12,8 @@ import Loading from '@/app/[lng]/loading'
 import { KurashiError } from '@/components/kurashi-error'
 import { kurashiFetcher } from '@/utils/kurashi-fetcher'
 
+import { mockCategories } from '@/constants'
+
 interface KurashiTabsProps {
   lng: string
   kurashiCategoriesUrl: string
@@ -19,10 +21,11 @@ interface KurashiTabsProps {
 
 const KurashiTabs: React.FC<KurashiTabsProps> = ({ lng, kurashiCategoriesUrl }) => {
   const { t } = useTranslationClient(lng, defaultNS, {})
-  const { data: kurashiCategories, isLoading, error } = useSWR<KurashiCategory[]>(kurashiCategoriesUrl, kurashiFetcher)
+  // const { data: kurashiCategories, isLoading, error } = useSWR<KurashiCategory[]>(kurashiCategoriesUrl, kurashiFetcher)
+  const kurashiCategories = mockCategories
   const categories = kurashiCategories?.map(category => category.categoryName).map(categoryName => t(categoryName))
-  if (isLoading) return <Loading />
-  if (error) return <KurashiError message={t('error-message')} />
+  // if (isLoading) return <Loading />
+  // if (error) return <KurashiError message={t('error-message')} />
 
   return (
     <Tabs defaultIndex={0} className='w-2/3 mx-auto my-11'>

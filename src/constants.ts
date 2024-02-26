@@ -37,3 +37,118 @@ export const footerLinks = [
     ]
   }
 ]
+
+export const mockCategories = [
+  {
+    categoryName: 'bathroom-accessories',
+    kurashiCollection: {
+      hasKurashiCollection: true,
+      collectionName: 'Black Collection',
+      collectionCategories: [
+        {
+          name: 'make-up-mirror',
+          thumbnail: '/assets/products/mirrors/PRE_B816xA500FHrP-CROPED.jpg'
+        }
+      ]
+    },
+    subCategories: [
+      {
+        name: 'make-up-mirror',
+        thumbnail: '/assets/products/mirrors/PRE_B816xA500FHrP-CROPED.jpg',
+        url: '#'
+      },
+      {
+        name: 'hang-toilet-paper',
+        thumbnail: '/assets/products/mirrors/PRE_B816xA500FHrP-CROPED.jpg',
+        url: '#'
+      },
+      {
+        name: 'glass-door-handle',
+        thumbnail: '/assets/products/mirrors/PRE_B816xA500FHrP-CROPED.jpg',
+        url: '#'
+      },
+      {
+        name: 'glass-door-handle',
+        thumbnail: '/assets/products/mirrors/PRE_B816xA500FHrP-CROPED.jpg',
+        url: '#'
+      },
+      {
+        name: 'glass-door-handle',
+        thumbnail: '/assets/products/mirrors/PRE_B816xA500FHrP-CROPED.jpg',
+        url: '#'
+      },
+      {
+        name: 'glass-door-handle',
+        thumbnail: '/assets/products/mirrors/PRE_B816xA500FHrP-CROPED.jpg',
+        url: '#'
+      },
+      {
+        name: 'glass-door-handle',
+        thumbnail: '/assets/products/mirrors/PRE_B816xA500FHrP-CROPED.jpg',
+        url: '#'
+      },
+      {
+        name: 'glass-door-handle',
+        thumbnail: '/assets/products/mirrors/PRE_B816xA500FHrP-CROPED.jpg',
+        url: '#'
+      }
+    ]
+  },
+  {
+    categoryName: 'floor-drain',
+    kurashiCollection: {
+      hasKurashiCollection: false,
+      collectionName: null,
+      collectionCategories: []
+    },
+    subCategories: [
+      {
+        name: 'long-floor-drain',
+        thumbnail: '/assets/products/towel/towel.jpg',
+        url: '#'
+      },
+      {
+        name: 'tiles-floor-drain',
+        thumbnail: '/assets/products/towel/towel.jpg',
+        url: '#'
+      }
+    ]
+  },
+  {
+    categoryName: 'bathroom-tiles',
+    kurashiCollection: {
+      hasKurashiCollection: false,
+      collectionName: null,
+      collectionCategories: []
+    },
+    subCategories: [
+      {
+        name: 'tiles-floor-drain',
+        thumbnail: '/assets/products/towel/towel.jpg',
+        url: '#'
+      },
+      {
+        name: 'hang-scarf',
+        thumbnail: '/assets/products/towel/towel.jpg',
+        url: '#'
+      }
+    ]
+  }
+]
+
+export const mockBlogs = [
+  {
+    thumbnail: '/assets/products/mirrors/PRE_B816xA500FHrP-CROPED.jpg',
+    title: 'nhà vệ sinh không mùi',
+    content: 'Ga thoát sàn có bộ xả chuyên dụng từ Nhật Bản',
+    date: '03/02/2023',
+    url: '#'
+  },
+  {
+    thumbnail: '/assets/products/mirrors/PRE_B816xA500FHrP-CROPED.jpg',
+    title: 'phụ kiện màu đen mờ',
+    content: 'Vẻ sang trọng nhờ công nghệ mạ từ Nhật Bản',
+    date: '03/02/2023',
+    url: '#'
+  }
+]
