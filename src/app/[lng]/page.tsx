@@ -7,6 +7,7 @@ import { carouselSliderImages } from '@/constants'
 import KurashiTabs from '@/components/kurashi-tabs/kurashi-tabs'
 import { KurashiBlogs } from '@/components/blog-card'
 import { SectionTitle } from '@/components/section-title'
+import { AboutKurashiCard } from '@/components/about-kurashi-card'
 
 interface PageParam {
   params: { lng: string }
@@ -28,7 +29,9 @@ const Page = async ({ params: { lng } }: PageParam): Promise<React.ReactElement>
       <div className='w-4/5 mx-auto max-lg:w-full'>
         <CarouselSlider items={carouselSliders} indicatorStyles={carouselCssDotIndicator} />
       </div>
-      <SectionTitle title={t('products')} />
+      <div className='mx-auto my-10 w-fit'>
+        <SectionTitle title={t('products')} />
+      </div>
       <div className='w-fit mx-auto mt-16 hover:cursor-default'>
         <KurashiDiv>
           <div className='px-12 text-2xl'>{t('japan-authentic')}</div>
@@ -37,9 +40,16 @@ const Page = async ({ params: { lng } }: PageParam): Promise<React.ReactElement>
       <div className='mt-5'>
         <KurashiTabs lng={lng} kurashiCategoriesUrl='http://localhost:3001' />
       </div>
-      <div className='p-5 w-4/5 mx-auto'>
-        <SectionTitle title={t('blog')} />
+      <div className='p-5 w-4/5 mx-auto border-main border-t-2'>
+        <div className='mx-auto my-10 w-fit'>
+          <SectionTitle title={t('blog')} />
+        </div>
         <KurashiBlogs kurashiBlogsUrl='http://localhost:3001/blogs' lng={lng} />
+      </div>
+      <div className='p-5 w-4/5 mx-auto border-main border-t-2'>
+        <div className='w-fit'>
+          <AboutKurashiCard lng={lng} />
+        </div>
       </div>
     </main>
   )

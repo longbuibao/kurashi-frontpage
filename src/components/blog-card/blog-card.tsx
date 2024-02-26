@@ -13,7 +13,7 @@ interface BlogCardProps {
 
 const BlogCard: React.FC<BlogCardProps> = ({ imgSrc, content, title, dateUpload, url }) => {
   return (
-    <div className='flex flex-row gap-3'>
+    <div className='flex flex-row gap-3 bg-secondary'>
       <img src={imgSrc} alt='Blog Image' className='w-1/2' />
       <div className='flex flex-col justify-center items-center gap-5 hover:cursor-default'>
         <KurashiLink>

@@ -31,14 +31,12 @@ const Nav: FC<NavProps> = ({ links, t }) => {
               </KurashiLink>
             )
           })}
-
           <KurashiDiv>
             <Link href='#zalolink'>{t('contact-using-zalo')}</Link>
             <div className='ml-3 inline-block'>
               <i className='fa-solid fa-chevron-right' />
             </div>
           </KurashiDiv>
-
         </div>
         <div className='hidden max-lg:block'>
           <i className='fa-solid fa-bars' />

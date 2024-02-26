@@ -21,7 +21,7 @@ const Footer: React.FC<FooterProps> = ({ t }) => {
             <Link href='/'>
               <Logo imgSrc='/assets/logo/kurashi-logo.png' width={200} />
             </Link>
-            <p>{t('interior-from-japan')}</p>
+            <p className='pl-4'>{t('interior-from-japan')}</p>
           </div>
           <div className='flex flex-col gap-5 w-fit items-start'>
             <KurashiLeftBorder>{t('address')}: {t('address-name')}</KurashiLeftBorder>
