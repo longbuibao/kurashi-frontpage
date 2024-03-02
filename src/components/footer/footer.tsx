@@ -7,6 +7,7 @@ import { Logo } from '@/components/logo'
 import { LogoFacebook, LogoYoutube, LogoZalo } from '@/components/svg-icons'
 import { footerLinks } from '@/constants'
 import { KurashiLink } from '@/components/kurashi-link'
+import { interiorFromJapan, address, addressName, tel, socialMedia } from '@/i18n/translation-key'
 
 interface FooterProps {
   t: TFunction<any, any>

@@ -9,6 +9,7 @@ import Loading from '@/app/[lng]/loading'
 import { useTranslationClient } from '@/i18n/client-side'
 import { KurashiError } from '@/components/kurashi-error'
 import { defaultNS } from '@/i18n/settings'
+import { errorMessage } from '@/i18n/translation-key'
 
 import { mockBlogs } from '@/constants'
 
@@ -21,7 +22,7 @@ const KurashiBlogs: React.FC<KurashiBlogsProps> = ({ kurashiBlogsUrl, lng }) => 
   // const { t } = useTranslationClient(lng, defaultNS, {})
   // const { data, isLoading, error } = useSWR<KurashiBlog[]>(kurashiBlogsUrl, kurashiFetcher)
   // if (isLoading) return <Loading />
-  // if (error) return <KurashiError message={t('error-message')} />
+  // if (error) return <KurashiError message={t(errorMessage)} />
   const data = mockBlogs
   return (
     <div className='flex flex-row gap-5 justify-center'>
