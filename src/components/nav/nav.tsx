@@ -5,6 +5,7 @@ import { Logo } from '@/components/logo'
 import { KurashiDiv } from '@/components/kurashi-div'
 import { KurashiLink } from '@/components/kurashi-link'
 import { TFunction } from 'i18next'
+import { contactUsingZalo } from '@/i18n/translation-key'
 
 interface LinkItem {
   url: string
@@ -32,7 +33,7 @@ const Nav: FC<NavProps> = ({ links, t }) => {
             )
           })}
           <KurashiDiv>
-            <Link href='#zalolink'>{t('contact-using-zalo')}</Link>
+            <Link href='#zalolink'>{t(contactUsingZalo)}</Link>
             <div className='ml-3 inline-block'>
               <i className='fa-solid fa-chevron-right' />
             </div>

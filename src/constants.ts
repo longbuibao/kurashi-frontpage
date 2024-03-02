@@ -1,8 +1,15 @@
+import {
+  home, products,
+  catalog, contact, aboutKurashi, career, supportInfo, blog, policy,
+  warrantyPolicy, yourInfo, bathroomAccessories, makeUpMirror, hangToiletPaper, glassDoorHandle, floorDrain, longFloorDrain,
+  tilesFloorDrain, bathroomTiles, hangScarf, company
+} from '@/i18n/translation-key'
+
 export const navItems = [
-  { label: 'home', url: '#' },
-  { label: 'products', url: '#' },
-  { label: 'catalog', url: '#' },
-  { label: 'contact', url: '#' }
+  { label: home, url: '#' },
+  { label: products, url: '#' },
+  { label: catalog, url: '#' },
+  { label: contact, url: '#' }
 ]
 
 export const carouselSliderImages = [
@@ -13,89 +20,89 @@ export const carouselSliderImages = [
 
 export const footerLinks = [
   {
-    label: 'company',
+    label: company,
     links: [
-      { label: 'home', url: '#' },
-      { label: 'about-kurashi', url: '#' },
-      { label: 'products', url: '#' },
-      { label: 'career', url: '#' },
-      { label: 'contact', url: '#' }
+      { label: home, url: '#' },
+      { label: aboutKurashi, url: '#' },
+      { label: products, url: '#' },
+      { label: career, url: '#' },
+      { label: contact, url: '#' }
     ]
   },
   {
-    label: 'support-info',
+    label: supportInfo,
     links: [
-      { label: 'catalog', url: '#' },
-      { label: 'blog', url: '#' }
+      { label: catalog, url: '#' },
+      { label: blog, url: '#' }
     ]
   },
   {
-    label: 'policy',
+    label: policy,
     links: [
-      { label: 'warranty-policy', url: '#' },
-      { label: 'your-info', url: '#' }
+      { label: warrantyPolicy, url: '#' },
+      { label: yourInfo, url: '#' }
     ]
   }
 ]
 
 export const mockCategories = [
   {
-    categoryName: 'bathroom-accessories',
+    categoryName: bathroomAccessories,
     kurashiCollection: {
       hasKurashiCollection: true,
       collectionName: 'Black Collection',
       collectionCategories: [
         {
-          name: 'make-up-mirror',
+          name: makeUpMirror,
           thumbnail: '/assets/products/mirrors/PRE_B816xA500FHrP-CROPED.jpg'
         }
       ]
     },
     subCategories: [
       {
-        name: 'make-up-mirror',
+        name: makeUpMirror,
         thumbnail: '/assets/products/mirrors/PRE_B816xA500FHrP-CROPED.jpg',
         url: '#'
       },
       {
-        name: 'hang-toilet-paper',
+        name: hangToiletPaper,
         thumbnail: '/assets/products/mirrors/PRE_B816xA500FHrP-CROPED.jpg',
         url: '#'
       },
       {
-        name: 'glass-door-handle',
+        name: glassDoorHandle,
         thumbnail: '/assets/products/mirrors/PRE_B816xA500FHrP-CROPED.jpg',
         url: '#'
       },
       {
-        name: 'glass-door-handle',
+        name: glassDoorHandle,
         thumbnail: '/assets/products/mirrors/PRE_B816xA500FHrP-CROPED.jpg',
         url: '#'
       },
       {
-        name: 'glass-door-handle',
+        name: glassDoorHandle,
         thumbnail: '/assets/products/mirrors/PRE_B816xA500FHrP-CROPED.jpg',
         url: '#'
       },
       {
-        name: 'glass-door-handle',
+        name: glassDoorHandle,
         thumbnail: '/assets/products/mirrors/PRE_B816xA500FHrP-CROPED.jpg',
         url: '#'
       },
       {
-        name: 'glass-door-handle',
+        name: glassDoorHandle,
         thumbnail: '/assets/products/mirrors/PRE_B816xA500FHrP-CROPED.jpg',
         url: '#'
       },
       {
-        name: 'glass-door-handle',
+        name: glassDoorHandle,
         thumbnail: '/assets/products/mirrors/PRE_B816xA500FHrP-CROPED.jpg',
         url: '#'
       }
     ]
   },
   {
-    categoryName: 'floor-drain',
+    categoryName: floorDrain,
     kurashiCollection: {
       hasKurashiCollection: false,
       collectionName: null,
@@ -103,19 +110,19 @@ export const mockCategories = [
     },
     subCategories: [
       {
-        name: 'long-floor-drain',
+        name: longFloorDrain,
         thumbnail: '/assets/products/towel/towel.jpg',
         url: '#'
       },
       {
-        name: 'tiles-floor-drain',
+        name: tilesFloorDrain,
         thumbnail: '/assets/products/towel/towel.jpg',
         url: '#'
       }
     ]
   },
   {
-    categoryName: 'bathroom-tiles',
+    categoryName: bathroomTiles,
     kurashiCollection: {
       hasKurashiCollection: false,
       collectionName: null,
@@ -123,12 +130,12 @@ export const mockCategories = [
     },
     subCategories: [
       {
-        name: 'tiles-floor-drain',
+        name: tilesFloorDrain,
         thumbnail: '/assets/products/towel/towel.jpg',
         url: '#'
       },
       {
-        name: 'hang-scarf',
+        name: hangScarf,
         thumbnail: '/assets/products/towel/towel.jpg',
         url: '#'
       }
