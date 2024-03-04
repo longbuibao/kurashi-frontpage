@@ -22,15 +22,15 @@ i18next
     },
     preload: runsOnServerSide ? languages : []
   })
-  .then(() => console.log('successfully init i18next client side'))
-  .catch((e) => console.log('!! cannot init i18next client side !!'))
+  .then(() => {})
+  .catch(() => {})
 
 export function useTranslationClient (lng: string, ns: string, options: any): any {
   const [cookies, setCookie] = useCookies([cookieName])
   const ret = useTranslationOrg(ns, options)
   const { i18n } = ret
   if (runsOnServerSide && (lng !== null || lng !== '' || lng !== undefined) && i18n.resolvedLanguage !== lng) {
-    i18n.changeLanguage(lng).then(() => console.log('successfully change language on client side')).catch(e => console.log('!! cannot change language on client side !!'))
+    i18n.changeLanguage(lng).then(() => {}).catch(e => console.log('!! cannot change language on client side !!'))
   } else {
     const [activeLng, setActiveLng] = useState(i18n.resolvedLanguage)
     useEffect(() => {
@@ -40,7 +40,7 @@ export function useTranslationClient (lng: string, ns: string, options: any): an
 
     useEffect(() => {
       if (!(lng !== null || lng !== '' || lng !== undefined) || i18n.resolvedLanguage === lng) return
-      i18n.changeLanguage(lng).then(() => console.log('successfully change language on client side')).catch(e => console.log('!! cannot change language on client side !!'))
+      i18n.changeLanguage(lng).then(() => {}).catch(e => console.log('!! cannot change language on client side !!'))
     }, [lng, i18n])
     useEffect(() => {
       if (cookies.i18next === lng) return
