@@ -8,6 +8,7 @@ import KurashiTabs from '@/components/kurashi-tabs/kurashi-tabs'
 import { KurashiBlogs } from '@/components/blog-card'
 import { SectionTitle } from '@/components/section-title'
 import { AboutKurashiCard } from '@/components/about-kurashi-card'
+import { products, japanAuthentic, blog } from '@/i18n/translation-key'
 
 interface PageParam {
   params: { lng: string }
@@ -30,11 +31,11 @@ const Page = async ({ params: { lng } }: PageParam): Promise<React.ReactElement>
         <CarouselSlider items={carouselSliders} indicatorStyles={carouselCssDotIndicator} />
       </div>
       <div className='mx-auto my-10 w-fit'>
-        <SectionTitle title={t('products')} />
+        <SectionTitle title={t(products)} />
       </div>
       <div className='w-fit mx-auto mt-16 hover:cursor-default'>
         <KurashiDiv>
-          <div className='px-12 text-2xl'>{t('japan-authentic')}</div>
+          <div className='px-12 text-2xl'>{t(japanAuthentic)}</div>
         </KurashiDiv>
       </div>
       <div className='mt-5'>
@@ -42,7 +43,7 @@ const Page = async ({ params: { lng } }: PageParam): Promise<React.ReactElement>
       </div>
       <div className='p-5 w-4/5 mx-auto border-main border-t-2'>
         <div className='mx-auto my-10 w-fit'>
-          <SectionTitle title={t('blog')} />
+          <SectionTitle title={t(blog)} />
         </div>
         <KurashiBlogs kurashiBlogsUrl='http://localhost:3001/blogs' lng={lng} />
       </div>
