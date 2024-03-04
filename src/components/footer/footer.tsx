@@ -22,17 +22,17 @@ const Footer: React.FC<FooterProps> = ({ t }) => {
             <Link href='/'>
               <Logo imgSrc='/assets/logo/kurashi-logo.png' width={200} />
             </Link>
-            <p className='pl-4'>{t('interior-from-japan')}</p>
+            <p className='pl-4'>{t(interiorFromJapan)}</p>
           </div>
           <div className='flex flex-col gap-5 w-fit items-start'>
-            <KurashiLeftBorder>{t('address')}: {t('address-name')}</KurashiLeftBorder>
+            <KurashiLeftBorder>{t(address)}: {t(addressName)}</KurashiLeftBorder>
             <KurashiLeftBorder>
-              {t('tel')}: <a href='tel:+84901234567'> 0901234567 </a>
+              {t(tel)}: <a href='tel:+84901234567'> 0901234567 </a>
             </KurashiLeftBorder>
             <KurashiLeftBorder>
               <div className='flex flex-row items-center'>
                 <div>
-                  {t('social-media')}:
+                  {t(socialMedia)}:
                 </div>
                 <div className='flex flex-row gap-3 ml-2'>
                   <LogoFacebook />
