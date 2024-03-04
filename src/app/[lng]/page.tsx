@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Suspense } from 'react'
 
 import { CarouselSlider } from '@/components/carousel-slider'
 import { KurashiDiv } from '@/components/kurashi-div'
@@ -8,6 +8,7 @@ import KurashiTabs from '@/components/kurashi-tabs/kurashi-tabs'
 import { KurashiBlogs } from '@/components/blog-card'
 import { SectionTitle } from '@/components/section-title'
 import { AboutKurashiCard } from '@/components/about-kurashi-card'
+import Loading from './loading'
 
 interface PageParam {
   params: { lng: string }
@@ -44,7 +45,10 @@ const Page = async ({ params: { lng } }: PageParam): Promise<React.ReactElement>
         <div className='mx-auto my-10 w-fit'>
           <SectionTitle title={t('blog')} />
         </div>
-        <KurashiBlogs kurashiBlogsUrl='http://localhost:3001/blogs' lng={lng} />
+        <Suspense fallback={<Loading />}>
+          {/* @ts-expect-error } */}
+          <KurashiBlogs kurashiBlogsUrl='http://localhost:3001/blogs' lng={lng} />
+        </Suspense>
       </div>
       <div className='p-5 w-4/5 mx-auto border-main border-t-2'>
         <div className='w-fit'>
