@@ -5,10 +5,9 @@ import { KurashiDiv } from '@/components/kurashi-div'
 import { useTranslation } from '@/i18n'
 import { carouselSliderImages } from '@/constants'
 import KurashiTabs from '@/components/kurashi-tabs/kurashi-tabs'
-import { KurashiBlogs } from '@/components/blog-card'
+import { KurashiBlogs, BlogSkeleton } from '@/components/blog-card'
 import { SectionTitle } from '@/components/section-title'
 import { AboutKurashiCard } from '@/components/about-kurashi-card'
-import Loading from './loading'
 import { products, japanAuthentic, blog } from '@/i18n/translation-key'
 
 interface PageParam {
@@ -46,7 +45,7 @@ const Page = async ({ params: { lng } }: PageParam): Promise<React.ReactElement>
         <div className='mx-auto my-10 w-fit'>
           <SectionTitle title={t(blog)} />
         </div>
-        <Suspense fallback={<Loading />}>
+        <Suspense fallback={<BlogSkeleton />}>
           {/* @ts-expect-error } */}
           <KurashiBlogs kurashiBlogsUrl='http://localhost:3001/blogs' lng={lng} />
         </Suspense>
