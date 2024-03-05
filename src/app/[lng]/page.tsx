@@ -4,10 +4,10 @@ import { CarouselSlider } from '@/components/carousel-slider'
 import { KurashiDiv } from '@/components/kurashi-div'
 import { useTranslation } from '@/i18n'
 import { carouselSliderImages } from '@/constants'
-import KurashiTabs from '@/components/kurashi-tabs/kurashi-tabs'
 import { KurashiBlogs, BlogSkeleton } from '@/components/blog-card'
 import { SectionTitle } from '@/components/section-title'
 import { AboutKurashiCard } from '@/components/about-kurashi-card'
+import { KurashiCategories, KurashiCategoriesSkeleton } from '@/components/kurashi-categories'
 import { products, japanAuthentic, blog } from '@/i18n/translation-key'
 
 interface PageParam {
@@ -38,11 +38,14 @@ const Page = async ({ params: { lng } }: PageParam): Promise<React.ReactElement>
           <div className='px-12 text-2xl'>{t(japanAuthentic)}</div>
         </KurashiDiv>
       </div>
-      <div className='mt-5'>
-        <KurashiTabs lng={lng} kurashiCategoriesUrl='http://localhost:3001' />
-      </div>
-      <div className='p-5 w-4/5 mx-auto border-main border-t-2'>
-        <div className='mx-auto my-10 w-fit'>
+      <Suspense fallback={<KurashiCategoriesSkeleton />}>
+        <div className='mt-5'>
+          {/* @ts-expect-error } */}
+          <KurashiCategories lng={lng} />
+        </div>
+      </Suspense>
+      <div className='w-4/5 mx-auto border-main border-t-2'>
+        <div className='mx-auto w-fit'>
           <SectionTitle title={t(blog)} />
         </div>
         <Suspense fallback={<BlogSkeleton />}>

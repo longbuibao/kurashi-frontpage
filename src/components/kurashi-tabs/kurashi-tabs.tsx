@@ -1,43 +1,22 @@
 'use client'
 import React from 'react'
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs'
-import useSWR from 'swr'
 import '@/components/kurashi-tabs/react-tabs.css'
 
-import { KurashiCategory } from '@/types/kurashi-category'
-import { useTranslationClient } from '@/i18n/client-side'
-import { defaultNS } from '@/i18n/settings'
-import Link from 'next/link'
-import Loading from '@/app/[lng]/loading'
-import { KurashiError } from '@/components/kurashi-error'
-import { kurashiFetcher } from '@/utils/kurashi-fetcher'
-import { errorMessage } from '@/i18n/translation-key'
-
 interface KurashiTabsProps {
-  lng: string
-  kurashiCategoriesUrl: string
+  body: Array<{ key: string, content: any }>
+  tabList: any[]
 }
 
-const KurashiTabs: React.FC<KurashiTabsProps> = ({ lng, kurashiCategoriesUrl }) => {
-  const { t } = useTranslationClient(lng, defaultNS, {})
-  const { data: kurashiCategories, isLoading, error } = useSWR<KurashiCategory[]>(kurashiCategoriesUrl, kurashiFetcher)
-  const categories = kurashiCategories?.map(category => category.categoryName).map(categoryName => t(categoryName))
-  if (isLoading) return <Loading />
-  if (error) return <KurashiError message={t(errorMessage)} />
+const KurashiTabs: React.FC<KurashiTabsProps> = ({ body, tabList }) => {
   return (
     <Tabs defaultIndex={0} className='w-2/3 mx-auto my-11'>
       <TabList className='w-full flex flex-row justify-around mb-10'>
-        {categories?.map(categoryName => <Tab className='pb-2 text-2xl font-semibold hover:cursor-pointer' key={categoryName}>{categoryName}</Tab>)}
+        {tabList?.map(tab => <Tab className='pb-2 text-2xl font-semibold hover:cursor-pointer' key={tab}>{tab}</Tab>)}
       </TabList>
-      {kurashiCategories?.map(kurashiCategory => (
-        <TabPanel key={kurashiCategory.categoryName}>{kurashiCategory.subCategories.map(subCategory => (
-          <Link key={subCategory.name} href={subCategory.url}>
-            <div className='flex flex-col items-center'>
-              <img className='w-64' src={subCategory.thumbnail} alt='product thumbnail' />
-              <div className='mt-3 hover:cursor-pointer font-semibold hover:text-main'>{t(subCategory.name)}</div>
-            </div>
-          </Link>
-        ))}
+      {body?.map(item => (
+        <TabPanel key={item.key}>
+          {item.content}
         </TabPanel>
       ))}
     </Tabs>
