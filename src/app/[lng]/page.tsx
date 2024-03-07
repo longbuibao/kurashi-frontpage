@@ -14,6 +14,10 @@ interface PageParam {
   params: { lng: string }
 }
 
+export const metadata = {
+  title: 'Kurashi'
+}
+
 const createCarouselItemImage = (imageSrc: string): React.ReactElement => (
   <div key={imageSrc}>
     <img src={imageSrc} />
