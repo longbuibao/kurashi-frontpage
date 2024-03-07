@@ -44,8 +44,8 @@ const Page = async ({ params: { lng } }: PageParam): Promise<React.ReactElement>
           <KurashiCategories lng={lng} />
         </div>
       </Suspense>
-      <div className='w-4/5 mx-auto border-main border-t-2'>
-        <div className='mx-auto w-fit'>
+      <div className='w-4/5 mx-auto border-main border-t-2 my-11'>
+        <div className='mx-auto w-fit my-10'>
           <SectionTitle title={t(blog)} />
         </div>
         <Suspense fallback={<BlogSkeleton />}>
@@ -53,7 +53,7 @@ const Page = async ({ params: { lng } }: PageParam): Promise<React.ReactElement>
           <KurashiBlogs kurashiBlogsUrl='http://localhost:3001/blogs' lng={lng} />
         </Suspense>
       </div>
-      <div className='p-5 w-4/5 mx-auto border-main border-t-2'>
+      <div className='p-5 w-4/5 mx-auto border-main border-t-2 my-10'>
         <div className='w-fit'>
           <AboutKurashiCard lng={lng} />
         </div>

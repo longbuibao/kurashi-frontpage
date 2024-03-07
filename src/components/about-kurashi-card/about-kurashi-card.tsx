@@ -18,7 +18,7 @@ const AboutKurashiCard: React.FC<AboutKurashiCardProps> = ({ lng }) => {
     <div className='flex flex-row gap-20 bg-secondary p-3'>
       <img src='/assets/logo/about-kurashi.png' alt='' />
       <div className='flex flex-col'>
-        <div className='w-fit mb-20'>
+        <div className='w-fit mb-20 text-wrap'>
           <SectionTitle title={t(aboutKurashi)} />
         </div>
         <div className='mb-10 text-3xl font-semibold'>{t(aboutContentTitle)}</div>

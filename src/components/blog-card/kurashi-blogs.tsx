@@ -13,7 +13,7 @@ interface KurashiBlogsProps {
 const KurashiBlogs: Promise<React.JSX.Element> = async ({ kurashiBlogsUrl, lng }: KurashiBlogsProps) => {
   const blogs = await kurashiFetcher(kurashiBlogsUrl) as KurashiBlog[]
   return (
-    <div className='flex flex-row gap-5 justify-center'>
+    <div className='flex flex-row gap-5 justify-center max-lg:flex-wrap'>
       {blogs?.map(blog => <BlogCard url={blog.url} key={blog.content} content={blog.content} imgSrc={blog.thumbnail} title={blog.title} dateUpload={blog.date} />)}
     </div>
   )

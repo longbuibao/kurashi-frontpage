@@ -7,7 +7,7 @@ interface KurashiLinkProps {
 
 const KurashiLink: React.FC<KurashiLinkProps> = ({ children, borderBottomStyle = 'solid' }): React.ReactElement => {
   return (
-    <div className={`text-nowrap pb-2 border-b-[#fff]/[.00] border-b-2 hover:cursor-pointer hover:text-main border-${borderBottomStyle} hover:border-b-main`}>
+    <div className={`pb-2 border-b-[#fff]/[.00] border-b-2 hover:cursor-pointer hover:text-main border-${borderBottomStyle} hover:border-b-main`}>
       {children}
     </div>
   )
