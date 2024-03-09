@@ -11,7 +11,6 @@ interface PageParam {
 
 export async function generateMetadata (params: { params: PageParam['params'] }): Promise<Metadata> {
   const product = await kurashiFetcher(`http://localhost:3001/${params.params.id}`)
-  console.log(product)
   return {
     title: product.productInformation.productName
   }
