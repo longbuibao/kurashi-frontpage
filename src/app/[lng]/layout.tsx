@@ -27,7 +27,6 @@ const RootLayout: React.FC<RootProps> = async ({ children, params }): Promise<Re
           {children}
         </Suspense>
         <Footer t={t} />
-        <div className='text-[#383836] hover:cursor-default text-center p-1 text-xs'>Copyright 2024 Kurashi Corporation. All rights reserved</div>
       </body>
     </html>
   )

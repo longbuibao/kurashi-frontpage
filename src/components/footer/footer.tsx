@@ -15,7 +15,7 @@ interface FooterProps {
 
 const Footer: React.FC<FooterProps> = ({ t }) => {
   return (
-    <div>
+    <div className='fixed bottom-0 min-w-full'>
       <div className='pl-3 pb-3 border-t-2 border-b-2 border-main flex flex-row justify-around'>
         <div className='flex flex-col gap-5 w-fit justify-center'>
           <div className='mb-5 flex flex-col justify-center'>
@@ -59,7 +59,7 @@ const Footer: React.FC<FooterProps> = ({ t }) => {
           )}
         </div>
       </div>
-      <div />
+      <div className='text-[#383836] hover:cursor-default text-center p-1 text-xs'>Copyright 2024 Kurashi Corporation. All rights reserved</div>
     </div>
   )
 }
