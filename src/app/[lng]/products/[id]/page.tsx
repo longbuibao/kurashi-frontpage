@@ -11,9 +11,9 @@ interface PageParam {
 const GetProductPage = async ({ id, lng }: PageParam['params']): Promise<React.ReactElement> => {
   const product = await kurashiFetcher(`http://localhost:3001/${id}`)
   return (
-    <>
+    <div className='my-10'>
       <ProductInfo kurashiProductInformation={product} lng={lng} />
-    </>
+    </div>
   )
 }
 
