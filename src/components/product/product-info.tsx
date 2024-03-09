@@ -15,17 +15,17 @@ const ProductInfo: React.FC<ProductInfoProps> = async ({ kurashiProductInformati
   const { t } = await useTranslation(lng)
   return (
     <div className='flex flex-col'>
-      <div className='flex flex-col w-3/4 mx-auto'>
+      <div className='flex flex-col w-4/5 mx-auto'>
         <div className='w-fit pl-10'>
           <KurashiLeftBorder>
             <h1 className='text-xl'>{t(productInformation)}</h1>
           </KurashiLeftBorder>
         </div>
-        <div className='flex flex-row w-3/4 mx-auto items-center justify-center gap-32'>
-          <div className='w-1/4'>
-            <img src={kurashiProductInformation.productInformation.productImageUrl} alt={kurashiProductInformation.productInformation.productName} />
+        <div className='flex flex-row mx-auto items-center gap-10'>
+          <div className='w-1/2'>
+            <img className='max-w-full' src={kurashiProductInformation.productInformation.productImageUrl} alt={kurashiProductInformation.productInformation.productName} />
           </div>
-          <div className='flex flex-col justify-center gap-1'>
+          <div className='flex flex-col justify-center gap-1 flex-grow h-full'>
             <div className='bg-secondary p-5'>
               <KurashiLeftBorder>
                 {`${t(productName)}`}: <span>{kurashiProductInformation.productInformation.productName}</span>
@@ -61,10 +61,8 @@ const ProductInfo: React.FC<ProductInfoProps> = async ({ kurashiProductInformati
                 </KurashiDiv>
               </div>
             </div>
-
           </div>
         </div>
-
       </div>
     </div>
   )
