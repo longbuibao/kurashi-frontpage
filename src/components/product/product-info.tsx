@@ -16,13 +16,13 @@ const ProductInfo: React.FC<ProductInfoProps> = async ({ kurashiProductInformati
   return (
     <div className='flex flex-col'>
       <div className='flex flex-col w-4/5 mx-auto'>
-        <div className='w-fit pl-10'>
+        <div className='w-fit pl-10 mb-10'>
           <KurashiLeftBorder>
             <h1 className='text-xl'>{t(productInformation)}</h1>
           </KurashiLeftBorder>
         </div>
-        <div className='flex flex-row mx-auto items-center gap-10'>
-          <div className='w-1/2'>
+        <div className='flex flex-row mx-auto items-center gap-20 max-lg:flex-col'>
+          <div className='w-1/2 max-w-md'>
             <img className='max-w-full' src={kurashiProductInformation.productInformation.productImageUrl} alt={kurashiProductInformation.productInformation.productName} />
           </div>
           <div className='flex flex-col justify-center gap-1 flex-grow h-full'>
