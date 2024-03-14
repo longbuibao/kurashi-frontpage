@@ -50,7 +50,7 @@ const Page = async ({ params: { lng } }: PageParam): Promise<React.ReactElement>
         </div>
         <Suspense fallback={<BlogSkeleton />}>
           {/* @ts-expect-error } */}
-          <KurashiBlogs kurashiBlogsUrl='http://localhost:3001/blogs' lng={lng} />
+          <KurashiBlogs />
         </Suspense>
       </div>
       <div className='p-5 w-4/5 mx-auto border-main border-t-2 my-10'>

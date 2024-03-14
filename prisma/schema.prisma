@@ -25,6 +25,7 @@ model Post {
   author    User?     @relation(fields: [authorId], references: [id])
   authorId  String?
   thumbnail String
+  url       String    @default("#")
 }
 
 model Product {
