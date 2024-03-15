@@ -25,12 +25,16 @@ model Post {
   author    User?     @relation(fields: [authorId], references: [id])
   authorId  String?
   thumbnail String
+  url       String    @default("#")
 }
 
 model Product {
   id            String        @id @default(uuid())
   name          String
+  thumbnail     String @default("#")
+  url           String @default("#")
   categoryId    String?
+  isAvailable   Boolean @default(false)
   subCategoryId String?
   category      Category? @relation(fields: [categoryId], references: [id])
   subCategory   SubCategory? @relation(fields: [subCategoryId], references: [id])
