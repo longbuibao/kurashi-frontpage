@@ -4,13 +4,14 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "npm run db:deploy && next build",
     "start": "next start",
     "lint": "next lint",
     "db:reset": "npx prisma migrate dev -n reset",
     "db:migrate": "npx prisma migrate dev --name",
     "db:seed": "npx prisma db seed",
-    "db:studio": "npx prisma studio"
+    "db:studio": "npx prisma studio",
+    "db:deploy": "npx prisma migrate deploy"
   },
   "dependencies": {
     "@prisma/client": "^5.11.0",
