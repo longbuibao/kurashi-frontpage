@@ -1,6 +1,7 @@
 export const fallbackLng = 'en'
 export const languages = ['vi', fallbackLng, 'ja']
 export const defaultNS = 'translation'
+export const productNs = 'product-trans'
 export const cookieName = 'i18next'
 
 interface Option {

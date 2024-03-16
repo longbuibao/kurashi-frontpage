@@ -38,6 +38,16 @@ model Product {
   subCategoryId String?
   category      Category? @relation(fields: [categoryId], references: [id])
   subCategory   SubCategory? @relation(fields: [subCategoryId], references: [id])
+  origin        ProductOrigin[]
+  component     ProductComponent[]
+}
+
+model ProductComponent {
+  id          String @id @default(uuid())
+  name        String
+  productId   String?
+  product     Product? @relation(fields: [productId], references: [id])
+  material    ProductMaterial[]
 }
 
 model Category {
@@ -55,4 +65,16 @@ model SubCategory {
   products    Product[]
   categoryId  String?
   category    Category?     @relation(fields: [categoryId], references: [id])
+}
+
+model ProductMaterial {
+  id      String @id @default(uuid())
+  name    String
+  product ProductComponent[]
+}
+
+model ProductOrigin {
+  id      String @id @default(uuid())
+  name    String
+  product Product[]
 }

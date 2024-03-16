@@ -2,7 +2,7 @@ import { PrismaClient } from '@prisma/client'
 
 const prisma = new PrismaClient()
 
-async function main () {
+export async function main () {
   const post1 = await prisma.post.create({
     data: {
       title: 'Post 1',
@@ -186,7 +186,11 @@ async function main () {
   )
 }
 
-main()
+const tryToSeedProductMaterialAndOrigin = async () => {
+
+}
+
+tryToSeedProductMaterialAndOrigin()
   .catch((e) => {
     console.error(e)
     process.exit(1)

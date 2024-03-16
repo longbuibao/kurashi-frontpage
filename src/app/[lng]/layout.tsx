@@ -12,6 +12,7 @@ export const metadata = {
 }
 
 interface RootProps { children: React.ReactNode, params: { lng: string } }
+
 const RootLayout: React.FC<RootProps> = async ({ children, params }): Promise<React.ReactElement> => {
   const { t } = await useTranslation(params.lng)
   return (

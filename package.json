@@ -7,6 +7,7 @@
     "build": "npm run db:deploy && next build",
     "start": "next start",
     "lint": "next lint",
+    "db:manual-seed": "ts-node prisma/seed.mjs",
     "db:reset": "npx prisma migrate dev -n reset",
     "db:migrate": "npx prisma migrate dev --name",
     "db:seed": "npx prisma db seed",
@@ -16,6 +17,7 @@
   "dependencies": {
     "@prisma/client": "^5.11.0",
     "accept-language": "^3.0.18",
+    "ag-grid-react": "^31.1.1",
     "i18next": "^23.8.2",
     "i18next-browser-languagedetector": "^7.2.0",
     "i18next-resources-to-backend": "^1.2.0",
