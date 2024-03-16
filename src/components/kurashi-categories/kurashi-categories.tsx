@@ -26,8 +26,6 @@ const KurashiCategories: Promise<React.JSX.Element> = async ({ lng }: KurashiCat
       if (key !== undefined && key !== '' && key !== null && acc.has(key)) {
         const value = acc.get(key)
         if (value !== undefined) {
-          const a = [...value, product]
-          console.log(a)
           acc.set(key, [...value, product])
           return acc
         }
@@ -44,7 +42,7 @@ const KurashiCategories: Promise<React.JSX.Element> = async ({ lng }: KurashiCat
     return {
       key: product[0],
       content: product[1].map((prod) => (
-        <Link key={prod.name} href={prod.url}>
+        <Link key={prod.name} href={`products/${prod.id}`}>
           <div className='flex flex-col items-center'>
             <img className='w-64' src={prod.thumbnail} alt='product thumbnail' />
             <div className='mt-3 hover:cursor-pointer font-semibold hover:text-main'>{t(prod.name)}</div>
