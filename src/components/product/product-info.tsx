@@ -24,7 +24,7 @@ const ProductInfo: React.FC<ProductInfoProps> = async ({ productInfo, lng }) => 
           </KurashiLeftBorder>
         </div>
         <div className='flex flex-row mx-auto items-center gap-20 max-lg:flex-col'>
-          <div className='w-1/2 max-w-md max-lg:w-full'>
+          <div className='w-3/5 max-w-md max-lg:w-full'>
             <img className='max-w-full' src={productInfo.thumbnail} alt={productInfo.name} />
           </div>
           <div className='flex flex-col justify-center gap-1 flex-grow h-full'>
@@ -42,7 +42,7 @@ const ProductInfo: React.FC<ProductInfoProps> = async ({ productInfo, lng }) => 
               <div className='pl-10'>
                 {productInfo.component.map(component => (
                   <div key={component.id}>
-                    <span className='text-main text-xl font-semibold'> - </span>{component.name}: <span>{component.material.map(material => t(material.name)).join(', ')}</span>
+                    <span className='text-main text-xl font-semibold'> - </span>{t(component.name)}: <span>{component.material.map(material => t(material.name)).join(', ')}</span>
                   </div>
                 )
                 )}
