@@ -1,20 +1,30 @@
 import React, { Suspense } from 'react'
 
 import { ProductInfo } from '@/components/product'
-import { kurashiFetcher } from '@/utils/kurashi-fetcher'
 import ProductIdSkeleton from './product-id-skeleton'
+
+import prisma from '@/lib/prisma'
 
 interface PageParam {
   params: { lng: string, id: string }
 }
 
 const GetProductPage = async ({ id, lng }: PageParam['params']): Promise<React.ReactElement> => {
-  const product = await kurashiFetcher(`http://localhost:3001/${id}`)
-  return (
-    <div className='my-10'>
-      <ProductInfo kurashiProductInformation={product} lng={lng} />
-    </div>
-  )
+  const product = await prisma.product.findUnique({
+    where: { id },
+    include: {
+      origin: true,
+      component: { include: { material: { select: { name: true } } } }
+    }
+  })
+
+  if (product !== null) {
+    return (
+      <div className='my-10'>
+        <ProductInfo productInfo={product} lng={lng} />
+      </div>
+    )
+  } else throw Error(`Not found this product: ${id}`)
 }
 
 const ProductPage: React.FC<PageParam> = ({ params: { lng, id } }: PageParam) => {
