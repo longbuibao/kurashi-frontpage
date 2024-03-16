@@ -14,9 +14,21 @@ const GetProductPage = async ({ id, lng }: PageParam['params']): Promise<React.R
     where: { id },
     include: {
       origin: true,
-      component: { include: { material: { select: { name: true } } } }
+      component: { include: { material: { select: { name: true } } } },
+      size: {
+        include: {
+          dimension: {
+            select: {
+              name: true,
+              value: true
+            }
+          }
+        }
+      }
     }
   })
+
+  console.log(product?.size?.dimension)
 
   if (product !== null) {
     return (

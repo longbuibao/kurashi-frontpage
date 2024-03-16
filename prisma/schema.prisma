@@ -46,6 +46,7 @@ model Product {
 
 model ProductSize {
   id            String             @id @default(uuid())
+  unit          String             @default("mm")
   quantity      Int
   twoDimCad     String
   productManual String
