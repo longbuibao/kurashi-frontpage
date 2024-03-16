@@ -1,6 +1,6 @@
 import { PrismaClient } from '@prisma/client'
 
-const prisma = new PrismaClient()
+const prisma = new PrismaClient({ log: ['error', 'query'] })
 
 export async function main () {
   const post1 = await prisma.post.create({
@@ -186,15 +186,27 @@ export async function main () {
   )
 }
 
-const tryToSeedProductMaterialAndOrigin = async () => {
-
+const tryToSeedProductAndSize = async () => {
+  const product = await prisma.product.findUnique(
+    {
+      where: { id: '0953416b-f68f-4fb7-b546-3f958b401d04' },
+      select: {
+        id: true,
+        name: true,
+        size: {
+          include: {
+            dimension: {
+              select: {
+                name: true,
+                value: true
+              }
+            }
+          }
+        }
+      }
+    }
+  )
+  console.log(product)
 }
 
-tryToSeedProductMaterialAndOrigin()
-  .catch((e) => {
-    console.error(e)
-    process.exit(1)
-  })
-  .finally(async () => {
-    await prisma.$disconnect()
-  })
+tryToSeedProductAndSize()
