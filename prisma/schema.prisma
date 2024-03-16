@@ -45,8 +45,8 @@ model Product {
 model ProductComponent {
   id          String @id @default(uuid())
   name        String
-  meterialId  String?
-  product     Product? @relation(fields: [id], references: [id])
+  productId   String?
+  product     Product? @relation(fields: [productId], references: [id])
   material    ProductMaterial[]
 }
 
