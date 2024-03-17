@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 import { KurashiDiv, KurashiLeftBorder } from '@/components/kurashi-div'
 import { useTranslation } from '@/i18n'
-import { productName, productMaterial, productOrigin, contactUsingZalo, productInformation, productIntro, productSize, productCadLink, productManualLink, productOnlineCad } from '@/i18n/translation-key'
+import { productName, productMaterial, productOrigin, contactUsingZalo, productInformation, productIntro, productSize, productCadLink, productManualLink, productOnlineCad, productSizeKey, productSizeValue } from '@/i18n/translation-key'
 import { productNs } from '@/i18n/settings'
 
 import { Prisma } from '@prisma/client'
@@ -130,13 +130,13 @@ const ProductInfo: React.FC<ProductInfoProps> = async ({ productInfo, lng }) => 
               <table className='table-auto w-full'>
                 <thead className='bg-main text-secondary'>
                   <tr>
-                    <th>{t('product-size-key')}</th>
-                    <th>{t('product-size-value')}</th>
+                    <th>{t(productSizeKey)}</th>
+                    <th>{t(productSizeValue)}</th>
                   </tr>
                 </thead>
                 <tbody>
                   {productInfo.size?.dimension.map(di => (
-                    <tr key={di.id} className='bg-opacity-[0.3] bg-main hover:bg-opacity-[0.7]'>
+                    <tr key={di.name} className='bg-opacity-[0.3] bg-main hover:bg-opacity-[0.7]'>
                       <td className='text-center'>{di.name}</td>
                       <td className='text-center'>
                         <div className='flex flex-row w-1/2 mx-auto'>
