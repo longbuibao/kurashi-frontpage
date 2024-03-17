@@ -187,26 +187,31 @@ export async function main () {
 }
 
 const tryToSeedProductAndSize = async () => {
-  const product = await prisma.product.findUnique(
+  const intro1 = await prisma.productIntro.create({
+    data: {
+      title: 'Ngăn mùi và lọc rác triệt để nhờ bộ xả chuyên dụng',
+      content: 'Dus num con ratiuntibus il estrum ilicium alia vo-lenim inctem repe nessime et dio. Et mil maios eanonseque re volupta temporum, et liqui volorem',
+      introImg: '/assets/products/mirrors/long-floor-des1.jpg'
+    }
+  })
+
+  const intro2 = await prisma.productIntro.create({
+    data: {
+      title: 'Kích thước dài và rộng (tùy loại) giúp tránh tình trạng nghẹt nước',
+      content: 'Dus num con ratiuntibus il estrum ilicium alia vo-lenim inctem repe nessime et dio. Et mil maios eanonseque re volupta temporum, et liqui volorem',
+      introImg: '/assets/products/mirrors/long-floor-des2.png'
+    }
+  })
+  await prisma.product.update(
     {
       where: { id: '0953416b-f68f-4fb7-b546-3f958b401d04' },
-      select: {
-        id: true,
-        name: true,
-        size: {
-          include: {
-            dimension: {
-              select: {
-                name: true,
-                value: true
-              }
-            }
-          }
+      data: {
+        productIntro: {
+          connect: [intro1, intro2]
         }
       }
     }
   )
-  console.log(product)
 }
 
 tryToSeedProductAndSize()
