@@ -13,5 +13,11 @@
 	"prod-foot-part": "足部",
 	"prod-knee-part": "膝部分",
 	"contact-using-zalo": "ザロに相談​​する",
-	"product-intro": "製品導入"
+	"product-intro": "製品導入",
+	"product-size": "商品のサイズ",
+	"product-size-key": "寸法",
+	"product-size-value": "価値",
+	"product-cad-link": "CAD スケッチをダウンロード",
+	"product-manual-link": "マニュアルをダウンロード",
+	"product-online-cad": "オンラインCADを見る"
 }

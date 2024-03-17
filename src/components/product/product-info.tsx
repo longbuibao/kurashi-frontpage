@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 import { KurashiDiv, KurashiLeftBorder } from '@/components/kurashi-div'
 import { useTranslation } from '@/i18n'
-import { productName, productMaterial, productOrigin, contactUsingZalo, productInformation, productIntro } from '@/i18n/translation-key'
+import { productName, productMaterial, productOrigin, contactUsingZalo, productInformation, productIntro, productSize, productCadLink, productManualLink, productOnlineCad } from '@/i18n/translation-key'
 import { productNs } from '@/i18n/settings'
 
 import { Prisma } from '@prisma/client'
@@ -14,6 +14,17 @@ interface ProductInfoProps {
       origin: true
       component: { include: { material: { select: { name: true } } } }
       productIntro: true
+      size: {
+        include: {
+          dimension: {
+            select: {
+              id: true
+              name: true
+              value: true
+            }
+          }
+        }
+      }
     } }>
   lng: string
 }
@@ -95,12 +106,70 @@ const ProductInfo: React.FC<ProductInfoProps> = async ({ productInfo, lng }) => 
               </div>
             ))}
           </div>
-          <div className='flex flex-row-reverse w-1/2 justify-center items-center max-lg:w-full'>
+          <div className='flex flex-row-reverse w-1/2 justify-center items-center max-lg:w-full max-lg:p-10'>
             {productInfo.productIntro.map(intro => (
               <div className='flex flex-col w-1/2 gap-5 my-5' key={intro.id}>
                 <img src={intro.introImg} alt='product intro image' className='w-5/6' />
               </div>
             ))}
+          </div>
+        </div>
+      </div>
+      <div className='flex flex-col w-4/5 mx-auto my-10'>
+        <div className='w-fit pl-10 mb-10'>
+          <KurashiLeftBorder>
+            <h1 className='text-xl'>{t(productSize)}</h1>
+          </KurashiLeftBorder>
+        </div>
+        <div className='flex flex-row max-lg:flex-col bg-secondary justify-center items-center mx-10'>
+          <div className='flex flex-row-reverse w-3/4 justify-center items-center max-lg:w-full my-5'>
+            <img src={productInfo.size?.productSizeImage} alt='product size image' className='w-5/6' />
+          </div>
+          <div className='flex flex-col items-center justify-center w-full flex-1 max-lg:my-5'>
+            <div>
+              <table className='table-auto w-80'>
+                <thead className='bg-main text-secondary'>
+                  <tr>
+                    <th>{t('product-size-key')}</th>
+                    <th>{t('product-size-value')}</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {productInfo.size?.dimension.map(di => (
+                    <tr key={di.id} className='bg-opacity-[0.3] bg-main hover:bg-opacity-[0.7]'>
+                      <td className='text-center'>{di.name}</td>
+                      <td className='text-center'>{di.value} {productInfo.size?.unit}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+            <div className='flex flex-col gap-5 my-5'>
+              <KurashiDiv>
+                <Link href='#zalolink'>
+                  <div className='flex flex-row justify-between gap-3'>
+                    <div>{t(productOnlineCad)}</div>
+                    <i className='fa-solid fa-arrow-up-right-from-square' />
+                  </div>
+                </Link>
+              </KurashiDiv>
+              <KurashiDiv>
+                <Link href={productInfo.size?.twoDimCad ?? '#'}>
+                  <div className='flex flex-row justify-between gap-3'>
+                    <div>{t(productCadLink)}</div>
+                    <i className='fa-solid fa-file-arrow-down' />
+                  </div>
+                </Link>
+              </KurashiDiv>
+              <KurashiDiv>
+                <Link href={productInfo.size?.twoDimCad ?? '#'}>
+                  <div className='flex flex-row justify-between gap-3'>
+                    <div>{t(productManualLink)}</div>
+                    <i className='fa-solid fa-file-arrow-down' />
+                  </div>
+                </Link>
+              </KurashiDiv>
+            </div>
           </div>
         </div>
       </div>

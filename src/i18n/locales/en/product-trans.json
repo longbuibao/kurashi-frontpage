@@ -13,5 +13,11 @@
 	"prod-foot-part": "Foot Part",
 	"prod-knee-part": "Knee Part",
 	"contact-using-zalo": "Contact Zalo",
-	"product-intro": "Product Introduction"
+	"product-intro": "Product Introduction",
+	"product-size": "Product Size",
+	"product-size-key": "Dimension",
+	"product-size-value": "Value",
+	"product-cad-link": "Download Cad Sketch",
+	"product-manual-link": "Download Manual",
+	"product-online-cad": "View Online CAD"
 }

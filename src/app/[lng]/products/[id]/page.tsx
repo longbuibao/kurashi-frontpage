@@ -4,6 +4,7 @@ import { ProductInfo } from '@/components/product'
 import ProductIdSkeleton from './product-id-skeleton'
 
 import prisma from '@/lib/prisma'
+import { KurashiError } from '@/components/kurashi-error'
 
 interface PageParam {
   params: { lng: string, id: string }
@@ -35,7 +36,7 @@ const GetProductPage = async ({ id, lng }: PageParam['params']): Promise<React.R
         <ProductInfo productInfo={product} lng={lng} />
       </div>
     )
-  } else throw Error(`Not found this product: ${id}`)
+  } else return <KurashiError message={`Not found this product: ${id}`} />
 }
 
 const ProductPage: React.FC<PageParam> = ({ params: { lng, id } }: PageParam) => {
