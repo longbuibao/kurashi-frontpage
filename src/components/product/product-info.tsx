@@ -125,9 +125,9 @@ const ProductInfo: React.FC<ProductInfoProps> = async ({ productInfo, lng }) => 
           <div className='flex flex-row-reverse w-3/4 justify-center items-center max-lg:w-full my-5'>
             <img src={productInfo.size?.productSizeImage} alt='product size image' className='w-5/6' />
           </div>
-          <div className='flex flex-col items-center justify-center w-full flex-1 max-lg:my-5'>
-            <div>
-              <table className='table-auto w-80'>
+          <div className='flex flex-col items-center justify-center w-full flex-1 max-lg:my-5 mx-5'>
+            <div className='w-full'>
+              <table className='table-auto w-full'>
                 <thead className='bg-main text-secondary'>
                   <tr>
                     <th>{t('product-size-key')}</th>
@@ -138,13 +138,18 @@ const ProductInfo: React.FC<ProductInfoProps> = async ({ productInfo, lng }) => 
                   {productInfo.size?.dimension.map(di => (
                     <tr key={di.id} className='bg-opacity-[0.3] bg-main hover:bg-opacity-[0.7]'>
                       <td className='text-center'>{di.name}</td>
-                      <td className='text-center'>{di.value} {productInfo.size?.unit}</td>
+                      <td className='text-center'>
+                        <div className='flex flex-row w-1/2 mx-auto'>
+                          <div>{di.value}</div>
+                          <div className='ml-auto'>{productInfo.size?.unit}</div>
+                        </div>
+                      </td>
                     </tr>
                   ))}
                 </tbody>
               </table>
             </div>
-            <div className='flex flex-col gap-5 my-5'>
+            <div className='flex flex-col gap-5 my-5 w-full'>
               <KurashiDiv>
                 <Link href='#zalolink'>
                   <div className='flex flex-row justify-between gap-3'>
