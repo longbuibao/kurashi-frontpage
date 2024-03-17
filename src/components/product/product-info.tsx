@@ -22,7 +22,7 @@ const ProductInfo: React.FC<ProductInfoProps> = async ({ productInfo, lng }) => 
   const { t } = await useTranslation(lng, productNs)
   return (
     <div className='flex flex-col'>
-      <div className='flex flex-col w-4/5 mx-auto'>
+      <div className='flex flex-col w-4/5 mx-auto my-10'>
         <div className='w-fit pl-10 mb-10'>
           <KurashiLeftBorder>
             <h1 className='text-xl'>{t(productInformation)}</h1>
@@ -82,8 +82,8 @@ const ProductInfo: React.FC<ProductInfoProps> = async ({ productInfo, lng }) => 
             <h1 className='text-xl'>{t(productIntro)}</h1>
           </KurashiLeftBorder>
         </div>
-        <div className='flex flex-row bg-secondary'>
-          <div className='flex flex-col'>
+        <div className='flex flex-row bg-secondary max-lg:flex-col mx-10'>
+          <div className='flex flex-col w-1/2 p-10 items-center justify-center max-lg:w-full'>
             {productInfo.productIntro.map(intro => (
               <div className='flex flex-col gap-5 my-5' key={intro.id}>
                 <KurashiLeftBorder>
@@ -95,10 +95,10 @@ const ProductInfo: React.FC<ProductInfoProps> = async ({ productInfo, lng }) => 
               </div>
             ))}
           </div>
-          <div className='flex flex-row w-1/2'>
+          <div className='flex flex-row-reverse w-1/2 justify-center items-center max-lg:w-full'>
             {productInfo.productIntro.map(intro => (
               <div className='flex flex-col w-1/2 gap-5 my-5' key={intro.id}>
-                <img src={intro.introImg} alt='product intro image' />
+                <img src={intro.introImg} alt='product intro image' className='w-5/6' />
               </div>
             ))}
           </div>
