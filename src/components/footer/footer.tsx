@@ -16,9 +16,9 @@ interface FooterProps {
 const Footer: React.FC<FooterProps> = ({ t }) => {
   return (
     <div>
-      <div className='pl-3 pb-3 border-t-2 border-b-2 border-main flex flex-row justify-around max-lg:flex-col'>
+      <div className='pl-3 pb-3 border-t-2 border-b-2 border-main flex flex-row justify-around'>
         <div className='flex flex-col gap-5 w-fit justify-center'>
-          <div className='mb-5 flex flex-col justify-center max-lg:items-center'>
+          <div className='mb-5 flex flex-col justify-center'>
             <Link href='/'>
               <Logo imgSrc='/assets/logo/kurashi-logo.png' width={200} />
             </Link>
@@ -43,13 +43,13 @@ const Footer: React.FC<FooterProps> = ({ t }) => {
             </KurashiLeftBorder>
           </div>
         </div>
-        <div className='flex flex-row gap-5 pt-10 w-6/12 max-lg:w-full max-lg:flex-col'>
+        <div className='flex flex-row gap-5 pt-10 w-6/12'>
           {footerLinks.map(footerLink =>
             <div key={footerLink.label} className='flex flex-col grow'>
               <div className='mb-5 font-semibold text-xl'>
                 <KurashiLeftBorder>{t(footerLink.label)}</KurashiLeftBorder>
               </div>
-              <div className='flex flex-col gap-5 w-fit max-lg:mx-auto max-lg:gap-2'>
+              <div className='flex flex-col gap-5 w-fit'>
                 {footerLink.links.map(link =>
                   <KurashiLink key={link.url}>
                     <Link href={`${link.url}`}>{t(link.label)}</Link>

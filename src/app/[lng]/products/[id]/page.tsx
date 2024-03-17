@@ -32,7 +32,7 @@ const GetProductPage = async ({ id, lng }: PageParam['params']): Promise<React.R
 
   if (product !== null) {
     return (
-      <div className='my-10 mx-auto w-full max-lg:my-0'>
+      <div className='my-10'>
         <ProductInfo productInfo={product} lng={lng} />
       </div>
     )
