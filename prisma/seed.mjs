@@ -1,8 +1,8 @@
 import { PrismaClient } from '@prisma/client'
 
-const prisma = new PrismaClient()
+const prisma = new PrismaClient({ log: ['error', 'query'] })
 
-async function main () {
+export async function main () {
   const post1 = await prisma.post.create({
     data: {
       title: 'Post 1',
@@ -186,11 +186,15 @@ async function main () {
   )
 }
 
-main()
-  .catch((e) => {
-    console.error(e)
-    process.exit(1)
+const tryToSeedProductAndSize = async () => {
+  const product = await prisma.product.findFirst({
+    where: { id: '0953416b-f68f-4fb7-b546-3f958b401d04' },
+    include: {
+      size: true
+    }
   })
-  .finally(async () => {
-    await prisma.$disconnect()
-  })
+
+  console.log(product)
+}
+
+tryToSeedProductAndSize()
