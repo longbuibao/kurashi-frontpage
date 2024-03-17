@@ -3,13 +3,18 @@ import Link from 'next/link'
 
 import { KurashiDiv, KurashiLeftBorder } from '@/components/kurashi-div'
 import { useTranslation } from '@/i18n'
-import { productName, productMaterial, productOrigin, contactUsingZalo, productInformation } from '@/i18n/translation-key'
+import { productName, productMaterial, productOrigin, contactUsingZalo, productInformation, productIntro } from '@/i18n/translation-key'
 import { productNs } from '@/i18n/settings'
 
 import { Prisma } from '@prisma/client'
 
 interface ProductInfoProps {
-  productInfo: Prisma.ProductGetPayload<{ include: { origin: true, component: { include: { material: { select: { name: true } } } } } }>
+  productInfo: Prisma.ProductGetPayload<{
+    include: {
+      origin: true
+      component: { include: { material: { select: { name: true } } } }
+      productIntro: true
+    } }>
   lng: string
 }
 
@@ -68,6 +73,34 @@ const ProductInfo: React.FC<ProductInfoProps> = async ({ productInfo, lng }) => 
                 </KurashiDiv>
               </div>
             </div>
+          </div>
+        </div>
+      </div>
+      <div className='flex flex-col w-4/5 mx-auto'>
+        <div className='w-fit pl-10 mb-10'>
+          <KurashiLeftBorder>
+            <h1 className='text-xl'>{t(productIntro)}</h1>
+          </KurashiLeftBorder>
+        </div>
+        <div className='flex flex-row bg-secondary'>
+          <div className='flex flex-col'>
+            {productInfo.productIntro.map(intro => (
+              <div className='flex flex-col gap-5 my-5' key={intro.id}>
+                <KurashiLeftBorder>
+                  <div>{intro.title}</div>
+                </KurashiLeftBorder>
+                <div className='pl-4'>
+                  {intro.content}
+                </div>
+              </div>
+            ))}
+          </div>
+          <div className='flex flex-row w-1/2'>
+            {productInfo.productIntro.map(intro => (
+              <div className='flex flex-col w-1/2 gap-5 my-5' key={intro.id}>
+                <img src={intro.introImg} alt='product intro image' />
+              </div>
+            ))}
           </div>
         </div>
       </div>

@@ -24,11 +24,10 @@ const GetProductPage = async ({ id, lng }: PageParam['params']): Promise<React.R
             }
           }
         }
-      }
+      },
+      productIntro: true
     }
   })
-
-  console.log(product?.size?.dimension)
 
   if (product !== null) {
     return (
