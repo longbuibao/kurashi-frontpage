@@ -3,8 +3,8 @@ import type { Metadata, ResolvingMetadata } from 'next'
 
 import { ProductInfo } from '@/components/product'
 import ProductIdSkeleton from './product-id-skeleton'
-import { KurashiError } from '@/components/kurashi-error'
 import { useTranslation } from '@/i18n'
+import { kurashiProduct } from '@/i18n/translation-key'
 
 import prisma from '@/lib/prisma'
 
@@ -24,7 +24,7 @@ export async function generateMetadata ({ params, searchParams }: Props, parent:
 
   if (metadata === null || metadata.Product === null) {
     return {
-      title: 'Kurashi Product'
+      title: t(kurashiProduct)
     }
   } else {
     const title = t(metadata?.Product.name)
@@ -34,40 +34,13 @@ export async function generateMetadata ({ params, searchParams }: Props, parent:
   }
 }
 
-const GetProductPage = async ({ id, lng }: PageParam['params']): Promise<React.ReactElement> => {
-  const product = await prisma.product.findUnique({
-    where: { id },
-    include: {
-      origin: true,
-      component: { include: { material: { select: { name: true } } } },
-      size: {
-        include: {
-          dimension: {
-            select: {
-              name: true,
-              value: true
-            }
-          }
-        }
-      },
-      productIntro: true
-    }
-  })
-
-  if (product !== null) {
-    return (
-      <div className='my-10 mx-auto w-full max-lg:my-0'>
-        <ProductInfo productInfo={product} lng={lng} />
-      </div>
-    )
-  } else return <KurashiError message={`Not found this product: ${id}`} />
-}
-
 const ProductPage: React.FC<PageParam> = ({ params: { lng, id } }: PageParam) => {
   return (
-    <Suspense fallback={<ProductIdSkeleton />}>
-      <GetProductPage id={id} lng={lng} />
-    </Suspense>
+    <div className='my-10 mx-auto w-full max-lg:my-0'>
+      <Suspense fallback={<ProductIdSkeleton />}>
+        <ProductInfo id={id} lng={lng} />
+      </Suspense>
+    </div>
   )
 }
 
