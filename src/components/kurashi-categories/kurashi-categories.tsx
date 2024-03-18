@@ -3,6 +3,7 @@ import Link from 'next/link'
 
 import { useTranslation } from '@/i18n'
 import { KurashiTab } from '@/components/kurashi-tabs'
+import { ProductCard } from '@/components/product'
 
 import prisma from '@/lib/prisma'
 import { Product } from '@prisma/client'
@@ -43,11 +44,9 @@ const KurashiCategories: Promise<React.JSX.Element> = async ({ lng }: KurashiCat
       key: product[0],
       content: product[1].map((prod) => (
         <Link key={prod.name} href={`products/${prod.id}`}>
-          <div className='flex flex-col items-center'>
-            <img className='w-64' src={prod.thumbnail} alt='product thumbnail' />
-            <div className='mt-3 hover:cursor-pointer font-semibold hover:text-main'>{t(prod.name)}</div>
-          </div>
-        </Link>))
+          <ProductCard lng={lng} product={prod} />
+        </Link>)
+      )
     }
   })
 
