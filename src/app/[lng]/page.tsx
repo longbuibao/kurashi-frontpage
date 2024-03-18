@@ -27,19 +27,18 @@ const createCarouselItemImage = (imageSrc: string): React.ReactElement => (
 const Page = async ({ params: { lng } }: PageParam): Promise<React.ReactElement> => {
   const { t } = await useTranslation(lng)
   const carouselSliders = carouselSliderImages.map(createCarouselItemImage)
-  const carouselCssDotIndicator = { border: 'solid #598765 1px', background: '#e5e5e5', width: 200, height: 8, display: 'inline-block' }
 
   return (
     <main>
       <div className='w-4/5 mx-auto max-lg:w-full'>
-        <CarouselSlider items={carouselSliders} indicatorStyles={carouselCssDotIndicator} />
+        <CarouselSlider items={carouselSliders} indicatorStyles={{}} />
       </div>
       <div className='mx-auto my-10 w-fit'>
         <SectionTitle title={t(products)} />
       </div>
-      <div className='w-fit mx-auto mt-16 hover:cursor-default'>
+      <div className='w-fit mx-auto mt-16 hover:cursor-default max-lg:mx-1'>
         <KurashiDiv>
-          <div className='px-12 text-2xl'>{t(japanAuthentic)}</div>
+          <div className='px-12 text-2xl max-lg:text-center'>{t(japanAuthentic)}</div>
         </KurashiDiv>
       </div>
       <Suspense fallback={<KurashiCategoriesSkeleton />}>
@@ -57,7 +56,7 @@ const Page = async ({ params: { lng } }: PageParam): Promise<React.ReactElement>
           <KurashiBlogs />
         </Suspense>
       </div>
-      <div className='p-5 w-4/5 mx-auto border-main border-t-2 my-10'>
+      <div className='p-5 w-4/5 mx-auto border-main border-t-2 my-10 max-lg:w-full'>
         <div className='w-fit'>
           <AboutKurashiCard lng={lng} />
         </div>

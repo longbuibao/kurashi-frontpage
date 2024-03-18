@@ -15,15 +15,15 @@ interface AboutKurashiCardProps {
 const AboutKurashiCard: React.FC<AboutKurashiCardProps> = ({ lng }) => {
   const { t } = useTranslationClient(lng, defaultNS, {})
   return (
-    <div className='flex flex-row gap-20 bg-secondary p-3'>
+    <div className='flex flex-row gap-20 bg-secondary p-3 max-lg:flex-col max-lg:w-full max-lg:mx-1'>
       <img src='/assets/logo/about-kurashi.png' alt='' />
       <div className='flex flex-col'>
-        <div className='w-fit mb-20 text-wrap'>
+        <div className='w-fit mb-20 text-wrap max-lg:mx-auto'>
           <SectionTitle title={t(aboutKurashi)} />
         </div>
-        <div className='mb-10 text-3xl font-semibold'>{t(aboutContentTitle)}</div>
-        <div className='text-wrap text-lg'>{t(aboutContent)}</div>
-        <div className='w-fit mt-auto ml-auto'>
+        <div className='mb-10 text-3xl font-semibold max-lg:mx-auto'>{t(aboutContentTitle)}</div>
+        <div className='text-wrap text-lg max-lg:mx-auto'>{t(aboutContent)}</div>
+        <div className='w-fit mt-auto ml-auto max-lg:mx-auto max-lg:mt-5'>
           <KurashiDiv>
             <Link href='#link-to-read-more'>{t(readMore)}</Link>
             <div className='ml-3 inline-block'>
