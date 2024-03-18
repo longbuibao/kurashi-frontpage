@@ -1,13 +1,37 @@
 import React, { Suspense } from 'react'
+import type { Metadata, ResolvingMetadata } from 'next'
 
 import { ProductInfo } from '@/components/product'
 import ProductIdSkeleton from './product-id-skeleton'
+import { KurashiError } from '@/components/kurashi-error'
+import { useTranslation } from '@/i18n'
 
 import prisma from '@/lib/prisma'
-import { KurashiError } from '@/components/kurashi-error'
+
+interface Props {
+  params: { id: string, lng: string }
+  searchParams: { [key: string]: string | string[] | undefined }
+}
 
 interface PageParam {
   params: { lng: string, id: string }
+}
+
+export async function generateMetadata ({ params, searchParams }: Props, parent: ResolvingMetadata): Promise<Metadata> {
+  const lng = params.lng
+  const { t } = await useTranslation(lng)
+  const metadata = await prisma.productMetadata.findUnique({ where: { productId: params.id }, include: { Product: { select: { name: true } } } })
+
+  if (metadata === null || metadata.Product === null) {
+    return {
+      title: 'Kurashi Product'
+    }
+  } else {
+    const title = t(metadata?.Product.name)
+    return {
+      title
+    }
+  }
 }
 
 const GetProductPage = async ({ id, lng }: PageParam['params']): Promise<React.ReactElement> => {

@@ -188,13 +188,18 @@ export async function main () {
 
 const tryToSeedProductAndSize = async () => {
   const product = await prisma.product.findFirst({
-    where: { id: '0953416b-f68f-4fb7-b546-3f958b401d04' },
-    include: {
-      size: true
-    }
+    where: { id: '0953416b-f68f-4fb7-b546-3f958b401d04' }
   })
 
-  console.log(product)
+  const metadata = await prisma.productMetadata.create({
+    data: {
+      Product: {
+        connect: {
+          id: product.id
+        }
+      }
+    }
+  })
 }
 
 tryToSeedProductAndSize()

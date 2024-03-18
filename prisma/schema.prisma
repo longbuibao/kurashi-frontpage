@@ -29,20 +29,21 @@ model Post {
 }
 
 model Product {
-  id            String             @id @default(uuid())
-  name          String
-  productId     String             @default("")
-  thumbnail     String             @default("#")
-  url           String             @default("#")
-  categoryId    String?
-  isAvailable   Boolean            @default(false)
-  subCategoryId String?
-  productIntro  ProductIntro[]
-  size          ProductSize?
-  category      Category?          @relation(fields: [categoryId], references: [id])
-  subCategory   SubCategory?       @relation(fields: [subCategoryId], references: [id])
-  origin        ProductOrigin[]
-  component     ProductComponent[]
+  id              String             @id @default(uuid())
+  name            String
+  productId       String             @default("")
+  thumbnail       String             @default("#")
+  url             String             @default("#")
+  categoryId      String?
+  isAvailable     Boolean            @default(false)
+  subCategoryId   String?
+  productIntro    ProductIntro[]
+  size            ProductSize?
+  category        Category?          @relation(fields: [categoryId], references: [id])
+  subCategory     SubCategory?       @relation(fields: [subCategoryId], references: [id])
+  origin          ProductOrigin[]
+  component       ProductComponent[]
+  ProductMetadata ProductMetadata?
 }
 
 model ProductIntro {
@@ -109,4 +110,10 @@ model ProductOrigin {
   id      String    @id @default(uuid())
   name    String
   product Product[]
+}
+
+model ProductMetadata {
+  id        String   @id @default(uuid())
+  productId String?  @unique
+  Product   Product? @relation(fields: [productId], references: [id])
 }
