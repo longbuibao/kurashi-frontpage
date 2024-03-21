@@ -127,7 +127,7 @@ const ProductInfo: React.FC<ProductInfoProps> = async ({ id, lng }) => {
             </KurashiLeftBorder>
           </div>
           <div className='flex flex-row max-lg:flex-col bg-secondary justify-center items-center mx-10 max-lg:w-full max-lg:mx-0'>
-            <div className='flex flex-row-reverse w-3/4 justify-center items-center max-lg:w-full my-5'>
+            <div className='flex flex-row-reverse w-1/2 justify-center items-center max-lg:w-full my-5'>
               <img src={productInfo.size?.productSizeImage} alt='product size image' className='w-5/6' />
             </div>
             <div className='flex flex-col items-center justify-center w-full flex-1 max-lg:my-5 mx-5'>
