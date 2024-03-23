@@ -20,7 +20,7 @@
 	"product-size": "Kích cỡ sản phẩm",
 	"product-size-key": "Chiều",
 	"product-size-value": "Độ lớn",
-	"product-cad-link": "Tải xuống file CAD",
 	"product-manual-link": "Tải xuống hướng dẫn sử dụng",
-	"product-online-cad": "Xem file CAD online"
+	"product-download-dxf": "Tải xuống file DXF",
+	"product-download-pdf": "Tải xuống file PDF"
 }

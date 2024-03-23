@@ -22,5 +22,6 @@
 	"product-size-value": "価値",
 	"product-cad-link": "CAD スケッチをダウンロード",
 	"product-manual-link": "マニュアルをダウンロード",
-	"product-online-cad": "オンラインCADを見る"
+	"product-download-dxf": "製品のDXFをダウンロード",
+	"product-download-pdf": "製品のPDFをダウンロード"
 }

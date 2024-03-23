@@ -20,7 +20,7 @@
 	"product-size": "Product Size",
 	"product-size-key": "Dimension",
 	"product-size-value": "Value",
-	"product-cad-link": "Download Cad Sketch",
 	"product-manual-link": "Download Manual",
-	"product-online-cad": "View Online CAD"
+	"product-download-dxf": "Download Product's DXF",
+	"product-download-pdf": "Download Product's PDF"
 }

@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 import { KurashiDiv, KurashiLeftBorder } from '@/components/kurashi-div'
 import { useTranslation } from '@/i18n'
-import { productName, productMaterial, productOrigin, contactUsingZalo, productInformation, productIntro, productSize, productCadLink, productManualLink, productOnlineCad, productSizeKey, productSizeValue } from '@/i18n/translation-key'
+import { productName, productMaterial, productOrigin, contactUsingZalo, productInformation, productIntro, productSize, productManualLink, productDownloadDxf, productDownloadPdf, productSizeKey, productSizeValue } from '@/i18n/translation-key'
 import { productNs } from '@/i18n/settings'
 
 import prisma from '@/lib/prisma'
@@ -158,7 +158,7 @@ const ProductInfo: React.FC<ProductInfoProps> = async ({ id, lng }) => {
                 <KurashiDiv>
                   <Link href='#zalolink'>
                     <div className='flex flex-row justify-between gap-3'>
-                      <div>{t(productOnlineCad)}</div>
+                      <div>{t(productDownloadDxf)}</div>
                       <i className='fa-solid fa-arrow-up-right-from-square' />
                     </div>
                   </Link>
@@ -166,7 +166,7 @@ const ProductInfo: React.FC<ProductInfoProps> = async ({ id, lng }) => {
                 <KurashiDiv>
                   <Link href={productInfo.size?.twoDimCad ?? '#'}>
                     <div className='flex flex-row justify-between gap-3'>
-                      <div>{t(productCadLink)}</div>
+                      <div>{t(productDownloadPdf)}</div>
                       <i className='fa-solid fa-file-arrow-down' />
                     </div>
                   </Link>
