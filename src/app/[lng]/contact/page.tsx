@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Suspense } from 'react'
 import Link from 'next/link'
 
 import { Input } from '@/components/input'
@@ -7,11 +7,17 @@ import * as transKey from '@/i18n/locales/en/contact-page-trans-key'
 import { contactPageNs } from '@/i18n/settings'
 import { KurashiLeftBorder, KurashiDiv } from '@/components/kurashi-div'
 
+import ContactPageSkeleton from './skeleton'
+
 interface ContactPageParam {
   params: { lng: string }
 }
 
-const ProductPage: React.FC<ContactPageParam> = async ({ params: { lng } }: ContactPageParam) => {
+export const metadata = {
+  title: 'Liên hệ'
+}
+
+const ContactPage: React.FC<ContactPageParam> = async ({ params: { lng } }: ContactPageParam) => {
   const { t } = await useTranslation(lng, contactPageNs)
   return (
     <div className='w-4/5 mx-auto flex flex-row gap-5 max-lg:flex-col justify-center my-2'>
@@ -56,4 +62,12 @@ const ProductPage: React.FC<ContactPageParam> = async ({ params: { lng } }: Cont
   )
 }
 
-export default ProductPage
+const SuspendContactPage: React.FC<ContactPageParam> = ({ params }) => {
+  return (
+    <Suspense fallback={<ContactPageSkeleton />}>
+      <ContactPage params={params} />
+    </Suspense>
+  )
+}
+
+export default SuspendContactPage
