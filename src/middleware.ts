@@ -27,6 +27,10 @@ export function middleware (req: NextRequest): NextResponse<unknown> {
     return NextResponse.redirect(new URL(`/${lng}${req.nextUrl.pathname}`, req.url))
   }
 
+  if (req.nextUrl.pathname === (`/${lng}/blogs`)) {
+    return NextResponse.redirect(new URL(`/${lng}/blogs/0`, req.url))
+  }
+
   if (req.headers.has('referer')) {
     const refererHeader = req.headers.get('referer')
     if (refererHeader !== null) {
