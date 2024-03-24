@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 import { Input } from '@/components/input'
 import { useTranslation } from '@/i18n'
-import * as transKey from '@/i18n/locales/en/contact-page-trans-key'
+import * as transKey from '@/i18n/contact-page-trans-key'
 import { contactPageNs } from '@/i18n/settings'
 import { KurashiLeftBorder, KurashiDiv } from '@/components/kurashi-div'
 
