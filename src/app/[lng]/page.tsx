@@ -30,9 +30,9 @@ const Page = async ({ params: { lng } }: PageParam): Promise<React.ReactElement>
 
   return (
     <main>
-      <div className='w-4/5 mx-auto max-lg:w-full'>
+      {/* <div className='w-4/5 mx-auto max-lg:w-full'>
         <CarouselSlider items={carouselSliders} indicatorStyles={{}} />
-      </div>
+      </div> */}
       <div className='mx-auto my-10 w-fit'>
         <SectionTitle title={t(products)} />
       </div>

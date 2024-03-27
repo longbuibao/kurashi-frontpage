@@ -6,6 +6,7 @@ import { useTranslation } from '@/i18n'
 import * as transKey from '@/i18n/contact-page-trans-key'
 import { contactPageNs } from '@/i18n/settings'
 import { KurashiLeftBorder, KurashiDiv } from '@/components/kurashi-div'
+import { Breadcrumb } from '@/components/breadcrumb'
 
 import ContactPageSkeleton from './skeleton'
 
@@ -19,9 +20,20 @@ export const metadata = {
 
 const ContactPage: React.FC<ContactPageParam> = async ({ params: { lng } }: ContactPageParam) => {
   const { t } = await useTranslation(lng, contactPageNs)
+  const breadcrumb = [
+    <Link href='/' key='a'>{t(transKey.home)}</Link>,
+    <Link href='/blogs' key='b'>{t(transKey.contact)}</Link>
+  ]
   return (
     <div className='w-4/5 mx-auto flex flex-row gap-5 max-lg:flex-col justify-center my-2'>
       <div className='flex flex-col'>
+        <div className='flex flex-row mb-10'>
+          <div>
+            <div className='flex flex-row gap-5 items-center justify-center self-start ml-auto'>
+              <Breadcrumb items={breadcrumb} separator={<i className='fa-solid fa-chevron-right' />} />
+            </div>
+          </div>
+        </div>
         <form className='w-full flex flex-col gap-5 flex-1' action='' method='post'>
           <Input placeholder={t(transKey.name)} />
           <Input placeholder={t(transKey.email)} />
