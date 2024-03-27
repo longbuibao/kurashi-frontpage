@@ -1,5 +1,6 @@
 import React, { Suspense } from 'react'
 import { notFound } from 'next/navigation'
+import Link from 'next/link'
 
 import { BlogCard } from '@/components/blog-card'
 import { KurashiLeftBorder, KurashiDiv } from '@/components/kurashi-div'
@@ -10,6 +11,7 @@ import { PaginationBar } from '@/components/pagination-bar'
 import AllBlogsSkeleton from './all-blogs-skeleton'
 import prisma from '@/lib/prisma'
 import { useTranslation } from '@/i18n'
+import { Breadcrumb } from '@/components/breadcrumb'
 
 interface PageParam {
   params: { lng: string, page: string }
@@ -58,13 +60,19 @@ const AllBlogs: React.FC<{ lng: string, page: string, numOfBlogs: number }> = as
 
 const BlogsPage: React.FC<PageParam> = async ({ params: { lng, page } }: PageParam) => {
   const { t } = await useTranslation(lng, blogPageNs)
+  const breadcrumb = [
+    <Link href='/' key='a'>{t(transKey.home)}</Link>,
+    <Link href='/blogs' key='b'>{t(transKey.allBlogs)}</Link>
+  ]
   return (
     <div className='w-4/5 mx-auto max-lg:w-full'>
       <div>
-        <div className='my-5 ml-4'>
-          <KurashiLeftBorder>
-            {t(transKey.allBlogsTitle)}
-          </KurashiLeftBorder>
+        <div className='mx-auto flex flex-row'>
+          <div>
+            <div className='flex flex-row gap-5 items-center justify-center self-start ml-auto'>
+              <Breadcrumb items={breadcrumb} separator={<i className='fa-solid fa-chevron-right' />} />
+            </div>
+          </div>
         </div>
         <div className='flex flex-row gap-10 max-lg:w-full max-lg:flex-col'>
           <div>
