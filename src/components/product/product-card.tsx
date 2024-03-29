@@ -1,11 +1,11 @@
 import React from 'react'
 
 import { useTranslation } from '@/i18n'
-
-import { Product } from '@prisma/client'
+import { ProductQueryResult } from '@/types'
+import { Chip } from '@/components/chip'
 
 interface ProductCardProps {
-  product: Product
+  product: ProductQueryResult
   lng: string
 }
 
@@ -17,6 +17,9 @@ const ProductCard: React.FC<ProductCardProps> = async ({ product, lng }) => {
         <img className='w-64' src={product.thumbnail} alt='product thumbnail' />
       </div>
       <div className='my-3 hover:cursor-pointer font-semibold hover:text-main mt-auto'>{t(product.name)}</div>
+      <div className='flex flex-row gap-1 mr-auto pl-2 mb-2'>
+        {product.ProductTag.map(tag => <Chip text={tag.name} key={tag.id} />)}
+      </div>
     </div>
   )
 }

@@ -10,7 +10,7 @@ const KurashiBlogs: Promise<React.JSX.Element> = async () => {
   return (
     <div className='flex flex-row gap-5 justify-center max-lg:flex-wrap'>
       {blogs?.map(blog =>
-        <div key={blog.id} className='w-1/2'>
+        <div key={blog.id} className='w-1/2 max-lg:w-full'>
           <BlogCard url={blog.url} key={blog.content} content={blog.content} imgSrc={blog.thumbnail} title={blog.title} dateUpload={blog.createdAt.toLocaleDateString()} />
         </div>)}
     </div>

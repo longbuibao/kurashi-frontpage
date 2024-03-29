@@ -6,7 +6,7 @@ import {
 
 export const navItems = [
   { label: home, url: '/' },
-  { label: products, url: '#' },
+  { label: products, url: '/products' },
   { label: catalog, url: '#' },
   { label: contact, url: '/contact' },
   { label: blog, url: '/blogs' }
@@ -24,7 +24,7 @@ export const footerLinks = [
     links: [
       { label: home, url: '/' },
       { label: aboutKurashi, url: '#' },
-      { label: products, url: '#' },
+      { label: products, url: '/products' },
       { label: career, url: '#' },
       { label: contact, url: '/contact' }
     ]

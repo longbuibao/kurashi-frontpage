@@ -54,6 +54,8 @@ model Product {
   origin          ProductOrigin[]
   component       ProductComponent[]
   ProductMetadata ProductMetadata?
+  ProductColor    ProductColor[]
+  ProductTag      ProductTag[]
 }
 
 model ProductIntro {
@@ -126,4 +128,19 @@ model ProductMetadata {
   id        String   @id @default(uuid())
   productId String?  @unique
   Product   Product? @relation(fields: [productId], references: [id])
+}
+
+model ProductColor {
+  id        String   @id @default(uuid())
+  name      String
+  colorHex  String
+  productId String?
+  product   Product? @relation(fields: [productId], references: [id])
+}
+
+model ProductTag {
+  id        String   @id @default(uuid())
+  name      String
+  productId String?
+  product   Product? @relation(fields: [productId], references: [id])
 }
