@@ -7,6 +7,7 @@ import * as transKey from '@/i18n/contact-page-trans-key'
 import { contactPageNs } from '@/i18n/settings'
 import { KurashiLeftBorder, KurashiDiv } from '@/components/kurashi-div'
 import { Breadcrumb } from '@/components/breadcrumb'
+import { phoneNumber } from '@/constants'
 
 import ContactPageSkeleton from './skeleton'
 
@@ -39,34 +40,50 @@ const ContactPage: React.FC<ContactPageParam> = async ({ params: { lng } }: Cont
           <Input placeholder={t(transKey.email)} />
           <Input placeholder={t(transKey.phoneNumber)} />
           <textarea rows={15} className='border-b border-secondary w-full h-70' name='' id='' placeholder={t(transKey.messageContent)} />
-          <div className='w-fit mx-auto'>
-            <KurashiDiv>
-              <button className='block' type='submit'>{t(transKey.sendButtonContent)}</button>
-            </KurashiDiv>
+          <div className='w-fit mb-2 flex flex-row'>
+            <button className='block' type='submit'>{t(transKey.sendButtonContent)}</button>
+            <div className='ml-3 inline-block text-main'>
+              <i className='fa-solid fa-chevron-right' />
+            </div>
           </div>
         </form>
-        <div className='bg-secondary flex flex-col gap-5 p-2'>
-          <KurashiLeftBorder>
-            <div>{t(transKey.addressName)}: {t(transKey.address)}</div>
-          </KurashiLeftBorder>
-          <KurashiLeftBorder>
-            <div className='hover:cursor-pointer hover:text-main'>
-              <Link href='#'>{t(transKey.map)}</Link>
+        <div className='flex flex-row gap-5 h-full max-lg:flex-col w-full'>
+          <div className='flex flex-col gap-5 bg-secondary w-1/2 p-3 max-lg:w-full'>
+            <KurashiLeftBorder>
+              <div>{t(transKey.addressName)}</div>
+            </KurashiLeftBorder>
+            <div>{t(transKey.address)}</div>
+            <div className='flex flex-row gap-2'>
+              <KurashiLeftBorder>
+                <div>{t(transKey.tel)}</div>
+              </KurashiLeftBorder>
+              <a href='tel:+979988617'> {phoneNumber} </a>
             </div>
-          </KurashiLeftBorder>
-          <KurashiLeftBorder>
-            <div className='hover:cursor-pointer hover:text-main'>
-              <Link href='#'>{t(transKey.quickContact)}</Link>
-            </div>
-          </KurashiLeftBorder>
-          <div className='w-fit mx-auto'>
-            <KurashiDiv>
-              <Link href='#zalolink'>{t(transKey.zaloContact)}</Link>
-              <div className='ml-3 inline-block'>
-                <i className='fa-solid fa-chevron-right' />
+            <KurashiLeftBorder>
+              <div className='hover:cursor-pointer hover:text-main'>
+                <Link href='#'>{t(transKey.map)}</Link>
+                <div className='ml-3 inline-block text-main'>
+                  <i className='fa-solid fa-chevron-right' />
+                </div>
               </div>
-            </KurashiDiv>
+            </KurashiLeftBorder>
           </div>
+          <div className='flex flex-col gap-5 bg-secondary w-1/2 p-3 max-lg:w-full'>
+            <KurashiLeftBorder>
+              <div className='hover:cursor-pointer hover:text-main'>
+                <Link href='#'>{t(transKey.quickContact)}</Link>
+              </div>
+            </KurashiLeftBorder>
+            <div className='w-fit'>
+              <KurashiDiv>
+                <Link href='#zalolink'>{t(transKey.zaloContact)}</Link>
+                <div className='ml-3 inline-block'>
+                  <i className='fa-solid fa-chevron-right' />
+                </div>
+              </KurashiDiv>
+            </div>
+          </div>
+
         </div>
       </div>
       <img className='w-1/3 max-lg:w-full' src='/assets/contact.jpg' alt='contact-theme-page' />

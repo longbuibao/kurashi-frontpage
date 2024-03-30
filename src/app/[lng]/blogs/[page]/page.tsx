@@ -38,8 +38,8 @@ const AllBlogs: React.FC<{ lng: string, page: string, numOfBlogs: number }> = as
       <div className='my-10'>
         <div className='grid grid-cols-2 grid-rows-2 max-lg:grid-cols-1 max-lg:grid-rows-1'>
           {blogs.map(blog => (
-            <div key={blog.id} className='m-1'>
-              <BlogCard url={blog.url} key={blog.content} content={blog.content} imgSrc={blog.thumbnail} title={blog.title} dateUpload={blog.createdAt.toLocaleDateString()} />
+            <div className='m-1' key={blog.id}>
+              <BlogCard url={`/blogs/view/${blog.id}`} summary={blog.summary} imgSrc={blog.thumbnail} title={blog.title} dateUpload={blog.createdAt.toLocaleDateString()} />
             </div>
           ))}
         </div>

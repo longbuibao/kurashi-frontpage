@@ -21,23 +21,28 @@ const Nav: FC<NavProps> = ({ links, t }) => {
   return (
     <header>
       <nav className='flex justify-between items-center'>
-        <Link href='/' className='items-start mx-5'>
+        <Link href='/' className='items-start'>
           <Logo imgSrc='/assets/logo/kurashi-logo.png' width={450} height={157} />
         </Link>
-        <div className='flex-1 flex justify-center items-center gap-16 max-lg:hidden'>
+        <div className='flex-1 flex justify-center items-center gap-5 max-lg:hidden'>
           {links.map(link => {
             return (
-              <KurashiLink key={link.label}>
-                <Link href={`${link.url}`}>{link.label}</Link>
-              </KurashiLink>
+              <div key={link.label} className='ml-auto w-fit'>
+                <KurashiLink>
+                  <Link href={`${link.url}`}>{link.label}</Link>
+                </KurashiLink>
+              </div>
             )
           })}
-          <KurashiDiv>
-            <Link href='#zalolink'>{t(contactUsingZalo)}</Link>
-            <div className='ml-3 inline-block'>
-              <i className='fa-solid fa-chevron-right' />
-            </div>
-          </KurashiDiv>
+          <div className='ml-10'>
+            <KurashiDiv>
+              <Link href='#zalolink'>{t(contactUsingZalo)}</Link>
+              <div className='ml-3 inline-block'>
+                <i className='fa-solid fa-chevron-right' />
+              </div>
+            </KurashiDiv>
+          </div>
+
         </div>
         <div className='hidden max-lg:block'>
           <i className='fa-solid fa-bars' />

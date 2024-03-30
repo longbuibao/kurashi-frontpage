@@ -5,7 +5,7 @@ import { TFunction } from 'i18next'
 import { KurashiLeftBorder } from '@/components/kurashi-div'
 import { Logo } from '@/components/logo'
 import { LogoFacebook, LogoYoutube, LogoZalo } from '@/components/svg-icons'
-import { footerLinks } from '@/constants'
+import { footerLinks, phoneNumber } from '@/constants'
 import { KurashiLink } from '@/components/kurashi-link'
 import { interiorFromJapan, address, addressName, tel, socialMedia } from '@/i18n/translation-key'
 
@@ -22,12 +22,12 @@ const Footer: React.FC<FooterProps> = ({ t }) => {
             <Link href='/'>
               <Logo imgSrc='/assets/logo/kurashi-logo.png' width={200} />
             </Link>
-            <p className='pl-4'>{t(interiorFromJapan)}</p>
+            <p>{t(interiorFromJapan)}</p>
           </div>
           <div className='flex flex-col gap-5 w-fit items-start'>
             <KurashiLeftBorder>{t(address)}: {t(addressName)}</KurashiLeftBorder>
             <KurashiLeftBorder>
-              {t(tel)}: <a href='tel:+84901234567'> 0901234567 </a>
+              {t(tel)}: <a href='tel:+979988617'> {phoneNumber} </a>
             </KurashiLeftBorder>
             <KurashiLeftBorder>
               <div className='flex flex-row items-center'>
@@ -36,7 +36,9 @@ const Footer: React.FC<FooterProps> = ({ t }) => {
                 </div>
                 <div className='flex flex-row gap-3 ml-2'>
                   <LogoFacebook />
-                  <LogoYoutube />
+                  <Link href='https://www.youtube.com/channel/UChqsY9O8M5Y70iMC5S9bdyQ' target='_blank' rel='noreferrer'>
+                    <LogoYoutube />
+                  </Link>
                   <LogoZalo />
                 </div>
               </div>

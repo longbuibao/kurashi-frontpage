@@ -29,6 +29,7 @@ model Post {
   thumbnail      String
   url            String        @default("#")
   isTrending     Boolean       @default(false)
+  summary        String        @default("Post summary")
 }
 
 model PostCategory {

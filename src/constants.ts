@@ -4,6 +4,8 @@ import {
   warrantyPolicy, yourInfo, company
 } from '@/i18n/translation-key'
 
+export const phoneNumber = '0979988617'
+
 export const navItems = [
   { label: home, url: '/' },
   { label: products, url: '/products' },
