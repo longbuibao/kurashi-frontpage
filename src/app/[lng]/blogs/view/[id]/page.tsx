@@ -8,6 +8,10 @@ import { SectionTitle } from '@/components/section-title'
 import { useTranslation } from '@/i18n'
 import * as transKey from '@/i18n/blog-single-view-trans-key'
 
+export const metadata = {
+  title: 'Bài viết'
+}
+
 interface PageProps {
   params: { lng: string, id: string }
 }

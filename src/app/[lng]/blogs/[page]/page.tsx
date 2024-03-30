@@ -17,6 +17,10 @@ interface PageParam {
   params: { lng: string, page: string }
 }
 
+export const metadata = {
+  title: 'Tất cả bài viết'
+}
+
 const AllCategories: React.FC = async () => {
   const categories = await prisma.postCategory.findMany({ where: { published: true } })
   return (
