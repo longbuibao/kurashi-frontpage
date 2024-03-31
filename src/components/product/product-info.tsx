@@ -7,6 +7,7 @@ import { useTranslation } from '@/i18n'
 import * as transKey from '@/i18n/product-info-trans-key'
 import { productNs } from '@/i18n/settings'
 import { Breadcrumb } from '@/components/breadcrumb'
+import ProductSizeTable from './product-size-table'
 
 import prisma from '@/lib/prisma'
 
@@ -21,10 +22,48 @@ const ProductInfo: React.FC<ProductInfoProps> = async ({ id, lng }) => {
     where: { id },
     include: {
       origin: true,
-      component: { include: { material: { select: { name: true } } } },
-      size: { include: { dimension: { select: { name: true, value: true } } } },
+      component: {
+        include: {
+          material: {
+            select: { name: true }
+          }
+        }
+      },
+      size: {
+        include: {
+          dimension: {
+            select: {
+              name: true,
+              value: true
+            }
+          }
+        }
+      },
       category: true,
-      productIntro: true
+      productIntro: true,
+      ProductVariants: {
+        select: {
+          product: {
+            select: {
+              id: true,
+              name: true,
+              size: {
+                include: {
+                  dimension: {
+                    select: {
+                      name: true,
+                      value: true
+                    }
+                  }
+                }
+              }
+            }
+          },
+          id: true,
+          thumbnail: true,
+          variantName: true
+        }
+      }
     }
   })
 
@@ -137,56 +176,22 @@ const ProductInfo: React.FC<ProductInfoProps> = async ({ id, lng }) => {
             <div className='flex flex-row-reverse w-1/2 justify-center items-center max-lg:w-full my-5'>
               <img src={productInfo.size?.productSizeImage} alt='product size image' className='w-5/6' />
             </div>
-            <div className='flex flex-col items-center justify-center w-full flex-1 max-lg:my-5 mx-5'>
-              <div className='w-full'>
-                <table className='table-auto w-full'>
-                  <thead className='bg-main text-secondary'>
-                    <tr>
-                      <th>{t(transKey.productSizeKey)}</th>
-                      <th>{t(transKey.productSizeValue)}</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {productInfo.size?.dimension.map(di => (
-                      <tr key={di.name} className='bg-opacity-[0.3] bg-main hover:bg-opacity-[0.7]'>
-                        <td className='text-center'>{di.name}</td>
-                        <td className='text-center'>
-                          <div className='flex flex-row w-1/2 mx-auto'>
-                            <div>{di.value}</div>
-                            <div className='ml-auto'>{productInfo.size?.unit}</div>
-                          </div>
-                        </td>
-                      </tr>
+          </div>
+          <div className='flex flex-col items-center justify-center w-full flex-1 max-lg:my-5 mx-5'>
+            <div className='w-full'>
+              {productInfo.ProductVariants.map(variant => (
+                <div key={variant.id}>
+                  <div>{variant.variantName}</div>
+                  <div>
+                    {variant.product.map(productVar => (
+                      <div key={productVar.id}>
+                        <div>{productVar.name}</div>
+                        <ProductSizeTable lng={lng} product={productVar} />
+                      </div>
                     ))}
-                  </tbody>
-                </table>
-              </div>
-              <div className='flex flex-col gap-5 my-5 w-full'>
-                <KurashiDiv>
-                  <Link href='#zalolink'>
-                    <div className='flex flex-row justify-between gap-3'>
-                      <div>{t(transKey.productDownloadDxf)}</div>
-                      <i className='fa-solid fa-arrow-up-right-from-square' />
-                    </div>
-                  </Link>
-                </KurashiDiv>
-                <KurashiDiv>
-                  <Link href={productInfo.size?.twoDimCad ?? '#'}>
-                    <div className='flex flex-row justify-between gap-3'>
-                      <div>{t(transKey.productDownloadPdf)}</div>
-                      <i className='fa-solid fa-file-arrow-down' />
-                    </div>
-                  </Link>
-                </KurashiDiv>
-                <KurashiDiv>
-                  <Link href={productInfo.size?.twoDimCad ?? '#'}>
-                    <div className='flex flex-row justify-between gap-3'>
-                      <div>{t(transKey.productManualLink)}</div>
-                      <i className='fa-solid fa-file-arrow-down' />
-                    </div>
-                  </Link>
-                </KurashiDiv>
-              </div>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
         </div>
