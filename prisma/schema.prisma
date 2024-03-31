@@ -57,6 +57,7 @@ model Product {
   ProductMetadata ProductMetadata?
   ProductColor    ProductColor[]
   ProductTag      ProductTag[]
+  ProductVariants ProductVariants[]
 }
 
 model ProductIntro {
@@ -144,4 +145,11 @@ model ProductTag {
   name      String
   productId String?
   product   Product? @relation(fields: [productId], references: [id])
+}
+
+model ProductVariants {
+  id          String    @id @default(uuid())
+  thumbnail   String    @default("#")
+  variantName String
+  product     Product[]
 }

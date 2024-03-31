@@ -187,19 +187,37 @@ export async function main () {
 }
 
 const tryToSeedProductAndSize = async () => {
-  const product = await prisma.product.findFirst({
-    where: { id: '0953416b-f68f-4fb7-b546-3f958b401d04' }
-  })
-
-  const metadata = await prisma.productMetadata.create({
-    data: {
-      Product: {
-        connect: {
-          id: product.id
+  const a = await prisma.product.findUnique({
+    where: { id: '0953416b-f68f-4fb7-b546-3f958b401d04' },
+    include: {
+      ProductVariants: {
+        select: {
+          variantName: true,
+          id: true,
+          thumbnail: true,
+          product: {
+            select: {
+              size: {
+                select: {
+                  dimension: { select: { ProductSize: true } }
+                }
+              },
+              name: true,
+              id: true
+            }
+          }
         }
       }
     }
   })
+
+  console.log(a.ProductVariants.map(b => b.product.map(c => {
+    return {
+      name: c.name,
+      id: c.id,
+      size: c.size?.dimension?.map(d => d.ProductSize.id)
+    }
+  })))
 }
 
 tryToSeedProductAndSize()
