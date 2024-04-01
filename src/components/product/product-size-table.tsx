@@ -1,51 +1,70 @@
+'use client'
+
 import React from 'react'
 import { Prisma } from '@prisma/client'
 import { v4 as uuidv4 } from 'uuid'
-
-import * as transKey from '@/i18n/product-info-trans-key'
-import { useTranslation } from '@/i18n'
-import { productNs } from '@/i18n/settings'
+import { Table, Column, HeaderCell, Cell } from 'rsuite-table'
+import 'rsuite-table/dist/css/rsuite-table.css'
 
 interface ProductSizeTableProps {
-  product: Partial<Prisma.ProductGetPayload<{ include: {
-    size: {
-      include: {
-        dimension: {
-          select: {
-            name: true
-            value: true
-            id: true
+  variants: Prisma.ProductVariantsGetPayload<{
+    select: {
+      product: {
+        select: {
+          id: true
+          name: true
+          size: {
+            include: {
+              dimension: {
+                select: {
+                  name: true
+                  id: true
+                  value: true
+                }
+              }
+            }
           }
         }
       }
+      id: true
+      thumbnail: true
+      variantName: true
     }
-  } }>>
+  }>
   lng: string
 }
 
-const ProductSizeTable: React.FC<ProductSizeTableProps> = async ({ product, lng }) => {
-  const { t } = await useTranslation(lng, productNs)
+const ProductSizeTable: React.FC<ProductSizeTableProps> = async ({ variants, lng }) => {
+  const columnsKey = new Set<string>()
+  columnsKey.add('productId')
+  columnsKey.add('pdfLink')
+  columnsKey.add('xdfLink')
+  const columns = variants.product.reduce((result, x) => {
+    x.size?.dimension.forEach(y => {
+      if (!result.has(y.name)) {
+        result.add(y.name)
+        return result
+      } else return result.add(y.name)
+    })
+    return result
+  }, columnsKey)
+
   return (
-    <table className='table-auto'>
-      <thead className='bg-main text-secondary'>
-        <tr>
-          <th>{t(transKey.productSizeKey)}</th>
-          <th>{t(transKey.productSizeValue)}</th>
-        </tr>
-      </thead>
-      <tbody>
-        {product.size?.dimension.map(di => (
-          <tr key={di.id ?? uuidv4()} className='bg-opacity-[0.3] bg-main hover:bg-opacity-[0.7]'>
-            <td className='text-center'>{di.name}</td>
-            <td className='text-center'>
-              <div className='flex flex-row'>
-                <div>{di.value}</div>
-              </div>
-            </td>
-          </tr>
-        ))}
-      </tbody>
-    </table>
+    <Table data={variants.product.map(x => x.size?.dimension.reduce((result, y) => {
+      result.set(y.name, y.value.toString())
+      return result
+    }, new Map<string, string>())).filter(x => x !== undefined).map(x => Object.fromEntries(x))}
+    >
+      {Array.from(columns).map(x => {
+        const key = x
+        return (
+          <Column key={uuidv4()}>
+            <HeaderCell>{key}</HeaderCell>
+            <Cell dataKey={key} />
+          </Column>
+        )
+      })}
+    </Table>
   )
 }
 

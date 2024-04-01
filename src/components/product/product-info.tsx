@@ -182,19 +182,7 @@ const ProductInfo: React.FC<ProductInfoProps> = async ({ id, lng }) => {
           </div>
           <div className='flex flex-col items-center justify-center w-full flex-1 max-lg:my-5 mx-5'>
             <div className='w-full'>
-              {productInfo.ProductVariants.map(variant => (
-                <div key={variant.id}>
-                  <div>{variant.variantName}</div>
-                  <div>
-                    {variant.product.map(productVar => (
-                      <div key={productVar.id}>
-                        <div>{productVar.name}</div>
-                        <ProductSizeTable lng={lng} product={productVar} />
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              ))}
+              {productInfo.ProductVariants.map(x => <ProductSizeTable key={x.id} lng={lng} variants={x} />)}
             </div>
           </div>
         </div>
