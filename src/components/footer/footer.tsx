@@ -8,6 +8,7 @@ import { LogoFacebook, LogoYoutube, LogoZalo } from '@/components/svg-icons'
 import { footerLinks, phoneNumber } from '@/constants'
 import { KurashiLink } from '@/components/kurashi-link'
 import { interiorFromJapan, address, addressName, tel, socialMedia } from '@/i18n/translation-key'
+import { v4 as uuidv4 } from 'uuid'
 
 interface FooterProps {
   t: TFunction<any, any>
@@ -47,13 +48,13 @@ const Footer: React.FC<FooterProps> = ({ t }) => {
         </div>
         <div className='flex flex-row gap-5 pt-10 w-6/12 max-lg:w-full max-lg:flex-col'>
           {footerLinks.map(footerLink =>
-            <div key={footerLink.label} className='flex flex-col grow'>
+            <div key={uuidv4()} className='flex flex-col grow'>
               <div className='mb-5 font-semibold text-xl'>
                 <KurashiLeftBorder>{t(footerLink.label)}</KurashiLeftBorder>
               </div>
               <div className='flex flex-col gap-5 w-fit max-lg:mx-auto max-lg:gap-2'>
                 {footerLink.links.map(link =>
-                  <KurashiLink key={link.url}>
+                  <KurashiLink key={uuidv4()}>
                     <Link href={`${link.url}`}>{t(link.label)}</Link>
                   </KurashiLink>)}
               </div>

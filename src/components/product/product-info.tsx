@@ -1,6 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
+import { v4 as uuidv4 } from 'uuid'
 
 import { KurashiDiv, KurashiLeftBorder } from '@/components/kurashi-div'
 import { useTranslation } from '@/i18n'
@@ -34,7 +35,8 @@ const ProductInfo: React.FC<ProductInfoProps> = async ({ id, lng }) => {
           dimension: {
             select: {
               name: true,
-              value: true
+              value: true,
+              id: true
             }
           }
         }
@@ -52,6 +54,7 @@ const ProductInfo: React.FC<ProductInfoProps> = async ({ id, lng }) => {
                   dimension: {
                     select: {
                       name: true,
+                      id: true,
                       value: true
                     }
                   }
@@ -68,10 +71,10 @@ const ProductInfo: React.FC<ProductInfoProps> = async ({ id, lng }) => {
   })
 
   const breadcrumb = [
-    <Link href='/' key='a'>{t(transKey.home)}</Link>,
-    <Link href='/products' key='b'>{t(transKey.allProducts)}</Link>,
-    <Link href={`/products/product-detail/${productInfo?.id ?? '#'}`} key='c'>{productInfo?.category?.name ?? 'null'}</Link>,
-    <Link href={`/products/category/${productInfo?.category?.id ?? '#'}`} key='c'>{productInfo?.name ?? 'null'}</Link>
+    <Link href='/' key={uuidv4()}>{t(transKey.home)}</Link>,
+    <Link href='/products' key={uuidv4()}>{t(transKey.allProducts)}</Link>,
+    <Link href={`/products/product-detail/${productInfo?.id ?? '#'}`} key={uuidv4()}>{productInfo?.category?.name ?? 'null'}</Link>,
+    <Link href={`/products/category/${productInfo?.category?.id ?? '#'}`} key={uuidv4()}>{productInfo?.name ?? 'null'}</Link>
   ]
 
   if (productInfo !== null) {

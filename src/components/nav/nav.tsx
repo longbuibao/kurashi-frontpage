@@ -6,6 +6,7 @@ import { KurashiDiv } from '@/components/kurashi-div'
 import { KurashiLink } from '@/components/kurashi-link'
 import { TFunction } from 'i18next'
 import { contactUsingZalo } from '@/i18n/translation-key'
+import { v4 as uuidv4 } from 'uuid'
 
 interface LinkItem {
   url: string
@@ -27,7 +28,7 @@ const Nav: FC<NavProps> = ({ links, t }) => {
         <div className='flex-1 flex justify-center items-center gap-5 max-lg:hidden'>
           {links.map(link => {
             return (
-              <div key={link.label} className='ml-auto w-fit'>
+              <div key={uuidv4()} className='ml-auto w-fit'>
                 <KurashiLink>
                   <Link href={`${link.url}`}>{link.label}</Link>
                 </KurashiLink>

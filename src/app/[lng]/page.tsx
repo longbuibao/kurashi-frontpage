@@ -1,4 +1,5 @@
 import React, { Suspense } from 'react'
+import { v4 as uuidv4 } from 'uuid'
 
 import { CarouselSlider } from '@/components/carousel-slider'
 import { KurashiDiv } from '@/components/kurashi-div'
@@ -19,7 +20,7 @@ export const metadata = {
 }
 
 const createCarouselItemImage = (imageSrc: string): React.ReactElement => (
-  <div key={imageSrc}>
+  <div key={uuidv4()}>
     <img src={imageSrc} />
   </div>
 )
