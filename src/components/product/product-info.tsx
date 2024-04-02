@@ -180,8 +180,8 @@ const ProductInfo: React.FC<ProductInfoProps> = async ({ id, lng }) => {
               <img src={productInfo.size?.productSizeImage} alt='product size image' className='w-5/6' />
             </div>
           </div>
-          <div className='flex flex-col items-center justify-center w-full flex-1 max-lg:my-5 mx-5'>
-            <div className='w-full'>
+          <div className='flex flex-col items-center justify-center flex-1 max-lg:my-5 my-5 w-11/12 mx-auto'>
+            <div className='w-full mx-auto flex flex-col gap-10'>
               {productInfo.ProductVariants.map(x => <ProductSizeTable key={x.id} lng={lng} variants={x} />)}
             </div>
           </div>

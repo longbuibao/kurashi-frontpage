@@ -35,10 +35,23 @@ interface ProductSizeTableProps {
 }
 
 const ProductSizeTable: React.FC<ProductSizeTableProps> = async ({ variants, lng }) => {
+  const keys = new Map<string, string>()
+  keys.set('productId', 'product-id')
+  keys.set('manualLink', 'manual-link')
+  keys.set('xdfLink', 'xdf-link')
+  keys.set('productQuantity', 'quantity')
+
   const columnsKey = new Set<string>()
   columnsKey.add('productId')
-  columnsKey.add('pdfLink')
+  columnsKey.add('manualLink')
   columnsKey.add('xdfLink')
+  columnsKey.add('productQuantity')
+
+  const toRenderLink = new Set<string>()
+  toRenderLink.add('productId')
+  toRenderLink.add('xdfLink')
+  toRenderLink.add('manualLink')
+
   const columns = variants.product.reduce((result, x) => {
     x.size?.dimension.forEach(y => {
       if (!result.has(y.name)) {
@@ -50,21 +63,53 @@ const ProductSizeTable: React.FC<ProductSizeTableProps> = async ({ variants, lng
   }, columnsKey)
 
   return (
-    <Table data={variants.product.map(x => x.size?.dimension.reduce((result, y) => {
-      result.set(y.name, y.value.toString())
-      return result
-    }, new Map<string, string>())).filter(x => x !== undefined).map(x => Object.fromEntries(x))}
-    >
-      {Array.from(columns).map(x => {
-        const key = x
-        return (
-          <Column key={uuidv4()}>
-            <HeaderCell>{key}</HeaderCell>
-            <Cell dataKey={key} />
-          </Column>
-        )
-      })}
-    </Table>
+    <div>
+      <div>
+        {variants.variantName}
+      </div>
+      <div>
+        <Table
+          autoHeight
+          bordered
+          cellBordered
+          defaultExpandAllRows
+          data={variants.product.map(x => {
+            const dimensions = x.size?.dimension.reduce((result, y) => {
+              result.set(y.name, y.value.toString())
+              return result
+            }, new Map<string, string>())
+
+            if (dimensions !== undefined) {
+              dimensions.set('manualLink', x.size?.productManual ?? '#')
+              dimensions.set('productId', x.size?.productId ?? '#')
+              dimensions.set('xdfLink', x.size?.twoDimCad ?? '#')
+              dimensions.set('productQuantity', x.size?.quantity.toString() ?? '#')
+            }
+
+            return dimensions
+          }).filter(x => x !== undefined).map(x => Object.fromEntries(x))}
+        >
+          {Array.from(columns).map(x => {
+            return (
+              <Column key={uuidv4()} flexGrow={1}>
+                <HeaderCell style={{ background: '#437254' }} align='center' className='text-secondary font-semibold'>{keys.get(x) ?? x}</HeaderCell>
+                {toRenderLink.has(x)
+                  ? (
+                    <Cell align='center'>
+                      {(rowData, rowIndex) => {
+                        const hack = rowData as any as { [key: string]: string }
+                        const download = <div><a href={`/${hack[x]}`}><i className='fa-solid fa-file-arrow-down' /></a></div>
+                        return download
+                      }}
+                    </Cell>)
+                  : <Cell align='center' dataKey={x} />}
+              </Column>
+            )
+          })}
+        </Table>
+      </div>
+    </div>
+
   )
 }
 
