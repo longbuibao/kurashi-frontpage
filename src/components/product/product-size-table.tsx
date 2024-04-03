@@ -62,6 +62,29 @@ const ProductSizeTable: React.FC<ProductSizeTableProps> = async ({ variants, lng
     return result
   }, columnsKey)
 
+  const toRender = variants.product
+    .map(x => {
+      if (x.size !== null) {
+        const dimensions = x.size.dimension.reduce((result, y) => {
+          result.set(y.name, y.value.toString())
+          return result
+        }, new Map<string, string>())
+
+        if (dimensions !== undefined) {
+          dimensions.set('manualLink', x.size?.productManual ?? '#')
+          dimensions.set('productId', x.size?.productId ?? '#')
+          dimensions.set('xdfLink', x.size?.twoDimCad ?? '#')
+          dimensions.set('productQuantity', x.size?.quantity.toString() ?? '#')
+        }
+
+        return dimensions
+      }
+
+      return new Map<string, string>()
+    })
+    .filter(x => x !== undefined)
+    .map(x => Object.fromEntries(x))
+
   return (
     <div>
       <div>
@@ -73,21 +96,7 @@ const ProductSizeTable: React.FC<ProductSizeTableProps> = async ({ variants, lng
           bordered
           cellBordered
           defaultExpandAllRows
-          data={variants.product.map(x => {
-            const dimensions = x.size?.dimension.reduce((result, y) => {
-              result.set(y.name, y.value.toString())
-              return result
-            }, new Map<string, string>())
-
-            if (dimensions !== undefined) {
-              dimensions.set('manualLink', x.size?.productManual ?? '#')
-              dimensions.set('productId', x.size?.productId ?? '#')
-              dimensions.set('xdfLink', x.size?.twoDimCad ?? '#')
-              dimensions.set('productQuantity', x.size?.quantity.toString() ?? '#')
-            }
-
-            return dimensions
-          }).filter(x => x !== undefined).map(x => Object.fromEntries(x))}
+          data={toRender}
         >
           {Array.from(columns).map(x => {
             return (
