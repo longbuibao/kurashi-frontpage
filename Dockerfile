@@ -14,6 +14,8 @@ COPY . .
 # If you add a package-lock.json, speed your build by switching to 'npm ci'.
 RUN npm ci --only=production
 
+EXPOSE 3000
+
 RUN apt-get update -y && apt-get install -y openssl
 
 RUN npm run build
