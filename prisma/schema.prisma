@@ -152,5 +152,6 @@ model ProductVariants {
   id          String    @id @default(uuid())
   thumbnail   String    @default("#")
   variantName String
+  unit        String    @default("unit")
   product     Product[]
 }
