@@ -62,10 +62,10 @@ const ProductInfo: React.FC<ProductInfoProps> = async ({ id, lng }) => {
               }
             }
           },
+          unit: true,
           id: true,
           thumbnail: true,
-          variantName: true,
-          unit: true
+          variantName: true
         }
       }
     }
