@@ -45,7 +45,7 @@ const Nav: FC<NavProps> = ({ links, t }) => {
           </div>
 
         </div>
-        <div className='hidden max-lg:block'>
+        <div className='hidden max-lg:block max-lg:ml-10'>
           <i className='fa-solid fa-bars' />
         </div>
         <div />

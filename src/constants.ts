@@ -25,7 +25,7 @@ export const footerLinks = [
     label: company,
     links: [
       { label: home, url: '/' },
-      { label: aboutKurashi, url: '#' },
+      { label: aboutKurashi, url: '/about' },
       { label: products, url: '/products' },
       { label: career, url: '#' },
       { label: contact, url: '/contact' }

@@ -6,6 +6,8 @@ import { v4 as uuidv4 } from 'uuid'
 import { Table, Column, HeaderCell, Cell } from 'rsuite-table'
 import 'rsuite-table/dist/css/rsuite-table.css'
 
+import { cellRenderer, columnsKey } from '@/utils/cell-renderer-helper'
+
 interface ProductSizeTableProps {
   variants: Prisma.ProductVariantsGetPayload<{
     select: {
@@ -29,29 +31,13 @@ interface ProductSizeTableProps {
       id: true
       thumbnail: true
       variantName: true
+      unit: true
     }
   }>
   lng: string
 }
 
 const ProductSizeTable: React.FC<ProductSizeTableProps> = async ({ variants, lng }) => {
-  const keys = new Map<string, string>()
-  keys.set('productId', 'product-id')
-  keys.set('manualLink', 'manual-link')
-  keys.set('xdfLink', 'xdf-link')
-  keys.set('productQuantity', 'quantity')
-
-  const columnsKey = new Set<string>()
-  columnsKey.add('productId')
-  columnsKey.add('manualLink')
-  columnsKey.add('xdfLink')
-  columnsKey.add('productQuantity')
-
-  const toRenderLink = new Set<string>()
-  toRenderLink.add('productId')
-  toRenderLink.add('xdfLink')
-  toRenderLink.add('manualLink')
-
   const columns = variants.product.reduce((result, x) => {
     x.size?.dimension.forEach(y => {
       if (!result.has(y.name)) {
@@ -82,13 +68,18 @@ const ProductSizeTable: React.FC<ProductSizeTableProps> = async ({ variants, lng
 
       return new Map<string, string>()
     })
-    .filter(x => x !== undefined)
+    .filter(x => x.size > 0)
     .map(x => Object.fromEntries(x))
 
   return (
     <div>
-      <div>
-        {variants.variantName}
+      <div className='flex flex-row justify-between w-full'>
+        <div>
+          {variants.variantName}
+        </div>
+        <div>
+          {variants.unit}
+        </div>
       </div>
       <div>
         <Table
@@ -99,19 +90,13 @@ const ProductSizeTable: React.FC<ProductSizeTableProps> = async ({ variants, lng
           data={toRender}
         >
           {Array.from(columns).map(x => {
+            console.log(cellRenderer.get(x)?.label)
             return (
               <Column key={uuidv4()} flexGrow={1}>
-                <HeaderCell style={{ background: '#437254' }} align='center' className='text-secondary font-semibold'>{keys.get(x) ?? x}</HeaderCell>
-                {toRenderLink.has(x)
-                  ? (
-                    <Cell align='center'>
-                      {(rowData, rowIndex) => {
-                        const hack = rowData as any as { [key: string]: string }
-                        const download = <div><a href={`/${hack[x]}`}><i className='fa-solid fa-file-arrow-down' /></a></div>
-                        return download
-                      }}
-                    </Cell>)
-                  : <Cell align='center' dataKey={x} />}
+                <HeaderCell style={{ background: '#437254' }} align='center' className='text-secondary font-semibold'>
+                  {cellRenderer.get(x)?.label ?? x}
+                </HeaderCell>
+                {cellRenderer.get(x)?.renderer ?? <Cell align='center' dataKey={x} />}
               </Column>
             )
           })}

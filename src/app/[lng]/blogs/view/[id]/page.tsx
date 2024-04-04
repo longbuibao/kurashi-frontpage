@@ -27,7 +27,7 @@ const BlogViewPage: React.FC<PageProps> = async ({ params }) => {
   if (blog !== null) {
     return (
       <div>
-        <div className='mx-auto flex flex-row w-4/5 pl-10'>
+        <div className='mx-auto flex flex-row w-4/5 my-10'>
           <div>
             <div className='flex flex-row gap-5 items-center justify-center self-start ml-auto'>
               <Breadcrumb items={breadcrumb} separator={<i className='fa-solid fa-chevron-right' />} />

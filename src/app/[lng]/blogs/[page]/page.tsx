@@ -71,7 +71,7 @@ const BlogsPage: React.FC<PageParam> = async ({ params: { lng, page } }: PagePar
   return (
     <div className='w-4/5 mx-auto max-lg:w-full'>
       <div>
-        <div className='mx-auto flex flex-row'>
+        <div className='mx-auto flex flex-row my-10'>
           <div>
             <div className='flex flex-row gap-5 items-center justify-center self-start ml-auto'>
               <Breadcrumb items={breadcrumb} separator={<i className='fa-solid fa-chevron-right' />} />

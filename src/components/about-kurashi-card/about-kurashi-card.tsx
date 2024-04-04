@@ -25,7 +25,7 @@ const AboutKurashiCard: React.FC<AboutKurashiCardProps> = ({ lng }) => {
         <div className='text-wrap text-lg max-lg:mx-auto'>{t(aboutContent)}</div>
         <div className='w-fit mt-auto ml-auto max-lg:mx-auto max-lg:mt-5'>
           <KurashiDiv>
-            <Link href='#link-to-read-more'>{t(readMore)}</Link>
+            <Link href='/about'>{t(readMore)}</Link>
             <div className='ml-3 inline-block'>
               <i className='fa-solid fa-chevron-right' />
             </div>

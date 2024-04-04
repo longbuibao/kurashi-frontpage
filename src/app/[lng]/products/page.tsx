@@ -30,7 +30,7 @@ const ProductPage: React.FC<PageParam> = async ({ params: { lng } }: PageParam) 
   return (
     <Suspense>
       <div>
-        <div className='w-4/5 pl-10 mx-auto flex flex-row'>
+        <div className='w-4/5 mx-auto flex flex-row my-10'>
           <div>
             <div className='flex flex-row gap-5 items-center justify-center self-start ml-auto'>
               <Breadcrumb items={breadcrumb} separator={<i className='fa-solid fa-chevron-right' />} />
