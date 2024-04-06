@@ -90,7 +90,6 @@ const ProductSizeTable: React.FC<ProductSizeTableProps> = async ({ variants, lng
           data={toRender}
         >
           {Array.from(columns).map(x => {
-            console.log(cellRenderer.get(x)?.label)
             return (
               <Column key={uuidv4()} flexGrow={1}>
                 <HeaderCell style={{ background: '#437254' }} align='center' className='text-secondary font-semibold'>
