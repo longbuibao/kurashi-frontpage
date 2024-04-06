@@ -16,6 +16,10 @@ interface PageParam {
   params: { lng: string }
 }
 
+export const metadata = {
+  title: 'Tất cả sản phẩm'
+}
+
 const ProductPage: React.FC<PageParam> = async ({ params: { lng } }: PageParam) => {
   const { t } = await useTranslation(lng, transKey.namespace)
   const products = await prisma.product.findMany({
@@ -60,7 +64,7 @@ const ProductPage: React.FC<PageParam> = async ({ params: { lng } }: PageParam) 
                 {Array.from(productsWithCategory.keys()).map(x => (
                   <div className='w-fit hover:cursor-default' key={uuidv4()}>
                     <KurashiDiv>
-                      {x}
+                      {t(x)}
                     </KurashiDiv>
                   </div>
                 ))}
@@ -70,7 +74,7 @@ const ProductPage: React.FC<PageParam> = async ({ params: { lng } }: PageParam) 
               {Array.from(productsWithCategory).map(category => (
                 <div key={category[0]} className='mb-10'>
                   <div className='mx-auto w-fit'>
-                    <SectionTitle title={category[0]} />
+                    <SectionTitle title={t(category[0])} />
                   </div>
                   <div className='flex flex-wrap gap-5 justify-center items-center my-5'>
                     {category[1].map(product => (

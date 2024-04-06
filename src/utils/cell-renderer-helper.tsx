@@ -1,70 +1,63 @@
 import { Cell } from 'rsuite-table'
+import Link from 'next/link'
 
-const cellRenderer = new Map<string, { label: string, renderer: React.ReactElement }>()
-cellRenderer.set('productId', (
-  {
-    label: 'product-id',
-    renderer: (
-      <Cell align='center'>
-        {(rowData, rowIndex) => {
-          const hack = rowData as any as { [key: string]: string }
-          const download = <div><a href={`/${hack.productId}`}>{hack.productId}</a></div>
-          return download
-        }}
-      </Cell>
-    )
-  }
-))
+import { tableHeaderRow } from '.'
 
-cellRenderer.set('xdfLink', (
-  {
-    label: 'xdf-link',
-    renderer: (
-      <Cell align='center'>
-        {(rowData, rowIndex) => {
-          const hack = rowData as any as { [key: string]: string }
-          const download = <div><a href={`/${hack.xdfLink}`}><i className='fa-solid fa-file-arrow-down' /></a></div>
-          return download
-        }}
-      </Cell>
-    )
-  }
-))
+const cellRenderer = new Map<string, { label: string, renderer: React.ReactElement }>([
+  [
+    tableHeaderRow.productId,
+    {
+      label: 'product-id',
+      renderer: (
+        <Cell align='center'>
+          {(rowData, rowIndex) => {
+            const hack = rowData as any as { [key: string]: string }
+            return <Link href={`/${hack.productId}`}>{hack.productId}</Link>
+          }}
+        </Cell>
+      )
+    }],
+  [
+    tableHeaderRow.xdfLink,
+    {
+      label: 'xdf-link',
+      renderer: (
+        <Cell align='center'>
+          {(rowData, rowIndex) => {
+            const hack = rowData as any as { [key: string]: string }
+            return <Link href={`/${hack.xdfLink}`}><i className='fa-solid fa-file-arrow-down' /></Link>
+          }}
+        </Cell>
+      )
+    }],
+  [
+    tableHeaderRow.manualLink,
+    {
+      label: 'manual-link',
+      renderer: (
+        <Cell align='center'>
+          {(rowData, rowIndex) => {
+            const hack = rowData as any as { [key: string]: string }
+            return <Link href={`/${hack.xdfLink}`}><i className='fa-solid fa-file-arrow-down' /></Link>
+          }}
+        </Cell>
+      )
+    }],
+  [
+    tableHeaderRow.productQuantity,
+    {
+      label: 'product-quantity',
+      renderer: (
+        <Cell align='center'>
+          {(rowData, rowIndex) => {
+            const hack = rowData as any as { [key: string]: string }
+            return <div>{`${hack.productQuantity ?? 0} cái/hộp`}</div>
+          }}
+        </Cell>
+      )
+    }]
+])
 
-cellRenderer.set('manualLink', (
-  {
-    label: 'manual-link',
-    renderer: (
-      <Cell align='center'>
-        {(rowData, rowIndex) => {
-          const hack = rowData as any as { [key: string]: string }
-          const download = <div><a href={`/${hack.xdfLink}`}><i className='fa-solid fa-file-arrow-down' /></a></div>
-          return download
-        }}
-      </Cell>
-    )
-  }
-))
-
-cellRenderer.set('productQuantity', (
-  {
-    label: 'product-quantity',
-    renderer: (
-      <Cell align='center'>
-        {(rowData, rowIndex) => {
-          const hack = rowData as any as { [key: string]: string }
-          const download = <div>{`productQuantity ${hack.productQuantity ?? 0}`}</div>
-          return download
-        }}
-      </Cell>
-    )
-  }
-))
-
-const columnsKey = new Set<string>()
-columnsKey.add('productId')
-columnsKey.add('manualLink')
-columnsKey.add('xdfLink')
-columnsKey.add('productQuantity')
+const columnsKey = new Set<string>([tableHeaderRow.productId, tableHeaderRow.manualLink, tableHeaderRow.xdfLink, tableHeaderRow.productQuantity])
 
 export { cellRenderer, columnsKey }

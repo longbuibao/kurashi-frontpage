@@ -21,18 +21,19 @@ export const metadata = {
   title: 'Tất cả bài viết'
 }
 
-const AllCategories: React.FC = async () => {
+const AllCategories: React.FC<{ lng: string }> = async ({ lng }) => {
   const categories = await prisma.postCategory.findMany({ where: { published: true } })
+  const { t } = await useTranslation(lng, transKey.namespace)
   return (
     <div>
-      {categories.map(category => <div key={category.id} className='hover:cursor-pointer'><KurashiDiv>{category.categoryName}</KurashiDiv></div>)}
+      {categories.map(category => <div key={category.id} className='hover:cursor-pointer'><KurashiDiv>{t(category.categoryName)}</KurashiDiv></div>)}
     </div>
   )
 }
 
 // @ts-expect-error
 const AllBlogs: React.FC<{ lng: string, page: string, numOfBlogs: number }> = async ({ lng, page, numOfBlogs }): React.ReactElement => {
-  const { t } = await useTranslation(lng, blogPageNs)
+  const { t } = await useTranslation(lng, transKey.namespace)
   if (parseInt(page) < 0) return notFound()
   const toSkip = numOfBlogs * parseInt(page)
   const blogs = await prisma.post.findMany({ where: { published: true }, skip: toSkip, take: numOfBlogs, include: { postCategory: true, author: true } })
@@ -95,7 +96,7 @@ const BlogsPage: React.FC<PageParam> = async ({ params: { lng, page } }: PagePar
                 </KurashiLeftBorder>
               </div>
               <div>
-                <AllCategories />
+                <AllCategories lng={lng} />
               </div>
             </Suspense>
           </div>

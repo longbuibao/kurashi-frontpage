@@ -20,3 +20,10 @@ export const createCategoryMapToProducts = (productsRaw: ProductQueryResult[]): 
     return acc
   }, new Map<string, ProductQueryResult[]>())
 }
+
+export enum tableHeaderRow {
+  manualLink = 'manualLink',
+  productId = 'productId',
+  xdfLink = 'xdfLink',
+  productQuantity = 'productQuantity'
+}

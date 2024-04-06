@@ -22,5 +22,11 @@
 	"product-size-value": "Độ lớn",
 	"product-manual-link": "Tải xuống hướng dẫn sử dụng",
 	"product-download-dxf": "Tải xuống file DXF",
-	"product-download-pdf": "Tải xuống file PDF"
+	"product-download-pdf": "Tải xuống file PDF",
+	"home": "Trang chủ",
+	"all-products": "Tất cả sản phẩm",
+	"product-id": "Mã sản phẩm",
+	"manual-link": "Hướng dẫn sử dụng",
+	"xdf-link": "Link XDF",
+	"product-quantity": "Số lượng"
 }

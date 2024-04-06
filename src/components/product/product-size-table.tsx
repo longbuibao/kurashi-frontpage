@@ -7,6 +7,9 @@ import { Table, Column, HeaderCell, Cell } from 'rsuite-table'
 import 'rsuite-table/dist/css/rsuite-table.css'
 
 import { cellRenderer, columnsKey } from '@/utils/cell-renderer-helper'
+import { useTranslationClient } from '@/i18n/client-side'
+import { tableHeaderRow } from '@/utils'
+import * as transKey from '@/i18n/product-table-trans-keys'
 
 interface ProductSizeTableProps {
   variants: Prisma.ProductVariantsGetPayload<{
@@ -37,7 +40,8 @@ interface ProductSizeTableProps {
   lng: string
 }
 
-const ProductSizeTable: React.FC<ProductSizeTableProps> = async ({ variants, lng }) => {
+const ProductSizeTable: React.FC<ProductSizeTableProps> = ({ variants, lng }) => {
+  const { t } = useTranslationClient(lng, transKey.namespace, {})
   const columns = variants.product.reduce((result, x) => {
     x.size?.dimension.forEach(y => {
       if (!result.has(y.name)) {
@@ -57,10 +61,10 @@ const ProductSizeTable: React.FC<ProductSizeTableProps> = async ({ variants, lng
         }, new Map<string, string>())
 
         if (dimensions !== undefined) {
-          dimensions.set('manualLink', x.size?.productManual ?? '#')
-          dimensions.set('productId', x.size?.productId ?? '#')
-          dimensions.set('xdfLink', x.size?.twoDimCad ?? '#')
-          dimensions.set('productQuantity', x.size?.quantity.toString() ?? '#')
+          dimensions.set(tableHeaderRow.manualLink, x.size?.productManual ?? '#')
+          dimensions.set(tableHeaderRow.productId, x.size?.productId ?? '#')
+          dimensions.set(tableHeaderRow.xdfLink, x.size?.twoDimCad ?? '#')
+          dimensions.set(t(tableHeaderRow.productQuantity), x.size?.quantity.toString() ?? '#')
         }
 
         return dimensions
@@ -74,11 +78,12 @@ const ProductSizeTable: React.FC<ProductSizeTableProps> = async ({ variants, lng
   return (
     <div>
       <div className='flex flex-row justify-between w-full'>
-        <div>
+        <div className='flex flex-row gap-1 items-center justify-center my-2'>
+          <i className='fa-solid fa-up-right-and-down-left-from-center' />
           {variants.variantName}
         </div>
         <div>
-          {variants.unit}
+          {t(transKey.unit)} {variants.unit}
         </div>
       </div>
       <div>
@@ -90,10 +95,11 @@ const ProductSizeTable: React.FC<ProductSizeTableProps> = async ({ variants, lng
           data={toRender}
         >
           {Array.from(columns).map(x => {
+            const label = t(cellRenderer.get(x)?.label)
             return (
               <Column key={uuidv4()} flexGrow={1}>
                 <HeaderCell style={{ background: '#437254' }} align='center' className='text-secondary font-semibold'>
-                  {cellRenderer.get(x)?.label ?? x}
+                  {label !== '' ? label : x}
                 </HeaderCell>
                 {cellRenderer.get(x)?.renderer ?? <Cell align='center' dataKey={x} />}
               </Column>

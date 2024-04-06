@@ -1,0 +1,6 @@
+export const namespace = 'product-table-trans'
+export const productId = 'product-id'
+export const manualLink = 'manualLink'
+export const xdfLink = 'xdf-link'
+export const productQuantity = 'product-quantity'
+export const unit = 'unit'

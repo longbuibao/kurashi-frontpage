@@ -18,7 +18,7 @@ interface PageProps {
 
 const BlogViewPage: React.FC<PageProps> = async ({ params }) => {
   const blog = await prisma.post.findUnique({ where: { id: params.id } })
-  const { t } = await useTranslation(params.lng)
+  const { t } = await useTranslation(params.lng, transKey.namespace)
   const breadcrumb = [
     <Link href='/' key='a'>{t(transKey.home)}</Link>,
     <Link href='/blogs' key='b'>{t(transKey.allBlogs)}</Link>,

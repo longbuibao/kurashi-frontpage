@@ -6,7 +6,6 @@ import { v4 as uuidv4 } from 'uuid'
 import { KurashiDiv, KurashiLeftBorder } from '@/components/kurashi-div'
 import { useTranslation } from '@/i18n'
 import * as transKey from '@/i18n/product-info-trans-key'
-import { productNs } from '@/i18n/settings'
 import { Breadcrumb } from '@/components/breadcrumb'
 import ProductSizeTable from './product-size-table'
 
@@ -18,7 +17,7 @@ interface ProductInfoProps {
 }
 
 const ProductInfo: React.FC<ProductInfoProps> = async ({ id, lng }) => {
-  const { t } = await useTranslation(lng, productNs)
+  const { t } = await useTranslation(lng, transKey.namespace)
   const productInfo = await prisma.product.findUnique({
     where: { id },
     include: {
@@ -74,8 +73,8 @@ const ProductInfo: React.FC<ProductInfoProps> = async ({ id, lng }) => {
   const breadcrumb = [
     <Link href='/' key={uuidv4()}>{t(transKey.home)}</Link>,
     <Link href='/products' key={uuidv4()}>{t(transKey.allProducts)}</Link>,
-    <Link href={`/products/product-detail/${productInfo?.id ?? '#'}`} key={uuidv4()}>{productInfo?.category?.name ?? 'null'}</Link>,
-    <Link href={`/products/category/${productInfo?.category?.id ?? '#'}`} key={uuidv4()}>{productInfo?.name ?? 'null'}</Link>
+    <Link href={`/products/category/${productInfo?.category?.id ?? '#'}`} key={uuidv4()}>{productInfo?.name ?? 'null'}</Link>,
+    <Link href={`/products/product-detail/${productInfo?.id ?? '#'}`} key={uuidv4()}>{productInfo?.category?.name ?? 'null'}</Link>
   ]
 
   if (productInfo !== null) {
@@ -90,7 +89,7 @@ const ProductInfo: React.FC<ProductInfoProps> = async ({ id, lng }) => {
         </div>
         <div className='flex flex-col w-full'>
           <div className='flex flex-col w-4/5 mx-auto my-10 max-lg:w-full max-lg:p-1'>
-            <div className='w-fit pl-10 mb-10'>
+            <div className='w-fit mb-10'>
               <KurashiLeftBorder>
                 <h1 className='text-xl'>{t(transKey.productInformation)}</h1>
               </KurashiLeftBorder>
@@ -144,12 +143,12 @@ const ProductInfo: React.FC<ProductInfoProps> = async ({ id, lng }) => {
             </div>
           </div>
           <div className='flex flex-col w-4/5 mx-auto max-lg:w-full max-lg:p-1'>
-            <div className='w-fit pl-10 mb-10'>
+            <div className='w-fit mb-10'>
               <KurashiLeftBorder>
                 <h1 className='text-xl'>{t(transKey.productIntro)}</h1>
               </KurashiLeftBorder>
             </div>
-            <div className='flex flex-row bg-secondary max-lg:flex-col mx-10 max-lg:w-full max-lg:mx-0'>
+            <div className='flex flex-row bg-secondary max-lg:flex-col max-lg:w-full max-lg:mx-0'>
               <div className='flex flex-col w-1/2 p-10 items-center justify-center max-lg:w-full'>
                 {productInfo.productIntro.map(intro => (
                   <div className='flex flex-col gap-5 my-5' key={intro.id}>
@@ -172,25 +171,27 @@ const ProductInfo: React.FC<ProductInfoProps> = async ({ id, lng }) => {
             </div>
           </div>
           <div className='flex flex-col w-4/5 mx-auto my-10 max-lg:w-full max-lg:p-1'>
-            <div className='w-fit pl-10 mb-10'>
+            <div className='w-fit mb-10'>
               <KurashiLeftBorder>
                 <h1 className='text-xl'>{t(transKey.productSize)}</h1>
               </KurashiLeftBorder>
             </div>
-            <div className='flex flex-row max-lg:flex-col bg-secondary justify-center items-center mx-10 max-lg:w-full max-lg:mx-0'>
+            <div className='flex flex-row max-lg:flex-col bg-secondary justify-center items-center max-lg:w-full max-lg:mx-0'>
               <div className='flex flex-row-reverse w-1/2 justify-center items-center max-lg:w-full my-5'>
                 <img src={productInfo.size?.productSizeImage} alt='product size image' className='w-5/6' />
               </div>
-              <div className='w-1/2'>
+              <div className='w-1/2 flex-1'>
                 {productInfo.ProductVariants.map(x => (
                   <div key={uuidv4()} className='max-lg:w-full'>
                     <div>{x.variantName}</div>
-                    <img src={x.thumbnail} alt='product size image' className='w-5/6' />
+                    <div className=''>
+                      <img src={x.thumbnail} alt='product size image' className='w-5/6' />
+                    </div>
                   </div>
                 ))}
               </div>
             </div>
-            <div className='flex flex-col items-center justify-center flex-1 max-lg:my-5 my-5 w-11/12 mx-auto'>
+            <div className='flex flex-col items-center justify-center flex-1 max-lg:my-5 my-5 w-full mx-auto'>
               <div className='w-full mx-auto flex flex-col gap-10'>
                 {productInfo.ProductVariants.map(x => <ProductSizeTable key={x.id} lng={lng} variants={x} />)}
               </div>
