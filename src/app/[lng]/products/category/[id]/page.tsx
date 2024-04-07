@@ -12,11 +12,22 @@ import { ProductCard } from '@/components/product'
 import { Breadcrumb } from '@/components/breadcrumb'
 import { createDefaultCategoryProductsLink } from '@/constants'
 import * as skeleton from './skeleton'
-import { sleep } from '@/utils'
+import { Metadata } from 'next'
 
 interface PageParam {
   params: { lng: string, id: string, page: string }
   searchParams?: { [key: string]: string | string[] | undefined }
+}
+
+export async function generateMetadata ({ params, searchParams }: PageParam): Promise<Metadata> {
+  const id = params.id
+  const category = await prisma.category.findUnique({
+    where: { id }
+  })
+
+  return {
+    title: category?.name ?? 'Category'
+  }
 }
 
 const Products: React.FC<{ lng: string, categoryId: string, searchParams: PageParam['searchParams'] }> = async ({ lng, categoryId, searchParams }) => {
