@@ -9,7 +9,7 @@ import * as transKey from '@/i18n/blog-page-trans-key'
 import { blogPageNs } from '@/i18n/settings'
 import { BlogRegister } from '@/components/blog-register'
 import { PaginationBar } from '@/components/pagination-bar'
-import AllBlogsSkeleton from './all-blogs-skeleton'
+import * as skeleton from './skeleton'
 import prisma from '@/lib/prisma'
 import { useTranslation } from '@/i18n'
 import { Breadcrumb } from '@/components/breadcrumb'
@@ -94,7 +94,7 @@ const BlogsPage: React.FC<PageParam> = async ({ params: { lng }, searchParams }:
         </div>
         <div className='flex flex-row gap-5 max-lg:w-full max-lg:flex-col'>
           <div className='flex w-full'>
-            <Suspense fallback={<AllBlogsSkeleton />}>
+            <Suspense fallback={<skeleton.AllBlogsSkeleton />}>
               <AllBlogs lng={lng} numOfBlogs={4} searchParams={searchParams} />
             </Suspense>
           </div>
@@ -102,7 +102,7 @@ const BlogsPage: React.FC<PageParam> = async ({ params: { lng }, searchParams }:
             <div>
               <BlogRegister />
             </div>
-            <Suspense>
+            <Suspense fallback={<skeleton.AllCategoriesSkeleton />}>
               <div className='ml-4'>
                 <KurashiLeftBorder>
                   {t(transKey.allCategories)}
