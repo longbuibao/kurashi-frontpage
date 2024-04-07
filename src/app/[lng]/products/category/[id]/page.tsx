@@ -21,7 +21,6 @@ interface PageParam {
 
 const Products: React.FC<{ lng: string, categoryId: string, searchParams: PageParam['searchParams'] }> = async ({ lng, categoryId, searchParams }) => {
   const { t } = await useTranslation(lng, transKey.namespace)
-  await sleep(5000)
   const numOfProducts = await prisma.product.count({ where: { categoryId } })
   const products = await prisma.product.findMany({
     where: {
@@ -53,7 +52,6 @@ const Products: React.FC<{ lng: string, categoryId: string, searchParams: PagePa
 }
 
 const Category: React.FC<{ lng: string, id: string }> = async ({ lng, id }) => {
-  await sleep(3000)
   const { t } = await useTranslation(lng, transKey.namespace)
   const category = await prisma.category.findUnique({
     where: { id },
