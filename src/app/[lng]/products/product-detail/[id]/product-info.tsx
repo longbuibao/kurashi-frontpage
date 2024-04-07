@@ -7,7 +7,7 @@ import { KurashiDiv, KurashiLeftBorder } from '@/components/kurashi-div'
 import { useTranslation } from '@/i18n'
 import * as transKey from '@/i18n/product-info-trans-key'
 import { Breadcrumb } from '@/components/breadcrumb'
-import ProductSizeTable from './product-size-table'
+import ProductSizeTable from '@/components/product/product-size-table'
 
 import prisma from '@/lib/prisma'
 
@@ -73,8 +73,8 @@ const ProductInfo: React.FC<ProductInfoProps> = async ({ id, lng }) => {
   const breadcrumb = [
     <Link href='/' key={uuidv4()}>{t(transKey.home)}</Link>,
     <Link href='/products' key={uuidv4()}>{t(transKey.allProducts)}</Link>,
-    <Link href={`/products/category/${productInfo?.category?.id ?? '#'}`} key={uuidv4()}>{productInfo?.name ?? 'null'}</Link>,
-    <Link href={`/products/product-detail/${productInfo?.id ?? '#'}`} key={uuidv4()}>{productInfo?.category?.name ?? 'null'}</Link>
+    <Link href={`/products/category/${productInfo?.category?.id ?? '#'}`} key={uuidv4()}>{productInfo?.category?.name ?? 'null'}</Link>,
+    <Link href={`/products/product-detail/${productInfo?.id ?? '#'}`} key={uuidv4()}>{productInfo?.name ?? 'null'}</Link>
   ]
 
   if (productInfo !== null) {

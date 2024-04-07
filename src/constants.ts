@@ -1,17 +1,13 @@
-import {
-  home, products,
-  catalog, contact, aboutKurashi, career, supportInfo, blog, policy,
-  warrantyPolicy, yourInfo, company
-} from '@/i18n/translation-key'
+import * as transKey from '@/i18n/translation-key'
 
 export const phoneNumber = '0979988617'
 
 export const navItems = [
-  { label: home, url: '/' },
-  { label: products, url: '/products' },
-  { label: catalog, url: '#' },
-  { label: contact, url: '/contact' },
-  { label: blog, url: '/blogs' }
+  { label: transKey.home, url: '/' },
+  { label: transKey.products, url: '/products' },
+  { label: transKey.catalog, url: '#' },
+  { label: transKey.contact, url: '/contact' },
+  { label: transKey.blog, url: '/blogs' }
 ]
 
 export const carouselSliderImages = [
@@ -20,29 +16,31 @@ export const carouselSliderImages = [
   '/assets/carousel-sliders/Slider_03.jpg'
 ]
 
-export const footerLinks = [
-  {
-    label: company,
-    links: [
-      { label: home, url: '/' },
-      { label: aboutKurashi, url: '/about' },
-      { label: products, url: '/products' },
-      { label: career, url: '#' },
-      { label: contact, url: '/contact' }
-    ]
-  },
-  {
-    label: supportInfo,
-    links: [
-      { label: catalog, url: '#' },
-      { label: blog, url: '/blogs' }
-    ]
-  },
-  {
-    label: policy,
-    links: [
-      { label: warrantyPolicy, url: '#' },
-      { label: yourInfo, url: '#' }
-    ]
-  }
-]
+export const footerLinks = [{
+  label: transKey.company,
+  links: [
+    { label: transKey.home, url: '/' },
+    { label: transKey.aboutKurashi, url: '/about' },
+    { label: transKey.products, url: '/products' },
+    { label: transKey.career, url: '#' },
+    { label: transKey.contact, url: '/contact' }
+  ]
+}, {
+  label: transKey.supportInfo,
+  links: [
+    { label: transKey.catalog, url: '#' },
+    { label: transKey.blog, url: '/blogs' }
+  ]
+}, {
+  label: transKey.policy,
+  links: [
+    { label: transKey.warrantyPolicy, url: '#' },
+    { label: transKey.yourInfo, url: '#' }
+  ]
+}]
+
+export const homeLink = '/'
+
+export const defaultBlogsLink = '/blogs?blogPage='
+export const createDefaultCategoryProductsLink = (id: string): string => `/products/category/${id}?productPage=`
+export const defaultBlogViewLink = '/blogs/view/'

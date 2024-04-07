@@ -1,21 +1,23 @@
 'use client'
 
 import React from 'react'
-import { usePathname, useRouter } from 'next/navigation'
+import { useRouter, useSearchParams } from 'next/navigation'
 import Link from 'next/link'
 
 import './pagination-bar.css'
 
 interface PaginationBarProps {
   maxPages: number
+  baseLink: string
+  lng: string
 }
 
-const PaginationBar: React.FC<PaginationBarProps> = ({ maxPages }) => {
-  const routerPathname = usePathname()
+const PaginationBar: React.FC<PaginationBarProps> = ({ maxPages, baseLink, lng }) => {
+  const searchParams = useSearchParams()
   const router = useRouter()
-
-  const page = parseInt(routerPathname.at(routerPathname.length - 1) ?? '0')
+  const page = parseInt(searchParams.get('blogPage') ?? '0')
   const [currentPage, setCurrentPage] = React.useState(page)
+
   const items = []
   let leftSide = currentPage - 1
   if (leftSide <= 0) leftSide = 0
@@ -27,24 +29,24 @@ const PaginationBar: React.FC<PaginationBarProps> = ({ maxPages }) => {
       <div
         key={number} className={(number === currentPage ? 'round-effect active' : 'round-effect')}
         onClick={() => {
-          router.push(`/blogs/${number}`)
+          router.push(`/${lng}${baseLink}${number}`)
           setCurrentPage(number)
         }}
       >
-        <Link href={`/blogs/${number}`}>{number + 1}</Link>
+        <Link href={`${baseLink}${number}`}>{number + 1}</Link>
       </div>
     )
   }
   const nextPage = (): void => {
     if (currentPage < maxPages) {
-      router.push(`/blogs/${currentPage + 1}`)
+      router.push(`/${lng}${baseLink}${currentPage + 1}`)
       setCurrentPage(currentPage + 1)
     }
   }
 
   const prevPage = (): void => {
     if (currentPage >= 1) {
-      router.push(`/blogs/${currentPage - 1}`)
+      router.push(`/${lng}${baseLink}${currentPage - 1}`)
       setCurrentPage(currentPage - 1)
     }
   }

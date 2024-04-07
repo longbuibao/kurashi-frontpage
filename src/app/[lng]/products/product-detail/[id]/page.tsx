@@ -1,7 +1,7 @@
 import React, { Suspense } from 'react'
 import type { Metadata, ResolvingMetadata } from 'next'
 
-import { ProductInfo } from '@/components/product'
+import ProductInfo from './product-info'
 import ProductIdSkeleton from './product-id-skeleton'
 import { useTranslation } from '@/i18n'
 import { kurashiProduct } from '@/i18n/translation-key'

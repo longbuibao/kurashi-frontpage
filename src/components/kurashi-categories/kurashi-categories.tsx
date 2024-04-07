@@ -1,5 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
+import { v4 as uuidv4 } from 'uuid'
 
 import { useTranslation } from '@/i18n'
 import { KurashiTab } from '@/components/kurashi-tabs'
@@ -32,7 +33,7 @@ const KurashiCategories: Promise<React.JSX.Element> = async ({ lng }: KurashiCat
     return {
       key: product[0],
       content: product[1].map((prod) => (
-        <Link key={prod.name} href={`/products/product-detail/${prod.id}`}>
+        <Link key={uuidv4()} href={`/products/product-detail/${prod.id}`}>
           <ProductCard lng={lng} product={prod} />
         </Link>)
       )

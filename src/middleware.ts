@@ -27,8 +27,14 @@ export function middleware (req: NextRequest): NextResponse<unknown> {
     return NextResponse.redirect(new URL(`/${lng}${req.nextUrl.pathname}`, req.url))
   }
 
-  if (req.nextUrl.pathname === (`/${lng}/blogs`)) {
-    return NextResponse.redirect(new URL(`/${lng}/blogs/0`, req.url))
+  const regBlog = new RegExp(`^/${lng}/blogs$`)
+  if (regBlog.test(req.nextUrl.pathname) && (req.nextUrl.searchParams.get('blogPage') === null || req.nextUrl.searchParams.get('blogPage') === '')) {
+    return NextResponse.redirect(new URL(`/${lng}/blogs?blogPage=0`, req.url))
+  }
+
+  const regCategory = new RegExp(`^/${lng}/products/category/[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$`)
+  if (regCategory.test(req.nextUrl.pathname) && (req.nextUrl.searchParams.get('productPage') === null || req.nextUrl.searchParams.get('productPage') === '')) {
+    return NextResponse.redirect(new URL(`${req.nextUrl.pathname}?productPage=0`, req.url))
   }
 
   if (req.headers.has('referer')) {
