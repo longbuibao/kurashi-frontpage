@@ -26,12 +26,14 @@
     "react-dom": "^18",
     "react-i18next": "^14.0.5",
     "react-loading-skeleton": "^3.4.0",
+    "react-photo-album": "^2.3.1",
     "react-responsive-carousel": "^3.2.23",
     "react-spinners": "^0.13.8",
     "react-tabs": "^6.0.2",
     "rsuite-table": "^5.18.2",
     "swr": "^2.2.5",
-    "uuid": "^9.0.1"
+    "uuid": "^9.0.1",
+    "yet-another-react-lightbox": "^3.17.2"
   },
   "devDependencies": {
     "@types/node": "^20.11.26",
