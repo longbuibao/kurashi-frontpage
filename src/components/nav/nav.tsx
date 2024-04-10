@@ -21,11 +21,11 @@ interface NavProps {
 const Nav: FC<NavProps> = ({ links, t }) => {
   return (
     <header>
-      <nav className='flex justify-between items-center'>
+      <nav className='flex justify-center items-center'>
         <Link href='/' className='items-start'>
           <Logo imgSrc='/assets/logo/kurashi-logo.png' width={450} height={157} />
         </Link>
-        <div className='flex-1 flex justify-center items-center gap-5 max-lg:hidden'>
+        <div className='flex justify-center items-end gap-10 max-lg:hidden ml-auto'>
           {links.map(link => {
             return (
               <div key={uuidv4()} className='ml-auto w-fit'>
@@ -35,15 +35,12 @@ const Nav: FC<NavProps> = ({ links, t }) => {
               </div>
             )
           })}
-          <div className='ml-10'>
-            <KurashiDiv>
-              <Link href='#zalolink'>{t(contactUsingZalo)}</Link>
-              <div className='ml-3 inline-block'>
-                <i className='fa-solid fa-chevron-right' />
-              </div>
-            </KurashiDiv>
-          </div>
-
+          <KurashiDiv>
+            <Link href='#zalolink'>{t(contactUsingZalo)}</Link>
+            <div className='ml-3 inline-block'>
+              <i className='fa-solid fa-chevron-right' />
+            </div>
+          </KurashiDiv>
         </div>
         <div className='hidden max-lg:block max-lg:ml-10'>
           <i className='fa-solid fa-bars' />

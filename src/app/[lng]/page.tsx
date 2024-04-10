@@ -21,7 +21,7 @@ const Page = async ({ params: { lng } }: PageParam): Promise<React.ReactElement>
   const { t } = await useTranslation(lng)
 
   return (
-    <main className='mt-10'>
+    <main className='mt-5'>
       <div className='w-4/5 mx-auto max-lg:w-full'>
         <div key={uuidv4()}>
           <img src='/assets/carousel-sliders/Slider_01.jpg' />
@@ -50,8 +50,8 @@ const Page = async ({ params: { lng } }: PageParam): Promise<React.ReactElement>
           <KurashiBlogs />
         </Suspense>
       </div>
-      <div className='p-5 w-4/5 mx-auto border-main border-t-2 my-10 max-lg:w-full'>
-        <div className='w-fit'>
+      <div className='w-4/5 mx-auto border-main border-t-2 my-10 max-lg:w-full'>
+        <div className='w-fit my-10'>
           <AboutKurashiCard lng={lng} />
         </div>
       </div>

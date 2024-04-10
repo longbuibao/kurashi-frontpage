@@ -94,8 +94,8 @@ const ProductInfo: React.FC<ProductInfoProps> = async ({ id, lng }) => {
                 <h1 className='text-xl'>{t(transKey.productInformation)}</h1>
               </KurashiLeftBorder>
             </div>
-            <div className='flex flex-row mx-auto items-center gap-20 max-lg:flex-col'>
-              <div className='w-3/5 max-w-md max-lg:w-full'>
+            <div className='flex flex-row mx-auto items-center justify-between gap-20 max-lg:flex-col'>
+              <div className='w-3/5 max-w-md max-lg:w-full mx-auto'>
                 <img className='max-w-full' src={productInfo.thumbnail} alt={productInfo.name} />
               </div>
               <div className='flex flex-col justify-center gap-1 flex-grow h-full'>
