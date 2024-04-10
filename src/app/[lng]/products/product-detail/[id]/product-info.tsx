@@ -180,13 +180,17 @@ const ProductInfo: React.FC<ProductInfoProps> = async ({ id, lng }) => {
               <div className='flex flex-row-reverse w-1/2 justify-center items-center max-lg:w-full my-5'>
                 <img src={productInfo.size?.productSizeImage} alt='product size image' className='w-5/6' />
               </div>
-              <div className='w-1/2 flex-1'>
+              <div className='w-1/2 flex-1 flex flex-col gap-10'>
                 {productInfo.ProductVariants.map(x => (
                   <div key={uuidv4()} className='max-lg:w-full'>
-                    <div>{x.variantName}</div>
-                    <div className=''>
+                    <div className='flex flex-row gap-1 justify-center items-center'>
+                      <i className='fa-solid fa-up-right-and-down-left-from-center' />
+                      <div>
+                        {x.variantName}
+                      </div>
                       <img src={x.thumbnail} alt='product size image' className='w-5/6' />
                     </div>
+                    <div className='' />
                   </div>
                 ))}
               </div>

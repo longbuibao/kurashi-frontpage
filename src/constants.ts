@@ -44,3 +44,4 @@ export const homeLink = '/'
 export const defaultBlogsLink = '/blogs?blogPage='
 export const createDefaultCategoryProductsLink = (id: string): string => `/products/category/${id}?productPage=`
 export const defaultBlogViewLink = '/blogs/view/'
+export const googleMapLink = 'https://maps.app.goo.gl/xqWhEEcbA6CPqFNr7'

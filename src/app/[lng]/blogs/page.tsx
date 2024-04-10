@@ -28,7 +28,7 @@ const AllCategories: React.FC<{ lng: string }> = async ({ lng }) => {
   const categories = await prisma.postCategory.findMany({ where: { published: true } })
   const { t } = await useTranslation(lng, transKey.namespace)
   return (
-    <div>
+    <div className='flex flex-col gap-3'>
       {categories.map(category => <div key={category.id} className='hover:cursor-pointer'><KurashiDiv>{t(category.categoryName)}</KurashiDiv></div>)}
     </div>
   )
