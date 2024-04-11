@@ -1,0 +1,5 @@
+export const namespace = 'product-gallery-trans'
+export const home = 'home'
+export const allProducts = 'all-products'
+export const imageGallery = 'image-gallery'
+export const imageGalleryTitle = 'image-title'

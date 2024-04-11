@@ -43,7 +43,7 @@ const Products: React.FC<{ lng: string, categoryId: string, searchParams: PagePa
   if (products.length > 0) {
     return (
       <div className='flex-1'>
-        <div className='flex flex-row flex-wrap items-center justify-center'>
+        <div className='flex flex-row flex-wrap items-center justify-center my-10'>
           {products.map(x => (
             <div className='m-1' key={x.id}>
               <Link key={uuidv4()} href={`/products/product-detail/${x.id}`}>

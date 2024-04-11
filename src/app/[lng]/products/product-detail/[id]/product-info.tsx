@@ -94,11 +94,11 @@ const ProductInfo: React.FC<ProductInfoProps> = async ({ id, lng }) => {
                 <h1 className='text-xl'>{t(transKey.productInformation)}</h1>
               </KurashiLeftBorder>
             </div>
-            <div className='flex flex-row mx-auto items-center justify-between gap-20 max-lg:flex-col'>
-              <div className='w-3/5 max-w-md max-lg:w-full mx-auto'>
+            <div className='flex flex-row items-center justify-between gap-20 max-lg:flex-col'>
+              <div className='flex-1 max-w-md max-lg:w-full mx-auto'>
                 <img className='max-w-full' src={productInfo.thumbnail} alt={productInfo.name} />
               </div>
-              <div className='flex flex-col justify-center gap-1 flex-grow h-full'>
+              <div className='w-fit flex flex-col justify-center gap-1 h-full'>
                 <div className='bg-secondary p-5'>
                   <KurashiLeftBorder>
                     {`${t(transKey.productName)}`}: <span>{t(productInfo.name)}</span>
@@ -129,10 +129,18 @@ const ProductInfo: React.FC<ProductInfoProps> = async ({ id, lng }) => {
                     </KurashiLeftBorder>
                   </div>
                 </div>
-                <div className='bg-secondary p-2'>
+                <div className='bg-secondary p-2 flex flex-row gap-5'>
                   <div className='w-fit mx-auto'>
                     <KurashiDiv>
                       <Link href='#zalolink'>{t(transKey.contactUsingZalo)}</Link>
+                      <div className='ml-3 inline-block'>
+                        <i className='fa-solid fa-chevron-right' />
+                      </div>
+                    </KurashiDiv>
+                  </div>
+                  <div className='w-fit mx-auto'>
+                    <KurashiDiv>
+                      <Link href={`/products/product-gallery/${productInfo.id}`}>{t(transKey.gallery)}</Link>
                       <div className='ml-3 inline-block'>
                         <i className='fa-solid fa-chevron-right' />
                       </div>
@@ -178,9 +186,9 @@ const ProductInfo: React.FC<ProductInfoProps> = async ({ id, lng }) => {
             </div>
             <div className='flex flex-row max-lg:flex-col bg-secondary justify-center items-center max-lg:w-full max-lg:mx-0'>
               <div className='flex flex-row-reverse w-1/2 justify-center items-center max-lg:w-full my-5'>
-                <img src={productInfo.size?.productSizeImage} alt='product size image' className='w-5/6' />
+                <img src={productInfo.size?.productSizeImage} alt='product size image' className='w-11/12' />
               </div>
-              <div className='w-1/2 flex-1 flex flex-col gap-10'>
+              <div className='w-1/3 flex-1 flex flex-col gap-10'>
                 {productInfo.ProductVariants.map(x => (
                   <div key={uuidv4()} className='max-lg:w-full'>
                     <div className='flex flex-row gap-1 justify-center items-center'>
@@ -190,7 +198,6 @@ const ProductInfo: React.FC<ProductInfoProps> = async ({ id, lng }) => {
                       </div>
                       <img src={x.thumbnail} alt='product size image' className='w-5/6' />
                     </div>
-                    <div className='' />
                   </div>
                 ))}
               </div>
