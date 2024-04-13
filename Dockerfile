@@ -18,13 +18,12 @@ EXPOSE 3000
 
 RUN curl -o cloud-sql-proxy https://storage.googleapis.com/cloud-sql-connectors/cloud-sql-proxy/v2.10.1/cloud-sql-proxy.linux.amd64
 RUN chmod +x cloud-sql-proxy
-RUN ./cloud-sql-proxy --address 0.0.0.0 --port 5432 /cloudsql/kurashi-frontpage-419616:us-central1:kurashi-dev-db
+RUN ./cloud-sql-proxy -instances=kurashi-frontpage-419616:us-central1:kurashi-dev-db=tcp:5432
 
 RUN apt-get update -y && apt-get install -y openssl
 
 RUN npm i
 
-RUN echo $DATABASE_URL
 RUN npm run db:deploy
 RUN npm run build
 
