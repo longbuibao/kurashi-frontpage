@@ -2,18 +2,125 @@ import React from 'react'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import { v4 as uuidv4 } from 'uuid'
+import { Prisma } from '@prisma/client'
 
 import { KurashiDiv, KurashiLeftBorder } from '@/components/kurashi-div'
 import { useTranslation } from '@/i18n'
 import * as transKey from '@/i18n/product-info-trans-key'
 import { Breadcrumb } from '@/components/breadcrumb'
 import ProductSizeTable from '@/components/product/product-size-table'
-
+import { columnsKey } from '@/utils/cell-renderer-helper'
+import { tableHeaderRow } from '@/utils'
 import prisma from '@/lib/prisma'
 
 interface ProductInfoProps {
   lng: string
   id: string
+}
+
+interface VariantsTableProps {
+  variant: Prisma.ProductVariantsGetPayload<{
+    select: {
+      product: {
+        select: {
+          id: true
+          name: true
+          size: {
+            include: {
+              dimension: {
+                select: {
+                  name: true
+                  id: true
+                  value: true
+                }
+              }
+            }
+          }
+        }
+      }
+      id: true
+      thumbnail: true
+      variantName: true
+      unit: true
+    }
+  }>
+  lng: string
+}
+
+interface VariantTablesProps {
+  variants: Array<VariantsTableProps['variant']>
+  lng: string
+}
+
+const VariantTable: React.FC<VariantsTableProps> = async ({ variant, lng }) => {
+  const { t } = await useTranslation(lng, transKey.namespace)
+
+  const columns = variant.product.reduce((result, x) => {
+    x.size?.dimension.forEach(y => {
+      if (!result.has(y.name)) {
+        result.add(y.name)
+        return result
+      } else return result.add(y.name)
+    })
+    return result
+  }, columnsKey)
+
+  const toRender = variant.product
+    .map(x => {
+      if (x.size !== null) {
+        const dimensions = x.size.dimension.reduce((result, y) => {
+          result.set(y.name, y.value.toString())
+          return result
+        }, new Map<string, string>())
+
+        if (dimensions !== undefined) {
+          dimensions.set(tableHeaderRow.manualLink, x.size?.productManual ?? '#')
+          dimensions.set(tableHeaderRow.productId, x.size?.productId ?? '#')
+          dimensions.set(tableHeaderRow.xdfLink, x.size?.twoDimCad ?? '#')
+          dimensions.set(t(tableHeaderRow.productQuantity), x.size?.quantity.toString() ?? '#')
+        }
+
+        return dimensions
+      }
+
+      return new Map<string, string>()
+    })
+    .filter(x => x.size > 0)
+    .map(x => Object.fromEntries(x))
+
+  return (
+    <div className='my-10'>
+      <div className='flex flex-row justify-between w-full'>
+        <div className='flex flex-row gap-1 items-center my-2'>
+          <div className='flex flex-row gap-5 items-center'>
+            <i className='fa-solid fa-up-right-and-down-left-from-center' />
+            {variant.variantName}
+          </div>
+          <div className='w-1/3'><img src={variant.thumbnail} alt='' /></div>
+        </div>
+        <div className='flex flex-row gap-1 items-center'>
+          <div>
+            {t(transKey.unit)}
+          </div>
+          <div>
+            {variant.unit}
+          </div>
+        </div>
+      </div>
+      <div className='flex flex-col items-center justify-center flex-1 max-lg:my-5 my-5 w-full mx-auto'>
+        <div className='w-full mx-auto flex flex-col gap-10'>
+          {variant.product.map(x =>
+            <div key={x.id}>
+              <ProductSizeTable lng={lng} columns={columns} toRender={toRender} />
+            </div>)}
+        </div>
+      </div>
+    </div>
+  )
+}
+
+const VariantTables: React.FC<VariantTablesProps> = ({ variants, lng }) => {
+  return <div> {variants.map(variant => <VariantTable lng={lng} variant={variant} key={uuidv4()} />)} </div>
 }
 
 const ProductInfo: React.FC<ProductInfoProps> = async ({ id, lng }) => {
@@ -37,7 +144,8 @@ const ProductInfo: React.FC<ProductInfoProps> = async ({ id, lng }) => {
               value: true,
               id: true
             }
-          }
+          },
+          productSizeImage: true
         }
       },
       category: true,
@@ -61,10 +169,10 @@ const ProductInfo: React.FC<ProductInfoProps> = async ({ id, lng }) => {
               }
             }
           },
-          unit: true,
           id: true,
           thumbnail: true,
-          variantName: true
+          variantName: true,
+          unit: true
         }
       }
     }
@@ -78,6 +186,14 @@ const ProductInfo: React.FC<ProductInfoProps> = async ({ id, lng }) => {
   ]
 
   if (productInfo !== null) {
+    const columns = new Set<string>([tableHeaderRow.manualLink, tableHeaderRow.productId, tableHeaderRow.productQuantity, tableHeaderRow.xdfLink])
+    const toRender: Array<{ [key in tableHeaderRow]: any }> = [{
+      manualLink: productInfo.size?.productManual ?? '#',
+      productId: productInfo.id,
+      productQuantity: productInfo.size?.quantity ?? 0,
+      xdfLink: productInfo.size?.twoDimCad ?? '#'
+    }]
+
     return (
       <div>
         <div className='w-4/5 my-10 mx-auto flex flex-row'>
@@ -186,26 +302,23 @@ const ProductInfo: React.FC<ProductInfoProps> = async ({ id, lng }) => {
             </div>
             <div className='flex flex-row max-lg:flex-col bg-secondary justify-center items-center max-lg:w-full max-lg:mx-0'>
               <div className='flex flex-row-reverse w-1/2 justify-center items-center max-lg:w-full my-5'>
-                <img src={productInfo.size?.productSizeImage} alt='product size image' className='w-11/12' />
-              </div>
-              <div className='w-1/3 flex-1 flex flex-col gap-10'>
-                {productInfo.ProductVariants.map(x => (
-                  <div key={uuidv4()} className='max-lg:w-full'>
-                    <div className='flex flex-row gap-1 justify-center items-center'>
-                      <i className='fa-solid fa-up-right-and-down-left-from-center' />
-                      <div>
-                        {x.variantName}
-                      </div>
-                      <img src={x.thumbnail} alt='product size image' className='w-5/6' />
-                    </div>
-                  </div>
-                ))}
+                {productInfo.size?.productSizeImage.map(imgSrc => <img src={imgSrc.imageUrl} key={imgSrc.id} alt='product size image' />)}
               </div>
             </div>
-            <div className='flex flex-col items-center justify-center flex-1 max-lg:my-5 my-5 w-full mx-auto'>
-              <div className='w-full mx-auto flex flex-col gap-10'>
-                {productInfo.ProductVariants.map(x => <ProductSizeTable key={x.id} lng={lng} variants={x} />)}
-              </div>
+            <div className='w-full my-5'>
+              <ProductSizeTable lng={lng} columns={columns} toRender={toRender} />
+            </div>
+            <div>
+              {productInfo.ProductVariants.length > 0 && (
+                <div className='my-10'>
+                  <div className='text-xl'>
+                    <KurashiLeftBorder>
+                      Các sản phẩm khác
+                    </KurashiLeftBorder>
+                  </div>
+                  <VariantTables lng={lng} variants={productInfo.ProductVariants} />
+                </div>
+              )}
             </div>
           </div>
         </div>
