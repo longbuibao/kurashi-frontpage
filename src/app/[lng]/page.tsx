@@ -8,6 +8,8 @@ import { SectionTitle } from '@/components/section-title'
 import { AboutKurashiCard } from '@/components/about-kurashi-card'
 import { KurashiCategories, KurashiCategoriesSkeleton } from '@/components/kurashi-categories'
 import { products, japanAuthentic, blog } from '@/i18n/translation-key'
+import { CarouselSlider } from '@/components/carousel-slider'
+import { carouselSliderImages } from '@/constants'
 
 interface PageParam {
   params: { lng: string }
@@ -17,15 +19,20 @@ export const metadata = {
   title: 'Kurashi'
 }
 
+const createCarouselItemImage = (imageSrc: string): React.ReactElement => (
+  <div key={uuidv4()}>
+    <img src={imageSrc} />
+  </div>
+)
+
 const Page = async ({ params: { lng } }: PageParam): Promise<React.ReactElement> => {
   const { t } = await useTranslation(lng)
+  const carouselSliders = carouselSliderImages.map(createCarouselItemImage)
 
   return (
     <main className='mt-5'>
       <div className='w-4/5 mx-auto max-lg:w-full'>
-        <div key={uuidv4()}>
-          <img src='/assets/carousel-sliders/Slider_01.jpg' />
-        </div>
+        <CarouselSlider items={carouselSliders} indicatorStyles={{}} />
       </div>
       <div className='mx-auto my-10 w-fit'>
         <SectionTitle title={t(products)} />

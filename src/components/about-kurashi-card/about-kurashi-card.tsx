@@ -15,9 +15,9 @@ interface AboutKurashiCardProps {
 const AboutKurashiCard: React.FC<AboutKurashiCardProps> = ({ lng }) => {
   const { t } = useTranslationClient(lng, defaultNS, {})
   return (
-    <div className='flex flex-row gap-20 bg-secondary max-lg:flex-col max-lg:w-full max-lg:mx-1'>
-      <div className='w-1/2'>
-        <img src='/assets/logo/about-kurashi.png' alt='' />
+    <div className='flex flex-row gap-8 bg-secondary max-lg:flex-col max-lg:w-full max-lg:mx-1'>
+      <div className='w-4/6'>
+        <img src='/assets/logo/IMG_7739.jpg' alt='' />
       </div>
       <div className='flex flex-col m-5'>
         <div className='w-fit mb-10 text-wrap max-lg:mx-auto'>
@@ -25,12 +25,7 @@ const AboutKurashiCard: React.FC<AboutKurashiCardProps> = ({ lng }) => {
         </div>
         <div className='mb-5 text-2xl font-semibold max-lg:mx-auto'>{t(aboutContentTitle)}</div>
         <div className='text-wrap text-lg max-lg:mx-auto flex flex-col gap-5'>
-          <div>
-            Kiến tạo không gian sống bằng các giải pháp nội thất tiên tiến
-          </div>
-          <div>
-            Công ty cổ phần Kurashi cung cấp các giải pháp về nội thất phòng tắm tiên tiến nhất từ Nhật Bản. Kurashi hướng đến mục tiêu góp phần nâng cao chất lượng cuộc sống của mỗi gia đình Việt Nam, với sự tập trung vào ba yêu cầu chính của sản phẩm là: tính thẩm mĩ, tính công năng và tính an toàn.
-          </div>
+          <div>Công ty cổ phần Kurashi cung cấp các giải pháp về nội thất phòng tắm tiên tiến nhất từ Nhật Bản. Kurashi hướng đến mục tiêu góp phần nâng cao chất lượng cuộc sống của mỗi gia đình Việt Nam, với sự tập trung vào ba yêu cầu chính của sản phẩm là: tính thẩm mĩ, tính công năng và tính an toàn.</div>
         </div>
         <div className='w-fit mt-auto ml-auto max-lg:mx-auto max-lg:mt-5'>
           <KurashiDiv>

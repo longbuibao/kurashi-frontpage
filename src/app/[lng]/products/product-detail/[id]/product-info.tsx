@@ -210,11 +210,11 @@ const ProductInfo: React.FC<ProductInfoProps> = async ({ id, lng }) => {
                 <h1 className='text-xl'>{t(transKey.productInformation)}</h1>
               </KurashiLeftBorder>
             </div>
-            <div className='flex flex-row items-center justify-between gap-20 max-lg:flex-col'>
-              <div className='flex-1 max-w-md max-lg:w-full mx-auto'>
-                <img className='max-w-full' src={productInfo.thumbnail} alt={productInfo.name} />
+            <div className='flex flex-row items-center justify-center max-lg:flex-col'>
+              <div className='flex-1 max-lg:w-full w-full'>
+                <img className='h-3/4' src={productInfo.thumbnail} alt={productInfo.name} />
               </div>
-              <div className='w-fit flex flex-col justify-center gap-1 h-full'>
+              <div className='flex flex-col justify-center gap-1 h-full w-1/3'>
                 <div className='bg-secondary p-5'>
                   <KurashiLeftBorder>
                     {`${t(transKey.productName)}`}: <span>{t(productInfo.name)}</span>
@@ -249,14 +249,6 @@ const ProductInfo: React.FC<ProductInfoProps> = async ({ id, lng }) => {
                   <div className='w-fit mx-auto'>
                     <KurashiDiv>
                       <Link href='#zalolink'>{t(transKey.contactUsingZalo)}</Link>
-                      <div className='ml-3 inline-block'>
-                        <i className='fa-solid fa-chevron-right' />
-                      </div>
-                    </KurashiDiv>
-                  </div>
-                  <div className='w-fit mx-auto'>
-                    <KurashiDiv>
-                      <Link href={`/products/product-gallery/${productInfo.id}`}>{t(transKey.gallery)}</Link>
                       <div className='ml-3 inline-block'>
                         <i className='fa-solid fa-chevron-right' />
                       </div>
