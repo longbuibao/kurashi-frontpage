@@ -19,6 +19,7 @@ EXPOSE 3000
 RUN apt-get update -y && apt-get install -y openssl
 
 RUN npm i
+RUN echo $INSTANCE_CONNECTION_NAME
 RUN npm run db:deploy
 RUN npm run build
 
