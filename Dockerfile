@@ -16,9 +16,13 @@ RUN npm ci --only=production
 
 EXPOSE 3000
 
+RUN ls /cloudsql
+RUN file /cloudsql/kurashi-frontpage-419616:us-central1:kurashi-dev-db
+
 RUN apt-get update -y && apt-get install -y openssl
 
 RUN npm i
+
 RUN echo $DATABASE_URL
 RUN npm run db:deploy
 RUN npm run build
