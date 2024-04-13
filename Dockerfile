@@ -4,7 +4,7 @@ FROM node:18
 
 WORKDIR /usr/app
 
-COPY *.json ./
+COPY . .
 
 RUN npm ci --only=production
 
