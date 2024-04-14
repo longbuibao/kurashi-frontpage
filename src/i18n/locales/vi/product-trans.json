@@ -17,7 +17,7 @@
 	"prod-knee-part": "Phần gối",
 	"contact-using-zalo": "Tư vấn nhanh Zalo",
 	"product-intro": "Giới thiệu sản phẩm",
-	"product-size": "Kích cỡ sản phẩm",
+	"product-size": "Kích thước sản phẩm",
 	"product-size-key": "Chiều",
 	"product-size-value": "Độ lớn",
 	"product-manual-link": "Tải xuống hướng dẫn sử dụng",
@@ -29,5 +29,6 @@
 	"manual-link": "Hướng dẫn sử dụng",
 	"xdf-link": "Link XDF",
 	"product-quantity": "Số lượng",
-	"product-gallery": "Hình ảnh sản phẩm"
+	"product-gallery": "Hình ảnh sản phẩm",
+	"unit": "Đơn vị"
 }

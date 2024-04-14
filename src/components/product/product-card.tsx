@@ -15,7 +15,7 @@ const ProductCard: React.FC<ProductCardProps> = async ({ product, lng }) => {
       <div className='rounded-md bg-secondary'>
         <img src={product.thumbnail} alt='product thumbnail' className='object-center' />
       </div>
-      <div className='hover:cursor-pointer font-semibold hover:text-main mt-5'>{t(product.name ?? '#')}</div>
+      <div className='hover:cursor-pointer hover:text-main mt-5'>{t(product.name ?? '#')}</div>
     </div>
   )
 }

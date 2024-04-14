@@ -40,25 +40,26 @@ model PostCategory {
 }
 
 model Product {
-  id              String             @id @default(uuid())
-  name            String
-  productId       String             @default("")
-  thumbnail       String             @default("#")
-  url             String             @default("#")
-  categoryId      String?
-  isAvailable     Boolean            @default(false)
-  subCategoryId   String?
-  productIntro    ProductIntro[]
-  size            ProductSize?
-  category        Category?          @relation(fields: [categoryId], references: [id])
-  subCategory     SubCategory?       @relation(fields: [subCategoryId], references: [id])
-  origin          ProductOrigin[]
-  component       ProductComponent[]
-  ProductMetadata ProductMetadata?
-  ProductColor    ProductColor[]
-  ProductTag      ProductTag[]
-  ProductVariants ProductVariants[]
-  productImages   ProductImages[]
+  id                  String             @id @default(uuid())
+  name                String
+  productId           String             @default("")
+  thumbnail           String             @default("#")
+  url                 String             @default("#")
+  categoryId          String?
+  isAvailable         Boolean            @default(false)
+  subCategoryId       String?
+  primaryProductImage String             @default("#")
+  productIntro        ProductIntro[]
+  size                ProductSize?
+  category            Category?          @relation(fields: [categoryId], references: [id])
+  subCategory         SubCategory?       @relation(fields: [subCategoryId], references: [id])
+  origin              ProductOrigin[]
+  component           ProductComponent[]
+  ProductMetadata     ProductMetadata?
+  ProductColor        ProductColor[]
+  ProductTag          ProductTag[]
+  ProductVariants     ProductVariants[]
+  productImages       ProductImages[]
 }
 
 model ProductImages {

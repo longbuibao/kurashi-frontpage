@@ -7,6 +7,7 @@ import { KurashiLink } from '@/components/kurashi-link'
 import { TFunction } from 'i18next'
 import { contactUsingZalo } from '@/i18n/translation-key'
 import { v4 as uuidv4 } from 'uuid'
+import { zaloLink } from '@/constants'
 
 interface LinkItem {
   url: string
@@ -36,7 +37,7 @@ const Nav: FC<NavProps> = ({ links, t }) => {
             )
           })}
           <KurashiDiv>
-            <Link href='#zalolink'>{t(contactUsingZalo)}</Link>
+            <Link href={zaloLink} target='_blank' rel='noreferrer'>{t(contactUsingZalo)}</Link>
             <div className='ml-3 inline-block'>
               <i className='fa-solid fa-chevron-right' />
             </div>

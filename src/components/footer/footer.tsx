@@ -5,7 +5,7 @@ import { TFunction } from 'i18next'
 import { KurashiLeftBorder } from '@/components/kurashi-div'
 import { Logo } from '@/components/logo'
 import { LogoFacebook, LogoYoutube, LogoZalo } from '@/components/svg-icons'
-import { footerLinks, phoneNumber } from '@/constants'
+import { footerLinks, phoneNumber, zaloLink } from '@/constants'
 import { KurashiLink } from '@/components/kurashi-link'
 import { interiorFromJapan, address, addressName, tel, socialMedia } from '@/i18n/translation-key'
 import { v4 as uuidv4 } from 'uuid'
@@ -40,7 +40,9 @@ const Footer: React.FC<FooterProps> = ({ t }) => {
                   <Link href='https://www.youtube.com/channel/UChqsY9O8M5Y70iMC5S9bdyQ' target='_blank' rel='noreferrer'>
                     <LogoYoutube />
                   </Link>
-                  <LogoZalo />
+                  <Link href={zaloLink} target='_blank' rel='noreferrer'>
+                    <LogoZalo />
+                  </Link>
                 </div>
               </div>
             </KurashiLeftBorder>

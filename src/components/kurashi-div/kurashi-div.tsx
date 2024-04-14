@@ -6,7 +6,7 @@ interface KurashiDivProps {
 
 const KurashiDiv: React.FC<KurashiDivProps> = ({ children }): React.ReactElement => {
   return (
-    <div className='max-lg:text-wrap text-nowrap rounded-md bg-main px-3 py-2 text-secondary font-semibold'>
+    <div className='max-lg:text-wrap text-nowrap rounded-md bg-main px-3 py-2 text-secondary'>
       {children}
     </div>
   )

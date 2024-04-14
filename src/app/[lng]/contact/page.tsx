@@ -7,7 +7,7 @@ import * as transKey from '@/i18n/contact-page-trans-key'
 import { contactPageNs } from '@/i18n/settings'
 import { KurashiLeftBorder, KurashiDiv } from '@/components/kurashi-div'
 import { Breadcrumb } from '@/components/breadcrumb'
-import { phoneNumber, googleMapLink } from '@/constants'
+import { phoneNumber, googleMapLink, zaloLink } from '@/constants'
 
 import ContactPageSkeleton from './skeleton'
 
@@ -77,7 +77,7 @@ const ContactPage: React.FC<ContactPageParam> = async ({ params: { lng } }: Cont
               </KurashiLeftBorder>
               <div className='w-fit'>
                 <KurashiDiv>
-                  <Link href='#zalolink'>{t(transKey.zaloContact)}</Link>
+                  <Link href={zaloLink} target='_blank' rel='noreferrer'>{t(transKey.zaloContact)}</Link>
                   <div className='ml-3 inline-block'>
                     <i className='fa-solid fa-chevron-right' />
                   </div>

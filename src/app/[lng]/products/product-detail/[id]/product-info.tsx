@@ -12,6 +12,7 @@ import ProductSizeTable from '@/components/product/product-size-table'
 import { columnsKey } from '@/utils/cell-renderer-helper'
 import { tableHeaderRow } from '@/utils'
 import prisma from '@/lib/prisma'
+import { zaloLink } from '@/constants'
 
 interface ProductInfoProps {
   lng: string
@@ -96,7 +97,6 @@ const VariantTable: React.FC<VariantsTableProps> = async ({ variant, lng }) => {
             <i className='fa-solid fa-up-right-and-down-left-from-center' />
             {variant.variantName}
           </div>
-          <div className='w-1/3'><img src={variant.thumbnail} alt='' /></div>
         </div>
         <div className='flex flex-row gap-1 items-center'>
           <div>
@@ -107,7 +107,7 @@ const VariantTable: React.FC<VariantsTableProps> = async ({ variant, lng }) => {
           </div>
         </div>
       </div>
-      <div className='flex flex-col items-center justify-center flex-1 max-lg:my-5 my-5 w-full mx-auto'>
+      <div className='flex flex-col items-center justify-center flex-1 max-lg:my-5 w-full mx-auto'>
         <div className='w-full mx-auto flex flex-col gap-10'>
           {variant.product.map(x =>
             <div key={x.id}>
@@ -212,7 +212,7 @@ const ProductInfo: React.FC<ProductInfoProps> = async ({ id, lng }) => {
             </div>
             <div className='flex flex-row items-center justify-center max-lg:flex-col'>
               <div className='flex-1 max-lg:w-full w-full'>
-                <img className='h-3/4' src={productInfo.thumbnail} alt={productInfo.name} />
+                <img className='h-3/4' src={productInfo.primaryProductImage !== '#' ? productInfo.primaryProductImage : productInfo.thumbnail} alt={productInfo.name} />
               </div>
               <div className='flex flex-col justify-center gap-1 h-full w-1/3'>
                 <div className='bg-secondary p-5'>
@@ -248,7 +248,7 @@ const ProductInfo: React.FC<ProductInfoProps> = async ({ id, lng }) => {
                 <div className='bg-secondary p-2 flex flex-row gap-5'>
                   <div className='w-fit mx-auto'>
                     <KurashiDiv>
-                      <Link href='#zalolink'>{t(transKey.contactUsingZalo)}</Link>
+                      <Link href={zaloLink} target='_blank' rel='noreferrer'>{t(transKey.contactUsingZalo)}</Link>
                       <div className='ml-3 inline-block'>
                         <i className='fa-solid fa-chevron-right' />
                       </div>
@@ -277,10 +277,10 @@ const ProductInfo: React.FC<ProductInfoProps> = async ({ id, lng }) => {
                   </div>
                 ))}
               </div>
-              <div className='flex flex-row-reverse w-1/2 justify-center items-center max-lg:w-full max-lg:p-10'>
+              <div className='flex flex-row-reverse w-1/3 justify-center items-center max-lg:w-full max-lg:p-10 mx-auto gap-20'>
                 {productInfo.productIntro.map(intro => (
-                  <div className='flex flex-col w-1/2 gap-5 my-5' key={intro.id}>
-                    <img src={intro.introImg} alt='product intro image' className='w-5/6' />
+                  <div className='my-5' key={intro.id}>
+                    <img src={intro.introImg} alt='product intro image' />
                   </div>
                 ))}
               </div>
@@ -293,13 +293,16 @@ const ProductInfo: React.FC<ProductInfoProps> = async ({ id, lng }) => {
               </KurashiLeftBorder>
             </div>
             <div className='flex flex-row max-lg:flex-col bg-secondary justify-center items-center max-lg:w-full max-lg:mx-0'>
-              <div className='flex flex-row-reverse w-1/2 justify-center items-center max-lg:w-full my-5'>
+              <div className='flex flex-row-reverse justify-center items-center max-lg:w-full'>
                 {productInfo.size?.productSizeImage.map(imgSrc => <img src={imgSrc.imageUrl} key={imgSrc.id} alt='product size image' />)}
               </div>
             </div>
-            <div className='w-full my-5'>
-              <ProductSizeTable lng={lng} columns={columns} toRender={toRender} />
-            </div>
+            {productInfo.ProductVariants.length > 0
+              ? <div />
+              : (
+                <div className='w-full my-5'>
+                  <ProductSizeTable lng={lng} columns={columns} toRender={toRender} />
+                </div>)}
             <div>
               {productInfo.ProductVariants.length > 0 && (
                 <div className='my-10'>
