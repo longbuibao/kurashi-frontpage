@@ -36,7 +36,7 @@ export async function generateMetadata ({ params, searchParams }: Props, parent:
 
 const ProductPage: React.FC<PageParam> = ({ params: { lng, id } }: PageParam) => {
   return (
-    <div className='my-10 mx-auto w-full max-lg:my-0'>
+    <div className='mx-auto w-full max-lg:my-0'>
       <Suspense fallback={<ProductIdSkeleton />}>
         <ProductInfo id={id} lng={lng} />
       </Suspense>

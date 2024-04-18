@@ -1,6 +1,7 @@
 import * as transKey from '@/i18n/translation-key'
 
 export const phoneNumber = '0979988617'
+export const email = 'kurashi-corp@kurashi.com.vn'
 
 export const navItems = [
   { label: transKey.home, url: '/' },
@@ -35,7 +36,7 @@ export const footerLinks = [{
   label: transKey.policy,
   links: [
     { label: transKey.warrantyPolicy, url: '#' },
-    { label: transKey.yourInfo, url: '#' }
+    { label: transKey.yourInfo, url: '/policy' }
   ]
 }]
 

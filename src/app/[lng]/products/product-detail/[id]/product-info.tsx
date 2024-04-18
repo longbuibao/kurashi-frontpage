@@ -205,7 +205,7 @@ const ProductInfo: React.FC<ProductInfoProps> = async ({ id, lng }) => {
         </div>
         <div className='flex flex-col w-full'>
           <div className='flex flex-col w-4/5 mx-auto my-10 max-lg:w-full max-lg:p-1'>
-            <div className='w-fit mb-10'>
+            <div className='w-fit'>
               <KurashiLeftBorder>
                 <h1 className='text-xl'>{t(transKey.productInformation)}</h1>
               </KurashiLeftBorder>
@@ -265,7 +265,7 @@ const ProductInfo: React.FC<ProductInfoProps> = async ({ id, lng }) => {
               </KurashiLeftBorder>
             </div>
             <div className='flex flex-row bg-secondary max-lg:flex-col max-lg:w-full max-lg:mx-0'>
-              <div className='flex flex-col w-1/2 p-10 items-center justify-center max-lg:w-full'>
+              <div className='flex flex-col w-1/2 px-5 items-center justify-center max-lg:w-full'>
                 {productInfo.productIntro.map(intro => (
                   <div className='flex flex-col gap-5 my-5' key={intro.id}>
                     <KurashiLeftBorder>
@@ -277,11 +277,15 @@ const ProductInfo: React.FC<ProductInfoProps> = async ({ id, lng }) => {
                   </div>
                 ))}
               </div>
-              <div className='flex flex-row-reverse w-1/3 justify-center items-center max-lg:w-full max-lg:p-10 mx-auto gap-20'>
+              <div className='flex flex-row-reverse w-1/3 justify-center items-center max-lg:w-full max-lg:p-10 mx-auto gap-15'>
                 {productInfo.productIntro.map(intro => (
-                  <div className='my-5' key={intro.id}>
-                    <img src={intro.introImg} alt='product intro image' />
-                  </div>
+                  intro.introImg !== '#'
+                    ? (
+                      <div className='my-5' key={intro.id}>
+                        <img src={intro.introImg} alt='product intro image' />
+                      </div>
+                      )
+                    : undefined
                 ))}
               </div>
             </div>
