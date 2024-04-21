@@ -1,4 +1,4 @@
-export const fallbackLng = 'en'
+export const fallbackLng = 'vi'
 export const languages = ['vi', fallbackLng, 'ja']
 export const defaultNS = 'translation'
 export const productNs = 'product-trans'
