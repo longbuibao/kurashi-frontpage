@@ -17,7 +17,7 @@ interface FooterProps {
 const Footer: React.FC<FooterProps> = ({ t }) => {
   return (
     <div>
-      <div className='pl-3 pb-3 border-t-2 border-b-2 border-main flex flex-row justify-around max-lg:flex-col'>
+      <div className='pl-3 pb-3 border-t-2 border-b-2 border-main flex flex-row justify-around max-lg:flex-col w-4/5 mx-auto'>
         <div className='flex flex-col gap-5 w-fit justify-center'>
           <div className='mb-5 flex flex-col justify-center max-lg:items-center'>
             <Link href='/'>

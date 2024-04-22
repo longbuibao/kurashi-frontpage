@@ -16,7 +16,7 @@ const AboutKurashiCard: React.FC<AboutKurashiCardProps> = ({ lng }) => {
   const { t } = useTranslationClient(lng, defaultNS, {})
   return (
     <div className='flex flex-row gap-8 bg-secondary max-lg:flex-col max-lg:w-full max-lg:mx-1'>
-      <div className='w-4/6'>
+      <div className='w-4/6 max-lg:w-full'>
         <img src='/assets/logo/IMG_7739.jpg' alt='' />
       </div>
       <div className='flex flex-col m-5'>
