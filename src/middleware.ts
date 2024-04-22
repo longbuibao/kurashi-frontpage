@@ -9,17 +9,17 @@ export const config = {
 }
 
 export function middleware (req: NextRequest): NextResponse<unknown> {
-  let lng
-  if (req.cookies.has(cookieName)) {
-    lng = acceptLanguage.get(req.cookies.get(cookieName)?.value)
-  }
-  if (lng === undefined || lng === null || lng === '') {
-    lng = acceptLanguage.get(req.headers.get('Accept-Language'))
-  }
-  if (lng === undefined || lng === null || lng === '') {
-    lng = fallbackLng
-  }
-
+  // let lng
+  // if (req.cookies.has(cookieName)) {
+  //   lng = acceptLanguage.get(req.cookies.get(cookieName)?.value)
+  // }
+  // if (lng === undefined || lng === null || lng === '') {
+  //   lng = acceptLanguage.get(req.headers.get('Accept-Language'))
+  // }
+  // if (lng === undefined || lng === null || lng === '') {
+  //   lng = fallbackLng
+  // }
+  const lng = fallbackLng
   if (
     !languages.some(loc => req.nextUrl.pathname.startsWith(`/${loc}`)) &&
     !req.nextUrl.pathname.startsWith('/_next')
