@@ -41,12 +41,12 @@ const AllProducts: React.FC<{ lng: string }> = async ({ lng }) => {
     <div>
       <div className='w-4/5 mx-auto my-8 flex flex-row max-lg:flex-col'>
         <div>
-          <div className='mb-5'>
+          <div className='mb-5 max-lg:w-fit max-lg:mx-auto'>
             <KurashiLeftBorder>
               {t(transKey.categories)}
             </KurashiLeftBorder>
           </div>
-          <div className='flex flex-col max-lg:flex-row max-lg:items-center max-lg:flex-wrap gap-5'>
+          <div className='flex flex-col max-lg:flex-row max-lg:items-center max-lg:flex-wrap gap-5 max-lg:w-fit max-lg:mx-auto'>
             {Array.from(productsWithCategory.keys()).map(x => (
               <div className='w-fit hover:cursor-default' key={uuidv4()}>
                 <KurashiDiv>

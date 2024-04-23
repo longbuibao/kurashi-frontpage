@@ -37,7 +37,7 @@ const Page = async ({ params: { lng } }: PageParam): Promise<React.ReactElement>
       <div className='mx-auto my-10 w-fit'>
         <SectionTitle title={t(products)} />
       </div>
-      <div className='w-fit mx-auto mt-16 hover:cursor-default max-lg:mx-1'>
+      <div className='w-fit mx-auto mt-16 hover:cursor-default max-lg:mx-2'>
         <KurashiDiv>
           <div className='px-12 text-2xl max-lg:text-center'>{t(japanAuthentic)}</div>
         </KurashiDiv>
@@ -48,7 +48,7 @@ const Page = async ({ params: { lng } }: PageParam): Promise<React.ReactElement>
           <KurashiCategories lng={lng} />
         </div>
       </Suspense>
-      <div className='w-4/5 mx-auto border-main border-t-2 my-11'>
+      <div className='w-4/5 mx-auto border-main border-t-2 my-10 max-lg:w-full'>
         <div className='mx-auto w-fit my-10'>
           <SectionTitle title={t(blog)} />
         </div>

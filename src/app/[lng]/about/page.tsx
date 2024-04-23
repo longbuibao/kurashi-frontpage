@@ -10,17 +10,15 @@ export const metadata = {
 const AboutPage: React.FC = () => {
   return (
     <div>
-
       <div className='w-4/5 mx-auto'>
-        <div className='w-fit my-10'>
+        <div className='w-fit my-10 max-lg:mx-auto'>
           <SectionTitle title='Về Kurashi' />
         </div>
       </div>
-
-      <div className='grid-rows-2 grid-cols-2 grid w-4/5 mx-auto'>
+      <div className='grid-rows-2 grid-cols-2 grid w-4/5 mx-auto max-lg:flex max-lg:flex-col max-lg:gap-5 max-lg:justify-center'>
         <div className='flex flex-col gap-2 place-items-center place-content-end'>
           <div><Logo imgSrc='/assets/logo/kurashi-logo.png' width={450} height={157} /></div>
-          <div className='font-semibold'>
+          <div className='font-semibold max-lg:text-center'>
             Kiến tạo không gian sống bằng các giải pháp nội thất tiên tiến
           </div>
         </div>
@@ -38,7 +36,6 @@ const AboutPage: React.FC = () => {
             Cùng với sự phát triển của nền kinh tế Việt Nam và sự thay đổi không ngừng của phong cách sống theo thời đại, Kurashi tin rằng mình có thể tạo ra nhiều giá trị mới cho căn nhà hiện tại nếu đi sâu vào các chi tiết và tỉ mỉ như người Nhật.
           </div>
         </div>
-
       </div>
     </div>
   )
