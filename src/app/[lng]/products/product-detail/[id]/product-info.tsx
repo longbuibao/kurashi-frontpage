@@ -55,9 +55,6 @@ interface VariantTablesProps {
 
 const VariantTable: React.FC<VariantsTableProps> = async ({ variant, lng }) => {
   const { t } = await useTranslation(lng, transKey.namespace)
-
-  console.log({ products: variant.product })
-
   const columns = variant.product.reduce((result, x) => {
     x.size?.dimension.forEach(y => {
       if (!result.has(y.name)) {
@@ -112,7 +109,7 @@ const VariantTable: React.FC<VariantsTableProps> = async ({ variant, lng }) => {
       <div className='flex flex-col items-center justify-center flex-1 max-lg:my-5 w-full mx-auto'>
         <div className='w-full mx-auto flex flex-col gap-10'>
           {toRender.map(x =>
-            <div key={x.id}>
+            <div key={uuidv4()}>
               <ProductSizeTable lng={lng} columns={columns} toRender={toRender} />
             </div>)}
         </div>
@@ -207,7 +204,7 @@ const ProductInfo: React.FC<ProductInfoProps> = async ({ id, lng }) => {
         </div>
         <div className='flex flex-col w-full'>
           <div className='flex flex-col w-4/5 mx-auto my-10 max-lg:w-full max-lg:p-1'>
-            <div className='w-fit max-lg:mx-auto'>
+            <div className='w-fit max-lg:ml-6'>
               <KurashiLeftBorder>
                 <h1 className='text-xl'>{t(transKey.productInformation)}</h1>
               </KurashiLeftBorder>
@@ -261,7 +258,7 @@ const ProductInfo: React.FC<ProductInfoProps> = async ({ id, lng }) => {
             </div>
           </div>
           <div className='flex flex-col w-4/5 mx-auto max-lg:w-full max-lg:p-1'>
-            <div className='w-fit mb-10 max-lg:mx-auto'>
+            <div className='w-fit mb-10 max-lg:ml-6'>
               <KurashiLeftBorder>
                 <h1 className='text-xl'>{t(transKey.productIntro)}</h1>
               </KurashiLeftBorder>
@@ -293,7 +290,7 @@ const ProductInfo: React.FC<ProductInfoProps> = async ({ id, lng }) => {
             </div>
           </div>
           <div className='flex flex-col w-4/5 mx-auto my-10 max-lg:w-full max-lg:p-1'>
-            <div className='w-fit mb-10 max-lg:mx-auto'>
+            <div className='w-fit mb-10 max-lg:ml-6'>
               <KurashiLeftBorder>
                 <h1 className='text-xl'>{t(transKey.productSize)}</h1>
               </KurashiLeftBorder>
