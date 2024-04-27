@@ -56,6 +56,8 @@ interface VariantTablesProps {
 const VariantTable: React.FC<VariantsTableProps> = async ({ variant, lng }) => {
   const { t } = await useTranslation(lng, transKey.namespace)
 
+  console.log({ products: variant.product })
+
   const columns = variant.product.reduce((result, x) => {
     x.size?.dimension.forEach(y => {
       if (!result.has(y.name)) {
@@ -109,7 +111,7 @@ const VariantTable: React.FC<VariantsTableProps> = async ({ variant, lng }) => {
       </div>
       <div className='flex flex-col items-center justify-center flex-1 max-lg:my-5 w-full mx-auto'>
         <div className='w-full mx-auto flex flex-col gap-10'>
-          {variant.product.map(x =>
+          {toRender.map(x =>
             <div key={x.id}>
               <ProductSizeTable lng={lng} columns={columns} toRender={toRender} />
             </div>)}
@@ -196,16 +198,16 @@ const ProductInfo: React.FC<ProductInfoProps> = async ({ id, lng }) => {
 
     return (
       <div>
-        <div className='w-4/5 my-10 mx-auto flex flex-row'>
+        <div className='w-4/5 my-10 mx-auto flex flex-row max-lg:mb-0'>
           <div>
-            <div className='flex flex-row gap-5 items-center justify-center self-start ml-auto'>
+            <div className='flex flex-row gap-5 items-center justify-center self-start ml-auto max-lg:flex-wrap'>
               <Breadcrumb items={breadcrumb} separator={<i className='fa-solid fa-chevron-right' />} />
             </div>
           </div>
         </div>
         <div className='flex flex-col w-full'>
           <div className='flex flex-col w-4/5 mx-auto my-10 max-lg:w-full max-lg:p-1'>
-            <div className='w-fit'>
+            <div className='w-fit max-lg:mx-auto'>
               <KurashiLeftBorder>
                 <h1 className='text-xl'>{t(transKey.productInformation)}</h1>
               </KurashiLeftBorder>
@@ -214,7 +216,7 @@ const ProductInfo: React.FC<ProductInfoProps> = async ({ id, lng }) => {
               <div className='flex-1 max-lg:w-full w-full'>
                 <img className='h-3/4' src={productInfo.primaryProductImage !== '#' ? productInfo.primaryProductImage : productInfo.thumbnail} alt={productInfo.name} />
               </div>
-              <div className='flex flex-col justify-center gap-1 h-full w-1/3'>
+              <div className='flex flex-col justify-center gap-1 h-full w-1/3 max-lg:w-full'>
                 <div className='bg-secondary p-5'>
                   <KurashiLeftBorder>
                     {`${t(transKey.productName)}`}: <span>{t(productInfo.name)}</span>
@@ -259,7 +261,7 @@ const ProductInfo: React.FC<ProductInfoProps> = async ({ id, lng }) => {
             </div>
           </div>
           <div className='flex flex-col w-4/5 mx-auto max-lg:w-full max-lg:p-1'>
-            <div className='w-fit mb-10'>
+            <div className='w-fit mb-10 max-lg:mx-auto'>
               <KurashiLeftBorder>
                 <h1 className='text-xl'>{t(transKey.productIntro)}</h1>
               </KurashiLeftBorder>
@@ -291,7 +293,7 @@ const ProductInfo: React.FC<ProductInfoProps> = async ({ id, lng }) => {
             </div>
           </div>
           <div className='flex flex-col w-4/5 mx-auto my-10 max-lg:w-full max-lg:p-1'>
-            <div className='w-fit mb-10'>
+            <div className='w-fit mb-10 max-lg:mx-auto'>
               <KurashiLeftBorder>
                 <h1 className='text-xl'>{t(transKey.productSize)}</h1>
               </KurashiLeftBorder>
@@ -310,7 +312,7 @@ const ProductInfo: React.FC<ProductInfoProps> = async ({ id, lng }) => {
             <div>
               {productInfo.ProductVariants.length > 0 && (
                 <div className='my-10'>
-                  <div className='text-xl'>
+                  <div className='text-xl max-lg:mx-auto w-fit'>
                     <KurashiLeftBorder>
                       Các sản phẩm khác
                     </KurashiLeftBorder>
