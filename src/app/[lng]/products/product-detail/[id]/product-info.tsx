@@ -211,7 +211,7 @@ const ProductInfo: React.FC<ProductInfoProps> = async ({ id, lng }) => {
             </div>
             <div className='flex flex-row items-center justify-center max-lg:flex-col'>
               <div className='flex-1 max-lg:w-full w-full'>
-                <img className='h-3/4' src={productInfo.primaryProductImage !== '#' ? productInfo.primaryProductImage : productInfo.thumbnail} alt={productInfo.name} />
+                <img className='h-3/4 object-fill' src={productInfo.primaryProductImage !== '#' ? productInfo.primaryProductImage : productInfo.thumbnail} alt={productInfo.name} />
               </div>
               <div className='flex flex-col justify-center gap-1 h-full w-1/3 max-lg:w-full'>
                 <div className='bg-secondary p-5'>
@@ -309,7 +309,7 @@ const ProductInfo: React.FC<ProductInfoProps> = async ({ id, lng }) => {
             <div>
               {productInfo.ProductVariants.length > 0 && (
                 <div className='my-10'>
-                  <div className='text-xl max-lg:mx-auto w-fit'>
+                  <div className='text-xl max-lg:ml-6 w-fit'>
                     <KurashiLeftBorder>
                       Các sản phẩm khác
                     </KurashiLeftBorder>
