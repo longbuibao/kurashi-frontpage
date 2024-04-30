@@ -35,8 +35,9 @@ export const footerLinks = [{
 }, {
   label: transKey.policy,
   links: [
-    { label: transKey.warrantyPolicy, url: '#' },
-    { label: transKey.yourInfo, url: '/policy' }
+    { label: transKey.warrantyPolicy, url: '/warranty-policy' },
+    { label: transKey.yourInfo, url: '/policy' },
+    { label: transKey.deliveryPolicy, url: '/delivery-policy' }
   ]
 }]
 
