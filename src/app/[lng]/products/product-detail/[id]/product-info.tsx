@@ -3,16 +3,21 @@ import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import { v4 as uuidv4 } from 'uuid'
 import { Prisma } from '@prisma/client'
+import dynamic from 'next/dynamic'
 
 import { KurashiDiv, KurashiLeftBorder } from '@/components/kurashi-div'
 import { useTranslation } from '@/i18n'
 import * as transKey from '@/i18n/product-info-trans-key'
 import { Breadcrumb } from '@/components/breadcrumb'
-import ProductSizeTable from '@/components/product/product-size-table'
+
 import { columnsKey } from '@/utils/cell-renderer-helper'
 import { tableHeaderRow } from '@/utils'
 import prisma from '@/lib/prisma'
 import { zaloLink } from '@/constants'
+const ProductSizeTable = dynamic(
+  async () => await import('@/components/product/product-size-table').then(module => module.default),
+  { ssr: false }
+)
 
 interface ProductInfoProps {
   lng: string
@@ -178,10 +183,8 @@ const ProductInfo: React.FC<ProductInfoProps> = async ({ id, lng }) => {
   })
 
   const breadcrumb = [
-    <Link href='/' key={uuidv4()}>{t(transKey.home)}</Link>,
     <Link href='/products' key={uuidv4()}>{t(transKey.allProducts)}</Link>,
-    <Link href={`/products/category/${productInfo?.category?.id ?? '#'}`} key={uuidv4()}>{productInfo?.category?.name ?? 'null'}</Link>,
-    <Link href={`/products/product-detail/${productInfo?.id ?? '#'}`} key={uuidv4()}>{productInfo?.name ?? 'null'}</Link>
+    <Link href={`/products/category/${productInfo?.category?.id ?? '#'}`} key={uuidv4()}>{productInfo?.category?.name ?? 'null'}</Link>
   ]
 
   if (productInfo !== null) {
