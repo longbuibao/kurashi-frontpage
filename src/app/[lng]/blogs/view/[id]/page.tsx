@@ -21,13 +21,12 @@ const BlogViewPage: React.FC<PageProps> = async ({ params }) => {
   const { t } = await useTranslation(params.lng, transKey.namespace)
   const breadcrumb = [
     <Link href='/' key='a'>{t(transKey.home)}</Link>,
-    <Link href='/blogs' key='b'>{t(transKey.allBlogs)}</Link>,
-    <Link href={`/blogs/view/${blog?.id ?? '#'}`} key='b'>{blog?.title}</Link>
+    <Link href='/blogs' key='b'>{t(transKey.allBlogs)}</Link>
   ]
   if (blog !== null) {
     return (
       <div>
-        <div className='mx-auto flex flex-row w-4/5 my-10'>
+        <div className='mx-auto flex flex-row w-4/5 my-10 max-lg:justify-center'>
           <div>
             <div className='flex flex-row gap-5 items-center justify-center self-start ml-auto'>
               <Breadcrumb items={breadcrumb} separator={<i className='fa-solid fa-chevron-right' />} />

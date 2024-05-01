@@ -71,7 +71,6 @@ const Category: React.FC<{ lng: string, id: string }> = async ({ lng, id }) => {
     }
   })
   const breadcrumb = [
-    <Link href='/' key={uuidv4()}>{t(transKey.home)}</Link>,
     <Link href='/products' key={uuidv4()}>{t(transKey.allProducts)}</Link>,
     <Link href={`/products/category/${id}`} key={uuidv4()}>{category?.name}</Link>
   ]
@@ -79,7 +78,7 @@ const Category: React.FC<{ lng: string, id: string }> = async ({ lng, id }) => {
   if (category != null) {
     return (
       <div>
-        <div className='w-4/5 my-10 mx-auto flex flex-row'>
+        <div className='w-4/5 my-10 mx-auto flex flex-row max-lg:justify-center'>
           <div>
             <div className='flex flex-row gap-5 items-center justify-center self-start ml-auto'>
               <Breadcrumb items={breadcrumb} separator={<i className='fa-solid fa-chevron-right' />} />
