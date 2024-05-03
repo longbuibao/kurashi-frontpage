@@ -176,3 +176,17 @@ model ProductVariants {
   unit        String    @default("unit")
   product     Product[]
 }
+
+model PageMetadata {
+  id          String     @id @default(uuid())
+  pageName    String     @default("PLEASE ADD YOUR PAGE TITLE NAME HERE")
+  pageTitle   PageTitle? @relation(fields: [pageTitleId], references: [id])
+  pageTitleId String?
+}
+
+model PageTitle {
+  id           String         @id @default(uuid())
+  page         String
+  title        String
+  PageMetadata PageMetadata[]
+}
