@@ -2,31 +2,13 @@ import React from 'react'
 
 import { SectionTitle } from '@/components/section-title'
 import { Logo } from '@/components/logo'
-import { pageTitle } from './constants'
 import { Metadata } from 'next'
-import prisma from '@/lib/prisma'
+import { getMetadata } from '@/utils'
 
 export async function generateMetadata (): Promise<Metadata> {
-  const title = await prisma.pageMetadata.findFirst({
-    where: {
-      pageName: pageTitle
-    },
-    include: {
-      pageTitle: {
-        select: { id: true, page: true, title: true }
-      }
-    }
-  })
-
-  if (title !== null) {
-    return {
-      title: title.pageTitle?.title ?? 'Về Kurashi'
-    }
-  }
-
-  return {
-    title: 'Về Kurashi'
-  }
+  const defaultTitle = 'Về Kurashi'
+  const pageName = 'about-page'
+  return await getMetadata(pageName, defaultTitle)
 }
 
 const AboutPage: React.FC = () => {

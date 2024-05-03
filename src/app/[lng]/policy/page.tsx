@@ -3,9 +3,13 @@ import Link from 'next/link'
 
 import { KurashiLeftBorder } from '@/components/kurashi-div'
 import { phoneNumber, email } from '@/constants'
+import { Metadata } from 'next'
+import { getMetadata } from '@/utils'
 
-export const metadata = {
-  title: 'Chính sách bảo mật thông tin'
+export async function generateMetadata (): Promise<Metadata> {
+  const defaultTitle = 'Chính sách bảo mật thông tin'
+  const pageName = 'policy-page'
+  return await getMetadata(pageName, defaultTitle)
 }
 
 const PolicyPage: React.FC = () => {

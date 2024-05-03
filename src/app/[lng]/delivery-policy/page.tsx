@@ -1,6 +1,14 @@
 import React from 'react'
 
 import { KurashiLeftBorder } from '@/components/kurashi-div'
+import { Metadata } from 'next'
+import { getMetadata } from '@/utils'
+
+export async function generateMetadata (): Promise<Metadata> {
+  const defaultTitle = 'Chính sách giao/nhận hàng'
+  const pageName = 'delivery-policy-page'
+  return await getMetadata(pageName, defaultTitle)
+}
 
 const DeliveryPolicy: React.FC = () => {
   return (

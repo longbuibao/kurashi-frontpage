@@ -8,15 +8,19 @@ import { contactPageNs } from '@/i18n/settings'
 import { KurashiLeftBorder, KurashiDiv } from '@/components/kurashi-div'
 import { Breadcrumb } from '@/components/breadcrumb'
 import { phoneNumber, googleMapLink, zaloLink } from '@/constants'
+import { getMetadata } from '@/utils'
 
 import ContactPageSkeleton from './skeleton'
+import { Metadata } from 'next'
 
 interface ContactPageParam {
   params: { lng: string }
 }
 
-export const metadata = {
-  title: 'Liên hệ'
+export async function generateMetadata (): Promise<Metadata> {
+  const defaultTitle = 'Liên hệ'
+  const pageName = 'contact-page'
+  return await getMetadata(pageName, defaultTitle)
 }
 
 const ContactPage: React.FC<ContactPageParam> = async ({ params: { lng } }: ContactPageParam) => {

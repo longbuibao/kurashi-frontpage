@@ -2,6 +2,7 @@ import React, { Suspense } from 'react'
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import { v4 as uuidv4 } from 'uuid'
+import { Metadata } from 'next'
 
 import { BlogCard } from '@/components/blog-card'
 import { KurashiLeftBorder, KurashiDiv } from '@/components/kurashi-div'
@@ -14,14 +15,17 @@ import prisma from '@/lib/prisma'
 import { useTranslation } from '@/i18n'
 import { Breadcrumb } from '@/components/breadcrumb'
 import { defaultBlogsLink, defaultBlogViewLink, homeLink } from '@/constants'
+import { getMetadata } from '@/utils'
 
 interface PageParam {
   params: { lng: string }
   searchParams?: { [key: string]: string }
 }
 
-export const metadata = {
-  title: 'Tất cả bài viết'
+export async function generateMetadata (): Promise<Metadata> {
+  const defaultTitle = 'Tất cả bài viết'
+  const pageName = 'all-blogs'
+  return await getMetadata(pageName, defaultTitle)
 }
 
 const AllCategories: React.FC<{ lng: string }> = async ({ lng }) => {

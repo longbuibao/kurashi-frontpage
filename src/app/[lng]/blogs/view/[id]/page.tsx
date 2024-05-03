@@ -1,15 +1,19 @@
 import React from 'react'
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
+import { Metadata } from 'next'
 
 import { Breadcrumb } from '@/components/breadcrumb'
 import prisma from '@/lib/prisma'
 import { SectionTitle } from '@/components/section-title'
 import { useTranslation } from '@/i18n'
 import * as transKey from '@/i18n/blog-single-view-trans-key'
+import { getMetadata } from '@/utils'
 
-export const metadata = {
-  title: 'Bài viết'
+export async function generateMetadata (): Promise<Metadata> {
+  const defaultTitle = 'Bài viết'
+  const pageName = 'single-blog'
+  return await getMetadata(pageName, defaultTitle)
 }
 
 interface PageProps {

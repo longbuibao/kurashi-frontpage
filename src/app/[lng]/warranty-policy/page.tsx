@@ -1,9 +1,13 @@
 import React from 'react'
 
 import { KurashiLeftBorder } from '@/components/kurashi-div'
+import { Metadata } from 'next'
+import { getMetadata } from '@/utils'
 
-export const metadata = {
-  title: 'Chính sách bảo hành'
+export async function generateMetadata (): Promise<Metadata> {
+  const defaultTitle = 'Chính sách bảo hành'
+  const pageName = 'warranty-policy-page'
+  return await getMetadata(pageName, defaultTitle)
 }
 
 const WarrantyPolicy: React.FC = () => {
