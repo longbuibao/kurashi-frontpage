@@ -9,7 +9,6 @@ import { KurashiDiv, KurashiLeftBorder } from '@/components/kurashi-div'
 import { useTranslation } from '@/i18n'
 import * as transKey from '@/i18n/product-info-trans-key'
 import { Breadcrumb } from '@/components/breadcrumb'
-
 import { columnsKey } from '@/utils/cell-renderer-helper'
 import { tableHeaderRow } from '@/utils'
 import prisma from '@/lib/prisma'
@@ -248,7 +247,17 @@ const ProductInfo: React.FC<ProductInfoProps> = async ({ id, lng }) => {
                   </div>
                 </div>
                 <div className='bg-secondary p-2 flex flex-row gap-5'>
-                  <div className='w-fit mx-auto'>
+                  <div className='w-fit mx-auto h-full'>
+                    <KurashiDiv>
+                      <div className='flex flex-row items-center justify-center'>
+                        <Link href={productInfo.productVideo} target='_blank' rel='noreferrer'>Video sản phẩm</Link>
+                        <div className='ml-3 inline-block'>
+                          <i className='fa-solid fa-chevron-right' />
+                        </div>
+                      </div>
+                    </KurashiDiv>
+                  </div>
+                  <div className='w-fit mx-auto h-full'>
                     <KurashiDiv>
                       <Link href={zaloLink} target='_blank' rel='noreferrer'>{t(transKey.contactUsingZalo)}</Link>
                       <div className='ml-3 inline-block'>

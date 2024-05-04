@@ -32,7 +32,7 @@ const AllCategories: React.FC<{ lng: string }> = async ({ lng }) => {
   const categories = await prisma.postCategory.findMany({ where: { published: true } })
   const { t } = await useTranslation(lng, transKey.namespace)
   return (
-    <div className='flex flex-col gap-3'>
+    <div className='flex flex-row gap-3 max-lg:flex-col'>
       {categories.map(category => <div key={category.id} className='hover:cursor-pointer'><KurashiDiv>{t(category.categoryName)}</KurashiDiv></div>)}
     </div>
   )
@@ -48,7 +48,7 @@ const AllBlogs: React.FC<{ lng: string, numOfBlogs: number, searchParams: PagePa
   if (blogs.length > 0) {
     return (
       <div className='flex-1'>
-        <div className='grid grid-cols-2 grid-rows-2 max-lg:grid-cols-1 max-lg:grid-rows-1'>
+        <div className='grid grid-cols-2 grid-rows-2 max-lg:grid-cols-2 max-lg:grid-rows-2 max-sm:grid-cols-1'>
           {blogs.map(blog => (
             <div className='m-1' key={blog.id}>
               <BlogCard
@@ -68,12 +68,12 @@ const AllBlogs: React.FC<{ lng: string, numOfBlogs: number, searchParams: PagePa
     )
   }
   return (
-    <div className='my-10 w-4/5 flex flex-col items-center justify-center'>
-      <div className='w-[100vh] text-center mx-auto my-10 flex flex-row gap-1 items-center justify-center'>
+    <div className='my-10 w-4/5 flex flex-col items-center justify-center mx-auto'>
+      <div className='text-center mx-auto my-10 flex flex-row gap-1 items-center justify-center'>
         <i className='fa-solid fa-wrench' />
         <div>{t(transKey.weAreUpdating)}</div>
       </div>
-      <div className='w-[100vh] mx-auto my-10'>
+      <div className='mx-auto my-10'>
         <PaginationBar maxPages={Math.round(numberOfBlogs / 4)} baseLink={defaultBlogsLink} lng={lng} />
       </div>
     </div>
@@ -87,7 +87,7 @@ const BlogsPage: React.FC<PageParam> = async ({ params: { lng }, searchParams }:
     <Link href={defaultBlogsLink} key={uuidv4()}>{t(transKey.allBlogs)}</Link>
   ]
   return (
-    <div className='w-4/5 mx-auto max-lg:w-full'>
+    <div className='w-4/5 mx-auto mb-10'>
       <div>
         <div className='mx-auto flex flex-row my-10 max-lg:justify-center'>
           <div>
@@ -96,7 +96,7 @@ const BlogsPage: React.FC<PageParam> = async ({ params: { lng }, searchParams }:
             </div>
           </div>
         </div>
-        <div className='flex flex-row gap-5 max-lg:w-full max-lg:flex-col'>
+        <div className='flex flex-row gap-5 max-2xl:flex-col'>
           <div className='flex w-full'>
             <Suspense fallback={<skeleton.AllBlogsSkeleton />}>
               <AllBlogs lng={lng} numOfBlogs={4} searchParams={searchParams} />
@@ -112,7 +112,7 @@ const BlogsPage: React.FC<PageParam> = async ({ params: { lng }, searchParams }:
                   {t(transKey.allCategories)}
                 </KurashiLeftBorder>
               </div>
-              <div>
+              <div className='w-fit max-lg:mx-auto'>
                 <AllCategories lng={lng} />
               </div>
             </Suspense>

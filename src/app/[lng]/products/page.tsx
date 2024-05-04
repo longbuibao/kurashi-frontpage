@@ -1,8 +1,9 @@
 import React, { Suspense } from 'react'
 import Link from 'next/link'
+import { Metadata } from 'next'
 
 import prisma from '@/lib/prisma'
-import { createCategoryMapToProducts } from '@/utils'
+import { createCategoryMapToProducts, getMetadata } from '@/utils'
 import { ProductCard } from '@/components/product'
 import { SectionTitle } from '@/components/section-title'
 import { Breadcrumb } from '@/components/breadcrumb'
@@ -16,8 +17,10 @@ interface PageParam {
   params: { lng: string }
 }
 
-export const metadata = {
-  title: 'Tất cả sản phẩm'
+export async function generateMetadata (): Promise<Metadata> {
+  const defaultTitle = 'Tất cả sản phẩm'
+  const pageName = 'all-products'
+  return await getMetadata(pageName, defaultTitle)
 }
 
 const AllProducts: React.FC<{ lng: string }> = async ({ lng }) => {
@@ -41,7 +44,7 @@ const AllProducts: React.FC<{ lng: string }> = async ({ lng }) => {
     <div>
       <div className='w-4/5 mx-auto my-8 flex flex-row max-lg:flex-col'>
         <div>
-          <div className='mb-5 max-lg:w-fit max-lg:mx-auto'>
+          <div className='mb-5 max-lg:w-fit'>
             <KurashiLeftBorder>
               {t(transKey.categories)}
             </KurashiLeftBorder>

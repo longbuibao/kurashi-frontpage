@@ -37,8 +37,8 @@ const BlogViewPage: React.FC<PageProps> = async ({ params }) => {
             </div>
           </div>
         </div>
-        <div className='flex flex-col items-center justify-center w-4/5 mx-auto'>
-          <div className='mx-auto w-fit my-10'>
+        <div className='flex flex-col items-center justify-center w-4/5 mx-auto mb-10'>
+          <div className='mx-auto w-fit mb-10'>
             <SectionTitle title={blog.title} />
           </div>
           <div>{blog.content}</div>

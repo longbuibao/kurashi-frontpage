@@ -38,8 +38,13 @@ const ContactPage: React.FC<ContactPageParam> = async ({ params: { lng } }: Cont
           </div>
         </div>
       </div>
-      <div className='w-4/5 mx-auto flex flex-row gap-5 max-lg:flex-col justify-center my-2'>
+      <div className='w-4/5 mx-auto flex flex-row gap-5 max-lg:flex-col justify-center mb-10'>
         <div className='flex flex-col'>
+          <div className='mb-10'>
+            <KurashiLeftBorder>
+              <div>Liên hệ chúng tôi</div>
+            </KurashiLeftBorder>
+          </div>
           <form className='w-full flex flex-col gap-5 flex-1' action='' method='post'>
             <Input placeholder={t(transKey.name)} />
             <Input placeholder={t(transKey.email)} />
@@ -91,7 +96,7 @@ const ContactPage: React.FC<ContactPageParam> = async ({ params: { lng } }: Cont
 
           </div>
         </div>
-        <img className='w-1/3 max-lg:w-full' src='/assets/contact.jpg' alt='contact-theme-page' />
+        <img className='w-1/3 max-sm:hidden max-lg:w-full' src='/assets/contact.jpg' alt='contact-theme-page' />
       </div>
     </div>
 

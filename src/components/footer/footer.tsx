@@ -17,7 +17,7 @@ interface FooterProps {
 const Footer: React.FC<FooterProps> = ({ t }) => {
   return (
     <div>
-      <div className='pl-3 pb-3 border-t-2 border-b-2 border-main flex flex-row justify-around max-lg:flex-col w-4/5 mx-auto'>
+      <div className='pb-3 border-t-2 border-b-2 border-main flex flex-row justify-between max-lg:flex-col w-4/5 mx-auto'>
         <div className='flex flex-col gap-5 w-fit justify-center'>
           <div className='mb-5 flex flex-col justify-center max-lg:items-center max-lg:my-10'>
             <Link href='/'>
@@ -25,7 +25,7 @@ const Footer: React.FC<FooterProps> = ({ t }) => {
             </Link>
             <p>{t(interiorFromJapan)}</p>
           </div>
-          <div className='flex flex-col gap-5 w-fit items-start'>
+          <div className='flex flex-col gap-5 w-4/5 items-start'>
             <KurashiLeftBorder>{t(address)}: {t(addressName)}</KurashiLeftBorder>
             <KurashiLeftBorder>
               {t(tel)}: <a href='tel:+979988617'> {phoneNumber} </a>

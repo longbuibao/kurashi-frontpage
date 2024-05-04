@@ -43,6 +43,7 @@ model Product {
   id                  String             @id @default(uuid())
   name                String
   productId           String             @default("")
+  productVideo        String             @default("#")
   thumbnail           String             @default("#")
   url                 String             @default("#")
   categoryId          String?

@@ -9,7 +9,7 @@ const AllBlogsSkeleton: React.FC = () => {
         <Skeleton containerClassName='flex-1' className='h-[25vh]' />
         <Skeleton containerClassName='flex-1' className='h-[25vh]' />
       </div>
-      <div className='flex flex-row max-lg:flex-col gap-5 flex-1'>
+      <div className='flex flex-row max-lg:flex-col gap-5 flex-1 mt-1'>
         <Skeleton containerClassName='flex-1' className='h-[25vh]' />
         <Skeleton containerClassName='flex-1' className='h-[25vh]' />
       </div>
