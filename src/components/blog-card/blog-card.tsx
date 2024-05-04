@@ -13,12 +13,12 @@ interface BlogCardProps {
 
 const BlogCard: React.FC<BlogCardProps> = ({ imgSrc, summary, title, dateUpload, url }) => {
   return (
-    <div className='flex flex-row gap-3 bg-secondary max-lg:flex-col max-lg:w-full'>
+    <div className='flex flex-row gap-3 bg-secondary max-lg:flex-col max-lg:w-full max-2xl:h-full'>
       <img src={imgSrc} alt='Blog Image' className='w-1/2 max-lg:w-full' />
-      <div className='flex flex-col justify-center items-center gap-5 hover:cursor-default mx-auto text-wrap'>
+      <div className='flex flex-col justify-center items-center gap-5 hover:cursor-default mx-auto text-wrap max-2xl:h-full'>
         <KurashiLink>
           <Link href={url}>
-            <div className='text-xl font-semibold text-center p-2 text-nowrap'>{title.toLocaleUpperCase()}</div>
+            <div className='text-xl font-semibold text-center p-2 text-nowrap max-2xl:text-wrap'>{title.toLocaleUpperCase()}</div>
           </Link>
         </KurashiLink>
         <div className='text-center'>{summary}</div>

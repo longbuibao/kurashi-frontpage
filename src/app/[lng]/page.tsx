@@ -37,13 +37,13 @@ const Page = async ({ params: { lng } }: PageParam): Promise<React.ReactElement>
       <div className='mx-auto my-10 w-fit'>
         <SectionTitle title={t(products)} />
       </div>
-      <div className='w-fit mx-auto mt-16 hover:cursor-default max-lg:mx-2'>
+      <div className='w-fit mx-auto mt-16 hover:cursor-default max-sm:w-4/5'>
         <KurashiDiv>
           <div className='px-12 text-2xl max-lg:text-center'>{t(japanAuthentic)}</div>
         </KurashiDiv>
       </div>
       <Suspense fallback={<KurashiCategoriesSkeleton />}>
-        <div className='mt-5'>
+        <div className='mt-5 w-4/5 mx-auto'>
           {/* @ts-expect-error } */}
           <KurashiCategories lng={lng} />
         </div>

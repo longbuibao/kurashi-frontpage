@@ -10,8 +10,8 @@ interface KurashiTabsProps {
 
 const KurashiTabs: React.FC<KurashiTabsProps> = ({ body, tabList }) => {
   return (
-    <Tabs defaultIndex={0} className='w-2/3 mx-auto my-11 max-lg:mx-1 max-lg:w-full'>
-      <TabList className='w-full flex flex-row justify-around mb-10 max-lg:flex-col max-lg:w-fit max-lg:mx-auto'>
+    <Tabs defaultIndex={0} className='mx-auto my-10 max-lg:w-full'>
+      <TabList className='w-full flex flex-row justify-around mb-10 max-lg:flex-col max-lg:w-full max-lg:mx-auto'>
         {tabList?.map(tab => <Tab className='pb-2 text-2xl hover:cursor-pointer max-lg:text-center max-lg:my-1 ' key={tab}>{tab}</Tab>)}
       </TabList>
       {body?.map(item => (

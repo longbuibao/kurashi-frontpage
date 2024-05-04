@@ -26,7 +26,7 @@ const Nav: FC<NavProps> = ({ links, t }) => {
         <Link href='/' className='items-start'>
           <Logo imgSrc='/assets/logo/kurashi-logo.png' width={450} height={157} />
         </Link>
-        <div className='flex justify-center items-end gap-10 max-lg:hidden ml-auto'>
+        <div className='flex justify-center items-end gap-10 max-lg:hidden max-2xl:hidden ml-auto'>
           {links.map(link => {
             return (
               <div key={uuidv4()} className='ml-auto w-fit'>
@@ -43,7 +43,7 @@ const Nav: FC<NavProps> = ({ links, t }) => {
             </div>
           </KurashiDiv>
         </div>
-        <div className='hidden max-lg:block max-lg:ml-10'>
+        <div className='hidden max-lg:block max-lg:ml-10 max-2xl:block max-2xl:ml-10'>
           <i className='fa-solid fa-bars' />
         </div>
         <div />
