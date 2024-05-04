@@ -48,13 +48,13 @@ const Footer: React.FC<FooterProps> = ({ t }) => {
             </KurashiLeftBorder>
           </div>
         </div>
-        <div className='flex flex-row gap-5 pt-10 w-6/12 max-lg:w-full max-lg:flex-col'>
+        <div className='flex flex-row gap-5 pt-10 w-6/12 max-lg:flex-wrap max-lg:w-full'>
           {footerLinks.map(footerLink =>
             <div key={uuidv4()} className='flex flex-col grow'>
               <div className='mb-5 font-semibold text-xl'>
                 <KurashiLeftBorder>{t(footerLink.label)}</KurashiLeftBorder>
               </div>
-              <div className='flex flex-col gap-5 w-fit max-lg:mx-auto max-lg:gap-2'>
+              <div className='flex flex-col gap-5 w-fit max-lg:gap-2'>
                 {footerLink.links.map(link =>
                   <KurashiLink key={uuidv4()}>
                     <Link href={`${link.url}`}>{t(link.label)}</Link>
