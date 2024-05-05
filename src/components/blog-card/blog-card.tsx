@@ -18,12 +18,12 @@ const BlogCard: React.FC<BlogCardProps> = ({ imgSrc, summary, title, dateUpload,
       <div className='flex flex-col justify-center items-center gap-5 hover:cursor-default mx-auto text-wrap'>
         <KurashiLink>
           <Link href={url}>
-            <div className='text-xl font-semibold text-center p-2 text-wrap'>{title.toLocaleUpperCase()}</div>
+            <div className='text-xl font-semibold text-center p-2 text-wrap max-sm:text-sm max-sm:p-0'>{title.toLocaleUpperCase()}</div>
           </Link>
         </KurashiLink>
-        <div className='text-center'>{summary}</div>
-        <div className='text-center mt-5'>{dateUpload}</div>
+        <div className='text-center max-sm:text-sm'>{summary}</div>
       </div>
+      <div className='text-center mt-auto mb-2 max-sm:text-sm'><i className='fa-regular fa-calendar-days' /> {dateUpload}</div>
     </div>
   )
 }
