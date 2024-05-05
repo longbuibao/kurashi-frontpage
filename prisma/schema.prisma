@@ -191,3 +191,20 @@ model PageTitle {
   title        String
   PageMetadata PageMetadata[]
 }
+
+model BlogRegistrationList {
+  id        String   @id @default(uuid())
+  email     String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model ContactRegistrationList {
+  id          String   @id @default(uuid())
+  email       String
+  message     String
+  name        String
+  phoneNumber String
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}

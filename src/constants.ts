@@ -49,3 +49,7 @@ export const defaultBlogViewLink = '/blogs/view/'
 export const googleMapLink = 'https://maps.app.goo.gl/xqWhEEcbA6CPqFNr7'
 
 export const zaloLink = 'https://zalo.me/0979988617'
+
+export const sussesEmailRegistration = 'ok#####'
+export const failEmailRegistration = 'fail#####'
+export const existedEmailRegistration = 'existed#####'

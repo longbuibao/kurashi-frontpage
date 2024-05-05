@@ -1,7 +1,6 @@
 import React, { Suspense } from 'react'
 import Link from 'next/link'
 
-import { Input } from '@/components/input'
 import { useTranslation } from '@/i18n'
 import * as transKey from '@/i18n/contact-page-trans-key'
 import { contactPageNs } from '@/i18n/settings'
@@ -9,6 +8,7 @@ import { KurashiLeftBorder, KurashiDiv } from '@/components/kurashi-div'
 import { Breadcrumb } from '@/components/breadcrumb'
 import { phoneNumber, googleMapLink, zaloLink } from '@/constants'
 import { getMetadata } from '@/utils'
+import { ContactRegister } from '@/components/contact-register'
 
 import ContactPageSkeleton from './skeleton'
 import { Metadata } from 'next'
@@ -45,18 +45,7 @@ const ContactPage: React.FC<ContactPageParam> = async ({ params: { lng } }: Cont
               <div>Liên hệ chúng tôi</div>
             </KurashiLeftBorder>
           </div>
-          <form className='w-full flex flex-col gap-5 flex-1' action='' method='post'>
-            <Input placeholder={t(transKey.name)} />
-            <Input placeholder={t(transKey.email)} />
-            <Input placeholder={t(transKey.phoneNumber)} />
-            <textarea rows={15} className='border-b border-secondary w-full h-70' name='' id='' placeholder={t(transKey.messageContent)} />
-            <div className='w-fit mb-2 flex flex-row'>
-              <button className='block' type='submit'>{t(transKey.sendButtonContent)}</button>
-              <div className='ml-3 inline-block text-main'>
-                <i className='fa-solid fa-chevron-right' />
-              </div>
-            </div>
-          </form>
+          <ContactRegister />
           <div className='flex flex-row gap-5 h-full max-lg:flex-col w-full'>
             <div className='flex flex-col gap-5 bg-secondary w-1/2 p-3 max-lg:w-full'>
               <KurashiLeftBorder>

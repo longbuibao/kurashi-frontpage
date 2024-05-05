@@ -246,22 +246,24 @@ const ProductInfo: React.FC<ProductInfoProps> = async ({ id, lng }) => {
                     </KurashiLeftBorder>
                   </div>
                 </div>
-                <div className='bg-secondary p-2 flex flex-row gap-5'>
-                  <div className='w-fit mx-auto h-full'>
+                <div className='bg-secondary p-1 flex flex-row gap-3 justify-center'>
+                  <div className='max-sm:w-1/2 w-fit'>
                     <KurashiDiv>
                       <div className='flex flex-row items-center justify-center'>
-                        <Link href={productInfo.productVideo} target='_blank' rel='noreferrer'>Video sản phẩm</Link>
+                        <Link href={productInfo.productVideo} target='_blank' rel='noreferrer' className='max-sm:text-sm'>Video sản phẩm</Link>
                         <div className='ml-3 inline-block'>
                           <i className='fa-solid fa-chevron-right' />
                         </div>
                       </div>
                     </KurashiDiv>
                   </div>
-                  <div className='w-fit mx-auto h-full'>
+                  <div className='max-sm:w-1/2 w-fit'>
                     <KurashiDiv>
-                      <Link href={zaloLink} target='_blank' rel='noreferrer'>{t(transKey.contactUsingZalo)}</Link>
-                      <div className='ml-3 inline-block'>
-                        <i className='fa-solid fa-chevron-right' />
+                      <div className='flex flex-row items-center justify-center'>
+                        <Link href={zaloLink} target='_blank' rel='noreferrer' className='max-sm:text-sm'>{t(transKey.contactUsingZalo)}</Link>
+                        <div className='ml-3 inline-block'>
+                          <i className='fa-solid fa-chevron-right' />
+                        </div>
                       </div>
                     </KurashiDiv>
                   </div>
