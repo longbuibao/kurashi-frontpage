@@ -11,13 +11,13 @@ const KurashiCategoriesSkeleton: React.FC = () => {
         <Skeleton containerClassName='flex-1' className='w-40 h-12' />
       </div>
       <div className='flex gap-5 flex-col'>
-        <div className='flex gap-5 flex-row'>
+        <div className='flex gap-5 flex-row max-sm:flex-col'>
           <Skeleton containerClassName='flex-1' className='w-64 h-52' />
           <Skeleton containerClassName='flex-1' className='w-64 h-52' />
-          <Skeleton containerClassName='flex-1' className='w-64 h-52' />
-          <Skeleton containerClassName='flex-1' className='w-64 h-52' />
+          <Skeleton containerClassName='flex-1' className='w-64 h-52 max-sm:hidden' />
+          <Skeleton containerClassName='flex-1' className='w-64 h-52 max-sm:hidden' />
         </div>
-        <div className='flex gap-5 flex-row'>
+        <div className='flex gap-5 flex-row max-sm:hidden'>
           <Skeleton containerClassName='flex-1' className='w-64 h-52' />
           <Skeleton containerClassName='flex-1' className='w-64 h-52' />
           <Skeleton containerClassName='flex-1' className='w-64 h-52' />
