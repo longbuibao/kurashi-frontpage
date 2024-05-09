@@ -21,7 +21,7 @@ const AboutPage: React.FC = () => {
       </div>
       <div className='grid-rows-2 grid-cols-2 grid w-4/5 mx-auto max-lg:flex max-lg:flex-col max-lg:gap-5 max-lg:justify-center'>
         <div className='flex flex-col gap-2 place-items-center place-content-end'>
-          <div><Logo imgSrc='/assets/logo/kurashi-logo.png' width={450} height={157} /></div>
+          <div><Logo width={450} height={157} /></div>
           <div className='font-semibold max-lg:text-center'>
             Kiến tạo không gian sống bằng các giải pháp nội thất tiên tiến
           </div>

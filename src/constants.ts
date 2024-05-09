@@ -12,9 +12,9 @@ export const navItems = [
 ]
 
 export const carouselSliderImages = [
-  '/assets/carousel-sliders/Slider_01.jpg',
-  '/assets/carousel-sliders/Slider_02.jpg',
-  '/assets/carousel-sliders/Slider_03.jpg'
+  'https://storage.googleapis.com/kurashi_frontpage_files/images/Slider_01.jpg',
+  'https://storage.googleapis.com/kurashi_frontpage_files/images/Slider_02.jpg',
+  'https://storage.googleapis.com/kurashi_frontpage_files/images/Slider_03.jpg'
 ]
 
 export const footerLinks = [{

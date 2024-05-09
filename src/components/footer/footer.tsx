@@ -21,7 +21,7 @@ const Footer: React.FC<FooterProps> = ({ t }) => {
         <div className='flex flex-col gap-5 w-fit justify-center'>
           <div className='mb-5 flex flex-col justify-center max-lg:items-center max-lg:my-10'>
             <Link href='/'>
-              <Logo imgSrc='/assets/logo/kurashi-logo.png' width={200} />
+              <Logo width={200} />
             </Link>
             <p>{t(interiorFromJapan)}</p>
           </div>

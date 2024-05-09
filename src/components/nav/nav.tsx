@@ -24,7 +24,7 @@ const Nav: FC<NavProps> = ({ links, t }) => {
     <header>
       <nav className='flex justify-center items-center'>
         <Link href='/' className='items-start'>
-          <Logo imgSrc='/assets/logo/kurashi-logo.png' width={450} height={157} />
+          <Logo width={450} height={157} />
         </Link>
         <div className='flex justify-center items-end gap-10 max-lg:hidden max-2xl:hidden ml-auto'>
           {links.map(link => {

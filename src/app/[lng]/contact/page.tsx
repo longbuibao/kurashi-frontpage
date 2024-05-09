@@ -85,7 +85,7 @@ const ContactPage: React.FC<ContactPageParam> = async ({ params: { lng } }: Cont
 
           </div>
         </div>
-        <img className='w-1/3 max-sm:hidden max-lg:w-full' src='/assets/contact.jpg' alt='contact-theme-page' />
+        <img className='w-1/3 max-sm:hidden max-lg:w-full' src='https://storage.googleapis.com/kurashi_frontpage_files/images/contact_theme.jpg' alt='contact-theme-page' />
       </div>
     </div>
 

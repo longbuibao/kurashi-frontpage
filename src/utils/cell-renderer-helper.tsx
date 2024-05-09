@@ -25,7 +25,7 @@ const cellRenderer = new Map<string, { label: string, renderer: React.ReactEleme
         <Cell align='center'>
           {(rowData, rowIndex) => {
             const hack = rowData as any as { [key: string]: string }
-            return <Link href={`/${hack.xdfLink}`}><i className='fa-solid fa-file-arrow-down' /></Link>
+            return <Link href={`${hack.xdfLink}`} target='_blank' rel='noreferrer'><i className='fa-solid fa-file-arrow-down' /></Link>
           }}
         </Cell>
       )
@@ -38,7 +38,7 @@ const cellRenderer = new Map<string, { label: string, renderer: React.ReactEleme
         <Cell align='center'>
           {(rowData, rowIndex) => {
             const hack = rowData as any as { [key: string]: string }
-            return <Link href={`/${hack.xdfLink}`}><i className='fa-solid fa-file-arrow-down' /></Link>
+            return <Link href={`${hack.manualLink}`} target='_blank' rel='noreferrer'><i className='fa-solid fa-file-arrow-down' /></Link>
           }}
         </Cell>
       )
