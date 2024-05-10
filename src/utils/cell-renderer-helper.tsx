@@ -51,7 +51,7 @@ const cellRenderer = new Map<string, { label: string, renderer: React.ReactEleme
         <Cell align='center'>
           {(rowData, rowIndex) => {
             const hack = rowData as any as { [key: string]: string }
-            return <div>{`${hack.productQuantity ?? 0} cái/hộp`}</div>
+            return <div>{`${hack.productQuantity ?? 0} cái/thùng`}</div>
           }}
         </Cell>
       )

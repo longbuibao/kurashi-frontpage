@@ -190,7 +190,7 @@ const ProductInfo: React.FC<ProductInfoProps> = async ({ id, lng }) => {
     const columns = new Set<string>([tableHeaderRow.manualLink, tableHeaderRow.productId, tableHeaderRow.productQuantity, tableHeaderRow.xdfLink])
     const toRender: Array<{ [key in tableHeaderRow]: any }> = [{
       manualLink: productInfo.size?.productManual ?? '#',
-      productId: productInfo.id,
+      productId: productInfo.productId,
       productQuantity: productInfo.size?.quantity ?? 0,
       xdfLink: productInfo.size?.twoDimCad ?? '#'
     }]
