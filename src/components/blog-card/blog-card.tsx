@@ -15,7 +15,7 @@ const BlogCard: React.FC<BlogCardProps> = ({ imgSrc, summary, title, dateUpload,
   return (
     <div className='flex flex-row gap-3 bg-secondary max-lg:flex-col h-full justify-between'>
       <img src={imgSrc} alt='Blog Image' className='w-1/2 max-lg:w-full mb-auto' />
-      <div className='flex flex-col gap-3 mr-3'>
+      <div className='flex flex-col gap-3 mx-auto'>
         <div className='flex flex-col justify-center items-center gap-5 hover:cursor-default mx-auto text-wrap'>
           <KurashiLink>
             <Link href={url}>

@@ -1,5 +1,6 @@
 import React, { Suspense } from 'react'
 import { v4 as uuidv4 } from 'uuid'
+import Image from 'next/image'
 
 import { KurashiDiv } from '@/components/kurashi-div'
 import { useTranslation } from '@/i18n'
@@ -21,7 +22,7 @@ export const metadata = {
 
 const createCarouselItemImage = (imageSrc: string): React.ReactElement => (
   <div key={uuidv4()}>
-    <img src={imageSrc} />
+    <Image src={imageSrc} alt='' sizes='100vw' width={0} height={0} />
   </div>
 )
 
