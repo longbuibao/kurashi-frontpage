@@ -27,7 +27,7 @@ const AboutPage: React.FC = () => {
           </div>
         </div>
         <div className='place-content-start'>
-          <img src='/assets/IMG_7739-CROPED.jpg' alt='about Kurashi' />
+          <img src='https://storage.googleapis.com/kurashi_frontpage_files/images/about.jpg' alt='about Kurashi' />
         </div>
         <div className='my-10 col-start-2 mt-5 flex flex-col gap-5 place-content-start'>
           <div>
