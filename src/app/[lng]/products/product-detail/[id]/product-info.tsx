@@ -29,6 +29,7 @@ interface VariantsTableProps {
       product: {
         select: {
           id: true
+          productId: true
           name: true
           size: {
             include: {
@@ -79,7 +80,7 @@ const VariantTable: React.FC<VariantsTableProps> = async ({ variant, lng }) => {
 
         if (dimensions !== undefined) {
           dimensions.set(tableHeaderRow.manualLink, x.size?.productManual ?? '#')
-          dimensions.set(tableHeaderRow.productId, x.size?.productId ?? '#')
+          dimensions.set(tableHeaderRow.productId, x.productId ?? '#')
           dimensions.set(tableHeaderRow.xdfLink, x.size?.twoDimCad ?? '#')
           dimensions.set(t(tableHeaderRow.productQuantity), x.size?.quantity.toString() ?? '#')
         }
@@ -159,6 +160,7 @@ const ProductInfo: React.FC<ProductInfoProps> = async ({ id, lng }) => {
             select: {
               id: true,
               name: true,
+              productId: true,
               size: {
                 include: {
                   dimension: {
