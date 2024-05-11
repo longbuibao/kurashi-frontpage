@@ -175,7 +175,7 @@ model ProductVariants {
   thumbnail   String    @default("#")
   variantName String
   unit        String    @default("unit")
-  product     Product[]
+  products    Product[]
 }
 
 model PageMetadata {

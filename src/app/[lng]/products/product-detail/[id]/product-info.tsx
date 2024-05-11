@@ -26,7 +26,7 @@ interface ProductInfoProps {
 interface VariantsTableProps {
   variant: Prisma.ProductVariantsGetPayload<{
     select: {
-      product: {
+      products: {
         select: {
           id: true
           productId: true
@@ -51,16 +51,18 @@ interface VariantsTableProps {
     }
   }>
   lng: string
+  currentProductId: string
 }
 
 interface VariantTablesProps {
   variants: Array<VariantsTableProps['variant']>
   lng: string
+  currentProductId: string
 }
 
-const VariantTable: React.FC<VariantsTableProps> = async ({ variant, lng }) => {
+const VariantTable: React.FC<VariantsTableProps> = async ({ variant, lng, currentProductId }) => {
   const { t } = await useTranslation(lng, transKey.namespace)
-  const columns = variant.product.reduce((result, x) => {
+  const columns = variant.products.reduce((result, x) => {
     x.size?.dimension.forEach(y => {
       if (!result.has(y.name)) {
         result.add(y.name)
@@ -70,9 +72,9 @@ const VariantTable: React.FC<VariantsTableProps> = async ({ variant, lng }) => {
     return result
   }, columnsKey)
 
-  const toRender = variant.product
+  const toRender = variant.products
     .map(x => {
-      if (x.size !== null) {
+      if (x.size !== null && x.id !== currentProductId) {
         const dimensions = x.size.dimension.reduce((result, y) => {
           result.set(y.name, y.value.toString())
           return result
@@ -120,8 +122,8 @@ const VariantTable: React.FC<VariantsTableProps> = async ({ variant, lng }) => {
   )
 }
 
-const VariantTables: React.FC<VariantTablesProps> = ({ variants, lng }) => {
-  return <div> {variants.map(variant => <VariantTable lng={lng} variant={variant} key={uuidv4()} />)} </div>
+const VariantTables: React.FC<VariantTablesProps> = ({ variants, lng, currentProductId }) => {
+  return <div> {variants.map(variant => <VariantTable lng={lng} variant={variant} key={uuidv4()} currentProductId={currentProductId} />)} </div>
 }
 
 const ProductInfo: React.FC<ProductInfoProps> = async ({ id, lng }) => {
@@ -156,7 +158,7 @@ const ProductInfo: React.FC<ProductInfoProps> = async ({ id, lng }) => {
       productIntro: true,
       ProductVariants: {
         select: {
-          product: {
+          products: {
             select: {
               id: true,
               name: true,
@@ -168,6 +170,9 @@ const ProductInfo: React.FC<ProductInfoProps> = async ({ id, lng }) => {
                       name: true,
                       id: true,
                       value: true
+                    },
+                    orderBy: {
+                      name: 'asc'
                     }
                   }
                 }
@@ -330,7 +335,7 @@ const ProductInfo: React.FC<ProductInfoProps> = async ({ id, lng }) => {
                       Các sản phẩm khác
                     </KurashiLeftBorder>
                   </div>
-                  <VariantTables lng={lng} variants={productInfo.ProductVariants} />
+                  <VariantTables lng={lng} variants={productInfo.ProductVariants} currentProductId={productInfo.id} />
                 </div>
               )}
             </div>
