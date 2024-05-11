@@ -113,10 +113,7 @@ const VariantTable: React.FC<VariantsTableProps> = async ({ variant, lng }) => {
       </div>
       <div className='flex flex-col items-center justify-center flex-1 max-lg:my-5 w-full mx-auto'>
         <div className='w-full mx-auto flex flex-col gap-10'>
-          {toRender.map(x =>
-            <div key={uuidv4()}>
-              <ProductSizeTable lng={lng} columns={columns} toRender={toRender} />
-            </div>)}
+          <ProductSizeTable lng={lng} columns={columns} toRender={toRender} />
         </div>
       </div>
     </div>
@@ -147,6 +144,9 @@ const ProductInfo: React.FC<ProductInfoProps> = async ({ id, lng }) => {
               name: true,
               value: true,
               id: true
+            },
+            orderBy: {
+              name: 'asc'
             }
           },
           productSizeImage: true
