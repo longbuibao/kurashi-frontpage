@@ -8,6 +8,7 @@ import { TFunction } from 'i18next'
 import { contactUsingZalo } from '@/i18n/translation-key'
 import { v4 as uuidv4 } from 'uuid'
 import { zaloLink } from '@/constants'
+import { HamburgerButton } from '@/components/hamburger-button'
 
 interface LinkItem {
   url: string
@@ -43,9 +44,7 @@ const Nav: FC<NavProps> = ({ links, t }) => {
             </div>
           </KurashiDiv>
         </div>
-        <div className='hidden max-lg:block max-lg:ml-10 max-2xl:block max-2xl:ml-10'>
-          <i className='fa-solid fa-bars' />
-        </div>
+        <HamburgerButton links={links} />
         <div />
       </nav>
     </header>
