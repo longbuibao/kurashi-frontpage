@@ -31,7 +31,7 @@ const ProductSizeTable: React.FC<ProductSizeTableProps> = ({ columns, toRender, 
     >
       {Array.from(columns).map(x => {
         const label = t(cellRenderer.get(x)?.label)
-        const width = (x === 'productQuantity') || (x === 'manualLink') ? { width: 150 } : { flexGrow: 1 }
+        const width = (x === 'productQuantity') || (x === 'manualLink') || (x === 'productId') ? { width: 170 } : { flexGrow: 1 }
         return (
           <Column key={uuidv4()} {...width}>
             <HeaderCell align='center' style={{ background: '#437254' }}>
