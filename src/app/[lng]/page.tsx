@@ -16,7 +16,7 @@ interface PageParam {
 }
 
 export const metadata = {
-  title: 'Kurashi'
+  title: 'Kurashi Corp'
 }
 
 const createCarouselItemImage = (imageSrc: string): React.ReactElement => (
