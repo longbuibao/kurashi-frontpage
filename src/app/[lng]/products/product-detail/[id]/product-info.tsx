@@ -177,6 +177,9 @@ const ProductInfo: React.FC<ProductInfoProps> = async ({ id, lng }) => {
                   }
                 }
               }
+            },
+            orderBy: {
+              productId: 'asc'
             }
           },
           id: true,
