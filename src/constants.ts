@@ -29,7 +29,7 @@ export const footerLinks = [{
 }, {
   label: transKey.supportInfo,
   links: [
-    { label: transKey.catalog, url: '#' },
+    { label: transKey.catalog, url: '/catalogs' },
     { label: transKey.blog, url: '/blogs' }
   ]
 }, {
