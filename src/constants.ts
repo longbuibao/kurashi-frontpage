@@ -6,7 +6,7 @@ export const email = 'kurashi-corp@kurashi.com.vn'
 export const navItems = [
   { label: transKey.home, url: '/' },
   { label: transKey.products, url: '/products' },
-  { label: transKey.catalog, url: '#' },
+  { label: transKey.catalog, url: '/catalog' },
   { label: transKey.contact, url: '/contact' },
   { label: transKey.blog, url: '/blogs' }
 ]

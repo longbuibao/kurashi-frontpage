@@ -14,6 +14,16 @@ model User {
   posts Post[]
 }
 
+model Catalog {
+  id          String  @id @default(uuid())
+  name        String
+  size        String
+  sizeUnit    String
+  isAvailable Boolean
+  thumbnail   String
+  pdfLink     String  @default("#")
+}
+
 model Post {
   id             String        @id @default(uuid())
   createdAt      DateTime      @default(now())

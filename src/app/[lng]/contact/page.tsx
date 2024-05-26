@@ -1,5 +1,6 @@
 import React, { Suspense } from 'react'
 import Link from 'next/link'
+import { Metadata } from 'next'
 
 import { useTranslation } from '@/i18n'
 import * as transKey from '@/i18n/contact-page-trans-key'
@@ -9,9 +10,7 @@ import { Breadcrumb } from '@/components/breadcrumb'
 import { phoneNumber, googleMapLink, zaloLink } from '@/constants'
 import { getMetadata } from '@/utils'
 import { ContactRegister } from '@/components/contact-register'
-
 import ContactPageSkeleton from './skeleton'
-import { Metadata } from 'next'
 
 interface ContactPageParam {
   params: { lng: string }
