@@ -13,3 +13,9 @@
 *:focus {
 	outline: 0;
 }
+
+.gradient-text {
+	background: linear-gradient(to bottom, rgb(77, 78, 82), rgba(255, 204, 102, 0));
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
