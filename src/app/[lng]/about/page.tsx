@@ -1,8 +1,9 @@
 import React from 'react'
-
-import { SectionTitle } from '@/components/section-title'
-import { Logo } from '@/components/logo'
 import { Metadata } from 'next'
+
+import { MainTitle } from '@/components/section-title'
+import { Logo } from '@/components/logo'
+
 import { getMetadata } from '@/utils'
 
 export async function generateMetadata (): Promise<Metadata> {
@@ -16,14 +17,14 @@ const AboutPage: React.FC = () => {
     <div>
       <div className='w-4/5 mx-auto'>
         <div className='w-fit my-10 max-lg:mx-auto'>
-          <SectionTitle title='Về Kurashi' />
+          <MainTitle title='Về Kurashi' />
         </div>
       </div>
       <div className='grid-rows-2 grid-cols-2 grid w-4/5 mx-auto max-lg:flex max-lg:flex-col max-lg:gap-5 max-lg:justify-center'>
         <div className='flex flex-col gap-2 place-items-center place-content-end'>
           <div><Logo width={450} height={157} /></div>
           <div className='font-semibold max-lg:text-center'>
-            Kiến tạo không gian sống bằng các giải pháp nội thất tiên tiến
+            <h3>Kiến tạo không gian sống bằng các giải pháp nội thất tiên tiến</h3>
           </div>
         </div>
         <div className='place-content-start'>
