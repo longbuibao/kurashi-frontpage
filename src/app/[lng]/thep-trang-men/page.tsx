@@ -28,26 +28,16 @@ interface KitchenFeatureCardProps {
 }
 
 const FeatureCard: React.FC<KitchenFeatureCardProps> = ({ imgUrl, text, textLeft = false }) => {
-  return textLeft
-    ? (
-      <div className='flex flex-row items-center gap-10 w-fit'>
-        <div>
-          {text}
-        </div>
-        <div className='w-1/3'>
-          <img src={imgUrl} alt='' />
-        </div>
-      </div>)
-    : (
-      <div className='flex flex-row items-center gap-10 w-fit'>
-        <div className='w-1/3'>
-          <img src={imgUrl} alt='' />
-        </div>
-        <div>
-          {text}
-        </div>
+  return (
+    <div className='flex flex-col w-full shadow-xl rounded-lg border border-opacity-25 border-[#000] h-full'>
+      <div className='w-full'>
+        <img src={imgUrl} alt='' className='rounded-tl-lg rounded-tr-lg w-full' />
       </div>
-      )
+      <div className='p-5'>
+        {text}
+      </div>
+    </div>
+  )
 }
 
 interface ColorCardProps {
@@ -129,12 +119,11 @@ const Page: React.FC<PageParam> = async ({ params: { lng } }) => {
 
   const carouselSliders = carouselSliderImages.map(createCarouselItemImage)
   const sectionTitles = [transKey.thepTrangMen, transKey.standoutFeatures, transKey.application, transKey.colorAndSize, transKey.magnetAccessories]
-  const thepTrangMenIntros: ThepTrangMenFeatureCardProps[] = [
-    { imgUrl: 'https://storage.googleapis.com/kurashi_frontpage_files/images/feature_1.png', title: transKey.titleFeature1, p: transKey.paragraphFeature1 },
-    { imgUrl: 'https://storage.googleapis.com/kurashi_frontpage_files/images/feature_2.png', title: transKey.titleFeature2, p: transKey.paragraphFeature2 },
-    { imgUrl: 'https://storage.googleapis.com/kurashi_frontpage_files/images/feature_3.png', title: transKey.titleFeature3, p: transKey.paragraphFeature3 },
-    { imgUrl: 'https://storage.googleapis.com/kurashi_frontpage_files/images/feature_4.png', title: transKey.titleFeature4, p: transKey.paragraphFeature4 }
-  ]
+
+  const intro1: ThepTrangMenFeatureCardProps = { imgUrl: 'https://storage.googleapis.com/kurashi_frontpage_files/images/feature_1.png', title: transKey.titleFeature1, p: transKey.paragraphFeature1 }
+  const intro2: ThepTrangMenFeatureCardProps = { imgUrl: 'https://storage.googleapis.com/kurashi_frontpage_files/images/feature_2.png', title: transKey.titleFeature2, p: transKey.paragraphFeature2 }
+  const intro3: ThepTrangMenFeatureCardProps = { imgUrl: 'https://storage.googleapis.com/kurashi_frontpage_files/images/feature_3.png', title: transKey.titleFeature3, p: transKey.paragraphFeature3 }
+  const intro4: ThepTrangMenFeatureCardProps = { imgUrl: 'https://storage.googleapis.com/kurashi_frontpage_files/images/feature_4.png', title: transKey.titleFeature4, p: transKey.paragraphFeature4 }
 
   const accessorieItems: AccessoryCardProps[] = [
     {
@@ -178,7 +167,7 @@ const Page: React.FC<PageParam> = async ({ params: { lng } }) => {
       <div className='mt-5'>
         <CarouselSlider items={carouselSliders} indicatorStyles={{}} />
       </div>
-      <div className='flex flex-row justify-around my-10'>
+      <div className='flex flex-row w-1/2 gap-5 mx-auto my-10'>
         {sectionTitles.map(x =>
           <div className='w-fit p5 font-semibold' key={x}><KurashiDiv>{t(x)}</KurashiDiv>
           </div>)}
@@ -199,8 +188,13 @@ const Page: React.FC<PageParam> = async ({ params: { lng } }) => {
           <div className='w-fit mx-auto text-2xl'>
             <SectionTitle title={t(transKey.standoutFeatures)} />
           </div>
-          <div className='grid grid-cols-2 grid-rows-2 mt-10 gap-10'>
-            {thepTrangMenIntros.map(x => <ThepTrangMenFeatureCard imgUrl={x.imgUrl} p={t(x.p)} title={t(x.title)} key={uuidv4()} />)}
+          <div className='grid grid-flow-col gap-5 w-1/2 mx-auto my-10 h-fit'>
+            <div className='shadow-xl rounded-lg h-fit border p-5 border-opacity-25 border-[#000] mx-auto'><ThepTrangMenFeatureCard imgUrl={intro1.imgUrl} p={t(intro1.p)} title={t(intro1.title)} key={uuidv4()} /></div>
+            <div className='flex flex-col gap-8 h-fit'>
+              <div className='h-1/2 shadow-xl rounded-lg border p-5 border-opacity-25 border-[#000] mx-auto'><ThepTrangMenFeatureCard imgUrl={intro3.imgUrl} p={t(intro3.p)} title={t(intro3.title)} key={uuidv4()} /></div>
+              <div className='h-1/2 shadow-xl rounded-lg border p-5 border-opacity-25 border-[#000] mx-auto'><ThepTrangMenFeatureCard imgUrl={intro4.imgUrl} p={t(intro4.p)} title={t(intro4.title)} key={uuidv4()} /></div>
+            </div>
+            <div className='shadow-xl rounded-lg h-fit border p-5 border-opacity-25 border-[#000] mx-auto'><ThepTrangMenFeatureCard imgUrl={intro2.imgUrl} p={t(intro2.p)} title={t(intro2.title)} key={uuidv4()} /></div>
           </div>
         </div>
         <div>
@@ -214,20 +208,21 @@ const Page: React.FC<PageParam> = async ({ params: { lng } }) => {
                   <div>{t(transKey.trongNhaBep)}</div>
                 </KurashiLeftBorder>
               </div>
-              <div className='mt-10 flex flex-col items-center gap-10 justify-center w-4/5 mx-auto'>
-                <FeatureCard imgUrl='https://storage.googleapis.com/kurashi_frontpage_files/images/ungdung_trong_nha_bep.png' text={t(transKey.ungDungOpTuongNhaBep)} />
-                <FeatureCard imgUrl='https://storage.googleapis.com/kurashi_frontpage_files/images/ungdung_trong_nha_bep_2.png' text={t(transKey.ungDungOpTuongNhaBep2)} />
-              </div>
-            </div>
-            <div className='mt-10'>
-              <KurashiLeftBorder>
-                <div>{t(transKey.trongOffice)}</div>
-              </KurashiLeftBorder>
-              <div className='mt-10 flex flex-col items-center gap-10 justify-center w-4/5 mx-auto'>
-                <FeatureCard imgUrl='https://storage.cloud.google.com/kurashi_frontpage_files/images/ungdung_trong_nha_tam.png' text={t(transKey.ungDungTrongNhaTam)} />
-                <FeatureCard imgUrl='https://storage.googleapis.com/kurashi_frontpage_files/images/ungdung_trong_office.png' text={t(transKey.ungDungTrongOffice)} textLeft />
-                <FeatureCard imgUrl='https://storage.googleapis.com/kurashi_frontpage_files/images/ungdung_trong_phong_ngu_em_be.png' text={t(transKey.ungDungPhongNguEmBe)} />
-                <FeatureCard imgUrl='https://storage.googleapis.com/kurashi_frontpage_files/images/ungdung_treo_phu_kien.png' text={t(transKey.ungDungPhuKien)} textLeft />
+              <div className='w-full mx-auto'>
+                <div className='grid grid-cols-3 grid-rows-1 gap-4 w-2/3 mx-auto'>
+                  <div className='col-span-3 col-start-1 row-start-1'>
+                    <FeatureCard imgUrl='https://storage.cloud.google.com/kurashi_frontpage_files/images/ungdung_trong_nha_bep_2.png' text='d' />
+                  </div>
+                  <div>
+                    <FeatureCard imgUrl='https://storage.cloud.google.com/kurashi_frontpage_files/images/ungdung_treo_phu_kien.png' text='a' />
+                  </div>
+                  <div className='col-start-3 row-start-2'>
+                    <FeatureCard imgUrl='https://storage.cloud.google.com/kurashi_frontpage_files/images/ungdung_trong_phong_ngu_em_be.png' text='b' />
+                  </div>
+                  <div className='col-start-2 row-start-2'>
+                    <FeatureCard imgUrl='https://storage.cloud.google.com/kurashi_frontpage_files/images/ungdung_trong_office.png' text='c' />
+                  </div>
+                </div>
               </div>
             </div>
           </div>
