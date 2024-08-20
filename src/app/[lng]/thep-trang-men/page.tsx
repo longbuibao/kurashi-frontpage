@@ -46,25 +46,40 @@ interface ColorCardProps {
 }
 
 const ColorCard: React.FC<ColorCardProps> = ({ color, colorName }) => {
+  const availableCssClasses: Map<string, string> = new Map([
+    ['kurashiX', 'w-[300px] h-[150px] bg-kurashiX rounded-tl-lg rounded-tr-lg'],
+    ['kurashiT', 'w-[300px] h-[150px] bg-kurashiT rounded-tl-lg rounded-tr-lg'],
+    ['kurashiB', 'w-[300px] h-[150px] bg-kurashiB rounded-tl-lg rounded-tr-lg']
+  ])
+  const className = availableCssClasses.get(color)
   return (
-    <div>
-      <div className='w-[300px] h-[150px] bg-main' />
+    <div className='shadow-xl rounded-lg h-fit border pb-5 border-opacity-25 border-[#000]'>
+      <div className={className} />
       <div className='mt-3 text-center'>{colorName}</div>
     </div>
   )
 }
 
 interface SizeCardProps {
-  w: string
-  h: string
-  unit: string
+  size: 's' | 'm' | 'l'
 }
 
-const SizeCard: React.FC<SizeCardProps> = ({ w, h, unit }) => {
+const SizeCard: React.FC<SizeCardProps> = ({ size }) => {
+  const availableCssClasses: Map<string, string> = new Map([
+    ['s', 'w-[300px] h-[450px] border p-5 border-opacity-25 border-[#000]'],
+    ['m', 'w-[300px] h-[600px] border p-5 border-opacity-25 border-[#000]'],
+    ['l', 'w-[350px] h-[600px] border p-5 border-opacity-25 border-[#000]']
+  ])
+  const sizes: Map<string, string> = new Map([
+    ['s', '890x1800mm'],
+    ['m', '890x2400mm'],
+    ['l', '1219x2400mm']
+  ])
+  const className = availableCssClasses.get(size)
   return (
     <div>
-      <div className='h-[300px] w-[150px] border'>
-        <p className='text-center mt-5'>{`${w}x${h} ${unit}`}</p>
+      <div className={className}>
+        <p className='text-center mt-5'>{`${sizes.get(size) ?? ''}`}</p>
       </div>
     </div>
   )
@@ -203,15 +218,16 @@ const Page: React.FC<PageParam> = async ({ params: { lng } }) => {
           </div>
           <div>
             <div className='mt-10'>
-              <div>
-                <KurashiLeftBorder>
-                  <div>{t(transKey.trongNhaBep)}</div>
-                </KurashiLeftBorder>
-              </div>
               <div className='w-full mx-auto'>
                 <div className='grid grid-cols-3 grid-rows-1 gap-4 w-2/3 mx-auto'>
-                  <div className='col-span-3 col-start-1 row-start-1'>
-                    <FeatureCard imgUrl='https://storage.cloud.google.com/kurashi_frontpage_files/images/ungdung_trong_nha_bep_2.png' text='d' />
+                  <div>
+                    <FeatureCard imgUrl='https://storage.cloud.google.com/kurashi_frontpage_files/images/ungdung_treo_phu_kien.png' text='a' />
+                  </div>
+                  <div>
+                    <FeatureCard imgUrl='https://storage.cloud.google.com/kurashi_frontpage_files/images/ungdung_treo_phu_kien.png' text='a' />
+                  </div>
+                  <div>
+                    <FeatureCard imgUrl='https://storage.cloud.google.com/kurashi_frontpage_files/images/ungdung_treo_phu_kien.png' text='a' />
                   </div>
                   <div>
                     <FeatureCard imgUrl='https://storage.cloud.google.com/kurashi_frontpage_files/images/ungdung_treo_phu_kien.png' text='a' />
@@ -237,9 +253,9 @@ const Page: React.FC<PageParam> = async ({ params: { lng } }) => {
                 <div>{t(transKey.color)}</div>
               </KurashiLeftBorder>
               <div className='flex flex-row gap-10 justify-center my-10'>
-                <ColorCard color='#abcd' colorName='Màu T - XXX01' />
-                <ColorCard color='#abcd' colorName='Màu X - XXX01' />
-                <ColorCard color='#abcd' colorName='Màu B - XXX01' />
+                <ColorCard color='kurashiX' colorName='Màu T - XXX01' />
+                <ColorCard color='kurashiT' colorName='Màu X - XXX01' />
+                <ColorCard color='kurashiB' colorName='Màu B - XXX01' />
               </div>
             </div>
             <div>
@@ -247,10 +263,10 @@ const Page: React.FC<PageParam> = async ({ params: { lng } }) => {
                 <div>{t(transKey.detailOfSize)}</div>
               </KurashiLeftBorder>
               <div>
-                <div className='flex flex-row gap-10 justify-center my-10'>
-                  <SizeCard h='100' w='100' unit='mm' />
-                  <SizeCard h='100' w='100' unit='mm' />
-                  <SizeCard h='100' w='100' unit='mm' />
+                <div className='flex flex-row gap-10 justify-center my-10 items-end'>
+                  <SizeCard size='s' />
+                  <SizeCard size='m' />
+                  <SizeCard size='l' />
                 </div>
               </div>
             </div>
