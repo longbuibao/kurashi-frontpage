@@ -53,7 +53,7 @@ const ColorCard: React.FC<ColorCardProps> = ({ color, colorName }) => {
   ])
   const className = availableCssClasses.get(color)
   return (
-    <div className='shadow-xl rounded-lg h-fit border pb-5 border-opacity-25 border-[#000]'>
+    <div className='shadow-xl rounded-lg h-fit border pb-2 border-opacity-25 border-[#000]'>
       <div className={className} />
       <div className='mt-3 text-center'>{colorName}</div>
     </div>
@@ -66,9 +66,9 @@ interface SizeCardProps {
 
 const SizeCard: React.FC<SizeCardProps> = ({ size }) => {
   const availableCssClasses: Map<string, string> = new Map([
-    ['s', 'w-[300px] h-[450px] border p-5 border-opacity-25 border-[#000]'],
-    ['m', 'w-[300px] h-[600px] border p-5 border-opacity-25 border-[#000]'],
-    ['l', 'w-[350px] h-[600px] border p-5 border-opacity-25 border-[#000]']
+    ['s', 'w-[200px] h-[300px] border p-5 border-opacity-25 border-[#000]'],
+    ['m', 'w-[200px] h-[400px] border p-5 border-opacity-25 border-[#000]'],
+    ['l', 'w-[273px] h-[400px] border p-5 border-opacity-25 border-[#000]']
   ])
   const sizes: Map<string, string> = new Map([
     ['s', '890x1800mm'],
@@ -79,7 +79,7 @@ const SizeCard: React.FC<SizeCardProps> = ({ size }) => {
   return (
     <div>
       <div className={className}>
-        <p className='text-center mt-5'>{`${sizes.get(size) ?? ''}`}</p>
+        <p className='text-center mt-1'>{`${sizes.get(size) ?? ''}`}</p>
       </div>
     </div>
   )
@@ -104,8 +104,13 @@ const AccessoryTitle: React.FC<{ title: string }> = ({ title }) => {
 }
 
 const AccessoryCard: React.FC<AccessoryCardProps> = ({ additionalText, colors, imgUrl, size, title }) => {
+  const availableCssClasses: Map<string, string> = new Map([
+    ['black', 'w-[20px] h-[20px] rounded-xl bg-[#000] border border-opacity-25 border-[#000]'],
+    ['white', 'w-[20px] h-[20px] rounded-xl bg-[#fff] border border-opacity-25 border-[#000]']
+  ])
+
   return (
-    <div className='w-[300px] h-[200px]'>
+    <div className='w-[300px] shadow-xl rounded-lg border p-5 border-opacity-25 border-[#000]'>
       <div>
         <div>
           <img src={imgUrl} alt='' />
@@ -113,9 +118,10 @@ const AccessoryCard: React.FC<AccessoryCardProps> = ({ additionalText, colors, i
         <div className='flex flex-col gap-3'>
           <AccessoryTitle title={title} />
           <div className='flex flex-row gap-2'>
-            {colors.map(x => (
-              <div className='w-[20px] h-[20px] rounded-xl bg-main' key={uuidv4()} />
-            ))}
+            {colors.map(x => {
+              const className = availableCssClasses.get(x)
+              return <div className={className ?? ''} key={uuidv4()} />
+            })}
           </div>
           <div>{size}</div>
           <div>{additionalText}</div>
@@ -143,21 +149,21 @@ const Page: React.FC<PageParam> = async ({ params: { lng } }) => {
   const accessorieItems: AccessoryCardProps[] = [
     {
       additionalText: 'Tải trọng tối đa 500g',
-      colors: ['#fff', '#000'],
+      colors: ['black', 'white'],
       imgUrl: 'https://storage.cloud.google.com/kurashi_frontpage_files/images/hu_dung_gia_vi.png',
       size: '110x90x105mm',
       title: 'Hũ đựng gia vị lớn'
     },
     {
       additionalText: 'Tải trọng tối đa 500g',
-      colors: ['#fff', '#000'],
+      colors: ['black', 'white'],
       imgUrl: 'https://storage.cloud.google.com/kurashi_frontpage_files/images/hu_dung_gia_vi.png',
       size: '110x90x105mm',
       title: 'Hũ đựng gia vị lớn'
     },
     {
       additionalText: 'Tải trọng tối đa 500g',
-      colors: ['#fff', '#000'],
+      colors: ['black', 'white'],
       imgUrl: 'https://storage.cloud.google.com/kurashi_frontpage_files/images/hu_dung_gia_vi.png',
       size: '110x90x105mm',
       title: 'Hũ đựng gia vị lớn'
@@ -277,13 +283,13 @@ const Page: React.FC<PageParam> = async ({ params: { lng } }) => {
             <SectionTitle title={t(transKey.magnetAccessories)} />
           </div>
           <div>
-            <div className='flex flex-col gap-40'>
+            <div className='flex flex-col gap-10'>
               <div>
                 <KurashiLeftBorder>
                   <div>{t(transKey.huDungGiaVi)}</div>
                 </KurashiLeftBorder>
                 <div>
-                  <div className='flex flex-row gap-36 justify-center my-10'>
+                  <div className='flex flex-row gap-10 justify-center my-10'>
                     {accessorieItems.map(x =>
                       <AccessoryCard additionalText={x.additionalText} colors={x.colors} imgUrl={x.imgUrl} size={x.size} title={x.title} key={uuidv4()} />
                     )}
@@ -295,7 +301,7 @@ const Page: React.FC<PageParam> = async ({ params: { lng } }) => {
                   <div>{t(transKey.huDungGiaVi)}</div>
                 </KurashiLeftBorder>
                 <div>
-                  <div className='flex flex-row gap-36 justify-center my-10'>
+                  <div className='flex flex-row gap-10 justify-center my-10'>
                     {accessorieItems.map(x =>
                       <AccessoryCard additionalText={x.additionalText} colors={x.colors} imgUrl={x.imgUrl} size={x.size} title={x.title} key={uuidv4()} />
                     )}
@@ -307,7 +313,7 @@ const Page: React.FC<PageParam> = async ({ params: { lng } }) => {
                   <div>{t(transKey.huDungGiaVi)}</div>
                 </KurashiLeftBorder>
                 <div>
-                  <div className='flex flex-row justify-center my-10 gap-36'>
+                  <div className='flex flex-row justify-center my-10 gap-10'>
                     {accessorieItems.map(x =>
                       <AccessoryCard additionalText={x.additionalText} colors={x.colors} imgUrl={x.imgUrl} size={x.size} title={x.title} key={uuidv4()} />
                     )}
