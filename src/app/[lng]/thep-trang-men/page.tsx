@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import React from 'react'
 import { v4 as uuidv4 } from 'uuid'
+import dynamic from 'next/dynamic'
 
 import { useTranslation } from '@/i18n'
 import * as transKey from '@/i18n/thep-trang-men'
@@ -10,6 +11,11 @@ import { CarouselSlider } from '@/components/carousel-slider'
 import { KurashiDiv, KurashiLeftBorder } from '@/components/kurashi-div'
 import { SectionTitle } from '@/components/section-title'
 import { ThepTrangMenFeatureCard, ThepTrangMenFeatureCardProps } from '@/components/thep-trang-men-feature-card'
+
+const SizeTable = dynamic(
+  async () => await import('./size-table').then(module => module.default),
+  { ssr: false }
+)
 
 const createCarouselItemImage = (imageSrc: string): React.ReactElement => (
   <div key={uuidv4()}>
@@ -274,6 +280,7 @@ const Page: React.FC<PageParam> = async ({ params: { lng } }) => {
                   <SizeCard size='m' />
                   <SizeCard size='l' />
                 </div>
+                <div><SizeTable /></div>
               </div>
             </div>
           </div>
@@ -321,6 +328,13 @@ const Page: React.FC<PageParam> = async ({ params: { lng } }) => {
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+        <div className='my-10'>
+          <div className='w-fit mx-auto'>
+            <KurashiDiv>
+              {t(transKey.specInfo)}
+            </KurashiDiv>
           </div>
         </div>
       </div>
