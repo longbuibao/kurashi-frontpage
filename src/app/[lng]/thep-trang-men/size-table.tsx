@@ -6,7 +6,7 @@ import { v4 as uuidv4 } from 'uuid'
 
 import { useMediaQuery } from '@/hooks/useMediaQuery'
 
-const SizeTable : React.FC = () => {
+const SizeTable: React.FC = () => {
   const data = [{
     size: '890x1800mm',
     thick: '0.5mm',
@@ -40,7 +40,6 @@ const SizeTable : React.FC = () => {
       defaultExpandAllRows
       data={data}
       headerHeight={isMobile ? 70 : 40}
-
     >
       {keys.map(y =>
         <Column key={uuidv4()} flexGrow={1}>

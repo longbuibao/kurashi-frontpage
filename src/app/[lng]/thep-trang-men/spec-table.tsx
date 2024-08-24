@@ -8,26 +8,35 @@ import { useMediaQuery } from '@/hooks/useMediaQuery'
 
 const SpecTable: React.FC = () => {
   const data = [{
-    size: '890x1800mm',
-    thick: '0.5mm',
-    kindOfSurface: 'bóng mờ',
-    area: '2.1m2',
-    weight: '5.1kg',
-    color: 'T,X,B'
+    chars: 'Độ dày lớp thép tráng men bề mặt 130µm',
+    result: '130µm'
   }, {
-    size: '890x2400mm',
-    thick: '0.5mm',
-    kindOfSurface: 'bóng mờ',
-    area: '1.6m2',
-    weight: '6.8kg',
-    color: 'T,X,B'
+    chars: 'Độ dày lớp kim loại nền 0.3~0.35mm',
+    result: '0.3~0.35mm'
   }, {
-    size: '1219x2400mm',
-    thick: '0.5mm',
-    kindOfSurface: 'bóng mờ',
-    area: '2.1m2',
-    weight: '6.7kg',
-    color: 'T,X,B'
+    chars: 'Độ dày lớp thép tráng men nền 30µm',
+    result: '30µm'
+  }, {
+    chars: 'Độ lệch màu ∆Ε tiêu chuẩn dưới 0.5',
+    result: 'dưới 0.5'
+  }, {
+    chars: 'Độ bóng bề mặt (GS45°)',
+    result: '100%, 55%, 92%'
+  }, {
+    chars: 'Độ cứng Mohs',
+    result: '5.5'
+  }, {
+    chars: 'Khả năng chống xước, Phương pháp Taber 1.3mg (Vòng ma sát CS-17/1kg 1000 vòng quay)',
+    result: '1.3mg'
+  }, {
+    chars: 'Khả năng chống dung môi (Toluen, acetone, cồn, benzen, stiren)',
+    result: 'không thay đổi'
+  }, {
+    chars: 'Độ nhám bề mặt (Chiều cao tối đa 2.5mm)',
+    result: '1.2µm'
+  }, {
+    chars: 'Số chứng nhận chống cháy',
+    result: 'NM-2744'
   }]
   const isMobile = useMediaQuery(768)
   const keys = Object.keys(data[0])
@@ -40,7 +49,6 @@ const SpecTable: React.FC = () => {
       defaultExpandAllRows
       data={data}
       headerHeight={isMobile ? 70 : 40}
-
     >
       {keys.map(y =>
         <Column key={uuidv4()} flexGrow={1}>

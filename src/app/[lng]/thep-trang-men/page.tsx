@@ -17,6 +17,11 @@ const SizeTable = dynamic(
   { ssr: false }
 )
 
+const SpecTable = dynamic(
+  async () => await import('./spec-table').then(module => module.default),
+  { ssr: false }
+)
+
 const createCarouselItemImage = (imageSrc: string): React.ReactElement => (
   <div key={uuidv4()}>
     <img src={imageSrc} alt='' />
@@ -335,6 +340,9 @@ const Page: React.FC<PageParam> = async ({ params: { lng } }) => {
             <KurashiDiv>
               {t(transKey.specInfo)}
             </KurashiDiv>
+          </div>
+          <div className='my-10'>
+            <SpecTable />
           </div>
         </div>
       </div>
