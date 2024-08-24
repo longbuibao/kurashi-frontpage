@@ -1,23 +1,14 @@
 version: '3.5'
 
 services:
-  postgres:
-    container_name: postgres_container
+  kurashi_frontpage:
+    container_name: kurashi_frontpage
     build:
       context: .
-      dockerfile: db.Dockerfile
-    environment:
-      POSTGRES_USER: ${POSTGRES_USER:-postgres}
-      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-changeme}
-      PGDATA: /data/postgres
+      dockerfile: Dockerfile
     ports:
-      - "5432:5432"
-    networks:
-      - postgres
+      - "3000:3000"
     restart: unless-stopped
 networks:
-  postgres:
+  kurashi_frontpage:
     driver: bridge
-
-volumes:
-  postgres:
