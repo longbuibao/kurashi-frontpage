@@ -150,7 +150,7 @@ const Page: React.FC<PageParam> = async ({ params: { lng } }) => {
   ]
 
   const carouselSliders = carouselSliderImages.map(createCarouselItemImage)
-  const sectionTitles = [transKey.thepTrangMen, transKey.standoutFeatures, transKey.application, transKey.colorAndSize, transKey.magnetAccessories]
+  const sectionTitles = [transKey.thepTrangMen, transKey.standoutFeatures, transKey.application, transKey.colorAndSize, transKey.magnetAccessories, transKey.specInfo]
 
   const intro1: ThepTrangMenFeatureCardProps = { imgUrl: 'https://storage.googleapis.com/kurashi_frontpage_files/images/feature_1.png', title: transKey.titleFeature1, p: transKey.paragraphFeature1 }
   const intro2: ThepTrangMenFeatureCardProps = { imgUrl: 'https://storage.googleapis.com/kurashi_frontpage_files/images/feature_2.png', title: transKey.titleFeature2, p: transKey.paragraphFeature2 }
@@ -199,13 +199,16 @@ const Page: React.FC<PageParam> = async ({ params: { lng } }) => {
       <div className='mt-5'>
         <CarouselSlider items={carouselSliders} indicatorStyles={{}} />
       </div>
-      <div className='flex flex-row w-1/2 gap-5 mx-auto my-10'>
+      <div className='flex flex-row w-fit gap-5 mx-auto my-10'>
         {sectionTitles.map(x =>
-          <div className='w-fit p5 font-semibold' key={x}><KurashiDiv>{t(x)}</KurashiDiv>
-          </div>)}
+          <Link key={x} href={`#${x}`} scroll>
+            <div className='w-fit p5 font-semibold'><KurashiDiv>{t(x)}</KurashiDiv>
+            </div>
+          </Link>
+        )}
       </div>
       <div>
-        <div>
+        <div id='thep-trang-men'>
           <div className='w-fit mx-auto text-2xl'>
             <SectionTitle title={t(transKey.thepTrangMen)} />
           </div>
@@ -216,7 +219,7 @@ const Page: React.FC<PageParam> = async ({ params: { lng } }) => {
             <div className='w-1/2 text-xl'>{t(transKey.thepTrangMenIntroductionParagraph)}</div>
           </div>
         </div>
-        <div>
+        <div id='standout-feature'>
           <div className='w-fit mx-auto text-2xl'>
             <SectionTitle title={t(transKey.standoutFeatures)} />
           </div>
@@ -229,7 +232,7 @@ const Page: React.FC<PageParam> = async ({ params: { lng } }) => {
             <div className='shadow-xl rounded-lg h-fit border p-5 border-opacity-25 border-[#000] mx-auto'><ThepTrangMenFeatureCard imgUrl={intro2.imgUrl} p={t(intro2.p)} title={t(intro2.title)} key={uuidv4()} /></div>
           </div>
         </div>
-        <div>
+        <div id='application'>
           <div className='w-fit mx-auto text-2xl'>
             <SectionTitle title={t(transKey.applicationOpTuong)} />
           </div>
@@ -260,7 +263,7 @@ const Page: React.FC<PageParam> = async ({ params: { lng } }) => {
             </div>
           </div>
         </div>
-        <div className='my-10'>
+        <div className='my-10' id='color-and-size'>
           <div className='w-fit mx-auto text-2xl my-10'>
             <SectionTitle title={t(transKey.colorAndSize)} />
           </div>
@@ -290,7 +293,7 @@ const Page: React.FC<PageParam> = async ({ params: { lng } }) => {
             </div>
           </div>
         </div>
-        <div className='my-10'>
+        <div className='my-10' id='magnet-accessories'>
           <div className='w-fit mx-auto text-2xl my-10'>
             <SectionTitle title={t(transKey.magnetAccessories)} />
           </div>
@@ -335,7 +338,7 @@ const Page: React.FC<PageParam> = async ({ params: { lng } }) => {
             </div>
           </div>
         </div>
-        <div className='my-10'>
+        <div className='my-10' id='spec-info'>
           <div className='w-fit mx-auto'>
             <KurashiDiv>
               {t(transKey.specInfo)}
