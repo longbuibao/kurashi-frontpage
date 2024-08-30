@@ -11,6 +11,7 @@ import { CarouselSlider } from '@/components/carousel-slider'
 import { KurashiDiv, KurashiLeftBorder } from '@/components/kurashi-div'
 import { SectionTitle } from '@/components/section-title'
 import { ThepTrangMenFeatureCard, ThepTrangMenFeatureCardProps } from '@/components/thep-trang-men-feature-card'
+import KurashiTabs from '@/components/kurashi-tabs/kurashi-tabs'
 
 const SizeTable = dynamic(
   async () => await import('./size-table').then(module => module.default),
@@ -298,43 +299,31 @@ const Page: React.FC<PageParam> = async ({ params: { lng } }) => {
             <SectionTitle title={t(transKey.magnetAccessories)} />
           </div>
           <div>
-            <div className='flex flex-col gap-10'>
-              <div>
-                <KurashiLeftBorder>
-                  <div>{t(transKey.huDungGiaVi)}</div>
-                </KurashiLeftBorder>
-                <div>
-                  <div className='flex flex-row gap-10 justify-center my-10'>
-                    {accessorieItems.map(x =>
+            <div className='flex flex-col gap-10 w-4/5 mx-auto'>
+              <KurashiTabs
+                body={[
+                  {
+                    content: [...accessorieItems.map(x =>
                       <AccessoryCard additionalText={x.additionalText} colors={x.colors} imgUrl={x.imgUrl} size={x.size} title={x.title} key={uuidv4()} />
-                    )}
-                  </div>
-                </div>
-              </div>
-              <div>
-                <KurashiLeftBorder>
-                  <div>{t(transKey.huDungGiaVi)}</div>
-                </KurashiLeftBorder>
-                <div>
-                  <div className='flex flex-row gap-10 justify-center my-10'>
-                    {accessorieItems.map(x =>
-                      <AccessoryCard additionalText={x.additionalText} colors={x.colors} imgUrl={x.imgUrl} size={x.size} title={x.title} key={uuidv4()} />
-                    )}
-                  </div>
-                </div>
-              </div>
-              <div>
-                <KurashiLeftBorder>
-                  <div>{t(transKey.huDungGiaVi)}</div>
-                </KurashiLeftBorder>
-                <div>
-                  <div className='flex flex-row justify-center my-10 gap-10'>
-                    {accessorieItems.map(x =>
-                      <AccessoryCard additionalText={x.additionalText} colors={x.colors} imgUrl={x.imgUrl} size={x.size} title={x.title} key={uuidv4()} />
-                    )}
-                  </div>
-                </div>
-              </div>
+                    )],
+                    key: 'bro'
+                  },
+                  {
+                    content: [...accessorieItems.map(x =>
+                      <AccessoryCard additionalText={x.additionalText} colors={x.colors} imgUrl={x.imgUrl} size={x.size} title='Kệ bếp' key={uuidv4()} />
+                    )],
+                    key: 'bro'
+                  },
+                  {
+                    content: [...accessorieItems.map(x =>
+                      <AccessoryCard additionalText={x.additionalText} colors={x.colors} imgUrl={x.imgUrl} size={x.size} title='Phụ kiện treo' key={uuidv4()} />
+                    )],
+                    key: 'bro'
+                  }
+                ]} tabList={
+            ['Hũ đựng gia vị', 'Kệ bếp', 'Phụ kiện treo']
+}
+              />
             </div>
           </div>
         </div>
@@ -348,6 +337,7 @@ const Page: React.FC<PageParam> = async ({ params: { lng } }) => {
             <SpecTable />
           </div>
         </div>
+        <div className='w-4/5 mx-auto' />
       </div>
     </div>
   )

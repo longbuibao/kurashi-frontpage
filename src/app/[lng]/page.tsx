@@ -10,6 +10,7 @@ import { KurashiCategories, KurashiCategoriesSkeleton } from '@/components/kuras
 import { products, japanAuthentic, blog } from '@/i18n/translation-key'
 import { CarouselSlider } from '@/components/carousel-slider'
 import { carouselSliderImages } from '@/constants'
+import Link from 'next/link'
 
 interface PageParam {
   params: { lng: string }
@@ -51,6 +52,13 @@ const Page = async ({ params: { lng } }: PageParam): Promise<React.ReactElement>
           <KurashiCategories lng={lng} />
         </div>
       </Suspense>
+      <div className='w-4/5 mx-auto'>
+        <div className='w-fit mx-auto'>
+          <KurashiDiv>
+            <Link href='thep-trang-men'>Thép tráng men</Link>
+          </KurashiDiv>
+        </div>
+      </div>
       <div className='w-4/5 mx-auto border-main border-t-2 my-10 max-lg:w-full'>
         <div className='mx-auto w-fit my-10'>
           <SectionTitle title={t(blog)} />
