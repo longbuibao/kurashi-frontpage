@@ -5,6 +5,7 @@ import 'rsuite-table/dist/css/rsuite-table.css'
 import { v4 as uuidv4 } from 'uuid'
 
 import { useMediaQuery } from '@/hooks/useMediaQuery'
+import { useTranslationClient } from '@/i18n/client-side'
 
 const SizeTable: React.FC = () => {
   const data = [{
@@ -31,6 +32,7 @@ const SizeTable: React.FC = () => {
   }]
   const isMobile = useMediaQuery(768)
   const keys = Object.keys(data[0])
+  const { t } = useTranslationClient('vi', 'thep-trang-men', {})
 
   return (
     <Table
@@ -45,7 +47,7 @@ const SizeTable: React.FC = () => {
         <Column key={uuidv4()} flexGrow={1}>
           <HeaderCell align='center' style={{ background: '#437254' }}>
             <div className='text-secondary font-semibold max-lg:text-wrap text-center flex justify-center items-center'>
-              {y}
+              {t(y)}
             </div>
           </HeaderCell>
           <Cell align='center' dataKey={y} />

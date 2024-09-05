@@ -45,7 +45,7 @@ const FeatureCard: React.FC<KitchenFeatureCardProps> = ({ imgUrl, text, textLeft
       <div className='w-full'>
         <img src={imgUrl} alt='' className='rounded-tl-lg rounded-tr-lg w-full' />
       </div>
-      <div className='p-5'>
+      <div className='p-5 text-center'>
         {text}
       </div>
     </div>
@@ -78,9 +78,9 @@ interface SizeCardProps {
 
 const SizeCard: React.FC<SizeCardProps> = ({ size }) => {
   const availableCssClasses: Map<string, string> = new Map([
-    ['s', 'w-[200px] h-[300px] border p-5 border-opacity-25 border-[#000]'],
-    ['m', 'w-[200px] h-[400px] border p-5 border-opacity-25 border-[#000]'],
-    ['l', 'w-[273px] h-[400px] border p-5 border-opacity-25 border-[#000]']
+    ['s', 'w-[200px] h-[250px] border p-5 border-opacity-25 border-[#000]'],
+    ['m', 'w-[200px] h-[350px] border p-5 border-opacity-25 border-[#000]'],
+    ['l', 'w-[273px] h-[350px] border p-5 border-opacity-25 border-[#000]']
   ])
   const sizes: Map<string, string> = new Map([
     ['s', '890x1800mm'],
@@ -242,22 +242,22 @@ const Page: React.FC<PageParam> = async ({ params: { lng } }) => {
               <div className='w-full mx-auto'>
                 <div className='grid grid-cols-3 grid-rows-1 gap-4 w-2/3 mx-auto'>
                   <div>
-                    <FeatureCard imgUrl='https://storage.cloud.google.com/kurashi_frontpage_files/images/ungdung_treo_phu_kien.png' text='a' />
+                    <FeatureCard imgUrl='https://storage.cloud.google.com/kurashi_frontpage_files/images/ungdung_trong_office.png' text='Tấm ốp tường cho văn phòng' />
                   </div>
                   <div>
-                    <FeatureCard imgUrl='https://storage.cloud.google.com/kurashi_frontpage_files/images/ungdung_treo_phu_kien.png' text='a' />
+                    <FeatureCard imgUrl='https://storage.cloud.google.com/kurashi_frontpage_files/images/ungdung_trong_office.png' text='Tấm ốp tường cho văn phòng' />
                   </div>
                   <div>
-                    <FeatureCard imgUrl='https://storage.cloud.google.com/kurashi_frontpage_files/images/ungdung_treo_phu_kien.png' text='a' />
+                    <FeatureCard imgUrl='https://storage.cloud.google.com/kurashi_frontpage_files/images/ungdung_trong_office.png' text='Tấm ốp tường cho văn phòng' />
                   </div>
                   <div>
-                    <FeatureCard imgUrl='https://storage.cloud.google.com/kurashi_frontpage_files/images/ungdung_treo_phu_kien.png' text='a' />
+                    <FeatureCard imgUrl='https://storage.cloud.google.com/kurashi_frontpage_files/images/ungdung_trong_office.png' text='Tấm ốp tường cho văn phòng' />
                   </div>
                   <div className='col-start-3 row-start-2'>
-                    <FeatureCard imgUrl='https://storage.cloud.google.com/kurashi_frontpage_files/images/ungdung_trong_phong_ngu_em_be.png' text='b' />
+                    <FeatureCard imgUrl='https://storage.cloud.google.com/kurashi_frontpage_files/images/ungdung_trong_office.png' text='Tấm ốp tường cho văn phòng' />
                   </div>
                   <div className='col-start-2 row-start-2'>
-                    <FeatureCard imgUrl='https://storage.cloud.google.com/kurashi_frontpage_files/images/ungdung_trong_office.png' text='c' />
+                    <FeatureCard imgUrl='https://storage.cloud.google.com/kurashi_frontpage_files/images/ungdung_trong_office.png' text='Tấm ốp tường cho văn phòng' />
                   </div>
                 </div>
               </div>
@@ -301,28 +301,26 @@ const Page: React.FC<PageParam> = async ({ params: { lng } }) => {
           <div>
             <div className='flex flex-col gap-10 w-4/5 mx-auto'>
               <KurashiTabs
-                body={[
-                  {
-                    content: [...accessorieItems.map(x =>
-                      <AccessoryCard additionalText={x.additionalText} colors={x.colors} imgUrl={x.imgUrl} size={x.size} title={x.title} key={uuidv4()} />
-                    )],
-                    key: 'bro'
-                  },
-                  {
-                    content: [...accessorieItems.map(x =>
-                      <AccessoryCard additionalText={x.additionalText} colors={x.colors} imgUrl={x.imgUrl} size={x.size} title='Kệ bếp' key={uuidv4()} />
-                    )],
-                    key: 'bro'
-                  },
-                  {
-                    content: [...accessorieItems.map(x =>
-                      <AccessoryCard additionalText={x.additionalText} colors={x.colors} imgUrl={x.imgUrl} size={x.size} title='Phụ kiện treo' key={uuidv4()} />
-                    )],
-                    key: 'bro'
-                  }
-                ]} tabList={
-            ['Hũ đựng gia vị', 'Kệ bếp', 'Phụ kiện treo']
-}
+                body={[{
+                  content: [...accessorieItems.map(x =>
+                    <AccessoryCard additionalText={x.additionalText} colors={x.colors} imgUrl={x.imgUrl} size={x.size} title={x.title} key={uuidv4()} />
+                  )],
+                  key: 'bro'
+                },
+                {
+                  content: [...accessorieItems.map(x =>
+                    <AccessoryCard additionalText={x.additionalText} colors={x.colors} imgUrl={x.imgUrl} size={x.size} title='Kệ bếp' key={uuidv4()} />
+                  )],
+                  key: 'bro'
+                },
+                {
+                  content: [...accessorieItems.map(x =>
+                    <AccessoryCard additionalText={x.additionalText} colors={x.colors} imgUrl={x.imgUrl} size={x.size} title='Phụ kiện treo' key={uuidv4()} />
+                  )],
+                  key: 'bro'
+                }
+                ]}
+                tabList={['Hũ đựng gia vị', 'Kệ bếp', 'Phụ kiện treo']}
               />
             </div>
           </div>
