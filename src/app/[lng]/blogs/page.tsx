@@ -48,9 +48,9 @@ const AllBlogs: React.FC<{ lng: string, numOfBlogs: number, searchParams: PagePa
   if (blogs.length > 0) {
     return (
       <div className='flex-1'>
-        <div className='grid grid-cols-2 grid-rows-2 max-lg:grid-cols-2 max-lg:grid-rows-2 max-sm:grid-cols-1'>
+        <div className='grid grid-cols-2 grid-rows-2 max-lg:grid-cols-2 max-lg:grid-rows-2 max-sm:grid-cols-1 gap-3'>
           {blogs.map(blog => (
-            <div className='m-1' key={blog.id}>
+            <div className='m-1 shadow-blog-inset p-2 rounded-3xl' key={blog.id}>
               <BlogCard
                 url={`${defaultBlogViewLink}${blog.id}`}
                 summary={blog.summary}

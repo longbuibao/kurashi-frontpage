@@ -13,6 +13,11 @@ const config: Config = {
       kurashiX: '#F6F5F5',
       kurashiT: '#CCE2ED',
       kurashiB: '#F6EFD7'
+    },
+    extend: {
+      boxShadow: {
+        'blog-inset': 'inset 0 0 0 0.2rem rgba(67, 114, 84, 0.6)'
+      }
     }
   },
   plugins: []

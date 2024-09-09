@@ -1,4 +1,6 @@
 import './globals.css'
+import './embla.css'
+
 import { dir } from 'i18next'
 
 import { Nav } from '@/components/nav'

@@ -1,4 +1,5 @@
 import React, { Suspense } from 'react'
+import Image from 'next/image'
 import Link from 'next/link'
 import { Metadata } from 'next'
 
@@ -84,7 +85,7 @@ const ContactPage: React.FC<ContactPageParam> = async ({ params: { lng } }: Cont
 
           </div>
         </div>
-        <img className='w-1/3 max-sm:hidden max-lg:w-full' src='https://storage.googleapis.com/kurashi_frontpage_files/images/contact_theme.jpg' alt='contact-theme-page' />
+        <Image width={500} height={500} className='w-1/3 max-sm:hidden max-lg:w-full' src='https://storage.googleapis.com/kurashi_frontpage_files/images/contact_theme.jpg' alt='contact-theme-page' />
       </div>
     </div>
 

@@ -32,11 +32,14 @@ const KurashiCategories: Promise<React.JSX.Element> = async ({ lng }: KurashiCat
   const productsToShow = products.map((product) => {
     return {
       key: product[0],
-      content: product[1].map((prod) => (
-        <Link key={uuidv4()} href={`/products/product-detail/${prod.id}`}>
-          <ProductCard lng={lng} product={prod} />
-        </Link>)
-      )
+      content: product[1].map((prod) => {
+        const url = prod.hasLandingPage ? prod.landingPageUrl : `/products/product-detail/${prod.id}`
+        return (
+          <Link key={uuidv4()} href={url ?? '#'}>
+            <ProductCard lng={lng} product={prod} />
+          </Link>
+        )
+      })
     }
   })
 

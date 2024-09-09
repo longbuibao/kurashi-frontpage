@@ -1,4 +1,5 @@
 import React from 'react'
+import Image from 'next/image'
 
 import { KurashiLeftBorder } from '@/components/kurashi-div'
 
@@ -12,7 +13,7 @@ const ThepTrangMenFeatureCard: React.FC<ThepTrangMenFeatureCardProps> = ({ imgUr
   return (
     <div className='flex flex-col gap-10 items-center h-fit justify-center'>
       <div>
-        <img src={imgUrl} alt='' />
+        <Image width={500} height={500} src={imgUrl} alt='' />
       </div>
       <div className='flex flex-col'>
         <div className='w-fit'>

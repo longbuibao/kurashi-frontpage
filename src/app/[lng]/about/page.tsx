@@ -1,9 +1,9 @@
 import React from 'react'
 import { Metadata } from 'next'
+import Image from 'next/image'
 
 import { MainTitle } from '@/components/section-title'
 import { Logo } from '@/components/logo'
-
 import { getMetadata } from '@/utils'
 
 export async function generateMetadata (): Promise<Metadata> {
@@ -28,7 +28,7 @@ const AboutPage: React.FC = () => {
           </div>
         </div>
         <div className='place-content-start'>
-          <img src='https://storage.googleapis.com/kurashi_frontpage_files/images/about.jpg' alt='about Kurashi' />
+          <Image src='https://storage.googleapis.com/kurashi_frontpage_files/images/about.jpg' alt='about Kurashi' width={500} height={500} />
         </div>
         <div className='my-10 col-start-2 mt-5 flex flex-col gap-5 place-content-start'>
           <div>

@@ -1,5 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 
 import { KurashiLeftBorder } from '@/components/kurashi-div'
 
@@ -14,7 +15,7 @@ const CatalogCard: React.FC<CatalogCardProps> = ({ thumbnail, catalogName, fileS
   return (
     <div className='w-52 flex flex-col gap-3'>
       <Link href={pdfLink} target='_blank' rel='noreferrer'>
-        <img src={thumbnail} alt='' />
+        <Image width={500} height={500} src={thumbnail} alt='' />
       </Link>
       <div>
         <div>

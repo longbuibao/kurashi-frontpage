@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import { v4 as uuidv4 } from 'uuid'
 import { Prisma } from '@prisma/client'
+import Image from 'next/image'
 import dynamic from 'next/dynamic'
 
 import { KurashiDiv, KurashiLeftBorder } from '@/components/kurashi-div'
@@ -223,7 +224,7 @@ const ProductInfo: React.FC<ProductInfoProps> = async ({ id, lng }) => {
             </div>
             <div className='flex flex-row items-center justify-center max-lg:flex-col'>
               <div className='flex-1 max-lg:w-full w-full'>
-                <img className='object-fill' src={productInfo.primaryProductImage !== '#' ? productInfo.primaryProductImage : productInfo.thumbnail} alt={productInfo.name} />
+                <Image width={500} height={500} src={productInfo.primaryProductImage !== '#' ? productInfo.primaryProductImage : productInfo.thumbnail} alt={productInfo.name} />
               </div>
               <div className='flex flex-col justify-center gap-1 h-full w-1/3 max-lg:w-full'>
                 <div className='bg-secondary p-5'>
@@ -305,7 +306,7 @@ const ProductInfo: React.FC<ProductInfoProps> = async ({ id, lng }) => {
                   intro.introImg !== '#'
                     ? (
                       <div className='my-5' key={intro.id}>
-                        <img src={intro.introImg} alt='product intro image' />
+                        <Image width={500} height={500} src={intro.introImg} alt='product intro image' />
                       </div>
                       )
                     : undefined
@@ -321,7 +322,7 @@ const ProductInfo: React.FC<ProductInfoProps> = async ({ id, lng }) => {
             </div>
             <div className='flex flex-row max-lg:flex-col bg-secondary justify-center items-center max-lg:w-full max-lg:mx-0'>
               <div className='flex flex-row-reverse justify-center items-center max-lg:w-full'>
-                {productInfo.size?.productSizeImage.map(imgSrc => <img src={imgSrc.imageUrl} key={imgSrc.id} alt='product size image' />)}
+                {productInfo.size?.productSizeImage.map(imgSrc => <Image width={500} height={500} src={imgSrc.imageUrl} key={imgSrc.id} alt='product size image' />)}
               </div>
             </div>
             {productInfo.ProductVariants.length > 0

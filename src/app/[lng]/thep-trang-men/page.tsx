@@ -2,6 +2,7 @@ import Link from 'next/link'
 import React from 'react'
 import { v4 as uuidv4 } from 'uuid'
 import dynamic from 'next/dynamic'
+import Image from 'next/image'
 
 import { useTranslation } from '@/i18n'
 import * as transKey from '@/i18n/thep-trang-men'
@@ -25,7 +26,7 @@ const SpecTable = dynamic(
 
 const createCarouselItemImage = (imageSrc: string): React.ReactElement => (
   <div key={uuidv4()}>
-    <img src={imageSrc} alt='' />
+    <Image src={imageSrc} alt='' width={500} height={500} />
   </div>
 )
 
@@ -43,7 +44,7 @@ const FeatureCard: React.FC<KitchenFeatureCardProps> = ({ imgUrl, text, textLeft
   return (
     <div className='flex flex-col w-full shadow-xl rounded-lg border border-opacity-25 border-[#000] h-full'>
       <div className='w-full'>
-        <img src={imgUrl} alt='' className='rounded-tl-lg rounded-tr-lg w-full' />
+        <Image width={500} height={500} src={imgUrl} alt='' className='rounded-tl-lg rounded-tr-lg w-full' />
       </div>
       <div className='p-5 text-center'>
         {text}
@@ -125,7 +126,7 @@ const AccessoryCard: React.FC<AccessoryCardProps> = ({ additionalText, colors, i
     <div className='w-[300px] shadow-xl rounded-lg border p-5 border-opacity-25 border-[#000]'>
       <div>
         <div>
-          <img src={imgUrl} alt='' />
+          <Image height={500} width={500} src={imgUrl} alt='' />
         </div>
         <div className='flex flex-col gap-3'>
           <AccessoryTitle title={title} />
@@ -162,21 +163,21 @@ const Page: React.FC<PageParam> = async ({ params: { lng } }) => {
     {
       additionalText: 'Tải trọng tối đa 500g',
       colors: ['black', 'white'],
-      imgUrl: 'https://storage.cloud.google.com/kurashi_frontpage_files/images/hu_dung_gia_vi.png',
+      imgUrl: 'https://storage.googleapis.com/kurashi_frontpage_files/images/hu_dung_gia_vi.png',
       size: '110x90x105mm',
       title: 'Hũ đựng gia vị lớn'
     },
     {
       additionalText: 'Tải trọng tối đa 500g',
       colors: ['black', 'white'],
-      imgUrl: 'https://storage.cloud.google.com/kurashi_frontpage_files/images/hu_dung_gia_vi.png',
+      imgUrl: 'https://storage.googleapis.com/kurashi_frontpage_files/images/hu_dung_gia_vi.png',
       size: '110x90x105mm',
       title: 'Hũ đựng gia vị lớn'
     },
     {
       additionalText: 'Tải trọng tối đa 500g',
       colors: ['black', 'white'],
-      imgUrl: 'https://storage.cloud.google.com/kurashi_frontpage_files/images/hu_dung_gia_vi.png',
+      imgUrl: 'https://storage.googleapis.com/kurashi_frontpage_files/images/hu_dung_gia_vi.png',
       size: '110x90x105mm',
       title: 'Hũ đựng gia vị lớn'
     }
@@ -215,7 +216,7 @@ const Page: React.FC<PageParam> = async ({ params: { lng } }) => {
           </div>
           <div className='flex flex-row gap-10 items-center w-3/4 mx-auto'>
             <div className='w-1/2'>
-              <img src='https://storage.googleapis.com/kurashi_frontpage_files/images/thep-trang-men-layer.png' alt='' />
+              <Image width={500} height={500} src='https://storage.googleapis.com/kurashi_frontpage_files/images/thep-trang-men-layer.png' alt='' />
             </div>
             <div className='w-1/2 text-xl'>{t(transKey.thepTrangMenIntroductionParagraph)}</div>
           </div>
@@ -242,22 +243,22 @@ const Page: React.FC<PageParam> = async ({ params: { lng } }) => {
               <div className='w-full mx-auto'>
                 <div className='grid grid-cols-3 grid-rows-1 gap-4 w-2/3 mx-auto'>
                   <div>
-                    <FeatureCard imgUrl='https://storage.cloud.google.com/kurashi_frontpage_files/images/ungdung_trong_office.png' text='Tấm ốp tường cho văn phòng' />
+                    <FeatureCard imgUrl='https://storage.googleapis.com/kurashi_frontpage_files/images/ungdung_trong_office.png' text='Tấm ốp tường cho văn phòng' />
                   </div>
                   <div>
-                    <FeatureCard imgUrl='https://storage.cloud.google.com/kurashi_frontpage_files/images/ungdung_trong_office.png' text='Tấm ốp tường cho văn phòng' />
+                    <FeatureCard imgUrl='https://storage.googleapis.com/kurashi_frontpage_files/images/ungdung_trong_office.png' text='Tấm ốp tường cho văn phòng' />
                   </div>
                   <div>
-                    <FeatureCard imgUrl='https://storage.cloud.google.com/kurashi_frontpage_files/images/ungdung_trong_office.png' text='Tấm ốp tường cho văn phòng' />
+                    <FeatureCard imgUrl='https://storage.googleapis.com/kurashi_frontpage_files/images/ungdung_trong_office.png' text='Tấm ốp tường cho văn phòng' />
                   </div>
                   <div>
-                    <FeatureCard imgUrl='https://storage.cloud.google.com/kurashi_frontpage_files/images/ungdung_trong_office.png' text='Tấm ốp tường cho văn phòng' />
+                    <FeatureCard imgUrl='https://storage.googleapis.com/kurashi_frontpage_files/images/ungdung_trong_office.png' text='Tấm ốp tường cho văn phòng' />
                   </div>
                   <div className='col-start-3 row-start-2'>
-                    <FeatureCard imgUrl='https://storage.cloud.google.com/kurashi_frontpage_files/images/ungdung_trong_office.png' text='Tấm ốp tường cho văn phòng' />
+                    <FeatureCard imgUrl='https://storage.googleapis.com/kurashi_frontpage_files/images/ungdung_trong_office.png' text='Tấm ốp tường cho văn phòng' />
                   </div>
                   <div className='col-start-2 row-start-2'>
-                    <FeatureCard imgUrl='https://storage.cloud.google.com/kurashi_frontpage_files/images/ungdung_trong_office.png' text='Tấm ốp tường cho văn phòng' />
+                    <FeatureCard imgUrl='https://storage.googleapis.com/kurashi_frontpage_files/images/ungdung_trong_office.png' text='Tấm ốp tường cho văn phòng' />
                   </div>
                 </div>
               </div>

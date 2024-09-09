@@ -71,6 +71,8 @@ model Product {
   ProductTag          ProductTag[]
   ProductVariants     ProductVariants[]
   productImages       ProductImages[]
+  hasLandingPage      Boolean            @default(false)
+  landingPageUrl      String             @default("#")
 }
 
 model ProductImages {

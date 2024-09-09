@@ -1,7 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
-
-import { KurashiLink } from '@/components/kurashi-link'
+import Image from 'next/image'
 
 interface BlogCardProps {
   imgSrc: string
@@ -13,20 +12,16 @@ interface BlogCardProps {
 
 const BlogCard: React.FC<BlogCardProps> = ({ imgSrc, summary, title, dateUpload, url }) => {
   return (
-    <div className='flex flex-row gap-3 bg-secondary max-lg:flex-col h-full justify-between'>
-      <img src={imgSrc} alt='Blog Image' className='w-1/2 max-lg:w-full mb-auto' />
-      <div className='flex flex-col gap-3 mx-auto'>
-        <div className='flex flex-col justify-center items-center gap-5 hover:cursor-default mx-auto text-wrap'>
-          <KurashiLink>
-            <Link href={url}>
-              <div className='text-xl font-semibold text-center p-2 text-wrap max-sm:text-sm max-sm:p-0'>{title.toLocaleUpperCase()}</div>
-            </Link>
-          </KurashiLink>
-          <div className='text-center max-sm:text-sm'>{summary}</div>
+    <Link href={url}>
+      <div className='h-full rounded flex flex-col'>
+        <div className='my-3 text-2xl font-semibold text-main pb-2 border-b-2 border-b-main w-fit mx-auto'>{title}</div>
+        <div className='flex flex-row mx-3 mt-3'>
+          <div className='text-wrap w-1/2 pb-5 pl-5 pr-5'>{summary}</div>
+          <Image width={500} height={500} src={imgSrc} alt='Blog Image' className='w-1/2 max-lg:w-full mb-auto rounded-3xl' />
         </div>
-        <div className='text-center mt-auto mb-2 max-sm:text-sm'><i className='fa-regular fa-calendar-days' /> {dateUpload}</div>
       </div>
-    </div>
+    </Link>
+
   )
 }
 
