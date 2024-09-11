@@ -67,7 +67,7 @@ const AllProducts: React.FC<{ lng: string }> = async ({ lng }) => {
               </div>
               <div className='flex flex-wrap gap-5 justify-center items-center my-5'>
                 {category[1].map(product => (
-                  <Link key={product.id} href={`/products/product-detail/${product.id}`}>
+                  <Link key={product.id} href={product.hasLandingPage ? product.landingPageUrl : `/products/product-detail/${product.id}`}>
                     <ProductCard product={product} lng={lng} />
                   </Link>))}
               </div>

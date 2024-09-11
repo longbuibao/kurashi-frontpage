@@ -8,7 +8,7 @@ import { useTranslation } from '@/i18n'
 import * as transKey from '@/i18n/thep-trang-men'
 import { Breadcrumb } from '@/components/breadcrumb'
 import { carouselSliderImages } from '@/constants'
-import { CarouselSlider } from '@/components/carousel-slider'
+import EmblaCarousel from '@/components/embla-carousel/embla-carousel'
 import { KurashiDiv, KurashiLeftBorder } from '@/components/kurashi-div'
 import { SectionTitle } from '@/components/section-title'
 import { ThepTrangMenFeatureCard, ThepTrangMenFeatureCardProps } from '@/components/thep-trang-men-feature-card'
@@ -24,11 +24,12 @@ const SpecTable = dynamic(
   { ssr: false }
 )
 
-const createCarouselItemImage = (imageSrc: string): React.ReactElement => (
-  <div key={uuidv4()}>
-    <Image src={imageSrc} alt='' width={500} height={500} />
-  </div>
-)
+const createCarouselItemImage = (imageSrc: string): { key: string, content: React.ReactElement } => {
+  return {
+    key: uuidv4(),
+    content: <Image src={imageSrc} width={1920} height={1080} alt='picture' quality={100} />
+  }
+}
 
 interface PageParam {
   params: { lng: string }
@@ -153,11 +154,7 @@ const Page: React.FC<PageParam> = async ({ params: { lng } }) => {
 
   const carouselSliders = carouselSliderImages.map(createCarouselItemImage)
   const sectionTitles = [transKey.thepTrangMen, transKey.standoutFeatures, transKey.application, transKey.colorAndSize, transKey.magnetAccessories, transKey.specInfo]
-
-  const intro1: ThepTrangMenFeatureCardProps = { imgUrl: 'https://storage.googleapis.com/kurashi_frontpage_files/images/feature_1.png', title: transKey.titleFeature1, p: transKey.paragraphFeature1 }
-  const intro2: ThepTrangMenFeatureCardProps = { imgUrl: 'https://storage.googleapis.com/kurashi_frontpage_files/images/feature_2.png', title: transKey.titleFeature2, p: transKey.paragraphFeature2 }
   const intro3: ThepTrangMenFeatureCardProps = { imgUrl: 'https://storage.googleapis.com/kurashi_frontpage_files/images/feature_3.png', title: transKey.titleFeature3, p: transKey.paragraphFeature3 }
-  const intro4: ThepTrangMenFeatureCardProps = { imgUrl: 'https://storage.googleapis.com/kurashi_frontpage_files/images/feature_4.png', title: transKey.titleFeature4, p: transKey.paragraphFeature4 }
 
   const accessorieItems: AccessoryCardProps[] = [
     {
@@ -199,7 +196,7 @@ const Page: React.FC<PageParam> = async ({ params: { lng } }) => {
         </div>
       </div>
       <div className='mt-5'>
-        <CarouselSlider items={carouselSliders} indicatorStyles={{}} />
+        <EmblaCarousel slides={carouselSliders} options={{ loop: true }} />
       </div>
       <div className='flex flex-row w-fit gap-5 mx-auto my-10'>
         {sectionTitles.map(x =>
@@ -210,7 +207,7 @@ const Page: React.FC<PageParam> = async ({ params: { lng } }) => {
         )}
       </div>
       <div>
-        <div id='thep-trang-men'>
+        <div id='thep-trang-men' className='my-10'>
           <div className='w-fit mx-auto text-2xl'>
             <SectionTitle title={t(transKey.thepTrangMen)} />
           </div>
@@ -221,20 +218,26 @@ const Page: React.FC<PageParam> = async ({ params: { lng } }) => {
             <div className='w-1/2 text-xl'>{t(transKey.thepTrangMenIntroductionParagraph)}</div>
           </div>
         </div>
-        <div id='standout-feature'>
+        <div id='standout-feature' className='my-10'>
           <div className='w-fit mx-auto text-2xl'>
             <SectionTitle title={t(transKey.standoutFeatures)} />
           </div>
-          <div className='grid grid-flow-col gap-5 w-1/2 mx-auto my-10 h-fit'>
-            <div className='shadow-xl rounded-lg h-fit border p-5 border-opacity-25 border-[#000] mx-auto'><ThepTrangMenFeatureCard imgUrl={intro1.imgUrl} p={t(intro1.p)} title={t(intro1.title)} key={uuidv4()} /></div>
-            <div className='flex flex-col gap-8 h-fit'>
-              <div className='h-1/2 shadow-xl rounded-lg border p-5 border-opacity-25 border-[#000] mx-auto'><ThepTrangMenFeatureCard imgUrl={intro3.imgUrl} p={t(intro3.p)} title={t(intro3.title)} key={uuidv4()} /></div>
-              <div className='h-1/2 shadow-xl rounded-lg border p-5 border-opacity-25 border-[#000] mx-auto'><ThepTrangMenFeatureCard imgUrl={intro4.imgUrl} p={t(intro4.p)} title={t(intro4.title)} key={uuidv4()} /></div>
+          <div className='grid grid-cols-4 grid-rows-1 gap-5 w-4/5 mx-auto my-10 h-fit'>
+            <div className='shadow-xl rounded-lg border p-5 border-opacity-25 border-[#000] mx-auto'>
+              <ThepTrangMenFeatureCard imgUrl={intro3.imgUrl} p={t(intro3.p)} title={t(intro3.title)} key={uuidv4()} />
             </div>
-            <div className='shadow-xl rounded-lg h-fit border p-5 border-opacity-25 border-[#000] mx-auto'><ThepTrangMenFeatureCard imgUrl={intro2.imgUrl} p={t(intro2.p)} title={t(intro2.title)} key={uuidv4()} /></div>
+            <div className='shadow-xl rounded-lg border p-5 border-opacity-25 border-[#000] mx-auto'>
+              <ThepTrangMenFeatureCard imgUrl={intro3.imgUrl} p={t(intro3.p)} title={t(intro3.title)} key={uuidv4()} />
+            </div>
+            <div className='shadow-xl rounded-lg border p-5 border-opacity-25 border-[#000] mx-auto'>
+              <ThepTrangMenFeatureCard imgUrl={intro3.imgUrl} p={t(intro3.p)} title={t(intro3.title)} key={uuidv4()} />
+            </div>
+            <div className='shadow-xl rounded-lg border p-5 border-opacity-25 border-[#000] mx-auto'>
+              <ThepTrangMenFeatureCard imgUrl={intro3.imgUrl} p={t(intro3.p)} title={t(intro3.title)} key={uuidv4()} />
+            </div>
           </div>
         </div>
-        <div id='application'>
+        <div id='application' className='my-10'>
           <div className='w-fit mx-auto text-2xl'>
             <SectionTitle title={t(transKey.applicationOpTuong)} />
           </div>
@@ -328,9 +331,7 @@ const Page: React.FC<PageParam> = async ({ params: { lng } }) => {
         </div>
         <div className='my-10' id='spec-info'>
           <div className='w-fit mx-auto'>
-            <KurashiDiv>
-              {t(transKey.specInfo)}
-            </KurashiDiv>
+            <SectionTitle title={t(transKey.specInfo)} />
           </div>
           <div className='my-10'>
             <SpecTable />

@@ -50,15 +50,14 @@ const AllBlogs: React.FC<{ lng: string, numOfBlogs: number, searchParams: PagePa
       <div className='flex-1'>
         <div className='grid grid-cols-2 grid-rows-2 max-lg:grid-cols-2 max-lg:grid-rows-2 max-sm:grid-cols-1 gap-3'>
           {blogs.map(blog => (
-            <div className='m-1 shadow-blog-inset p-2 rounded-3xl' key={blog.id}>
-              <BlogCard
-                url={`${defaultBlogViewLink}${blog.id}`}
-                summary={blog.summary}
-                imgSrc={blog.thumbnail}
-                title={blog.title}
-                dateUpload={blog.createdAt.toLocaleDateString()}
-              />
-            </div>
+            <BlogCard
+              url={`${defaultBlogViewLink}${blog.id}`}
+              summary={blog.summary}
+              imgSrc={blog.thumbnail}
+              title={blog.title}
+              key={blog.id}
+              dateUpload={blog.createdAt.toLocaleDateString()}
+            />
           ))}
         </div>
         <div className='w-4/5 mx-auto my-10'>

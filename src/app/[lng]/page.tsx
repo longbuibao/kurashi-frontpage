@@ -9,7 +9,6 @@ import { SectionTitle } from '@/components/section-title'
 import { AboutKurashiCard } from '@/components/about-kurashi-card'
 import { KurashiCategories, KurashiCategoriesSkeleton } from '@/components/kurashi-categories'
 import { products, blog } from '@/i18n/translation-key'
-import { CarouselSlider } from '@/components/carousel-slider'
 import { carouselSliderImages } from '@/constants'
 import EmblaCarousel from '@/components/embla-carousel/embla-carousel'
 
@@ -21,35 +20,24 @@ export const metadata = {
   title: 'Kurashi Corp'
 }
 
-const createCarouselItemImage = (imageSrc: string): React.ReactElement => (
-  <div key={uuidv4()}>
-    <Image
-      src={imageSrc}
-      width={7997}
-      height={4507}
-      alt='Picture of the author'
-      quality={100}
-    />
-  </div>
-)
+const createCarouselItemImage = (imageSrc: string): { key: string, content: React.ReactElement } => {
+  return {
+    key: uuidv4(),
+    content: <Image src={imageSrc} width={1920} height={1080} alt='picture' quality={100} />
+  }
+}
 
 const Page = async ({ params: { lng } }: PageParam): Promise<React.ReactElement> => {
   const { t } = await useTranslation(lng)
   const carouselSliders = carouselSliderImages.map(createCarouselItemImage)
-  const blogs = await prisma.post.findMany({ where: { published: true } })
-  const blogElements = blogs.map(blog => {
-    return {
-      key: blog.id,
-      content: <BlogCard key={blog.id} url={`/blogs/view/${blog.id}`} summary={blog.summary} imgSrc={blog.thumbnail} title={blog.title} dateUpload={blog.createdAt.toLocaleDateString()} />
-    }
-  })
+  const blogs = await prisma.post.findMany({ take: 2, where: { published: true } })
 
   return (
     <main className='mt-5'>
       <div className='w-4/5 mx-auto max-lg:w-full relative'>
-        <CarouselSlider items={carouselSliders} indicatorStyles={{}} />
+        <EmblaCarousel slides={carouselSliders} options={{ loop: true }} />
       </div>
-      <div className='mx-auto my-10 w-fit'>
+      <div className='mx-auto mt-0 mb-10 w-fit'>
         <SectionTitle title={t(products)} />
       </div>
       <Suspense fallback={<KurashiCategoriesSkeleton />}>
@@ -63,7 +51,12 @@ const Page = async ({ params: { lng } }: PageParam): Promise<React.ReactElement>
           <SectionTitle title={t(blog)} />
         </div>
         <Suspense fallback={<BlogSkeleton />}>
-          <EmblaCarousel slides={blogElements} options={{ loop: true }} />
+          <div className='flex flex-row gap-10 w-3/4 mx-auto'>
+            {blogs.map(blog => (
+              <div className='' key={blog.id}>
+                <BlogCard url={`/blogs/view/${blog.id}`} summary={blog.summary} imgSrc={blog.thumbnail} title={blog.title} dateUpload={blog.createdAt.toLocaleDateString()} />
+              </div>))}
+          </div>
         </Suspense>
       </div>
       <div className='w-4/5 mx-auto border-main border-t-2 my-10 max-lg:w-full'>

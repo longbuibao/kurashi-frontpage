@@ -1,21 +1,29 @@
 'use client'
 
-import React from 'react'
+import React, { useEffect } from 'react'
 import { EmblaOptionsType } from 'embla-carousel'
 import { DotButton, useDotButton } from './embla-dot-button'
 import { PrevButton, NextButton, usePrevNextButtons } from './embla-arrow-button'
 import useEmblaCarousel from 'embla-carousel-react'
+import Autoplay from 'embla-carousel-autoplay'
 
 interface PropType {
-  slides: any[]
+  slides: Array<{ key: string, content: React.ReactElement }>
   options?: EmblaOptionsType
 }
 
 const EmblaCarousel: React.FC<PropType> = (props) => {
   const { slides, options } = props
-  const [emblaRef, emblaApi] = useEmblaCarousel(options)
+  const [emblaRef, emblaApi] = useEmblaCarousel(options, [
+    Autoplay({ playOnInit: true, delay: 3000 })
+  ])
   const { selectedIndex, scrollSnaps, onDotButtonClick } = useDotButton(emblaApi)
   const { prevBtnDisabled, nextBtnDisabled, onPrevButtonClick, onNextButtonClick } = usePrevNextButtons(emblaApi)
+  useEffect(() => {
+    const autoplay = emblaApi?.plugins()?.autoplay
+    if (autoplay == null) return
+    autoplay?.play()
+  }, [emblaApi])
 
   return (
     <section className='embla theme-light'>
