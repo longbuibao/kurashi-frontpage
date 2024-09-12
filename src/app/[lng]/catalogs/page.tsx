@@ -29,7 +29,9 @@ const GetCatalogs: React.FC = async () => {
   return (
     <div className='flex flex-row gap-10 justify-center max-sm:flex-col'>
       {catalogs.map(x => (
-        <CatalogCard key={x.id} catalogName={x.name} fileSize={x.size} thumbnail={x.thumbnail} pdfLink={x.pdfLink} />
+        <div key={x.id} className='w-1/2'>
+          <CatalogCard catalogName={x.name} fileSize={x.size} thumbnail={x.thumbnail} pdfLink={x.pdfLink} />
+        </div>
       ))}
     </div>
   )

@@ -16,7 +16,7 @@ const config: Config = {
     },
     extend: {
       boxShadow: {
-        'blog-inset': 'inset 0 0 0 0.2rem rgba(67, 114, 84, 0.6)'
+        kurashi: 'inset 0 0 0 0.2rem rgba(0, 0, 0, 0.5)'
       }
     }
   },

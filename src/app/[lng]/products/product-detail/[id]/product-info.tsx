@@ -224,7 +224,7 @@ const ProductInfo: React.FC<ProductInfoProps> = async ({ id, lng }) => {
             </div>
             <div className='flex flex-row items-center justify-center max-lg:flex-col'>
               <div className='flex-1 max-lg:w-full w-full'>
-                <Image width={500} height={500} src={productInfo.primaryProductImage !== '#' ? productInfo.primaryProductImage : productInfo.thumbnail} alt={productInfo.name} />
+                <Image className='mx-auto' width={640} height={360} src={productInfo.primaryProductImage !== '#' ? productInfo.primaryProductImage : productInfo.thumbnail} alt={productInfo.name} />
               </div>
               <div className='flex flex-col justify-center gap-1 h-full w-1/3 max-lg:w-full'>
                 <div className='bg-secondary p-5'>
@@ -321,8 +321,18 @@ const ProductInfo: React.FC<ProductInfoProps> = async ({ id, lng }) => {
               </KurashiLeftBorder>
             </div>
             <div className='flex flex-row max-lg:flex-col bg-secondary justify-center items-center max-lg:w-full max-lg:mx-0'>
-              <div className='flex flex-row-reverse justify-center items-center max-lg:w-full'>
-                {productInfo.size?.productSizeImage.map(imgSrc => <Image width={500} height={500} src={imgSrc.imageUrl} key={imgSrc.id} alt='product size image' />)}
+              <div className='flex flex-row-reverse justify-center items-center max-lg:w-full relative'>
+                {productInfo.size?.productSizeImage.map(imgSrc => (
+                  <Image
+                    quality={100}
+                    width={1080}
+                    height={368}
+                    src={imgSrc.imageUrl} key={imgSrc.id} sizes='(min-width: 808px) 50vw, 100vw'
+                    style={{
+                      objectFit: 'cover' // cover, contain, none
+                    }} alt='kích thước sản phẩm'
+                  />
+                ))}
               </div>
             </div>
             {productInfo.ProductVariants.length > 0

@@ -18,7 +18,7 @@ const AboutKurashiCard: React.FC<AboutKurashiCardProps> = ({ lng }) => {
   return (
     <div className='flex flex-row gap-8 bg-secondary max-lg:flex-col max-lg:w-full max-lg:mx-1'>
       <div className='w-full'>
-        <Image width={500} height={500} src='https://storage.googleapis.com/kurashi_frontpage_files/images/about.jpg' alt='' />
+        <Image width={640} height={521} src='https://storage.googleapis.com/kurashi_frontpage_files/images/about.jpg' alt='' />
       </div>
       <div className='flex flex-col m-5'>
         <div className='w-fit mb-10 text-wrap max-lg:mx-auto'>
