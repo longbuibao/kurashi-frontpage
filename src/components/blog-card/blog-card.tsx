@@ -12,12 +12,14 @@ interface BlogCardProps {
 
 const BlogCard: React.FC<BlogCardProps> = ({ imgSrc, summary, title, dateUpload, url }) => {
   return (
-    <div className='h-full border-2 flex flex-col border-main p-2 rounded-3xl shadow hover:shadow-xl'>
+    <div className='h-full flex flex-col shadow hover:shadow-xl relative blog-card--hover'>
       <Link href={url}>
-        <div className='my-3 text-2xl font-semibold hover:text-main pb-2 border-b-2 hover:border-b-main w-fit mx-auto'>{title}</div>
-        <div className='flex flex-row mx-3 mt-3'>
-          <div className='text-wrap w-1/2 pb-5 pl-5 pr-5'>{summary}</div>
-          <Image width={500} height={500} src={imgSrc} alt='Blog Image' className='w-1/2 max-lg:w-full mb-auto rounded-3xl' />
+        <div className='flex flex-row'>
+          <Image width={300} height={207} src={imgSrc} alt='Blog Image' className='w-full h-full mb-auto' />
+        </div>
+        <div className='text-secondary p-2 flex flex-col justify-center items-center mx-auto absolute bottom-0 w-full bg-main h-[20%] opacity-70 text-center'>
+          <div className='text-xl'>{title.toUpperCase()}</div>
+          <div>{summary}</div>
         </div>
       </Link>
     </div>

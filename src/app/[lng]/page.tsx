@@ -30,7 +30,7 @@ const createCarouselItemImage = (imageSrc: string): { key: string, content: Reac
 const Page = async ({ params: { lng } }: PageParam): Promise<React.ReactElement> => {
   const { t } = await useTranslation(lng)
   const carouselSliders = carouselSliderImages.map(createCarouselItemImage)
-  const blogs = await prisma.post.findMany({ take: 2, where: { published: true } })
+  const blogs = await prisma.post.findMany({ take: 3, where: { published: true } })
 
   return (
     <main className='mt-5'>
@@ -51,7 +51,7 @@ const Page = async ({ params: { lng } }: PageParam): Promise<React.ReactElement>
         </div>
       </div>
       <Suspense fallback={<KurashiCategoriesSkeleton />}>
-        <div className='w-1/2 mx-auto'>
+        <div className='mx-auto w-4/5'>
           {/* @ts-expect-error } */}
           <KurashiCategories lng={lng} />
         </div>
@@ -61,9 +61,9 @@ const Page = async ({ params: { lng } }: PageParam): Promise<React.ReactElement>
           <SectionTitle title={t(blog)} />
         </div>
         <Suspense fallback={<BlogSkeleton />}>
-          <div className='flex flex-row gap-10 w-3/4 mx-auto'>
+          <div className='flex flex-row gap-5 w-4/5 mx-auto'>
             {blogs.map(blog => (
-              <div className='' key={blog.id}>
+              <div className='w-full' key={blog.id}>
                 <BlogCard url={`/blogs/view/${blog.id}`} summary={blog.summary} imgSrc={blog.thumbnail} title={blog.title} dateUpload={blog.createdAt.toLocaleDateString()} />
               </div>))}
           </div>

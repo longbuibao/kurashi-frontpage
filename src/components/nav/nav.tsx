@@ -2,10 +2,9 @@ import { FC } from 'react'
 import Link from 'next/link'
 
 import { Logo } from '@/components/logo'
-import { KurashiLink, LinkWithMainBg } from '@/components/kurashi-link'
+import { LinkWithMainBg } from '@/components/kurashi-link'
 import { TFunction } from 'i18next'
 import { contactUsingZalo } from '@/i18n/translation-key'
-import { v4 as uuidv4 } from 'uuid'
 import { zaloLink } from '@/constants'
 import { HamburgerButton } from '@/components/hamburger-button'
 
@@ -21,21 +20,21 @@ interface NavProps {
 
 const Nav: FC<NavProps> = ({ links, t }) => {
   return (
-    <header>
-      <nav className='flex justify-center items-center'>
-        <Link href='/' className='items-start'>
-          <Logo width={450} height={157} />
-        </Link>
-        <div className='flex justify-center items-end gap-10 max-lg:hidden max-2xl:hidden ml-auto'>
-          {links.map(link => {
-            return (
-              <div key={uuidv4()} className='ml-auto w-fit'>
-                <KurashiLink>
-                  <Link href={`${link.url}`}>{link.label}</Link>
-                </KurashiLink>
-              </div>
-            )
-          })}
+    <header className='sticky top-1'>
+      <nav className='flex justify-between items-center'>
+        <div className='flex flex-row gap-3 text-2xl'>
+          <HamburgerButton links={links} />
+          <div>Menu</div>
+        </div>
+        <div className='w-80 ml-auto mr-auto'>
+          <Link href='/'>
+            <div className='flex flex-col justify-center items-center'>
+              <Logo width={450} height={157} />
+              <div className='text-center'>Giải pháp nội thất Nhật Bản</div>
+            </div>
+          </Link>
+        </div>
+        <div className='flex justify-center gap-10 max-lg:hidden max-2xl:hidden'>
           <LinkWithMainBg href={zaloLink} target='_blank' rel='noreferrer'>
             <div className='px-3 py-2 rounded-lg'>
               {t(contactUsingZalo)}
@@ -44,10 +43,7 @@ const Nav: FC<NavProps> = ({ links, t }) => {
               </div>
             </div>
           </LinkWithMainBg>
-
         </div>
-        <HamburgerButton links={links} />
-        <div />
       </nav>
     </header>
   )

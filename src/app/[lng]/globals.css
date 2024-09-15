@@ -90,6 +90,24 @@
 	--admonition-danger-rgb-value: 220, 38, 38;
 }
 
+.blog-card--hover a div:nth-child(2) {
+	transition: height 150ms ease-in;
+}
+
+.blog-card--hover a div:nth-child(2) div:nth-child(2) {
+	height: 0;
+	overflow: hidden;
+	transition: height 150ms ease-in;
+}
+
+.blog-card--hover:hover a div:nth-child(2) {
+	height: 100%;
+}
+
+.blog-card--hover:hover a div:nth-child(2) div:nth-child(2) {
+	height: fit-content;
+}
+
 .product-card--hover div:nth-child(1) img {
 	transition: transform 200ms ease-in;
 }

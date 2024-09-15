@@ -2,10 +2,7 @@ import React from 'react'
 import Link from 'next/link'
 import { v4 as uuidv4 } from 'uuid'
 
-import { useTranslation } from '@/i18n'
-import { KurashiTab } from '@/components/kurashi-tabs'
 import { ProductCard } from '@/components/product'
-import { createCategoryMapToProducts } from '@/utils'
 
 import prisma from '@/lib/prisma'
 
@@ -15,7 +12,6 @@ interface KurashiCategoriesProps {
 
 // @ts-expect-error
 const KurashiCategories: Promise<React.JSX.Element> = async ({ lng }: KurashiCategoriesProps) => {
-  const { t } = await useTranslation(lng)
   const productsRaw = await prisma.product.findMany({
     take: 20,
     where: { isAvailable: true },
@@ -26,24 +22,18 @@ const KurashiCategories: Promise<React.JSX.Element> = async ({ lng }: KurashiCat
     }
   })
 
-  const products = Array.from(createCategoryMapToProducts(productsRaw))
-  const categoriesName = products.map(category => category[0]).map(categoryName => t(categoryName))
-
-  const productsToShow = products.map((product) => {
-    return {
-      key: product[0],
-      content: product[1].map((x) => {
+  return (
+    <div className='flex flex-row gap-5 justify-center'>
+      {productsRaw.sort((x, y) => x.order - y.order).map(x => {
         const url = x.hasLandingPage ? x.landingPageUrl : `/products/product-detail/${x.id}`
         return (
-          <Link key={uuidv4()} href={url ?? '#'}>
+          <Link key={uuidv4()} href={url}>
             <ProductCard lng={lng} product={x} />
           </Link>
         )
-      })
-    }
-  })
-
-  return <KurashiTab body={productsToShow} tabList={categoriesName} />
+      })}
+    </div>
+  )
 }
 
 export default KurashiCategories

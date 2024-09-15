@@ -74,6 +74,7 @@ model Product {
   hasLandingPage      Boolean            @default(false)
   landingPageUrl      String             @default("#")
   shortIntro          String             @default("")
+  order               Int                @default(-1)
 }
 
 model ProductImages {

@@ -19,7 +19,7 @@ const config: Config = {
         kurashi: 'inset 0 0 0 0.2rem rgba(0, 0, 0, 0.5)'
       },
       backgroundColor: {
-        'kurashi-black': 'rgba(0, 0, 0, 0.2)'
+        'kurashi-black': 'rgba(0, 0, 0, 0.4)'
       }
     }
   },
