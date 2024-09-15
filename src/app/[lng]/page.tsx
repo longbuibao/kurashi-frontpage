@@ -5,10 +5,9 @@ import Image from 'next/image'
 import prisma from '@/lib/prisma'
 import { useTranslation } from '@/i18n'
 import { BlogSkeleton, BlogCard } from '@/components/blog-card'
-import { SectionTitle } from '@/components/section-title'
 import { AboutKurashiCard } from '@/components/about-kurashi-card'
 import { KurashiCategories, KurashiCategoriesSkeleton } from '@/components/kurashi-categories'
-import { products, blog } from '@/i18n/translation-key'
+import { products } from '@/i18n/translation-key'
 import { carouselSliderImages } from '@/constants'
 import EmblaCarousel from '@/components/embla-carousel/embla-carousel'
 
@@ -56,9 +55,19 @@ const Page = async ({ params: { lng } }: PageParam): Promise<React.ReactElement>
           <KurashiCategories lng={lng} />
         </div>
       </Suspense>
-      <div className='w-4/5 mx-auto my-10 max-lg:w-full'>
-        <div className='mx-auto w-fit my-10'>
-          <SectionTitle title={t(blog)} />
+      <div className='w-4/5 mx-auto mt-5 max-lg:w-full'>
+        <div className='flex flex-col items-center mb-10 gap-5'>
+          <div className='mx-auto w-fit mt-10 flex-row flex items-center gap-3'>
+            <div className='mt-auto text-xl'>
+              KURASHI
+            </div>
+            <div className='text-5xl font-semibold'>
+              BLOG
+            </div>
+          </div>
+          <div>
+            Xu hướng, công nghệ và vật liệu tốt nhất cho không gian sống đẹp và tiện nghi
+          </div>
         </div>
         <Suspense fallback={<BlogSkeleton />}>
           <div className='flex flex-row gap-5 w-4/5 mx-auto'>
@@ -69,7 +78,7 @@ const Page = async ({ params: { lng } }: PageParam): Promise<React.ReactElement>
           </div>
         </Suspense>
       </div>
-      <div className='w-4/5 mx-auto my-10 max-lg:w-full'>
+      <div className='w-3/4 mx-auto mt-24 max-lg:w-full'>
         <div className='w-fit my-10'>
           <AboutKurashiCard lng={lng} />
         </div>
