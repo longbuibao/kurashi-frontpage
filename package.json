@@ -17,6 +17,7 @@
   },
   "dependencies": {
     "@prisma/client": "^5.11.0",
+    "@studio-freight/react-lenis": "^0.0.47",
     "accept-language": "^3.0.18",
     "embla-carousel-autoplay": "^8.2.1",
     "embla-carousel-react": "^8.2.1",

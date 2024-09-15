@@ -12,11 +12,16 @@ interface ProductCardProps {
 const ProductCard: React.FC<ProductCardProps> = async ({ product, lng }) => {
   const { t } = await useTranslation(lng)
   return (
-    <div className='flex flex-col items-center rounded-md w-96 max-sm:w-full'>
-      <div className='rounded-md bg-secondary overflow-hidden'>
-        <Image className='transform transition-transform duration-500 hover:scale-110' src={product.thumbnail ?? '#'} alt='product thumbnail' width={640} height={360} />
+    <div className='product-card--hover flex flex-col items-center rounded-md w-96 max-sm:w-full relative' style={{}}>
+      <div className='rounded-md bg-secondary overflow-hidden z-10'>
+        <Image className='transform transition-transform duration-500' src={product.thumbnail ?? '#'} alt='product thumbnail' width={640} height={360} />
       </div>
-      <div className='hover:cursor-pointer hover:text-main mt-5'>{t(product.name ?? '#')}</div>
+      <div className='z-10 flex flex-col justify-center transition rounded-md hover:cursor-pointer hover:bg-opacity-0 bg-kurashi-black absolute text-center w-full h-full'>
+        <div className='font-semibold text-xl text-secondary'>
+          {t(product.name?.toUpperCase() ?? '#')}
+        </div>
+      </div>
+
     </div>
   )
 }

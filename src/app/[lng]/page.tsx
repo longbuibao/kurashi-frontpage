@@ -37,16 +37,26 @@ const Page = async ({ params: { lng } }: PageParam): Promise<React.ReactElement>
       <div className='w-4/5 mx-auto max-lg:w-full relative'>
         <EmblaCarousel slides={carouselSliders} options={{ loop: true }} />
       </div>
-      <div className='mx-auto mt-0 mb-10 w-fit'>
-        <SectionTitle title={t(products)} />
+      <div className='mx-auto mt-10 mb-5 w-fit flex flex-col gap-5 items-center'>
+        <div className='text-5xl font-semibold'>
+          {t(products).toUpperCase()}
+        </div>
+        <div className='font-semibold'>
+          Các giải pháp nội thất từ Nhật Bản
+        </div>
+        <div className='flex flex-row gap-5 items-center'>
+          <div>phòng bếp</div>
+          <div className='font-bold text-main text-2xl'> | </div>
+          <div>phòng tắm</div>
+        </div>
       </div>
       <Suspense fallback={<KurashiCategoriesSkeleton />}>
-        <div className='mt-5 w-1/2 mx-auto'>
+        <div className='w-1/2 mx-auto'>
           {/* @ts-expect-error } */}
           <KurashiCategories lng={lng} />
         </div>
       </Suspense>
-      <div className='w-4/5 mx-auto border-main border-t-2 my-10 max-lg:w-full'>
+      <div className='w-4/5 mx-auto my-10 max-lg:w-full'>
         <div className='mx-auto w-fit my-10'>
           <SectionTitle title={t(blog)} />
         </div>
@@ -59,7 +69,7 @@ const Page = async ({ params: { lng } }: PageParam): Promise<React.ReactElement>
           </div>
         </Suspense>
       </div>
-      <div className='w-4/5 mx-auto border-main border-t-2 my-10 max-lg:w-full'>
+      <div className='w-4/5 mx-auto my-10 max-lg:w-full'>
         <div className='w-fit my-10'>
           <AboutKurashiCard lng={lng} />
         </div>

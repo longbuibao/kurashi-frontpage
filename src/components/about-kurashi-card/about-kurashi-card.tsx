@@ -6,7 +6,6 @@ import Image from 'next/image'
 import { useTranslationClient } from '@/i18n/client-side'
 import { defaultNS } from '@/i18n/settings'
 import { SectionTitle } from '@/components/section-title'
-import { KurashiDiv } from '@/components/kurashi-div'
 import { aboutKurashi, readMore, aboutContentTitle } from '@/i18n/translation-key'
 
 interface AboutKurashiCardProps {
@@ -29,12 +28,17 @@ const AboutKurashiCard: React.FC<AboutKurashiCardProps> = ({ lng }) => {
           <div>Công ty cổ phần Kurashi cung cấp các giải pháp về nội thất phòng tắm tiên tiến nhất từ Nhật Bản. Kurashi hướng đến mục tiêu góp phần nâng cao chất lượng cuộc sống của mỗi gia đình Việt Nam, với sự tập trung vào ba yêu cầu chính của sản phẩm là: tính thẩm mĩ, tính công năng và tính an toàn.</div>
         </div>
         <div className='w-fit mt-auto ml-auto max-lg:mx-auto max-lg:mt-5'>
-          <KurashiDiv>
-            <Link href='/about'>{t(readMore)}</Link>
-            <div className='ml-3 inline-block'>
-              <i className='fa-solid fa-chevron-right' />
-            </div>
-          </KurashiDiv>
+          <div className='hover:bg-main rounded-lg hover:text-secondary border-2 border-main transition'>
+            <Link href='/about'>
+              <div className='flex flex-row px-2 py-2'>
+                <div>{t(readMore)}</div>
+                <div className='ml-3 inline-block'>
+                  <i className='fa-solid fa-chevron-right' />
+                </div>
+              </div>
+            </Link>
+          </div>
+
         </div>
 
       </div>

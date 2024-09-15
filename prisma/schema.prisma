@@ -73,6 +73,7 @@ model Product {
   productImages       ProductImages[]
   hasLandingPage      Boolean            @default(false)
   landingPageUrl      String             @default("#")
+  shortIntro          String             @default("")
 }
 
 model ProductImages {

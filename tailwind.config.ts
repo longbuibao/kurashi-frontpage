@@ -17,6 +17,9 @@ const config: Config = {
     extend: {
       boxShadow: {
         kurashi: 'inset 0 0 0 0.2rem rgba(0, 0, 0, 0.5)'
+      },
+      backgroundColor: {
+        'kurashi-black': 'rgba(0, 0, 0, 0.2)'
       }
     }
   },

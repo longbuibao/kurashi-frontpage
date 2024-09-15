@@ -2,8 +2,7 @@ import { FC } from 'react'
 import Link from 'next/link'
 
 import { Logo } from '@/components/logo'
-import { KurashiDiv } from '@/components/kurashi-div'
-import { KurashiLink } from '@/components/kurashi-link'
+import { KurashiLink, LinkWithMainBg } from '@/components/kurashi-link'
 import { TFunction } from 'i18next'
 import { contactUsingZalo } from '@/i18n/translation-key'
 import { v4 as uuidv4 } from 'uuid'
@@ -37,12 +36,15 @@ const Nav: FC<NavProps> = ({ links, t }) => {
               </div>
             )
           })}
-          <KurashiDiv>
-            <Link href={zaloLink} target='_blank' rel='noreferrer'>{t(contactUsingZalo)}</Link>
-            <div className='ml-3 inline-block'>
-              <i className='fa-solid fa-chevron-right' />
+          <LinkWithMainBg href={zaloLink} target='_blank' rel='noreferrer'>
+            <div className='px-3 py-2 rounded-lg'>
+              {t(contactUsingZalo)}
+              <div className='ml-3 inline-block'>
+                <i className='fa-solid fa-chevron-right' />
+              </div>
             </div>
-          </KurashiDiv>
+          </LinkWithMainBg>
+
         </div>
         <HamburgerButton links={links} />
         <div />
