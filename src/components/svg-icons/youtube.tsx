@@ -3,7 +3,7 @@ import React from 'react'
 const LogoYoutube: React.FC = () => {
   return (
     <svg
-      fill='#000000' version='1.1' xmlns='http://www.w3.org/2000/svg'
+      fill='#fff' version='1.1' xmlns='http://www.w3.org/2000/svg'
       width='40' height='40' viewBox='0 0 97.75 97.75'
     >
       <g>

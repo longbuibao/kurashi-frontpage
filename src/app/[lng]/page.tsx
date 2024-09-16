@@ -37,7 +37,7 @@ const Page = async ({ params: { lng } }: PageParam): Promise<React.ReactElement>
         <EmblaCarousel slides={carouselSliders} options={{ loop: true }} />
       </div>
       <div className='mx-auto mt-10 mb-5 w-fit flex flex-col gap-5 items-center'>
-        <div className='text-5xl font-semibold'>
+        <div className='text-5xl'>
           {t(products).toUpperCase()}
         </div>
         <div className='font-semibold'>
@@ -55,30 +55,32 @@ const Page = async ({ params: { lng } }: PageParam): Promise<React.ReactElement>
           <KurashiCategories lng={lng} />
         </div>
       </Suspense>
-      <div className='w-4/5 mx-auto mt-5 max-lg:w-full'>
-        <div className='flex flex-col items-center mb-10 gap-5'>
-          <div className='mx-auto w-fit mt-10 flex-row flex items-center gap-3'>
-            <div className='mt-auto text-xl'>
-              KURASHI
+      <div className='bg-secondary mt-5 pb-10'>
+        <div className='w-4/5 mx-auto max-lg:w-full'>
+          <div className='flex flex-col items-center mb-10 gap-5'>
+            <div className='mx-auto w-fit mt-10 flex-row flex items-center gap-3'>
+              <div className='mt-auto text-xl'>
+                KURASHI
+              </div>
+              <div className='text-5xl'>
+                BLOG
+              </div>
             </div>
-            <div className='text-5xl font-semibold'>
-              BLOG
+            <div>
+              Xu hướng, công nghệ và vật liệu tốt nhất cho không gian sống đẹp và tiện nghi
             </div>
           </div>
-          <div>
-            Xu hướng, công nghệ và vật liệu tốt nhất cho không gian sống đẹp và tiện nghi
-          </div>
+          <Suspense fallback={<BlogSkeleton />}>
+            <div className='flex flex-row gap-5'>
+              {blogs.map(blog => (
+                <div className='w-full' key={blog.id}>
+                  <BlogCard url={`/blogs/view/${blog.id}`} summary={blog.summary} imgSrc={blog.thumbnail} title={blog.title} dateUpload={blog.createdAt.toLocaleDateString()} />
+                </div>))}
+            </div>
+          </Suspense>
         </div>
-        <Suspense fallback={<BlogSkeleton />}>
-          <div className='flex flex-row gap-5 w-4/5 mx-auto'>
-            {blogs.map(blog => (
-              <div className='w-full' key={blog.id}>
-                <BlogCard url={`/blogs/view/${blog.id}`} summary={blog.summary} imgSrc={blog.thumbnail} title={blog.title} dateUpload={blog.createdAt.toLocaleDateString()} />
-              </div>))}
-          </div>
-        </Suspense>
       </div>
-      <div className='w-3/4 mx-auto mt-24 max-lg:w-full'>
+      <div className='w-4/5 mx-auto mt-24 max-lg:w-full'>
         <div className='w-fit my-10'>
           <AboutKurashiCard lng={lng} />
         </div>

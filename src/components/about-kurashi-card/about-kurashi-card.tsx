@@ -15,10 +15,10 @@ const AboutKurashiCard: React.FC<AboutKurashiCardProps> = ({ lng }) => {
   const { t } = useTranslationClient(lng, defaultNS, {})
   return (
     <div className='flex flex-row gap-8 max-lg:flex-col max-lg:w-full max-lg:mx-1'>
-      <div className='w-full'>
-        <Image width={640} height={521} src='https://storage.googleapis.com/kurashi_frontpage_files/images/about_image.png' alt='' />
+      <div className='w-1/2'>
+        <Image width={640} height={521} className='w-full' src='https://storage.googleapis.com/kurashi_frontpage_files/images/about_image.png' alt='' />
       </div>
-      <div className='flex flex-col gap-5'>
+      <div className='flex flex-col gap-5 w-1/2'>
         <div className='w-fit text-wrap max-lg:mx-auto text-4xl font-semibold'>
           {t(aboutKurashi)}
         </div>

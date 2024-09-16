@@ -20,15 +20,10 @@ export const carouselSliderImages = [
 export const footerLinks = [{
   label: transKey.company,
   links: [
-    { label: transKey.home, url: '/' },
     { label: transKey.aboutKurashi, url: '/about' },
     { label: transKey.products, url: '/products' },
     { label: transKey.career, url: '#' },
-    { label: transKey.contact, url: '/contact' }
-  ]
-}, {
-  label: transKey.supportInfo,
-  links: [
+    { label: transKey.contact, url: '/contact' },
     { label: transKey.catalog, url: '/catalogs' },
     { label: transKey.blog, url: '/blogs' }
   ]

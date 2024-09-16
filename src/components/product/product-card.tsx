@@ -12,7 +12,7 @@ interface ProductCardProps {
 const ProductCard: React.FC<ProductCardProps> = async ({ product, lng }) => {
   const { t } = await useTranslation(lng)
   return (
-    <div className='product-card--hover flex flex-col items-center rounded-md w-96 max-sm:w-full relative' style={{}}>
+    <div className='product-card--hover flex flex-col items-center rounded-md max-sm:w-full relative' style={{}}>
       <div className='rounded-md bg-secondary overflow-hidden z-10'>
         <Image className='transform transition-transform duration-500' src={product.thumbnail ?? '#'} alt='product thumbnail' width={640} height={360} />
       </div>

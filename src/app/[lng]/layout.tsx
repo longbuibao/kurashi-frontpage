@@ -28,7 +28,9 @@ const RootLayout: React.FC<RootProps> = async ({ children, params }): Promise<Re
         </div>
         <ProgressBarProviders>{children}</ProgressBarProviders>
         <Footer t={t} />
-        <div className='text-[#383836] hover:cursor-default text-center p-1 text-xs'>Copyright 2024 Kurashi Corporation. All rights reserved</div>
+        <div className='bg-[#000] pt-2 pb-2'>
+          <div className='text-[#fff] hover:cursor-default text-left w-4/5 mx-auto p-1 text-xs'>Copyright 2024 Kurashi Corporation. All rights reserved</div>
+        </div>
       </body>
     </html>
   )
