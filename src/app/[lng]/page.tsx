@@ -7,7 +7,7 @@ import { useTranslation } from '@/i18n'
 import { BlogSkeleton, BlogCard } from '@/components/blog-card'
 import { AboutKurashiCard } from '@/components/about-kurashi-card'
 import { KurashiCategories, KurashiCategoriesSkeleton } from '@/components/kurashi-categories'
-import { products } from '@/i18n/translation-key'
+import { blog, products } from '@/i18n/translation-key'
 import { carouselSliderImages } from '@/constants'
 import EmblaCarousel from '@/components/embla-carousel/embla-carousel'
 
@@ -55,34 +55,53 @@ const Page = async ({ params: { lng } }: PageParam): Promise<React.ReactElement>
           <KurashiCategories lng={lng} />
         </div>
       </Suspense>
-      <div className='bg-secondary mt-5 pb-10'>
-        <div className='w-4/5 mx-auto max-lg:w-full'>
-          <div className='flex flex-col items-center mb-10 gap-5'>
-            <div className='mx-auto w-fit mt-10 flex-row flex items-center gap-3'>
-              <div className='mt-auto text-xl'>
-                KURASHI
-              </div>
-              <div className='text-5xl'>
-                BLOG
-              </div>
-            </div>
-            <div>
-              Xu hướng, công nghệ và vật liệu tốt nhất cho không gian sống đẹp và tiện nghi
-            </div>
-          </div>
-          <Suspense fallback={<BlogSkeleton />}>
-            <div className='flex flex-row gap-5'>
-              {blogs.map(blog => (
-                <div className='w-full' key={blog.id}>
-                  <BlogCard url={`/blogs/view/${blog.id}`} summary={blog.summary} imgSrc={blog.thumbnail} title={blog.title} dateUpload={blog.createdAt.toLocaleDateString()} />
-                </div>))}
-            </div>
-          </Suspense>
-        </div>
-      </div>
       <div className='w-4/5 mx-auto mt-24 max-lg:w-full'>
         <div className='w-fit my-10'>
           <AboutKurashiCard lng={lng} />
+        </div>
+      </div>
+      <div className='bg-secondary mt-20 pb-10'>
+        <div className='w-1/2 mx-auto max-lg:w-full flex flex-row gap-32'>
+          <Suspense fallback={<BlogSkeleton />}>
+            <div className='w-1/2 flex flex-col justify-center'>
+              <div className='flex flex-col gap-5 mb-10'>
+                <div className='flex-row flex gap-3'>
+                  <div className='mt-auto text-xl'>KURASHI</div>
+                  <div className='text-5xl text-main'>BLOG</div>
+                </div>
+                <div>
+                  Xu hướng, công nghệ và vật liệu về nội thất mới nhất từ Nhật Bản
+                </div>
+              </div>
+              <div>
+                <div>
+                  <div><Image className='w-full' src={blogs[1].thumbnail} alt='phụ kiện nam châm bếp' width={400} height={471} /></div>
+                  <div className='mt-5'>
+                    <div>{blogs[1].summary}</div>
+                    <div className='mt-5'>{blogs[1].createdAt.toLocaleDateString()}</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className='w-1/2'>
+              <div className='flex flex-col items-center gap-14'>
+                <div>
+                  <div><Image className='w-full' src={blogs[2].thumbnail} alt='phụ kiện nam châm bếp' width={400} height={232} /></div>
+                  <div className='mt-5'>
+                    <div>{blogs[2].summary}</div>
+                    <div className='mt-5'>{blogs[2].createdAt.toLocaleDateString()}</div>
+                  </div>
+                </div>
+                <div>
+                  <div><Image className='w-full' src={blogs[0].thumbnail} alt='phụ kiện nam châm bếp' width={400} height={232} /></div>
+                  <div className='mt-5'>
+                    <div>{blogs[0].summary}</div>
+                    <div className='mt-5'>{blogs[0].createdAt.toLocaleDateString()}</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </Suspense>
         </div>
       </div>
     </main>

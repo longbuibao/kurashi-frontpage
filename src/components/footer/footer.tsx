@@ -15,10 +15,10 @@ interface FooterProps {
 const Footer: React.FC<FooterProps> = ({ t }) => {
   return (
     <div className='bg-[#000] text-secondary'>
-      <div className='w-4/5 mx-auto border-b-2 border-secondary pb-2'>
-        <div className='mb-5'>
+      <div className='w-4/5 mx-auto border-b-2 border-secondary pb-7'>
+        <div className='mb-5 pt-10 pb-5'>
           <Link href='/'>
-            <Logo width={200} />
+            <Logo width={300} srcImage='https://storage.googleapis.com/kurashi_frontpage_files/images/logo_white.png' />
           </Link>
         </div>
         <div className='flex flex-row justify-between'>
@@ -44,8 +44,7 @@ const Footer: React.FC<FooterProps> = ({ t }) => {
               </Link>
             </div>
           </div>
-
-          <div>
+          <div className='w-1/4'>
             <div className='text-2xl'>ACCESS</div>
             <div className='flex flex-col gap-5 items-start pt-5'>
               <div>{t(address)}: {t(addressName)}</div>
@@ -55,7 +54,6 @@ const Footer: React.FC<FooterProps> = ({ t }) => {
             </div>
           </div>
         </div>
-
       </div>
     </div>
 
