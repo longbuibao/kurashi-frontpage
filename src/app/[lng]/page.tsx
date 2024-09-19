@@ -4,10 +4,10 @@ import Image from 'next/image'
 
 import prisma from '@/lib/prisma'
 import { useTranslation } from '@/i18n'
-import { BlogSkeleton, BlogCard } from '@/components/blog-card'
+import { BlogSkeleton } from '@/components/blog-card'
 import { AboutKurashiCard } from '@/components/about-kurashi-card'
 import { KurashiCategories, KurashiCategoriesSkeleton } from '@/components/kurashi-categories'
-import { blog, products } from '@/i18n/translation-key'
+import { products } from '@/i18n/translation-key'
 import { carouselSliderImages } from '@/constants'
 import EmblaCarousel from '@/components/embla-carousel/embla-carousel'
 

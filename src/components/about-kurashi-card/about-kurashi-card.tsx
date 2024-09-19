@@ -1,7 +1,6 @@
 'use client'
 import React from 'react'
 import Link from 'next/link'
-import Image from 'next/image'
 
 import { useTranslationClient } from '@/i18n/client-side'
 import { defaultNS } from '@/i18n/settings'
