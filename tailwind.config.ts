@@ -10,9 +10,11 @@ const config: Config = {
     colors: {
       main: '#437254',
       secondary: '#e5e5e5',
+      'secondary-opacity': 'rgba(229, 229, 229, 0.7)',
       kurashiX: '#F6F5F5',
       kurashiT: '#CCE2ED',
-      kurashiB: '#F6EFD7'
+      kurashiB: '#F6EFD7',
+      'kurashi-bg-main': '#f4f4f4'
     },
     extend: {
       boxShadow: {

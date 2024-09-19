@@ -134,3 +134,8 @@
 		display: none;
 	}
 }
+
+.about-card-bg {
+	background-image: url('https://storage.googleapis.com/kurashi_frontpage_files/images/about-bg.png');
+	background-repeat: no-repeat;
+}

@@ -22,8 +22,8 @@ const RootLayout: React.FC<RootProps> = async ({ children, params }): Promise<Re
       <head>
         <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css' crossOrigin='anonymous' />
       </head>
-      <body className='bg-secondary'>
-        <div className='bg-secondary sticky top-0 z-50'>
+      <body className='bg-kurashi-bg-main'>
+        <div className='bg-secondary-opacity backdrop-blur-md sticky top-0 z-50'>
           <div className='pb-1 mx-auto z-10 w-4/5'>
             <Nav t={t} links={navItems.map(item => { return { label: t(item.label), url: item.url } })} />
           </div>
