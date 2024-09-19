@@ -4,7 +4,7 @@ import Image from 'next/image'
 
 import prisma from '@/lib/prisma'
 import { useTranslation } from '@/i18n'
-import { BlogSkeleton } from '@/components/blog-card'
+import { BlogSkeleton, BlogCardHomepage } from '@/components/blog-card'
 import { AboutKurashiCard } from '@/components/about-kurashi-card'
 import { KurashiCategories, KurashiCategoriesSkeleton } from '@/components/kurashi-categories'
 import { products } from '@/i18n/translation-key'
@@ -56,7 +56,7 @@ const Page = async ({ params: { lng } }: PageParam): Promise<React.ReactElement>
         </div>
       </Suspense>
       <div className='w-4/5 mx-auto mt-24 max-lg:w-full'>
-        <div className='my-10 about-card-bg'>
+        <div className='my-10 overflow-hidden'>
           <AboutKurashiCard lng={lng} />
         </div>
       </div>
@@ -66,39 +66,19 @@ const Page = async ({ params: { lng } }: PageParam): Promise<React.ReactElement>
             <div className='w-1/2 flex flex-col justify-center'>
               <div className='flex flex-col gap-5 mb-10'>
                 <div className='flex-row flex gap-3'>
-                  <div className='mt-auto text-xl'>KURASHI</div>
+                  <div className='mt-auto text-xl leading-9'>KURASHI</div>
                   <div className='text-7xl text-main font-bold'>BLOG</div>
                 </div>
                 <div className='text-lg'>
                   Xu hướng, công nghệ và vật liệu về nội thất mới nhất từ Nhật Bản
                 </div>
               </div>
-              <div>
-                <div>
-                  <div><Image className='w-full' src={blogs[1].thumbnail} alt='phụ kiện nam châm bếp' width={400} height={471} /></div>
-                  <div className='mt-5 text-lg'>
-                    <div>{blogs[1].summary}</div>
-                    <div className='mt-5'>{blogs[1].createdAt.toLocaleDateString()}</div>
-                  </div>
-                </div>
-              </div>
+              <BlogCardHomepage blog={blogs[1]} />
             </div>
             <div className='w-1/2'>
-              <div className='flex flex-col items-center gap-14'>
-                <div>
-                  <div><Image className='w-full' src={blogs[2].thumbnail} alt='phụ kiện nam châm bếp' width={400} height={232} /></div>
-                  <div className='mt-5 text-lg'>
-                    <div>{blogs[2].summary}</div>
-                    <div className='mt-5'>{blogs[2].createdAt.toLocaleDateString()}</div>
-                  </div>
-                </div>
-                <div>
-                  <div><Image className='w-full' src={blogs[0].thumbnail} alt='phụ kiện nam châm bếp' width={400} height={232} /></div>
-                  <div className='mt-5 text-lg'>
-                    <div>{blogs[0].summary}</div>
-                    <div className='mt-5'>{blogs[0].createdAt.toLocaleDateString()}</div>
-                  </div>
-                </div>
+              <div className='flex flex-col items-center gap-14 overflow-hidden'>
+                <BlogCardHomepage blog={blogs[2]} />
+                <BlogCardHomepage blog={blogs[0]} />
               </div>
             </div>
           </Suspense>

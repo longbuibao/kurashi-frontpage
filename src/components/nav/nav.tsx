@@ -1,12 +1,13 @@
-import { FC } from 'react'
+'use client'
+import { FC, useState } from 'react'
 import Link from 'next/link'
 
 import { Logo } from '@/components/logo'
-import { LinkWithMainBg } from '@/components/kurashi-link'
-import { TFunction } from 'i18next'
-import { contactUsingZalo } from '@/i18n/translation-key'
+import { KurashiLink, LinkWithMainBg } from '@/components/kurashi-link'
 import { zaloLink } from '@/constants'
-import { HamburgerButton } from '@/components/hamburger-button'
+import { v4 as uuidv4 } from 'uuid'
+import { ProductCard } from '@/components/product'
+import { Product } from '@prisma/client'
 
 interface LinkItem {
   url: string
@@ -14,37 +15,71 @@ interface LinkItem {
 }
 
 interface NavProps {
-  t: TFunction<any, any>
   links: LinkItem[]
+  products: any[]
 }
 
-const Nav: FC<NavProps> = ({ links, t }) => {
+const Nav: FC<NavProps> = ({ links, products }) => {
+  const [isOpen, setIsOpen] = useState(false)
+
   return (
-    <header className='sticky top-1'>
-      <nav className='flex justify-between items-center'>
-        <div className='flex flex-row gap-3 text-2xl'>
-          <HamburgerButton links={links} />
-          <div>Menu</div>
-        </div>
-        <div className='w-80 ml-auto mr-auto'>
-          <Link href='/'>
-            <div className='flex flex-col justify-center items-center'>
-              <Logo width={450} height={157} />
-              <div className='text-center'>Giải pháp nội thất Nhật Bản</div>
-            </div>
-          </Link>
-        </div>
-        <div className='flex justify-center gap-10 max-lg:hidden max-2xl:hidden'>
-          <LinkWithMainBg href={zaloLink} target='_blank' rel='noreferrer'>
-            <div className='px-3 py-2 rounded-lg'>
-              {t(contactUsingZalo)}
-              <div className='ml-3 inline-block'>
-                <i className='fa-solid fa-chevron-right' />
+    <header className='sticky top-1 pb-1 mx-auto z-10 w-full'>
+      <div className='w-4/5 mx-auto'>
+        <nav className='flex justify-between items-center'>
+          <button className='flex flex-row gap-3 text-2xl relative items-center min-w-40' onClick={() => setIsOpen(!isOpen)}>
+            {isOpen ? <i className='fa-solid fa-xmark text-main text-2xl' /> : <i className='fa-solid fa-bars text-main' />}
+            <div>{isOpen ? 'Đóng' : 'Menu'}</div>
+          </button>
+          <div className='w-80 ml-auto mr-auto'>
+            <Link href='/'>
+              <div className='flex flex-col justify-center items-center'>
+                <Logo width={450} height={157} />
+                <div className='text-center'>Giải pháp nội thất Nhật Bản</div>
+              </div>
+            </Link>
+          </div>
+          <div className='flex justify-center gap-10 max-lg:hidden max-2xl:hidden'>
+            <LinkWithMainBg href={zaloLink} target='_blank' rel='noreferrer'>
+              <div className='px-3 py-2 rounded-lg'>
+                Liên hệ Zalo
+                <div className='ml-3 inline-block'>
+                  <i className='fa-solid fa-chevron-right' />
+                </div>
+              </div>
+            </LinkWithMainBg>
+          </div>
+        </nav>
+      </div>
+      {isOpen &&
+        <div className='absolute w-full bg-secondary backdrop-blur-md shadow-2xl flex flex-row'>
+          <div className='flex-row flex w-4/5 mx-auto'>
+            <div className='w-1/3'>
+              <div className='flex flex-col gap-10 py-10 pr-10'>
+                {links.map(link => {
+                  return (
+                    <div key={uuidv4()} className='w-fit'>
+                      <KurashiLink>
+                        <Link href={`${link.url}`}>{link.label}</Link>
+                      </KurashiLink>
+                    </div>
+                  )
+                })}
               </div>
             </div>
-          </LinkWithMainBg>
-        </div>
-      </nav>
+            <div className='flex flex-row gap-5 justify-center items-center'>
+              {products.sort((x, y) => x.order - y.order).map(x => {
+                const dummy = x as Product
+                const url = dummy.hasLandingPage ? x.landingPageUrl : `/products/product-detail/${dummy.id}`
+                return (
+                  <Link key={uuidv4()} href={url}>
+                    <ProductCard lng='vi' product={x} />
+                  </Link>
+                )
+              })}
+            </div>
+          </div>
+
+        </div>}
     </header>
   )
 }

@@ -11,6 +11,7 @@ const config: Config = {
       main: '#437254',
       secondary: '#e5e5e5',
       'secondary-opacity': 'rgba(229, 229, 229, 0.7)',
+      'secondary-lg-opacity': 'rgba(229, 229, 229, 0.8)',
       kurashiX: '#F6F5F5',
       kurashiT: '#CCE2ED',
       kurashiB: '#F6EFD7',

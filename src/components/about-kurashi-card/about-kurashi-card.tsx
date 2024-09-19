@@ -13,7 +13,7 @@ interface AboutKurashiCardProps {
 const AboutKurashiCard: React.FC<AboutKurashiCardProps> = ({ lng }) => {
   const { t } = useTranslationClient(lng, defaultNS, {})
   return (
-    <div className='max-lg:flex-col max-lg:w-full max-lg:mx-1 px-60 py-56'>
+    <div className='max-lg:flex-col max-lg:w-full max-lg:mx-1 px-60 py-56 about-card-bg'>
       <div className='flex flex-col gap-7 justify-center items-center'>
         <div className='w-fit text-wrap max-lg:mx-auto text-6xl font-semibold text-secondary'>
           {t(aboutKurashi).toUpperCase()}

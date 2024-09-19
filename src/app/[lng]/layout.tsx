@@ -8,6 +8,7 @@ import { Footer } from '@/components/footer'
 import { navItems } from '@/constants'
 import { useTranslation } from '@/i18n'
 import ProgressBarProviders from '@/components/progress-bar-provider'
+import prisma from '@/lib/prisma'
 
 export const metadata = {
   title: 'Kurashi Home'
@@ -17,6 +18,16 @@ interface RootProps { children: React.ReactNode, params: { lng: string } }
 
 const RootLayout: React.FC<RootProps> = async ({ children, params }): Promise<React.ReactElement> => {
   const { t } = await useTranslation(params.lng)
+  const productsRaw = await prisma.product.findMany({
+    take: 3,
+    where: { isAvailable: true },
+    include: {
+      category: { select: { name: true, id: true } },
+      ProductColor: true,
+      ProductTag: true
+    }
+  })
+
   return (
     <html lang={params.lng} dir={dir(params.lng)}>
       <head>
@@ -24,9 +35,7 @@ const RootLayout: React.FC<RootProps> = async ({ children, params }): Promise<Re
       </head>
       <body className='bg-kurashi-bg-main'>
         <div className='bg-secondary-opacity backdrop-blur-md sticky top-0 z-50'>
-          <div className='pb-1 mx-auto z-10 w-4/5'>
-            <Nav t={t} links={navItems.map(item => { return { label: t(item.label), url: item.url } })} />
-          </div>
+          <Nav products={productsRaw} links={navItems.map(item => { return { label: t(item.label), url: item.url } })} />
         </div>
         <ProgressBarProviders>{children}</ProgressBarProviders>
         <Footer t={t} />

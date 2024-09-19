@@ -1,7 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
 
-import { useTranslation } from '@/i18n'
 import { ProductQueryResult } from '@/types'
 
 interface ProductCardProps {
@@ -9,8 +8,7 @@ interface ProductCardProps {
   lng: string
 }
 
-const ProductCard: React.FC<ProductCardProps> = async ({ product, lng }) => {
-  const { t } = await useTranslation(lng)
+const ProductCard: React.FC<ProductCardProps> = ({ product, lng }) => {
   return (
     <div className='product-card--hover flex flex-col items-center rounded-md max-sm:w-full relative' style={{}}>
       <div className='rounded-md bg-secondary overflow-hidden z-10'>
@@ -18,7 +16,7 @@ const ProductCard: React.FC<ProductCardProps> = async ({ product, lng }) => {
       </div>
       <div className='z-10 flex flex-col justify-center transition rounded-md hover:cursor-pointer hover:bg-opacity-0 bg-kurashi-black absolute text-center w-full h-full'>
         <div className='font-semibold text-xl text-secondary'>
-          {t(product.name?.toUpperCase() ?? '#')}
+          {product.name?.toUpperCase() ?? '#'}
         </div>
       </div>
 

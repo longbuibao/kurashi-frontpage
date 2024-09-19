@@ -120,6 +120,15 @@
 	transform: scale(110%);
 }
 
+/* blog card on homepage */
+.blog-card-homepage--hover div:nth-child(1) img {
+	transition: transform 200ms ease-in;
+}
+
+.blog-card-homepage--hover:hover div:nth-child(1) img {
+	transform: scale(110%);
+}
+
 @keyframes fade-and-disappear {
 	0% {
 		opacity: 1;
@@ -138,4 +147,11 @@
 .about-card-bg {
 	background-image: url('https://storage.googleapis.com/kurashi_frontpage_files/images/about-bg.png');
 	background-repeat: no-repeat;
+	background-size: cover;
+	transition: transform 0.5s ease;
+	overflow: hidden;
+}
+
+.about-card-bg:hover {
+	transform: scale(1.1);
 }
