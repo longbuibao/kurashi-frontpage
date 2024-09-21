@@ -26,9 +26,8 @@ const Nav: FC<NavProps> = ({ links, products }) => {
     <header className='sticky top-1 pb-1 mx-auto z-10 w-full'>
       <div className='w-4/5 mx-auto'>
         <nav className='flex justify-between items-center'>
-          <button className='flex flex-row gap-3 text-2xl relative items-center min-w-40' onClick={() => setIsOpen(!isOpen)}>
-            {isOpen ? <i className='fa-solid fa-xmark text-main text-2xl' /> : <i className='fa-solid fa-bars text-main' />}
-            <div>{isOpen ? 'Đóng' : 'Menu'}</div>
+          <button className='flex flex-row gap-3 text-3xl relative items-center min-w-40' onClick={() => setIsOpen(!isOpen)}>
+            {isOpen ? <i className='fa-solid fa-xmark text-main' /> : <i className='fa-solid fa-bars text-main' />}
           </button>
           <div className='w-80 ml-auto mr-auto'>
             <Link href='/'>
@@ -51,13 +50,13 @@ const Nav: FC<NavProps> = ({ links, products }) => {
         </nav>
       </div>
       {isOpen &&
-        <div className='absolute w-full bg-secondary backdrop-blur-md shadow-2xl flex flex-row'>
+        <div className='absolute w-full bg-kurashi-bg-main backdrop-blur-md shadow-2xl flex flex-row'>
           <div className='flex-row flex w-4/5 mx-auto'>
-            <div className='w-1/3'>
-              <div className='flex flex-col gap-10 py-10 pr-10'>
+            <div className='w-[40%]'>
+              <div className='flex flex-col gap-5 font-bold py-10 pr-10'>
                 {links.map(link => {
                   return (
-                    <div key={uuidv4()} className='w-fit'>
+                    <div key={uuidv4()} className='w-fit text-4xl'>
                       <KurashiLink>
                         <Link href={`${link.url}`}>{link.label}</Link>
                       </KurashiLink>

@@ -3,7 +3,6 @@ import { Metadata } from 'next'
 import Image from 'next/image'
 
 import { MainTitle } from '@/components/section-title'
-import { Logo } from '@/components/logo'
 import { getMetadata } from '@/utils'
 
 export async function generateMetadata (): Promise<Metadata> {
@@ -14,31 +13,48 @@ export async function generateMetadata (): Promise<Metadata> {
 
 const AboutPage: React.FC = () => {
   return (
-    <div>
-      <div className='w-4/5 mx-auto'>
-        <div className='w-fit my-10 max-lg:mx-auto'>
-          <MainTitle title='Về Kurashi' />
-        </div>
-      </div>
-      <div className='grid-rows-2 grid-cols-2 grid w-4/5 mx-auto max-lg:flex max-lg:flex-col max-lg:gap-5 max-lg:justify-center'>
-        <div className='flex flex-col gap-2 place-items-center place-content-end'>
-          <div><Logo width={450} height={157} /></div>
-          <div className='font-semibold max-lg:text-center'>
-            <h3>Kiến tạo không gian sống bằng các giải pháp nội thất tiên tiến</h3>
+    <div className='w-4/5 mx-auto pb-10 mt my-10'>
+      <div className='flex flex-col gap-10'>
+        <div className='flex flex-row gap-5'>
+          <div className='flex flex-col gap-5 w-1/2 p-10 border-r-[1px] border-[rgba(0,0,0,0.56)]'>
+            <div className='pr-[3rem]'>Công ty cổ phần Kurashi cung cấp các giải pháp về nội thất tiên tiến nhất từ Nhật Bản. Kurashi hướng đến mục tiêu góp phần nâng cao chất lượng cuộc sống của mỗi gia đình Việt thông qua những sản phẩm đạt tính thẩm mỹ, công năng và tính bền vững.</div>
+            <div className='text-7xl text-main font-bold mt-8'>{'KURASHI CORP'.toUpperCase()}</div>
+          </div>
+          <div className='flex flex-col gap-5 w-1/2 p-10'>
+            <div className='text-3xl text-main'>{'MADE IN JAPAN'.toUpperCase()}</div>
+            <div className='mt-5 pr-[3rem]'>Chúng tôi cam kết mang đến các giải pháp tiên tiến và mới nhất về công nghệ, thiết kế và gia công với chất lượng 100% ‘made in Japan’, đặc biệt là công nghệ vật liệu mới.</div>
           </div>
         </div>
-        <div className='place-content-start'>
-          <Image src='https://storage.googleapis.com/kurashi_frontpage_files/images/about.jpg' alt='about Kurashi' width={640} height={521} />
+        <div className='grid grid-cols-2 grid-rows-1 gap-20 p-10'>
+          <div className='relative pr-3'>
+            <Image alt='Về Kurashi' width={715} height={459} src='https://storage.googleapis.com/kurashi_frontpage_files/images/about_3.png' />
+            <div className='absolute text-secondary text-md top-0 p-5 w-1/2'>
+              Nhà máy đối tác sản xuất thép tráng men tại Nhật Bản
+            </div>
+          </div>
+          <div className='relative'>
+            <Image alt='Về Kurashi' width={715} height={459} src='https://storage.googleapis.com/kurashi_frontpage_files/images/about_2.png' />
+            <div className='absolute text-secondary text-md top-0 right-0 py-5 pr-5 w-1/2 text-right'>
+              Nhà máy đối tác sản xuất vật liệu phức hợp nhôm composite tại Nhật Bản
+            </div>
+          </div>
         </div>
-        <div className='my-10 col-start-2 mt-5 flex flex-col gap-5 place-content-start'>
-          <div>
-            Công ty cổ phần Kurashi cung cấp các giải pháp về nội thất phòng tắm tiên tiến nhất từ Nhật Bản. Kurashi hướng đến mục tiêu góp phần nâng cao chất lượng cuộc sống của mỗi gia đình Việt Nam, với sự tập trung vào ba yêu cầu chính của sản phẩm là: tính thẩm mĩ, tính công năng và tính an toàn.
+        <div className='flex flex-row gap-5'>
+          <div className='flex flex-col gap-5 w-1/2 p-10 border-r-[1px] border-[rgba(0,0,0,0.56)]'>
+            <div className='text-3xl text-main'>{'HỢP TÁC VIỆT-NHẬT'.toUpperCase()}</div>
+            <div className='flex flex-col gap-5 mt-5 pr-[3rem]'>
+              <div>Kurashi hợp tác toàn diện và nhập trực tiếp từ các tập đoàn tiên phong, lâu đời trong ngành hàng vật tư và thiết bị nhà ở tại Nhật Bản.</div>
+              <div>Lựa chọn và phát triển các dòng sản phẩm theo tiêu chí  hài hòa giữa 2 yếu tố 「chất lượng Nhật Bản」và 「phù hợp với người Việt</div>
+            </div>
           </div>
-          <div>
-            Kurashi cam kết mang đến các giải pháp tiên tiến và mới nhất về công nghệ vật liệu, thiết kế và công nghệ gia công với chất lượng 100% ‘made in Japan’.
-          </div>
-          <div>
-            Cùng với sự phát triển của nền kinh tế Việt Nam và sự thay đổi không ngừng của phong cách sống theo thời đại, Kurashi tin rằng mình có thể tạo ra nhiều giá trị mới cho căn nhà hiện tại nếu đi sâu vào các chi tiết và tỉ mỉ như người Nhật.
+          <div className='flex flex-col gap-5 w-1/2 p-10'>
+            <div className='text-3xl text-main'>{'GIÁ TRỊ CỐT LÕI'.toUpperCase()}</div>
+            <div className='flex flex-col gap-3 mt-5'>
+              <div>【Gia đình là số 1】</div>
+              <div>【Bền vững】</div>
+              <div>【Đẹp có gu】</div>
+              <div>【Nhà là nơi thoải mái nhất】</div>
+            </div>
           </div>
         </div>
       </div>

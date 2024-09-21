@@ -32,7 +32,7 @@ const Page = async ({ params: { lng } }: PageParam): Promise<React.ReactElement>
   const blogs = await prisma.post.findMany({ take: 3, where: { published: true } })
 
   return (
-    <main className='mt-5'>
+    <main className='mt-0'>
       <div className='w-4/5 mx-auto max-lg:w-full relative'>
         <EmblaCarousel slides={carouselSliders} options={{ loop: true }} />
       </div>
