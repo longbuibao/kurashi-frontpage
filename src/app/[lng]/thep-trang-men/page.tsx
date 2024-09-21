@@ -309,19 +309,19 @@ const Page: React.FC<PageParam> = async ({ params: { lng } }) => {
                   content: [...accessorieItems.map(x =>
                     <AccessoryCard additionalText={x.additionalText} colors={x.colors} imgUrl={x.imgUrl} size={x.size} title={x.title} key={uuidv4()} />
                   )],
-                  key: 'bro'
+                  key: '1'
                 },
                 {
                   content: [...accessorieItems.map(x =>
                     <AccessoryCard additionalText={x.additionalText} colors={x.colors} imgUrl={x.imgUrl} size={x.size} title='Kệ bếp' key={uuidv4()} />
                   )],
-                  key: 'bro'
+                  key: '2'
                 },
                 {
                   content: [...accessorieItems.map(x =>
                     <AccessoryCard additionalText={x.additionalText} colors={x.colors} imgUrl={x.imgUrl} size={x.size} title='Phụ kiện treo' key={uuidv4()} />
                   )],
-                  key: 'bro'
+                  key: '3'
                 }
                 ]}
                 tabList={['Hũ đựng gia vị', 'Kệ bếp', 'Phụ kiện treo']}

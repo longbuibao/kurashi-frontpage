@@ -23,10 +23,10 @@ const Nav: FC<NavProps> = ({ links, products }) => {
   const [isOpen, setIsOpen] = useState(false)
 
   return (
-    <header className='sticky top-1 pb-1 mx-auto z-10 w-full'>
+    <header className='sticky top-1 pb-1 mx-auto z-10 w-full h-full' onClick={() => { setIsOpen(false) }}>
       <div className='w-4/5 mx-auto'>
         <nav className='flex justify-between items-center'>
-          <button className='flex flex-row gap-3 text-3xl relative items-center min-w-40' onClick={() => setIsOpen(!isOpen)}>
+          <button className='flex flex-row gap-3 text-3xl relative items-center min-w-[1.875rem]' onClick={(e) => { e.stopPropagation(); setIsOpen(!isOpen) }}>
             {isOpen ? <i className='fa-solid fa-xmark text-main' /> : <i className='fa-solid fa-bars text-main' />}
           </button>
           <div className='w-80 ml-auto mr-auto'>
@@ -50,34 +50,41 @@ const Nav: FC<NavProps> = ({ links, products }) => {
         </nav>
       </div>
       {isOpen &&
-        <div className='absolute w-full bg-kurashi-bg-main backdrop-blur-md shadow-2xl flex flex-row'>
-          <div className='flex-row flex w-4/5 mx-auto'>
-            <div className='w-[40%]'>
-              <div className='flex flex-col gap-5 font-bold py-10 pr-10'>
-                {links.map(link => {
+        <div
+          className='h-[100vh] absolute'
+          onClick={(e) => setIsOpen(false)}
+        >
+          <div
+            className='w-full h-fit bg-kurashi-bg-main backdrop-blur-md shadow-2xl flex flex-row'
+            onClick={(e) => e.stopPropagation()}
+          >
+            <div className='flex-row flex w-4/5 mx-auto'>
+              <div className='w-[40%]'>
+                <div className='flex flex-col gap-5 font-bold py-10 pr-10'>
+                  {links.map(link => {
+                    return (
+                      <div key={uuidv4()} className='w-fit text-4xl' onClick={(e) => { e.stopPropagation(); setIsOpen(!isOpen) }}>
+                        <KurashiLink>
+                          <Link href={`${link.url}`}>{link.label}</Link>
+                        </KurashiLink>
+                      </div>
+                    )
+                  })}
+                </div>
+              </div>
+              <div className='flex flex-row gap-5 justify-center items-center'>
+                {products.sort((x, y) => x.order - y.order).map(x => {
+                  const dummy = x as Product
+                  const url = dummy.hasLandingPage ? x.landingPageUrl : `/products/product-detail/${dummy.id}`
                   return (
-                    <div key={uuidv4()} className='w-fit text-4xl'>
-                      <KurashiLink>
-                        <Link href={`${link.url}`}>{link.label}</Link>
-                      </KurashiLink>
-                    </div>
+                    <Link key={uuidv4()} href={url} onClick={(e) => { e.stopPropagation(); setIsOpen(!isOpen) }}>
+                      <ProductCard lng='vi' product={x} />
+                    </Link>
                   )
                 })}
               </div>
             </div>
-            <div className='flex flex-row gap-5 justify-center items-center'>
-              {products.sort((x, y) => x.order - y.order).map(x => {
-                const dummy = x as Product
-                const url = dummy.hasLandingPage ? x.landingPageUrl : `/products/product-detail/${dummy.id}`
-                return (
-                  <Link key={uuidv4()} href={url}>
-                    <ProductCard lng='vi' product={x} />
-                  </Link>
-                )
-              })}
-            </div>
           </div>
-
         </div>}
     </header>
   )

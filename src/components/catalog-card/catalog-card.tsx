@@ -28,14 +28,6 @@ const CatalogCard: React.FC<CatalogCardProps> = ({ thumbnail, catalogName, fileS
             <div className='text-2xl'>
               {catalogName}
             </div>
-            <div className='mt-3'>
-              <Link href={pdfLink} target='_blank' rel='noreferrer' className='w-full'>
-                <div className='flex flex-row items-center justify-between'>
-                  <div>Tải xuống</div>
-                  <i className='fa-solid fa-arrow-down' />
-                </div>
-              </Link>
-            </div>
           </KurashiLeftBorder>
         </div>
       </div>
