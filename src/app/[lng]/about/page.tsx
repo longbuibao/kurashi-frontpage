@@ -2,7 +2,6 @@ import React from 'react'
 import { Metadata } from 'next'
 import Image from 'next/image'
 
-import { MainTitle } from '@/components/section-title'
 import { getMetadata } from '@/utils'
 
 export async function generateMetadata (): Promise<Metadata> {
@@ -44,7 +43,7 @@ const AboutPage: React.FC = () => {
             <div className='text-3xl text-main'>{'HỢP TÁC VIỆT-NHẬT'.toUpperCase()}</div>
             <div className='flex flex-col gap-5 mt-5 pr-[3rem]'>
               <div>Kurashi hợp tác toàn diện và nhập trực tiếp từ các tập đoàn tiên phong, lâu đời trong ngành hàng vật tư và thiết bị nhà ở tại Nhật Bản.</div>
-              <div>Lựa chọn và phát triển các dòng sản phẩm theo tiêu chí  hài hòa giữa 2 yếu tố 「chất lượng Nhật Bản」và 「phù hợp với người Việt</div>
+              <div>Lựa chọn và phát triển các dòng sản phẩm theo tiêu chí  hài hòa giữa 2 yếu tố 「chất lượng Nhật Bản」và 「phù hợp với người Việt 」</div>
             </div>
           </div>
           <div className='flex flex-col gap-5 w-1/2 p-10'>
