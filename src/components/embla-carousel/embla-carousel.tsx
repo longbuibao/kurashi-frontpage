@@ -18,7 +18,7 @@ interface PropType {
 const EmblaCarousel: React.FC<PropType> = (props) => {
   const { slides, options, useControlButton = false, useFlatControlButton = false } = props
   const [emblaRef, emblaApi] = useEmblaCarousel(options, [
-    Autoplay({ playOnInit: false, delay: 3000 })
+    Autoplay({ playOnInit: true, delay: 3000 })
   ])
   const { selectedIndex, scrollSnaps, onDotButtonClick } = useDotButton(emblaApi)
   const { prevBtnDisabled, nextBtnDisabled, onPrevButtonClick, onNextButtonClick } = usePrevNextButtons(emblaApi)
