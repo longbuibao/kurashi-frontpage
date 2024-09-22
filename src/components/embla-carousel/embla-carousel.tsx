@@ -27,9 +27,10 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
     if (autoplay == null) return
     autoplay?.play()
   }, [emblaApi])
+  const className = useFlatControlButton ? 'embla__size-30 theme-light' : 'embla theme-light'
 
   return (
-    <section className='embla theme-light'>
+    <section className={className}>
       {useFlatControlButton && (
         <div className='my-5 embla__flat-dots'>
           {scrollSnaps.map((_, index) => (
