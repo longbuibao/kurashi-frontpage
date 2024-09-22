@@ -1,28 +1,24 @@
 import React from 'react'
 import Image from 'next/image'
 
-import { KurashiLeftBorder } from '@/components/kurashi-div'
-
 export interface ThepTrangMenFeatureCardProps {
   title: string
-  p: string
+  content: string
   imgUrl: string
 }
 
-const ThepTrangMenFeatureCard: React.FC<ThepTrangMenFeatureCardProps> = ({ imgUrl, p, title }) => {
+const ThepTrangMenFeatureCard: React.FC<ThepTrangMenFeatureCardProps> = ({ imgUrl, content, title }) => {
   return (
-    <div className='flex flex-col gap-10 items-center h-fit justify-center'>
+    <div className='flex flex-row gap-5'>
       <div>
-        <Image width={500} height={500} src={imgUrl} alt='' />
+        <Image width={116} height={258} src={imgUrl} alt='' />
       </div>
-      <div className='flex flex-col'>
+      <div className='flex flex-col w-[90%]'>
         <div className='w-fit'>
-          <KurashiLeftBorder>
-            <div className='text-xl'>{title}</div>
-          </KurashiLeftBorder>
+          <div className='text-xl'>{title.toUpperCase()}</div>
         </div>
         <div className='mt-5'>
-          {p}
+          {content}
         </div>
       </div>
     </div>

@@ -1,2 +1,6 @@
 export { default as ThepTrangMenFeatureCard } from '@/components/thep-trang-men-feature-card/thep-trang-men-feature-card'
 export type { ThepTrangMenFeatureCardProps } from '@/components/thep-trang-men-feature-card/thep-trang-men-feature-card'
+export { default as AccessoryCard } from '@/components/thep-trang-men-feature-card/acessory-card'
+export { default as ApplicationCard } from '@/components/thep-trang-men-feature-card/applicaton-card'
+export { default as ColorCard } from '@/components/thep-trang-men-feature-card/color-card'
+export { default as SizeCard } from '@/components/thep-trang-men-feature-card/size-card'

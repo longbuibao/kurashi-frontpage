@@ -2,7 +2,7 @@
 	margin: auto;
 	--slide-height: 19rem;
 	--slide-spacing: 1rem;
-	--slide-size: 100%;
+	--slide-size: 30%;
 }
 
 .embla__viewport {
@@ -115,6 +115,24 @@
 	content: '';
 }
 
+.embla__flat-dots {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+}
+
 .embla__dot--selected:after {
 	box-shadow: inset 0 0 0 0.2rem var(--text-body);
+}
+
+.embla__flat-dot--selected {
+	background: #000;
+	height: 3px;
+	width: 50px;
+}
+
+.embla__flat-dot {
+	height: 1px;
+	width: 50px;
+	background: #000;
 }
