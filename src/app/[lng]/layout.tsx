@@ -9,7 +9,7 @@ import { useTranslation } from '@/i18n'
 import ProgressBarProviders from '@/components/progress-bar-provider'
 import prisma from '@/lib/prisma'
 
-import LenisLayout from './lenis'
+// import LenisLayout from './lenis'
 
 export const metadata = {
   title: 'Kurashi Home'
@@ -38,11 +38,11 @@ const RootLayout: React.FC<RootProps> = async ({ children, params }): Promise<Re
         <div className='bg-secondary-opacity backdrop-blur-md sticky top-0 z-50'>
           <Nav products={productsRaw} links={navItems.map(item => { return { label: t(item.label), url: item.url } })} />
         </div>
-        <LenisLayout>
-          <ProgressBarProviders>
-            {children}
-          </ProgressBarProviders>
-        </LenisLayout>
+        <ProgressBarProviders>
+          {children}
+          {/* <LenisLayout>
+        </LenisLayout> */}
+        </ProgressBarProviders>
         <Footer t={t} />
         <div className='bg-[#24292e] pt-5 pb-10'>
           <div className='text-secondary hover:cursor-default text-left w-4/5 mx-auto text-xs'>Copyright 2024 Kurashi Corporation. All rights reserved</div>

@@ -144,14 +144,99 @@
 	}
 }
 
+.bg-about img {
+	transition: transform 0.5s ease, filter 0.5s ease;
+}
+
+.bg-about:hover img {
+	transform: scale(1.1);
+	filter: brightness(.6);
+}
+
 .about-card-bg {
-	background-image: url('https://storage.googleapis.com/kurashi_frontpage_files/images/about-bg.png');
-	background-repeat: no-repeat;
-	background-size: cover;
 	transition: transform 0.5s ease;
 	overflow: hidden;
 }
 
 .about-card-bg:hover {
 	transform: scale(1.1);
+}
+
+
+
+
+.header__burger {
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+	display: inline-block;
+	height: 27px;
+	position: absolute;
+	right: 0;
+	top: 10px;
+	transition: left 0.6s cubic-bezier(0.38, 0.005, 0.215, 1),
+		transform 0.6s cubic-bezier(0.38, 0.005, 0.215, 1);
+	width: 27px;
+	will-change: transform;
+	z-index: 2;
+}
+
+
+.header__burger:after,
+.header__burger:before {
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+	background-color: #437254;
+	content: "";
+	height: 2px;
+	position: absolute;
+	top: 50%;
+	transition: left 0.6s cubic-bezier(0.38, 0.005, 0.215, 1),
+		transform 0.6s cubic-bezier(0.38, 0.005, 0.215, 1),
+		transform-origin 0.6s cubic-bezier(0.38, 0.005, 0.215, 1),
+		background-color 0.6s cubic-bezier(0.38, 0.005, 0.215, 1),
+		color 0.6s cubic-bezier(0.38, 0.005, 0.215, 1);
+	width: 100%;
+	will-change: transform;
+}
+
+.header__burger:before {
+	left: 50%;
+	transform: translate(-50%, -50%) translateY(-4px);
+}
+
+.header__burger.is-active:before {
+	transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.header__burger:after {
+	left: 0;
+	transform: translateY(-50%) translateY(4px);
+	transform-origin: left center;
+}
+
+.header__burger.is-active:after {
+	left: 50%;
+	transform: translate(-50%, -50%) scaleX(1) rotate(-45deg);
+	transform-origin: center center;
+}
+
+
+
+.modal-nav {
+	opacity: 0;
+	overflow: hidden;
+	pointer-events: none;
+	transition: opacity 0.6s cubic-bezier(0.38, 0.005, 0.215, 1),
+		visibility 0.6s cubic-bezier(0.38, 0.005, 0.215, 1),
+		pointer-events 0.6s cubic-bezier(0.38, 0.005, 0.215, 1),
+		transform 0.6s cubic-bezier(0.38, 0.005, 0.215, 1);
+	visibility: hidden;
+	transform: translateY(-100%);
+}
+
+.modal-nav.is-active {
+	opacity: 1;
+	pointer-events: all;
+	visibility: visible;
+	transform: translateY(0%);
 }

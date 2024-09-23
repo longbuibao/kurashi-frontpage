@@ -1,5 +1,6 @@
 'use client'
 import React from 'react'
+import Image from 'next/image'
 import Link from 'next/link'
 
 import { useTranslationClient } from '@/i18n/client-side'
@@ -13,8 +14,9 @@ interface AboutKurashiCardProps {
 const AboutKurashiCard: React.FC<AboutKurashiCardProps> = ({ lng }) => {
   const { t } = useTranslationClient(lng, defaultNS, {})
   return (
-    <div className='max-lg:flex-col max-lg:w-full max-lg:mx-1 px-60 py-56 about-card-bg'>
-      <div className='flex flex-col gap-7 justify-center items-center'>
+    <div className='max-lg:flex-col max-lg:w-full max-lg:mx-1 h-[75vh] relative bg-about'>
+      <Image className='h-full w-full' alt='về Kurashi' src='https://storage.googleapis.com/kurashi_frontpage_files/images/about-bg.png' fill />
+      <div className='flex flex-col gap-7 justify-center items-center absolute top-1/2 right-1/2 translate-x-1/2 translate-y-[-50%]'>
         <div className='w-fit text-wrap max-lg:mx-auto text-6xl font-semibold text-secondary'>
           {t(aboutKurashi).toUpperCase()}
         </div>

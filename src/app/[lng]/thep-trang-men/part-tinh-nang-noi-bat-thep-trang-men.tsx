@@ -26,7 +26,7 @@ const PartTinhNangNoiBatThepTrangMen: React.FC<Props> = ({ setCurrentInViewDivId
       <div className='grid grid-cols-3 grid-rows-1 gap-20'>
         <ThepTrangMenFeatureCard content={features[0].content} imgUrl={features[0].thumbnail} title={features[0].title} />
         <ThepTrangMenFeatureCard content={features[1].content} imgUrl={features[1].thumbnail} title={features[1].title} />
-        <ThepTrangMenFeatureCard content={features[2].content} imgUrl={features[2].thumbnail} title={features[2].title} />
+        <ThepTrangMenFeatureCard stt content={features[2].content} imgUrl={features[2].thumbnail} title={features[2].title} />
       </div>
       <div className='w-4/5 mx-auto flex flex-row gap-5 mt-10 p-10'>
         <div>
