@@ -24,10 +24,10 @@ const PartIntroThepTrangMen: React.FC<Props> = ({ setCurrentInViewDivId }) => {
     <div ref={ref} id={`${transKey.thepTrangMen}`}>
       <div className='flex flex-row gap-5'>
         <div className='w-1/2'>
-          <Image src='https://storage.googleapis.com/kurashi_frontpage_files/images/thep_trang_men_lp_2.png' width={730} height={558} alt='Thép tráng men' />
+          <Image src='https://storage.googleapis.com/kurashi_frontpage_files/images/thep-trang-men-page/homepage_1.jpg' width={730} height={558} alt='Thép tráng men' />
         </div>
         <div className='w-1/2'>
-          <Image src='https://storage.googleapis.com/kurashi_frontpage_files/images/thep_trang_men_lp_1.png' width={730} height={558} alt='Thép tráng men' />
+          <Image src='https://storage.googleapis.com/kurashi_frontpage_files/images/thep-trang-men-page/homepage_2.jpg' width={730} height={558} alt='Thép tráng men' />
         </div>
       </div>
       <div className='flex flex-row gap-10 mt-5 bg-secondary pl-2 p-10'>
