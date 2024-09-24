@@ -85,6 +85,7 @@ const BlogsPage: React.FC<PageParam> = async ({ params: { lng }, searchParams }:
     <Link href={homeLink} key={uuidv4()}>{t(transKey.home)}</Link>,
     <Link href={defaultBlogsLink} key={uuidv4()}>{t(transKey.allBlogs)}</Link>
   ]
+
   return (
     <div className='w-4/5 mx-auto mb-10'>
       <div>

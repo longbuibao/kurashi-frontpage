@@ -12,10 +12,15 @@ import prisma from '@/lib/prisma'
 // import LenisLayout from './lenis'
 
 export const metadata = {
-  title: 'Kurashi Home'
+  title: 'Trang chủ Kurashi'
 }
 
-interface RootProps { children: React.ReactNode, params: { lng: string } }
+interface RootProps {
+  children: React.ReactNode
+  params: { lng: string }
+  phuKienNamChamSpecial: React.ReactNode
+  thepTrangMenSpecial: React.ReactNode
+}
 
 const RootLayout: React.FC<RootProps> = async ({ children, params }): Promise<React.ReactElement> => {
   const { t } = await useTranslation(params.lng)
