@@ -10,6 +10,7 @@ const config: Config = {
     colors: {
       main: '#437254',
       black: 'rgba(0, 0, 0, 0.76)',
+      blog: '#D9D9D9',
       secondary: '#e5e5e5',
       'secondary-opacity': 'rgba(229, 229, 229, 0.7)',
       'secondary-lg-opacity': 'rgba(229, 229, 229, 0.8)',
