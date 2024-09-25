@@ -1,5 +1,5 @@
-import Image from 'next/image'
 import React from 'react'
+import Image from 'next/image'
 
 import { LinkIcon, LogoFacebook, LogoZalo } from '@/components/svg-icons'
 import { imageUrls, blogImageUrls } from './const'
