@@ -39,7 +39,7 @@ const BlogThepTrangMen: React.FC = () => {
           <Image className='h-full' alt='blog phụ kiện nam châm' src='https://storage.googleapis.com/kurashi_frontpage_files/images/thep_trang_men_layer_without_bg.png' width={640} height={640} />
           <div className='w-1/2 flex flex-col gap-10'>
             <div>
-              <h2 className='text-2xl font-bold mt-10'>CẤU TẠO 6 LỚP</h2>
+              <h2 className='text-2xl font-bold'>CẤU TẠO 6 LỚP</h2>
             </div>
             <div>
               <p>Thép tráng men Kurashi có cấu tạo đa tầng, được tích hợp 6 lớp vật liệu khác nhau. Lớp mặt gồm 2 lớp men kính gọi là Dual Coating để tăng cường độ bền bề mặt sử dụng. Ở giữa là lớp kim loại nền được bao bọc bởi 2 lớp kim loại niken tạo nên khung nền vật liệu vững chắc. Phần mặt sau được phủ một lớp men kính nền chống ẩm mốc và rỉ sét, nhất là ở những nơi có khí hậu nóng ẩm và nồm.</p>
@@ -71,7 +71,7 @@ const BlogThepTrangMen: React.FC = () => {
             <p>Tại khu vực tường ốp bếp, vật liệu ốp phải đạt yêu cầu chống ố, nhất là vết dầu mỡ vì đây là khu vực thường xuyên chiên xào, nấu ăn nên vết ố và dầu mỡ dễ văng và bám bẩn. Nếu chọn phải vật liệu ốp dễ bám bẩn hoặc khó lau chùi vết dầu mỡ sẽ tạo cảm giác rất khó chịu khi nấu ăn vì đây là khu vực ngay trước mặt người nấu. Với vật liệu thép tráng men, nhờ 2 lớp men kính Dual phủ lớp bề mặt nên bạn chỉ cần dùng nước và khăn là đã có thể loại bỏ vết dầu mỡ dễ dàng. </p>
           </div>
           <div className='flex flex-row gap-10 my-10 items-center'>
-            <Image className='h-full' alt='blog phụ kiện nam châm' src='https://storage.googleapis.com/kurashi_frontpage_files/images/thep_trang_men_layer_without_bg.png' width={640} height={640} />
+            <Image className='h-full' alt='blog phụ kiện nam châm' src='https://storage.googleapis.com/kurashi_frontpage_files/images/blogs/thi_nghiem_ve_sinh_dau.png' width={640} height={640} />
             <div className='flex flex-col gap-5'>
               <div className='text-2xl font-bold my-10'><h2>THÍ NGHIỆM VỆ SINH VẾT DẦU</h2></div>
               <div>
@@ -89,14 +89,15 @@ const BlogThepTrangMen: React.FC = () => {
               <div>Hai tấm thép tráng men có thể cuộn trong một hộp carton dài dưới 1m nên vận chuyển đến công trình dễ dàng.</div>
             </div>
             <div>
-              <Image className='h-full' alt='blog phụ kiện nam châm' src='https://storage.googleapis.com/kurashi_frontpage_files/images/thep_trang_men_layer_without_bg.png' width={640} height={640} />
+              <Image className='h-full' alt='blog phụ kiện nam châm' src='https://storage.googleapis.com/kurashi_frontpage_files/images/blogs/easy_delivery.png' width={640} height={640} />
             </div>
           </div>
-          <div className='p-10 flex flex-row gap-10 my-10'>
-            <div>
-              <Image className='h-full' alt='blog phụ kiện nam châm' src='https://storage.googleapis.com/kurashi_frontpage_files/images/thep_trang_men_layer_without_bg.png' width={640} height={640} />
+          <div className='flex flex-row gap-10 my-10'>
+            <div className='flex flex-row gap-3 justify-between w-1/2'>
+              <Image className='h-full w-1/2 object-cover' alt='blog phụ kiện nam châm' src='https://storage.googleapis.com/kurashi_frontpage_files/images/blogs/easy_construct_1.png' width={640} height={640} />
+              <Image className='h-full w-1/2 object-cover' alt='blog phụ kiện nam châm' src='https://storage.googleapis.com/kurashi_frontpage_files/images/blogs/easy_construct_2.png' width={640} height={640} />
             </div>
-            <div className='w-1/2'>
+            <div className='text-wrap w-1/2'>
               <div className='text-2xl font-bold my-10'><h2>DỄ THI CÔNG CẮT GHÉP</h2></div>
               <div>Dễ cắt bằng máy cắt cầm tay hoặc kéo nên có thể ốp tường với các góc cạnh, hình dáng phức tạp ngay tại công trình. Đặc biệt có thể ốp được các góc tường uốn cong theo mong muốn.</div>
             </div>
