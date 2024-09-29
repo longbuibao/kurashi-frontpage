@@ -1,11 +1,11 @@
 import React, { Suspense } from 'react'
 import Link from 'next/link'
 import { Metadata } from 'next'
+import { Product } from '@prisma/client'
 
 import prisma from '@/lib/prisma'
 import { createCategoryMapToProducts, getMetadata } from '@/utils'
 import { ProductCard } from '@/components/product'
-import { SectionTitle } from '@/components/section-title'
 import { Breadcrumb } from '@/components/breadcrumb'
 import { useTranslation } from '@/i18n'
 import { v4 as uuidv4 } from 'uuid'
@@ -60,19 +60,17 @@ const AllProducts: React.FC<{ lng: string }> = async ({ lng }) => {
           </div>
         </div>
         <div className='flex-1 my-10'>
-          {Array.from(productsWithCategory).map(category => (
-            <div key={category[0]} className='mb-10'>
-              <div className='mx-auto w-fit'>
-                <SectionTitle title={t(category[0])} />
-              </div>
-              <div className='flex flex-wrap gap-5 justify-center items-center my-5'>
-                {category[1].map(product => (
-                  <Link key={product.id} href={product.hasLandingPage ? product.landingPageUrl : `/products/product-detail/${product.id}`}>
-                    <ProductCard product={product} lng={lng} />
-                  </Link>))}
-              </div>
-            </div>
-          ))}
+          <div className='flex flex-row gap-5 justify-center items-center'>
+            {products.sort((x, y) => x.order - y.order).map(x => {
+              const dummy = x as Product
+              const url = dummy.hasLandingPage ? x.landingPageUrl : `/products/product-detail/${dummy.id}`
+              return (
+                <Link key={uuidv4()} href={url}>
+                  <ProductCard lng='vi' product={x} />
+                </Link>
+              )
+            })}
+          </div>
         </div>
       </div>
     </div>
@@ -99,7 +97,6 @@ const ProductPage: React.FC<PageParam> = async ({ params: { lng } }: PageParam) 
         <AllProducts lng={lng} />
       </Suspense>
     </div>
-
   )
 }
 

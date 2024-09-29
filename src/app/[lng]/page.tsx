@@ -33,7 +33,7 @@ const Page = async ({ params: { lng } }: PageParam): Promise<React.ReactElement>
 
   return (
     <main className='mt-0'>
-      <div className='max-lg:w-full relative'>
+      <div className='max-lg:w-full relative w-4/5 mx-auto'>
         <EmblaCarousel slides={carouselSliders} options={{ loop: true }} />
       </div>
       <div className='mx-auto mt-10 mb-5 w-fit flex flex-col gap-5 items-center'>

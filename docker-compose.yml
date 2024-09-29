@@ -1,13 +1,15 @@
 version: '3.5'
 
 services:
-  kurashi_frontpage:
-    container_name: kurashi_frontpage
+  database_kurashi:
+    container_name: database_kurashi
     build:
       context: .
-      dockerfile: Dockerfile
+      dockerfile: db.Dockerfile
     ports:
-      - "3000:3000"
+      - "5432:5432"
+    environment:
+      - POSTGRES_PASSWORD=password
     restart: unless-stopped
 networks:
   kurashi_frontpage:

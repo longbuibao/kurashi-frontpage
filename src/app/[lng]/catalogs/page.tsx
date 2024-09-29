@@ -2,7 +2,6 @@ import React, { Suspense } from 'react'
 import Link from 'next/link'
 
 import { CatalogCard } from '@/components/catalog-card'
-import { KurashiLeftBorder } from '@/components/kurashi-div'
 import { Breadcrumb } from '@/components/breadcrumb'
 import prisma from '@/lib/prisma'
 import { home, catalogs, namespace } from '@/i18n/catalog-trans-key'
@@ -51,10 +50,8 @@ const Catalog: React.FC<PageParam> = async ({ params: { lng } }) => {
           <Breadcrumb items={breadcrumb} separator={<i className='fa-solid fa-chevron-right' />} />
         </div>
       </div>
-      <div className='my-10'>
-        <KurashiLeftBorder>
-          {t(catalogs)}
-        </KurashiLeftBorder>
+      <div className='my-5'>
+        <h1>{t(catalogs)}</h1>
       </div>
       <div className='flex flex-row gap-10 justify-center'>
         <Suspense fallback={<CatalogsSkeleton />}>

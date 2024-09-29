@@ -30,9 +30,6 @@ const Nav: FC<NavProps> = ({ links, products }) => {
             <div className='flex flex-row gap-3 text-3xl relative items-center min-w-[1.875rem] hover:cursor-pointer'>
               <div className={!isOpen ? 'header__burger' : 'header__burger is-active'} onClick={(e) => { e.stopPropagation(); setIsOpen(!isOpen) }} />
             </div>
-            {/* <button className='flex flex-row gap-3 text-3xl relative items-center min-w-[1.875rem]' onClick={(e) => { e.stopPropagation(); setIsOpen(!isOpen) }}>
-            {isOpen ? <i className='fa-solid fa-xmark text-main' /> : <i className='fa-solid fa-bars text-main' />}
-          </button> */}
             <div className='w-80 ml-auto mr-auto'>
               <Link href='/'>
                 <div className='flex flex-col justify-center items-center'>
