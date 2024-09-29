@@ -20,7 +20,7 @@ const BlogThepTrangMen: React.FC = () => {
             <div>
               <p>Bởi Diện Võ</p>
               <p className='text-black'>17/9/2024</p>
-              <div className='flex flex-row gap-3 flex-nowrap items-center'>
+              <div className='flex flex-row gap-3 flex-nowrap items-center mt-3'>
                 <LogoFacebook />
                 <LogoZalo />
                 <LinkIcon />

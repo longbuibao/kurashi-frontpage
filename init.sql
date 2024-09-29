@@ -3,7 +3,7 @@
 --
 
 -- Dumped from database version 14.12
--- Dumped by pg_dump version 14.12
+-- Dumped by pg_dump version 14.13
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -153,7 +153,11 @@ CREATE TABLE public."Product" (
     "isAvailable" boolean DEFAULT false NOT NULL,
     "productId" text DEFAULT ''::text NOT NULL,
     "primaryProductImage" text DEFAULT '#'::text NOT NULL,
-    "productVideo" text DEFAULT '#'::text NOT NULL
+    "productVideo" text DEFAULT '#'::text NOT NULL,
+    "hasLandingPage" boolean DEFAULT false NOT NULL,
+    "landingPageUrl" text DEFAULT '#'::text NOT NULL,
+    "shortIntro" text DEFAULT ''::text NOT NULL,
+    "order" integer DEFAULT '-1'::integer NOT NULL
 );
 
 
@@ -362,6 +366,7 @@ CREATE TABLE public._prisma_migrations (
 COPY public."BlogRegistrationList" (id, email, "createdAt", "updatedAt") FROM stdin;
 b40f84e0-2bf9-49ff-a564-80add18ad60c	blong1102@gmail.com	2024-05-21 16:36:04.569	2024-05-21 16:36:04.569
 1d709c58-35eb-40fa-8001-2b9d7707194f	s@gmail.com	2024-05-27 02:19:20.402	2024-05-27 02:19:20.402
+4a9f57a1-7822-4420-b399-f57354bc1d81	udemy@dgroup.co	2024-08-04 02:39:09.18	2024-08-04 02:39:09.18
 \.
 
 
@@ -370,9 +375,8 @@ b40f84e0-2bf9-49ff-a564-80add18ad60c	blong1102@gmail.com	2024-05-21 16:36:04.569
 --
 
 COPY public."Catalog" (id, name, size, "sizeUnit", "isAvailable", thumbnail, "pdfLink") FROM stdin;
-10a40439-c8ba-4dc7-878d-f9cc0a669b5e	Ga thoát sàn	2MB		f	https://storage.googleapis.com/kurashi_frontpage_files/images/Bia_catalog.jpg	https://storage.googleapis.com/kurashi_frontpage_files/images/Catalog_ga_thoat_san_KURASHI.pdf
-900a4401-053c-44b1-94b4-dc6115dbcee3	Ga thoát sàn	2MB		f	https://storage.googleapis.com/kurashi_frontpage_files/images/Bia_catalog.jpg	https://storage.googleapis.com/kurashi_frontpage_files/images/Catalog_ga_thoat_san_KURASHI.pdf
-d8632855-1b73-4a2e-88a8-e5490d875fab	Ga thoát sàn	2MB		t	https://storage.googleapis.com/kurashi_frontpage_files/images/Bia_catalog.jpg	https://cdn.kurashi.com.vn/images/Catalog_ga_thoat_san_KURASHI.pdf
+d8632855-1b73-4a2e-88a8-e5490d875fab	Ga thoát sàn	2MB		t	https://storage.googleapis.com/kurashi_frontpage_files/images/Bia_catalog.jpg	https://storage.googleapis.com/kurashi_frontpage_files/catalogs/Catalog_ga_thoat_san_KURASHI.pdf
+ffa2a460-80d4-4f77-b80a-8409affe2e21	Thép tráng men	11	MB	t	https://storage.googleapis.com/kurashi_frontpage_files/images/Catalog_TTM.jpg	https://storage.googleapis.com/kurashi_frontpage_files/catalogs/Catalog_thep_trang_men.pdf
 \.
 
 
@@ -384,6 +388,7 @@ COPY public."Category" (id, name, "isSpecialCategory") FROM stdin;
 6dd9b410-9f66-4fd6-b117-0628c8eb3aa5	bathroom-tiles	f
 02444cc2-baed-4499-8f5c-ea3984680382	Ga thoát sàn	f
 3266cb59-112c-4bbf-aa11-6ebe0eeedb5e	Ga thoát sàn	f
+ce45e1f2-bedf-477f-8105-c0fa53e167a2	Thép tráng men	f
 \.
 
 
@@ -402,6 +407,7 @@ af4d1d56-654c-4198-be1e-f7c48819df6f	Ga thoát sàn	Lorem ipsum dolor sit amet, 
 
 COPY public."ContactRegistrationList" (id, email, message, "phoneNumber", "createdAt", "updatedAt", name) FROM stdin;
 e2f5ce3c-1086-4961-9b9d-17fdc0de6070	blong1102@gmail.com	Please contact me	0782577816	2024-05-21 16:35:54.817	2024-05-21 16:35:54.817	Bùi Bảo Long
+62825f05-d725-4aca-853b-2c3285f4bcf4	blong1102@gmail.comm	j	0782577816	2024-09-07 10:55:53.934	2024-09-07 10:55:53.934	Bùi Bảo Long
 \.
 
 
@@ -426,8 +432,9 @@ COPY public."PageTitle" (id, page, title) FROM stdin;
 --
 
 COPY public."Post" (id, "createdAt", "updatedAt", title, content, published, "viewCount", "authorId", thumbnail, url, "postCategoryId", "isTrending", summary) FROM stdin;
-c5af7d9d-8a8f-4d89-820b-24604efd7cd7	2024-03-14 14:32:26.014	2024-03-14 14:32:26.034	nhà vệ sinh không mùi	Dus num con ratiuntibus il estrum ilicium alia vo-lenim inctem repe nessime et dio. Et mil maios eanonseque re volupta temporum, et liqui voloremDus num con ratiuntibus il estrum ilicium alia vo-lenim inctem repe nessime et dio. Et mil maios eanonseque re volupta temporum, et liqui voloremDus num con ratiuntibus il estrum ilicium alia vo-lenim inctem repe nessime et dio. Et mil maios eanonseque re volupta temporum, et liqui voloremDus num con ratiuntibus il estrum ilicium alia vo-lenim inctem repe nessime et dio. Et mil maios eanonseque re volupta temporum, et liqui voloremDus num con ratiuntibus il estrum ilicium alia vo-lenim inctem repe nessime et dio. Et mil maios eanonseque re volupta temporum, et liqui voloremDus num con ratiuntibus il estrum ilicium alia vo-lenim inctem repe nessime et dio. Et mil maios eanonseque re volupta temporum, et liqui volorem	t	100	8c4ceaa4-bfa9-4e8a-8f52-0d44981163df	https://storage.googleapis.com/kurashi_frontpage_files/images/blog_bo_xa.jpg	#	e6b8b835-86ec-4fd8-b7aa-397685f3b518	f	Post summary
-737616b1-6758-4c41-8993-36a4a330de54	2024-03-14 14:32:26.014	2024-03-14 14:32:26.034	nhà vệ sinh không mùi	Dus num con ratiuntibus il estrum ilicium alia vo-lenim inctem repe nessime et dio. Et mil maios eanonseque re volupta temporum, et liqui voloremDus num con ratiuntibus il estrum ilicium alia vo-lenim inctem repe nessime et dio. Et mil maios eanonseque re volupta temporum, et liqui voloremDus num con ratiuntibus il estrum ilicium alia vo-lenim inctem repe nessime et dio. Et mil maios eanonseque re volupta temporum, et liqui voloremDus num con ratiuntibus il estrum ilicium alia vo-lenim inctem repe nessime et dio. Et mil maios eanonseque re volupta temporum, et liqui voloremDus num con ratiuntibus il estrum ilicium alia vo-lenim inctem repe nessime et dio. Et mil maios eanonseque re volupta temporum, et liqui voloremDus num con ratiuntibus il estrum ilicium alia vo-lenim inctem repe nessime et dio. Et mil maios eanonseque re volupta temporum, et liqui volorem	t	100	8c4ceaa4-bfa9-4e8a-8f52-0d44981163df	https://storage.googleapis.com/kurashi_frontpage_files/images/blog_bo_xa.jpg	#	b6fc2af8-31e0-448c-8ab5-cc1f01b915f9	f	Post summary
+c5af7d9d-8a8f-4d89-820b-24604efd7cd7	2024-03-14 14:32:26.014	2024-03-14 14:32:26.034	Thép tráng men có gì hay	A luxurious enamel kitchen panel. A masterpiece baked at approximately 800℃.	t	100	8c4ceaa4-bfa9-4e8a-8f52-0d44981163df	https://storage.googleapis.com/kurashi_frontpage_files/images/blog_3.png	#	e6b8b835-86ec-4fd8-b7aa-397685f3b518	f	Cấu tạo 6 lớp và tính chất đặc biệt của vật liệu thép tráng men
+737616b1-6758-4c41-8993-36a4a330de54	2024-03-14 14:32:26.014	2024-03-14 14:32:26.034	Bếp tiện lợi với phụ kiện nam châm	A luxurious enamel kitchen panel. A masterpiece baked at approximately 800℃.	t	100	8c4ceaa4-bfa9-4e8a-8f52-0d44981163df	https://storage.googleapis.com/kurashi_frontpage_files/images/blog_1.png	#	b6fc2af8-31e0-448c-8ab5-cc1f01b915f9	f	Bếp tiện lợi với phụ kiện nam châm di chuyển tự do
+21c465f0-0fbf-4993-9016-d407f351c1eb	2024-09-15 17:38:19.499	2024-09-15 17:38:19.499	Nhà vệ sinh không mùi hôi		t	0	\N	https://storage.googleapis.com/kurashi_frontpage_files/images/blog_2.png	#	\N	f	Nhà vệ sinh hết mùi hôi và tắc nghẽn nhờ ga thoát sàn tích hợp bộ xả chuyên dụng
 \.
 
 
@@ -446,18 +453,10 @@ b6fc2af8-31e0-448c-8ab5-cc1f01b915f9	furniture-howto	t
 -- Data for Name: Product; Type: TABLE DATA; Schema: public; Owner: -
 --
 
-COPY public."Product" (id, name, "categoryId", "subCategoryId", thumbnail, url, "isAvailable", "productId", "primaryProductImage", "productVideo") FROM stdin;
-08fe1547-66bd-48c3-9c89-dfdb1bbd3016	Ga thoát sàn dài	02444cc2-baed-4499-8f5c-ea3984680382	\N	#	#	f	KSP-GTS-600115	#	#
-89f5fac8-0906-4c45-b0ff-5a30755ef07a	Ga thoát sàn dài	02444cc2-baed-4499-8f5c-ea3984680382	\N	#	#	f	KSP-GTS-750116	#	#
-1d1505ee-9f46-4b6f-892c-607ac9047854	Ga thoát sàn dài	02444cc2-baed-4499-8f5c-ea3984680382	\N	#	#	f	KSP-GTS-900117	#	#
-86277522-877e-468b-8397-af20573b75bb	Ga thoát sàn dài	02444cc2-baed-4499-8f5c-ea3984680382	\N	#	#	f	KSP-GTS-200118	#	#
-efc033c4-f8cd-4ae4-ba56-21a75a5284b6	Ga thoát sàn dài	02444cc2-baed-4499-8f5c-ea3984680382	\N	#	#	f	KSP-GTS-600119	#	#
-174c0c02-fd46-4e49-aeaa-c21d4c27de8e	Ga thoát sàn dài	02444cc2-baed-4499-8f5c-ea3984680382	\N	#	#	f	KSP-GTS-800120	#	#
-b59c0390-b842-4e87-9086-4bab00af1d8c	Ga thoát sàn dài	02444cc2-baed-4499-8f5c-ea3984680382	\N	#	#	f	KSP-GTS-250121	#	#
-0953416b-f68f-4fb7-b546-3f958b401d04	Ga thoát sàn dài	02444cc2-baed-4499-8f5c-ea3984680382	\N	https://storage.googleapis.com/kurashi_frontpage_files/images/THUMBNAIL_GTS_DAI.png	#	t	KSP-GTS-450114	#	https://www.youtube.com/watch?v=BSLhfbM36KM
-094a6aa3-8e4d-4f26-a393-e7908b3a69a4	Ga thoát sàn dài	02444cc2-baed-4499-8f5c-ea3984680382	\N	https://storage.googleapis.com/kurashi_frontpage_files/images/THUMBNAIL_GTS_DAI.png	#	f	KSP-GTS-450114	#	https://www.youtube.com/watch?v=BSLhfbM36KM
-36fee85f-1453-456e-9cd7-7eacafef3e43	Ga thoát sàn lát gạch	02444cc2-baed-4499-8f5c-ea3984680382	\N	https://storage.googleapis.com/kurashi_frontpage_files/images/THUMBNAIL_GTS_GACH_1.png	#	t	KSP-GTS-112	https://storage.googleapis.com/kurashi_frontpage_files/images/PRIMARY_GTS_LAT_GACH_1.png	https://www.youtube.com/watch?v=5dYHmVv6F74
-e4060ab7-c268-4a00-8e17-5e020c0fa1e9	Ga thoát sàn dài	02444cc2-baed-4499-8f5c-ea3984680382	\N	#	#	f	KSP-GTS-150113	#	#
+COPY public."Product" (id, name, "categoryId", "subCategoryId", thumbnail, url, "isAvailable", "productId", "primaryProductImage", "productVideo", "hasLandingPage", "landingPageUrl", "shortIntro", "order") FROM stdin;
+f9a7c808-f80f-4d07-bfc8-f6777a71a1d4	Thép tráng men	ce45e1f2-bedf-477f-8105-c0fa53e167a2	\N	https://storage.googleapis.com/kurashi_frontpage_files/images/products/thep-trang-men.png	#	t		#	#	t	/thep-trang-men		1
+0953416b-f68f-4fb7-b546-3f958b401d04	Ga thoát sàn dài	02444cc2-baed-4499-8f5c-ea3984680382	\N	https://storage.googleapis.com/kurashi_frontpage_files/images/products/gts-dai.png	#	t	KSP-GTS-450114	#	https://www.youtube.com/watch?v=BSLhfbM36KM	f	#		3
+36fee85f-1453-456e-9cd7-7eacafef3e43	Ga thoát sàn lát gạch	02444cc2-baed-4499-8f5c-ea3984680382	\N	https://storage.googleapis.com/kurashi_frontpage_files/images/products/gts-lat-gach.png	#	t	KSP-GTS-112	https://storage.googleapis.com/kurashi_frontpage_files/images/PRIMARY_GTS_LAT_GACH_1.png	https://www.youtube.com/watch?v=5dYHmVv6F74	f	#		2
 \.
 
 
@@ -615,17 +614,17 @@ b088f23c-a0af-4f7f-b268-854cc306d896	japan
 --
 
 COPY public."ProductSize" (id, quantity, "twoDimCad", "productManual", "productId", unit) FROM stdin;
+adc0a40d-90ab-47f7-af46-0532196344ea	4	https://storage.googleapis.com/kurashi_frontpage_files/cad/KSP-GTS-750116.pdf	#	\N	mm
+f22b6025-b78e-43fb-bf3a-0a1b42f2706c	4	https://storage.googleapis.com/kurashi_frontpage_files/cad/KSP-GTS-900117.pdf	#	\N	mm
+e53837e7-90db-48d6-8179-e9906b7f883f	5	https://storage.googleapis.com/kurashi_frontpage_files/cad/KSP-GTS-250121.pdf	#	\N	mm
+01f7cd31-12ab-4b03-b616-417fc5656443	4	https://storage.googleapis.com/kurashi_frontpage_files/cad/KSP-GTS-450114.pdf	#	\N	mm
 5ba03bd0-8460-4a08-b0db-58246bd7c4f2	4	#	#	0953416b-f68f-4fb7-b546-3f958b401d04	mm
-01f7cd31-12ab-4b03-b616-417fc5656443	4	https://cdn.kurashi.com.vn/cad/KSP-GTS-450114.pdf	#	094a6aa3-8e4d-4f26-a393-e7908b3a69a4	mm
-adc0a40d-90ab-47f7-af46-0532196344ea	4	https://cdn.kurashi.com.vn/cad/KSP-GTS-750116.pdf	#	89f5fac8-0906-4c45-b0ff-5a30755ef07a	mm
-f22b6025-b78e-43fb-bf3a-0a1b42f2706c	4	https://cdn.kurashi.com.vn/cad/KSP-GTS-900117.pdf	#	1d1505ee-9f46-4b6f-892c-607ac9047854	mm
-e53837e7-90db-48d6-8179-e9906b7f883f	5	https://cdn.kurashi.com.vn/cad/KSP-GTS-250121.pdf	#	b59c0390-b842-4e87-9086-4bab00af1d8c	mm
-c27f90af-be70-4174-b712-a9726a44cc64	4	https://cdn.kurashi.com.vn/cad/KSP-GTS-800120.pdf	#	174c0c02-fd46-4e49-aeaa-c21d4c27de8e	mm
-b9a287a3-26c6-4ab7-959d-e65c5ecf44f6	4	https://cdn.kurashi.com.vn/cad/KSP-GTS-600115.pdf	#	08fe1547-66bd-48c3-9c89-dfdb1bbd3016	mm
-45113cfb-55d4-432e-a435-e26a35e16bc3	10	https://cdn.kurashi.com.vn/cad/KSP-GTS-150113.pdf	#	e4060ab7-c268-4a00-8e17-5e020c0fa1e9	mm
-ec72ed0b-8b39-4e3b-9e96-45b62aeb9c0c	4	https://cdn.kurashi.com.vn/cad/KSP-GTS-600119.pdf	#	efc033c4-f8cd-4ae4-ba56-21a75a5284b6	mm
-82623198-dca9-480a-bada-8a281d598b0d	10	https://cdn.kurashi.com.vn/cad/KSP-GTS-200118.pdf	#	86277522-877e-468b-8397-af20573b75bb	mm
-f86f7d0f-5578-4c20-ac97-2ec66be4461b	8	https://cdn.kurashi.com.vn/cad/KSP-GTS-112.pdf	https://cdn.kurashi.com.vn/user_manual/HDSD_GTS_LAT_GACH.pdf	36fee85f-1453-456e-9cd7-7eacafef3e43	mm
+f86f7d0f-5578-4c20-ac97-2ec66be4461b	8	https://storage.googleapis.com/kurashi_frontpage_files/cad/KSP-GTS-112.pdf	https://storage.googleapis.com/kurashi_frontpage_files/user_manual/HDSD_GTS_LAT_GACH.pdf	36fee85f-1453-456e-9cd7-7eacafef3e43	mm
+82623198-dca9-480a-bada-8a281d598b0d	10	https://storage.googleapis.com/kurashi_frontpage_files/cad/KSP-GTS-200118.pdf	#	\N	mm
+ec72ed0b-8b39-4e3b-9e96-45b62aeb9c0c	4	https://storage.googleapis.com/kurashi_frontpage_files/cad/KSP-GTS-600119.pdf	#	\N	mm
+c27f90af-be70-4174-b712-a9726a44cc64	4	https://storage.googleapis.com/kurashi_frontpage_files/cad/KSP-GTS-800120.pdf	#	\N	mm
+45113cfb-55d4-432e-a435-e26a35e16bc3	10	https://storage.googleapis.com/kurashi_frontpage_files/cad/KSP-GTS-150113.pdf	#	\N	mm
+b9a287a3-26c6-4ab7-959d-e65c5ecf44f6	4	https://storage.googleapis.com/kurashi_frontpage_files/cad/KSP-GTS-600115.pdf	#	\N	mm
 \.
 
 
@@ -703,17 +702,8 @@ COPY public."_ProductToProductOrigin" ("A", "B") FROM stdin;
 
 COPY public."_ProductToProductVariants" ("A", "B") FROM stdin;
 0953416b-f68f-4fb7-b546-3f958b401d04	a2f32946-f5e8-4c09-a458-13823a9e9ed8
-e4060ab7-c268-4a00-8e17-5e020c0fa1e9	a2f32946-f5e8-4c09-a458-13823a9e9ed8
-08fe1547-66bd-48c3-9c89-dfdb1bbd3016	a2f32946-f5e8-4c09-a458-13823a9e9ed8
-89f5fac8-0906-4c45-b0ff-5a30755ef07a	a2f32946-f5e8-4c09-a458-13823a9e9ed8
-1d1505ee-9f46-4b6f-892c-607ac9047854	a2f32946-f5e8-4c09-a458-13823a9e9ed8
-86277522-877e-468b-8397-af20573b75bb	1cc0ca47-d82b-411e-82cb-64ffa0e20454
-efc033c4-f8cd-4ae4-ba56-21a75a5284b6	1cc0ca47-d82b-411e-82cb-64ffa0e20454
-174c0c02-fd46-4e49-aeaa-c21d4c27de8e	1cc0ca47-d82b-411e-82cb-64ffa0e20454
-b59c0390-b842-4e87-9086-4bab00af1d8c	a84e0f2d-ab1c-4f7e-b71c-0ca55af5c13e
 0953416b-f68f-4fb7-b546-3f958b401d04	a84e0f2d-ab1c-4f7e-b71c-0ca55af5c13e
 0953416b-f68f-4fb7-b546-3f958b401d04	1cc0ca47-d82b-411e-82cb-64ffa0e20454
-094a6aa3-8e4d-4f26-a393-e7908b3a69a4	a2f32946-f5e8-4c09-a458-13823a9e9ed8
 \.
 
 
@@ -764,6 +754,11 @@ b5526792-6ccd-4dc0-bb1f-286736b6de05	6f95e66edea9be2fc713772054abd664bf414d455fa
 bd4bb5d1-4c83-4ca2-b9ef-a12d119ab63e	e1957be70ed7f8e05dea1050ea50a63bd9ffec8491d20a62a8321627810a75cb	2024-05-11 09:06:26.382724+00	20240511090623_add_back_mn_relation	\N	\N	2024-05-11 09:06:25.335646+00	1
 f29e3ed4-a43e-4c8a-bb40-88d0742a520a	0dfab1f92d5d3dbceec5f54e05a19350b75509f0a3d3ba3f7b31cf89732a1e09	2024-05-25 07:07:42.336646+00	20240525070740_add_catalog_model	\N	\N	2024-05-25 07:07:41.322292+00	1
 95120af0-4e70-4d5d-aa9f-5a6726096b1a	eae48e354c06df0bfaa2a600007312b64f5e3e545486c3c08ceb05618dfb429f	2024-05-25 07:25:16.910008+00	20240525072514_add_catalog_pdf_link	\N	\N	2024-05-25 07:25:15.920453+00	1
+b5716d29-a97c-41d5-a681-44d78e1ade2a	01e26546b8cbc5bba3168534b2110670e22514826ec966afbf4bad2f97ca6487	2024-09-11 16:16:07.224946+00	20240908085643_add_product_landing_page	\N	\N	2024-09-11 16:16:07.157095+00	1
+271d9250-a46b-47a2-a2fc-78d98c6b09c2	2e219538955ee5851c899f1c69e972f826c2f8e2dc210bcbede35ed785d15014	\N	20240908090345_add_default_value_for_has_landing_page_and_landingpageurl	A migration failed to apply. New migrations cannot be applied before the error is recovered from. Read more about how to resolve migration issues in a production database: https://pris.ly/d/migrate-resolve\n\nMigration name: 20240908090345_add_default_value_for_has_landing_page_and_landingpageurl\n\nDatabase error code: 23502\n\nDatabase error:\nERROR: column "landingPageUrl" of relation "Product" contains null values\n\nDbError { severity: "ERROR", parsed_severity: Some(Error), code: SqlState(E23502), message: "column \\"landingPageUrl\\" of relation \\"Product\\" contains null values", detail: None, hint: None, position: None, where_: None, schema: Some("public"), table: Some("Product"), column: Some("landingPageUrl"), datatype: None, constraint: None, file: Some("tablecmds.c"), line: Some(5901), routine: Some("ATRewriteTable") }\n\n   0: sql_schema_connector::apply_migration::apply_script\n           with migration_name="20240908090345_add_default_value_for_has_landing_page_and_landingpageurl"\n             at schema-engine/connectors/sql-schema-connector/src/apply_migration.rs:106\n   1: schema_core::commands::apply_migrations::Applying migration\n           with migration_name="20240908090345_add_default_value_for_has_landing_page_and_landingpageurl"\n             at schema-engine/core/src/commands/apply_migrations.rs:91\n   2: schema_core::state::ApplyMigrations\n             at schema-engine/core/src/state.rs:201	2024-09-11 17:05:27.099839+00	2024-09-11 16:16:07.231462+00	0
+67932bbb-c254-46e3-8a10-423aed5b0a7a	2e219538955ee5851c899f1c69e972f826c2f8e2dc210bcbede35ed785d15014	2024-09-11 17:06:36.435411+00	20240908090345_add_default_value_for_has_landing_page_and_landingpageurl	\N	\N	2024-09-11 17:06:35.280634+00	1
+79ae35b2-3439-4f1b-8507-e228b6c89a33	3df8c035f70688a2222eb7c0e070376a8621f44776d69cc0d9690493d930330a	2024-09-15 04:49:12.188519+00	20240914073030_add_product_short_intro_text	\N	\N	2024-09-15 04:49:12.146796+00	1
+f2e80306-c5c3-4f1c-802d-f023a564708f	a6b7ae0a472efcad12c2fbfda4a5add6beccda75e14d0636523e1ad20cdfc15c	2024-09-15 10:25:36.077762+00	20240915065713_add_product_render_order	\N	\N	2024-09-15 10:25:36.016747+00	1
 \.
 
 

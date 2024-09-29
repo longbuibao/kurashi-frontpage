@@ -25,7 +25,7 @@ const CatalogCard: React.FC<CatalogCardProps> = ({ thumbnail, catalogName, fileS
       <div>
         <div className='mt-5'>
           <KurashiLeftBorder>
-            <div className='text-2xl'>
+            <div className='text-xl'>
               {catalogName}
             </div>
           </KurashiLeftBorder>
