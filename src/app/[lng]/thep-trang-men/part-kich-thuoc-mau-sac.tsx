@@ -20,16 +20,16 @@ const PartKichThuocMauSac: React.FC<PartKichThuocMauSacProps> = ({ setCurrentInV
   })
 
   return (
-    <div ref={ref} id={`${transKey.colorAndSize}`}>
-      <div className='flex flex-row gap-10 mt-14 justify-center'>
-        <div><ColorCard color='kurashiT' colorName='Màu trắng' /></div>
-        <div><ColorCard color='kurashiX' colorName='Màu xám nhạt' /></div>
-        <div><ColorCard color='kurashiB' colorName='Màu be' /></div>
+    <div ref={ref} id={`${transKey.colorAndSize}`} className='w-4/5 mx-auto'>
+      <div className='flex flex-row justify-between mt-14 items-end'>
+        <SizeCard size='s' />
+        <SizeCard size='m' />
+        <SizeCard size='l' />
       </div>
-      <div className='flex flex-row gap-10 mt-14 justify-center items-end'>
-        <div><SizeCard size='s' /></div>
-        <div><SizeCard size='m' /></div>
-        <div><SizeCard size='l' /></div>
+      <div className='flex flex-row mt-14 justify-between gap-[0.5px]'>
+        <div className='w-1/3'><ColorCard color='kurashiT' colorName='Màu trắng' /></div>
+        <div className='w-1/3'><ColorCard color='kurashiX' colorName='Màu xám nhạt' /></div>
+        <div className='w-1/3'><ColorCard color='kurashiB' colorName='Màu be' /></div>
       </div>
     </div>
   )

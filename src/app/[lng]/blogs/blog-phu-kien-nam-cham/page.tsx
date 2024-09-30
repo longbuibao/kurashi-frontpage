@@ -57,7 +57,7 @@ const BlogPhuKienNamCham: React.FC = () => {
             <div>Giải pháp kệ nam châm hoàn toàn khác biết để đựng gia vị hoặc để đồ decor trên tấm ốp bếp bằng thép tráng men. </div>
           </div>
           <div className='w-1/2'>
-            <Image alt='blog phụ kiện nam châm' src='https://storage.googleapis.com/kurashi_frontpage_files/images/thep_trang_men_slider/10.jpg' width={640} height={640} />
+            <Image alt='blog phụ kiện nam châm' src='https://storage.googleapis.com/kurashi_frontpage_files/images/blogs/blog_phu_kien_nam_cham.jpg' width={640} height={640} />
           </div>
         </div>
         <div className='flex flex-col gap-5 p-10 bg-blog'>

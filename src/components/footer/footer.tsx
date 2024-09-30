@@ -35,7 +35,7 @@ const Footer: React.FC<FooterProps> = ({ t }) => {
           <div className='flex flex-col w-1/4'>
             <div className='text-2xl'>SNS</div>
             <div className='flex flex-row gap-3 ml-2 pt-5'>
-              <LogoFacebook />
+              <LogoFacebook color='#fff' />
               <Link href='https://www.youtube.com/channel/UChqsY9O8M5Y70iMC5S9bdyQ' target='_blank' rel='noreferrer'>
                 <LogoYoutube />
               </Link>

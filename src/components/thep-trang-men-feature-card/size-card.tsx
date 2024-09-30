@@ -6,9 +6,9 @@ interface SizeCardProps {
 
 const SizeCard: React.FC<SizeCardProps> = ({ size }) => {
   const availableCssClasses: Map<string, string> = new Map([
-    ['s', 'w-[200px] h-[250px] border p-5 border-opacity-25 border-[#000]'],
-    ['m', 'w-[200px] h-[350px] border p-5 border-opacity-25 border-[#000]'],
-    ['l', 'w-[273px] h-[350px] border p-5 border-opacity-25 border-[#000]']
+    ['s', 'w-[200px] h-[250px] border p-5 border-opacity-25 border-[#000] '],
+    ['m', 'w-[200px] h-[350px] border p-5 border-opacity-25 border-[#000] '],
+    ['l', 'w-[273px] h-[350px] border p-5 border-opacity-25 border-[#000] ']
   ])
   const sizes: Map<string, string> = new Map([
     ['s', '890x1800mm'],
@@ -17,13 +17,12 @@ const SizeCard: React.FC<SizeCardProps> = ({ size }) => {
   ])
   const className = availableCssClasses.get(size)
   return (
-    <div>
+    <div className='w-fit'>
       <div className={className}>
-        <div className='rounded-lg w-full h-full'>
-          <div className='flex flex-col justify-center w-full h-full items-center'>
-            {`${sizes.get(size) ?? ''}`}
-          </div>
-        </div>
+        <div className='rounded-lg w-full h-full' />
+      </div>
+      <div className='text-center mt-3'>
+        {`${sizes.get(size) ?? ''}`}
       </div>
     </div>
   )

@@ -55,14 +55,12 @@ const BlogThepTrangMen: React.FC = () => {
               Vật liệu thép tráng men Kurashi đảm bảo các tính chất ưu việt của vật liệu kết hợp thép và men kính như khả năng chống trầy xước, chống cháy và chống ố vượt trội, cũng như khả năng kết hợp dễ dàng, tiện lợi của phụ kiện nam châm.
             </p>
           </div>
-          <div className='flex flex-row gap-10 mt-10'>
+          <div className='flex flex-row gap-10 my-10 justify-between gap-10'>
             {images.map(x => (
-              <div key={x.imageUrl} className='h-[30vh] w-1/4'>
-                <Image className='h-1/2' src={x.imageUrl} width={100} height={100} alt='tính năng của thép tráng men' />
-                <div className='mt-3'>
-                  <div>
-                    {x.title}
-                  </div>
+              <div key={x.imageUrl} className='h-[30vh] flex flex-col items-center'>
+                <Image src={x.imageUrl} width={834} height={775} alt='tính năng của thép tráng men' />
+                <div className='mt-3 text-center'>
+                  {x.title}
                 </div>
               </div>
             ))}
