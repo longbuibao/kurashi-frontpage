@@ -15,11 +15,10 @@ const ProductCard: React.FC<ProductCardProps> = ({ product, lng }) => {
         <Image className='transform transition-transform duration-500 h-full' src={product.thumbnail ?? '#'} alt='product thumbnail' width={640} height={360} />
       </div>
       <div className='z-10 flex flex-col justify-center transition rounded-md hover:cursor-pointer hover:bg-opacity-0 bg-kurashi-black absolute text-center w-full h-full'>
-        <div className='font-semibold text-xl text-secondary'>
+        <div className='font-semibold text-xl max-md:text-base text-secondary'>
           {product.name?.toUpperCase() ?? '#'}
         </div>
       </div>
-
     </div>
   )
 }

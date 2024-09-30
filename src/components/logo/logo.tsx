@@ -8,7 +8,7 @@ interface LogoProps {
 }
 
 const Logo: FC<LogoProps> = ({ width, height = -1, srcImage = 'https://storage.googleapis.com/kurashi_frontpage_files/images/kurashi-logo.png' }) => {
-  return <Image width={width} height={height} className={`w-[${width}px] h-[${height}px]`} src={srcImage} alt='Kurashi logo' />
+  return <Image className='w-1/2' width={width} height={height} src={srcImage} alt='Kurashi logo' />
 }
 
 export default Logo
