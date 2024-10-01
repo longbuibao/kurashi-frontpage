@@ -16,7 +16,7 @@ const Footer: React.FC<FooterProps> = ({ t }) => {
   return (
     <div className='bg-[#24292e] text-secondary'>
       <div className='w-4/5 mx-auto border-b-2 border-secondary pb-7'>
-        <div className='mb-5 pt-10 pb-5'>
+        <div className='mb-5 pt-10 pb-5 w-1/2'>
           <Link href='/'>
             <Logo width={300} srcImage='https://storage.googleapis.com/kurashi_frontpage_files/images/logo_white.png' />
           </Link>
