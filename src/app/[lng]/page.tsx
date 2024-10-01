@@ -60,7 +60,7 @@ const Page = async ({ params: { lng } }: PageParam): Promise<React.ReactElement>
           <AboutKurashiCard lng={lng} />
         </div>
       </div>
-      <div className='bg-secondary mt-20 pb-10'>
+      <div className='bg-secondary mt-20 pb-10 block max-md:hidden'>
         <div className='w-[60%] mx-auto max-lg:w-full flex flex-row gap-36 py-20'>
           <Suspense fallback={<BlogSkeleton />}>
             <div className='w-1/2 flex flex-col justify-center'>
@@ -82,6 +82,17 @@ const Page = async ({ params: { lng } }: PageParam): Promise<React.ReactElement>
               </div>
             </div>
           </Suspense>
+        </div>
+      </div>
+      <div className='hidden max-md:block w-4/5 mx-auto'>
+        <div className='my-10'>
+          <BlogCardHomepage blog={blogs[1]} />
+        </div>
+        <div className='my-10'>
+          <BlogCardHomepage blog={blogs[2]} />
+        </div>
+        <div className='my-10'>
+          <BlogCardHomepage blog={blogs[0]} />
         </div>
       </div>
     </main>

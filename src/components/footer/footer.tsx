@@ -16,13 +16,13 @@ const Footer: React.FC<FooterProps> = ({ t }) => {
   return (
     <div className='bg-[#24292e] text-secondary'>
       <div className='w-4/5 mx-auto border-b-2 border-secondary pb-7'>
-        <div className='mb-5 pt-10 pb-5 w-1/2'>
+        <div className='mb-5 pt-10 pb-5 w-1/2 max-md:w-full'>
           <Link href='/'>
             <Logo width={300} srcImage='https://storage.googleapis.com/kurashi_frontpage_files/images/logo_white.png' />
           </Link>
         </div>
-        <div className='flex flex-row justify-between'>
-          <div className='flex flex-row w-1/2'>
+        <div className='flex flex-row justify-between max-md:flex-col'>
+          <div className='flex flex-row w-1/2 max-md:w-full max-md:justify-between'>
             {footerLinks.map(footerLink =>
               <div key={uuidv4()} className='flex flex-col grow'>
                 <div className='flex flex-col gap-5 w-fit max-lg:gap-2'>
@@ -32,7 +32,7 @@ const Footer: React.FC<FooterProps> = ({ t }) => {
               </div>
             )}
           </div>
-          <div className='flex flex-col w-1/4'>
+          <div className='flex flex-col w-1/4 max-md:w-full max-md:justify-between max-md:my-10'>
             <div className='text-2xl'>SNS</div>
             <div className='flex flex-row gap-3 ml-2 pt-5'>
               <LogoFacebook color='#fff' />
@@ -44,7 +44,7 @@ const Footer: React.FC<FooterProps> = ({ t }) => {
               </Link>
             </div>
           </div>
-          <div className='w-1/4'>
+          <div className='w-1/4 max-md:w-full max-md:justify-between'>
             <div className='text-2xl'>ACCESS</div>
             <div className='flex flex-col gap-5 items-start pt-5'>
               <div>{t(address)}: {t(addressName)}</div>

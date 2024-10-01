@@ -71,7 +71,7 @@ const Nav: FC<NavProps> = ({ links, products }) => {
                 })}
               </div>
             </div>
-            <div className='flex flex-row gap-5 justify-center items-center '>
+            <div className='flex flex-row gap-5 justify-center items-center max-md:hidden'>
               {products.sort((x, y) => x.order - y.order).map(x => {
                 const dummy = x as Product
                 const url = dummy.hasLandingPage ? x.landingPageUrl : `/products/product-detail/${dummy.id}`

@@ -15,9 +15,9 @@ const AboutKurashiCard: React.FC<AboutKurashiCardProps> = ({ lng }) => {
   const { t } = useTranslationClient(lng, defaultNS, {})
   return (
     <div className='max-lg:flex-col max-lg:w-full max-lg:mx-1 h-[75vh] relative bg-about'>
-      <Image className='h-full w-full' alt='về Kurashi' src='https://storage.googleapis.com/kurashi_frontpage_files/images/thep-trang-men-page/JFE.jpg' fill />
+      <Image className='h-full w-full max-md:object-cover' alt='về Kurashi' src='https://storage.googleapis.com/kurashi_frontpage_files/images/thep-trang-men-page/JFE.jpg' fill />
       <div className='flex flex-col gap-7 justify-center items-center absolute top-1/2 right-1/2 translate-x-1/2 translate-y-[-50%]'>
-        <div className='w-fit text-wrap max-lg:mx-auto text-6xl font-semibold text-secondary'>
+        <div className='text-wrap text-6xl font-semibold text-secondary'>
           {t(aboutKurashi).toUpperCase()}
         </div>
         <div className='text-2xl max-lg:mx-auto text-secondary'>{t(aboutContentTitle)}</div>
