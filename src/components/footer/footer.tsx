@@ -22,10 +22,10 @@ const Footer: React.FC<FooterProps> = ({ t }) => {
           </Link>
         </div>
         <div className='flex flex-row justify-between max-md:flex-col'>
-          <div className='flex flex-row w-1/2 max-md:w-full max-md:justify-between'>
+          <div className='flex flex-row w-1/2 max-md:w-full max-md:justify-between max-md:gap-5'>
             {footerLinks.map(footerLink =>
               <div key={uuidv4()} className='flex flex-col grow'>
-                <div className='flex flex-col gap-5 w-fit max-lg:gap-2'>
+                <div className='flex flex-col gap-5 w-fit max-lg:gap-2 max-md:gap-8 max-md:w-full'>
                   {footerLink.links.map(link =>
                     <Link key={uuidv4()} href={`${link.url}`}>{t(link.label)}</Link>)}
                 </div>
