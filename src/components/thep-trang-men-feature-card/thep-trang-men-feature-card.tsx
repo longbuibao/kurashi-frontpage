@@ -10,7 +10,7 @@ export interface ThepTrangMenFeatureCardProps {
 
 const ThepTrangMenFeatureCard: React.FC<ThepTrangMenFeatureCardProps> = ({ imgUrl, content, title, stt = false }) => {
   return (
-    <div className='flex flex-row gap-5 h-[20vh]'>
+    <div className='flex flex-row gap-5 h-[20vh] max-md:h-fit'>
       <div>
         <Image className={stt ? 'h-auto' : 'h-full'} width={116} height={258} src={imgUrl} alt='' />
       </div>
