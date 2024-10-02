@@ -5,6 +5,12 @@
 	--slide-size: 30%;
 }
 
+@media not all and (min-width: 768px) {
+	.embla__size-30 {
+		--slide-size: 100%;
+	}
+}
+
 .embla {
 	margin: auto;
 	--slide-height: 19rem;

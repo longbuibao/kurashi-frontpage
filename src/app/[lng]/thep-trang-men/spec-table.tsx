@@ -27,7 +27,7 @@ const SpecTable: React.FC = () => {
     chars: 'Độ cứng Mohs',
     result: '5.5'
   }, {
-    chars: 'Khả năng chống xước, Phương pháp Taber 1.3mg (Vòng ma sát CS-17/1kg 1000 vòng quay)',
+    chars: 'Chống xước, Phương pháp Taber 1.3mg (Vòng ma sát CS-17/1kg 1000 vòng quay)',
     result: '1.3mg'
   }, {
     chars: 'Khả năng chống dung môi (Toluen, acetone, cồn, benzen, stiren)',
@@ -51,16 +51,17 @@ const SpecTable: React.FC = () => {
       cellBordered
       defaultExpandAllRows
       data={data}
+      wordWrap={isMobile ? 'break-word' : false}
       headerHeight={isMobile ? 70 : 40}
     >
       {keys.map(y =>
-        <Column key={uuidv4()} flexGrow={1}>
+        <Column key={uuidv4()} flexGrow={y === 'chars' ? 1 : 0}>
           <HeaderCell align='center' style={{ background: '#437254' }}>
             <div className='text-secondary font-semibold max-lg:text-wrap text-center flex justify-center items-center'>
               {t(y)}
             </div>
           </HeaderCell>
-          <Cell align='center' dataKey={y} />
+          <Cell className='max-md:w-fit' align='center' dataKey={y} />
         </Column>
       )}
 

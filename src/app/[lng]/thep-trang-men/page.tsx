@@ -18,11 +18,13 @@ const Page: React.FC<PageParam> = ({ params: { lng } }) => {
   const [currentInViewDivId, setCurrentInViewDivId] = React.useState('')
   const sectionTitles = [transKey.thepTrangMen, transKey.standoutFeatures, transKey.application, transKey.colorAndSize, transKey.magnetAccessories, transKey.specInfo]
   return (
-    <div className='flex flex-row gap-10 my-10 w-4/5 mx-auto'>
-      <SideBar sectionTitles={sectionTitles} currentDivId={currentInViewDivId} />
+    <div className='flex flex-row gap-10 my-10 w-4/5 mx-auto max-md:w-full'>
+      <div className='max-md:hidden'>
+        <SideBar sectionTitles={sectionTitles} currentDivId={currentInViewDivId} />
+      </div>
       <div className='w-4/5 mx-auto'>
         <div className='text-4xl mb-10'>{'THÉP TRÁNG MEN'.toUpperCase()}</div>
-        <div className='flex flex-col gap-20'>
+        <div className='flex flex-col gap-20 max-md:gap-5'>
           <PartIntroThepTrangMen setCurrentInViewDivId={setCurrentInViewDivId} />
           <PartTinhNangNoiBatThepTrangMen setCurrentInViewDivId={setCurrentInViewDivId} />
           <PartUngDungThepTrangMen setCurrentInViewDivId={setCurrentInViewDivId} />

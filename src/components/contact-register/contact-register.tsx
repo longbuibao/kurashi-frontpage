@@ -47,10 +47,10 @@ const ContactRegister: React.FC = () => {
 
   return (
     <form className='w-full flex flex-col gap-5 flex-1' action={formAction}>
-      <input className='border-b border-secondary' placeholder='Tên' name='name' content={contactRegistrationResult.name} required />
-      <input className='border-b border-secondary' placeholder='Email' type='email' name='email' content={contactRegistrationResult.email} required />
-      <input className='border-b border-secondary' placeholder='Số điện thoại' type='tel' name='phoneNumber' content={contactRegistrationResult.phoneNumber} required />
-      <textarea rows={15} className='border-b border-secondary w-full h-70' name='message' id='' placeholder='Nội dung tin nhắn' content={contactRegistrationResult.message} required />
+      <input className='p-1 border-b rounded-sm border-secondary' placeholder='Tên' name='name' content={contactRegistrationResult.name} required />
+      <input className='p-1 border-b rounded-sm border-secondary' placeholder='Email' type='email' name='email' content={contactRegistrationResult.email} required />
+      <input className='p-1 border-b rounded-sm border-secondary' placeholder='Số điện thoại' type='tel' name='phoneNumber' content={contactRegistrationResult.phoneNumber} required />
+      <textarea rows={15} className='p-1 rounded-sm border-b border-secondary w-full h-70' name='message' id='' placeholder='Nội dung tin nhắn' content={contactRegistrationResult.message} required />
       <div className='w-fit mb-2 flex flex-row'>
         <SubmitButton />
         {contactRegistrationResult.email === sussesEmailRegistration

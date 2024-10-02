@@ -60,7 +60,7 @@ const AllProducts: React.FC<{ lng: string }> = async ({ lng }) => {
           </div>
         </div>
         <div className='flex-1 my-10'>
-          <div className='flex flex-row gap-5 justify-center items-center'>
+          <div className='flex flex-row gap-5 justify-center items-center max-md:flex-col'>
             {products.sort((x, y) => x.order - y.order).map(x => {
               const dummy = x as Product
               const url = dummy.hasLandingPage ? x.landingPageUrl : `/products/product-detail/${dummy.id}`

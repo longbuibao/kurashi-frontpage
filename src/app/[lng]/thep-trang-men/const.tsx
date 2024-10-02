@@ -3,19 +3,19 @@ import Image from 'next/image'
 export const features = [{
   title: 'chống xước',
   content: 'Không xước kể cả khi chà bằng bùi nhùi kim loại nhờ cấu trúc tích hợp men kính và kim loại 6 lớp. Nên bếp bền, duy trì sự sạch sẽ và vẻ đẹp lâu.',
-  thumbnail: 'https://storage.googleapis.com/kurashi_frontpage_files/images/thep-trang-men-page/feature_1.svg'
+  thumbnail: 'https://storage.googleapis.com/kurashi_frontpage_files/images/thep-trang-men-page/chong_xuoc.png'
 }, {
   title: 'CHỐNG CHÁY',
   content: 'Chống cháy, kể cả khi đốt trực tiếp. Ngăn lửa cháy lan từ bếp. Đảm bảo an toàn phòng chống cháy nổ theo pháp luật.',
-  thumbnail: 'https://storage.googleapis.com/kurashi_frontpage_files/images/thep-trang-men-page/feature_2.svg'
+  thumbnail: 'https://storage.googleapis.com/kurashi_frontpage_files/images/thep-trang-men-page/chong_chay.png'
 }, {
   title: 'CHỐNG Ố',
   content: 'Chống ố vượt trội với các loại thực phẩm, gia vị, hóa chất, sản phẩm chăm sóc cá nhân và các vết dầu mỡ văng ra khi nấu ăn. Vệ sinh lau chùi đơn giản.',
-  thumbnail: 'https://storage.googleapis.com/kurashi_frontpage_files/images/thep-trang-men-page/feature_3.svg'
+  thumbnail: 'https://storage.googleapis.com/kurashi_frontpage_files/images/thep-trang-men-page/de_ve_sinh.png'
 }, {
   title: 'DỄ THI CÔNG',
   content: 'Dễ cắt bằng máy cắt cầm tay hoặc kéo nên có thể ốp tường với các góc cạnh, hình dáng phức tạp ngay tại công trình. Đặc biệt có thể ốp được các góc tường uốn cong.',
-  thumbnail: 'https://storage.googleapis.com/kurashi_frontpage_files/images/thep-trang-men-page/feature_4.svg'
+  thumbnail: 'https://storage.googleapis.com/kurashi_frontpage_files/images/thep-trang-men-page/de_thi_cong.png'
 }]
 
 export const applications = [

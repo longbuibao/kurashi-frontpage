@@ -24,7 +24,7 @@ const PartSpecTable: React.FC<PartSpecTableProps> = ({ setCurrentInViewDivId }) 
   })
 
   return (
-    <div ref={ref} className='mt-10' id={`${transKey.specInfo}`}>
+    <div ref={ref} className='mt-10 max-md:mt-5' id={`${transKey.specInfo}`}>
       <SpecTable />
     </div>
   )

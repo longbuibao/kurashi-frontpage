@@ -50,7 +50,7 @@ const Catalog: React.FC<PageParam> = async ({ params: { lng } }) => {
           <Breadcrumb items={breadcrumb} separator={<i className='fa-solid fa-chevron-right' />} />
         </div>
       </div>
-      <div className='flex flex-row gap-10 justify-center'>
+      <div className='flex flex-row gap-10 justify-center my-10'>
         <Suspense fallback={<CatalogsSkeleton />}>
           <GetCatalogs />
         </Suspense>

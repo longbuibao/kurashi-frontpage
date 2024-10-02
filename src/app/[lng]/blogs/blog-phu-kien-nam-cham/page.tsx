@@ -7,10 +7,10 @@ import { EmblaCarousel } from '@/components/embla-carousel'
 
 const BlogPhuKienNamCham: React.FC = () => {
   return (
-    <div className='w-4/5 mx-auto my-10'>
+    <div className='w-4/5 mx-auto my-10 max-md:w-full'>
       <div className='w-[70%] mx-auto'>
-        <div className='flex flex-row gap-10 text-black'>
-          <div className='w-3/5 md:w-full flex justify-between flex-col'>
+        <div className='flex flex-row gap-10 text-black max-md:flex-col'>
+          <div className='w-3/5 md:w-full flex justify-between flex-col max-md:w-full'>
             <div>
               <div className='flex flex-row gap-5 items-center'>
                 <i className='fa-solid fa-square-full text-main' />
@@ -51,12 +51,12 @@ const BlogPhuKienNamCham: React.FC = () => {
             <div><p>Với phụ kiện nam châm gắn trên tấm ốp thép tráng men, diện tích tấm ốp bếp được sử dụng với hiệu quả tối đa, tăng tính công năng nhờ các giải pháp lưu trữ mới nhất, với giá cả hợp lý.</p></div>
           </div>
         </div>
-        <div className='mx-auto flex flex-row gap-10 items-center my-10'>
-          <div className='w-1/2 flex flex-col gap-5'>
+        <div className='mx-auto flex flex-row gap-10 items-center my-10 max-md:flex-col-reverse'>
+          <div className='w-1/2 flex flex-col gap-5 max-md:w-full italic'>
             <div>Ví dụ mẫu</div>
             <div>Giải pháp kệ nam châm hoàn toàn khác biết để đựng gia vị hoặc để đồ decor trên tấm ốp bếp bằng thép tráng men. </div>
           </div>
-          <div className='w-1/2'>
+          <div className='w-1/2 max-md:w-full'>
             <Image alt='blog phụ kiện nam châm' src='https://storage.googleapis.com/kurashi_frontpage_files/images/blogs/blog_phu_kien_nam_cham.jpg' width={640} height={640} />
           </div>
         </div>
@@ -75,9 +75,9 @@ const BlogPhuKienNamCham: React.FC = () => {
           <div className='text-2xl font-bold'><h2>SỰ ĐA DẠNG CỦA PHỤ KIỆN NAM CHÂM</h2></div>
           <div><p>Kurashi cung cấp nhiều loại phụ kiện nam châm từ Nhật Bản gồm 3 nhóm chính: nhóm hũ đựng gia vị, nhóm kệ bếp và nhóm phụ kiện để treo. Trong đó có nhiều lựa chọn phụ kiện thông minh và là các giải pháp lưu trữ hoàn toàn mới và tiện lợi nhất.</p></div>
         </div>
-        <div className='my-10 flex flex-row gap-10 justify-between items-center'>
+        <div className='my-10 flex flex-row gap-10 justify-between items-center max-md:flex-col'>
           {blogImageUrls.map(x => (
-            <div key={x.key} className='w-1/3'>
+            <div key={x.key} className='w-1/3 max-md:w-full'>
               <div>{x.image}</div>
               <div className='my-3'>{x.title}</div>
               <div className='my-3'>{x.content}</div>

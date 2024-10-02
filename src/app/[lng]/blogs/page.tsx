@@ -65,9 +65,9 @@ const AllBlogs: React.FC<{ lng: string, numOfBlogs: number, searchParams: PagePa
       //   </div>
       // </div>
       <div className='bg-secondary pb-5'>
-        <div className='w-4/5 mx-auto max-lg:w-full flex flex-row gap-36 py-5'>
+        <div className='w-4/5 mx-auto max-md:w-full flex flex-row gap-36 py-5 max-md:flex-col max-md:gap-10'>
           <Suspense>
-            <div className='w-1/2 flex flex-col justify-center'>
+            <div className='w-1/2 flex flex-col justify-center max-md:w-full max-md:p-5'>
               <div className='flex flex-col gap-5 mb-10'>
                 <div className='flex-row flex gap-3'>
                   <div className='mt-auto text-xl leading-9'>KURASHI</div>
@@ -79,7 +79,7 @@ const AllBlogs: React.FC<{ lng: string, numOfBlogs: number, searchParams: PagePa
               </div>
               <BlogCardHomepage blog={blogs[1]} />
             </div>
-            <div className='w-1/2'>
+            <div className='w-1/2 max-md:w-full max-md:p-5'>
               <div className='flex flex-col items-center gap-14 overflow-hidden'>
                 <BlogCardHomepage blog={blogs[2]} />
                 <BlogCardHomepage blog={blogs[0]} />
@@ -120,16 +120,14 @@ const BlogsPage: React.FC<PageParam> = async ({ params: { lng }, searchParams }:
             </div>
           </div>
         </div>
-        <div className='flex flex-col gap-5 max-2xl:flex-col'>
+        <div className='flex flex-col gap-5'>
           <div className='flex w-full'>
             <Suspense fallback={<skeleton.AllBlogsSkeleton />}>
               <AllBlogs lng={lng} numOfBlogs={4} searchParams={searchParams} />
             </Suspense>
           </div>
-          <div className='flex flex-col gap-10 items-center'>
-            <div>
-              <BlogRegister />
-            </div>
+          <div className='flex flex-col gap-10 items-center mx-auto'>
+            <BlogRegister />
             <Suspense fallback={<skeleton.AllCategoriesSkeleton />}>
               <div className='w-fit max-lg:mx-auto'>
                 <AllCategories lng={lng} />

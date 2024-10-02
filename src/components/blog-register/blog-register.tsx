@@ -40,7 +40,7 @@ const BlogRegister: React.FC = () => {
 
   return (
     <div className='flex flex-col justify-center items-center p-2'>
-      <Link href='/' className='items-start mx-5'>
+      <Link href='/' className='mx-auto flex flex-row justify-center'>
         <Logo width={450} height={157} />
       </Link>
       <div className='max-lg:text-center max-lg:my-5'>Công nghệ và kinh nghiệm nội thất mới nhất từ Nhật Bản</div>

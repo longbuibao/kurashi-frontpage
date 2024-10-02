@@ -20,8 +20,8 @@ const PartKichThuocMauSac: React.FC<PartKichThuocMauSacProps> = ({ setCurrentInV
   })
 
   return (
-    <div ref={ref} id={`${transKey.colorAndSize}`} className='w-4/5 mx-auto'>
-      <div className='flex flex-row justify-between mt-14 items-end'>
+    <div ref={ref} id={`${transKey.colorAndSize}`} className='w-4/5 mx-auto max-md:w-full'>
+      <div className='flex flex-row justify-between mt-14 items-end max-md:mt-10 max-md:gap-5'>
         <SizeCard size='s' />
         <SizeCard size='m' />
         <SizeCard size='l' />

@@ -22,17 +22,17 @@ const PartTinhNangNoiBatThepTrangMen: React.FC<Props> = ({ setCurrentInViewDivId
   })
 
   return (
-    <div ref={ref} className='mt-10' id={`${transKey.standoutFeatures}`}>
-      <div className='grid grid-cols-3 grid-rows-1 gap-20'>
+    <div ref={ref} className='mt-10 max-md:mt-5' id={`${transKey.standoutFeatures}`}>
+      <div className='grid grid-cols-3 grid-rows-1 gap-20 max-md:flex max-md:flex-col max-md:gap-10 max-md:w-full'>
         <ThepTrangMenFeatureCard content={features[0].content} imgUrl={features[0].thumbnail} title={features[0].title} />
         <ThepTrangMenFeatureCard content={features[1].content} imgUrl={features[1].thumbnail} title={features[1].title} />
         <ThepTrangMenFeatureCard stt content={features[2].content} imgUrl={features[2].thumbnail} title={features[2].title} />
       </div>
-      <div className='w-4/5 mx-auto flex flex-row gap-5 mt-10 p-10'>
+      <div className='w-4/5 mx-auto flex flex-row gap-5 mt-10 p-10 max-md:flex-col max-md:p-0 max-md:mt-5'>
         <div>
           <Image className='w-full' width={116} height={258} src={features[3].thumbnail} alt='' />
         </div>
-        <div className='flex flex-col w-[80%]'>
+        <div className='flex flex-col w-[80%] max-md:mx-auto'>
           <div className='w-fit'>
             <div className='text-xl'>{features[3].title.toUpperCase()}</div>
           </div>
