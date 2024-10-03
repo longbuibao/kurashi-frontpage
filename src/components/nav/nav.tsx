@@ -28,7 +28,7 @@ const Nav: FC<NavProps> = ({ links, products }) => {
       <header className='sticky top-1 pb-1 mx-auto z-10 w-full h-full' onClick={() => { setIsOpen(false) }}>
         <div className='w-4/5 mx-auto max-md:w-full'>
           <nav className='flex flex-row justify-between items-center'>
-            <div className='flex flex-row gap-3 text-3xl relative items-center hover:cursor-pointer max-md:px-3'>
+            <div className='flex flex-row gap-3 text-3xl relative items-center hover:cursor-pointer max-md:px-5'>
               <div className={!isOpen ? 'header__burger' : 'header__burger is-active'} onClick={(e) => { e.stopPropagation(); setIsOpen(!isOpen) }} />
             </div>
             <Link href='/'>
@@ -47,9 +47,9 @@ const Nav: FC<NavProps> = ({ links, products }) => {
                 </div>
               </LinkWithMainBg>
             </div>
-            <div className='hidden max-md:mr-1 max-md:block max-md:p-3'>
+            <div className='hidden max-md:mr-1 max-md:block max-md:px-5'>
               <Link href={zaloLink} target='_blank' rel='noreferrer'>
-                <LogoZalo />
+                <LogoZalo width='35' height='35' />
               </Link>
             </div>
           </nav>

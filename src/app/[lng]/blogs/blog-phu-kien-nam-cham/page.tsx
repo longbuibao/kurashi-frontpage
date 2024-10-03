@@ -79,7 +79,7 @@ const BlogPhuKienNamCham: React.FC = () => {
           {blogImageUrls.map(x => (
             <div key={x.key} className='w-1/3 max-md:w-full'>
               <div>{x.image}</div>
-              <div className='my-3'>{x.title}</div>
+              <div className='my-3 italic'>{x.title}</div>
               <div className='my-3'>{x.content}</div>
             </div>
           ))}

@@ -32,7 +32,7 @@ const PartTinhNangNoiBatThepTrangMen: React.FC<Props> = ({ setCurrentInViewDivId
         <div>
           <Image className='w-full' width={116} height={258} src={features[3].thumbnail} alt='' />
         </div>
-        <div className='flex flex-col w-[80%] max-md:mx-auto'>
+        <div className='flex flex-col w-[80%] max-md:mx-auto max-md:w-full max-md:items-center'>
           <div className='w-fit'>
             <div className='text-xl'>{features[3].title.toUpperCase()}</div>
           </div>
