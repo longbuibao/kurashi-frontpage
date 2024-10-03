@@ -7,7 +7,7 @@ import { images } from './const'
 const BlogThepTrangMen: React.FC = () => {
   return (
     <div className='w-4/5 mx-auto my-10 max-md:w-full'>
-      <div className='w-[70%] mx-auto'>
+      <div className='w-[70%] mx-auto max-md:w-full max-md:p-5'>
         <div className='flex flex-row gap-10 text-black max-md:flex-col'>
           <div className='w-3/5 md:w-full flex justify-between flex-col max-md:w-full'>
             <div>
