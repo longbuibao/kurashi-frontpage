@@ -43,9 +43,7 @@ export const blogImageUrls = [
   return {
     key: x.imageUrl,
     image: (
-      <div>
-        <Image src={x.imageUrl} width={300} height={300} alt='Ứng dụng của thép tráng men' />
-      </div>
+      <Image className='max-md:w-full' src={x.imageUrl} width={300} height={300} alt='Ứng dụng của thép tráng men' />
     ),
     content: x.content,
     title: x.title
