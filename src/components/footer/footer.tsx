@@ -34,7 +34,7 @@ const Footer: React.FC<FooterProps> = ({ t }) => {
           </div>
           <div className='flex flex-col w-1/4 max-md:w-full max-md:justify-between max-md:my-10'>
             <div className='text-2xl'>SNS</div>
-            <div className='flex flex-row gap-3 ml-2 pt-5'>
+            <div className='flex flex-row gap-3 pt-5'>
               <LogoFacebook color='#fff' />
               <Link href='https://www.youtube.com/channel/UChqsY9O8M5Y70iMC5S9bdyQ' target='_blank' rel='noreferrer'>
                 <LogoYoutube />
@@ -48,17 +48,18 @@ const Footer: React.FC<FooterProps> = ({ t }) => {
             <div className='text-2xl'>ACCESS</div>
             <div className='flex flex-col gap-2 items-start pt-5'>
               <div>{t(address)}: {t(addressName)}</div>
-              <div>
-                {t(tel)}: <a href='tel:+979988617'> {phoneNumber} </a>
-              </div>
               <div className='mt-5'>
                 <div>
                   Văn phòng tại Nhật
                 </div>
+                <div>〒561-0821</div>
                 <div>
                   Osaka-fu, Toyonaka-shi, Hinodecho 1-12-6
                 </div>
               </div>
+            </div>
+            <div className='mt-5'>
+              {t(tel)}: <a href='tel:+84979988617'> {phoneNumber} </a>
             </div>
           </div>
         </div>

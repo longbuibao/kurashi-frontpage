@@ -1,6 +1,6 @@
 import * as transKey from '@/i18n/translation-key'
 
-export const phoneNumber = '0979988617'
+export const phoneNumber = '(+84) 979988617'
 export const email = 'kurashi-corp@kurashi.com.vn'
 
 export const navItems = [
