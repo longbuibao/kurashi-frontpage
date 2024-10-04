@@ -62,7 +62,7 @@ const Nav: FC<NavProps> = ({ links, products }) => {
               <div className='flex flex-col gap-5 font-bold py-10 pr-10 justify-center max-lg:items-center max-md:p-3'>
                 {links.map(link => {
                   return (
-                    <div key={uuidv4()} className='w-fit text-4xl max-md:text-lg max-md:w-full text-center max-md:mt-10' onClick={(e) => { e.stopPropagation(); setIsOpen(!isOpen) }}>
+                    <div key={uuidv4()} className='w-fit text-4xl max-md:w-full text-center max-md:mt-10' onClick={(e) => { e.stopPropagation(); setIsOpen(!isOpen) }}>
                       <KurashiLink>
                         <Link href={`${link.url}`}>{link.label}</Link>
                       </KurashiLink>

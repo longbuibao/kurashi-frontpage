@@ -46,10 +46,18 @@ const Footer: React.FC<FooterProps> = ({ t }) => {
           </div>
           <div className='w-1/4 max-md:w-full max-md:justify-between'>
             <div className='text-2xl'>ACCESS</div>
-            <div className='flex flex-col gap-5 items-start pt-5'>
+            <div className='flex flex-col gap-2 items-start pt-5'>
               <div>{t(address)}: {t(addressName)}</div>
               <div>
                 {t(tel)}: <a href='tel:+979988617'> {phoneNumber} </a>
+              </div>
+              <div className='mt-5'>
+                <div>
+                  Văn phòng tại Nhật
+                </div>
+                <div>
+                  Osaka-fu, Toyonaka-shi, Hinodecho 1-12-6
+                </div>
               </div>
             </div>
           </div>
