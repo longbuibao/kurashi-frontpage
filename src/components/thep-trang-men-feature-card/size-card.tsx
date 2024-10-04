@@ -6,9 +6,9 @@ interface SizeCardProps {
 
 const SizeCard: React.FC<SizeCardProps> = ({ size }) => {
   const availableCssClasses: Map<string, string> = new Map([
-    ['s', 'w-[200px] h-[250px] max-md:w-[100px] max-md:h-[125px] border p-5 border-opacity-25 border-[#000] '],
-    ['m', 'w-[200px] h-[350px] max-md:w-[100px] max-md:h-[175px] border p-5 border-opacity-25 border-[#000] '],
-    ['l', 'w-[273px] h-[350px] max-md:w-[125px] max-md:h-[175px] border p-5 border-opacity-25 border-[#000] ']
+    ['s', 'w-[200px] h-[250px] max-md:w-[75px] max-md:h-[125px] border p-5 border-opacity-25 border-[#000] '],
+    ['m', 'w-[200px] h-[350px] max-md:w-[75px] max-md:h-[175px] border p-5 border-opacity-25 border-[#000] '],
+    ['l', 'w-[273px] h-[350px] max-md:w-[100px] max-md:h-[175px] border p-5 border-opacity-25 border-[#000] ']
   ])
   const sizes: Map<string, string> = new Map([
     ['s', '890x1800mm'],
