@@ -3,11 +3,9 @@ import { v4 as uuidv4 } from 'uuid'
 import Image from 'next/image'
 
 import prisma from '@/lib/prisma'
-import { useTranslation } from '@/i18n'
 import { BlogSkeleton, BlogCardHomepage } from '@/components/blog-card'
 import { AboutKurashiCard } from '@/components/about-kurashi-card'
 import { KurashiCategories, KurashiCategoriesSkeleton } from '@/components/kurashi-categories'
-import { products } from '@/i18n/translation-key'
 import { carouselSliderImages } from '@/constants'
 import EmblaCarousel from '@/components/embla-carousel/embla-carousel'
 
@@ -27,7 +25,6 @@ const createCarouselItemImage = (imageSrc: string): { key: string, content: Reac
 }
 
 const Page = async ({ params: { lng } }: PageParam): Promise<React.ReactElement> => {
-  const { t } = await useTranslation(lng)
   const carouselSliders = carouselSliderImages.map(createCarouselItemImage)
   const blogs = await prisma.post.findMany({ take: 3, where: { published: true } })
 
@@ -36,17 +33,12 @@ const Page = async ({ params: { lng } }: PageParam): Promise<React.ReactElement>
       <div className='max-lg:w-full relative w-4/5 mx-auto'>
         <EmblaCarousel slides={carouselSliders} options={{ loop: true }} />
       </div>
-      <div className='mx-auto mt-10 mb-5 w-fit flex flex-col gap-5 max-md:gap-3 max-md:mt-5 items-center'>
-        <div className='text-5xl max-md:text-2xl'>
-          {t(products).toUpperCase()}
+      <div className='w-4/5 mx-auto my-16 max-md:my-10'>
+        <div className='w-full border-b-2 border-main'>
+          <div className='text-3xl max-md:text-xl font-bold w-[30%] max-md:w-full pb-10'>GIẢI PHÁP NỘI THẤT TIÊN TIẾN TỪ NHẬT BẢN</div>
         </div>
-        <div className='font-semibold'>
-          Các giải pháp nội thất từ Nhật Bản
-        </div>
-        <div className='flex flex-row gap-5 items-center'>
-          <div>phòng bếp</div>
-          <div className='font-bold text-main text-2xl'> | </div>
-          <div>phòng tắm</div>
+        <div className='w-1/2 pt-10 max-md:w-full'>
+          <div>Các giải pháp nội thất tiên tiến nhất về công nghệ vật liệu, thiết kế và gia công với chất lượng made in Japan để ngôi nhà luôn là nơi thoải mái nhất cho cả gia đình bạn.</div>
         </div>
       </div>
       <Suspense fallback={<KurashiCategoriesSkeleton />}>

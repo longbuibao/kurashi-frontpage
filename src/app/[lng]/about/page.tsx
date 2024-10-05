@@ -26,16 +26,10 @@ const AboutPage: React.FC = () => {
         </div>
         <div className='grid grid-cols-2 grid-rows-1 gap-20 p-10 max-md:flex max-md:flex-col max-md:p-0 max-md:gap-10'>
           <div className='relative pr-3'>
-            <Image alt='Về Kurashi' width={715} height={459} src='https://storage.googleapis.com/kurashi_frontpage_files/images/about_3.png' />
-            <div className='absolute text-secondary text-md top-0 p-5 w-1/2'>
-              Nhà máy đối tác sản xuất thép tráng men tại Nhật Bản
-            </div>
+            <Image alt='Về Kurashi' width={715} height={459} src='https://storage.googleapis.com/kurashi_frontpage_files/images/about_1_with_text.png' />
           </div>
           <div className='relative'>
-            <Image alt='Về Kurashi' width={715} height={459} src='https://storage.googleapis.com/kurashi_frontpage_files/images/about_2.png' />
-            <div className='absolute text-secondary text-md top-0 right-0 py-5 pr-5 w-1/2 text-right'>
-              Nhà máy đối tác sản xuất vật liệu phức hợp nhôm composite tại Nhật Bản
-            </div>
+            <Image alt='Về Kurashi' width={715} height={459} src='https://storage.googleapis.com/kurashi_frontpage_files/images/about_2_with_text.png' />
           </div>
         </div>
         <div className='flex flex-row gap-5 max-md:flex-col'>

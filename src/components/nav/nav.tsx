@@ -31,23 +31,13 @@ const Nav: FC<NavProps> = ({ links, products }) => {
             <div className='flex flex-row gap-3 text-3xl relative items-center hover:cursor-pointer max-md:px-5'>
               <div className={!isOpen ? 'header__burger' : 'header__burger is-active'} onClick={(e) => { e.stopPropagation(); setIsOpen(!isOpen) }} />
             </div>
-            <Link href='/'>
-              <div className='flex flex-col justify-center items-center max-md:ml-3'>
+            <Link href='/' className='max-md:w-[70%] max-md:mx-auto max-md:flex max-md:flex-row max-md:justify-center'>
+              <div className='flex flex-col justify-center items-center p-5 w-full'>
                 <Logo width={450} height={157} />
-                <div className='text-center text-sm'>Giải pháp nội thất Nhật Bản</div>
               </div>
             </Link>
-            <div className='flex justify-center max-md:hidden'>
-              <LinkWithMainBg href={zaloLink} target='_blank' rel='noreferrer'>
-                <div className='px-3 py-2 rounded-lg max-md:px-0 max-md:py-0 flex flex-row text-nowrap'>
-                  Liên hệ Zalo
-                  <div className='ml-3 inline-block'>
-                    <i className='fa-solid fa-chevron-right' />
-                  </div>
-                </div>
-              </LinkWithMainBg>
-            </div>
-            <div className='hidden max-md:mr-1 max-md:block max-md:px-5'>
+            <div className='max-md:hidden max-md:mr-1 max-md:px-5 flex flex-row items-center gap-10'>
+              <Link href='#'>Phụ kiện online</Link>
               <Link href={zaloLink} target='_blank' rel='noreferrer'>
                 <LogoZalo width='35' height='35' />
               </Link>

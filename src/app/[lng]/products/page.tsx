@@ -4,12 +4,11 @@ import { Metadata } from 'next'
 import { Product } from '@prisma/client'
 
 import prisma from '@/lib/prisma'
-import { createCategoryMapToProducts, getMetadata } from '@/utils'
+import { getMetadata } from '@/utils'
 import { ProductCard } from '@/components/product'
 import { Breadcrumb } from '@/components/breadcrumb'
 import { useTranslation } from '@/i18n'
 import { v4 as uuidv4 } from 'uuid'
-import { KurashiDiv, KurashiLeftBorder } from '@/components/kurashi-div'
 import * as transKey from '@/i18n/all-products-trans-key'
 import AllProductsSkeleton from './skeleton'
 
@@ -24,7 +23,6 @@ export async function generateMetadata (): Promise<Metadata> {
 }
 
 const AllProducts: React.FC<{ lng: string }> = async ({ lng }) => {
-  const { t } = await useTranslation(lng, transKey.namespace)
   const products = await prisma.product.findMany({
     where: { isAvailable: true },
     take: 20,
@@ -38,27 +36,16 @@ const AllProducts: React.FC<{ lng: string }> = async ({ lng }) => {
       ProductTag: true
     }
   })
-  const productsWithCategory = createCategoryMapToProducts(products)
 
   return (
-    <div>
-      <div className='w-4/5 mx-auto my-8 flex flex-row max-lg:flex-col'>
-        <div>
-          <div className='mb-5 max-lg:w-fit'>
-            <KurashiLeftBorder>
-              {t(transKey.categories)}
-            </KurashiLeftBorder>
-          </div>
-          <div className='flex flex-col max-lg:flex-row max-lg:items-center max-lg:flex-wrap gap-5 max-lg:w-fit max-lg:mx-auto'>
-            {Array.from(productsWithCategory.keys()).map(x => (
-              <div className='w-fit hover:cursor-default' key={uuidv4()}>
-                <KurashiDiv>
-                  {t(x)}
-                </KurashiDiv>
-              </div>
-            ))}
-          </div>
-        </div>
+    <div className='w-4/5 mx-auto'>
+      <div className='w-full border-b-2 border-main'>
+        <div className='text-3xl font-bold w-[30%] max-md:w-full pb-10'>GIẢI PHÁP NỘI THẤT TIÊN TIẾN TỪ NHẬT BẢN</div>
+      </div>
+      <div className='w-1/2 pt-10 max-md:w-full'>
+        <div>Các giải pháp nội thất tiên tiến nhất về công nghệ vật liệu, thiết kế và gia công với chất lượng made in Japan để ngôi nhà luôn là nơi thoải mái nhất cho cả gia đình bạn.</div>
+      </div>
+      <div className='my-5 flex flex-row max-lg:flex-col'>
         <div className='flex-1 my-10'>
           <div className='flex flex-row gap-5 justify-center items-center max-md:flex-col'>
             {products.sort((x, y) => x.order - y.order).map(x => {

@@ -61,3 +61,35 @@ export const imageUrls = [
     )
   }
 })
+
+export const specData = [{
+  chars: 'Độ dày lớp thép tráng men bề mặt 130µm',
+  result: '130µm'
+}, {
+  chars: 'Độ dày lớp kim loại nền 0.3~0.35mm',
+  result: '0.3~0.35mm'
+}, {
+  chars: 'Độ dày lớp thép tráng men nền 30µm',
+  result: '30µm'
+}, {
+  chars: 'Độ lệch màu ∆Ε tiêu chuẩn dưới 0.5',
+  result: 'dưới 0.5'
+}, {
+  chars: 'Độ bóng bề mặt (GS45°)',
+  result: '100%, 55%, 92%'
+}, {
+  chars: 'Độ cứng Mohs',
+  result: '5.5'
+}, {
+  chars: 'Chống xước, Phương pháp Taber 1.3mg (Vòng ma sát CS-17/1kg 1000 vòng quay)',
+  result: '1.3mg'
+}, {
+  chars: 'Khả năng chống dung môi (Toluen, acetone, cồn, benzen, stiren)',
+  result: 'không thay đổi'
+}, {
+  chars: 'Độ nhám bề mặt (Chiều cao tối đa 2.5mm)',
+  result: '1.2µm'
+}, {
+  chars: 'Số chứng nhận chống cháy',
+  result: 'NM-2744'
+}]
