@@ -12,9 +12,9 @@ interface LinkToDivIdProps {
 const SideBar: React.FC<LinkToDivIdProps> = ({ currentDivId, sectionTitles }) => {
   const { t } = useTranslationClient('vi', 'thep-trang-men', {})
   return (
-    <div className='flex flex-col pr-3 h-fit border-r-2 gap-5 py-5 sticky top-32'>
+    <div className='flex flex-col pr-3 h-fit border-r-2 gap-5 w-48 sticky top-32'>
       {sectionTitles.map(x => {
-        const className = currentDivId === x ? 'w-fit p5 font-semibold' : 'w-fit p5'
+        const className = currentDivId === x ? 'font-semibold' : 'font-normal'
         return (
           <Link href={`#${x}`} scroll key={x}>
             <div className={className}>

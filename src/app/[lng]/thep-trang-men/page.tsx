@@ -19,7 +19,7 @@ const Page: React.FC<PageParam> = ({ params: { lng } }) => {
   const sectionTitles = [transKey.thepTrangMen, transKey.standoutFeatures, transKey.application, transKey.colorAndSize, transKey.magnetAccessories, transKey.specInfo]
   return (
     <div className='flex flex-row gap-10 my-10 w-4/5 mx-auto max-md:w-full'>
-      <div className='max-md:hidden'>
+      <div className='max-md:hidden min-w-fit'>
         <SideBar sectionTitles={sectionTitles} currentDivId={currentInViewDivId} />
       </div>
       <div className='w-4/5 mx-auto'>
