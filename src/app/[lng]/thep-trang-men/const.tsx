@@ -93,3 +93,22 @@ export const specData = [{
   chars: 'Số chứng nhận chống cháy',
   result: 'NM-2744'
 }]
+
+export interface FeatureCardProps {
+  title: string
+  imageUrl: string
+  content: string[]
+}
+
+export const featuresDataDauMo: FeatureCardProps[] = [
+  {
+    title: 'KHẢ NĂNG CHỐNG DẦU MỠ',
+    content: ['Đổ vết dầu 180°C lên bề mặt trong 30 ngày, lau bằng nước và vải sạch.', 'Với thép tráng men, chỉ cần lau 5 lần là sạch.'],
+    imageUrl: 'https://storage.googleapis.com/kurashi_frontpage_files/images/thep-trang-men-page/vet_dau-01.png'
+  },
+  {
+    title: 'KHẢ NĂNG CHỐNG VẾT CHÁY',
+    content: ['Đốt bề mặt bằng đầu lửa trong 1 phút, sau đó lau bằng vải.', 'Với thép tráng men, lau sạch được.'],
+    imageUrl: 'https://storage.googleapis.com/kurashi_frontpage_files/images/thep-trang-men-page/vat_dau-02.webp'
+  }
+]

@@ -9,6 +9,7 @@ import PartUngDungThepTrangMen from './part-ung-dung-thep-trang-men'
 import PartKichThuocMauSac from './part-kich-thuoc-mau-sac'
 import PartPhuKienNamCham from './part-phu-kien-nam-cham'
 import PartSpecTable from './part-spect-table'
+import PartThuNghiemDauMo from './part-thu-nghiem-dau-mo'
 
 interface PageParam {
   params: { lng: string }
@@ -16,7 +17,7 @@ interface PageParam {
 
 const Page: React.FC<PageParam> = ({ params: { lng } }) => {
   const [currentInViewDivId, setCurrentInViewDivId] = React.useState('')
-  const sectionTitles = [transKey.thepTrangMen, transKey.standoutFeatures, transKey.application, transKey.colorAndSize, transKey.magnetAccessories, transKey.specInfo]
+  const sectionTitles = [transKey.thepTrangMen, transKey.standoutFeatures, transKey.application, transKey.colorAndSize, transKey.magnetAccessories, transKey.specInfo, transKey.ungDungLauDauMo]
   return (
     <div className='flex flex-row gap-10 my-10 w-4/5 mx-auto max-md:w-full'>
       <div className='max-md:hidden min-w-fit'>
@@ -31,6 +32,7 @@ const Page: React.FC<PageParam> = ({ params: { lng } }) => {
           <PartKichThuocMauSac setCurrentInViewDivId={setCurrentInViewDivId} />
           <PartPhuKienNamCham setCurrentInViewDivId={setCurrentInViewDivId} />
           <PartSpecTable setCurrentInViewDivId={setCurrentInViewDivId} />
+          <PartThuNghiemDauMo setCurrentInViewDivId={setCurrentInViewDivId} />
         </div>
       </div>
     </div>
