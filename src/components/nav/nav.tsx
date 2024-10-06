@@ -27,17 +27,15 @@ const Nav: FC<NavProps> = ({ links, products }) => {
     <div>
       <header className='sticky top-1 pb-1 mx-auto z-10 w-full h-full' onClick={() => { setIsOpen(false) }}>
         <div className='w-4/5 mx-auto max-md:w-full'>
-          <nav className='flex flex-row justify-between items-center relative py-7'>
+          <nav className='flex flex-row justify-between items-center'>
             <div className='flex flex-row gap-3 text-3xl relative items-center hover:cursor-pointer max-md:px-5'>
               <div className={!isOpen ? 'header__burger' : 'header__burger is-active'} onClick={(e) => { e.stopPropagation(); setIsOpen(!isOpen) }} />
             </div>
-            <div className='absolute flex flex-col justify-center items-center pt-3 max-md:w-full w-full'>
-              <Link href='/' className='w-[68%]'>
-                <div>
-                  <Logo isMxAuto width={450} height={157} />
-                </div>
-              </Link>
-            </div>
+            <Link href='/' className='max-md:w-[70%] max-md:mx-auto max-md:flex max-md:flex-row max-md:justify-center'>
+              <div className='flex flex-col justify-center items-center p-5 w-full'>
+                <Logo width={450} height={157} />
+              </div>
+            </Link>
             <div className='max-md:hidden max-md:mr-1 max-md:px-5 flex flex-row items-center gap-10'>
               <Link href='#'>Phụ kiện online</Link>
               <Link href={zaloLink} target='_blank' rel='noreferrer'>
