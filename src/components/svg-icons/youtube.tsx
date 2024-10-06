@@ -6,7 +6,7 @@ interface LogoYoutubeProps {
   height?: string
 }
 
-const LogoYoutube: React.FC<LogoYoutubeProps> = ({ color = '#fff', width, height }) => {
+const LogoYoutube: React.FC<LogoYoutubeProps> = ({ color = '#fff', width = 40, height = 40 }) => {
   return (
     <svg
       fill={color} version='1.1' xmlns='http://www.w3.org/2000/svg'

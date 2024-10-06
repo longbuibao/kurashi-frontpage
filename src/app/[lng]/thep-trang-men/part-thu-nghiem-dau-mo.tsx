@@ -12,9 +12,9 @@ interface PartThuNghiemDauMoProps {
 const FeatureCard: React.FC<FeatureCardProps> = ({ content, title, imageUrl }) => {
   return (
     <div className='w-full'>
-      <div className='text-xl my-5'>{title}</div>
+      <div className='text-xl mb-10 max-md:mb-5'>{title}</div>
       <Image width={375} height={209} className='w-full' alt='chống dầu mỡ thép tráng men' src={imageUrl} />
-      <div className='my-5'>{content.map(x => <div className='my-3' key={x}>{x}</div>)}</div>
+      <div className='mt-10 max-md:mt-5'>{content.map(x => <div className='my-3' key={x}>{x}</div>)}</div>
     </div>
   )
 }
@@ -31,7 +31,7 @@ const PartThuNghiemDauMo: React.FC<PartThuNghiemDauMoProps> = ({ setCurrentInVie
   })
 
   return (
-    <div ref={ref} id={transKey.ungDungLauDauMo} className='flex flex-row justify-between max-md:flex-col'>
+    <div ref={ref} id={transKey.ungDungLauDauMo} className='flex flex-row justify-between max-md:flex-col max-md:gap-10'>
       <div key={featuresDataDauMo[0].imageUrl} className='w-[45%] max-md:w-full'>
         <FeatureCard content={featuresDataDauMo[0].content} imageUrl={featuresDataDauMo[0].imageUrl} title={featuresDataDauMo[0].title} />
       </div>
