@@ -6,7 +6,7 @@ import prisma from '@/lib/prisma'
 import { BlogSkeleton, BlogCardHomepage } from '@/components/blog-card'
 import { AboutKurashiCard } from '@/components/about-kurashi-card'
 import { KurashiCategories, KurashiCategoriesSkeleton } from '@/components/kurashi-categories'
-import { carouselSliderImages } from '@/constants'
+import { carouselSliderImages, carouselSliderImagesMobile } from '@/constants'
 import EmblaCarousel from '@/components/embla-carousel/embla-carousel'
 
 interface PageParam {
@@ -17,21 +17,25 @@ export const metadata = {
   title: 'Kurashi Corp'
 }
 
-const createCarouselItemImage = (imageSrc: string): { key: string, content: React.ReactElement } => {
+const createCarouselItemImage = (imageSrc: string, width = 1920, height = 1080): { key: string, content: React.ReactElement } => {
   return {
     key: uuidv4(),
-    content: <Image src={imageSrc} width={1920} height={1080} alt='picture' quality={100} />
+    content: <Image src={imageSrc} width={width} height={height} alt='picture' quality={100} />
   }
 }
 
 const Page = async ({ params: { lng } }: PageParam): Promise<React.ReactElement> => {
-  const carouselSliders = carouselSliderImages.map(createCarouselItemImage)
+  const carouselSliders = carouselSliderImages.map(x => createCarouselItemImage(x))
+  const carouselSlidersMobile = carouselSliderImagesMobile.map(x => createCarouselItemImage(x, 4500, 5620))
   const blogs = await prisma.post.findMany({ take: 3, where: { published: true } })
 
   return (
     <main className='mt-0'>
-      <div className='max-lg:w-full relative w-4/5 mx-auto'>
+      <div className='max-lg:w-full relative w-4/5 mx-auto max-md:hidden'>
         <EmblaCarousel slides={carouselSliders} options={{ loop: true }} />
+      </div>
+      <div className='max-lg:w-full relative w-4/5 mx-auto hidden max-md:block'>
+        <EmblaCarousel slides={carouselSlidersMobile} options={{ loop: true }} />
       </div>
       <div className='w-4/5 mx-auto my-16 max-md:mt-5 max-md:mb-0'>
         <div className='w-full border-b-2 border-main'>

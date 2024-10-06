@@ -17,6 +17,12 @@ export const carouselSliderImages = [
   'https://storage.googleapis.com/kurashi_frontpage_files/images/sliders-homepage/Slider_new_03.webp'
 ]
 
+export const carouselSliderImagesMobile = [
+  'https://storage.googleapis.com/kurashi_frontpage_files/images/sliders-homepage/slider_thep_trang_men_mobile_new.webp',
+  'https://storage.googleapis.com/kurashi_frontpage_files/images/sliders-homepage/slider2mobile.webp',
+  'https://storage.googleapis.com/kurashi_frontpage_files/images/sliders-homepage/slider4mobile.webp'
+]
+
 export const footerLinks = [{
   label: transKey.company,
   links: [
