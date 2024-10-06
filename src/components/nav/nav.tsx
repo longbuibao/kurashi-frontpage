@@ -3,7 +3,7 @@ import { FC, useState } from 'react'
 import Link from 'next/link'
 
 import { Logo } from '@/components/logo'
-import { KurashiLink, LinkWithMainBg } from '@/components/kurashi-link'
+import { KurashiLink } from '@/components/kurashi-link'
 import { zaloLink } from '@/constants'
 import { v4 as uuidv4 } from 'uuid'
 import { ProductCard } from '@/components/product'
@@ -31,8 +31,8 @@ const Nav: FC<NavProps> = ({ links, products }) => {
             <div className='flex flex-row gap-3 text-3xl relative items-center hover:cursor-pointer max-md:px-5'>
               <div className={!isOpen ? 'header__burger' : 'header__burger is-active'} onClick={(e) => { e.stopPropagation(); setIsOpen(!isOpen) }} />
             </div>
-            <div className='absolute flex flex-col justify-center items-center pt-3 max-md:w-full w-full'>
-              <Link href='/' className='w-[68%]'>
+            <div className='absolute flex flex-col justify-center items-center pt-3 max-md:w-full w-full max-md:pt-0'>
+              <Link href='/' className='w-[68%] max-md:w-1/2'>
                 <div>
                   <Logo isMxAuto width={450} height={157} />
                 </div>

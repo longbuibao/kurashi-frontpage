@@ -63,16 +63,16 @@ export const imageUrls = [
 })
 
 export const specData = [{
-  chars: 'Độ dày lớp thép tráng men bề mặt 130µm',
+  chars: 'Độ dày lớp thép tráng men bề mặt',
   result: '130µm'
 }, {
-  chars: 'Độ dày lớp kim loại nền 0.3~0.35mm',
+  chars: 'Độ dày lớp kim loại nền',
   result: '0.3~0.35mm'
 }, {
-  chars: 'Độ dày lớp thép tráng men nền 30µm',
+  chars: 'Độ dày lớp thép tráng men nền',
   result: '30µm'
 }, {
-  chars: 'Độ lệch màu ∆Ε tiêu chuẩn dưới 0.5',
+  chars: 'Độ lệch màu ∆Ε tiêu chuẩn',
   result: 'dưới 0.5'
 }, {
   chars: 'Độ bóng bề mặt (GS45°)',

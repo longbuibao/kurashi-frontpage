@@ -33,11 +33,11 @@ const Page = async ({ params: { lng } }: PageParam): Promise<React.ReactElement>
       <div className='max-lg:w-full relative w-4/5 mx-auto'>
         <EmblaCarousel slides={carouselSliders} options={{ loop: true }} />
       </div>
-      <div className='w-4/5 mx-auto my-16 max-md:my-10'>
+      <div className='w-4/5 mx-auto my-16 max-md:mt-5 max-md:mb-0'>
         <div className='w-full border-b-2 border-main'>
-          <div className='text-3xl max-md:text-xl font-bold w-[30%] max-md:w-full pb-10'>GIẢI PHÁP NỘI THẤT TIÊN TIẾN TỪ NHẬT BẢN</div>
+          <div className='text-3xl max-md:text-xl max-md:text-left font-bold w-[30%] max-md:w-full max-md:pb-5 pb-10'>GIẢI PHÁP NỘI THẤT TIÊN TIẾN TỪ NHẬT BẢN</div>
         </div>
-        <div className='w-1/2 pt-10 max-md:w-full'>
+        <div className='w-1/2 max-md:py-5 pt-10 max-md:w-full'>
           <div>Các giải pháp nội thất tiên tiến nhất về công nghệ vật liệu, thiết kế và gia công với chất lượng made in Japan để ngôi nhà luôn là nơi thoải mái nhất cho cả gia đình bạn.</div>
         </div>
       </div>

@@ -8,7 +8,7 @@
 }
 
 .responsiveTable tr th {
-  padding: 20px;
+  padding: 15px;
   text-align: left;
   background: rgb(79, 114, 84);
   color: #f4f4f4;
@@ -16,7 +16,7 @@
 }
 
 .responsiveTable tbody tr td {
-  padding: 20px;
+  padding: 15px;
   text-align: left;
   border: 0.5px solid rgba(79, 114, 84, 0.3)
 }
@@ -40,7 +40,6 @@
     position: absolute;
     top: -9999px;
     left: -9999px;
-    border-bottom: 0.5px solid rgba(79, 114, 84, 0.3);
   }
 
   .responsiveTable tbody tr {
@@ -72,5 +71,9 @@
     overflow-wrap: break-word;
     text-align: left !important;
     font-weight: 600;
+  }
+
+  .responsiveTable tbody tr:last-child {
+    border-bottom: 0.5px solid rgba(79, 114, 84, 0.3);
   }
 }

@@ -26,9 +26,9 @@ const GetCatalogs: React.FC = async () => {
     take: 3
   })
   return (
-    <div className='flex flex-row gap-20 justify-center max-sm:flex-col'>
+    <div className='flex flex-row gap-20 justify-center max-md:flex-col max-md:w-full'>
       {catalogs.map(x => (
-        <div key={x.id} className='w-96'>
+        <div key={x.id} className='w-96 max-md:w-[80%] max-md:mx-auto'>
           <CatalogCard catalogName={x.name} fileSize={x.size} thumbnail={x.thumbnail} pdfLink={x.pdfLink} />
         </div>
       ))}
@@ -37,20 +37,9 @@ const GetCatalogs: React.FC = async () => {
 }
 
 const Catalog: React.FC<PageParam> = async ({ params: { lng } }) => {
-  const { t } = await useTranslation(lng, namespace)
-  const breadcrumb = [
-    <Link href='/' key='a'>{t(home)}</Link>,
-    <Link href='/catalogs' key='b'>{t(catalogs)}</Link>
-  ]
-
   return (
     <div className='w-4/5 mx-auto my-10'>
-      <div className='flex flex-row-reverse'>
-        <div className='flex flex-row gap-5 items-center justify-center self-start mr-auto'>
-          <Breadcrumb items={breadcrumb} separator={<i className='fa-solid fa-chevron-right' />} />
-        </div>
-      </div>
-      <div className='flex flex-row gap-10 justify-center my-10'>
+      <div className='flex flex-row gap-10 justify-center my-10 max-md:my-0'>
         <Suspense fallback={<CatalogsSkeleton />}>
           <GetCatalogs />
         </Suspense>

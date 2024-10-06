@@ -23,7 +23,7 @@ const Page: React.FC<PageParam> = ({ params: { lng } }) => {
         <SideBar sectionTitles={sectionTitles} currentDivId={currentInViewDivId} />
       </div>
       <div className='w-4/5 mx-auto'>
-        <div className='text-4xl mb-10'>{'THÉP TRÁNG MEN'.toUpperCase()}</div>
+        <div className='text-4xl mb-10 max-md:text-xl'>{'THÉP TRÁNG MEN'.toUpperCase()}</div>
         <div className='flex flex-col gap-20 max-md:gap-5'>
           <PartIntroThepTrangMen setCurrentInViewDivId={setCurrentInViewDivId} />
           <PartTinhNangNoiBatThepTrangMen setCurrentInViewDivId={setCurrentInViewDivId} />
