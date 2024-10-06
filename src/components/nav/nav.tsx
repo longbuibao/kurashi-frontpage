@@ -8,7 +8,7 @@ import { zaloLink } from '@/constants'
 import { v4 as uuidv4 } from 'uuid'
 import { ProductCard } from '@/components/product'
 import { Product } from '@prisma/client'
-import { LogoZalo } from '@/components/svg-icons'
+import { LogoFacebook, LogoYoutube, LogoZalo } from '@/components/svg-icons'
 
 interface LinkItem {
   url: string
@@ -48,10 +48,10 @@ const Nav: FC<NavProps> = ({ links, products }) => {
         </div>
       </header>
       <div className={!isOpen ? 'h-[100vh] absolute modal-nav max-md:w-full' : 'h-[100vh] absolute modal-nav is-active max-md:w-full'} onClick={(e) => setIsOpen(false)}>
-        <div className='w-full bg-kurashi-bg-main backdrop-blur-md shadow-2xl flex flex-row h-[60%] max-md:h-full items-center max-md:items-start' onClick={(e) => e.stopPropagation()}>
-          <div className='flex-row flex w-4/5 mx-auto max-md:flex-col max-md:w-full'>
+        <div className='w-full bg-kurashi-bg-main backdrop-blur-md shadow-2xl flex flex-row h-[50%] max-md:h-full max-md:items-start' onClick={(e) => e.stopPropagation()}>
+          <div className='flex-row flex w-4/5 mx-auto max-md:flex-col max-md:w-full mt-16 max-md:mt-0'>
             <div className='w-[40%] max-md:w-full'>
-              <div className='flex flex-col gap-5 font-bold py-10 pr-10 justify-center max-lg:items-center max-md:p-3'>
+              <div className='flex flex-col gap-5 font-bold pr-10 justify-center max-lg:items-center max-md:p-3'>
                 {links.map(link => {
                   return (
                     <div key={uuidv4()} className='w-fit text-4xl max-md:w-full text-center max-md:mt-10' onClick={(e) => { e.stopPropagation(); setIsOpen(!isOpen) }}>
@@ -63,16 +63,27 @@ const Nav: FC<NavProps> = ({ links, products }) => {
                 })}
               </div>
             </div>
-            <div className='flex flex-row gap-5 justify-center items-center max-md:hidden'>
-              {products.sort((x, y) => x.order - y.order).map(x => {
-                const dummy = x as Product
-                const url = dummy.hasLandingPage ? x.landingPageUrl : `/products/product-detail/${dummy.id}`
-                return (
-                  <Link key={uuidv4()} href={url} onClick={(e) => { e.stopPropagation(); setIsOpen(!isOpen) }}>
-                    <ProductCard lng='vi' product={x} />
-                  </Link>
-                )
-              })}
+            <div className='flex flex-col'>
+              <div className='flex flex-row gap-5 justify-center items-center max-md:hidden'>
+                {products.sort((x, y) => x.order - y.order).map(x => {
+                  const dummy = x as Product
+                  const url = dummy.hasLandingPage ? x.landingPageUrl : `/products/product-detail/${dummy.id}`
+                  return (
+                    <Link key={uuidv4()} href={url} onClick={(e) => { e.stopPropagation(); setIsOpen(!isOpen) }}>
+                      <ProductCard lng='vi' product={x} />
+                    </Link>
+                  )
+                })}
+              </div>
+              <div className='flex flex-row gap-3 pt-10 self-end max-md:self-center'>
+                <LogoFacebook color='#000' width='30' height='30' />
+                <Link href='https://www.youtube.com/channel/UChqsY9O8M5Y70iMC5S9bdyQ' target='_blank' rel='noreferrer'>
+                  <LogoYoutube color='#000' width='30' height='30' />
+                </Link>
+                <Link href={zaloLink} target='_blank' rel='noreferrer'>
+                  <LogoZalo width='30' height='30' />
+                </Link>
+              </div>
             </div>
           </div>
         </div>

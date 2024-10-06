@@ -1,10 +1,16 @@
 import React from 'react'
 
-const LogoYoutube: React.FC = () => {
+interface LogoYoutubeProps {
+  color?: string
+  width?: string
+  height?: string
+}
+
+const LogoYoutube: React.FC<LogoYoutubeProps> = ({ color = '#fff', width, height }) => {
   return (
     <svg
-      fill='#fff' version='1.1' xmlns='http://www.w3.org/2000/svg'
-      width='40' height='40' viewBox='0 0 97.75 97.75'
+      fill={color} version='1.1' xmlns='http://www.w3.org/2000/svg'
+      width={width} height={height} viewBox='0 0 97.75 97.75'
     >
       <g>
         <g>
