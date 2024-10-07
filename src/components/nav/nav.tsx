@@ -48,8 +48,8 @@ const Nav: FC<NavProps> = ({ links, products }) => {
         </div>
       </header>
       <div className={!isOpen ? 'h-[100vh] absolute modal-nav max-md:w-full' : 'h-[100vh] absolute modal-nav is-active max-md:w-full'} onClick={(e) => setIsOpen(false)}>
-        <div className='w-full bg-kurashi-bg-main backdrop-blur-md shadow-2xl flex flex-row h-[50%] max-md:h-full max-md:items-start' onClick={(e) => e.stopPropagation()}>
-          <div className='flex-row flex w-4/5 mx-auto max-md:flex-col max-md:w-full mt-16 max-md:mt-0'>
+        <div className='w-full bg-kurashi-bg-main backdrop-blur-md shadow-2xl flex flex-row max-md:h-full max-md:items-start' onClick={(e) => e.stopPropagation()}>
+          <div className='flex-row flex w-4/5 mx-auto max-md:flex-col max-md:w-full mt-16 max-md:mt-0 mb-10'>
             <div className='w-[40%] max-md:w-full'>
               <div className='flex flex-col gap-5 font-bold pr-10 justify-center max-lg:items-center max-md:p-3'>
                 {links.map(link => {
