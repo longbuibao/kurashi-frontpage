@@ -27,13 +27,13 @@ const Nav: FC<NavProps> = ({ links, products }) => {
     <div>
       <header className='sticky top-1 pb-1 mx-auto z-10 w-full h-full' onClick={() => { setIsOpen(false) }}>
         <div className='w-4/5 mx-auto max-md:w-full'>
-          <nav className='flex flex-row justify-between items-center relative py-7'>
-            <div className='flex flex-row gap-3 text-3xl relative items-center hover:cursor-pointer max-md:px-5'>
-              <div className={!isOpen ? 'header__burger' : 'header__burger is-active'} onClick={(e) => { e.stopPropagation(); setIsOpen(!isOpen) }} />
+          <nav className='flex flex-row justify-between items-center relative py-5'>
+            <div className='flex flex-row gap-3 text-3xl relative items-center hover:cursor-pointer max-md:px-5 max-md:py-5'>
+              <div className={!isOpen ? 'header__burger max-md:mt-2' : 'header__burger is-active'} onClick={(e) => { e.stopPropagation(); setIsOpen(!isOpen) }} />
             </div>
-            <div className='absolute flex flex-col justify-center items-center pt-3 max-md:w-full w-full max-md:pt-0'>
-              <Link href='/' className='w-[68%] max-md:w-1/2'>
-                <div>
+            <div className='absolute flex flex-col justify-center items-center pt-3 max-md:w-full w-full'>
+              <Link href='/' className=''>
+                <div className='w-[50%] max-md:w-1/2 mx-auto'>
                   <Logo isMxAuto width={450} height={157} />
                 </div>
               </Link>
@@ -51,10 +51,10 @@ const Nav: FC<NavProps> = ({ links, products }) => {
         <div className='w-full bg-kurashi-bg-main backdrop-blur-md shadow-2xl flex flex-row max-md:h-full max-md:items-start' onClick={(e) => e.stopPropagation()}>
           <div className='flex-row flex w-4/5 mx-auto max-md:flex-col max-md:w-full mt-16 max-md:mt-0 mb-10'>
             <div className='w-[40%] max-md:w-full'>
-              <div className='flex flex-col gap-5 font-bold pr-10 justify-center max-lg:items-center max-md:p-3'>
+              <div className='flex flex-col gap-5 max-md:gap-2 font-bold pr-10 justify-center max-lg:items-center max-md:p-3'>
                 {links.map(link => {
                   return (
-                    <div key={uuidv4()} className='w-fit text-4xl max-md:w-full text-center max-md:mt-10' onClick={(e) => { e.stopPropagation(); setIsOpen(!isOpen) }}>
+                    <div key={uuidv4()} className='w-fit text-4xl max-md:w-full text-center max-md:mt-8' onClick={(e) => { e.stopPropagation(); setIsOpen(!isOpen) }}>
                       <KurashiLink>
                         <Link href={`${link.url}`}>{link.label}</Link>
                       </KurashiLink>

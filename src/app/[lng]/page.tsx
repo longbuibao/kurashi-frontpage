@@ -3,7 +3,7 @@ import { v4 as uuidv4 } from 'uuid'
 import Image from 'next/image'
 
 import prisma from '@/lib/prisma'
-import { BlogSkeleton, BlogCardHomepage } from '@/components/blog-card'
+import { BlogCardHomepage } from '@/components/blog-card'
 import { AboutKurashiCard } from '@/components/about-kurashi-card'
 import { KurashiCategories, KurashiCategoriesSkeleton } from '@/components/kurashi-categories'
 import { carouselSliderImages, carouselSliderImagesMobile } from '@/constants'
@@ -52,35 +52,37 @@ const Page = async ({ params: { lng } }: PageParam): Promise<React.ReactElement>
         </div>
       </Suspense>
       <div className='w-4/5 mx-auto mt-24 max-lg:w-full'>
-        <div className='my-10 overflow-hidden'>
+        <div className='my-10 overflow-hidden max-md:my-0'>
           <AboutKurashiCard lng={lng} />
         </div>
       </div>
-      <div className='bg-secondary mt-20 pb-10 block max-md:hidden'>
-        <div className='w-[60%] mx-auto max-lg:w-full flex flex-row gap-36 py-20'>
-          <Suspense fallback={<BlogSkeleton />}>
-            <div className='w-1/2 flex flex-col justify-center'>
-              <div className='flex flex-col gap-5 mb-10'>
-                <div className='flex-row flex gap-3'>
-                  <div className='mt-auto text-xl leading-9'>KURASHI</div>
-                  <div className='text-7xl text-main font-bold'>BLOG</div>
+      <div className='bg-[#C0CCD4] mt-20 block max-md:hidden'>
+        <div className='w-[50%] mx-auto p-10'>
+          <div className='max-md:w-full flex flex-row gap-36 max-md:flex-col max-md:gap-10'>
+            <Suspense>
+              <div className='w-1/2 flex flex-col max-md:w-full max-md:p-5'>
+                <div className='flex flex-col gap-5 mb-10'>
+                  <div className='flex-row flex gap-3 border-b-[1px] border-main pb-5'>
+                    <div className='mt-auto text-xl leading-9'>KURASHI</div>
+                    <div className='text-7xl text-main font-bold'>BLOG</div>
+                  </div>
+                  <p className='font-thin'>
+                    Xu hướng, công nghệ và vật liệu về nội thất mới nhất từ Nhật Bản
+                  </p>
                 </div>
-                <div className='text-lg'>
-                  Xu hướng, công nghệ và vật liệu về nội thất mới nhất từ Nhật Bản
+                <BlogCardHomepage blog={blogs[1]} />
+              </div>
+              <div className='w-1/2 max-md:w-full max-md:p-5'>
+                <div className='flex flex-col items-center gap-14 overflow-hidden'>
+                  <BlogCardHomepage blog={blogs[2]} />
+                  <BlogCardHomepage blog={blogs[0]} />
                 </div>
               </div>
-              <BlogCardHomepage blog={blogs[1]} />
-            </div>
-            <div className='w-1/2'>
-              <div className='flex flex-col items-center gap-14 overflow-hidden'>
-                <BlogCardHomepage blog={blogs[2]} />
-                <BlogCardHomepage blog={blogs[0]} />
-              </div>
-            </div>
-          </Suspense>
+            </Suspense>
+          </div>
         </div>
       </div>
-      <div className='hidden max-md:block w-4/5 mx-auto'>
+      <div className='hidden max-md:block p-5 bg-[#C0CCD4]'>
         <div className='my-10'>
           <BlogCardHomepage blog={blogs[1]} />
         </div>

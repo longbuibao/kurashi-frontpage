@@ -1,20 +1,16 @@
 import React, { Suspense } from 'react'
 import { notFound } from 'next/navigation'
-import Link from 'next/link'
-import { v4 as uuidv4 } from 'uuid'
 import { Metadata } from 'next'
 
 import { BlogCardHomepage } from '@/components/blog-card'
 import { KurashiDiv } from '@/components/kurashi-div'
 import * as transKey from '@/i18n/blog-page-trans-key'
-import { blogPageNs } from '@/i18n/settings'
 import { BlogRegister } from '@/components/blog-register'
 import { PaginationBar } from '@/components/pagination-bar'
 import * as skeleton from './skeleton'
 import prisma from '@/lib/prisma'
 import { useTranslation } from '@/i18n'
-import { Breadcrumb } from '@/components/breadcrumb'
-import { defaultBlogsLink, homeLink } from '@/constants'
+import { defaultBlogsLink } from '@/constants'
 import { getMetadata } from '@/utils'
 
 interface PageParam {
@@ -47,35 +43,18 @@ const AllBlogs: React.FC<{ lng: string, numOfBlogs: number, searchParams: PagePa
   const numberOfBlogs = await prisma.post.count()
   if (blogs.length > 0) {
     return (
-      // <div className='flex-1'>
-      //   <div className='grid grid-cols-2 grid-rows-2 max-lg:grid-cols-2 max-lg:grid-rows-2 max-sm:grid-cols-1 gap-3'>
-      //     {blogs.map(blog => (
-      //       <BlogCard
-      //         url={`${defaultBlogViewLink}${blog.id}`}
-      //         summary={blog.summary}
-      //         imgSrc={blog.thumbnail}
-      //         title={blog.title}
-      //         key={blog.id}
-      //         dateUpload={blog.createdAt.toLocaleDateString()}
-      //       />
-      //     ))}
-      //   </div>
-      //   <div className='w-4/5 mx-auto my-10'>
-      //     <PaginationBar maxPages={Math.round(numberOfBlogs / 4)} baseLink={defaultBlogsLink} lng={lng} />
-      //   </div>
-      // </div>
-      <div className='bg-secondary pb-5'>
-        <div className='w-4/5 mx-auto max-md:w-full flex flex-row gap-36 py-5 max-md:flex-col max-md:gap-10'>
+      <div className='w-[50%] mx-auto p-10'>
+        <div className='max-md:w-full flex flex-row gap-36 max-md:flex-col max-md:gap-10'>
           <Suspense>
-            <div className='w-1/2 flex flex-col justify-center max-md:w-full max-md:p-5'>
+            <div className='w-1/2 flex flex-col max-md:w-full max-md:p-5'>
               <div className='flex flex-col gap-5 mb-10'>
-                <div className='flex-row flex gap-3'>
+                <div className='flex-row flex gap-3 border-b-[1px] border-main pb-5'>
                   <div className='mt-auto text-xl leading-9'>KURASHI</div>
                   <div className='text-7xl text-main font-bold'>BLOG</div>
                 </div>
-                <div className='text-lg'>
+                <p className='font-thin'>
                   Xu hướng, công nghệ và vật liệu về nội thất mới nhất từ Nhật Bản
-                </div>
+                </p>
               </div>
               <BlogCardHomepage blog={blogs[1]} />
             </div>
@@ -104,36 +83,21 @@ const AllBlogs: React.FC<{ lng: string, numOfBlogs: number, searchParams: PagePa
 }
 
 const BlogsPage: React.FC<PageParam> = async ({ params: { lng }, searchParams }: PageParam) => {
-  const { t } = await useTranslation(lng, blogPageNs)
-  const breadcrumb = [
-    <Link href={homeLink} key={uuidv4()}>{t(transKey.home)}</Link>,
-    <Link href={defaultBlogsLink} key={uuidv4()}>{t(transKey.allBlogs)}</Link>
-  ]
-
   return (
-    <div className='w-4/5 mx-auto mb-10'>
-      <div>
-        <div className='mx-auto flex flex-row my-10 max-lg:justify-center'>
-          <div>
-            <div className='flex flex-row gap-5 items-center justify-center self-start ml-auto'>
-              <Breadcrumb items={breadcrumb} separator={<i className='fa-solid fa-chevron-right' />} />
-            </div>
-          </div>
+    <div className='mx-auto mb-10'>
+      <div className='flex flex-col gap-5'>
+        <div className='flex w-full bg-[#C0CCD4]'>
+          <Suspense fallback={<skeleton.AllBlogsSkeleton />}>
+            <AllBlogs lng={lng} numOfBlogs={4} searchParams={searchParams} />
+          </Suspense>
         </div>
-        <div className='flex flex-col gap-5'>
-          <div className='flex w-full'>
-            <Suspense fallback={<skeleton.AllBlogsSkeleton />}>
-              <AllBlogs lng={lng} numOfBlogs={4} searchParams={searchParams} />
-            </Suspense>
-          </div>
-          <div className='flex flex-col gap-10 items-center mx-auto'>
-            <BlogRegister />
-            <Suspense fallback={<skeleton.AllCategoriesSkeleton />}>
-              <div className='w-fit max-lg:mx-auto'>
-                <AllCategories lng={lng} />
-              </div>
-            </Suspense>
-          </div>
+        <div className='flex flex-col gap-10 items-center mx-auto'>
+          <BlogRegister />
+          <Suspense fallback={<skeleton.AllCategoriesSkeleton />}>
+            <div className='w-fit max-lg:mx-auto'>
+              <AllCategories lng={lng} />
+            </div>
+          </Suspense>
         </div>
       </div>
     </div>
