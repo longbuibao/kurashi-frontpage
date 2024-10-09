@@ -24,15 +24,7 @@ interface RootProps {
 
 const RootLayout: React.FC<RootProps> = async ({ children, params }): Promise<React.ReactElement> => {
   const { t } = await useTranslation(params.lng)
-  const productsRaw = await prisma.product.findMany({
-    take: 3,
-    where: { isAvailable: true },
-    include: {
-      category: { select: { name: true, id: true } },
-      ProductColor: true,
-      ProductTag: true
-    }
-  })
+  const productsRaw = []
 
   return (
     <html lang={params.lng} dir={dir(params.lng)}>

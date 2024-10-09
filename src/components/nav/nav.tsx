@@ -9,6 +9,7 @@ import { v4 as uuidv4 } from 'uuid'
 import { ProductCard } from '@/components/product'
 import { Product } from '@prisma/client'
 import { LogoFacebook, LogoYoutube, LogoZalo } from '@/components/svg-icons'
+import { useHideOnScrollDown } from './useHideOnScroll'
 
 interface LinkItem {
   url: string
@@ -22,9 +23,11 @@ interface NavProps {
 
 const Nav: FC<NavProps> = ({ links, products }) => {
   const [isOpen, setIsOpen] = useState(false)
+  const isVisible = useHideOnScrollDown()
+  const cls = isVisible ? 'block' : 'hidden'
 
   return (
-    <div>
+    <div className={cls}>
       <header className='sticky top-1 pb-1 mx-auto z-10 w-full h-full' onClick={() => { setIsOpen(false) }}>
         <div className='w-4/5 mx-auto max-md:w-full'>
           <nav className='flex flex-row justify-between items-center relative py-5'>
