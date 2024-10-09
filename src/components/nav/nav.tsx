@@ -36,7 +36,7 @@ const Nav: FC<NavProps> = ({ links, products }) => {
             </div>
             <div className='absolute flex flex-col justify-center items-center pt-3 max-md:w-full w-full'>
               <Link href='/'>
-                <div className='w-[50%] max-md:w-1/2 mx-auto'>
+                <div className='w-[50%] mx-auto'>
                   <Logo isMxAuto width={450} height={157} />
                 </div>
               </Link>
