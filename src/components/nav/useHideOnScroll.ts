@@ -8,7 +8,7 @@ export const useHideOnScrollDown = (): boolean => {
 
   const handleScroll = useCallback(() => {
     const cur = window.scrollY
-    setIsVisible(dbScrollY > cur || cur < 10)
+    setIsVisible(dbScrollY > cur || cur < 50)
     setScrollY(cur)
   }, [dbScrollY])
 

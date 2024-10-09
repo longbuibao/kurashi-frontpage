@@ -21,7 +21,7 @@ const PartUngDungThepTrangMen: React.FC<PartUngDungThepTrangMenProps> = ({ setCu
   })
 
   return (
-    <div ref={ref} className='mt-10 bg-secondary' id={`${transKey.application}`}>
+    <div ref={ref} className='pt-10 bg-secondary' id={`${transKey.application}`}>
       <div className='flex flex-col gap-10'>
         {applications.map(application => (
           <div key={application.key}>

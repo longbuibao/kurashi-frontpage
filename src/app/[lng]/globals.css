@@ -213,3 +213,13 @@
 	visibility: visible;
 	transform: translateY(0%);
 }
+
+.nav-visible {
+	top: 0;
+	transition: top 0.3s ease-out;
+}
+
+.nav-hidden {
+	top: -100px;
+	transition: top 0.3s ease-out;
+}

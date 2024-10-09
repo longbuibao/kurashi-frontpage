@@ -24,7 +24,7 @@ interface NavProps {
 const Nav: FC<NavProps> = ({ links, products }) => {
   const [isOpen, setIsOpen] = useState(false)
   const isVisible = useHideOnScrollDown()
-  const cls = isVisible ? 'block' : 'hidden'
+  const cls = isVisible ? 'relative nav-visible bg-secondary-opacity backdrop-blur-md' : 'relative nav-hidden bg-secondary-opacity backdrop-blur-md'
 
   return (
     <div className={cls}>
@@ -35,7 +35,7 @@ const Nav: FC<NavProps> = ({ links, products }) => {
               <div className={!isOpen ? 'header__burger max-md:mt-2' : 'header__burger is-active'} onClick={(e) => { e.stopPropagation(); setIsOpen(!isOpen) }} />
             </div>
             <div className='absolute flex flex-col justify-center items-center pt-3 max-md:w-full w-full'>
-              <Link href='/' className=''>
+              <Link href='/'>
                 <div className='w-[50%] max-md:w-1/2 mx-auto'>
                   <Logo isMxAuto width={450} height={157} />
                 </div>

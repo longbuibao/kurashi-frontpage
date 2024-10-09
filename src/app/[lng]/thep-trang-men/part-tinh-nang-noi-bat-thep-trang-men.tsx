@@ -22,7 +22,7 @@ const PartTinhNangNoiBatThepTrangMen: React.FC<Props> = ({ setCurrentInViewDivId
   })
 
   return (
-    <div ref={ref} className='mt-10 max-md:mt-5' id={`${transKey.standoutFeatures}`}>
+    <div ref={ref} className='pt-10 max-md:mt-5' id={`${transKey.standoutFeatures}`}>
       <div className='grid grid-cols-3 grid-rows-1 gap-20 max-md:flex max-md:flex-col max-md:gap-10 max-md:w-full'>
         <ThepTrangMenFeatureCard content={features[0].content} imgUrl={features[0].thumbnail} title={features[0].title} />
         <ThepTrangMenFeatureCard content={features[1].content} imgUrl={features[1].thumbnail} title={features[1].title} />

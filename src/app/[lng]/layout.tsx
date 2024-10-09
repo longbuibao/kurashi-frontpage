@@ -40,7 +40,7 @@ const RootLayout: React.FC<RootProps> = async ({ children, params }): Promise<Re
         <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css' crossOrigin='anonymous' />
       </head>
       <body className='bg-kurashi-bg-main'>
-        <div className='bg-secondary-opacity backdrop-blur-md sticky top-0 z-50'>
+        <div className='sticky top-0 z-50'>
           <Nav products={productsRaw} links={navItems.map(item => { return { label: t(item.label), url: item.url } })} />
         </div>
         <ProgressBarProviders>
