@@ -23,14 +23,9 @@ const PartIntroThepTrangMen: React.FC<Props> = ({ setCurrentInViewDivId }) => {
   return (
     <div ref={ref} id={`${transKey.thepTrangMen}`}>
       <div className='flex flex-row gap-5'>
-        <div className='w-1/2'>
-          <Image src='https://storage.googleapis.com/kurashi_frontpage_files/images/thep-trang-men-page/homepage_1.jpg' width={730} height={558} alt='Thép tráng men' />
-        </div>
-        <div className='w-1/2'>
-          <Image src='https://storage.googleapis.com/kurashi_frontpage_files/images/thep-trang-men-page/homepage_2.jpg' width={730} height={558} alt='Thép tráng men' />
-        </div>
+        <Image src='https://storage.googleapis.com/kurashi_frontpage_files/images/thep-trang-men-page/TTM_landing_page.jpg' width={6042} height={2333} alt='Thép tráng men' />
       </div>
-      <div className='flex flex-row gap-10 mt-5 bg-secondary p-10 max-md:p-3 max-md:flex-col max-md:items-center justify-center'>
+      <div className='flex flex-row gap-10 mt-20 max-md:mt-10 bg-secondary p-10 max-md:p-3 max-md:flex-col max-md:items-center justify-center'>
         <div>
           <Image src='https://storage.googleapis.com/kurashi_frontpage_files/images/thep_trang_men_layer_without_bg.png' width={648} height={308} alt='Cấu trúc của thép tráng men' />
         </div>

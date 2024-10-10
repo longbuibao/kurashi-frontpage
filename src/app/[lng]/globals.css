@@ -114,7 +114,7 @@
 }
 
 .bg-about:hover img {
-	transform: scale(1.1);
+	transform: scale(1.05);
 	filter: brightness(.6);
 }
 

@@ -8,7 +8,7 @@ import { zaloLink } from '@/constants'
 import { v4 as uuidv4 } from 'uuid'
 import { ProductCard } from '@/components/product'
 import { Product } from '@prisma/client'
-import { LogoFacebook, LogoYoutube, LogoZalo } from '@/components/svg-icons'
+import { LogoFacebook, LogoYoutube, LogoZalo, ShoppingCart } from '@/components/svg-icons'
 import { useHideOnScrollDown } from './useHideOnScroll'
 
 interface LinkItem {
@@ -42,9 +42,9 @@ const Nav: FC<NavProps> = ({ links, products }) => {
               </Link>
             </div>
             <div className='max-md:hidden max-md:mr-1 max-md:px-5 flex flex-row items-center gap-10 z-10'>
-              <Link href='#'>Phụ kiện online</Link>
+              <Link href='#'><ShoppingCart width='25' height='25' /></Link>
               <Link href={zaloLink} target='_blank' rel='noreferrer'>
-                <LogoZalo width='35' height='35' />
+                <LogoZalo width='25' height='25' />
               </Link>
             </div>
           </nav>

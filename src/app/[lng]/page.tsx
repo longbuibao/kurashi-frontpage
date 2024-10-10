@@ -57,7 +57,7 @@ const Page = async ({ params: { lng } }: PageParam): Promise<React.ReactElement>
         </div>
       </div>
       <div className='bg-[#C0CCD4] mt-20 block max-md:hidden'>
-        <div className='w-[50%] mx-auto p-10'>
+        <div className='w-[65%] mx-auto py-10'>
           <div className='max-md:w-full flex flex-row gap-36 max-md:flex-col max-md:gap-10'>
             <Suspense>
               <div className='w-1/2 flex flex-col max-md:w-full max-md:p-5'>
