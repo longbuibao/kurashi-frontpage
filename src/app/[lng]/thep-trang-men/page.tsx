@@ -31,7 +31,7 @@ const Page: React.FC<PageParam> = ({ params: { lng } }) => {
         <div className='max-md:hidden min-w-fit'>
           <SideBar sectionTitles={sectionTitles} currentDivId={currentInViewDivId} />
         </div>
-        <div className='w-4/5 mx-auto'>
+        <div className='max-md:w-4/5 max-md:mx-auto'>
           <div className='flex flex-col gap-20 max-md:gap-5'>
             <PartIntroThepTrangMen setCurrentInViewDivId={setCurrentInViewDivId} />
             <PartTinhNangNoiBatThepTrangMen setCurrentInViewDivId={setCurrentInViewDivId} />

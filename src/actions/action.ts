@@ -2,6 +2,21 @@
 import prisma from '@/lib/prisma'
 import { sussesEmailRegistration, existedEmailRegistration, failEmailRegistration } from '@/constants'
 
+export const doLogin = async (_: any, formData: FormData): Promise<any> => {
+  try {
+    const userId = formData.get('userId')
+    const userPassword = formData.get('password')
+    if (userId !== null && userPassword !== null) {
+      const id = userId.valueOf()
+      const password = userPassword.valueOf()
+    }
+
+    return { email: existedEmailRegistration }
+  } catch (error) {
+    return { email: failEmailRegistration }
+  }
+}
+
 export const createBlogRegister = async (_: any, formData: FormData): Promise<{ email: string }> => {
   try {
     const userEmail = formData.get('email')
