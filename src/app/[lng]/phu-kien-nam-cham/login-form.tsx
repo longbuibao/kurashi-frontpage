@@ -32,7 +32,7 @@ const SubmitButton: React.FC = () => {
 const LoginForm: React.FC<LoginFormProps> = ({ title }) => {
   const [state, formAction] = useFormState<{ userId: string, password: string }, FormData>(doLogin, initialState)
   return (
-    <div className='flex flex-col justify-between gap-10 h-full'>
+    <div className='flex flex-col gap-10 h-full'>
       <div className='flex flex-col gap-10'>
         <div className='text-2xl'>
           {title.toUpperCase()}

@@ -42,7 +42,7 @@ const Nav: FC<NavProps> = ({ links, products }) => {
               </Link>
             </div>
             <div className='max-md:hidden max-md:mr-1 max-md:px-5 flex flex-row items-center gap-10 z-10'>
-              <Link href='#'><ShoppingCart width='25' height='25' /></Link>
+              <Link href='/phu-kien-nam-cham'><ShoppingCart width='25' height='25' /></Link>
               <Link href={zaloLink} target='_blank' rel='noreferrer'>
                 <LogoZalo width='25' height='25' />
               </Link>
