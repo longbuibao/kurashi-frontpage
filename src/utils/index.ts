@@ -36,3 +36,7 @@ export async function getMetadata (pageName: string, defaultIfNotFound: string):
     title: defaultIfNotFound
   }
 }
+
+export const strictCheckString = (input: string): boolean => {
+  return input === undefined || input === null || input.length === 0 || input === ''
+}

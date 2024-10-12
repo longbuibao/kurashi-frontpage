@@ -5,7 +5,11 @@ import { signIn } from '@/auth'
 import { sussesEmailRegistration, existedEmailRegistration, failEmailRegistration } from '@/constants'
 
 export const doLogin = async (_: any, formData: FormData): Promise<any> => {
-  await signIn('credentials', formData)
+  try {
+    await signIn('credentials', formData)
+  } catch (error) {
+
+  }
 }
 
 export const createBlogRegister = async (_: any, formData: FormData): Promise<{ email: string }> => {
