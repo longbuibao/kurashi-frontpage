@@ -15,7 +15,6 @@ export const doLogin = async (_: any, formData: FormData): Promise<LoginResult> 
   try {
     const userId = formData.get('userId')
     const password = formData.get('password')
-
     if (userId !== null && password !== null) {
       const userIdReal = userId.valueOf()
       const passwordReal = password.valueOf()
@@ -25,10 +24,9 @@ export const doLogin = async (_: any, formData: FormData): Promise<LoginResult> 
         redirect: false
       })
 
-      const user = await prisma.user.findFirst({ where: { userId: userIdReal } })
       return {
         isLoggedIn: true,
-        message: `Hello ${user?.userId ?? ''}`,
+        message: 'ok',
         password: '',
         userId: ''
       }

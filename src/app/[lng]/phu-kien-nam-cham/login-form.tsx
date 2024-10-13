@@ -1,11 +1,10 @@
 'use client'
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useFormState, useFormStatus } from 'react-dom'
 import { ClipLoader } from 'react-spinners'
 
 import { doLogin, LoginResult } from '@/actions/action'
 import UserIcon from '@/components/svg-icons/user'
-import PhuKienNamCham from './phu-kien-nam-cham'
 
 interface LoginFormProps {
   title: string
@@ -14,7 +13,7 @@ interface LoginFormProps {
 const initialState = {
   userId: '',
   password: '',
-  isLoggedIn: null
+  isLoggedIn: undefined
 }
 
 const SubmitButton: React.FC = () => {
@@ -40,6 +39,11 @@ const WrongLogin: React.FC<{ content: React.ReactNode }> = ({ content }) => {
 
 const LoginForm: React.FC<LoginFormProps> = ({ title }) => {
   const [state, formAction] = useFormState<Partial<LoginResult>, FormData>(doLogin, initialState)
+  useEffect(() => {
+    if (state.isLoggedIn === true) {
+      window.location.href = '/phu-kien-nam-cham'
+    }
+  }, [state])
   return (
     <div className='flex flex-col gap-10 h-full'>
       <div className='flex flex-col gap-10'>
@@ -70,7 +74,7 @@ const LoginForm: React.FC<LoginFormProps> = ({ title }) => {
             ? ''
             : state.isLoggedIn === false
               ? <WrongLogin content={<div className='text-[#942222]'>Sai ID hoặc password. Vui lòng kiểm tra và đăng nhập lại</div>} />
-              : <PhuKienNamCham />}
+              : ''}
         </form>
       </div>
     </div>
