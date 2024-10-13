@@ -59,7 +59,7 @@ const LoginForm: React.FC<LoginFormProps> = ({ title }) => {
         <form action={formAction} className='flex flex-col gap-5 w-full'>
           <div className='border-b-[1px] border-black'>
             <label htmlFor='userId'>
-              <div>ID</div>
+              <div>iD</div>
             </label>
             <input name='userId' id='userId' className='bg-kurashi-bg-main w-full' content={state.userId} required />
           </div>
