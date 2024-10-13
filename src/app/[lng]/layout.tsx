@@ -8,9 +8,6 @@ import { navItems } from '@/constants'
 import { useTranslation } from '@/i18n'
 import ProgressBarProviders from '@/components/progress-bar-provider'
 import prisma from '@/lib/prisma'
-import AuthProvider from './auth-provider'
-
-// import LenisLayout from './lenis'
 
 export const metadata = {
   title: 'Trang chủ Kurashi'
@@ -43,11 +40,7 @@ const RootLayout: React.FC<RootProps> = async ({ children, params }): Promise<Re
           <Nav products={productsRaw} links={navItems.map(item => { return { label: t(item.label), url: item.url } })} />
         </div>
         <ProgressBarProviders>
-          <AuthProvider>
-            {children}
-          </AuthProvider>
-          {/* <LenisLayout>
-        </LenisLayout> */}
+          {children}
         </ProgressBarProviders>
         <Footer t={t} />
         <div className='bg-[#24292e] pt-5 pb-10'>

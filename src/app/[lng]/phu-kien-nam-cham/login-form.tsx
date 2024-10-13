@@ -5,6 +5,7 @@ import { ClipLoader } from 'react-spinners'
 
 import { doLogin, LoginResult } from '@/actions/action'
 import UserIcon from '@/components/svg-icons/user'
+import PhuKienNamCham from './phu-kien-nam-cham'
 
 interface LoginFormProps {
   title: string
@@ -12,12 +13,12 @@ interface LoginFormProps {
 
 const initialState = {
   userId: '',
-  password: ''
+  password: '',
+  isLoggedIn: null
 }
 
 const SubmitButton: React.FC = () => {
   const { pending } = useFormStatus()
-
   return (
     <button type='submit' aria-disabled={pending}>
       <div className='text-secondary bg-main border p-2 border-main'>
@@ -26,6 +27,14 @@ const SubmitButton: React.FC = () => {
           : <div className='w-full h-full'><ClipLoader color='#e5e5e5' loading speedMultiplier={2} size={15} /></div>}
       </div>
     </button>
+  )
+}
+
+const WrongLogin: React.FC<{ content: React.ReactNode }> = ({ content }) => {
+  return (
+    <div className='flex flex-col gap-5 mt-3 self-end'>
+      {content}
+    </div>
   )
 }
 
@@ -57,6 +66,11 @@ const LoginForm: React.FC<LoginFormProps> = ({ title }) => {
             <input type='password' id='password' className='bg-kurashi-bg-main w-full' name='password' content={state.password} required />
           </div>
           <SubmitButton />
+          {state.isLoggedIn === null
+            ? ''
+            : state.isLoggedIn === false
+              ? <WrongLogin content={<div className='text-[#942222]'>Sai ID hoặc password. Vui lòng kiểm tra và đăng nhập lại</div>} />
+              : <PhuKienNamCham />}
         </form>
       </div>
     </div>
