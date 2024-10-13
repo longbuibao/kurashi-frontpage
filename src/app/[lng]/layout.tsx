@@ -8,6 +8,7 @@ import { navItems } from '@/constants'
 import { useTranslation } from '@/i18n'
 import ProgressBarProviders from '@/components/progress-bar-provider'
 import prisma from '@/lib/prisma'
+import AuthProvider from './auth-provider'
 
 // import LenisLayout from './lenis'
 
@@ -18,8 +19,6 @@ export const metadata = {
 interface RootProps {
   children: React.ReactNode
   params: { lng: string }
-  phuKienNamChamSpecial: React.ReactNode
-  thepTrangMenSpecial: React.ReactNode
 }
 
 const RootLayout: React.FC<RootProps> = async ({ children, params }): Promise<React.ReactElement> => {
@@ -44,7 +43,9 @@ const RootLayout: React.FC<RootProps> = async ({ children, params }): Promise<Re
           <Nav products={productsRaw} links={navItems.map(item => { return { label: t(item.label), url: item.url } })} />
         </div>
         <ProgressBarProviders>
-          {children}
+          <AuthProvider>
+            {children}
+          </AuthProvider>
           {/* <LenisLayout>
         </LenisLayout> */}
         </ProgressBarProviders>

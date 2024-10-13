@@ -3,7 +3,7 @@ import React from 'react'
 import { useFormState, useFormStatus } from 'react-dom'
 import { ClipLoader } from 'react-spinners'
 
-import { doLogin } from '@/actions/action'
+import { doLogin, LoginResult } from '@/actions/action'
 import UserIcon from '@/components/svg-icons/user'
 
 interface LoginFormProps {
@@ -30,7 +30,7 @@ const SubmitButton: React.FC = () => {
 }
 
 const LoginForm: React.FC<LoginFormProps> = ({ title }) => {
-  const [state, formAction] = useFormState<{ userId: string, password: string }, FormData>(doLogin, initialState)
+  const [state, formAction] = useFormState<Partial<LoginResult>, FormData>(doLogin, initialState)
   return (
     <div className='flex flex-col gap-10 h-full'>
       <div className='flex flex-col gap-10'>

@@ -4,11 +4,59 @@ import { signIn } from '@/auth'
 
 import { sussesEmailRegistration, existedEmailRegistration, failEmailRegistration } from '@/constants'
 
-export const doLogin = async (_: any, formData: FormData): Promise<any> => {
-  try {
-    await signIn('credentials', formData)
-  } catch (error) {
+export interface LoginResult {
+  isLoggedIn: boolean
+  message: string
+  userId: string
+  password: string
+}
 
+export const doLogin = async (_: any, formData: FormData): Promise<LoginResult> => {
+  try {
+    const userId = formData.get('userId')
+    const password = formData.get('password')
+
+    if (userId !== null && password !== null) {
+      const userIdReal = userId.valueOf()
+      const passwordReal = password.valueOf()
+      await signIn('credentials', {
+        userId: userIdReal,
+        password: passwordReal,
+        redirect: false
+      })
+
+      const user = await prisma.user.findFirst({ where: { userId: userIdReal } })
+      return {
+        isLoggedIn: true,
+        message: `Hello ${user?.userId ?? ''}`,
+        password: '',
+        userId: ''
+      }
+    } else {
+      return {
+        isLoggedIn: false,
+        message: 'Please provide me your password and user id or contact us as: dien-vo@kurashi.com.vn',
+        password: '',
+        userId: ''
+      }
+    }
+  } catch (error) {
+    const hack = error as any
+    if (hack.type === 'CredentialsSignin') {
+      return {
+        isLoggedIn: false,
+        message: 'Who are you?',
+        password: '',
+        userId: ''
+      }
+    }
+
+    return {
+      isLoggedIn: false,
+      message: 'Something wrong...',
+      password: '',
+      userId: ''
+    }
   }
 }
 
