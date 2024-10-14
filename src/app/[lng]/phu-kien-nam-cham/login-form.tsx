@@ -73,7 +73,7 @@ const LoginForm: React.FC<LoginFormProps> = ({ title }) => {
           {state.isLoggedIn === null
             ? ''
             : state.isLoggedIn === false
-              ? <WrongLogin content={<div className='text-[#942222]'>Sai ID hoặc password. Vui lòng kiểm tra và đăng nhập lại</div>} />
+              ? <WrongLogin content={<div className='text-[#942222]'>Sai iD hoặc password. Vui lòng kiểm tra và đăng nhập lại</div>} />
               : ''}
         </form>
       </div>
