@@ -51,6 +51,15 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
 
         return result.isOkay && user !== null ? { ...user, id: user.userId } : null
       }
+
     })
-  ]
+  ],
+  callbacks: {
+    async jwt ({ token, user }) {
+      return { ...token, ...user }
+    },
+    async session ({ session, user, token }) {
+      return { ...token, ...user, ...session }
+    }
+  }
 })
