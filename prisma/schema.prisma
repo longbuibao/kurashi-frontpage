@@ -77,6 +77,8 @@ model Product {
   landingPageUrl      String             @default("#")
   shortIntro          String             @default("")
   order               Int                @default(-1)
+  isTrendingProduct   Boolean            @default(false)
+  isAccessoryProduct  Boolean            @default(false)
 }
 
 model ProductImages {
@@ -131,6 +133,7 @@ model Category {
   id                String          @id @default(uuid())
   name              String
   isSpecialCategory Boolean
+  thumbnail         String          @default("#")
   productId         Product[]
   subCategories     SubCategory[]
   intros            CategoryIntro[]
