@@ -5,6 +5,7 @@ import Image from 'next/image'
 import prisma from '@/lib/prisma'
 import { FilterCard, PriceFilter } from '@/components/filter-card'
 import PhuKienNew from './phu-kien-new'
+import AllHotProducts from './all-hot-product'
 
 const PhuKienNamCham: React.FC = async () => {
   const allCategoriesWithCount = await prisma.product.groupBy({
@@ -57,13 +58,22 @@ const PhuKienNamCham: React.FC = async () => {
               </div>
             </FilterCard>
           </div>
-          <div className='w-[80%] flex flex-row items-center bg-main'>
-            <div className='flex flex-col gap-10 w-full py-10 pl-10'>
-              <div className='text-4xl font-bold'>BẾP SIÊU TIỆN LỢI VỚI PHỤ KIỆN NAM CHÂM</div>
-              <div className='text-2xl'>Đa chủng loại, tự do xê dịch</div>
+          <div className='w-[80%]'>
+            <div className='bg-main w-full flex flex-row text-secondary'>
+              <div className='flex flex-col gap-10 w-full py-10 pl-10'>
+                <div className='text-4xl font-bold'>BẾP SIÊU TIỆN LỢI VỚI PHỤ KIỆN NAM CHÂM</div>
+                <div className='text-2xl'>Đa chủng loại, tự do xê dịch</div>
+              </div>
+              <div className='w-[60%] p-5'>
+                <Image src='https://storage.googleapis.com/kurashi_frontpage_files/images/thep_trang_men_slider/10.jpg' alt='Phụ kiện thép tráng men' width={1080} height={1080} />
+              </div>
             </div>
-            <div className='w-[60%] px-5'>
-              <Image src='https://storage.googleapis.com/kurashi_frontpage_files/images/thep_trang_men_slider/10.jpg' alt='Phụ kiện thép tráng men' width={1080} height={1080} />
+            <div className='my-10'>
+              <div className='text-2xl'>Phụ kiện hot</div>
+              <div />
+            </div>
+            <div>
+              <AllHotProducts />
             </div>
           </div>
         </div>
