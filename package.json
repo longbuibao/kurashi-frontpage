@@ -36,6 +36,7 @@
     "react-intersection-observer": "^9.13.1",
     "react-loading-skeleton": "^3.4.0",
     "react-photo-album": "^2.3.1",
+    "react-range-slider-input": "^3.0.7",
     "react-spinners": "^0.13.8",
     "react-super-responsive-table": "^6.0.0",
     "react-tabs": "^6.0.2",

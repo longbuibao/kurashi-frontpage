@@ -17,7 +17,10 @@ const config: Config = {
       kurashiX: '#F6F5F5',
       kurashiT: '#CCE2ED',
       kurashiB: '#F6EFD7',
-      'kurashi-bg-main': '#f4f4f4'
+      'kurashi-bg-main': '#f4f4f4',
+      'kurashi-border': '#D9D9D9',
+      'count-bg': '#BCE3C9',
+      'count-text': '#253D4E'
     },
     extend: {
       boxShadow: {

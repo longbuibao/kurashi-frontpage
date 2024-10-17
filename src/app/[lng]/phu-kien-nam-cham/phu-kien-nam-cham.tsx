@@ -3,6 +3,7 @@ import React from 'react'
 import Image from 'next/image'
 
 import prisma from '@/lib/prisma'
+import { FilterCard, PriceFilter } from '@/components/filter-card'
 
 const PhuKienNamCham: React.FC = async () => {
   const allCategoriesWithCount = await prisma.product.groupBy({
@@ -36,24 +37,33 @@ const PhuKienNamCham: React.FC = async () => {
   })
 
   return (
-    <div className='w-4/5 mx-auto'>
-      <div className='flex flex-row gap-10'>
-        <div className='border h-fit p-5 w-[20%]'>
-          <div />
-          <div>Danh mục</div>
-          {categories.map(category =>
-            <CategoryItem name={category.name ?? ''} numberOfProducts={category.count ?? 0} thumbnail={category.thumbnail ?? ''} key={category.key} />)}
+    <div className='w-4/5 mx-auto my-10'>
+      <div className='flex flex-row gap-10 w-full'>
+        <div className='w-[20%] flex-col flex gap-10'>
+          <FilterCard title='Danh mục'>
+            <div className='flex flex-col gap-5'>
+              {categories.map(category =>
+                <CategoryItem name={category.name ?? ''} numberOfProducts={category.count ?? 0} thumbnail={category.thumbnail ?? ''} key={category.key} />)}
+            </div>
+          </FilterCard>
+          <FilterCard title='Lọc sản phẩm'>
+            <PriceFilter colors={[{ color: 'Trắng', quantity: 54 }, { color: 'Đen', quantity: 54 }, { color: 'Bạc', quantity: 54 }]} />
+          </FilterCard>
+          <FilterCard title='Phụ kiện mới'>
+            <div className='flex flex-col gap-5'>
+              {categories.map(category =>
+                <CategoryItem name={category.name ?? ''} numberOfProducts={category.count ?? 0} thumbnail={category.thumbnail ?? ''} key={category.key} />)}
+            </div>
+          </FilterCard>
         </div>
-        <div className='w-[80%] flex flex-row'>
-          <div className='flex flex-col gap-10 w-[20%]'>
-            <div>BẾP SIÊU TIỆN LỢI
-              VỚI PHỤ KIỆN NAM CHÂM
-            </div>
-            <div>
-              Đa chủng loại, tự do xê dịch
-            </div>
+        <div className='w-[80%] flex flex-row items-center bg-main'>
+          <div className='flex flex-col gap-10 w-full py-10 pl-10'>
+            <div className='text-4xl font-bold'>BẾP SIÊU TIỆN LỢI VỚI PHỤ KIỆN NAM CHÂM</div>
+            <div className='text-2xl'>Đa chủng loại, tự do xê dịch</div>
           </div>
-          <Image className='' src='https://storage.googleapis.com/kurashi_frontpage_files/images/thep_trang_men_slider/10.jpg' alt='Phụ kiện thép tráng men' width={1080} height={1080} />
+          <div className='w-[60%] px-5'>
+            <Image src='https://storage.googleapis.com/kurashi_frontpage_files/images/thep_trang_men_slider/10.jpg' alt='Phụ kiện thép tráng men' width={1080} height={1080} />
+          </div>
         </div>
       </div>
 
