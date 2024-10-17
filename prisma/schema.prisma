@@ -79,6 +79,7 @@ model Product {
   order               Int                @default(-1)
   isTrendingProduct   Boolean            @default(false)
   isAccessoryProduct  Boolean            @default(false)
+  price               Float              @default(0)
 }
 
 model ProductImages {
