@@ -5,7 +5,7 @@ import { ClipLoader } from 'react-spinners'
 import { useFormStatus } from 'react-dom'
 
 import './styles.css'
-import { DummyIcon } from '@/components/svg-icons'
+import { PriceIcon, ColorIcon } from '@/components/svg-icons'
 
 interface PriceFilterProps {
   min?: number
@@ -38,7 +38,7 @@ const PriceFilter: React.FC<PriceFilterProps> = ({ max = 100, min = 0, step = 1,
     <form>
       <div className='flex flex-col gap-5'>
         <div className='flex flex-row gap-5 items-center'>
-          <DummyIcon />
+          <PriceIcon />
           <div>Giá</div>
         </div>
       </div>
@@ -52,7 +52,7 @@ const PriceFilter: React.FC<PriceFilterProps> = ({ max = 100, min = 0, step = 1,
         </div>
       </div>
       <div className='flex flex-row gap-5 items-center my-10'>
-        <DummyIcon />
+        <ColorIcon />
         <div>Màu sắc</div>
       </div>
       <div className='flex flex-col gap-3'>{colors?.map(color => (

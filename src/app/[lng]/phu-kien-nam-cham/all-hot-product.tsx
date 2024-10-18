@@ -6,7 +6,8 @@ import prisma from '@/lib/prisma'
 const AllHotProducts: React.FC = async () => {
   const products = await prisma.product.findMany({
     where: {
-      isTrendingProduct: true
+      isTrendingProduct: true,
+      isAccessoryProduct: true
     },
     include: {
       category: true,
