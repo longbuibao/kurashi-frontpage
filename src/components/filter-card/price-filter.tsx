@@ -57,7 +57,7 @@ const PriceFilter: React.FC<PriceFilterProps> = ({ max = 100, min = 0, step = 1,
       </div>
       <div className='flex flex-col gap-3'>{colors?.map(color => (
         <div key={color.color} className='flex flex-row gap-5 items-center'>
-          <input type='checkbox' name={color.color} id={color.color} />
+          <input type='checkbox' name={color.color} id={color.color} className='p-1 border-secondary-opacity' />
           <label htmlFor={color.color}><div>{color.color} ({color.quantity})</div></label>
         </div>
       ))}

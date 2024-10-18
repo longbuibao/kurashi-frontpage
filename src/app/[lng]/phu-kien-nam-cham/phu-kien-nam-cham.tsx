@@ -52,11 +52,14 @@ const PhuKienNamCham: React.FC = async () => {
               </div>
             </FilterCard>
             <FilterCard title='Lọc sản phẩm'>
+              {/* todo: count the color here */}
               <PriceFilter colors={[{ color: 'Trắng', quantity: 54 }, { color: 'Đen', quantity: 54 }, { color: 'Bạc', quantity: 54 }]} />
             </FilterCard>
             <FilterCard title='Phụ kiện mới'>
               <div className='flex flex-col gap-5'>
-                <PhuKienNew />
+                <Suspense>
+                  <PhuKienNew />
+                </Suspense>
               </div>
             </FilterCard>
           </div>
@@ -71,10 +74,14 @@ const PhuKienNamCham: React.FC = async () => {
               </div>
             </div>
             <div className='text-2xl my-10'>Phụ kiện hot</div>
-            <AllHotProducts />
+            <Suspense>
+              <AllHotProducts />
+            </Suspense>
           </div>
         </div>
-        <SubCategories />
+        <Suspense>
+          <SubCategories />
+        </Suspense>
         <div className='text-2xl my-10'>Mua hàng theo loại phụ kiện</div>
         <ShopByCategory categories={categories} />
       </div>
