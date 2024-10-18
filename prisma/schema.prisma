@@ -65,6 +65,7 @@ model Product {
   productIntro        ProductIntro[]
   size                ProductSize?
   category            Category?          @relation(fields: [categoryId], references: [id])
+  // deprecated subCategory, dont use it, use secondaryCategory instead
   subCategory         SubCategory?       @relation(fields: [subCategoryId], references: [id])
   origin              ProductOrigin[]
   component           ProductComponent[]
@@ -80,6 +81,18 @@ model Product {
   isTrendingProduct   Boolean            @default(false)
   isAccessoryProduct  Boolean            @default(false)
   price               Float              @default(0)
+  secondaryCategoryId String?
+  secondaryCategory   SecondaryCategory? @relation(fields: [secondaryCategoryId], references: [id])
+}
+
+model SecondaryCategory {
+  id        String    @id @default(uuid())
+  name      String
+  thumbnail String
+  // this should be a readable url id
+  url       String    @default("#")
+  content   String    @default("")
+  Product   Product[]
 }
 
 model ProductImages {
@@ -152,6 +165,7 @@ model SubCategory {
   id         String    @id @default(uuid())
   name       String
   thumbnail  String
+  content    String    @default("")
   products   Product[]
   categoryId String?
   category   Category? @relation(fields: [categoryId], references: [id])

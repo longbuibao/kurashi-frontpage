@@ -6,6 +6,8 @@ import prisma from '@/lib/prisma'
 import { FilterCard, PriceFilter } from '@/components/filter-card'
 import PhuKienNew from './phu-kien-new'
 import AllHotProducts from './all-hot-product'
+import SubCategories from './sub-categories'
+import ShopByCategory from './shop-by-category'
 
 const PhuKienNamCham: React.FC = async () => {
   const allCategoriesWithCount = await prisma.product.groupBy({
@@ -68,15 +70,13 @@ const PhuKienNamCham: React.FC = async () => {
                 <Image src='https://storage.googleapis.com/kurashi_frontpage_files/images/thep_trang_men_slider/10.jpg' alt='Phụ kiện thép tráng men' width={1080} height={1080} />
               </div>
             </div>
-            <div className='my-10'>
-              <div className='text-2xl'>Phụ kiện hot</div>
-              <div />
-            </div>
-            <div>
-              <AllHotProducts />
-            </div>
+            <div className='text-2xl my-10'>Phụ kiện hot</div>
+            <AllHotProducts />
           </div>
         </div>
+        <SubCategories />
+        <div className='text-2xl my-10'>Mua hàng theo loại phụ kiện</div>
+        <ShopByCategory categories={categories} />
       </div>
     </Suspense>
   )

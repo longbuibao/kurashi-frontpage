@@ -29,6 +29,9 @@ const config: Config = {
       backgroundColor: {
         'kurashi-black': 'rgba(0, 0, 0, 0.25)'
       }
+    },
+    fontFamily: {
+      body: ['Futura']
     }
   },
   plugins: []

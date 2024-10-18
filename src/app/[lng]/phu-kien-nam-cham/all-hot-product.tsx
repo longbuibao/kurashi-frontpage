@@ -16,7 +16,7 @@ const AllHotProducts: React.FC = async () => {
   return (
     <div className='grid grid-cols-4 gap-10'>
       {products.map(x => (
-        <div key={x.id} className='border border-kurashi-border rounded-lg w-48'>
+        <div key={x.id} className='border border-kurashi-border rounded-lg w-full'>
           <div className='mx-auto p-3'>
             <Image src={x.thumbnail} width={1080} height={1080} alt='Phụ kiện nam châm' />
           </div>
@@ -27,7 +27,7 @@ const AllHotProducts: React.FC = async () => {
             </div>
             <div className='flex flex-row mt-3'>
               <div className='flex flex-row gap-3'>{x.ProductColor.map(y => <div key={y.id}>{y.name}</div>)}</div>
-              <div className='text-main'>$ <span>{x.price}</span></div>
+              <div className='text-main font-bold'>$ <span>{x.price}</span></div>
             </div>
           </div>
         </div>
