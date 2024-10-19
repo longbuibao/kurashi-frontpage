@@ -20,7 +20,6 @@ const PhuKienNamChamPage: React.FC = async () => {
           </div>
         </div>
       </div>
-
       )
 }
 

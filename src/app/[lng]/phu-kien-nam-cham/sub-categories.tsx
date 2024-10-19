@@ -23,7 +23,7 @@ const SubCategories: React.FC = async () => {
   const subCategories = await prisma.secondaryCategory.findMany({
     take: 3
   })
-  return <div className='flex flex-row gap-10 my-10'>{subCategories.map(x => <SubCategoryCard key={x.id} subCategory={x} />)}</div>
+  return <div className='flex flex-row gap-10 my-24'>{subCategories.map(x => <SubCategoryCard key={x.id} subCategory={x} />)}</div>
 }
 
 export default SubCategories

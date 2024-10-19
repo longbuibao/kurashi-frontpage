@@ -1,11 +1,7 @@
 import React, { Suspense } from 'react'
-import Link from 'next/link'
 
 import { CatalogCard } from '@/components/catalog-card'
-import { Breadcrumb } from '@/components/breadcrumb'
 import prisma from '@/lib/prisma'
-import { home, catalogs, namespace } from '@/i18n/catalog-trans-key'
-import { useTranslation } from '@/i18n'
 import CatalogsSkeleton from './skeleton'
 import { getMetadata } from '@/utils'
 import { Metadata } from 'next'

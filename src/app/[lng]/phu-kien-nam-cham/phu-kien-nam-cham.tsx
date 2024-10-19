@@ -8,6 +8,7 @@ import PhuKienNew from './phu-kien-new'
 import AllAccessoriesProducts from './all-accessories-product'
 import SubCategories from './sub-categories'
 import ShopByCategory from './shop-by-category'
+import OnlineStore from './online-store'
 
 const PhuKienNamCham: React.FC = async () => {
   const allCategoriesWithCount = await prisma.product.groupBy({
@@ -25,7 +26,8 @@ const PhuKienNamCham: React.FC = async () => {
       name: true,
       thumbnail: true,
       id: true,
-      order: true
+      order: true,
+      categoryUniqueName: true
     }
   })
 
@@ -38,7 +40,8 @@ const PhuKienNamCham: React.FC = async () => {
       name: category?.name,
       thumbnail: category?.thumbnail,
       key: category?.id,
-      order: category?.order ?? 0
+      order: category?.order ?? 0,
+      url: category?.categoryUniqueName ?? ''
     }
   })
 
@@ -50,7 +53,7 @@ const PhuKienNamCham: React.FC = async () => {
             <FilterCard title='Danh mục'>
               <div className='flex flex-col gap-5'>
                 {categories.sort((x, y) => y.order - x.order).map(category =>
-                  <CategoryItem name={category.name ?? ''} numberOfProducts={category.count ?? 0} thumbnail={category.thumbnail ?? ''} key={category.key} />)}
+                  <CategoryItem url={category.url} name={category.name ?? ''} numberOfProducts={category.count ?? 0} thumbnail={category.thumbnail ?? ''} key={category.key} />)}
               </div>
             </FilterCard>
           </Suspense>
@@ -88,6 +91,8 @@ const PhuKienNamCham: React.FC = async () => {
       </Suspense>
       <div className='text-2xl my-10'>Mua hàng theo loại phụ kiện</div>
       <ShopByCategory categories={categories} />
+      <div className='text-2xl mt-24 mb-10 pb-5 border-b-main border-b-[0.5px]'>Online store</div>
+      <OnlineStore />
     </div>
   )
 }

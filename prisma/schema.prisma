@@ -144,14 +144,15 @@ model ProductComponent {
 }
 
 model Category {
-  id                String          @id @default(uuid())
-  name              String
-  isSpecialCategory Boolean
-  thumbnail         String          @default("#")
-  productId         Product[]
-  subCategories     SubCategory[]
-  intros            CategoryIntro[]
-  order             Int             @default(-1)
+  id                 String          @id @default(uuid())
+  name               String
+  isSpecialCategory  Boolean
+  thumbnail          String          @default("#")
+  productId          Product[]
+  subCategories      SubCategory[]
+  intros             CategoryIntro[]
+  order              Int             @default(-1)
+  categoryUniqueName String          @default("")
 }
 
 model CategoryIntro {
