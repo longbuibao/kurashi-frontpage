@@ -7,13 +7,13 @@ import { SecondaryCategory } from '@prisma/client'
 
 const SubCategoryCard: React.FC<{ subCategory: SecondaryCategory }> = ({ subCategory }) => {
   return (
-    <div className='flex flex-row gap-3 bg-blog p-3'>
-      <div className='flex flex-col gap-5 justify-center'>
-        <div className='font-bold'>{subCategory.content}</div>
+    <div className='flex flex-row gap-3 bg-main-phu-kien p-3 rounded-xl shadow-lg w-1/3'>
+      <div className='flex flex-col gap-5 justify-center w-1/2 ml-5'>
+        <div className='font-bold text-secondary text-xl'>{subCategory.content}</div>
         <Link className='w-fit mx-auto p-2 rounded-lg text-secondary bg-main mt-5 font-bold' href={subCategory.url}>Shop now</Link>
       </div>
-      <div className='w-1/2'>
-        <Image src={subCategory.thumbnail} width={300} height={400} alt='Phụ kiện nam châm' />
+      <div className='w-1/3 ml-auto'>
+        <Image className='rounded-xl' src={subCategory.thumbnail} width={300} height={400} alt='Phụ kiện nam châm' />
       </div>
     </div>
   )

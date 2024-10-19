@@ -11,7 +11,7 @@ import ShopByCategory from './shop-by-category'
 
 const PhuKienNamCham: React.FC = async () => {
   const allCategoriesWithCount = await prisma.product.groupBy({
-    by: ['categoryId'],
+    by: ['categoryId', 'order'],
     where: {
       isAccessoryProduct: true
     },
@@ -24,7 +24,8 @@ const PhuKienNamCham: React.FC = async () => {
     select: {
       name: true,
       thumbnail: true,
-      id: true
+      id: true,
+      order: true
     }
   })
 
@@ -36,7 +37,8 @@ const PhuKienNamCham: React.FC = async () => {
       count,
       name: category?.name,
       thumbnail: category?.thumbnail,
-      key: category?.id
+      key: category?.id,
+      order: category?.order ?? 0
     }
   })
 
@@ -47,7 +49,7 @@ const PhuKienNamCham: React.FC = async () => {
           <Suspense>
             <FilterCard title='Danh mục'>
               <div className='flex flex-col gap-5'>
-                {categories.map(category =>
+                {categories.sort((x, y) => y.order - x.order).map(category =>
                   <CategoryItem name={category.name ?? ''} numberOfProducts={category.count ?? 0} thumbnail={category.thumbnail ?? ''} key={category.key} />)}
               </div>
             </FilterCard>
@@ -66,16 +68,16 @@ const PhuKienNamCham: React.FC = async () => {
           </FilterCard>
         </div>
         <div className='w-[80%]'>
-          <div className='bg-main w-full flex flex-row text-secondary'>
+          <div className='bg-main-phu-kien w-full flex flex-row text-secondary rounded-xl'>
             <div className='flex flex-col gap-10 w-full py-10 pl-10 justify-center'>
-              <div className='text-3xl font-bold'>BẾP SIÊU TIỆN LỢI VỚI PHỤ KIỆN NAM CHÂM</div>
+              <div className='text-4xl font-bold'>BẾP SIÊU TIỆN LỢI <br /><div className='mt-3'>VỚI PHỤ KIỆN NAM CHÂM</div></div>
               <div className='text-2xl'>Đa chủng loại, tự do xê dịch</div>
             </div>
             <div className='w-[60%] p-5'>
-              <Image src='https://storage.googleapis.com/kurashi_frontpage_files/images/thep_trang_men_slider/10.jpg' alt='Phụ kiện thép tráng men' width={1080} height={1080} />
+              <Image className='rounded-xl' src='https://storage.googleapis.com/kurashi_frontpage_files/images/thep_trang_men_slider/10.jpg' alt='Phụ kiện thép tráng men' width={1080} height={1080} />
             </div>
           </div>
-          <div className='text-2xl my-10'>Phụ kiện nam châm</div>
+          <div className='text-2xl my-10'>Phụ kiện thông dụng</div>
           <Suspense>
             <AllAccessoriesProducts />
           </Suspense>

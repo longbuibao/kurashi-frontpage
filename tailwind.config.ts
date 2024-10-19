@@ -20,7 +20,8 @@ const config: Config = {
       'kurashi-bg-main': '#f4f4f4',
       'kurashi-border': '#D9D9D9',
       'count-bg': '#BCE3C9',
-      'count-text': '#253D4E'
+      'count-text': '#253D4E',
+      'main-phu-kien': '#9EB8A0'
     },
     extend: {
       boxShadow: {

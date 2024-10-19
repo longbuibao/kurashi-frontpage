@@ -151,6 +151,7 @@ model Category {
   productId         Product[]
   subCategories     SubCategory[]
   intros            CategoryIntro[]
+  order             Int             @default(-1)
 }
 
 model CategoryIntro {
