@@ -5,11 +5,11 @@ import { LinkToOnlineStoreCard, LinkToOnlineStoreCardProps } from './link-to-onl
 
 const OnlineStore: React.FC = () => {
   const linksToOnlineStore: LinkToOnlineStoreCardProps[] = [
-    { url: 'tiktok.com', icon: <Image width={30} height={30} alt='Phụ kiện thép tráng men trên Tiktok' src='https://storage.googleapis.com/kurashi_frontpage_files/phu-kien-thep-trang-men/category-icon/tiktok-shop-icon.png' />, label: 'TikTok Shop' },
-    { url: 'shopee.com', icon: <Image width={30} height={30} alt='Phụ kiện thép tráng men trên Shopee' src='https://storage.googleapis.com/kurashi_frontpage_files/phu-kien-thep-trang-men/category-icon/shopee-icon.png' />, label: 'Shopee' }
+    { url: 'shopee.com', icon: <Image className='w-full' width={30} height={30} alt='Phụ kiện thép tráng men trên Shopee' src='https://storage.googleapis.com/kurashi_frontpage_files/phu-kien-thep-trang-men/category-icon/shopee-icon.svg' />, label: 'Shopee' },
+    { url: 'tiktok.com', icon: <Image className='w-full' width={30} height={30} alt='Phụ kiện thép tráng men trên Tiktok' src='https://storage.googleapis.com/kurashi_frontpage_files/phu-kien-thep-trang-men/category-icon/tiktok-icon.svg' />, label: 'TikTok Shop' }
   ]
   return (
-    <div className='flex flex-row gap-5 mb-32'>
+    <div className='flex flex-row gap-5 mb-52'>
       {linksToOnlineStore.map(x =>
         <LinkToOnlineStoreCard key={x.url} icon={x.icon} label={x.label} url={x.url} />)}
     </div>
