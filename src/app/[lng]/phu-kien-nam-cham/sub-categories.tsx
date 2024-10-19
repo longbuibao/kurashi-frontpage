@@ -10,7 +10,7 @@ const SubCategoryCard: React.FC<{ subCategory: SecondaryCategory }> = ({ subCate
     <div className='flex flex-row gap-3 bg-blog p-3'>
       <div className='flex flex-col gap-5 justify-center'>
         <div className='font-bold'>{subCategory.content}</div>
-        <Link className='w-fit mx-auto p-2 rounded-lg text-secondary bg-main mt-5' href={subCategory.url}>Shop now</Link>
+        <Link className='w-fit mx-auto p-2 rounded-lg text-secondary bg-main mt-5 font-bold' href={subCategory.url}>Shop now</Link>
       </div>
       <div className='w-1/2'>
         <Image src={subCategory.thumbnail} width={300} height={400} alt='Phụ kiện nam châm' />

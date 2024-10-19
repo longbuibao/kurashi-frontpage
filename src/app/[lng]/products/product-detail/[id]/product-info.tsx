@@ -9,7 +9,6 @@ import dynamic from 'next/dynamic'
 import { KurashiDiv, KurashiLeftBorder } from '@/components/kurashi-div'
 import { useTranslation } from '@/i18n'
 import * as transKey from '@/i18n/product-info-trans-key'
-import { Breadcrumb } from '@/components/breadcrumb'
 import { columnsKey } from '@/utils/cell-renderer-helper'
 import { tableHeaderRow } from '@/utils'
 import prisma from '@/lib/prisma'
@@ -192,11 +191,6 @@ const ProductInfo: React.FC<ProductInfoProps> = async ({ id, lng }) => {
     }
   })
 
-  const breadcrumb = [
-    <Link href='/products' key={uuidv4()}>{t(transKey.allProducts)}</Link>,
-    <Link href={`/products/category/${productInfo?.category?.id ?? '#'}`} key={uuidv4()}>{productInfo?.category?.name ?? 'null'}</Link>
-  ]
-
   if (productInfo !== null) {
     const columns = new Set<string>([tableHeaderRow.manualLink, tableHeaderRow.productId, tableHeaderRow.productQuantity, tableHeaderRow.xdfLink])
     const toRender: Array<{ [key in tableHeaderRow]: any }> = [{
@@ -207,156 +201,146 @@ const ProductInfo: React.FC<ProductInfoProps> = async ({ id, lng }) => {
     }]
 
     return (
-      <div>
-        <div className='w-4/5 my-10 mx-auto flex flex-row max-lg:mb-0'>
-          <div>
-            <div className='flex flex-row gap-5 items-center justify-center self-start ml-auto max-lg:flex-wrap'>
-              <Breadcrumb items={breadcrumb} separator={<i className='fa-solid fa-chevron-right' />} />
+      <div className='flex flex-col w-full'>
+        <div className='flex flex-col w-4/5 mx-auto my-10 max-lg:w-full max-lg:p-1'>
+          <div className='w-fit max-lg:ml-6'>
+            <KurashiLeftBorder>
+              <h1 className='text-xl'>{t(transKey.productInformation)}</h1>
+            </KurashiLeftBorder>
+          </div>
+          <div className='flex flex-row items-center justify-center max-lg:flex-col'>
+            <div className='flex-1 max-lg:w-full w-full'>
+              <Image className='mx-auto' width={640} height={360} src={productInfo.primaryProductImage !== '#' ? productInfo.primaryProductImage : productInfo.thumbnail} alt={productInfo.name} />
+            </div>
+            <div className='flex flex-col justify-center gap-1 h-full w-1/3 max-lg:w-full'>
+              <div className='bg-secondary p-5'>
+                <KurashiLeftBorder>
+                  {`${t(transKey.productName)}`}: <span>{t(productInfo.name)}</span>
+                </KurashiLeftBorder>
+              </div>
+              <div className='bg-secondary p-5'>
+                <div>
+                  <KurashiLeftBorder>
+                    {`${t(transKey.productMaterial)}`}:
+                  </KurashiLeftBorder>
+                </div>
+                <div className='pl-10'>
+                  {productInfo.component.map(component => (
+                    <div key={component.id}>
+                      <span className='text-main text-xl font-semibold'> - </span>{t(component.name)}: <span>{component.material.map(material => t(material.name)).join(', ')}</span>
+                    </div>
+                  )
+                  )}
+                </div>
+              </div>
+              <div className='bg-secondary p-5'>
+                <div>
+                  <KurashiLeftBorder>
+                    {`${t(transKey.productOrigin)}`}: {'\t'}
+                    <span>
+                      {productInfo.origin.map(fromOrigin => t(fromOrigin.name)).join(', ')}
+                    </span>
+                  </KurashiLeftBorder>
+                </div>
+              </div>
+              <div className='bg-secondary p-1 flex flex-row gap-3 justify-center'>
+                <div className='max-sm:w-1/2 w-fit'>
+                  <KurashiDiv>
+                    <div className='flex flex-row items-center justify-center'>
+                      <Link href={productInfo.productVideo} target='_blank' rel='noreferrer' className='max-sm:text-sm'>Video sản phẩm</Link>
+                      <div className='ml-3 inline-block'>
+                        <i className='fa-solid fa-chevron-right' />
+                      </div>
+                    </div>
+                  </KurashiDiv>
+                </div>
+                <div className='max-sm:w-1/2 w-fit'>
+                  <KurashiDiv>
+                    <div className='flex flex-row items-center justify-center'>
+                      <Link href={zaloLink} target='_blank' rel='noreferrer' className='max-sm:text-sm'>{t(transKey.contactUsingZalo)}</Link>
+                      <div className='ml-3 inline-block'>
+                        <i className='fa-solid fa-chevron-right' />
+                      </div>
+                    </div>
+                  </KurashiDiv>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-        <div className='flex flex-col w-full'>
-          <div className='flex flex-col w-4/5 mx-auto my-10 max-lg:w-full max-lg:p-1'>
-            <div className='w-fit max-lg:ml-6'>
-              <KurashiLeftBorder>
-                <h1 className='text-xl'>{t(transKey.productInformation)}</h1>
-              </KurashiLeftBorder>
-            </div>
-            <div className='flex flex-row items-center justify-center max-lg:flex-col'>
-              <div className='flex-1 max-lg:w-full w-full'>
-                <Image className='mx-auto' width={640} height={360} src={productInfo.primaryProductImage !== '#' ? productInfo.primaryProductImage : productInfo.thumbnail} alt={productInfo.name} />
-              </div>
-              <div className='flex flex-col justify-center gap-1 h-full w-1/3 max-lg:w-full'>
-                <div className='bg-secondary p-5'>
+        <div className='flex flex-col w-4/5 mx-auto max-lg:w-full max-lg:p-1'>
+          <div className='w-fit mb-10 max-lg:ml-6'>
+            <KurashiLeftBorder>
+              <h1 className='text-xl'>{t(transKey.productIntro)}</h1>
+            </KurashiLeftBorder>
+          </div>
+          <div className='flex flex-row bg-secondary max-lg:flex-col max-lg:w-full max-lg:mx-0'>
+            <div className='flex flex-col w-1/2 px-5 items-center justify-center max-lg:w-full'>
+              {productInfo.productIntro.map(intro => (
+                <div className='flex flex-col gap-5 my-5' key={intro.id}>
                   <KurashiLeftBorder>
-                    {`${t(transKey.productName)}`}: <span>{t(productInfo.name)}</span>
+                    <div>{intro.title}</div>
+                  </KurashiLeftBorder>
+                  <div className='pl-4'>
+                    {intro.content}
+                  </div>
+                </div>
+              ))}
+            </div>
+            <div className='flex flex-row-reverse w-1/3 justify-center items-center max-lg:w-full max-lg:p-10 mx-auto gap-15'>
+              {productInfo.productIntro.map(intro => (
+                intro.introImg !== '#'
+                  ? (
+                    <div className='my-5' key={intro.id}>
+                      <Image width={500} height={500} src={intro.introImg} alt='product intro image' />
+                    </div>
+                    )
+                  : undefined
+              ))}
+            </div>
+          </div>
+        </div>
+        <div className='flex flex-col w-4/5 mx-auto my-10 max-lg:w-full max-lg:p-1'>
+          <div className='w-fit mb-10 max-lg:ml-6'>
+            <KurashiLeftBorder>
+              <h1 className='text-xl'>{t(transKey.productSize)}</h1>
+            </KurashiLeftBorder>
+          </div>
+          <div className='flex flex-row max-lg:flex-col bg-secondary justify-center items-center max-lg:w-full max-lg:mx-0'>
+            <div className='flex flex-row-reverse justify-center items-center max-lg:w-full relative'>
+              {productInfo.size?.productSizeImage.map(imgSrc => (
+                <Image
+                  quality={100}
+                  width={1080}
+                  height={368}
+                  src={imgSrc.imageUrl} key={imgSrc.id} sizes='(min-width: 808px) 50vw, 100vw'
+                  style={{
+                    objectFit: 'cover' // cover, contain, none
+                  }} alt='kích thước sản phẩm'
+                />
+              ))}
+            </div>
+          </div>
+          {productInfo.ProductVariants.length > 0
+            ? <div />
+            : (
+              <div className='w-full my-5'>
+                <ProductSizeTable lng={lng} columns={columns} toRender={toRender} />
+              </div>)}
+          <div>
+            {productInfo.ProductVariants.length > 0 && (
+              <div className='my-10'>
+                <div className='text-xl max-lg:ml-6 w-fit'>
+                  <KurashiLeftBorder>
+                    Các sản phẩm khác
                   </KurashiLeftBorder>
                 </div>
-                <div className='bg-secondary p-5'>
-                  <div>
-                    <KurashiLeftBorder>
-                      {`${t(transKey.productMaterial)}`}:
-                    </KurashiLeftBorder>
-                  </div>
-                  <div className='pl-10'>
-                    {productInfo.component.map(component => (
-                      <div key={component.id}>
-                        <span className='text-main text-xl font-semibold'> - </span>{t(component.name)}: <span>{component.material.map(material => t(material.name)).join(', ')}</span>
-                      </div>
-                    )
-                    )}
-                  </div>
-                </div>
-                <div className='bg-secondary p-5'>
-                  <div>
-                    <KurashiLeftBorder>
-                      {`${t(transKey.productOrigin)}`}: {'\t'}
-                      <span>
-                        {productInfo.origin.map(fromOrigin => t(fromOrigin.name)).join(', ')}
-                      </span>
-                    </KurashiLeftBorder>
-                  </div>
-                </div>
-                <div className='bg-secondary p-1 flex flex-row gap-3 justify-center'>
-                  <div className='max-sm:w-1/2 w-fit'>
-                    <KurashiDiv>
-                      <div className='flex flex-row items-center justify-center'>
-                        <Link href={productInfo.productVideo} target='_blank' rel='noreferrer' className='max-sm:text-sm'>Video sản phẩm</Link>
-                        <div className='ml-3 inline-block'>
-                          <i className='fa-solid fa-chevron-right' />
-                        </div>
-                      </div>
-                    </KurashiDiv>
-                  </div>
-                  <div className='max-sm:w-1/2 w-fit'>
-                    <KurashiDiv>
-                      <div className='flex flex-row items-center justify-center'>
-                        <Link href={zaloLink} target='_blank' rel='noreferrer' className='max-sm:text-sm'>{t(transKey.contactUsingZalo)}</Link>
-                        <div className='ml-3 inline-block'>
-                          <i className='fa-solid fa-chevron-right' />
-                        </div>
-                      </div>
-                    </KurashiDiv>
-                  </div>
-                </div>
+                <VariantTables lng={lng} variants={productInfo.ProductVariants} currentProductId={productInfo.id} />
               </div>
-            </div>
-          </div>
-          <div className='flex flex-col w-4/5 mx-auto max-lg:w-full max-lg:p-1'>
-            <div className='w-fit mb-10 max-lg:ml-6'>
-              <KurashiLeftBorder>
-                <h1 className='text-xl'>{t(transKey.productIntro)}</h1>
-              </KurashiLeftBorder>
-            </div>
-            <div className='flex flex-row bg-secondary max-lg:flex-col max-lg:w-full max-lg:mx-0'>
-              <div className='flex flex-col w-1/2 px-5 items-center justify-center max-lg:w-full'>
-                {productInfo.productIntro.map(intro => (
-                  <div className='flex flex-col gap-5 my-5' key={intro.id}>
-                    <KurashiLeftBorder>
-                      <div>{intro.title}</div>
-                    </KurashiLeftBorder>
-                    <div className='pl-4'>
-                      {intro.content}
-                    </div>
-                  </div>
-                ))}
-              </div>
-              <div className='flex flex-row-reverse w-1/3 justify-center items-center max-lg:w-full max-lg:p-10 mx-auto gap-15'>
-                {productInfo.productIntro.map(intro => (
-                  intro.introImg !== '#'
-                    ? (
-                      <div className='my-5' key={intro.id}>
-                        <Image width={500} height={500} src={intro.introImg} alt='product intro image' />
-                      </div>
-                      )
-                    : undefined
-                ))}
-              </div>
-            </div>
-          </div>
-          <div className='flex flex-col w-4/5 mx-auto my-10 max-lg:w-full max-lg:p-1'>
-            <div className='w-fit mb-10 max-lg:ml-6'>
-              <KurashiLeftBorder>
-                <h1 className='text-xl'>{t(transKey.productSize)}</h1>
-              </KurashiLeftBorder>
-            </div>
-            <div className='flex flex-row max-lg:flex-col bg-secondary justify-center items-center max-lg:w-full max-lg:mx-0'>
-              <div className='flex flex-row-reverse justify-center items-center max-lg:w-full relative'>
-                {productInfo.size?.productSizeImage.map(imgSrc => (
-                  <Image
-                    quality={100}
-                    width={1080}
-                    height={368}
-                    src={imgSrc.imageUrl} key={imgSrc.id} sizes='(min-width: 808px) 50vw, 100vw'
-                    style={{
-                      objectFit: 'cover' // cover, contain, none
-                    }} alt='kích thước sản phẩm'
-                  />
-                ))}
-              </div>
-            </div>
-            {productInfo.ProductVariants.length > 0
-              ? <div />
-              : (
-                <div className='w-full my-5'>
-                  <ProductSizeTable lng={lng} columns={columns} toRender={toRender} />
-                </div>)}
-            <div>
-              {productInfo.ProductVariants.length > 0 && (
-                <div className='my-10'>
-                  <div className='text-xl max-lg:ml-6 w-fit'>
-                    <KurashiLeftBorder>
-                      Các sản phẩm khác
-                    </KurashiLeftBorder>
-                  </div>
-                  <VariantTables lng={lng} variants={productInfo.ProductVariants} currentProductId={productInfo.id} />
-                </div>
-              )}
-            </div>
+            )}
           </div>
         </div>
       </div>
-
     )
   }
 

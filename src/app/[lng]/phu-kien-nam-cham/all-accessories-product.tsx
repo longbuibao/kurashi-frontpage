@@ -3,7 +3,7 @@ import Image from 'next/image'
 
 import prisma from '@/lib/prisma'
 
-const AllHotProducts: React.FC = async () => {
+const AllAccessoriesProducts: React.FC = async () => {
   const products = await prisma.product.findMany({
     where: {
       isTrendingProduct: true,
@@ -26,8 +26,14 @@ const AllHotProducts: React.FC = async () => {
               <div className='text-opacity-20 text-black'>{x.category?.name}</div>
               <div className='font-bold'>{x.name}</div>
             </div>
-            <div className='flex flex-row mt-3'>
-              <div className='flex flex-row gap-3'>{x.ProductColor.map(y => <div key={y.id}>{y.name}</div>)}</div>
+            <div className='flex flex-row justify-between mt-3'>
+              <div className='flex flex-row gap-3'>
+                {x.ProductColor.map(y => {
+                  const className = `w-5 h-5 rounded-xl bg-[${y.colorHex}] border border-kurashi-border`
+                  return <div className={className} key={y.id} />
+                }
+                )}
+              </div>
               <div className='text-main font-bold'>$ <span>{x.price}</span></div>
             </div>
           </div>
@@ -37,4 +43,4 @@ const AllHotProducts: React.FC = async () => {
   )
 }
 
-export default AllHotProducts
+export default AllAccessoriesProducts
