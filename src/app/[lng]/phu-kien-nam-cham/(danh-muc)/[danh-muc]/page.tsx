@@ -4,7 +4,7 @@ import React, { Suspense } from 'react'
 import { ProductAccessoryCard } from '@/components/product'
 
 interface PageParam {
-  params: { category: string }
+  params: { 'danh-muc': string }
 }
 
 const CategoryPhuKienPage: React.FC<PageParam> = async ({ params }) => {
@@ -12,14 +12,19 @@ const CategoryPhuKienPage: React.FC<PageParam> = async ({ params }) => {
     where: {
       isAccessoryProduct: true,
       category: {
-        categoryUniqueName: params.category
+        categoryUniqueName: params['danh-muc']
       }
+    },
+    include: {
+      category: true
     }
   })
   return (
     <Suspense>
       <div className='grid grid-cols-4 gap-10 my-10'>
-        {allProducts.map(x => <ProductAccessoryCard key={x.id} product={x} />)}
+        {allProducts.map(x => {
+          return <ProductAccessoryCard key={x.id} product={x} />
+        })}
       </div>
     </Suspense>
   )

@@ -53,6 +53,7 @@ model PostCategory {
 
 model Product {
   id                  String             @id @default(uuid())
+  uniqueName          String?            @unique @default(uuid())
   name                String
   productId           String             @default("")
   productVideo        String             @default("#")
@@ -74,9 +75,11 @@ model Product {
   ProductTag          ProductTag[]
   ProductVariants     ProductVariants[]
   productImages       ProductImages[]
+  // indicate that if a product has landingpage. For example, the "thep trang men" has it owns landing page
   hasLandingPage      Boolean            @default(false)
   landingPageUrl      String             @default("#")
   shortIntro          String             @default("")
+  // the order to sort the list of products
   order               Int                @default(-1)
   isTrendingProduct   Boolean            @default(false)
   isAccessoryProduct  Boolean            @default(false)

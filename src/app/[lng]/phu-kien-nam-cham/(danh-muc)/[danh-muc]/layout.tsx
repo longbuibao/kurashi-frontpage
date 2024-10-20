@@ -4,16 +4,15 @@ import Link from 'next/link'
 import prisma from '@/lib/prisma'
 import { CategoryItem } from '@/components/category-item'
 import { FilterCard } from '@/components/filter-card'
-import OnlineStore from '../online-store'
+import OnlineStore from '../../online-store'
 
 interface PhuKienNamChamCategoryLayoutProps {
   children: React.ReactNode
-  params: { category: string }
+  params: { 'danh-muc': string }
 }
 
 const PhuKienNamChamLayout: React.FC<PhuKienNamChamCategoryLayoutProps> = async ({ params, children }) => {
-  const categoryToSearch = params.category
-
+  const categoryToSearch = params['danh-muc']
   const allCategoriesWithCount = await prisma.product.groupBy({
     by: ['categoryId', 'order'],
     where: {

@@ -1,6 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 import { Prisma } from '@prisma/client'
+import Link from 'next/link'
 
 type ProductQueryType = Prisma.ProductGetPayload<{
   where: {
@@ -18,8 +19,10 @@ interface ProductAccessoryCardProps {
 }
 
 const ProductAccessoryCard: React.FC<ProductAccessoryCardProps> = ({ product: x }) => {
+  const productUniqueName = x.uniqueName === null || x.uniqueName === undefined ? '#' : x.uniqueName
+  const productUrl = `/phu-kien-nam-cham/san-pham/${productUniqueName}`
   return (
-    <div key={x.id} className='border border-kurashi-border rounded-lg w-full shadow-lg'>
+    <Link href={productUrl} key={x.id} className='border border-kurashi-border rounded-lg w-full shadow-lg'>
       <div className='mx-auto p-3'>
         <Image className='rounded-xl' src={x.thumbnail ?? '#'} width={1080} height={1080} alt='Phụ kiện nam châm' />
       </div>
@@ -40,7 +43,7 @@ const ProductAccessoryCard: React.FC<ProductAccessoryCardProps> = ({ product: x 
           <div className='text-main font-bold'>$ <span>{x.price}</span></div>
         </div>
       </div>
-    </div>
+    </Link>
   )
 }
 
