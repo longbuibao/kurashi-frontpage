@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Suspense } from 'react'
 
 interface SanPhamLayoutProps {
   children: React.ReactNode
@@ -6,7 +6,7 @@ interface SanPhamLayoutProps {
 }
 
 const SanPhamLayout: React.FC<SanPhamLayoutProps> = ({ params, children }) => {
-  return <div>{params['san-pham']} {children}</div>
+  return <Suspense>{children}</Suspense>
 }
 
 export default SanPhamLayout

@@ -8,7 +8,7 @@ import PhuKienNew from './phu-kien-new'
 import AllAccessoriesProducts from './all-accessories-product'
 import SubCategories from './sub-categories'
 import ShopByCategory from './shop-by-category'
-import OnlineStore from './online-store'
+import { OnlineStore } from '@/components/online-store-card'
 
 const PhuKienNamCham: React.FC = async () => {
   const allCategoriesWithCount = await prisma.product.groupBy({

@@ -110,12 +110,14 @@ model ProductImages {
 }
 
 model ProductIntro {
-  id        String   @id @default(uuid())
-  title     String
-  content   String
-  introImg  String
-  Product   Product? @relation(fields: [productId], references: [id])
-  productId String?
+  id            String   @id @default(uuid())
+  title         String
+  content       String
+  introImg      String
+  isMainIntro   Boolean  @default(false)
+  Product       Product? @relation(fields: [productId], references: [id])
+  productId     String?
+  isProductInfo Boolean  @default(false)
 }
 
 model ProductSize {

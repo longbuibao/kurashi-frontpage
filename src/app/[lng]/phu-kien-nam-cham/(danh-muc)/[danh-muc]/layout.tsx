@@ -4,7 +4,7 @@ import Link from 'next/link'
 import prisma from '@/lib/prisma'
 import { CategoryItem } from '@/components/category-item'
 import { FilterCard } from '@/components/filter-card'
-import OnlineStore from '../../online-store'
+import { OnlineStore } from '@/components/online-store-card'
 
 interface PhuKienNamChamCategoryLayoutProps {
   children: React.ReactNode

@@ -223,3 +223,8 @@
 	top: -100px;
 	transition: top 0.3s ease-out;
 }
+
+.custom-container {
+	height: calc(100% - 100px);
+	overflow: hidden;
+}
