@@ -21,7 +21,8 @@ const config: Config = {
       'kurashi-border': '#D9D9D9',
       'count-bg': '#BCE3C9',
       'count-text': '#253D4E',
-      'main-phu-kien': '#9EB8A0'
+      'main-phu-kien': '#9EB8A0',
+      'text-phu-kien': '#424143'
     },
     extend: {
       boxShadow: {

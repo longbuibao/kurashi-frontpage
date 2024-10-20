@@ -91,8 +91,10 @@ const PhuKienNamCham: React.FC = async () => {
       </Suspense>
       <div className='text-2xl my-10'>Mua hàng theo loại phụ kiện</div>
       <ShopByCategory categories={categories} />
-      <div className='text-2xl mt-24 mb-10 pb-5 border-b-main border-b-[0.5px]'>Online store</div>
-      <OnlineStore />
+      <div className='text-2xl mb-10 mt-16 pb-5 border-b-main border-b-[0.5px]'>Online store</div>
+      <div className='mb-36'>
+        <OnlineStore />
+      </div>
     </div>
   )
 }

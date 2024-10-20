@@ -68,15 +68,17 @@ const PhuKienNamChamLayout: React.FC<PhuKienNamChamCategoryLayoutProps> = async 
               <CategoryItem name={currentCategory.name} numberOfProducts={currentCategory.count} thumbnail={currentCategory.thumbnail} url={currentCategory.url} />
             </div>
             <div className='w-[20%]'>
-              <Link href='/phu-kien-nam-cham' className='w-full flex flex-row items-center justify-center gap-5'>
+              <Link href='/phu-kien-nam-cham' className='w-full flex flex-row items-center justify-end gap-5'>
                 <div className='text-main'>tất cả sản phẩm</div>
                 <div><i className='fa-solid fa-arrow-left' /></div>
               </Link>
             </div>
           </div>
           {children}
-          <div className='text-2xl my-10 pb-5 border-b-main border-b-[0.5px]'>Online store</div>
-          <OnlineStore />
+          <div className='text-2xl mb-10 mt-16 pb-5 border-b-main border-b-[0.5px]'>Online store</div>
+          <div className='mb-36'>
+            <OnlineStore />
+          </div>
         </div>
       </div>
     </div>
