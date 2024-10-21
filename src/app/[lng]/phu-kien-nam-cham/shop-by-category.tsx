@@ -20,7 +20,7 @@ interface ShopByCategoryCardProps {
 
 const ShopByCategoryCard: React.FC<ShopByCategoryCardProps> = ({ category }) => {
   return (
-    <Link href={`/phu-kien-nam-cham/${category.url ?? '#'}`} className='flex flex-col gap-10 items-center p-10 rounded-lg bg-secondary-lg-opacity'>
+    <Link href={`/phu-kien-nam-cham/${category.url ?? '#'}`} className='flex flex-col gap-10 items-center p-10 rounded-lg bg-secondary-lg-opacity hover:bg-main-phu-kien hover:text-kurashiX'>
       <div className='w-20'><Image src={category.thumbnail ?? '#'} width={100} height={100} alt='Phụ kiện thép tráng men' /></div>
       <div className='font-bold'>{category.name}</div>
     </Link>

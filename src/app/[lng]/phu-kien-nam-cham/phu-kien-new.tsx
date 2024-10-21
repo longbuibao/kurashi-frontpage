@@ -19,12 +19,12 @@ const PhuKienNew: React.FC = async () => {
   return (
     <div className='flex flex-col gap-10'>
       {newAccessories.map(x => (
-        <div key={x.id} className='flex flex-row gap-3 border-b-[0.5px] border-kurashi-border border-dashed w-fit pb-3'>
+        <div key={x.id} className='p-3 flex group flex-row gap-3 border-b-[0.5px] border-kurashi-border border-dashed w-[90%] pb-3 hover:bg-main-phu-kien hover:rounded-xl'>
           <div className='w-12'>
             <Image src={x.thumbnail} alt='Phụ kiện thép tráng men' width={1080} height={1080} />
           </div>
           <div className='flex flex-col justify-center'>
-            <div className='text-main font-bold'>{x.name}</div>
+            <div className='text-main font-bold group-hover:text-kurashiX'>{x.name}</div>
             <div className='text-opacity-10 text-black'>$ {x.price}</div>
           </div>
         </div>))}
