@@ -16,7 +16,8 @@ const CategoryPhuKienPage: React.FC<PageParam> = async ({ params }) => {
       }
     },
     include: {
-      category: true
+      category: true,
+      ProductColor: true
     }
   })
   return (
