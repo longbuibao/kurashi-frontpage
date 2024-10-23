@@ -65,7 +65,7 @@ const PhuKienNamChamLayout: React.FC<PhuKienNamChamCategoryLayoutProps> = async 
         <div className='w-[80%]'>
           <div className='w-full flex flex-row justify-between items-center'>
             <div className='w-[20%]'>
-              <CategoryItem name={currentCategory.name} numberOfProducts={currentCategory.count} thumbnail={currentCategory.thumbnail} url={currentCategory.url} />
+              <CategoryItem noBg name={currentCategory.name} numberOfProducts={currentCategory.count} thumbnail={currentCategory.thumbnail} url={currentCategory.url} />
             </div>
             <div className='w-[20%]'>
               <Link href='/phu-kien-nam-cham' className='w-full flex flex-row items-center justify-end gap-5'>
