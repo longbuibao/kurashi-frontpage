@@ -37,8 +37,7 @@ const ProductAccessoryCard: React.FC<ProductAccessoryCardProps> = ({ product: x 
           <div className='flex flex-row gap-3'>
             {x.ProductColor !== undefined
               ? x.ProductColor.map(y => {
-                const className = productColorGenerator(y.colorHex)
-                return <div className={className} key={y.id} />
+                return <div style={{ background: y.colorHex }} className='w-5 h-5 rounded-xl border border-kurashi-border' key={y.id} />
               })
               : null}
           </div>
