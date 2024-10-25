@@ -40,3 +40,18 @@ export async function getMetadata (pageName: string, defaultIfNotFound: string):
 export const strictCheckString = (input: string | null | undefined): boolean => {
   return input === undefined || input === null || input.length === 0 || input === ''
 }
+
+export const formatCurrency = (input: number): string => input.toFixed(2).replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,')
+
+export const productColorGenerator = (color: string): string => {
+  switch (color) {
+    case '#D9D9D9':
+      return 'w-5 h-5 rounded-xl bg-[#D9D9D9] border border-kurashi-border'
+    case '#fff':
+      return 'w-5 h-5 rounded-xl bg-[#fff] border border-kurashi-border'
+    case '#000':
+      return 'w-5 h-5 rounded-xl bg-[#000] border border-kurashi-border'
+    default:
+      return 'w-5 h-5 rounded-xl bg-[#fff] border border-kurashi-border'
+  }
+}

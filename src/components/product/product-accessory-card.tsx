@@ -3,6 +3,8 @@ import Image from 'next/image'
 import { Prisma } from '@prisma/client'
 import Link from 'next/link'
 
+import { formatCurrency, productColorGenerator } from '@/utils'
+
 type ProductQueryType = Prisma.ProductGetPayload<{
   where: {
     isTrendingProduct: true
@@ -17,8 +19,6 @@ type ProductQueryType = Prisma.ProductGetPayload<{
 interface ProductAccessoryCardProps {
   product: Partial<ProductQueryType>
 }
-
-const formatCurrency = (input: number): string => input.toFixed(2).replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,')
 
 const ProductAccessoryCard: React.FC<ProductAccessoryCardProps> = ({ product: x }) => {
   const productUniqueName = x.uniqueName === null || x.uniqueName === undefined ? '#' : x.uniqueName
@@ -37,7 +37,7 @@ const ProductAccessoryCard: React.FC<ProductAccessoryCardProps> = ({ product: x 
           <div className='flex flex-row gap-3'>
             {x.ProductColor !== undefined
               ? x.ProductColor.map(y => {
-                const className = `w-5 h-5 rounded-xl bg-[${y.colorHex}] border border-kurashi-border`
+                const className = productColorGenerator(y.colorHex)
                 return <div className={className} key={y.id} />
               })
               : null}

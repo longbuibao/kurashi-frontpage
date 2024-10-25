@@ -7,6 +7,8 @@ import { LeftArrow } from '@/components/svg-icons'
 import { OnlineStore } from '@/components/online-store-card'
 import { ProductAccessoryCard } from '@/components/product'
 
+import { formatCurrency } from '@/utils'
+
 interface SanPhamPageProps {
   params: { 'san-pham': string }
 }
@@ -89,7 +91,7 @@ const SanPhamPage: React.FC<SanPhamPageProps> = async ({ params }) => {
                 </div>
                 <div className='flex flex-row gap-2 my-10 text-xl'>
                   <div>ĐƠN GIÁ: </div>
-                  <div>{accessoryProduct?.price}</div>
+                  <div>{formatCurrency(accessoryProduct?.price ?? 0)}</div>
                   <div>VND</div>
                 </div>
                 <OnlineStore isCenter />
