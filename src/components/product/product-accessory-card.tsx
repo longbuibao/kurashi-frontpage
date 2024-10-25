@@ -18,6 +18,8 @@ interface ProductAccessoryCardProps {
   product: Partial<ProductQueryType>
 }
 
+const formatCurrency = (input: number): string => input.toFixed(2).replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,')
+
 const ProductAccessoryCard: React.FC<ProductAccessoryCardProps> = ({ product: x }) => {
   const productUniqueName = x.uniqueName === null || x.uniqueName === undefined ? '#' : x.uniqueName
   const productUrl = `/phu-kien-nam-cham/san-pham/${productUniqueName}`
@@ -40,7 +42,7 @@ const ProductAccessoryCard: React.FC<ProductAccessoryCardProps> = ({ product: x 
               })
               : null}
           </div>
-          <div className='text-main font-bold'>$ <span>{x.price}</span></div>
+          <div className='text-main font-bold'><span>{formatCurrency(x.price ?? 0)} VND</span></div>
         </div>
       </div>
     </Link>
