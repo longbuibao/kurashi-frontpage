@@ -86,6 +86,7 @@ model Product {
   price               Float              @default(0)
   secondaryCategoryId String?
   secondaryCategory   SecondaryCategory? @relation(fields: [secondaryCategoryId], references: [id])
+  idToShowUser        String             @default("")
 }
 
 model SecondaryCategory {
@@ -118,6 +119,7 @@ model ProductIntro {
   Product       Product? @relation(fields: [productId], references: [id])
   productId     String?
   isProductInfo Boolean  @default(false)
+  order         Int      @default(-1)
 }
 
 model ProductSize {

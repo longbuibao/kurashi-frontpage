@@ -10,7 +10,7 @@
     "db:manual-seed": "dotenv -e .env.development -- ts-node prisma/seed.mjs",
     "db:reset": "npx prisma migrate dev -n reset",
     "db:mig": "dotenv -e .env.development -- npx prisma migrate dev --name",
-    "db:seed": "npx prisma db seed",
+    "db:seed": "dotenv -e .env.development -- npx prisma db seed",
     "db:studio": "npx prisma studio",
     "db:deploy": "prisma migrate deploy",
     "db:rollback": "prisma migrate resolve --rolled-back"

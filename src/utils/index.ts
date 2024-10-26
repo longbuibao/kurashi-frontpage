@@ -41,7 +41,7 @@ export const strictCheckString = (input: string | null | undefined): boolean => 
   return input === undefined || input === null || input.length === 0 || input === ''
 }
 
-export const formatCurrency = (input: number): string => input.toFixed(2).replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,')
+export const formatCurrency = (input: number): string => input.toFixed(0).replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1.')
 
 export const productColorGenerator = (color: string): string => {
   switch (color) {

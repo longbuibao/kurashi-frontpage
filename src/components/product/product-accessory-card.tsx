@@ -3,7 +3,7 @@ import Image from 'next/image'
 import { Prisma } from '@prisma/client'
 import Link from 'next/link'
 
-import { formatCurrency, productColorGenerator } from '@/utils'
+import { formatCurrency } from '@/utils'
 
 type ProductQueryType = Prisma.ProductGetPayload<{
   where: {
@@ -41,7 +41,7 @@ const ProductAccessoryCard: React.FC<ProductAccessoryCardProps> = ({ product: x 
               })
               : null}
           </div>
-          <div className='text-main font-bold'><span>{formatCurrency(x.price ?? 0)} VND</span></div>
+          <div className='text-main font-bold relative'><span>{formatCurrency(x.price ?? 0)} <sub className='absolute top-1'>₫</sub></span></div>
         </div>
       </div>
     </Link>

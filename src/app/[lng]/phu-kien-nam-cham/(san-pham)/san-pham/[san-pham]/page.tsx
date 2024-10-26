@@ -57,7 +57,7 @@ const SanPhamPage: React.FC<SanPhamPageProps> = async ({ params }) => {
       </div>
       <div className='flex flex-row gap-28 w-4/5 mx-auto mb-10'>
         <div className='w-1/2 flex flex-col gap-14'>
-          {secondaryIntros?.filter(y => !y.isProductInfo).map(x => (
+          {secondaryIntros?.sort((x, y) => x.order - y.order).filter(y => !y.isProductInfo).map(x => (
             <div key={x.id} className='flex flex-col gap-2'>
               <Image src={x.introImg} width={800} height={800} alt={x.title} />
               <div>{x.content}</div>
@@ -69,7 +69,7 @@ const SanPhamPage: React.FC<SanPhamPageProps> = async ({ params }) => {
             <div className='bg-[#F4F6FA] p-10 rounded-lg flex-col flex gap-20 w-[70%] mt-14'>
               <div className='w-full flex flex-col gap-2'>
                 <div className='text-2xl font-bold'>{accessoryProduct?.name.toUpperCase()}</div>
-                <div className='text-text-phu-kien'>Mã số: {accessoryProduct?.uniqueName}</div>
+                <div className='text-text-phu-kien'>Mã số: {accessoryProduct?.idToShowUser}</div>
               </div>
               <div className='flex flex-col gap-4 text-text-phu-kien'>
                 <div className='flex flex-row gap-3'>
@@ -89,10 +89,9 @@ const SanPhamPage: React.FC<SanPhamPageProps> = async ({ params }) => {
                     )
                   })}
                 </div>
-                <div className='flex flex-row gap-2 my-10 text-xl'>
+                <div className='flex flex-row gap-2 my-10 text-xl relative'>
                   <div>ĐƠN GIÁ: </div>
-                  <div>{formatCurrency(accessoryProduct?.price ?? 0)}</div>
-                  <div>VND</div>
+                  <div>{formatCurrency(accessoryProduct?.price ?? 0)} <sub className='absolute top-1'>₫</sub></div>
                 </div>
                 <OnlineStore isCenter />
               </div>

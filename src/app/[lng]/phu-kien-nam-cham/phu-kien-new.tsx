@@ -2,6 +2,7 @@ import React from 'react'
 import Image from 'next/image'
 
 import prisma from '@/lib/prisma'
+import { formatCurrency } from '@/utils'
 
 const PhuKienNew: React.FC = async () => {
   const newAccessories = await prisma.product.findMany({
@@ -23,9 +24,9 @@ const PhuKienNew: React.FC = async () => {
           <div className='w-12'>
             <Image src={x.thumbnail} alt='Phụ kiện thép tráng men' width={1080} height={1080} />
           </div>
-          <div className='flex flex-col justify-center'>
-            <div className='text-main font-bold group-hover:text-kurashiX'>{x.name}</div>
-            <div className='text-opacity-10 text-black'>$ {x.price}</div>
+          <div className='flex flex-col justify-center gap-2'>
+            <div className='text-main font-bold group-hover:text-kurashiX text-nowrap'>{x.name}</div>
+            <div className='text-opacity-10 text-black relative text-sm'>{formatCurrency(x.price)} <sub className='absolute top-1'>₫</sub></div>
           </div>
         </div>))}
     </div>
