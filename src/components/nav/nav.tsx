@@ -43,9 +43,7 @@ const Nav: FC<NavProps> = ({ links, products }) => {
             </div>
             <div className='max-md:hidden max-md:mr-1 max-md:px-5 flex flex-row items-center gap-10 z-10'>
               <Link href='/phu-kien-nam-cham'><ShoppingCart width='25' height='25' /></Link>
-              <Link href={zaloLink} target='_blank' rel='noreferrer'>
-                <LogoZalo width='25' height='25' />
-              </Link>
+              <LogoZalo width='25' height='25' />
             </div>
           </nav>
         </div>
@@ -80,12 +78,9 @@ const Nav: FC<NavProps> = ({ links, products }) => {
               </div>
               <div className='flex flex-row gap-3 pt-10 self-end max-md:self-center'>
                 <LogoFacebook color='#000' width='30' height='30' />
-                <Link href='https://www.youtube.com/channel/UChqsY9O8M5Y70iMC5S9bdyQ' target='_blank' rel='noreferrer'>
-                  <LogoYoutube color='#000' width='30' height='30' />
-                </Link>
-                <Link href={zaloLink} target='_blank' rel='noreferrer'>
-                  <LogoZalo width='30' height='30' />
-                </Link>
+                <LogoYoutube color='#000' width='30' height='30' />
+                <LogoZalo width='30' height='30' />
+
               </div>
             </div>
           </div>

@@ -12,7 +12,8 @@ const AllAccessoriesProducts: React.FC = async () => {
     include: {
       category: true,
       ProductColor: true
-    }
+    },
+    take: 8
   })
 
   return (

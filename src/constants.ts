@@ -50,6 +50,8 @@ export const defaultBlogViewLink = '/blogs/view/'
 export const googleMapLink = 'https://maps.app.goo.gl/xqWhEEcbA6CPqFNr7'
 
 export const zaloLink = 'https://zalo.me/0979988617'
+export const facebookLink = 'https://m.facebook.com/kurashicorp/'
+export const youtubeLink = 'https://www.youtube.com/channel/UChqsY9O8M5Y70iMC5S9bdyQ'
 
 export const sussesEmailRegistration = 'ok#####'
 export const failEmailRegistration = 'fail#####'

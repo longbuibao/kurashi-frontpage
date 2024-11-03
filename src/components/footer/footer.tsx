@@ -4,7 +4,7 @@ import { TFunction } from 'i18next'
 
 import { Logo } from '@/components/logo'
 import { LogoFacebook, LogoYoutube, LogoZalo } from '@/components/svg-icons'
-import { footerLinks, phoneNumber, zaloLink } from '@/constants'
+import { footerLinks, phoneNumber } from '@/constants'
 import { address, addressName, tel } from '@/i18n/translation-key'
 import { v4 as uuidv4 } from 'uuid'
 
@@ -36,12 +36,8 @@ const Footer: React.FC<FooterProps> = ({ t }) => {
             <div className='text-2xl'>SNS</div>
             <div className='flex flex-row gap-3 pt-5'>
               <LogoFacebook color='#fff' />
-              <Link href='https://www.youtube.com/channel/UChqsY9O8M5Y70iMC5S9bdyQ' target='_blank' rel='noreferrer'>
-                <LogoYoutube />
-              </Link>
-              <Link href={zaloLink} target='_blank' rel='noreferrer'>
-                <LogoZalo />
-              </Link>
+              <LogoYoutube />
+              <LogoZalo />
             </div>
           </div>
           <div className='w-1/4 max-md:w-full max-md:justify-between'>
