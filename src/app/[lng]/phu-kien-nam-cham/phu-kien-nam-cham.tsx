@@ -46,9 +46,9 @@ const PhuKienNamCham: React.FC = async () => {
   })
 
   return (
-    <div className='w-4/5 mx-auto my-10'>
-      <div className='flex flex-row gap-10 w-full'>
-        <div className='w-[20%] flex-col flex gap-10'>
+    <div className='w-4/5 mx-auto my-10 max-md:w-full'>
+      <div className='flex flex-row gap-10 w-full max-md:flex-col max-md:px-3'>
+        <div className='w-[20%] flex-col flex gap-10 max-md:w-full'>
           <Suspense>
             <FilterCard title='Danh mục'>
               <div className='flex flex-col gap-5'>
@@ -70,13 +70,13 @@ const PhuKienNamCham: React.FC = async () => {
             </div>
           </FilterCard>
         </div>
-        <div className='w-[80%]'>
-          <div className='bg-main-phu-kien w-full flex flex-row text-secondary rounded-xl'>
+        <div className='w-[80%] max-md:w-full'>
+          <div className='bg-main-phu-kien w-full flex flex-row text-secondary rounded-xl max-md:flex-col-reverse'>
             <div className='flex flex-col gap-10 w-full py-10 pl-10 justify-center'>
               <div className='text-4xl font-bold'>BẾP SIÊU TIỆN LỢI <br /><div className='mt-3'>VỚI PHỤ KIỆN NAM CHÂM</div></div>
               <div className='text-2xl'>Đa chủng loại, tự do xê dịch</div>
             </div>
-            <div className='w-[60%] p-5'>
+            <div className='w-[60%] p-5 max-md:w-full'>
               <Image className='rounded-xl' src='https://storage.googleapis.com/kurashi_frontpage_files/images/thep_trang_men_slider/10.jpg' alt='Phụ kiện thép tráng men' width={1080} height={1080} />
             </div>
           </div>
@@ -89,9 +89,9 @@ const PhuKienNamCham: React.FC = async () => {
       <Suspense>
         <SubCategories />
       </Suspense>
-      <div className='text-2xl my-10'>Mua hàng theo loại phụ kiện</div>
+      <div className='text-2xl my-10 max-md:text-center'>Mua hàng theo loại phụ kiện</div>
       <ShopByCategory categories={categories} />
-      <div className='text-2xl mb-10 mt-16 pb-5 border-b-main border-b-[0.5px]'>Online store</div>
+      <div className='max-md:text-center text-2xl mb-10 mt-16 pb-5 border-b-main border-b-[0.5px]'>Online store</div>
       <div className='mb-36'>
         <OnlineStore />
       </div>

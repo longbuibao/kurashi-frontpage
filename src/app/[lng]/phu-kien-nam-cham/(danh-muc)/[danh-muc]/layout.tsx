@@ -50,9 +50,9 @@ const PhuKienNamChamLayout: React.FC<PhuKienNamChamCategoryLayoutProps> = async 
   const currentCategory = categories.filter(x => x.url === categoryToSearch)[0]
 
   return (
-    <div className='w-4/5 mx-auto my-10'>
-      <div className='flex flex-row gap-10 w-full'>
-        <div className='w-[20%] flex-col flex gap-10'>
+    <div className='w-4/5 mx-auto my-10 max-md:w-full'>
+      <div className='flex flex-row gap-10 w-full max-md:flex-col'>
+        <div className='w-[20%] flex-col flex gap-10 max-md:w-full max-md:px-3'>
           <Suspense>
             <FilterCard title='Danh mục'>
               <div className='flex flex-col gap-5'>
@@ -62,12 +62,12 @@ const PhuKienNamChamLayout: React.FC<PhuKienNamChamCategoryLayoutProps> = async 
             </FilterCard>
           </Suspense>
         </div>
-        <div className='w-[80%]'>
-          <div className='w-full flex flex-row justify-between items-center'>
-            <div className='w-[20%]'>
+        <div className='w-[80%] max-md:w-full max-md:px-3'>
+          <div className='w-full flex flex-row justify-between items-center max-md:justify-around'>
+            <div className='w-[20%] max-md:w-4/5'>
               <CategoryItem noBg name={currentCategory.name} numberOfProducts={currentCategory.count} thumbnail={currentCategory.thumbnail} url={currentCategory.url} />
             </div>
-            <div className='w-[20%]'>
+            <div className='w-[20%] max-md:w-full'>
               <Link href='/phu-kien-nam-cham' className='w-full flex flex-row items-center justify-end gap-5'>
                 <div className='text-main'>tất cả sản phẩm</div>
                 <div><i className='fa-solid fa-arrow-left' /></div>
@@ -75,7 +75,7 @@ const PhuKienNamChamLayout: React.FC<PhuKienNamChamCategoryLayoutProps> = async 
             </div>
           </div>
           {children}
-          <div className='text-2xl mb-10 mt-16 pb-5 border-b-main border-b-[0.5px]'>Online store</div>
+          <div className='text-2xl mb-10 mt-16 pb-5 border-b-main border-b-[0.5px] max-md:text-center'>Online store</div>
           <div className='mb-36'>
             <OnlineStore />
           </div>

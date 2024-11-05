@@ -22,7 +22,7 @@ const CategoryPhuKienPage: React.FC<PageParam> = async ({ params }) => {
   })
   return (
     <Suspense>
-      <div className='grid grid-cols-4 gap-10 my-10'>
+      <div className='grid grid-cols-4 gap-10 my-10 max-md:grid-cols-2'>
         {allProducts.map(x => {
           return <ProductAccessoryCard key={x.id} product={x} />
         })}

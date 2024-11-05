@@ -20,7 +20,7 @@ const PhuKienNew: React.FC = async () => {
   return (
     <div className='flex flex-col gap-10'>
       {newAccessories.map(x => (
-        <div key={x.id} className='p-3 flex group flex-row gap-3 border-b-[0.5px] border-kurashi-border border-dashed w-[90%] pb-3 hover:bg-main-phu-kien hover:rounded-xl'>
+        <div key={x.id} className='p-3 flex group flex-row gap-3 border-b-[0.5px] border-kurashi-border border-dashed w-[90%] pb-3 hover:bg-main-phu-kien hover:rounded-xl max-md:w-full'>
           <div className='w-12'>
             <Image src={x.thumbnail} alt='Phụ kiện thép tráng men' width={1080} height={1080} />
           </div>
