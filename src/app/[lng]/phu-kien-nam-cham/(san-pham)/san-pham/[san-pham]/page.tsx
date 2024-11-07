@@ -15,7 +15,7 @@ interface SanPhamPageProps {
 
 const RelatedProduct: React.FC = async () => {
   const products = await prisma.product.findMany({ take: 5, where: { isAccessoryProduct: true } })
-  return <div className='grid grid-rows-1 grid-cols-5 gap-20'>{products.map(x => <ProductAccessoryCard product={x} key={x.id} />)}</div>
+  return <div className='grid grid-rows-1 grid-cols-5 gap-20 max-md:grid-cols-2 max-md:gap-5'>{products.map(x => <ProductAccessoryCard product={x} key={x.id} />)}</div>
 }
 
 const SanPhamPage: React.FC<SanPhamPageProps> = async ({ params }) => {
@@ -38,15 +38,15 @@ const SanPhamPage: React.FC<SanPhamPageProps> = async ({ params }) => {
   return (
     <div className='mx-auto w-full mb-36'>
       <div className='w-full bg-main-phu-kien'>
-        <div className='flex flex-row gap-28 w-4/5 mx-auto'>
-          <div className='flex flex-col gap-16 w-1/2 mx-auto justify-center text-secondary pt-28 pb-40 pl-28'>
+        <div className='flex flex-row gap-28 w-4/5 mx-auto max-md:flex-col max-md:gap-5'>
+          <div className='flex flex-col gap-16 w-1/2 mx-auto justify-center text-secondary pt-28 pb-40 pl-28 max-md:pb-0 max-md:w-full max-md:pt-5 max-md:pl-5 max-md:text-center'>
             <div className='font-bold text-4xl'>
               {mainIntro?.title}
             </div>
             <div className='text-xl'>{mainIntro?.content}</div>
           </div>
-          <div className='w-1/2 mx-auto relative'>
-            <Image className='w-[70%] mt-10 absolute top-1' src={mainIntro?.introImg ?? '#'} width={656} height={656} alt={mainIntro?.title ?? ''} />
+          <div className='w-1/2 mx-auto relative max-md:w-full'>
+            <Image className='w-[70%] mt-10 absolute top-1 max-md:w-full max-md:static max-md:mt-5 max-md:top-0' src={mainIntro?.introImg ?? '#'} width={656} height={656} alt={mainIntro?.title ?? ''} />
           </div>
         </div>
       </div>
@@ -55,8 +55,8 @@ const SanPhamPage: React.FC<SanPhamPageProps> = async ({ params }) => {
           <LeftArrow width='30' height='30' />
         </Link>
       </div>
-      <div className='flex flex-row gap-28 w-4/5 mx-auto mb-10'>
-        <div className='w-1/2 flex flex-col gap-14'>
+      <div className='flex flex-row gap-28 w-4/5 mx-auto mb-10 max-md:flex-col'>
+        <div className='w-1/2 flex flex-col gap-14 max-md:w-full'>
           {secondaryIntros?.sort((x, y) => x.order - y.order).filter(y => !y.isProductInfo).map(x => (
             <div key={x.id} className='flex flex-col gap-2'>
               <Image src={x.introImg} width={800} height={800} alt={x.title} />
@@ -64,9 +64,9 @@ const SanPhamPage: React.FC<SanPhamPageProps> = async ({ params }) => {
             </div>
           ))}
         </div>
-        <div className='w-1/2'>
+        <div className='w-1/2 max-md:w-full'>
           <div className='sticky top-10'>
-            <div className='bg-[#F4F6FA] p-10 rounded-lg flex-col flex gap-20 w-[70%] mt-14'>
+            <div className='bg-[#F4F6FA] p-10 rounded-lg flex-col flex gap-20 w-[70%] mt-14 max-md:w-full'>
               <div className='w-full flex flex-col gap-2'>
                 <div className='text-2xl font-bold'>{accessoryProduct?.name.toUpperCase()}</div>
                 <div className='text-text-phu-kien'>Mã số: {accessoryProduct?.idToShowUser}</div>

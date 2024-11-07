@@ -17,7 +17,7 @@ const AllAccessoriesProducts: React.FC = async () => {
   })
 
   return (
-    <div className='grid grid-cols-4 gap-10 max-md:grid-cols-2'>
+    <div className='grid grid-cols-4 gap-10 max-md:grid-cols-2 max-md:gap-3'>
       {products.map(x => {
         return <ProductAccessoryCard key={x.id} product={x} />
       })}
