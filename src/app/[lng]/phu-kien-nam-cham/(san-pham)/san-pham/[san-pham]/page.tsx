@@ -63,6 +63,7 @@ const SanPhamPage: React.FC<SanPhamPageProps> = async ({ params }) => {
               <div>{x.content}</div>
             </div>
           ))}
+          <div>Lưu ý sử dụng đúng tải trọng qui định</div>
         </div>
         <div className='w-1/2 max-md:w-full'>
           <div className='sticky top-10'>
