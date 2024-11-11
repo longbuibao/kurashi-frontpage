@@ -50,7 +50,7 @@ const PhuKienNamChamLayout: React.FC<PhuKienNamChamCategoryLayoutProps> = async 
           </div>
         </div>
       </div>
-      <div className='mb-20'>
+      <div className='mb-36 mt-20'>
         <div className='text-2xl my-10 max-md:text-center'>Mua hàng theo loại phụ kiện</div>
         <ShopByCategory categories={categories} />
       </div>

@@ -36,7 +36,7 @@ const SanPhamPage: React.FC<SanPhamPageProps> = async ({ params }) => {
   const secondaryIntros = accessoryProduct?.productIntro.filter(x => !x.isMainIntro)
 
   return (
-    <div className='mx-auto w-full mb-36'>
+    <div className='mx-auto w-full mb-20'>
       <div className='w-full bg-main-phu-kien'>
         <div className='flex flex-row gap-28 w-4/5 mx-auto max-md:flex-col max-md:gap-5'>
           <div className='flex flex-col gap-16 w-1/2 mx-auto justify-center text-secondary pt-28 pb-40 pl-28 max-md:pb-0 max-md:w-full max-md:pt-5 max-md:pl-5 max-md:text-center'>
