@@ -23,7 +23,7 @@ const checkUserPassword = async (plainText: string, userId: string): Promise<Che
   const isOkay = await bcrypt.compare(plainText, hashedPassword)
   return {
     isOkay: true,
-    user: isOkay ? user : null
+    user: user
   }
 }
 
