@@ -2,6 +2,8 @@ import React, { Suspense } from 'react'
 
 import { getCategories } from '../../../get-categories'
 import ShopByCategory from '../../../shop-by-category'
+import { auth } from '@/auth'
+import LoginPage from '../../../login-page'
 
 interface SanPhamLayoutProps {
   children: React.ReactNode
@@ -9,6 +11,11 @@ interface SanPhamLayoutProps {
 }
 
 const SanPhamLayout: React.FC<SanPhamLayoutProps> = async ({ params, children }) => {
+  const session = await auth()
+  if (session === null) {
+    return <LoginPage />
+  }
+
   const categories = await getCategories()
   return (
     <Suspense>

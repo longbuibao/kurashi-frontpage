@@ -1,6 +1,6 @@
-import prisma from '@/lib/prisma'
 import React, { Suspense } from 'react'
 
+import prisma from '@/lib/prisma'
 import { ProductAccessoryCard } from '@/components/product'
 
 interface PageParam {

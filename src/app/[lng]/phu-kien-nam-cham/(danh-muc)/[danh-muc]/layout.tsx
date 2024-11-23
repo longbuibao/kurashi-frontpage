@@ -6,6 +6,8 @@ import { FilterCard } from '@/components/filter-card'
 import { OnlineStore } from '@/components/online-store-card'
 import ShopByCategory from '../../shop-by-category'
 import { getCategories } from '../../get-categories'
+import { auth } from '@/auth'
+import LoginPage from '../../login-page'
 
 interface PhuKienNamChamCategoryLayoutProps {
   children: React.ReactNode
@@ -13,6 +15,11 @@ interface PhuKienNamChamCategoryLayoutProps {
 }
 
 const PhuKienNamChamLayout: React.FC<PhuKienNamChamCategoryLayoutProps> = async ({ params, children }) => {
+  const session = await auth()
+  if (session === null) {
+    return <LoginPage />
+  }
+
   const categoryToSearch = params['danh-muc']
   const categories = await getCategories()
 
