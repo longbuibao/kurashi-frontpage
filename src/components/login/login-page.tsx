@@ -1,7 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 
-import LoginForm from './login-form'
+import { LoginForm } from '@/components/login'
 
 const LoginPage: React.FC = () => {
   return (

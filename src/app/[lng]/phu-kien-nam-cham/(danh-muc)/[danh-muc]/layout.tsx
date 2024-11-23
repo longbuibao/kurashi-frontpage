@@ -7,7 +7,7 @@ import { OnlineStore } from '@/components/online-store-card'
 import ShopByCategory from '../../shop-by-category'
 import { getCategories } from '../../get-categories'
 import { auth } from '@/auth'
-import LoginPage from '../../login-page'
+import { LoginPage } from '@/components/login'
 
 interface PhuKienNamChamCategoryLayoutProps {
   children: React.ReactNode

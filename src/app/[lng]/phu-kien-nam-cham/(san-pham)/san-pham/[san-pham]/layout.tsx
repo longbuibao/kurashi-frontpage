@@ -3,7 +3,7 @@ import React, { Suspense } from 'react'
 import { getCategories } from '../../../get-categories'
 import ShopByCategory from '../../../shop-by-category'
 import { auth } from '@/auth'
-import LoginPage from '../../../login-page'
+import { LoginPage } from '@/components/login'
 
 interface SanPhamLayoutProps {
   children: React.ReactNode
