@@ -3,11 +3,12 @@ import React, { useEffect } from 'react'
 import { useFormState, useFormStatus } from 'react-dom'
 import { ClipLoader } from 'react-spinners'
 
-import { doLogin, LoginResult } from '@/actions/action'
+import { LoginResult } from '@/actions/action'
 import UserIcon from '@/components/svg-icons/user'
 
 interface LoginFormProps {
   title: string
+  doLoginFunc: (_: any, data: FormData) => Promise<LoginResult>
 }
 
 const initialState = {
@@ -37,8 +38,8 @@ const WrongLogin: React.FC<{ content: React.ReactNode }> = ({ content }) => {
   )
 }
 
-const LoginForm: React.FC<LoginFormProps> = ({ title }) => {
-  const [state, formAction] = useFormState<Partial<LoginResult>, FormData>(doLogin, initialState)
+const LoginForm: React.FC<LoginFormProps> = ({ title, doLoginFunc }) => {
+  const [state, formAction] = useFormState<Partial<LoginResult>, FormData>(doLoginFunc, initialState)
   useEffect(() => {
     if (state.isLoggedIn === true) {
       window.location.href = '/phu-kien-nam-cham'
