@@ -100,3 +100,12 @@ export const createContactRegister = async (_: any, formData: FormData): Promise
     return { email: failEmailRegistration, name: '', phoneNumber: '', message: '' }
   }
 }
+
+export const doLoginAdmin = async (_: any, formData: FormData): Promise<LoginResult> => {
+  return {
+    isLoggedIn: true,
+    message: 'sasas',
+    password: 'sasas',
+    userId: 'asas'
+  }
+}
