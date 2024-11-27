@@ -2,5 +2,28 @@ import { AdminMenuProps } from './types'
 import UserIcon from '@/components/svg-icons/user'
 
 export const menus: AdminMenuProps[] = [
-  { title: 'Quản lí người dùng', description: 'Quản lí người dùng description', icon: <UserIcon />, id: '1', href: '/admin/user-management' }
+  {
+    title: 'Quản lí người dùng',
+    icon: <UserIcon height='25' width='25' color='#fff' />,
+    id: '1',
+    href: '/admin/user-management'
+  },
+  {
+    title: 'Quản lí khách hàng',
+    icon: <UserIcon height='25' width='25' color='#fff' />,
+    id: '1',
+    href: '#'
+  },
+  {
+    title: 'Quản lí khách hàng',
+    icon: <UserIcon height='25' width='25' color='#fff' />,
+    id: '1',
+    href: '#'
+  },
+  {
+    title: 'Quản lí khách hàng',
+    icon: <UserIcon height='25' width='25' color='#fff' />,
+    id: '1',
+    href: '#'
+  }
 ]

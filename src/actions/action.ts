@@ -102,10 +102,20 @@ export const createContactRegister = async (_: any, formData: FormData): Promise
 }
 
 export const doLoginAdmin = async (_: any, formData: FormData): Promise<LoginResult> => {
-  return {
-    isLoggedIn: true,
-    message: 'sasas',
-    password: 'sasas',
-    userId: 'asas'
+  // to do: change the logic to login admin here
+  const userId = formData.get('userId')
+  if (userId?.valueOf() === 'kurashi-demo') {
+    return await doLogin(_, formData)
   }
+
+  return {
+    isLoggedIn: false,
+    message: 'bor',
+    password: '',
+    userId: ''
+  }
+}
+
+export const createNewUser = async (_: any, formData: FormData): Promise<{ email: string, name: string, password: string }> => {
+  return { email: failEmailRegistration, name: '', password: '' }
 }
