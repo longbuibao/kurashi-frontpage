@@ -7,23 +7,5 @@ export const menus: AdminMenuProps[] = [
     icon: <UserIcon height='25' width='25' color='#fff' />,
     id: '1',
     href: '/admin/user-management'
-  },
-  {
-    title: 'Quản lí khách hàng',
-    icon: <UserIcon height='25' width='25' color='#fff' />,
-    id: '1',
-    href: '#'
-  },
-  {
-    title: 'Quản lí khách hàng',
-    icon: <UserIcon height='25' width='25' color='#fff' />,
-    id: '1',
-    href: '#'
-  },
-  {
-    title: 'Quản lí khách hàng',
-    icon: <UserIcon height='25' width='25' color='#fff' />,
-    id: '1',
-    href: '#'
   }
 ]

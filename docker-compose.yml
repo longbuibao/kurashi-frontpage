@@ -11,6 +11,34 @@ services:
     environment:
       - POSTGRES_PASSWORD=password
     restart: unless-stopped
+    database_kurashi:
+    container_name: database_kurashi
+    build:
+      context: .
+      dockerfile: db.Dockerfile
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_PASSWORD=password
+    restart: unless-stoppeddatabase_kurashi:
+    container_name: database_kurashi
+    build:
+      context: .
+      dockerfile: db.Dockerfile
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_PASSWORD=password
+    restart: unless-stoppeddatabase_kurashi:
+    container_name: database_kurashi
+    build:
+      context: .
+      dockerfile: db.Dockerfile
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_PASSWORD=password
+    restart: unless-stopped
 networks:
   kurashi_frontpage:
     driver: bridge
