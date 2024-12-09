@@ -1,10 +1,8 @@
 'use server'
 import prisma from '@/lib/prisma'
 import { signIn } from '@/auth'
-import bcrypt from 'bcrypt'
 
 import { sussesEmailRegistration, existedEmailRegistration, failEmailRegistration } from '@/constants'
-import { strictCheckString } from '@/utils'
 
 export interface LoginResult {
   isLoggedIn: boolean
@@ -116,12 +114,4 @@ export const doLoginAdmin = async (_: any, formData: FormData): Promise<LoginRes
     password: '',
     userId: ''
   }
-}
-
-export const createNewUser = async (_: any, formData: FormData): Promise<{ email: string, name: string, password: string, userName: string }> => {
-  const userName = formData.get('userName')?.valueOf() as any as string
-  const password = formData.get('password')?.valueOf() as any as string
-  const userId = formData.get('userId')?.valueOf() as any as string
-  const email = formData.get('email')?.valueOf() as any as string
-  return { email: failEmailRegistration, name: '', password: '', userName: '' }
 }

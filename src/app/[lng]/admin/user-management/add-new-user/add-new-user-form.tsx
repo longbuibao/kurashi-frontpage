@@ -2,14 +2,17 @@
 
 import React, { useState } from 'react'
 import { useFormState, useFormStatus } from 'react-dom'
-import { createNewUser } from '@/actions/action'
+import { createNewUser } from '@/actions/user'
 import { ClipLoader } from 'react-spinners'
+import { useForm } from 'react-hook-form'
+import * as z from 'zod'
+import { RegisterSchema } from '@/schema'
 
 const initialState = {
   email: '',
-  name: '',
   password: '',
-  userName: ''
+  userName: '',
+  userId: ''
 }
 
 const SubmitButton: React.FC = () => {
@@ -30,7 +33,7 @@ const SubmitButton: React.FC = () => {
 }
 
 const AddNewUserForm: React.FC = () => {
-  const [state, formAction] = useFormState<{ email: string, name: string, password: string, userName: string }, FormData>(createNewUser, initialState)
+  const [state, formAction] = useFormState<z.infer<typeof RegisterSchema>, FormData>(createNewUser, initialState)
   const [result, setResult] = useState(state)
   return (
     <div>

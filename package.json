@@ -32,6 +32,7 @@
     "react": "^18",
     "react-cookie": "^7.0.2",
     "react-dom": "^18",
+    "react-hook-form": "^7.54.0",
     "react-i18next": "^14.0.5",
     "react-intersection-observer": "^9.13.1",
     "react-loading-skeleton": "^3.4.0",
@@ -44,7 +45,8 @@
     "sharp": "^0.33.5",
     "swr": "^2.2.5",
     "uuid": "^9.0.1",
-    "yet-another-react-lightbox": "^3.17.2"
+    "yet-another-react-lightbox": "^3.17.2",
+    "zod": "^3.23.8"
   },
   "devDependencies": {
     "@types/node": "^20.11.26",
