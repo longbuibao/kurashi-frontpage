@@ -9,9 +9,10 @@ interface CatalogCardProps {
   catalogName: string
   fileSize: string
   pdfLink: string
+  isShowName?: boolean
 }
 
-const CatalogCard: React.FC<CatalogCardProps> = ({ thumbnail, catalogName, fileSize, pdfLink }) => {
+const CatalogCard: React.FC<CatalogCardProps> = ({ thumbnail, catalogName, fileSize, pdfLink, isShowName = true }) => {
   return (
     <div className='flex flex-col gap-3'>
       <div className='relative'>
@@ -22,15 +23,16 @@ const CatalogCard: React.FC<CatalogCardProps> = ({ thumbnail, catalogName, fileS
           </div>
         </Link>
       </div>
-      <div>
-        <div className='mt-5'>
-          <KurashiLeftBorder>
-            <div className='text-xl'>
-              {catalogName}
-            </div>
-          </KurashiLeftBorder>
-        </div>
-      </div>
+      {isShowName &&
+        <div>
+          <div className='mt-5'>
+            <KurashiLeftBorder>
+              <div className='text-xl'>
+                {catalogName}
+              </div>
+            </KurashiLeftBorder>
+          </div>
+        </div>}
     </div>
   )
 }
