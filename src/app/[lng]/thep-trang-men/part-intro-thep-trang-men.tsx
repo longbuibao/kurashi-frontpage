@@ -22,8 +22,15 @@ const PartIntroThepTrangMen: React.FC<Props> = ({ setCurrentInViewDivId }) => {
   })
   return (
     <div ref={ref} id={`${transKey.thepTrangMen}`}>
-      <div className='flex flex-row gap-5'>
-        <Image src='https://storage.googleapis.com/kurashi_frontpage_files/images/thep-trang-men-page/TTM_landing_page.jpg' width={6042} height={2333} alt='Thép tráng men' />
+      <div className='flex flex-row gap-5 max-md:flex-col'>
+        <Image className='w-1/2 max-md:w-full' src='https://storage.googleapis.com/kurashi_frontpage_files/phu-kien-thep-trang-men/thep-trang-men/ttm_landing_page.png' width={1003} height={741} alt='Thép tráng men' />
+        <iframe
+          src='https://www.youtube.com/embed/_f2UPugWnOo'
+          allowFullScreen
+          className='w-1/2 max-md:w-full'
+          allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
+          title='video'
+        />
       </div>
       <div className='flex flex-row gap-10 mt-20 max-md:mt-10 bg-secondary p-10 max-md:p-3 max-md:flex-col max-md:items-center justify-center'>
         <div>
