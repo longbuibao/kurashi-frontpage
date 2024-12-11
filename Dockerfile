@@ -1,6 +1,6 @@
 
 # base image
-FROM node:18.15-slim
+FROM node:18.17.1-slim
 
 WORKDIR /usr/app
 
