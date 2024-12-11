@@ -1,6 +1,6 @@
 
 # base image
-FROM node:18.1-alpine
+FROM 18-alpine3.21
 
 WORKDIR /usr/app
 
