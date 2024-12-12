@@ -25,7 +25,7 @@ const PartIntroThepTrangMen: React.FC<Props> = ({ setCurrentInViewDivId }) => {
       <div className='flex flex-row gap-5 max-md:flex-col'>
         <Image className='w-1/2 max-md:w-full' src='https://storage.googleapis.com/kurashi_frontpage_files/phu-kien-thep-trang-men/thep-trang-men/ttm_landing_page.png' width={1003} height={741} alt='Thép tráng men' />
         <iframe
-          src='https://www.youtube.com/embed/tKJBji4OVhQ'
+          src='https://www.youtube.com/embed/97EGDDPLl6w'
           allowFullScreen
           className='w-1/2 max-md:w-full'
           allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
