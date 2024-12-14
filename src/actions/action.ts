@@ -58,25 +58,6 @@ export const doLogin = async (_: any, formData: FormData): Promise<LoginResult> 
   }
 }
 
-export const createBlogRegister = async (_: any, formData: FormData): Promise<{ email: string }> => {
-  try {
-    const userEmail = formData.get('email')
-    if (userEmail !== null) {
-      const email = userEmail.valueOf()
-      const isEmailExist = (await prisma.blogRegistrationList.findFirst({ where: { email } })) !== null
-      if (!isEmailExist) {
-        // @ts-expect-error
-        await prisma.blogRegistrationList.create({ data: { email } })
-        return { email: sussesEmailRegistration }
-      }
-    }
-
-    return { email: existedEmailRegistration }
-  } catch (error) {
-    return { email: failEmailRegistration }
-  }
-}
-
 export const createContactRegister = async (_: any, formData: FormData): Promise<{ email: string
   name: string
   phoneNumber: string

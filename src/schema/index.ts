@@ -14,3 +14,10 @@ export const RegisterSchema = z.object({
     message: 'userId is required'
   })
 })
+
+export const ContactRegisterSchema = z.object({
+  name: z.string(),
+  email: z.string().email({ message: 'Phải là email name@example.com' }),
+  phoneNumber: z.string().min(10, { message: 'Số điện thoại phải là 10 số' }),
+  message: z.string()
+})
