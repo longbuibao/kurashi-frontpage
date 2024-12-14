@@ -21,3 +21,7 @@ export const ContactRegisterSchema = z.object({
   phoneNumber: z.string().min(10, { message: 'Số điện thoại phải là 10 số' }),
   message: z.string()
 })
+
+export const BlogRegisterSchema = z.object({
+  email: z.string().email()
+})
