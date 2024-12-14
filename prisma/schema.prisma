@@ -13,7 +13,7 @@ model User {
   name     String?
   password String  @default("")
   posts    Post[]
-  userId   String  @default("")
+  userId   String  @unique @default("")
   isAdmin  Boolean @default(false)
 }
 

@@ -22,7 +22,7 @@ const checkUserPassword = async (plainText: string, userId: string): Promise<Che
   const hashedPassword = user.password
   const isOkay = await bcrypt.compare(plainText, hashedPassword)
   return {
-    isOkay: true,
+    isOkay,
     user
   }
 }
@@ -39,8 +39,8 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
           throw new Error('credentials is null')
         }
 
-        const password = credentials.password as string
-        const userId = credentials.userId as string
+        const password = credentials.password
+        const userId = credentials.userId
 
         if (strictCheckString(password) || strictCheckString(userId)) {
           throw new Error('password or userId is null')
