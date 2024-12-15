@@ -22,7 +22,7 @@ export const applications = [
   {
     title: 'ỐP TƯỜNG BẾP',
     content: ['Ứng dụng để ốp bếp với hình dáng phức tạp, góc cạnh hoặc thậm chí bo cong.', 'Kết hợp với phụ kiện nam châm cho không gian bếp sạch sẽ và tiện lợi nhất theo phong cách Nhật Bản'],
-    thumbnail: 'https://storage.googleapis.com/kurashi_frontpage_files/images/thep-trang-men-page/6.jpg',
+    thumbnail: 'https://storage.googleapis.com/kurashi_frontpage_files/images/thep-trang-men-page/ttm_landingpage.jpg',
     key: '1'
   },
   {
