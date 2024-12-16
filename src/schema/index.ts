@@ -25,3 +25,8 @@ export const ContactRegisterSchema = z.object({
 export const BlogRegisterSchema = z.object({
   email: z.string().email()
 })
+
+export const LoginSchema = z.object({
+  userId: z.string(),
+  password: z.string().min(6, { message: 'Password must has minimum of six' })
+})

@@ -39,8 +39,8 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
           throw new Error('credentials is null')
         }
 
-        const password = credentials.password
-        const userId = credentials.userId
+        const password = credentials.password as string
+        const userId = credentials.userId as string
 
         if (strictCheckString(password) || strictCheckString(userId)) {
           throw new Error('password or userId is null')
