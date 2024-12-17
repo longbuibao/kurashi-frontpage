@@ -3,8 +3,8 @@ import React, { useState, useTransition } from 'react'
 import { useForm } from 'react-hook-form'
 import { ClipLoader } from 'react-spinners'
 import * as z from 'zod'
-import { doLogin } from '@/actions/login'
 
+import { DoLoginReturnType } from '@/actions/types'
 import { LoginSchema } from '@/schema'
 import UserIcon from '@/components/svg-icons/user'
 import { zodResolver } from '@hookform/resolvers/zod'
@@ -12,9 +12,11 @@ import { FormError, FormSuccess } from '../form'
 
 interface LoginFormProps {
   title: string
+  loginFunc: (values: any) => Promise<z.infer<typeof DoLoginReturnType>>
+  href: string
 }
 
-const LoginForm: React.FC<LoginFormProps> = ({ title }) => {
+const LoginForm: React.FC<LoginFormProps> = ({ title, loginFunc, href }) => {
   const [error, setError] = useState<string | undefined>('')
   const [success, setSuccess] = useState<string | undefined>('')
   const [isPending, startTransition] = useTransition()
@@ -31,7 +33,7 @@ const LoginForm: React.FC<LoginFormProps> = ({ title }) => {
     setError('')
     setSuccess('')
     startTransition(() => {
-      doLogin(values)
+      loginFunc(values)
         .then((data) => {
           setError(data.error)
           setSuccess(data.success)
@@ -75,7 +77,7 @@ const LoginForm: React.FC<LoginFormProps> = ({ title }) => {
         </form>
       </div>
       <div className='w-full h-9'>
-        <FormSuccess message={success} redirectTo='/phu-kien-nam-cham' />
+        <FormSuccess message={success} redirectTo={href} />
         <FormError message={error} />
       </div>
     </div>

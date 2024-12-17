@@ -4,13 +4,9 @@ import * as z from 'zod'
 
 import { signIn } from '@/auth'
 import { LoginSchema } from '@/schema'
+import { DoLoginReturnType } from './types'
 
-const doLoginReturnType = z.object({
-  success: z.string().optional(),
-  error: z.string().optional()
-})
-
-export const doLogin = async (values: z.infer<typeof LoginSchema>): Promise<z.infer<typeof doLoginReturnType>> => {
+export const doLogin = async (values: z.infer<typeof LoginSchema>): Promise<z.infer<typeof DoLoginReturnType>> => {
   const validatedFields = LoginSchema.safeParse(values)
   if (!validatedFields.success) {
     return {
@@ -21,6 +17,25 @@ export const doLogin = async (values: z.infer<typeof LoginSchema>): Promise<z.in
 
   try {
     await signIn('credentials', { userId, password, redirect: false })
+    return { success: 'Đăng nhập thành công!' }
+  } catch (error) {
+    return { error: 'Sai tài khoản hoặc mật khẩu' }
+  }
+}
+
+export const doLoginAdmin = async (values: z.infer<typeof LoginSchema>): Promise<z.infer<typeof DoLoginReturnType>> => {
+  const validatedFields = LoginSchema.safeParse(values)
+  if (!validatedFields.success) {
+    return {
+      error: 'Invalid fields'
+    }
+  }
+  const { password, userId } = validatedFields.data
+
+  try {
+    if (userId === 'kurashi-demo') {
+      await signIn('credentials', { userId, password, redirect: false })
+    }
     return { success: 'Đăng nhập thành công!' }
   } catch (error) {
     return { error: 'Sai tài khoản hoặc mật khẩu' }
