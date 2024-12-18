@@ -4,7 +4,6 @@ import Link from 'next/link'
 
 import { Logo } from '@/components/logo'
 import { KurashiLink } from '@/components/kurashi-link'
-import { zaloLink } from '@/constants'
 import { v4 as uuidv4 } from 'uuid'
 import { ProductCard } from '@/components/product'
 import { Product } from '@prisma/client'
@@ -42,8 +41,12 @@ const Nav: FC<NavProps> = ({ links, products }) => {
               </Link>
             </div>
             <div className='max-md:hidden max-md:mr-1 max-md:px-5 flex flex-row items-center gap-10 z-10'>
-              <Link href='/phu-kien-nam-cham'><ShoppingCart width='25' height='25' /></Link>
-              <LogoZalo width='25' height='25' />
+              <Link href='/phu-kien-nam-cham'>
+                <div className='flex flex-col items-center gap-1'>
+                  <ShoppingCart width='25' height='25' />
+                  <div className='text-xs'>Phụ kiện bếp nam châm</div>
+                </div>
+              </Link>
             </div>
           </nav>
         </div>
