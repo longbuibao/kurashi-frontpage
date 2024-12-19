@@ -12,7 +12,7 @@ const BlogCardHomepage: React.FC<BlogCardHomepageProps> = ({ blog }) => {
   const date = blog.createdAt.getDate()
   return (
     <Link href={blog.url}>
-      <div className='flex flex-col w-[300px] shadow-lg rounded-3xl p-5 bg-[#fff] border border-opacity-20 border-[#000]'>
+      <div className='flex flex-col w-[290px] shadow-lg rounded-3xl p-5 bg-[#fff] border border-opacity-20 border-[#000]'>
         <Image className='shadow-md rounded-xl' src={blog.thumbnail} alt='phụ kiện nam châm bếp' width={400} height={471} />
         <div className='flex flex-col w-16 h-16 rounded-lg shadow-lg items-center justify-center self-end mt-[-2.5rem] bg-count-bg'>
           <div className='text-2xl font-bold'>{date}</div>
