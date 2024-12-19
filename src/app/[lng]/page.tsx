@@ -56,42 +56,9 @@ const Page = async ({ params: { lng } }: PageParam): Promise<React.ReactElement>
           <AboutKurashiCard lng={lng} />
         </div>
       </div>
-      <div className='bg-[#C0CCD4] mt-20 block max-md:hidden'>
-        <div className='w-[65%] mx-auto py-10'>
-          <div className='max-md:w-full flex flex-row gap-36 max-md:flex-col max-md:gap-10'>
-            <Suspense>
-              <div className='w-1/2 flex flex-col max-md:w-full max-md:p-5'>
-                <div className='flex flex-col gap-5 mb-10'>
-                  <div className='flex-row flex gap-3 border-b-[1px] border-main pb-5'>
-                    <div className='mt-auto text-xl leading-9'>KURASHI</div>
-                    <div className='text-7xl text-main font-bold'>BLOG</div>
-                  </div>
-                  <p className='font-thin'>
-                    Xu hướng, công nghệ và vật liệu về nội thất mới nhất từ Nhật Bản
-                  </p>
-                </div>
-                <BlogCardHomepage blog={blogs[1]} />
-              </div>
-              <div className='w-1/2 max-md:w-full max-md:p-5'>
-                <div className='flex flex-col items-center gap-14 overflow-hidden'>
-                  <BlogCardHomepage blog={blogs[2]} />
-                  <BlogCardHomepage blog={blogs[0]} />
-                </div>
-              </div>
-            </Suspense>
-          </div>
-        </div>
-      </div>
-      <div className='hidden max-md:block p-5 bg-[#C0CCD4]'>
-        <div className='my-10'>
-          <BlogCardHomepage blog={blogs[1]} />
-        </div>
-        <div className='my-10'>
-          <BlogCardHomepage blog={blogs[2]} />
-        </div>
-        <div className='my-10'>
-          <BlogCardHomepage blog={blogs[0]} />
-        </div>
+      <div className='w-4/5 mx-auto mt-10'>
+        <div className='text-3xl'>Bài viết mới nhất</div>
+        <div className='flex flex-row gap-5 p-10 items-center justify-center'>{blogs.map(x => <BlogCardHomepage blog={x} key={x.id} />)}</div>
       </div>
     </main>
   )
