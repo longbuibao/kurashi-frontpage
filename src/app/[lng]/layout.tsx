@@ -8,6 +8,7 @@ import { navItems } from '@/constants'
 import { useTranslation } from '@/i18n'
 import ProgressBarProviders from '@/components/progress-bar-provider'
 import prisma from '@/lib/prisma'
+import { Inter } from 'next/font/google'
 
 export const metadata = {
   title: 'Trang chủ Kurashi'
@@ -17,6 +18,8 @@ interface RootProps {
   children: React.ReactNode
   params: { lng: string }
 }
+
+const inter = Inter({ subsets: ['latin'], weight: '200' })
 
 const RootLayout: React.FC<RootProps> = async ({ children, params }): Promise<React.ReactElement> => {
   const { t } = await useTranslation(params.lng)
@@ -35,7 +38,7 @@ const RootLayout: React.FC<RootProps> = async ({ children, params }): Promise<Re
       <head>
         <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css' crossOrigin='anonymous' />
       </head>
-      <body>
+      <body className={inter.className}>
         <div className='sticky top-0 z-50'>
           <Nav products={productsRaw} links={navItems.map(item => { return { label: t(item.label), url: item.url } })} />
         </div>

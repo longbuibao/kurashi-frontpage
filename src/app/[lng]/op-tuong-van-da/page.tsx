@@ -6,12 +6,13 @@ import Image from 'next/image'
 import SideBar from '../thep-trang-men/side-bar'
 import * as transKey from '@/i18n/op-tuong-van-da'
 import { PartObservable } from '@/components/part-observable'
-import { colorsImage } from './const'
+import { colorsImage, characteristics, characteristic } from './const'
 
 const Page: React.FC = (): React.ReactElement => {
   const [currentInViewDivId, setCurrentInViewDivId] = React.useState('')
   const sectionTitles = [transKey.tamOpTuongVanDa, transKey.mauSac, transKey.opGocChuyenDung, transKey.dacTinh, transKey.ungDung, transKey.quyCach, transKey.thongSoKiThuat]
   return (
+
     <div className='w-4/5 mx-auto max-md:w-full gap-10 flex flex-col'>
       <div className='flex flex-row gap-10 mt-10'>
         <div className='h-10 gap-5 w-48 top-32 max-md:hidden' />
@@ -32,9 +33,43 @@ const Page: React.FC = (): React.ReactElement => {
                 <Image className='mt-16' alt='Tấm ốp tường vân đá' src='https://storage.googleapis.com/kurashi_frontpage_files/images/tam-op-da/home/tam-op-da-part-1.png' width={1398} height={692} />
               </div>
             </PartObservable>
-            <PartObservable id={transKey.mauSac} setCurrentInViewDivId={setCurrentInViewDivId} threshold={0.7}>
-              <div className='grid grid-cols-4 grid-rows-2'>
-                {colorsImage.map(x => <Image src={x.imageUrl} alt={x.alt} width={320} height={320} key={x.imageUrl} />)}
+            <PartObservable id={transKey.mauSac} setCurrentInViewDivId={setCurrentInViewDivId} threshold={1}>
+              <div className='flex flex-col gap-5'>
+                <div className='text-2xl'>{'Màu sắc'.toUpperCase()}</div>
+                <div className='grid grid-cols-4 grid-rows-2 gap-3'>
+                  {colorsImage.map(x => <Image src={x.imageUrl} alt={x.alt} width={320} height={320} key={x.imageUrl} />)}
+                </div>
+              </div>
+            </PartObservable>
+            <PartObservable id={transKey.opGocChuyenDung} setCurrentInViewDivId={setCurrentInViewDivId} threshold={1}>
+              <div className='flex flex-col gap-5'>
+                <div className='text-2xl'>{'Ốp góc chuyên dụng'.toUpperCase()}</div>
+                <div className='flex flex-col gap-10'>
+                  <div>Tấm ốp góc chuyên dụng, cùng màu, các góc cạnh được vát C1 tinh tế. Điều này giúp tăng chất lượng hoàn thiện tại góc nối, giảm công cắt ghép phức tạp tại góc vuông của các loại đá khác và tăng tính thẩm mỹ mối nối.</div>
+                  <div className='flex flex-row justify-between'>
+                    <Image src='https://storage.googleapis.com/kurashi_frontpage_files/images/tam-op-da/part-op-chuyen-dung/op-goc-chuyen-dung-1.png' width={550} height={550} alt='Ốp góc chuyên dụng' />
+                    <Image src='https://storage.googleapis.com/kurashi_frontpage_files/images/tam-op-da/part-op-chuyen-dung/op-goc-chuyen-dung-2.png' width={550} height={550} alt='Ốp góc chuyên dụng' />
+                  </div>
+                  <div>Ngoài ra, tại vị trí cần nối dài cũng có thể cắt vát C1 dễ dàng, đồng thời có thể dùng sơn đồng màu để hoàn thiện đơn giản.</div>
+                </div>
+              </div>
+            </PartObservable>
+            <PartObservable id={transKey.dacTinh} setCurrentInViewDivId={setCurrentInViewDivId} threshold={0.5}>
+              <div className='flex flex-col gap-10'>
+                <div className='flex flex-col gap-10'>
+                  {characteristics.map(x => (
+                    <div key={x.key} className='flex flex-row justify-between'>
+                      <div className='w-1/3'>{x.content}</div>
+                      <div className='flex flex-row gap-4'>{x.images.map(y => <Image src={y.src} width={400} height={493} alt={y.alt} key={x.key} />)}</div>
+                    </div>))}
+                </div>
+                <div className='flex flex-col gap-10'>
+                  <div>{characteristic.content}</div>
+                  <div>
+                    {characteristic.images.map(x =>
+                      <Image className='w-full' src={x.src} width={1438} height={786} alt={x.alt} key={x.src} />)}
+                  </div>
+                </div>
               </div>
             </PartObservable>
           </div>
