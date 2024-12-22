@@ -43,10 +43,10 @@ const AllBlogs: React.FC<{ lng: string, numOfBlogs: number, searchParams: PagePa
   const numberOfBlogs = await prisma.post.count()
   if (blogs.length > 0) {
     return (
-      <div className='w-[50%] mx-auto p-10'>
-        <div className='max-md:w-full flex flex-row gap-36 max-md:flex-col max-md:gap-10'>
+      <div className='w-4/5 mx-auto py-10'>
+        <div className='max-md:w-full flex flex-col max-md:flex-col max-md:gap-10'>
           <Suspense>
-            <div className='w-1/2 flex flex-col max-md:w-full max-md:p-5'>
+            <div className='flex flex-col max-md:w-full max-md:p-5'>
               <div className='flex flex-col gap-5 mb-10'>
                 <div className='flex-row flex gap-3 border-b-[1px] border-main pb-5'>
                   <div className='mt-auto text-xl leading-9'>KURASHI</div>
@@ -56,14 +56,8 @@ const AllBlogs: React.FC<{ lng: string, numOfBlogs: number, searchParams: PagePa
                   Xu hướng, công nghệ và vật liệu về nội thất mới nhất từ Nhật Bản
                 </p>
               </div>
-              <BlogCardHomepage blog={blogs[1]} />
             </div>
-            <div className='w-1/2 max-md:w-full max-md:p-5'>
-              <div className='flex flex-col items-center gap-14 overflow-hidden'>
-                <BlogCardHomepage blog={blogs[2]} />
-                <BlogCardHomepage blog={blogs[0]} />
-              </div>
-            </div>
+            <div className='flex flex-row gap-5 pt-10 pb-16 items-center justify-between'>{blogs.map(x => <BlogCardHomepage blog={x} key={x.id} />)}</div>
           </Suspense>
         </div>
       </div>

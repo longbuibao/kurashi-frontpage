@@ -27,7 +27,7 @@ const createCarouselItemImage = (imageSrc: string, width = 1920, height = 1080):
 const Page = async ({ params: { lng } }: PageParam): Promise<React.ReactElement> => {
   const carouselSliders = carouselSliderImages.map(x => createCarouselItemImage(x))
   const carouselSlidersMobile = carouselSliderImagesMobile.map(x => createCarouselItemImage(x, 4500, 5620))
-  const blogs = await prisma.post.findMany({ take: 3, where: { published: true } })
+  const blogs = await prisma.post.findMany({ take: 4, where: { published: true } })
 
   return (
     <main className='mt-0'>
@@ -57,8 +57,8 @@ const Page = async ({ params: { lng } }: PageParam): Promise<React.ReactElement>
         </div>
       </div>
       <div className='w-4/5 mx-auto mt-10'>
-        <div className='text-3xl'>Bài viết mới nhất</div>
-        <div className='flex flex-row gap-5 p-10 items-center justify-center'>{blogs.map(x => <BlogCardHomepage blog={x} key={x.id} />)}</div>
+        <div className='text-3xl font-bold'>{'Blog kinh nghiệm nội thất'.toUpperCase()}</div>
+        <div className='flex flex-row gap-5 pt-10 pb-16 items-center justify-between'>{blogs.map(x => <BlogCardHomepage blog={x} key={x.id} />)}</div>
       </div>
     </main>
   )
