@@ -30,7 +30,7 @@ const Page: React.FC<PageParam> = ({ params: { lng } }) => {
       </div>
       <div className='flex flex-row gap-10 my-10 max-md:my-0'>
         <div className='max-md:hidden min-w-fit'>
-          <SideBar sectionTitles={sectionTitles} currentDivId={currentInViewDivId} />
+          <SideBar sectionTitles={sectionTitles} currentDivId={currentInViewDivId} ns='thep-trang-men' />
         </div>
         <div className='max-md:w-4/5 max-md:mx-auto'>
           <div className='flex flex-col gap-20 max-md:gap-5'>

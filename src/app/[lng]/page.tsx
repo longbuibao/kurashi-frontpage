@@ -1,6 +1,7 @@
 import React, { Suspense } from 'react'
 import { v4 as uuidv4 } from 'uuid'
 import Image from 'next/image'
+import Link from 'next/link'
 
 import prisma from '@/lib/prisma'
 import { BlogCardHomepage } from '@/components/blog-card'
@@ -57,8 +58,12 @@ const Page = async ({ params: { lng } }: PageParam): Promise<React.ReactElement>
         </div>
       </div>
       <div className='w-4/5 mx-auto mt-10'>
-        <div className='text-3xl font-bold'>{'Blog kinh nghiệm nội thất'.toUpperCase()}</div>
-        <div className='flex flex-row gap-5 pt-10 pb-16 items-center justify-between'>{blogs.map(x => <BlogCardHomepage blog={x} key={x.id} />)}</div>
+        <Link href='/blogs' className='w-fit'>
+          <div className='text-3xl font-bold w-fit'>{'Blog kinh nghiệm nội thất'.toUpperCase()}</div>
+        </Link>
+        <div className='flex flex-row gap-5 pt-10 pb-16 items-center justify-between'>
+          {blogs.map(x => x).sort((x, y) => x.order - y.order).map(x => <BlogCardHomepage blog={x} key={x.id} />)}
+        </div>
       </div>
     </main>
   )

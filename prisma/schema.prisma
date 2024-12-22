@@ -43,6 +43,7 @@ model Post {
   url            String        @default("#")
   isTrending     Boolean       @default(false)
   summary        String        @default("Post summary")
+  order          Int           @default(-1)
 }
 
 model PostCategory {
