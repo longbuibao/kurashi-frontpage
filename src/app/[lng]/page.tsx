@@ -27,7 +27,7 @@ const createCarouselItemImage = (imageSrc: string, width = 1920, height = 1080):
 const Page = async ({ params: { lng } }: PageParam): Promise<React.ReactElement> => {
   const carouselSliders = carouselSliderImages.map(x => createCarouselItemImage(x))
   const carouselSlidersMobile = carouselSliderImagesMobile.map(x => createCarouselItemImage(x, 4500, 5620))
-  const blogs = await prisma.post.findMany({ take: 4, where: { published: true } })
+  const blogs = await prisma.post.findMany({ take: 3, where: { published: true } })
 
   return (
     <main className='mt-0'>
