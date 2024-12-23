@@ -1,4 +1,5 @@
 import * as z from 'zod'
+import Image from 'next/image'
 
 const Color = z.object({ alt: z.string(), imageUrl: z.string().url() }).array()
 
@@ -10,6 +11,29 @@ const Characteristic = z.object({
     alt: z.string()
   }).array()
 }).array()
+
+export const imageUrls = [
+  'https://storage.googleapis.com/kurashi_frontpage_files/images/tam-op-da/ung-dung/ung-dung-1.png',
+  'https://storage.googleapis.com/kurashi_frontpage_files/images/tam-op-da/ung-dung/ung-dung-2.png',
+  'https://storage.googleapis.com/kurashi_frontpage_files/images/tam-op-da/ung-dung/ung-dung-3.png',
+  'https://storage.googleapis.com/kurashi_frontpage_files/images/tam-op-da/ung-dung/ung-dung-4.png',
+  'https://storage.googleapis.com/kurashi_frontpage_files/images/tam-op-da/ung-dung/ung-dung-5.png',
+  'https://storage.googleapis.com/kurashi_frontpage_files/images/tam-op-da/ung-dung/ung-dung-6.png',
+  'https://storage.googleapis.com/kurashi_frontpage_files/images/tam-op-da/ung-dung/ung-dung-7.png',
+  'https://storage.googleapis.com/kurashi_frontpage_files/images/tam-op-da/ung-dung/ung-dung-8.png',
+  'https://storage.googleapis.com/kurashi_frontpage_files/images/tam-op-da/ung-dung/ung-dung-9.png',
+  'https://storage.googleapis.com/kurashi_frontpage_files/images/tam-op-da/ung-dung/ung-dung-10.png',
+  'https://storage.googleapis.com/kurashi_frontpage_files/images/tam-op-da/ung-dung/ung-dung-11.png'
+].map(x => {
+  return {
+    key: x,
+    content: (
+      <div>
+        <Image src={x} width={500} height={500} alt='Ứng dụng của thép tráng men' />
+      </div>
+    )
+  }
+})
 
 export const characteristics: z.infer<typeof Characteristic> = [{
   key: '1',
