@@ -1,7 +1,7 @@
 import * as z from 'zod'
 import Image from 'next/image'
 
-const Color = z.object({ alt: z.string(), imageUrl: z.string().url() }).array()
+const Color = z.object({ alt: z.string(), imageUrl: z.string().url(), colorName: z.string() }).array()
 
 const Characteristic = z.object({
   key: z.string(),
@@ -62,12 +62,12 @@ export const characteristic: z.infer<typeof Characteristic.element> = {
 }
 
 export const colorsImage: z.infer<typeof Color> = [
-  { alt: '', imageUrl: 'https://storage.googleapis.com/kurashi_frontpage_files/images/tam-op-da/part-color/color-1.png' },
-  { alt: '', imageUrl: 'https://storage.googleapis.com/kurashi_frontpage_files/images/tam-op-da/part-color/color-2.png' },
-  { alt: '', imageUrl: 'https://storage.googleapis.com/kurashi_frontpage_files/images/tam-op-da/part-color/color-3.png' },
-  { alt: '', imageUrl: 'https://storage.googleapis.com/kurashi_frontpage_files/images/tam-op-da/part-color/color-4.png' },
-  { alt: '', imageUrl: 'https://storage.googleapis.com/kurashi_frontpage_files/images/tam-op-da/part-color/color-5.png' },
-  { alt: '', imageUrl: 'https://storage.googleapis.com/kurashi_frontpage_files/images/tam-op-da/part-color/color-6.png' },
-  { alt: '', imageUrl: 'https://storage.googleapis.com/kurashi_frontpage_files/images/tam-op-da/part-color/color-7.png' },
-  { alt: '', imageUrl: 'https://storage.googleapis.com/kurashi_frontpage_files/images/tam-op-da/part-color/color-8.png' }
+  { alt: 'Xám travertine', imageUrl: 'https://storage.googleapis.com/kurashi_frontpage_files/images/tam-op-da/part-color/color-1-new.png', colorName: 'Xám travertine' },
+  { alt: 'Be slate', imageUrl: 'https://storage.googleapis.com/kurashi_frontpage_files/images/tam-op-da/part-color/color-2.png', colorName: 'Be slate' },
+  { alt: 'Gỉ sắt', imageUrl: 'https://storage.googleapis.com/kurashi_frontpage_files/images/tam-op-da/part-color/color-3.png', colorName: 'Gỉ sắt' },
+  { alt: 'Xám xi măng', imageUrl: 'https://storage.googleapis.com/kurashi_frontpage_files/images/tam-op-da/part-color/color-4.png', colorName: 'Xám xi măng' },
+  { alt: 'Đen travertine', imageUrl: 'https://storage.googleapis.com/kurashi_frontpage_files/images/tam-op-da/part-color/color-5.png', colorName: 'Đen travertine' },
+  { alt: 'Đen slate', imageUrl: 'https://storage.googleapis.com/kurashi_frontpage_files/images/tam-op-da/part-color/color-6.png', colorName: 'Đen slate' },
+  { alt: 'Gỉ đen', imageUrl: 'https://storage.googleapis.com/kurashi_frontpage_files/images/tam-op-da/part-color/color-7.png', colorName: 'Gỉ đen' },
+  { alt: 'Đen xi măng', imageUrl: 'https://storage.googleapis.com/kurashi_frontpage_files/images/tam-op-da/part-color/color-8.png', colorName: 'Đen xi măng' }
 ]

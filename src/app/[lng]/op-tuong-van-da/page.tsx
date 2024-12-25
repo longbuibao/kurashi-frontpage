@@ -36,8 +36,12 @@ const Page: React.FC = (): React.ReactElement => {
             <PartObservable id={transKey.mauSac} setCurrentInViewDivId={setCurrentInViewDivId} threshold={1}>
               <div className='flex flex-col gap-5'>
                 <div className='text-2xl'>{'Màu sắc'.toUpperCase()}</div>
-                <div className='grid grid-cols-4 grid-rows-2 gap-3'>
-                  {colorsImage.map(x => <Image src={x.imageUrl} alt={x.alt} width={320} height={320} key={x.imageUrl} />)}
+                <div className='grid grid-cols-4 grid-rows-2 gap-5'>
+                  {colorsImage.map(x => (
+                    <div key={x.imageUrl} className='flex flex-col gap-3'>
+                      <Image src={x.imageUrl} alt={x.alt} width={320} height={320} />
+                      <div>{x.colorName}</div>
+                    </div>))}
                 </div>
               </div>
             </PartObservable>

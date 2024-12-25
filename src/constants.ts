@@ -12,7 +12,7 @@ export const navItems = [
 ]
 
 export const carouselSliderImages = [
-  'https://storage.googleapis.com/kurashi_frontpage_files/images/sliders-homepage/Slider_new_01.webp',
+  'https://storage.googleapis.com/kurashi_frontpage_files/images/sliders-homepage/Slider_1-01.webp',
   'https://storage.googleapis.com/kurashi_frontpage_files/images/sliders-homepage/Slider%2003-01-01.webp',
   'https://storage.googleapis.com/kurashi_frontpage_files/images/sliders-homepage/Slider%202-01.webp'
 ]
