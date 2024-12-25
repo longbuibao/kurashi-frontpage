@@ -60,6 +60,7 @@ const Page: React.FC = (): React.ReactElement => {
             </PartObservable>
             <PartObservable id={transKey.dacTinh} setCurrentInViewDivId={setCurrentInViewDivId} threshold={0.5}>
               <div className='flex flex-col gap-10'>
+                <div className='text-2xl'>{'Đặc tính'.toUpperCase()}</div>
                 <div className='flex flex-col gap-10'>
                   {characteristics.map(x => (
                     <div key={x.key} className='flex flex-row justify-between'>
@@ -78,7 +79,7 @@ const Page: React.FC = (): React.ReactElement => {
             </PartObservable>
             <PartObservable id={transKey.ungDung} setCurrentInViewDivId={setCurrentInViewDivId} threshold={1}>
               <div className='flex flex-col gap-5'>
-                <div className='text-2xl'>{'Màu sắc'.toUpperCase()}</div>
+                <div className='text-2xl'>{'Ứng dụng'.toUpperCase()}</div>
                 <div>Tấm ốp được ứng dụng rộng rãi để ốp tường nội thất nhiều vị trí khác nhau như phòng khách, bếp, phòng tắm, lối vào, khách sạn, công trình công cộng, văn phòng...</div>
                 <div className='my-10'>
                   <EmblaCarousel useFlatControlButton slides={imageUrls} />
