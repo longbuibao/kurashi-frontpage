@@ -59,7 +59,17 @@ const Page = async ({ params: { lng } }: PageParam): Promise<React.ReactElement>
       </div>
       <div className='w-4/5 mx-auto mt-10'>
         <Link href='/blogs' className='w-fit'>
-          <div className='text-3xl font-bold w-fit'>{'Blog kinh nghiệm nội thất'.toUpperCase()}</div>
+          <div className='flex flex-col max-md:w-full max-md:p-5'>
+            <div className='flex flex-col gap-5 mb-10'>
+              <div className='flex-row flex gap-3 border-b-[1px] border-main pb-5'>
+                <div className='mt-auto text-xl leading-9'>KURASHI</div>
+                <div className='text-7xl text-main font-bold'>BLOG</div>
+              </div>
+              <p className='font-thin'>
+                Xu hướng, công nghệ và vật liệu về nội thất mới nhất từ Nhật Bản
+              </p>
+            </div>
+          </div>
         </Link>
         <div className='flex flex-row gap-5 pt-10 pb-16 items-center justify-between'>
           {blogs.map(x => x).sort((x, y) => x.order - y.order).map(x => <BlogCardHomepage blog={x} key={x.id} />)}
