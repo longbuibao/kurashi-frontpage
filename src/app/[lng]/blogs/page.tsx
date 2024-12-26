@@ -80,7 +80,7 @@ const BlogsPage: React.FC<PageParam> = async ({ params: { lng }, searchParams }:
   return (
     <div className='mx-auto mb-10'>
       <div className='flex flex-col gap-5'>
-        <div className='flex w-full bg-[#C0CCD4]'>
+        <div className='flex w-full'>
           <Suspense fallback={<skeleton.AllBlogsSkeleton />}>
             <AllBlogs lng={lng} numOfBlogs={4} searchParams={searchParams} />
           </Suspense>

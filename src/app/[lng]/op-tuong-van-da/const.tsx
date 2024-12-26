@@ -36,7 +36,7 @@ export const imageUrls = [
 })
 
 export const characteristics: z.infer<typeof Characteristic> = [{
-  key: '1',
+  key: '11',
   content: 'Bề mặt lồi lõm tự nhiên nên dưới ánh đèn chiếu sáng, nhìn dưới các góc độ khác nhau sẽ cho những hiệu ứng khác nhau. Do đó làm cho không gian trở nên thú vị hơn.',
   images: [{
     src: 'https://storage.googleapis.com/kurashi_frontpage_files/images/tam-op-da/part-char/char1.png',
@@ -46,7 +46,7 @@ export const characteristics: z.infer<typeof Characteristic> = [{
     alt: 'Đặc tính của tấm ốp đá'
   }]
 }, {
-  key: '2',
+  key: '22',
   content: 'Tấm ốp chỉ dày 3mm, nhẹ, cắt ghép dán đơn giản. Do đó dễ vận chuyển, dễ thi công, tiết kiệm chi phí vận chuyển và thi công.',
   images: [
     { src: 'https://storage.googleapis.com/kurashi_frontpage_files/images/tam-op-da/part-char/char3.png', alt: 'Đặc tính của tấm ốp đá' },
@@ -58,7 +58,7 @@ export const characteristics: z.infer<typeof Characteristic> = [{
 export const characteristic: z.infer<typeof Characteristic.element> = {
   content: 'Dễ dàng kết hợp các tấm ốp màu khác nhau trên cùng một mảng tường để tạo điểm nhấn, mang đến vẻ sang trọng cho không gian sống.',
   images: [{ src: 'https://storage.googleapis.com/kurashi_frontpage_files/images/tam-op-da/part-char/char-4.png', alt: 'Đặc tính của tấm ốp đá' }],
-  key: '3'
+  key: '33'
 }
 
 export const colorsImage: z.infer<typeof Color> = [

@@ -38,7 +38,7 @@ const Page: React.FC = (): React.ReactElement => {
                 <div className='text-2xl'>{'Màu sắc'.toUpperCase()}</div>
                 <div className='grid grid-cols-4 grid-rows-2 gap-5'>
                   {colorsImage.map(x => (
-                    <div key={x.imageUrl} className='flex flex-col gap-3'>
+                    <div key={x.imageUrl} className='flex flex-col gap-3 hover:scale-105 transition'>
                       <Image src={x.imageUrl} alt={x.alt} width={320} height={320} />
                       <div>{x.colorName}</div>
                     </div>))}
@@ -62,10 +62,12 @@ const Page: React.FC = (): React.ReactElement => {
               <div className='flex flex-col gap-10'>
                 <div className='text-2xl'>{'Đặc tính'.toUpperCase()}</div>
                 <div className='flex flex-col gap-10'>
-                  {characteristics.map(x => (
+                  {characteristics.map((x, i) => (
                     <div key={x.key} className='flex flex-row justify-between'>
-                      <div className='w-1/3'>{x.content}</div>
-                      <div className='flex flex-row gap-4'>{x.images.map(y => <Image src={y.src} width={400} height={493} alt={y.alt} key={x.key} />)}</div>
+                      <div className='w-[60%]'>{x.content}</div>
+                      <div className='flex flex-row gap-4'>
+                        {x.images.map(y => <Image className='hover:scale-105 transition' src={y.src} width={400} height={400} alt={y.alt} key={y.src} />)}
+                      </div>
                     </div>))}
                 </div>
                 <div className='flex flex-col gap-10'>
