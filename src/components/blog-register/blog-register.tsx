@@ -38,19 +38,21 @@ const BlogRegister: React.FC = () => {
   }
 
   return (
-    <div className='flex flex-col justify-center items-center p-2'>
-      <Link href='/' className='mx-auto flex flex-row justify-center'>
-        <Logo width={450} height={157} />
-      </Link>
-      <div className='max-lg:text-center max-lg:my-5'>Công nghệ và kinh nghiệm nội thất mới nhất từ Nhật Bản</div>
-      <div className='flex flex-row gap-5 justify-center items-center'>
-        <div className='mt-5 flex flex-row items-center'>
-          <form onSubmit={form.handleSubmit(onSubmit)} className='flex flex-row'>
-            <input disabled={isPending} placeholder='Nhập địa chỉ email' type='email' className='border border-main p-2' {...form.register('email', { required: true })} />
+    <div className='flex flex-row justify-center gap-20 items-center p-2'>
+      <div className='flex flex-col gap-3 w-1/3'>
+        <div className='font-bold'>Đăng kí để nhận email</div>
+        <div className='max-lg:text-center max-lg:my-5'>
+          <div>Thông tin về công nghệ vật liệu, công nghệ gia công và kinh nghiệm thiết kế nội thất từ Nhật Bản</div>
+        </div>
+      </div>
+      <div className='flex flex-row gap-5 justify-center items-center mt-auto'>
+        <div className='flex flex-row items-center'>
+          <form onSubmit={form.handleSubmit(onSubmit)} className='flex flex-row border-b-[1px] border-main'>
+            <input disabled={isPending} placeholder='Email' type='email' className='p-2' {...form.register('email', { required: true })} />
             <button type='submit' aria-disabled={isPending}>
-              <div className='text-secondary bg-main border p-2 border-main'>
+              <div className='text-secondary bg-main border pb-1 px-3'>
                 {!isPending
-                  ? <i className='fa-solid fa-arrow-right' />
+                  ? <div>đăng kí</div>
                   : <div className='w-full h-full'><ClipLoader color='#e5e5e5' loading speedMultiplier={2} size={15} /></div>}
               </div>
             </button>

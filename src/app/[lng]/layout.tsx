@@ -9,6 +9,7 @@ import { useTranslation } from '@/i18n'
 import ProgressBarProviders from '@/components/progress-bar-provider'
 import prisma from '@/lib/prisma'
 import { Inter } from 'next/font/google'
+import { BackToTopButton } from '@/components/back-to-top'
 
 export const metadata = {
   title: 'Trang chủ Kurashi'
@@ -45,6 +46,7 @@ const RootLayout: React.FC<RootProps> = async ({ children, params }): Promise<Re
         <ProgressBarProviders>
           {children}
         </ProgressBarProviders>
+        <BackToTopButton />
         <Footer t={t} />
         <div className='bg-[#24292e] pt-5 pb-10'>
           <div className='text-secondary hover:cursor-default text-left w-4/5 mx-auto text-xs'>Copyright 2024 Kurashi Corporation. All rights reserved</div>

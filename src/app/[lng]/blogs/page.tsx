@@ -87,11 +87,6 @@ const BlogsPage: React.FC<PageParam> = async ({ params: { lng }, searchParams }:
         </div>
         <div className='flex flex-col gap-10 items-center mx-auto'>
           <BlogRegister />
-          <Suspense fallback={<skeleton.AllCategoriesSkeleton />}>
-            <div className='w-fit max-lg:mx-auto'>
-              <AllCategories lng={lng} />
-            </div>
-          </Suspense>
         </div>
       </div>
     </div>

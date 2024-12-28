@@ -1,6 +1,7 @@
 export const namespace = 'thep-trang-men'
 export const allProduct = 'all-product'
 export const thepTrangMen = 'thep-trang-men'
+export const lienHe = 'lien-he'
 export const color = 'color-of-thep'
 export const introTitle = 'intro-title'
 export const thepTrangMenTitle = 'thep-trang-men-title'
