@@ -16,36 +16,6 @@ interface FooterProps {
 const Footer: React.FC<FooterProps> = ({ t }) => {
   return (
     <div className='flex flex-col gap-10'>
-      <div className='flex flex-col w-4/5 mx-auto gap-1'>
-        <Link href='#'>
-          <div className='bg-cover bg-center relative flex flex-col items-center w-full'>
-            <Image src='https://storage.googleapis.com/kurashi_frontpage_files/images/footer-image-1.png' alt='về kurashi' width={1550} height={550} />
-            <div className='flex flex-col gap-10 text-secondary absolute top-[40%] items-center'>
-              <div className='text-4xl'>{'Hệ thống phân phối chính hãng'.toUpperCase()}</div>
-              <div>Tra cứu nơi mua hàng gần bạn</div>
-              <div className='size-10 flex flex-col items-center justify-center border-secondary rounded-full border-2'>
-                <i className='fa-solid fa-arrow-right' />
-              </div>
-            </div>
-          </div>
-        </Link>
-        <div className='flex-row flex gap-1'>
-          <Link href='/catalogs' className='w-1/2 bg-[#B3B1A1] flex flex-row items-center'>
-            <Image src='https://storage.googleapis.com/kurashi_frontpage_files/images/footer-image-2.png' width={300} height={300} alt='Về kurashi' />
-            <div className='flex flex-col gap-5 items-center self-center w-full'>
-              <div className='text-3xl text-secondary font-bold'>CATALOG SẢN PHẨM</div>
-              <div>tài liệu hỗ trợ</div>
-            </div>
-          </Link>
-          <Link href='#' className='w-1/2 bg-[#BFAF92] flex flex-row items-center'>
-            <Image src='https://storage.googleapis.com/kurashi_frontpage_files/images/footer-image-3.png' width={300} height={300} alt='Về kurashi' />
-            <div className='flex flex-col gap-5 items-center self-center w-full'>
-              <div className='text-3xl text-secondary font-bold'>TÀI KHOẢN PRO</div>
-              <div>hệ thống giao dịch số</div>
-            </div>
-          </Link>
-        </div>
-      </div>
       <div className='bg-[#24292e] text-secondary'>
         <div className='w-4/5 mx-auto border-b-2 border-secondary pb-7'>
           <div className='mb-5 pt-10 pb-5 w-fit max-md:w-[60%] max-md:pb-0 max-md:pt-5'>

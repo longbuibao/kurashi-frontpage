@@ -2,12 +2,17 @@
 
 import React from 'react'
 import Image from 'next/image'
+import dynamic from 'next/dynamic'
 
 import SideBar from '../thep-trang-men/side-bar'
 import * as transKey from '@/i18n/op-tuong-van-da'
 import { PartObservable } from '@/components/part-observable'
 import { EmblaCarousel } from '@/components/embla-carousel'
 import { colorsImage, characteristics, characteristic, imageUrls } from './const'
+const SpecTable = dynamic(
+  async () => await import('./table').then(module => module.default),
+  { ssr: false }
+)
 
 const Page: React.FC = (): React.ReactElement => {
   const [currentInViewDivId, setCurrentInViewDivId] = React.useState('')
@@ -86,6 +91,13 @@ const Page: React.FC = (): React.ReactElement => {
                 <div className='my-10'>
                   <EmblaCarousel useFlatControlButton slides={imageUrls} />
                 </div>
+              </div>
+            </PartObservable>
+            <PartObservable id={transKey.quyCach} setCurrentInViewDivId={setCurrentInViewDivId} threshold={0.7}>
+              <div className='my-10 flex flex-col gap-10'>
+                <div className='text-2xl'>{'Quy cách'.toUpperCase()}</div>
+                <div>Tấm ốp có các kích thước khác nhau tùy vào màu sắc bao gồm 3 khổ chính 900x600, 600x300 và 900x2400. Phần ốp góc chuyên dụng có 2 khổ 600x (18+18) và 300x (18+18).</div>
+                <SpecTable />
               </div>
             </PartObservable>
           </div>
