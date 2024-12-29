@@ -1,12 +1,13 @@
 import React from 'react'
 import Link from 'next/link'
 import { TFunction } from 'i18next'
+import { v4 as uuidv4 } from 'uuid'
+import Image from 'next/image'
 
 import { Logo } from '@/components/logo'
 import { LogoFacebook, LogoYoutube, LogoZalo } from '@/components/svg-icons'
 import { footerLinks, phoneNumber } from '@/constants'
 import { address, addressName, tel } from '@/i18n/translation-key'
-import { v4 as uuidv4 } from 'uuid'
 
 interface FooterProps {
   t: TFunction<any, any>
@@ -14,54 +15,85 @@ interface FooterProps {
 
 const Footer: React.FC<FooterProps> = ({ t }) => {
   return (
-    <div className='bg-[#24292e] text-secondary'>
-      <div className='w-4/5 mx-auto border-b-2 border-secondary pb-7'>
-        <div className='mb-5 pt-10 pb-5 w-fit max-md:w-[60%] max-md:pb-0 max-md:pt-5'>
-          <Link href='/' className='w-fit'>
-            <Logo width={300} srcImage='https://storage.googleapis.com/kurashi_frontpage_files/images/logo_white.png' />
+    <div className='flex flex-col gap-10'>
+      <div className='flex flex-col w-4/5 mx-auto gap-1'>
+        <Link href='#'>
+          <div className='bg-cover bg-center relative flex flex-col items-center w-full'>
+            <Image src='https://storage.googleapis.com/kurashi_frontpage_files/images/footer-image-1.png' alt='về kurashi' width={1550} height={550} />
+            <div className='flex flex-col gap-10 text-secondary absolute top-[40%] items-center'>
+              <div className='text-4xl'>{'Hệ thống phân phối chính hãng'.toUpperCase()}</div>
+              <div>Tra cứu nơi mua hàng gần bạn</div>
+              <div className='size-10 flex flex-col items-center justify-center border-secondary rounded-full border-2'>
+                <i className='fa-solid fa-arrow-right' />
+              </div>
+            </div>
+          </div>
+        </Link>
+        <div className='flex-row flex gap-1'>
+          <Link href='/catalogs' className='w-1/2 bg-[#B3B1A1] flex flex-row items-center'>
+            <Image src='https://storage.googleapis.com/kurashi_frontpage_files/images/footer-image-2.png' width={300} height={300} alt='Về kurashi' />
+            <div className='flex flex-col gap-5 items-center self-center w-full'>
+              <div className='text-3xl text-secondary font-bold'>CATALOG SẢN PHẨM</div>
+              <div>tài liệu hỗ trợ</div>
+            </div>
+          </Link>
+          <Link href='#' className='w-1/2 bg-[#BFAF92] flex flex-row items-center'>
+            <Image src='https://storage.googleapis.com/kurashi_frontpage_files/images/footer-image-3.png' width={300} height={300} alt='Về kurashi' />
+            <div className='flex flex-col gap-5 items-center self-center w-full'>
+              <div className='text-3xl text-secondary font-bold'>TÀI KHOẢN PRO</div>
+              <div>hệ thống giao dịch số</div>
+            </div>
           </Link>
         </div>
-        <div className='flex flex-row justify-between max-md:flex-col'>
-          <div className='flex flex-row w-1/2 max-md:w-full max-md:gap-5 max-md:hidden'>
-            {footerLinks.map(footerLink =>
-              <div key={uuidv4()} className='flex flex-col grow max-md:w-1/2'>
-                <div className='flex flex-col gap-5 w-fit max-lg:gap-2 max-md:gap-8 max-md:w-full'>
-                  {footerLink.links.map(link =>
-                    <Link key={uuidv4()} href={`${link.url}`}>{t(link.label)}</Link>)}
+      </div>
+      <div className='bg-[#24292e] text-secondary'>
+        <div className='w-4/5 mx-auto border-b-2 border-secondary pb-7'>
+          <div className='mb-5 pt-10 pb-5 w-fit max-md:w-[60%] max-md:pb-0 max-md:pt-5'>
+            <Link href='/' className='w-fit'>
+              <Logo width={300} srcImage='https://storage.googleapis.com/kurashi_frontpage_files/images/logo_white.png' />
+            </Link>
+          </div>
+          <div className='flex flex-row justify-between max-md:flex-col'>
+            <div className='flex flex-row w-1/2 max-md:w-full max-md:gap-5 max-md:hidden'>
+              {footerLinks.map(footerLink =>
+                <div key={uuidv4()} className='flex flex-col grow max-md:w-1/2'>
+                  <div className='flex flex-col gap-5 w-fit max-lg:gap-2 max-md:gap-8 max-md:w-full'>
+                    {footerLink.links.map(link =>
+                      <Link key={uuidv4()} href={`${link.url}`}>{t(link.label)}</Link>)}
+                  </div>
+                </div>
+              )}
+            </div>
+            <div className='flex flex-col w-1/4 max-md:w-full max-md:justify-between max-md:mt-0 mb-10'>
+              <div className='text-2xl'>SNS</div>
+              <div className='flex flex-row gap-3 pt-5'>
+                <LogoFacebook color='#fff' />
+                <LogoYoutube />
+                <LogoZalo />
+              </div>
+            </div>
+            <div className='w-1/4 max-md:w-full max-md:justify-between'>
+              <div className='text-2xl'>ACCESS</div>
+              <div className='flex flex-col gap-2 items-start pt-5'>
+                <div>{t(address)}: {t(addressName)}</div>
+                <div className='mt-5'>
+                  <div>
+                    Văn phòng tại Nhật
+                  </div>
+                  <div>〒561-0821</div>
+                  <div>
+                    Osaka-fu, Toyonaka-shi, Hinodecho 1-12-6
+                  </div>
                 </div>
               </div>
-            )}
-          </div>
-          <div className='flex flex-col w-1/4 max-md:w-full max-md:justify-between max-md:mt-0 mb-10'>
-            <div className='text-2xl'>SNS</div>
-            <div className='flex flex-row gap-3 pt-5'>
-              <LogoFacebook color='#fff' />
-              <LogoYoutube />
-              <LogoZalo />
-            </div>
-          </div>
-          <div className='w-1/4 max-md:w-full max-md:justify-between'>
-            <div className='text-2xl'>ACCESS</div>
-            <div className='flex flex-col gap-2 items-start pt-5'>
-              <div>{t(address)}: {t(addressName)}</div>
               <div className='mt-5'>
-                <div>
-                  Văn phòng tại Nhật
-                </div>
-                <div>〒561-0821</div>
-                <div>
-                  Osaka-fu, Toyonaka-shi, Hinodecho 1-12-6
-                </div>
+                {t(tel)}: <a href='tel:+84979988617'> {phoneNumber} </a>
               </div>
-            </div>
-            <div className='mt-5'>
-              {t(tel)}: <a href='tel:+84979988617'> {phoneNumber} </a>
             </div>
           </div>
         </div>
       </div>
     </div>
-
   )
 }
 
