@@ -2,7 +2,6 @@ import React from 'react'
 import Link from 'next/link'
 import { TFunction } from 'i18next'
 import { v4 as uuidv4 } from 'uuid'
-import Image from 'next/image'
 
 import { Logo } from '@/components/logo'
 import { LogoFacebook, LogoYoutube, LogoZalo } from '@/components/svg-icons'

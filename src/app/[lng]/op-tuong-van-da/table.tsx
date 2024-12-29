@@ -1,9 +1,20 @@
 import React from 'react'
 import Image from 'next/image'
 
+import { sizes } from './const'
+
+const Size: React.FC<{ srcImage: string, content: string }> = ({ content, srcImage }) => {
+  return (
+    <div className='flex flex-col items-center justify-start'>
+      <Image src={srcImage} alt='' width={73} height={39} />
+      <div>{content}</div>
+    </div>
+  )
+}
+
 const SpecTable: React.FC = () => {
   return (
-    <div className='grid grid-cols-7 grid-rows-11 gap-4'>
+    <div className='grid grid-cols-7 grid-rows-11 gap-4 text-center'>
       <div className='row-span-2'>Quy cách</div>
       <div className='flex flex-col gap-5'>
         <div>
@@ -13,13 +24,7 @@ const SpecTable: React.FC = () => {
           Độ dày 3mm
         </div>
       </div>
-      <div>
-        <div>900x600</div>
-      </div>
-      <div>600x300</div>
-      <div>900x2400</div>
-      <div>600x(18+18)</div>
-      <div>300x(18+18)</div>
+      <>{sizes.map(x => <Size content={x.content} srcImage={x.srcImage} key={x.srcImage} />)}</>
       <div className='col-start-2'>Đóng gói</div>
       <div className='col-start-3'>4 tấm/thùng</div>
       <div className='col-start-4'>8 tấm/thùng</div>
@@ -28,12 +33,16 @@ const SpecTable: React.FC = () => {
       <div className='col-start-7'>8 thanh/thùng</div>
       <div className='row-span-9 row-start-3'>Mã màu</div>
       <div className='col-start-3 row-start-4'>15</div>
-      <div className='col-start-2 row-start-3'>16</div>
-      <div className='col-start-3 row-start-3'>17</div>
-      <div className='col-start-4 row-start-3'>18</div>
-      <div className='col-start-5 row-start-3'>19</div>
-      <div className='col-start-6 row-start-3'>20</div>
-      <div className='col-start-7 row-start-3'>21</div>
+      <div className='col-start-2 row-start-3'>
+        <Image src='https://storage.googleapis.com/kurashi_frontpage_files/images/tam-op-da/table/xam-traverine.png' alt='' width={170} height={70} />
+      </div>
+      <div className='col-start-3 row-start-3'>
+        <i className='fa-solid fa-o' />
+      </div>
+      <div className='col-start-4 row-start-3'><i className='fa-solid fa-o' /></div>
+      <div className='col-start-5 row-start-3'><i className='fa-solid fa-xmark' /></div>
+      <div className='col-start-6 row-start-3'><i className='fa-solid fa-o' /></div>
+      <div className='col-start-7 row-start-3'><i className='fa-solid fa-o' /></div>
       <div className='col-start-2 row-start-4'>22</div>
       <div className='col-start-4'>23</div>
       <div className='col-start-5'>24</div>

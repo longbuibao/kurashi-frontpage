@@ -12,6 +12,11 @@ const Characteristic = z.object({
   }).array()
 }).array()
 
+const Size = z.object({
+  srcImage: z.string().url(),
+  content: z.string()
+})
+
 export const imageUrls = [
   'https://storage.googleapis.com/kurashi_frontpage_files/images/tam-op-da/ung-dung/ung-dung-1.png',
   'https://storage.googleapis.com/kurashi_frontpage_files/images/tam-op-da/ung-dung/ung-dung-2.png',
@@ -70,4 +75,12 @@ export const colorsImage: z.infer<typeof Color> = [
   { alt: 'Đen slate', imageUrl: 'https://storage.googleapis.com/kurashi_frontpage_files/images/tam-op-da/part-color/color-6.png', colorName: 'Đen slate' },
   { alt: 'Gỉ đen', imageUrl: 'https://storage.googleapis.com/kurashi_frontpage_files/images/tam-op-da/part-color/color-7.png', colorName: 'Gỉ đen' },
   { alt: 'Đen xi măng', imageUrl: 'https://storage.googleapis.com/kurashi_frontpage_files/images/tam-op-da/part-color/color-8.png', colorName: 'Đen xi măng' }
+]
+
+export const sizes: Array<z.infer<typeof Size>> = [
+  { content: '900x600', srcImage: 'https://storage.googleapis.com/kurashi_frontpage_files/images/tam-op-da/table/900x600.png' },
+  { content: '600x300', srcImage: 'https://storage.googleapis.com/kurashi_frontpage_files/images/tam-op-da/table/600x300.png' },
+  { content: '900x2400', srcImage: 'https://storage.googleapis.com/kurashi_frontpage_files/images/tam-op-da/table/900x2400.png' },
+  { content: '600x(18+18)', srcImage: 'https://storage.googleapis.com/kurashi_frontpage_files/images/tam-op-da/table/600x18%2B18.png' },
+  { content: '300x(18+18)', srcImage: 'https://storage.googleapis.com/kurashi_frontpage_files/images/tam-op-da/table/300x18%2B18.png' }
 ]
