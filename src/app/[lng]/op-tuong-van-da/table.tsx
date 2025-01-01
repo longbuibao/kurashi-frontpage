@@ -4,7 +4,7 @@ import './table-style.css'
 
 const SpecTable: React.FC = () => {
   return (
-    <div className='flex flex-col gap-10'>
+    <div className='flex flex-col gap-5'>
       <table>
         <thead>
           <tr>

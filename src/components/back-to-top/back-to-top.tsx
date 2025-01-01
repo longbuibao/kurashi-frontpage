@@ -30,7 +30,7 @@ const BackToTopButton = (): React.ReactElement => {
       ? (
         <button
           onClick={scrollToTop}
-          className='fixed size-16 max-md:size-10 z-10 bottom-4 right-4 bg-main text-kurashi-bg-main rounded-full shadow-lg hover:bg-blue-600 focus:outline-none focus:ring focus:ring-blue-300'
+          className='font-bold text-2xl fixed size-16 max-md:size-10 z-10 bottom-4 right-4 bg-main text-kurashi-bg-main rounded-full shadow-lg hover:bg-blue-600 focus:outline-none focus:ring focus:ring-blue-300'
           aria-label='Back to top'
         >
           ↑

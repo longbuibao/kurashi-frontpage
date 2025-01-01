@@ -52,9 +52,9 @@ const Page: React.FC = (): React.ReactElement => {
                 <div className='text-2xl'>{'Ốp góc chuyên dụng'.toUpperCase()}</div>
                 <div className='flex flex-col gap-10'>
                   <div>Tấm ốp góc chuyên dụng, cùng màu, các góc cạnh được vát C1 tinh tế. Điều này giúp tăng chất lượng hoàn thiện tại góc nối, giảm công cắt ghép phức tạp tại góc vuông của các loại đá khác và tăng tính thẩm mỹ mối nối.</div>
-                  <div className='flex flex-row justify-between'>
-                    <Image src='https://storage.googleapis.com/kurashi_frontpage_files/images/tam-op-da/part-op-chuyen-dung/op-goc-chuyen-dung-1.png' width={550} height={550} alt='Ốp góc chuyên dụng' />
-                    <Image src='https://storage.googleapis.com/kurashi_frontpage_files/images/tam-op-da/part-op-chuyen-dung/op-goc-chuyen-dung-2.png' width={550} height={550} alt='Ốp góc chuyên dụng' />
+                  <div className='flex flex-row w-4/5 gap-16'>
+                    <Image className='w-[50%]' src='https://storage.googleapis.com/kurashi_frontpage_files/images/tam-op-da/part-op-chuyen-dung/op-goc-chuyen-dung-1.png' width={550} height={550} alt='Ốp góc chuyên dụng' />
+                    <Image className='w-[50%]' src='https://storage.googleapis.com/kurashi_frontpage_files/images/tam-op-da/part-op-chuyen-dung/op-goc-chuyen-dung-2.png' width={550} height={550} alt='Ốp góc chuyên dụng' />
                   </div>
                   <div>Ngoài ra, tại vị trí cần nối dài cũng có thể cắt vát C1 dễ dàng, đồng thời có thể dùng sơn đồng màu để hoàn thiện đơn giản.</div>
                 </div>
