@@ -93,7 +93,7 @@ const Page: React.FC = (): React.ReactElement => {
                 </div>
               </div>
             </PartObservable>
-            <PartObservable id={transKey.quyCach} setCurrentInViewDivId={setCurrentInViewDivId} threshold={0.7}>
+            <PartObservable id={transKey.quyCach} setCurrentInViewDivId={setCurrentInViewDivId} threshold={0.2}>
               <div className='my-10 flex flex-col gap-10'>
                 <div className='text-2xl'>{'Quy cách'.toUpperCase()}</div>
                 <div>Tấm ốp có các kích thước khác nhau tùy vào màu sắc bao gồm 3 khổ chính 900x600, 600x300 và 900x2400. Phần ốp góc chuyên dụng có 2 khổ 600x (18+18) và 300x (18+18).</div>

@@ -1,97 +1,97 @@
 import React from 'react'
 import Image from 'next/image'
-
-import { sizes } from './const'
-
-const Size: React.FC<{ srcImage: string, content: string }> = ({ content, srcImage }) => {
-  return (
-    <div className='flex flex-col items-center justify-start'>
-      <Image src={srcImage} alt='' width={73} height={39} />
-      <div>{content}</div>
-    </div>
-  )
-}
+import './table-style.css'
 
 const SpecTable: React.FC = () => {
   return (
-    <div className='grid grid-cols-7 grid-rows-11 gap-4 text-center'>
-      <div className='row-span-2'>Quy cách</div>
-      <div className='flex flex-col gap-5'>
-        <div>
-          Kích thước
-        </div>
-        <div className='font-bold'>
-          Độ dày 3mm
-        </div>
-      </div>
-      <>{sizes.map(x => <Size content={x.content} srcImage={x.srcImage} key={x.srcImage} />)}</>
-      <div className='col-start-2'>Đóng gói</div>
-      <div className='col-start-3'>4 tấm/thùng</div>
-      <div className='col-start-4'>8 tấm/thùng</div>
-      <div className='col-start-5'>1 tấm/thùng</div>
-      <div className='col-start-6'>4 thanh/thùng</div>
-      <div className='col-start-7'>8 thanh/thùng</div>
-      <div className='row-span-9 row-start-3'>Mã màu</div>
-      <div className='col-start-3 row-start-4'>15</div>
-      <div className='col-start-2 row-start-3'>
-        <Image src='https://storage.googleapis.com/kurashi_frontpage_files/images/tam-op-da/table/xam-traverine.png' alt='' width={170} height={70} />
-      </div>
-      <div className='col-start-3 row-start-3'>
-        <i className='fa-solid fa-o' />
-      </div>
-      <div className='col-start-4 row-start-3'><i className='fa-solid fa-o' /></div>
-      <div className='col-start-5 row-start-3'><i className='fa-solid fa-xmark' /></div>
-      <div className='col-start-6 row-start-3'><i className='fa-solid fa-o' /></div>
-      <div className='col-start-7 row-start-3'><i className='fa-solid fa-o' /></div>
-      <div className='col-start-2 row-start-4'>22</div>
-      <div className='col-start-4'>23</div>
-      <div className='col-start-5'>24</div>
-      <div className='col-start-6'>25</div>
-      <div className='col-start-7'>26</div>
-      <div className='col-start-2 row-start-5'>27</div>
-      <div className='col-start-3 row-start-5'>28</div>
-      <div className='col-start-5 row-start-5'>29</div>
-      <div className='col-start-4 row-start-5'>30</div>
-      <div className='col-start-6 row-start-5'>31</div>
-      <div className='col-start-7 row-start-5'>32</div>
-      <div className='col-start-7 row-start-6'>33</div>
-      <div className='col-start-6 row-start-6'>34</div>
-      <div className='col-start-5 row-start-6'>35</div>
-      <div className='col-start-4 row-start-6'>36</div>
-      <div className='col-start-2 row-start-6'>37</div>
-      <div className='col-start-3 row-start-6'>38</div>
-      <div className='col-start-2 row-start-7'>39</div>
-      <div className='col-start-3 row-start-7'>40</div>
-      <div className='col-start-4 row-start-7'>41</div>
-      <div className='col-start-5 row-start-7'>42</div>
-      <div className='col-start-6 row-start-7'>43</div>
-      <div className='col-start-7 row-start-7'>44</div>
-      <div className='col-start-7 row-start-8'>45</div>
-      <div className='col-start-6 row-start-8'>46</div>
-      <div className='col-start-5 row-start-8'>47</div>
-      <div className='col-start-4 row-start-8'>48</div>
-      <div className='col-start-2 row-start-8'>49</div>
-      <div className='col-start-3 row-start-8'>50</div>
-      <div className='col-start-2 row-start-9'>51</div>
-      <div className='col-start-3 row-start-9'>52</div>
-      <div className='col-start-4 row-start-9'>53</div>
-      <div className='col-start-5 row-start-9'>54</div>
-      <div className='col-start-6 row-start-9'>55</div>
-      <div className='col-start-7 row-start-9'>56</div>
-      <div className='col-start-7 row-start-10'>57</div>
-      <div className='col-start-7 row-start-11'>58</div>
-      <div className='col-start-6 row-start-11'>59</div>
-      <div className='col-start-6 row-start-10'>60</div>
-      <div className='col-start-5 row-start-10'>61</div>
-      <div className='col-start-5 row-start-11'>62</div>
-      <div className='col-start-4 row-start-11'>63</div>
-      <div className='col-start-4 row-start-10'>64</div>
-      <div className='col-start-3 row-start-10'>65</div>
-      <div className='col-start-3 row-start-11'>66</div>
-      <div className='col-start-2 row-start-11'>67</div>
-      <div className='col-start-2 row-start-10'>68</div>
-    </div>
-
+    <table>
+      <thead>
+        <tr>
+          <th rowSpan={2}>Quy cách</th>
+          <th rowSpan={1} className='text-nowrap'>Kích thước<br /><small>Độ dày 3mm</small></th>
+          <th colSpan={1}>900×600</th>
+          <th colSpan={1}>600×300</th>
+          <th>900×2400</th>
+          <th colSpan={1}>600×(18+18)</th>
+          <th colSpan={1}>300×(18+18)</th>
+        </tr>
+        <tr>
+          <th>Đóng gói</th>
+          <th>4 tấm/thùng</th>
+          <th>8 tấm/thùng</th>
+          <th>1 tấm/thùng</th>
+          <th>4 thanh/thùng</th>
+          <th>8 thanh/thùng</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td rowSpan={8}>Mã màu</td>
+          <td className='cell-image'><Image width={170} height={70} src='https://storage.googleapis.com/kurashi_frontpage_files/images/tam-op-da/table/xam-traverine.png' alt='Xám travertine' /></td>
+          <td>○</td>
+          <td>○</td>
+          <td>×</td>
+          <td>○</td>
+          <td>○</td>
+        </tr>
+        <tr>
+          <td className='cell-image'><Image width={170} height={70} src='https://storage.googleapis.com/kurashi_frontpage_files/images/tam-op-da/table/den-traverine.png' alt='Đen travertine' /></td>
+          <td>○</td>
+          <td>○</td>
+          <td>×</td>
+          <td>○</td>
+          <td>○</td>
+        </tr>
+        <tr>
+          <td className='cell-image'><Image width={170} height={70} src='https://storage.googleapis.com/kurashi_frontpage_files/images/tam-op-da/table/be-slate.png' alt='Be slate' /></td>
+          <td>○</td>
+          <td>○</td>
+          <td>○</td>
+          <td>○</td>
+          <td>○</td>
+        </tr>
+        <tr>
+          <td className='cell-image'><Image width={170} height={70} src='https://storage.googleapis.com/kurashi_frontpage_files/images/tam-op-da/table/den-slate.png' alt='Đen slate' /></td>
+          <td>○</td>
+          <td>○</td>
+          <td>○</td>
+          <td>○</td>
+          <td>○</td>
+        </tr>
+        <tr>
+          <td className='cell-image'><Image width={170} height={70} src='https://storage.googleapis.com/kurashi_frontpage_files/images/tam-op-da/table/gi-sat.png' alt='Gỉ sắt' /></td>
+          <td>×</td>
+          <td>×</td>
+          <td>○</td>
+          <td>○</td>
+          <td>×</td>
+        </tr>
+        <tr>
+          <td className='cell-image'><Image width={170} height={70} src='https://storage.googleapis.com/kurashi_frontpage_files/images/tam-op-da/table/gi-den.png' alt='Gỉ đen' /></td>
+          <td>×</td>
+          <td>×</td>
+          <td>○</td>
+          <td>○</td>
+          <td>×</td>
+        </tr>
+        <tr>
+          <td className='cell-image'><Image width={170} height={70} src='https://storage.googleapis.com/kurashi_frontpage_files/images/tam-op-da/table/xam-xi-mang.png' alt='Xám xi măng' /></td>
+          <td>○</td>
+          <td>○</td>
+          <td>○</td>
+          <td>○</td>
+          <td>×</td>
+        </tr>
+        <tr>
+          <td className='cell-image'><Image width={170} height={70} src='https://storage.googleapis.com/kurashi_frontpage_files/images/tam-op-da/table/den-xi-mang.png' alt='Đen xi măng' /></td>
+          <td>○</td>
+          <td>○</td>
+          <td>○</td>
+          <td>○</td>
+          <td>×</td>
+        </tr>
+      </tbody>
+    </table>
   )
 }
 
