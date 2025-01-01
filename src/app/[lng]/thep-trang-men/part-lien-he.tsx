@@ -22,7 +22,7 @@ const PartLienHe: React.FC<PartLienHeProps> = ({ setCurrentInViewDivId }) => {
   return (
     <div ref={ref} id={`${transKey.lienHe}`}>
       <div className='my-5 text-center w-fit text-xl'>{'Liên hệ'.toUpperCase()}</div>
-      <div>Vui lòng liên hệ để được tư vấn chi tiết <span className='text-[#6DB9CE]'><Link href='/contact'>tại đây</Link></span></div>
+      <div>Vui lòng liên hệ để được tư vấn chi tiết <span className='text-main'><Link href='/contact'>tại đây</Link></span></div>
     </div>
   )
 }

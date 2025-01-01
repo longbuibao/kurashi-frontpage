@@ -2,17 +2,14 @@
 
 import React from 'react'
 import Image from 'next/image'
-import dynamic from 'next/dynamic'
+import Link from 'next/link'
 
 import SideBar from '../thep-trang-men/side-bar'
 import * as transKey from '@/i18n/op-tuong-van-da'
 import { PartObservable } from '@/components/part-observable'
 import { EmblaCarousel } from '@/components/embla-carousel'
 import { colorsImage, characteristics, characteristic, imageUrls } from './const'
-const SpecTable = dynamic(
-  async () => await import('./table').then(module => module.default),
-  { ssr: false }
-)
+import SpecTable from './table'
 
 const Page: React.FC = (): React.ReactElement => {
   const [currentInViewDivId, setCurrentInViewDivId] = React.useState('')
@@ -93,13 +90,48 @@ const Page: React.FC = (): React.ReactElement => {
                 </div>
               </div>
             </PartObservable>
-            <PartObservable id={transKey.quyCach} setCurrentInViewDivId={setCurrentInViewDivId} threshold={0.2}>
-              <div className='my-10 flex flex-col gap-10'>
+            <PartObservable id={transKey.quyCach} setCurrentInViewDivId={setCurrentInViewDivId} threshold={0.7}>
+              <div className='flex flex-col gap-10'>
                 <div className='text-2xl'>{'Quy cách'.toUpperCase()}</div>
                 <div>Tấm ốp có các kích thước khác nhau tùy vào màu sắc bao gồm 3 khổ chính 900x600, 600x300 và 900x2400. Phần ốp góc chuyên dụng có 2 khổ 600x (18+18) và 300x (18+18).</div>
                 <SpecTable />
               </div>
             </PartObservable>
+            <PartObservable id={transKey.thongSoKiThuat} setCurrentInViewDivId={setCurrentInViewDivId} threshold={1}>
+              <div className='flex flex-col gap-10'>
+                <div className='text-2xl'>{'THÔNG SỐ KỸ THUẬT'.toUpperCase()}</div>
+                <div className='overflow-x-auto'>
+                  <table>
+                    <tbody>
+                      <tr>
+                        <td className='text-left'>Độ cứng</td>
+                        <td className='text-left'>Độ cứng bút chì 3H</td>
+                      </tr>
+                      <tr>
+                        <td className='text-left'>Chống đổi màu</td>
+                        <td className='text-left'>
+                          Kiểm nghiệm dưới tia UV trong 2500 giờ <br />
+                          Kết quả: độ đổi màu Delta E = 1.25
+                        </td>
+                      </tr>
+                      <tr>
+                        <td className='text-left'>Chống ố</td>
+                        <td className='text-left'>
+                          Mực, bụi bẩn: lau sạch bằng nước rửa chén <br />
+                          Bút lông dầu: lau sạch bằng cồn <br />
+                          Xi đánh giày: lau sạch bằng aceton
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div>Tấm ốp tường vân đá này có chức năng chống cháy với số chứng nhận NM-4238 được cấp bới Bộ đất đai, cơ sở hạ tầng và giao thông của chính phủ Nhật Bản</div>
+              </div>
+            </PartObservable>
+            <div>
+              <div className='my-5 text-center w-fit text-xl'>{'Liên hệ'.toUpperCase()}</div>
+              <div>Vui lòng liên hệ để được tư vấn chi tiết <span className='text-main'><Link href='/contact'>tại đây</Link></span></div>
+            </div>
           </div>
         </div>
       </div>
