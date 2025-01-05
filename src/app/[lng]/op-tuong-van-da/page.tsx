@@ -52,9 +52,9 @@ const Page: React.FC = (): React.ReactElement => {
                 <div className='text-2xl'>{'Ốp góc chuyên dụng'.toUpperCase()}</div>
                 <div className='flex flex-col gap-10'>
                   <div>Tấm ốp góc chuyên dụng, cùng màu, các góc cạnh được vát C1 tinh tế. Điều này giúp tăng chất lượng hoàn thiện tại góc nối, giảm công cắt ghép phức tạp tại góc vuông của các loại đá khác và tăng tính thẩm mỹ mối nối.</div>
-                  <div className='flex flex-row w-4/5 gap-16'>
-                    <Image className='w-[50%]' src='https://storage.googleapis.com/kurashi_frontpage_files/images/tam-op-da/part-op-chuyen-dung/op-goc-chuyen-dung-1.png' width={550} height={550} alt='Ốp góc chuyên dụng' />
-                    <Image className='w-[50%]' src='https://storage.googleapis.com/kurashi_frontpage_files/images/tam-op-da/part-op-chuyen-dung/op-goc-chuyen-dung-2.png' width={550} height={550} alt='Ốp góc chuyên dụng' />
+                  <div className='flex flex-row w-4/5 gap-16 max-md:flex-col max-md:mx-auto'>
+                    <Image className='w-[50%] max-md:w-full' src='https://storage.googleapis.com/kurashi_frontpage_files/images/tam-op-da/part-op-chuyen-dung/op-goc-chuyen-dung-1.png' width={550} height={550} alt='Ốp góc chuyên dụng' />
+                    <Image className='w-[50%] max-md:w-full' src='https://storage.googleapis.com/kurashi_frontpage_files/images/tam-op-da/part-op-chuyen-dung/op-goc-chuyen-dung-2.png' width={550} height={550} alt='Ốp góc chuyên dụng' />
                   </div>
                   <div>Ngoài ra, tại vị trí cần nối dài cũng có thể cắt vát C1 dễ dàng, đồng thời có thể dùng sơn đồng màu để hoàn thiện đơn giản.</div>
                 </div>
@@ -65,9 +65,9 @@ const Page: React.FC = (): React.ReactElement => {
                 <div className='text-2xl'>{'Đặc tính'.toUpperCase()}</div>
                 <div className='flex flex-col gap-10'>
                   {characteristics.map((x, i) => (
-                    <div key={x.key} className='flex flex-row justify-between'>
-                      <div className='w-[60%]'>{x.content}</div>
-                      <div className='flex flex-row gap-4'>
+                    <div key={x.key} className='flex flex-row justify-between max-md:flex-col max-md:gap-10'>
+                      <div className='w-[60%] max-md:w-full'>{x.content}</div>
+                      <div className='flex flex-row gap-4 max-md:flex-col'>
                         {x.images.map(y => <Image className='hover:scale-105 transition' src={y.src} width={400} height={400} alt={y.alt} key={y.src} />)}
                       </div>
                     </div>))}
@@ -128,7 +128,7 @@ const Page: React.FC = (): React.ReactElement => {
                 <div>Tấm ốp tường vân đá này có chức năng chống cháy với số chứng nhận NM-4238 được cấp bới Bộ đất đai, cơ sở hạ tầng và giao thông của chính phủ Nhật Bản</div>
               </div>
             </PartObservable>
-            <div>
+            <div className='max-md:mb-10'>
               <div className='my-5 text-center w-fit text-xl'>{'Liên hệ'.toUpperCase()}</div>
               <div>Vui lòng liên hệ để được tư vấn chi tiết <span className='text-main'><Link href='/contact'>tại đây</Link></span></div>
             </div>

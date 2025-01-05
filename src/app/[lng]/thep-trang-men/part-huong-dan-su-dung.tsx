@@ -27,7 +27,7 @@ const PartHuongDanSuDung: React.FC<Props> = ({ setCurrentInViewDivId }) => {
       <div className='w-60 max-md:w-[80%] max-md:mx-auto my-10'>
         <CatalogCard isShowName={false} fileSize='100kb' catalogName='Hướng dẫn sử dụng' thumbnail='https://storage.googleapis.com/kurashi_frontpage_files/phu-kien-thep-trang-men/thep-trang-men/huong-dan-su-dung/huong_dan_su_dung_thumbnail.png' pdfLink='https://storage.googleapis.com/kurashi_frontpage_files/phu-kien-thep-trang-men/thep-trang-men/huong-dan-su-dung/huong_dan_su_dung_ttm.pdf' />
       </div>
-      <div>
+      <div className='max-md:mb-10'>
         <div className='my-5 text-center w-fit text-xl'>{'Liên hệ'.toUpperCase()}</div>
         <div>Vui lòng liên hệ để được tư vấn chi tiết <span className='text-main'><Link href='/contact'>tại đây</Link></span></div>
       </div>
