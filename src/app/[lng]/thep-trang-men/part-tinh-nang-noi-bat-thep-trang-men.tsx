@@ -22,7 +22,17 @@ const PartTinhNangNoiBatThepTrangMen: React.FC<Props> = ({ setCurrentInViewDivId
   })
 
   return (
-    <div ref={ref} className='pt-10 max-md:mt-5' id={`${transKey.standoutFeatures}`}>
+    <div ref={ref} className='max-md:mt-5' id={`${transKey.standoutFeatures}`}>
+      <div className='text-3xl'>ƯU ĐIỂM NỔI BẬT</div>
+      <div className='flex flex-row gap-10 my-10 max-md:mt-10 bg-secondary p-10 max-md:p-3 max-md:flex-col max-md:items-center justify-center'>
+        <div>
+          <Image src='https://storage.googleapis.com/kurashi_frontpage_files/images/thep_trang_men_layer_without_bg.png' width={648} height={308} alt='Cấu trúc của thép tráng men' />
+        </div>
+        <div className='w-1/2 max-md:w-full max-md:p-3 max-md:mx-auto flex flex-row items-center'>
+          Thép tráng men là vật liệu gồm 6 lớp tích hợp giữa men kính và kim loại, chỉ dày 0.5mm.  Riêng lớp mặt gồm 2 lớp men kính (dual coating). Vật liệu được nung ở nhiệt độ cao, và sản xuất 100% tại Nhật Bản
+        </div>
+      </div>
+      <div className='my-10'>Nhờ cấu trúc vật liệu tích hợp giữa lõi kim loại và phủ men sứ, thép trang men có nhiều ưu điểm nổi bật hơn so với các vật liệu ốp tường khác về khả năng chống xước, chống cháy, chống ố và dễ thi công.</div>
       <div className='grid grid-cols-3 grid-rows-1 gap-20 max-md:flex max-md:flex-col max-md:gap-10 max-md:w-full'>
         <ThepTrangMenFeatureCard content={features[0].content} imgUrl={features[0].thumbnail} title={features[0].title} />
         <ThepTrangMenFeatureCard content={features[1].content} imgUrl={features[1].thumbnail} title={features[1].title} />

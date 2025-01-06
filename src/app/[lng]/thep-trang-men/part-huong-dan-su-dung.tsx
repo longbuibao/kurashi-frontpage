@@ -23,7 +23,8 @@ const PartHuongDanSuDung: React.FC<Props> = ({ setCurrentInViewDivId }) => {
   })
   return (
     <div ref={ref} id={`${transKey.huongDanSuDung}`}>
-      <div className='my-10 text-center w-fit text-xl'>{'Hướng dẫn sử dụng và vệ sinh tấm ốp'.toUpperCase()}</div>
+      <div className='my-10 text-center w-fit text-3xl'>{'HƯỚNG DẪN SỬ DỤNG VÀ VỆ SINH'.toUpperCase()}</div>
+      <div>Nếu được sử dụng và vệ sinh đúng cách như bảng hướng dẫn sử dụng dưới đây, tấm ốp tường bằng thép tráng men có thể duy trì vẻ đẹp và được sử dụng trong hàng thập kỉ.</div>
       <div className='w-60 max-md:w-[80%] max-md:mx-auto my-10'>
         <CatalogCard isShowName={false} fileSize='100kb' catalogName='Hướng dẫn sử dụng' thumbnail='https://storage.googleapis.com/kurashi_frontpage_files/phu-kien-thep-trang-men/thep-trang-men/huong-dan-su-dung/huong_dan_su_dung_thumbnail.png' pdfLink='https://storage.googleapis.com/kurashi_frontpage_files/phu-kien-thep-trang-men/thep-trang-men/huong-dan-su-dung/huong_dan_su_dung_ttm.pdf' />
       </div>

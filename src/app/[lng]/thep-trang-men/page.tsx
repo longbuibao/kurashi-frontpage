@@ -21,19 +21,19 @@ const Page: React.FC<PageParam> = ({ params: { lng } }) => {
   const sectionTitles = [transKey.thepTrangMen, transKey.standoutFeatures, transKey.application, transKey.colorAndSize, transKey.magnetAccessories, transKey.specInfo, transKey.ungDungLauDauMo, transKey.huongDanSuDung]
   return (
     <div className='w-4/5 mx-auto max-md:w-full gap-10 flex flex-col'>
-      <div className='flex flex-row gap-10 mt-10'>
-        <div className='h-10 gap-5 w-48 top-32 max-md:hidden' />
-        <div className='max-md:text-center'>
-          <div className='text-4xl mb-3 max-md:text-xl font-extralight'>{'VẬT LIỆU THÉP TRÁNG MEN'.toUpperCase()}</div>
-          <div className='font-light'>Tấm ốp bếp bền bỉ, phụ kiện nam châm đa dạng ngay trước mặt, di chuyển tự do dễ dàng</div>
-        </div>
-      </div>
+
       <div className='flex flex-row gap-10 my-10 max-md:my-0'>
-        <div className='max-md:hidden min-w-fit'>
+        <div className='max-md:hidden min-w-fit mt-10'>
           <SideBar sectionTitles={sectionTitles} currentDivId={currentInViewDivId} ns='thep-trang-men' />
         </div>
         <div className='max-md:w-4/5 max-md:mx-auto'>
           <div className='flex flex-col gap-20 max-md:gap-5'>
+            <div className='flex flex-row gap-10 mt-10'>
+              <div className='max-md:text-center'>
+                <div className='text-4xl mb-3 max-md:text-xl font-extralight'>{'TẤM ỐP TƯỜNG BẰNG THÉP TRÁNG MEN'.toUpperCase()}</div>
+                <div className='font-light'>Thép tráng men Kurashi là một loại vật liệu tiên tiến từ Nhật Bản, nổi bật với khả năng chống ố, chống xước, chống cháy và dễ thi công. Thép tráng men được ứng dụng làm tấm ốp tường trong nội thất, nhất là ốp tường bếp. Đặc biệt, thép tráng men có thể sử dụng kết hợp với phụ kiện bếp hút nam châm như kệ bếp, kệ đựng gia vị, hũ đựng gia vị và móc treo. Từ đó góp phần làm thiết kế bếp trở nên hiện đại và thông minh hơn.</div>
+              </div>
+            </div>
             <PartIntroThepTrangMen setCurrentInViewDivId={setCurrentInViewDivId} />
             <PartTinhNangNoiBatThepTrangMen setCurrentInViewDivId={setCurrentInViewDivId} />
             <PartUngDungThepTrangMen setCurrentInViewDivId={setCurrentInViewDivId} />
