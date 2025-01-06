@@ -24,16 +24,6 @@ export async function generateMetadata (): Promise<Metadata> {
   return await getMetadata(pageName, defaultTitle)
 }
 
-const AllCategories: React.FC<{ lng: string }> = async ({ lng }) => {
-  const categories = await prisma.postCategory.findMany({ where: { published: true } })
-  const { t } = await useTranslation(lng, transKey.namespace)
-  return (
-    <div className='flex flex-row gap-3 max-lg:flex-col'>
-      {categories.map(category => <div key={category.id} className='hover:cursor-pointer'><KurashiDiv>{t(category.categoryName)}</KurashiDiv></div>)}
-    </div>
-  )
-}
-
 // @ts-expect-error
 const AllBlogs: React.FC<{ lng: string, numOfBlogs: number, searchParams: PageParam['searchParams'] }> = async ({ lng, searchParams, numOfBlogs }): React.ReactElement => {
   const { t } = await useTranslation(lng, transKey.namespace)
@@ -47,7 +37,7 @@ const AllBlogs: React.FC<{ lng: string, numOfBlogs: number, searchParams: PagePa
         <div className='max-md:w-full flex flex-col max-md:flex-col max-md:gap-10'>
           <Suspense>
             <div className='flex flex-col max-md:w-full max-md:p-5'>
-              <div className='flex flex-col gap-5 mb-10'>
+              <div className='flex flex-col gap-5 mb-10 max-md:mb-5'>
                 <div className='flex-row flex gap-3 border-b-[1px] border-main pb-5'>
                   <div className='mt-auto text-xl leading-9'>KURASHI</div>
                   <div className='text-7xl text-main font-bold'>BLOG</div>
@@ -57,7 +47,7 @@ const AllBlogs: React.FC<{ lng: string, numOfBlogs: number, searchParams: PagePa
                 </p>
               </div>
             </div>
-            <div className='flex flex-row gap-5 pt-10 pb-16 items-center justify-between'>{blogs.map(x => <BlogCardHomepage blog={x} key={x.id} />)}</div>
+            <div className='flex flex-row gap-5 max-md:flex-wrap max-md:pt-0 pt-10 pb-16 items-center justify-between'>{blogs.map(x => <BlogCardHomepage blog={x} key={x.id} />)}</div>
           </Suspense>
         </div>
       </div>

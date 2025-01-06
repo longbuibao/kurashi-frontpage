@@ -38,8 +38,8 @@ const BlogRegister: React.FC = () => {
   }
 
   return (
-    <div className='flex flex-row justify-center gap-20 items-center p-2'>
-      <div className='flex flex-col gap-3 w-1/3'>
+    <div className='flex flex-row justify-center gap-20 items-center p-2 max-md:flex-col max-md:gap-10'>
+      <div className='flex flex-col gap-3 w-1/3 max-md:w-full max-md:text-center'>
         <div className='font-bold'>Đăng kí để nhận email</div>
         <div className='max-lg:text-center max-lg:my-5'>
           <div>Thông tin về công nghệ vật liệu, công nghệ gia công và kinh nghiệm thiết kế nội thất từ Nhật Bản</div>
