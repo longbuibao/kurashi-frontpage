@@ -19,7 +19,7 @@ const Page: React.FC = (): React.ReactElement => {
       <div className='flex flex-row gap-10 mt-10'>
         <div className='h-10 gap-5 w-48 top-32 max-md:hidden' />
         <div className='max-md:text-center'>
-          <div className='text-4xl mb-3 max-md:text-xl font-extralight'>{'TẤM ỐP TƯỜNG VÂN ĐÁ'.toUpperCase()}</div>
+          <div className='text-4xl mb-3 max-md:text-xl font-bold'>{'TẤM ỐP TƯỜNG VÂN ĐÁ'.toUpperCase()}</div>
           <div className='font-light'>Tấm ốp tường vân đá sang trọng, sản xuất bằng công nghệ in nhiều lớp từ Nhật Bản</div>
         </div>
       </div>
