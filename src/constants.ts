@@ -18,9 +18,9 @@ export const carouselSliderImages = [
 ]
 
 export const carouselSliderImagesMobile = [
-  'https://storage.googleapis.com/kurashi_frontpage_files/images/sliders-homepage/slider_thep_trang_men_mobile_new.webp',
-  'https://storage.googleapis.com/kurashi_frontpage_files/images/sliders-homepage/slider2mobile.webp',
-  'https://storage.googleapis.com/kurashi_frontpage_files/images/sliders-homepage/slider4mobile.webp'
+  'https://storage.googleapis.com/kurashi_frontpage_files/images/sliders-homepage/Mobile_slider_1.jpg',
+  'https://storage.googleapis.com/kurashi_frontpage_files/images/sliders-homepage/Mobile_slider_2.jpg',
+  'https://storage.googleapis.com/kurashi_frontpage_files/images/sliders-homepage/Mobile_slider_3.jpg'
 ]
 
 export const footerLinks = [{

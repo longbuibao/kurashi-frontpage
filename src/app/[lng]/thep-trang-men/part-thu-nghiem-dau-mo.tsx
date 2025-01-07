@@ -13,7 +13,7 @@ const FeatureCard: React.FC<FeatureCardProps> = ({ content, title, imageUrl }) =
   return (
     <div className='w-full'>
       <div className='text-xl mb-10 max-md:mb-5'>{title}</div>
-      <Image width={375} height={209} className='w-full' alt='chống dầu mỡ thép tráng men' src={imageUrl} />
+      <Image width={2792} height={1500} className='w-full' alt='chống dầu mỡ thép tráng men' src={imageUrl} />
       <div className='mt-10 max-md:mt-5'>{content.map(x => <div className='my-3' key={x}>{x}</div>)}</div>
     </div>
   )
