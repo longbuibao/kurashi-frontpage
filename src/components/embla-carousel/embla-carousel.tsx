@@ -32,7 +32,7 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
   return (
     <section className={className}>
       {useFlatControlButton && (
-        <div className='my-5 embla__flat-dots'>
+        <div className='my-7 embla__flat-dots'>
           {scrollSnaps.map((_, index) => (
             <FlatDotButton
               key={index}

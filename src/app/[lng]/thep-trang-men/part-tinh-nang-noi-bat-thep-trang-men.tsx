@@ -22,8 +22,8 @@ const PartTinhNangNoiBatThepTrangMen: React.FC<Props> = ({ setCurrentInViewDivId
   })
 
   return (
-    <div ref={ref} className='max-md:mt-5' id={`${transKey.standoutFeatures}`}>
-      <div className='text-3xl'>ƯU ĐIỂM NỔI BẬT</div>
+    <div ref={ref} id={`${transKey.standoutFeatures}`}>
+      <div className='text-3xl mt-10'>ƯU ĐIỂM NỔI BẬT</div>
       <div className='flex flex-row gap-10 my-10 max-md:mt-10 bg-secondary p-10 max-md:p-3 max-md:flex-col max-md:items-center justify-center'>
         <div>
           <Image src='https://storage.googleapis.com/kurashi_frontpage_files/images/thep_trang_men_layer_without_bg.png' width={648} height={308} alt='Cấu trúc của thép tráng men' />
