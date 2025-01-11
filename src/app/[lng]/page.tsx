@@ -1,5 +1,4 @@
 import React, { Suspense } from 'react'
-import { v4 as uuidv4 } from 'uuid'
 import Image from 'next/image'
 import Link from 'next/link'
 
@@ -20,7 +19,7 @@ export const metadata = {
 
 const createCarouselItemImage = (imageSrc: string, width = 1920, height = 1080): { key: string, content: React.ReactElement } => {
   return {
-    key: uuidv4(),
+    key: imageSrc,
     content: <Image src={imageSrc} width={width} height={height} alt='picture' quality={100} />
   }
 }

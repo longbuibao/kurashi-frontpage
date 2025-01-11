@@ -33,9 +33,9 @@ const Nav: FC<NavProps> = ({ links, products }) => {
             <div className='flex flex-row gap-3 text-3xl relative items-center hover:cursor-pointer max-md:px-5 max-md:py-5'>
               <div className={!isOpen ? 'header__burger max-md:mt-2' : 'header__burger is-active'} onClick={(e) => { e.stopPropagation(); setIsOpen(!isOpen) }} />
             </div>
-            <div className='absolute flex flex-col justify-center items-center pt-3 max-md:w-full w-full'>
-              <Link href='/'>
-                <div className='w-[50%] mx-auto'>
+            <div className='absolute flex flex-col justify-center items-center pt-3 w-full'>
+              <Link href='/' className='max-md:w-1/2'>
+                <div className='max-md:w-full w-1/2 mx-auto'>
                   <Logo isMxAuto width={450} height={157} />
                 </div>
               </Link>
