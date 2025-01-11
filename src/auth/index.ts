@@ -2,7 +2,7 @@ import NextAuth from 'next-auth'
 import Credentials from 'next-auth/providers/credentials'
 
 import { strictCheckString } from '@/utils'
-import bcrypt from 'bcrypt'
+import bcrypt from 'bcryptjs'
 import prisma from '@/lib/prisma'
 import { User } from '@prisma/client'
 
@@ -51,7 +51,6 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
 
         return result.isOkay && user !== null ? { ...user, id: user.userId } : null
       }
-
     })
   ],
   callbacks: {
@@ -60,6 +59,10 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
     },
     async session ({ session, user, token }) {
       return { ...token, ...user, ...session }
+    },
+    async authorized ({ request, auth }) {
+      const isLoggedIn = !((auth?.user) == null)
+      return isLoggedIn
     }
   }
 })

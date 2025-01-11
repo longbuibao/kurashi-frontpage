@@ -2,13 +2,26 @@ import { NextRequest, NextResponse } from 'next/server'
 import acceptLanguage from 'accept-language'
 import { fallbackLng, languages, cookieName } from '@/i18n/settings'
 
+import { auth } from '@/auth'
+
 acceptLanguage.languages(languages)
 
 export const config = {
   matcher: ['/((?!api|_next/static|_next/image|assets|favicon.ico|sw.js|robots.txt|sitemap.xml).*)']
 }
 
-export function middleware (req: NextRequest): NextResponse<unknown> {
+const protectedRoutes = /^\/(ja|vi|en)\/admin(?:\/[^/]+)?/
+
+export async function middleware (req: NextRequest): Promise<NextResponse<unknown>> {
+  if (protectedRoutes.test(req.nextUrl.pathname)) {
+    const isLoggedIn = await auth()
+    if (isLoggedIn !== null) {
+      return NextResponse.next()
+    }
+
+    return NextResponse.redirect(new URL('/vi/login-superuser', req.url))
+  }
+
   // let lng
   // if (req.cookies.has(cookieName)) {
   //   lng = acceptLanguage.get(req.cookies.get(cookieName)?.value)
