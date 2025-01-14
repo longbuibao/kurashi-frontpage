@@ -1,4 +1,3 @@
-'use client'
 import { useEffect, useRef, useState } from 'react'
 import * as React from 'react'
 
@@ -20,7 +19,7 @@ import {
   DROP_COMMAND,
   LexicalCommand,
   LexicalEditor,
-  createCommand
+  createCommand,
 } from 'lexical'
 
 import { Button } from '@/components/ui/button'
@@ -33,20 +32,20 @@ import {
   $createImageNode,
   $isImageNode,
   ImageNode,
-  ImagePayload
+  ImagePayload,
 } from '../nodes/image-node'
 import { CAN_USE_DOM } from '../shared/can-use-dom'
 
 export type InsertImagePayload = Readonly<ImagePayload>
 
 const getDOMSelection = (targetWindow: Window | null): Selection | null =>
-  CAN_USE_DOM ? ((targetWindow != null) || window).getSelection() : null
+  CAN_USE_DOM ? (targetWindow || window).getSelection() : null
 
 export const INSERT_IMAGE_COMMAND: LexicalCommand<InsertImagePayload> =
   createCommand('INSERT_IMAGE_COMMAND')
 
-export function InsertImageUriDialogBody ({
-  onClick
+export function InsertImageUriDialogBody({
+  onClick,
 }: {
   onClick: (payload: InsertImagePayload) => void
 }) {
@@ -56,33 +55,33 @@ export function InsertImageUriDialogBody ({
   const isDisabled = src === ''
 
   return (
-    <div className='grid gap-4 py-4'>
-      <div className='grid gap-2'>
-        <Label htmlFor='image-url'>Image URL</Label>
+    <div className="grid gap-4 py-4">
+      <div className="grid gap-2">
+        <Label htmlFor="image-url">Image URL</Label>
         <Input
-          id='image-url'
-          placeholder='i.e. https://source.unsplash.com/random'
+          id="image-url"
+          placeholder="i.e. https://source.unsplash.com/random"
           onChange={(e) => setSrc(e.target.value)}
           value={src}
-          data-test-id='image-modal-url-input'
+          data-test-id="image-modal-url-input"
         />
       </div>
-      <div className='grid gap-2'>
-        <Label htmlFor='alt-text'>Alt Text</Label>
+      <div className="grid gap-2">
+        <Label htmlFor="alt-text">Alt Text</Label>
         <Input
-          id='alt-text'
-          placeholder='Random unsplash image'
+          id="alt-text"
+          placeholder="Random unsplash image"
           onChange={(e) => setAltText(e.target.value)}
           value={altText}
-          data-test-id='image-modal-alt-text-input'
+          data-test-id="image-modal-alt-text-input"
         />
       </div>
       <DialogFooter>
         <Button
-          type='submit'
+          type="submit"
           disabled={isDisabled}
           onClick={() => onClick({ altText, src })}
-          data-test-id='image-modal-confirm-btn'
+          data-test-id="image-modal-confirm-btn"
         >
           Confirm
         </Button>
@@ -91,8 +90,8 @@ export function InsertImageUriDialogBody ({
   )
 }
 
-export function InsertImageUploadedDialogBody ({
-  onClick
+export function InsertImageUploadedDialogBody({
+  onClick,
 }: {
   onClick: (payload: InsertImagePayload) => void
 }) {
@@ -115,32 +114,32 @@ export function InsertImageUploadedDialogBody ({
   }
 
   return (
-    <div className='grid gap-4 py-4'>
-      <div className='grid gap-2'>
-        <Label htmlFor='image-upload'>Image Upload</Label>
+    <div className="grid gap-4 py-4">
+      <div className="grid gap-2">
+        <Label htmlFor="image-upload">Image Upload</Label>
         <Input
-          id='image-upload'
-          type='file'
+          id="image-upload"
+          type="file"
           onChange={(e) => loadImage(e.target.files)}
-          accept='image/*'
-          data-test-id='image-modal-file-upload'
+          accept="image/*"
+          data-test-id="image-modal-file-upload"
         />
       </div>
-      <div className='grid gap-2'>
-        <Label htmlFor='alt-text'>Alt Text</Label>
+      <div className="grid gap-2">
+        <Label htmlFor="alt-text">Alt Text</Label>
         <Input
-          id='alt-text'
-          placeholder='Descriptive alternative text'
+          id="alt-text"
+          placeholder="Descriptive alternative text"
           onChange={(e) => setAltText(e.target.value)}
           value={altText}
-          data-test-id='image-modal-alt-text-input'
+          data-test-id="image-modal-alt-text-input"
         />
       </div>
       <Button
-        type='submit'
+        type="submit"
         disabled={isDisabled}
         onClick={() => onClick({ altText, src })}
-        data-test-id='image-modal-file-upload-btn'
+        data-test-id="image-modal-file-upload-btn"
       >
         Confirm
       </Button>
@@ -148,9 +147,9 @@ export function InsertImageUploadedDialogBody ({
   )
 }
 
-export function InsertImageDialog ({
+export function InsertImageDialog({
   activeEditor,
-  onClose
+  onClose,
 }: {
   activeEditor: LexicalEditor
   onClose: () => void
@@ -174,27 +173,27 @@ export function InsertImageDialog ({
   }
 
   return (
-    <Tabs defaultValue='url'>
-      <TabsList className='w-full'>
-        <TabsTrigger value='url' className='w-full'>
+    <Tabs defaultValue="url">
+      <TabsList className="w-full">
+        <TabsTrigger value="url" className="w-full">
           URL
         </TabsTrigger>
-        <TabsTrigger value='file' className='w-full'>
+        <TabsTrigger value="file" className="w-full">
           File
         </TabsTrigger>
       </TabsList>
-      <TabsContent value='url'>
+      <TabsContent value="url">
         <InsertImageUriDialogBody onClick={onClick} />
       </TabsContent>
-      <TabsContent value='file'>
+      <TabsContent value="file">
         <InsertImageUploadedDialogBody onClick={onClick} />
       </TabsContent>
     </Tabs>
   )
 }
 
-export function ImagesPlugin ({
-  captionsEnabled
+export function ImagesPlugin({
+  captionsEnabled,
 }: {
   captionsEnabled?: boolean
 }): JSX.Element | null {
@@ -246,13 +245,13 @@ export function ImagesPlugin ({
   return null
 }
 
-function $onDragStart (event: DragEvent): boolean {
+function $onDragStart(event: DragEvent): boolean {
   const node = $getImageNodeInSelection()
-  if (node == null) {
+  if (!node) {
     return false
   }
   const dataTransfer = event.dataTransfer
-  if (dataTransfer == null) {
+  if (!dataTransfer) {
     return false
   }
   const TRANSPARENT_IMAGE =
@@ -272,18 +271,18 @@ function $onDragStart (event: DragEvent): boolean {
         maxWidth: node.__maxWidth,
         showCaption: node.__showCaption,
         src: node.__src,
-        width: node.__width
+        width: node.__width,
       },
-      type: 'image'
+      type: 'image',
     })
   )
 
   return true
 }
 
-function $onDragover (event: DragEvent): boolean {
+function $onDragover(event: DragEvent): boolean {
   const node = $getImageNodeInSelection()
-  if (node == null) {
+  if (!node) {
     return false
   }
   if (!canDropImage(event)) {
@@ -292,13 +291,13 @@ function $onDragover (event: DragEvent): boolean {
   return true
 }
 
-function $onDrop (event: DragEvent, editor: LexicalEditor): boolean {
+function $onDrop(event: DragEvent, editor: LexicalEditor): boolean {
   const node = $getImageNodeInSelection()
-  if (node == null) {
+  if (!node) {
     return false
   }
   const data = getDragImageData(event)
-  if (data == null) {
+  if (!data) {
     return false
   }
   event.preventDefault()
@@ -315,7 +314,7 @@ function $onDrop (event: DragEvent, editor: LexicalEditor): boolean {
   return true
 }
 
-function $getImageNodeInSelection (): ImageNode | null {
+function $getImageNodeInSelection(): ImageNode | null {
   const selection = $getSelection()
   if (!$isNodeSelection(selection)) {
     return null
@@ -325,7 +324,7 @@ function $getImageNodeInSelection (): ImageNode | null {
   return $isImageNode(node) ? node : null
 }
 
-function getDragImageData (event: DragEvent): null | InsertImagePayload {
+function getDragImageData(event: DragEvent): null | InsertImagePayload {
   const dragData = event.dataTransfer?.getData('application/x-lexical-drag')
   if (!dragData) {
     return null
@@ -345,18 +344,18 @@ declare global {
   }
 }
 
-function canDropImage (event: DragEvent): boolean {
+function canDropImage(event: DragEvent): boolean {
   const target = event.target
   return !!(
-    (target != null) &&
+    target &&
     target instanceof HTMLElement &&
-    (target.closest('code, span.editor-image') == null) &&
-    (target.parentElement != null) &&
-    (target.parentElement.closest('div.ContentEditable__root') != null)
+    !target.closest('code, span.editor-image') &&
+    target.parentElement &&
+    target.parentElement.closest('div.ContentEditable__root')
   )
 }
 
-function getDragSelection (event: DragEvent): Range | null | undefined {
+function getDragSelection(event: DragEvent): Range | null | undefined {
   let range
   const target = event.target as null | Element | Document
   const targetWindow =
@@ -368,11 +367,11 @@ function getDragSelection (event: DragEvent): Range | null | undefined {
   const domSelection = getDOMSelection(targetWindow)
   if (document.caretRangeFromPoint) {
     range = document.caretRangeFromPoint(event.clientX, event.clientY)
-  } else if ((event.rangeParent != null) && domSelection !== null) {
+  } else if (event.rangeParent && domSelection !== null) {
     domSelection.collapse(event.rangeParent, event.rangeOffset || 0)
     range = domSelection.getRangeAt(0)
   } else {
-    throw Error('Cannot get the selection when dragging')
+    throw Error(`Cannot get the selection when dragging`)
   }
 
   return range
