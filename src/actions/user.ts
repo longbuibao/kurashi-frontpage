@@ -1,6 +1,6 @@
 'use server'
 
-import bcrypt from 'bcryptjs'
+import bcrypt from 'bcrypt-edge'
 import * as z from 'zod'
 import { RegisterSchema } from '@/schema'
 import prisma from '@/lib/prisma'
@@ -16,7 +16,7 @@ export const createNewUser = async (values: z.infer<typeof RegisterSchema>): Pro
     return { error: 'Invalid fields!' }
   }
   const { email, password, userId, userName } = validatedFields.data
-  const hashedPassword = await bcrypt.hash(password, 10)
+  const hashedPassword = bcrypt.hashSync(password, 10)
 
   const existingUser = await prisma.user.findFirst({
     where: { OR: [{ userId }, { email }] }

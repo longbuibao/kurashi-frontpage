@@ -2,7 +2,7 @@ import NextAuth from 'next-auth'
 import Credentials from 'next-auth/providers/credentials'
 
 import { strictCheckString } from '@/utils'
-import bcrypt from 'bcryptjs'
+import bcrypt from 'bcrypt-edge'
 import prisma from '@/lib/prisma'
 import { User } from '@prisma/client'
 
@@ -20,7 +20,7 @@ const checkUserPassword = async (plainText: string, userId: string): Promise<Che
     }
   }
   const hashedPassword = user.password
-  const isOkay = await bcrypt.compare(plainText, hashedPassword)
+  const isOkay = bcrypt.compareSync(plainText, hashedPassword)
   return {
     isOkay,
     user
