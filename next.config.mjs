@@ -7,7 +7,14 @@ const nextConfig = {
         hostname: 'storage.googleapis.com',
         port: '',
         pathname: '/kurashi_frontpage_files/**'
+      },
+      {
+        protocol: 'https',
+        hostname: 'res.cloudinary.com',
+        port: '',
+        pathname: '/ench-app/**'
       }
+      // /res.cloudinary.com
     ]
   }
 }

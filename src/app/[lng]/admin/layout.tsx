@@ -10,7 +10,7 @@ interface AdminLayoutProps {
 
 const AdminLayout: React.FC<AdminLayoutProps> = ({ children, params }) => {
   return (
-    <div className='flex flex-row'>
+    <div className='flex flex-col'>
       <div className='flex flex-wrap w-[20%] justify-center items-center flex-col gap-5 ml-3'>
         {menus.map(x =>
           <div key={x.id}>
