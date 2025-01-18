@@ -113,7 +113,7 @@ const Page = async ({ params: { lng } }: PageParam): Promise<React.ReactElement>
           </div>
         </Link>
         <div className='flex-row flex gap-1 max-md:flex-col'>
-          <Link href='/catalogs' className='w-1/2 bg-[#B3B1A1] flex flex-row items-center max-md:w-full'>
+          <Link href='/catalog' className='w-1/2 bg-[#B3B1A1] flex flex-row items-center max-md:w-full'>
             <Image src='https://storage.googleapis.com/kurashi_frontpage_files/images/footer-image-2.png' width={300} height={300} alt='Về kurashi' />
             <div className='flex flex-col gap-5 items-center self-center w-full'>
               <div className='text-3xl text-secondary font-bold'>CATALOG SẢN PHẨM</div>
