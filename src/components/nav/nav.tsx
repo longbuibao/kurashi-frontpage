@@ -41,7 +41,7 @@ const Nav: FC<NavProps> = ({ links, products }) => {
               </Link>
             </div>
             <div className='max-md:hidden max-md:mr-1 max-md:px-5 flex flex-row items-center gap-10 z-10'>
-              <Link href='/phu-kien-nam-cham'>
+              <Link href='/san-pham/phu-kien-bep'>
                 <div className='flex flex-col items-center gap-1'>
                   <ShoppingCart width='25' height='25' />
                   <div className='text-xs'>Phụ kiện bếp nam châm</div>
