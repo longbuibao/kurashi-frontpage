@@ -21,7 +21,7 @@ const CategoryItem: React.FC<CategoryItemProps> = ({ name, thumbnail, numberOfPr
     ? 'border border-kurashi-border rounded-lg flex flex-row gap-5 justify-between p-2 items-center group hover:bg-main-phu-kien'
     : `border border-kurashi-border rounded-lg flex flex-row gap-5 justify-between p-2 items-center group ${noBg ? '' : 'bg-main-phu-kien'}`
   return (
-    <Link href={`/phu-kien-nam-cham/${url}`} className={className}>
+    <Link href={`/san-pham/phu-kien-bep/${url}`} className={className}>
       <div className='flex flex-row gap-3 items-center'>
         <Image src={thumbnail} alt={`Phụ kiện ${name}`} width={40} height={40} />
         <div>{name}</div>

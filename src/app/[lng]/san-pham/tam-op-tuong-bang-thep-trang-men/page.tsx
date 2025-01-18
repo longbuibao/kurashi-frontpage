@@ -2,7 +2,7 @@
 import React from 'react'
 
 import * as transKey from '@/i18n/thep-trang-men'
-import SideBar from './side-bar'
+import { SideBar } from '@/components/side-bar'
 import PartIntroThepTrangMen from './part-intro-thep-trang-men'
 import PartTinhNangNoiBatThepTrangMen from './part-tinh-nang-noi-bat-thep-trang-men'
 import PartUngDungThepTrangMen from './part-ung-dung-thep-trang-men'

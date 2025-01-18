@@ -68,7 +68,6 @@
     "i18next-browser-languagedetector": "^7.2.0",
     "i18next-resources-to-backend": "^1.2.0",
     "katex": "^0.16.19",
-    "lexical": "^0.23.1",
     "lodash-es": "^4.17.21",
     "lucide-react": "^0.471.0",
     "next": "14.1.0",

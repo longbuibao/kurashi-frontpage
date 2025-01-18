@@ -5,7 +5,7 @@ import YooptaEditor, {
   YooptaOnChangeOptions,
   PluginElementRenderProps
 } from '@yoopta/editor'
-
+import { html, markdown } from '@yoopta/exports'
 import Paragraph from '@yoopta/paragraph'
 import Blockquote from '@yoopta/blockquote'
 import Embed from '@yoopta/embed'
@@ -119,6 +119,18 @@ const BlogEditor = (): React.ReactElement => {
     setValue(newValue)
   }
 
+  const serializeHTML = (): void => {
+    const data = editor.getEditorValue()
+    const htmlString = html.serialize(editor, data)
+    console.log('html string', htmlString)
+  }
+
+  const serializeMd = (): void => {
+    const data = editor.getEditorValue()
+    const mdString = markdown.serialize(editor, data)
+    console.log('md\n', mdString)
+  }
+
   return (
     <div ref={selectionRef}>
       <YooptaEditor
@@ -132,6 +144,8 @@ const BlogEditor = (): React.ReactElement => {
         onChange={onChange}
         autoFocus
       />
+      <button onClick={serializeHTML}>Serialize from content to html</button>
+      <button onClick={serializeMd}>Serialize from content to markdown</button>
     </div>
   )
 }

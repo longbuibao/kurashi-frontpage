@@ -4,7 +4,7 @@ import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 
-import SideBar from '../thep-trang-men/side-bar'
+import { SideBar } from '@/components/side-bar'
 import * as transKey from '@/i18n/op-tuong-van-da'
 import { PartObservable } from '@/components/part-observable'
 import { EmblaCarousel } from '@/components/embla-carousel'

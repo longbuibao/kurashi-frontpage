@@ -51,7 +51,7 @@ const SanPhamPage: React.FC<SanPhamPageProps> = async ({ params }) => {
         </div>
       </div>
       <div className='w-4/5 mx-auto my-10'>
-        <Link className='w-fit' href={`/phu-kien-nam-cham/${accessoryProduct?.category?.categoryUniqueName ?? ''}`}>
+        <Link className='w-fit' href={`/san-pham/phu-kien-bep/${accessoryProduct?.category?.categoryUniqueName ?? ''}`}>
           <LeftArrow width='30' height='30' />
         </Link>
       </div>
