@@ -6,9 +6,9 @@ export const email = 'kurashi-corp@kurashi.com.vn'
 export const navItems = [
   { label: transKey.home, url: '/' },
   { label: transKey.products, url: '/products' },
-  { label: transKey.catalog, url: '/catalogs' },
-  { label: transKey.contact, url: '/contact' },
-  { label: transKey.blog, url: '/blogs' }
+  { label: transKey.catalog, url: '/catalog' },
+  { label: transKey.contact, url: '/lien-he' },
+  { label: transKey.blog, url: '/blog' }
 ]
 
 export const carouselSliderImages = [
@@ -26,12 +26,12 @@ export const carouselSliderImagesMobile = [
 export const footerLinks = [{
   label: transKey.company,
   links: [
-    { label: transKey.aboutKurashi, url: '/about' },
+    { label: transKey.aboutKurashi, url: '/ve-kurashi-corp' },
     { label: transKey.products, url: '/products' },
     { label: transKey.career, url: '#' },
-    { label: transKey.contact, url: '/contact' },
-    { label: transKey.catalog, url: '/catalogs' },
-    { label: transKey.blog, url: '/blogs' }
+    { label: transKey.contact, url: '/lien-he' },
+    { label: transKey.catalog, url: '/catalog' },
+    { label: transKey.blog, url: '/blog' }
   ]
 }, {
   label: transKey.policy,
@@ -44,9 +44,9 @@ export const footerLinks = [{
 
 export const homeLink = '/'
 
-export const defaultBlogsLink = '/blogs?blogPage='
+export const defaultBlogsLink = '/blog?blogPage='
 export const createDefaultCategoryProductsLink = (id: string): string => `/products/category/${id}?productPage=`
-export const defaultBlogViewLink = '/blogs/view/'
+export const defaultBlogViewLink = '/blog/view/'
 export const googleMapLink = 'https://maps.app.goo.gl/xqWhEEcbA6CPqFNr7'
 
 export const zaloLink = 'https://zalo.me/0979988617'
