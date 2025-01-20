@@ -28,7 +28,7 @@ const AboutKurashiCard: React.FC<AboutKurashiCardProps> = ({ lng }) => {
           <div>&nbsp;made in Japan</div>
         </div>
         <div className='w-fit mt-20 max-md:mt-10'>
-          <Link href='/about'>
+          <Link href='/ve-kurashi-corp'>
             <div className='flex flex-row items-center px-2 py-2 bg-secondary border-main hover:bg-main hover:text-secondary transition'>
               <div className='px-3'>{t(readMore)}</div>
               <div className='ml-3 inline-block'>

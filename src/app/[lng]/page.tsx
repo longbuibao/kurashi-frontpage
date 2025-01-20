@@ -57,7 +57,7 @@ const Page = async ({ params: { lng } }: PageParam): Promise<React.ReactElement>
         </div>
       </div>
       <div className='w-4/5 mx-auto mt-10'>
-        <Link href='/blogs' className='w-fit'>
+        <Link href='/blog' className='w-fit'>
           <div className='flex flex-col max-md:w-full max-md:p-5'>
             <div className='flex flex-col gap-5 mb-10'>
               <div className='flex-row flex gap-3 border-b-[1px] border-main pb-5'>
