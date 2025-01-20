@@ -30,3 +30,11 @@ export const LoginSchema = z.object({
   userId: z.string(),
   password: z.string().min(6, { message: 'Password must has minimum of six' })
 })
+
+export const CreateBlogSchema = z.object({
+  authorName: z.string({ message: 'authorName' }),
+  content: z.string({ message: 'content' }),
+  fileName: z.string({ message: 'fileName' }),
+  thumbnail: z.any({ message: 'thumbnail' }),
+  title: z.string({ message: 'title' })
+})

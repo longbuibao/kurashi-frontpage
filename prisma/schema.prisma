@@ -8,13 +8,14 @@ datasource db {
 }
 
 model User {
-  id       String  @id @default(uuid())
-  email    String  @unique
-  name     String?
-  password String  @default("")
-  posts    Post[]
-  userId   String  @unique @default("")
-  isAdmin  Boolean @default(false)
+  id           String  @id @default(uuid())
+  email        String  @unique
+  name         String?
+  password     String  @default("")
+  posts        Post[]
+  userId       String  @unique @default("")
+  isAdmin      Boolean @default(false)
+  isBlogAuthor Boolean @default(false)
 }
 
 model Catalog {
@@ -44,6 +45,8 @@ model Post {
   isTrending     Boolean       @default(false)
   summary        String        @default("Post summary")
   order          Int           @default(-1)
+  fileName       String        @default("")
+  cloudUrl       String        @default("")
 }
 
 model PostCategory {
