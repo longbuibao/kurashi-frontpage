@@ -20,13 +20,13 @@ export const createBlog = async (htmlString: string, values: z.infer<typeof Crea
   const mimeType = mime.lookup(thumbnail)
   if (typeof mimeType === 'boolean') {
     return {
-      error: `Kiểm tra lại đuôi file ảnh. Chỉ hỗ trợ: ${allowedMimeType.values().toArray().join(', ') as any as string}`
+      error: `Kiểm tra lại đuôi file ảnh. Chỉ hỗ trợ: ${Array.from(allowedMimeType).join(', ') as any as string}`
     }
   }
 
   if (!allowedMimeType.has(mimeType)) {
     return {
-      error: `Kiểm tra lại đuôi file ảnh. Chỉ hỗ trợ: ${allowedMimeType.values().toArray().join(', ') as any as string}`
+      error: `Kiểm tra lại đuôi file ảnh. Chỉ hỗ trợ: ${Array.from(allowedMimeType).join(', ') as any as string}`
     }
   }
   const post = await prisma.post.findFirst({
