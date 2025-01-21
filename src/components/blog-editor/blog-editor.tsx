@@ -120,6 +120,7 @@ const MARKS = [Bold, Italic, CodeMark, Underline, Strike, Highlight]
 
 const BlogEditor: React.FC<BlogEditorProps> = ({ authors }) => {
   const [value, setValue] = useState<YooptaContentValue>({})
+  const [thumbnailFilePath, setThumbnailFilePath] = useState<string>('')
   const [error, setError] = useState<string | undefined>('')
   const [success, setSuccess] = useState<string | undefined>('')
   const [isPending, startTransition] = useTransition()
@@ -132,7 +133,14 @@ const BlogEditor: React.FC<BlogEditorProps> = ({ authors }) => {
   }
 
   const form = useForm<z.infer<typeof CreateBlogSchema>>({
-    resolver: zodResolver(CreateBlogSchema)
+    resolver: zodResolver(CreateBlogSchema),
+    defaultValues: {
+      authorName: '',
+      content: '',
+      fileName: '',
+      thumbnail: '',
+      title: ''
+    }
   })
 
   const onSubmit = (values: z.infer<typeof CreateBlogSchema>): void => {
@@ -142,13 +150,22 @@ const BlogEditor: React.FC<BlogEditorProps> = ({ authors }) => {
     setError('')
     setSuccess('')
     startTransition(() => {
-      createBlog(htmlString, values)
+      createBlog(htmlString, thumbnailFilePath, values)
         .then((data) => {
           setError(data.error)
           setSuccess(data.success)
         })
         .catch((e) => console.log(e))
     })
+  }
+
+  const onFilePathChange = (event: React.ChangeEvent<HTMLInputElement>): void => {
+    event.preventDefault()
+    const file = event.target.files
+    if (file !== null) {
+      const fileName = file[0].name
+      setThumbnailFilePath(fileName)
+    }
   }
 
   return (
@@ -184,7 +201,7 @@ const BlogEditor: React.FC<BlogEditorProps> = ({ authors }) => {
       </div>
       <div>
         <label title='Thumbnail cho blog (kích thước 300x300)'>Chọn file ảnh cho thumbnail (kích thước 300x300, GIF, JPEG, PNG, WebP)</label>
-        <input className='p-1 border-b rounded-sm border-secondary' type='file' {...form.register('thumbnail', { required: true })} />
+        <input onChange={onFilePathChange} className='p-1 border-b rounded-sm border-secondary' type='file' />
       </div>
       <button type='submit' aria-disabled={isPending} className='w-fit'>
         <div>

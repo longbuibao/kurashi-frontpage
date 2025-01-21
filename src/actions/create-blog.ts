@@ -11,12 +11,12 @@ const createBlogReturnType = z.object({
   error: z.string().optional()
 })
 
-export const createBlog = async (htmlString: string, values: z.infer<typeof CreateBlogSchema>): Promise<z.infer<typeof createBlogReturnType>> => {
+export const createBlog = async (htmlString: string, thumbnail: string, values: z.infer<typeof CreateBlogSchema>): Promise<z.infer<typeof createBlogReturnType>> => {
   const validatedFields = CreateBlogSchema.safeParse(values)
   if (!validatedFields.success) {
     return { error: 'Invalid fields!' }
   }
-  const { thumbnail, authorName, fileName, title } = validatedFields.data
+  const { authorName, fileName, title } = validatedFields.data
   const mimeType = mime.lookup(thumbnail)
   if (typeof mimeType === 'boolean') {
     return {
