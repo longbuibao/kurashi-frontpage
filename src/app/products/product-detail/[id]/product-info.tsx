@@ -4,7 +4,7 @@ import { notFound } from 'next/navigation'
 import { v4 as uuidv4 } from 'uuid'
 import { Prisma } from '@prisma/client'
 import Image from 'next/image'
-import dynamic from 'next/dynamic'
+// import dynamic from 'next/dynamic'
 
 import { KurashiDiv, KurashiLeftBorder } from '@/components/kurashi-div'
 import { useTranslation } from '@/i18n'
@@ -13,10 +13,10 @@ import { columnsKey } from '@/utils/cell-renderer-helper'
 import { tableHeaderRow } from '@/utils'
 import prisma from '@/lib/prisma'
 import { zaloLink } from '@/constants'
-const ProductSizeTable = dynamic(
-  async () => await import('@/components/product/product-size-table').then(module => module.default),
-  { ssr: false }
-)
+// const ProductSizeTable = dynamic(
+//   async () => await import('@/components/product/product-size-table').then(module => module.default),
+//   { ssr: false }
+// )
 
 interface ProductInfoProps {
   lng: string
@@ -115,7 +115,7 @@ const VariantTable: React.FC<VariantsTableProps> = async ({ variant, lng, curren
       </div>
       <div className='flex flex-col items-center justify-center flex-1 max-lg:my-5 w-full mx-auto'>
         <div className='w-full mx-auto flex flex-col gap-10'>
-          <ProductSizeTable lng={lng} columns={columns} toRender={toRender} />
+          {/* <ProductSizeTable lng={lng} columns={columns} toRender={toRender} /> */}
         </div>
       </div>
     </div>
@@ -325,7 +325,7 @@ const ProductInfo: React.FC<ProductInfoProps> = async ({ id, lng }) => {
             ? <div />
             : (
               <div className='w-full my-5'>
-                <ProductSizeTable lng={lng} columns={columns} toRender={toRender} />
+                {/* <ProductSizeTable lng={lng} columns={columns} toRender={toRender} /> */}
               </div>)}
           <div>
             {productInfo.ProductVariants.length > 0 && (
