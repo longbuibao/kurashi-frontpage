@@ -1,9 +1,5 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  experimental: {
-    staticGenerationMaxConcurrency: 2,
-    staticGenerationMinPagesPerWorker: 10
-  },
   images: {
     remotePatterns: [
       {
