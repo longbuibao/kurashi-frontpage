@@ -5,7 +5,7 @@ export const email = 'kurashi-corp@kurashi.com.vn'
 
 export const navItems = [
   { label: transKey.home, url: '/' },
-  { label: transKey.products, url: '/products' },
+  { label: transKey.products, url: '/san-pham' },
   { label: transKey.catalog, url: '/catalog' },
   { label: transKey.contact, url: '/lien-he' },
   { label: transKey.blog, url: '/blog' }
@@ -27,7 +27,7 @@ export const footerLinks = [{
   label: transKey.company,
   links: [
     { label: transKey.aboutKurashi, url: '/ve-kurashi-corp' },
-    { label: transKey.products, url: '/products' },
+    { label: transKey.products, url: '/san-pham' },
     { label: transKey.career, url: '#' },
     { label: transKey.contact, url: '/lien-he' },
     { label: transKey.catalog, url: '/catalog' },
@@ -36,9 +36,9 @@ export const footerLinks = [{
 }, {
   label: transKey.policy,
   links: [
-    { label: transKey.warrantyPolicy, url: '/warranty-policy' },
-    { label: transKey.yourInfo, url: '/policy' },
-    { label: transKey.deliveryPolicy, url: '/delivery-policy' }
+    { label: transKey.warrantyPolicy, url: '/chinh-sach-bao-hanh' },
+    { label: transKey.yourInfo, url: '/chinh-sach-bao-mat-thong-tin' },
+    { label: transKey.deliveryPolicy, url: '/chinh-sach-giao-hang' }
   ]
 }]
 
