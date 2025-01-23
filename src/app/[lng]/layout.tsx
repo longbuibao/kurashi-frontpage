@@ -1,6 +1,8 @@
 import './globals.css'
 import './embla.css'
 
+import { GoogleTagManager } from '@next/third-parties/google'
+
 import { dir } from 'i18next'
 import { Nav } from '@/components/nav'
 import { Footer } from '@/components/footer'
@@ -36,6 +38,7 @@ const RootLayout: React.FC<RootProps> = async ({ children, params }): Promise<Re
 
   return (
     <html lang={params.lng} dir={dir(params.lng)}>
+      <GoogleTagManager gtmId='G-XCHH0MSJ6B' />
       <head>
         <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css' crossOrigin='anonymous' />
       </head>
