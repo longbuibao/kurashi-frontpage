@@ -11,10 +11,7 @@ import { phoneNumber, googleMapLink, zaloLink } from '@/constants'
 import { getMetadata } from '@/utils'
 import { ContactRegister } from '@/components/contact-register'
 import ContactPageSkeleton from './skeleton'
-
-interface ContactPageParam {
-  params: { lng: string }
-}
+import { lng } from '@/app/const'
 
 export async function generateMetadata (): Promise<Metadata> {
   const defaultTitle = 'Liên hệ'
@@ -22,7 +19,7 @@ export async function generateMetadata (): Promise<Metadata> {
   return await getMetadata(pageName, defaultTitle)
 }
 
-const ContactPage: React.FC<ContactPageParam> = async ({ params: { lng } }: ContactPageParam) => {
+const ContactPage: React.FC = async () => {
   const { t } = await useTranslation(lng, contactPageNs)
   return (
     <div className='w-4/5 mx-auto flex flex-row gap-5 max-lg:flex-col justify-center mb-10 my-10'>
@@ -76,10 +73,10 @@ const ContactPage: React.FC<ContactPageParam> = async ({ params: { lng } }: Cont
   )
 }
 
-const SuspendContactPage: React.FC<ContactPageParam> = ({ params }) => {
+const SuspendContactPage: React.FC = () => {
   return (
     <Suspense fallback={<ContactPageSkeleton />}>
-      <ContactPage params={params} />
+      <ContactPage />
     </Suspense>
   )
 }

@@ -5,10 +5,9 @@ import { menus } from './const'
 
 interface AdminLayoutProps {
   children: React.ReactNode
-  params: { lng: string }
 }
 
-const AdminLayout: React.FC<AdminLayoutProps> = ({ children, params }) => {
+const AdminLayout: React.FC<AdminLayoutProps> = ({ children }) => {
   return (
     <div className='flex flex-col'>
       <div className='flex flex-wrap w-[20%] justify-center items-center flex-col gap-5 ml-3'>

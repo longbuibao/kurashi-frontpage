@@ -8,10 +8,7 @@ import { AboutKurashiCard } from '@/components/about-kurashi-card'
 import { KurashiCategories, KurashiCategoriesSkeleton } from '@/components/kurashi-categories'
 import { carouselSliderImages, carouselSliderImagesMobile } from '@/constants'
 import EmblaCarousel from '@/components/embla-carousel/embla-carousel'
-
-interface PageParam {
-  params: { lng: string }
-}
+import { lng } from '@/app/const'
 
 export const metadata = {
   title: 'Kurashi Corp'
@@ -24,7 +21,7 @@ const createCarouselItemImage = (imageSrc: string, width = 1920, height = 1080):
   }
 }
 
-const Page = async ({ params: { lng } }: PageParam): Promise<React.ReactElement> => {
+const Page = async (): Promise<React.ReactElement> => {
   const carouselSliders = carouselSliderImages.map(x => createCarouselItemImage(x))
   const carouselSlidersMobile = carouselSliderImagesMobile.map(x => createCarouselItemImage(x, 4500, 5620))
   const blogs = await prisma.post.findMany({ take: 4, where: { published: true } })

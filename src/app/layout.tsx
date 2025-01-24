@@ -12,6 +12,7 @@ import ProgressBarProviders from '@/components/progress-bar-provider'
 import prisma from '@/lib/prisma'
 import { Inter } from 'next/font/google'
 import { BackToTopButton } from '@/components/back-to-top'
+import { lng } from '@/app/const'
 
 export const metadata = {
   title: 'Trang chủ Kurashi'
@@ -19,13 +20,12 @@ export const metadata = {
 
 interface RootProps {
   children: React.ReactNode
-  params: { lng: string }
 }
 
 const inter = Inter({ subsets: ['latin'], weight: '200' })
 
-const RootLayout: React.FC<RootProps> = async ({ children, params }): Promise<React.ReactElement> => {
-  const { t } = await useTranslation(params.lng)
+const RootLayout: React.FC<RootProps> = async ({ children }): Promise<React.ReactElement> => {
+  const { t } = await useTranslation(lng)
   const productsRaw = await prisma.product.findMany({
     take: 3,
     where: { isAvailable: true },
@@ -37,7 +37,7 @@ const RootLayout: React.FC<RootProps> = async ({ children, params }): Promise<Re
   })
 
   return (
-    <html lang={params.lng} dir={dir(params.lng)}>
+    <html lang={lng} dir={dir(lng)}>
       <GoogleTagManager gtmId='G-XCHH0MSJ6B' />
       <head>
         <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css' crossOrigin='anonymous' />

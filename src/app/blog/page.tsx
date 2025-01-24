@@ -3,7 +3,6 @@ import { notFound } from 'next/navigation'
 import { Metadata } from 'next'
 
 import { BlogCardHomepage } from '@/components/blog-card'
-import { KurashiDiv } from '@/components/kurashi-div'
 import * as transKey from '@/i18n/blog-page-trans-key'
 import { BlogRegister } from '@/components/blog-register'
 import { PaginationBar } from '@/components/pagination-bar'
@@ -12,9 +11,9 @@ import prisma from '@/lib/prisma'
 import { useTranslation } from '@/i18n'
 import { defaultBlogsLink } from '@/constants'
 import { getMetadata } from '@/utils'
+import { lng } from '@/app/const'
 
 interface PageParam {
-  params: { lng: string }
   searchParams?: { [key: string]: string }
 }
 
@@ -66,7 +65,7 @@ const AllBlogs: React.FC<{ lng: string, numOfBlogs: number, searchParams: PagePa
   )
 }
 
-const BlogsPage: React.FC<PageParam> = async ({ params: { lng }, searchParams }: PageParam) => {
+const BlogsPage: React.FC<PageParam> = async ({ searchParams }: PageParam) => {
   return (
     <div className='mx-auto mb-10'>
       <div className='flex flex-col gap-5'>

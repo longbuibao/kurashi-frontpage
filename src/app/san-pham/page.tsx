@@ -8,10 +8,7 @@ import { getMetadata } from '@/utils'
 import { ProductCard } from '@/components/product'
 import { v4 as uuidv4 } from 'uuid'
 import AllProductsSkeleton from './skeleton'
-
-interface PageParam {
-  params: { lng: string }
-}
+import { lng } from '@/app/const'
 
 export async function generateMetadata (): Promise<Metadata> {
   const defaultTitle = 'Tất cả sản phẩm'
@@ -19,7 +16,7 @@ export async function generateMetadata (): Promise<Metadata> {
   return await getMetadata(pageName, defaultTitle)
 }
 
-const AllProducts: React.FC<{ lng: string }> = async ({ lng }) => {
+const AllProducts: React.FC<{ lng: string }> = async () => {
   const products = await prisma.product.findMany({
     where: { isAvailable: true },
     take: 20,
@@ -61,7 +58,7 @@ const AllProducts: React.FC<{ lng: string }> = async ({ lng }) => {
   )
 }
 
-const ProductPage: React.FC<PageParam> = async ({ params: { lng } }: PageParam) => {
+const ProductPage: React.FC = async () => {
   return (
     <Suspense fallback={<AllProductsSkeleton />}>
       <AllProducts lng={lng} />

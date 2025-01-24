@@ -6,10 +6,6 @@ import CatalogsSkeleton from './skeleton'
 import { getMetadata } from '@/utils'
 import { Metadata } from 'next'
 
-interface PageParam {
-  params: { lng: string }
-}
-
 export async function generateMetadata (): Promise<Metadata> {
   const defaultTitle = 'Catalogs'
   const pageName = 'catalogs-page'
@@ -32,7 +28,7 @@ const GetCatalogs: React.FC = async () => {
   )
 }
 
-const Catalog: React.FC<PageParam> = async ({ params: { lng } }) => {
+const Catalog: React.FC = async () => {
   return (
     <div className='w-4/5 mx-auto my-10'>
       <div className='flex flex-row gap-10 justify-center my-10 max-md:my-0'>

@@ -1,7 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 
-import { LinkToOnlineStoreCard, LinkToOnlineStoreCardProps } from '@/app/[lng]/san-pham/phu-kien-bep/link-to-online-store'
+import { LinkToOnlineStoreCard, LinkToOnlineStoreCardProps } from '@/app/san-pham/phu-kien-bep/link-to-online-store'
 
 interface OnlineStoreProps {
   isCenter?: boolean

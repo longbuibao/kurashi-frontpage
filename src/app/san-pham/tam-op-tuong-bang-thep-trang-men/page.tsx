@@ -12,11 +12,7 @@ import PartSpecTable from './part-spect-table'
 import PartThuNghiemDauMo from './part-thu-nghiem-dau-mo'
 import PartHuongDanSuDung from './part-huong-dan-su-dung'
 
-interface PageParam {
-  params: { lng: string }
-}
-
-const Page: React.FC<PageParam> = ({ params: { lng } }) => {
+const Page: React.FC = () => {
   const [currentInViewDivId, setCurrentInViewDivId] = React.useState('')
   const sectionTitles = [transKey.thepTrangMen, transKey.standoutFeatures, transKey.application, transKey.colorAndSize, transKey.magnetAccessories, transKey.specInfo, transKey.ungDungLauDauMo, transKey.huongDanSuDung]
   return (
