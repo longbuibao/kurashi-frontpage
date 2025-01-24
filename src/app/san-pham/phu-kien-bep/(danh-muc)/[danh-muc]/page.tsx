@@ -4,10 +4,11 @@ import prisma from '@/lib/prisma'
 import { ProductAccessoryCard } from '@/components/product'
 
 interface PageParam {
-  params: { 'danh-muc': string }
+  params: Promise<{ 'danh-muc': string }>
 }
 
-const CategoryPhuKienPage: React.FC<PageParam> = async ({ params }) => {
+const CategoryPhuKienPage: React.FC<PageParam> = async props => {
+  const params = await props.params
   const allProducts = await prisma.product.findMany({
     where: {
       isAccessoryProduct: true,

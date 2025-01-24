@@ -9,10 +9,16 @@ import { getCategories } from '../../get-categories'
 
 interface PhuKienNamChamCategoryLayoutProps {
   children: React.ReactNode
-  params: { 'danh-muc': string }
+  params: Promise<{ 'danh-muc': string }>
 }
 
-const PhuKienNamChamLayout: React.FC<PhuKienNamChamCategoryLayoutProps> = async ({ params, children }) => {
+const PhuKienNamChamLayout: React.FC<PhuKienNamChamCategoryLayoutProps> = async props => {
+  const params = await props.params
+
+  const {
+    children
+  } = props
+
   const categoryToSearch = params['danh-muc']
   const categories = await getCategories()
 

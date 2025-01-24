@@ -10,7 +10,7 @@ import { ProductAccessoryCard } from '@/components/product'
 import { formatCurrency } from '@/utils'
 
 interface SanPhamPageProps {
-  params: { 'san-pham': string }
+  params: Promise<{ 'san-pham': string }>
 }
 
 const RelatedProduct: React.FC = async () => {
@@ -18,7 +18,8 @@ const RelatedProduct: React.FC = async () => {
   return <div className='grid grid-rows-1 grid-cols-5 gap-20 max-md:grid-cols-2 max-md:gap-5'>{products.map(x => <ProductAccessoryCard product={x} key={x.id} />)}</div>
 }
 
-const SanPhamPage: React.FC<SanPhamPageProps> = async ({ params }) => {
+const SanPhamPage: React.FC<SanPhamPageProps> = async props => {
+  const params = await props.params
   const productName = params['san-pham']
   const accessoryProduct = await prisma.product.findUnique({
     where: {

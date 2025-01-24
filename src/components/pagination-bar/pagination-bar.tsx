@@ -29,24 +29,24 @@ const PaginationBar: React.FC<PaginationBarProps> = ({ maxPages, baseLink, lng }
       <div
         key={number} className={(number === currentPage ? 'round-effect active' : 'round-effect')}
         onClick={() => {
-          router.push(`/${lng}${baseLink}${number}`)
+          // router.push(`/${lng}${baseLink}${number}`)
           setCurrentPage(number)
         }}
       >
-        <Link href={`${baseLink}${number}`}>{number + 1}</Link>
+        {/* <Link href={`${baseLink}${number}`}>{number + 1}</Link> */}
       </div>
     )
   }
   const nextPage = (): void => {
     if (currentPage < maxPages) {
-      router.push(`/${lng}${baseLink}${currentPage + 1}`)
+      // router.push(`/${lng}${baseLink}${currentPage + 1}`)
       setCurrentPage(currentPage + 1)
     }
   }
 
   const prevPage = (): void => {
     if (currentPage >= 1) {
-      router.push(`/${lng}${baseLink}${currentPage - 1}`)
+      // router.push(`/${lng}${baseLink}${currentPage - 1}`)
       setCurrentPage(currentPage - 1)
     }
   }

@@ -5,10 +5,10 @@ import ShopByCategory from '../../../shop-by-category'
 
 interface SanPhamLayoutProps {
   children: React.ReactNode
-  params: { 'san-pham': string }
+  params: Promise<{ 'san-pham': string }>
 }
 
-const SanPhamLayout: React.FC<SanPhamLayoutProps> = async ({ params, children }) => {
+const SanPhamLayout: React.FC<SanPhamLayoutProps> = async ({ children }) => {
   const categories = await getCategories()
   return (
     <Suspense>
