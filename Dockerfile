@@ -15,4 +15,4 @@ RUN wget https://dl.google.com/cloudsql/cloud_sql_proxy.linux.amd64 -O /usr/loca
 	chmod +x /usr/local/bin/cloud_sql_proxy
 
 # Entrypoint script to start Cloud SQL Proxy and your application
-ENTRYPOINT ["sh", "-c", "cloud_sql_proxy -instances=kurashi-frontpage-419616:us-central1:kurashi-production-db & npm run db:deploy && npm run start"]
+ENTRYPOINT ["sh", "-c", "cloud_sql_proxy -instances=kurashi-frontpage-419616:us-central1:kurashi-production-db & npm run db:deploy && npm run build && npm run start"]
