@@ -22,9 +22,8 @@ interface ProductAccessoryCardProps {
 
 const ProductAccessoryCard: React.FC<ProductAccessoryCardProps> = ({ product: x }) => {
   const productUniqueName = x.uniqueName === null || x.uniqueName === undefined ? '#' : x.uniqueName
-  const productUrl = `/san-pham/phu-kien-bep/san-pham-phu-kien-bep/${productUniqueName}`
   return (
-    <Link href={productUrl} key={x.id} className='border border-kurashi-border rounded-lg w-full shadow-lg group hover:bg-main-phu-kien'>
+    <Link href={`/san-pham/phu-kien-bep/san-pham-phu-kien-bep/${productUniqueName}`} key={x.id} className='border border-kurashi-border rounded-lg w-full shadow-lg group hover:bg-main-phu-kien'>
       <div className='mx-auto p-3'>
         <Image className='rounded-xl' src={x.thumbnail ?? '#'} width={1080} height={1080} alt='Phụ kiện nam châm' />
       </div>

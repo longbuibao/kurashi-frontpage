@@ -9,6 +9,7 @@ import { ProductCard } from '@/components/product'
 import { Product } from '@prisma/client'
 import { LogoFacebook, LogoYoutube, LogoZalo, ShoppingCart } from '@/components/svg-icons'
 import { useHideOnScrollDown } from './useHideOnScroll'
+import { UrlObject } from 'url'
 
 interface LinkItem {
   url: string
@@ -60,7 +61,7 @@ const Nav: FC<NavProps> = ({ links, products }) => {
                   return (
                     <div key={uuidv4()} className='w-fit text-4xl max-md:w-full text-center max-md:mt-8' onClick={(e) => { e.stopPropagation(); setIsOpen(!isOpen) }}>
                       <KurashiLink>
-                        <Link href={`${link.url}`}>{link.label}</Link>
+                        <Link href={link.url as any as UrlObject}>{link.label}</Link>
                       </KurashiLink>
                     </div>
                   )

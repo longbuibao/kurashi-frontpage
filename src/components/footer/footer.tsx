@@ -7,6 +7,7 @@ import { Logo } from '@/components/logo'
 import { LogoFacebook, LogoYoutube, LogoZalo } from '@/components/svg-icons'
 import { footerLinks, phoneNumber } from '@/constants'
 import { address, addressName, tel } from '@/i18n/translation-key'
+import { UrlObject } from 'url'
 
 interface FooterProps {
   t: TFunction<any, any>
@@ -28,7 +29,7 @@ const Footer: React.FC<FooterProps> = ({ t }) => {
                 <div key={uuidv4()} className='flex flex-col grow max-md:w-1/2'>
                   <div className='flex flex-col gap-5 w-fit max-lg:gap-2 max-md:gap-8 max-md:w-full'>
                     {footerLink.links.map(link =>
-                      <Link key={uuidv4()} href={`${link.url}`}>{t(link.label)}</Link>)}
+                      <Link key={uuidv4()} href={link.url as any as UrlObject}>{t(link.label)}</Link>)}
                   </div>
                 </div>
               )}

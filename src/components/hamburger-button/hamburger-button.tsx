@@ -1,10 +1,5 @@
 'use client'
 import React, { useState } from 'react'
-import Link from 'next/link'
-import { v4 as uuidv4 } from 'uuid'
-
-import { KurashiLink, LinkWithMainBg } from '@/components/kurashi-link'
-import { zaloLink } from '@/constants'
 
 interface LinkItem {
   url: string

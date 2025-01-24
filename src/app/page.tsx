@@ -72,7 +72,7 @@ const Page = async (): Promise<React.ReactElement> => {
         </div>
       </div>
       <div className='hidden max-md:block max-md:mt-10 text-secondary'>
-        <Link href='/catalogs' className='w-1/2 bg-[#BFAF92] flex flex-row items-center max-md:w-full p-5'>
+        <Link href='#' className='w-1/2 bg-[#BFAF92] flex flex-row items-center max-md:w-full p-5'>
           <div className='flex flex-col gap-5 items-center self-center w-full'>
             <div className='font-bold'>{'Hệ thống phân phối chính hãng'.toUpperCase()}</div>
             <div>Tra cứu nơi mua hàng gần bạn</div>
@@ -81,7 +81,7 @@ const Page = async (): Promise<React.ReactElement> => {
             </div>
           </div>
         </Link>
-        <Link href='/catalogs' className='w-1/2 bg-[#B3B1A1] flex flex-row items-center max-md:w-full'>
+        <Link href='#' className='w-1/2 bg-[#B3B1A1] flex flex-row items-center max-md:w-full'>
           <Image className='w-full' src='https://storage.googleapis.com/kurashi_frontpage_files/images/footer-image-2.png' width={300} height={300} alt='Về kurashi' />
           <div className='flex flex-col gap-5 items-center self-center w-full'>
             <div className='text-secondary font-bold'>CATALOG SẢN PHẨM</div>

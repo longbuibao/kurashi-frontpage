@@ -130,7 +130,7 @@ const Page: React.FC = (): React.ReactElement => {
             </PartObservable>
             <div className='max-md:mb-10'>
               <div className='my-5 text-center w-fit text-xl'>{'Liên hệ'.toUpperCase()}</div>
-              <div>Vui lòng liên hệ để được tư vấn chi tiết <span className='text-main'><Link href='/contact'>tại đây</Link></span></div>
+              <div>Vui lòng liên hệ để được tư vấn chi tiết <span className='text-main'><Link href='/lien-he'>tại đây</Link></span></div>
             </div>
           </div>
         </div>

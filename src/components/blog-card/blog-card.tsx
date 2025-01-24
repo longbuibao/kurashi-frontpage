@@ -1,6 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
+import { UrlObject } from 'url'
 
 interface BlogCardProps {
   imgSrc: string
@@ -13,7 +14,7 @@ interface BlogCardProps {
 const BlogCard: React.FC<BlogCardProps> = ({ imgSrc, summary, title, dateUpload, url }) => {
   return (
     <div className='h-full flex flex-col shadow hover:shadow-xl relative blog-card--hover'>
-      <Link href={url}>
+      <Link href={url as any as UrlObject}>
         <div className='flex flex-row'>
           <Image width={300} height={207} src={imgSrc} alt='Blog Image' className='w-full h-full mb-auto' />
         </div>

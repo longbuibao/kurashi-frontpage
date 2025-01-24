@@ -16,6 +16,9 @@ const nextConfig = {
       }
       // /res.cloudinary.com
     ]
+  },
+  experimental: {
+    typedRoutes: true
   }
 }
 
