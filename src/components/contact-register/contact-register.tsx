@@ -5,6 +5,7 @@ import { ClipLoader } from 'react-spinners'
 import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import * as z from 'zod'
+import { sendGAEvent } from '@next/third-parties/google'
 
 import { ContactRegisterSchema } from '@/schema'
 import { contactRegister } from '@/actions/contact-register'
@@ -26,6 +27,7 @@ const ContactRegister: React.FC = () => {
   })
 
   const onSubmit = (values: z.infer<typeof ContactRegisterSchema>): void => {
+    sendGAEvent('event', 'user register contact', { ...values })
     setError('')
     setSuccess('')
     startTransition(() => {
