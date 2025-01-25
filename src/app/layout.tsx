@@ -38,8 +38,8 @@ const RootLayout: React.FC<RootProps> = async ({ children }): Promise<React.Reac
 
   return (
     <html lang={lng} dir={dir(lng)}>
-      <GoogleTagManager gtmId='G-XCHH0MSJ6B' />
       <head>
+        <GoogleTagManager gtmId='G-XCHH0MSJ6B' />
         <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css' crossOrigin='anonymous' />
       </head>
       <body className={inter.className}>
