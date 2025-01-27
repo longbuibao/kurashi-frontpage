@@ -7,6 +7,11 @@ interface PageParam {
   params: Promise<{ 'danh-muc': string }>
 }
 
+export async function generateStaticParams (): Promise<any> {
+  const categories = await prisma.category.findMany({ where: { isCategoryOfKitchenAccessories: true } })
+  return categories.map(x => { return { 'danh-muc': x.categoryUniqueName } })
+}
+
 const CategoryPhuKienPage: React.FC<PageParam> = async props => {
   const params = await props.params
   const allProducts = await prisma.product.findMany({

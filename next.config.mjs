@@ -18,7 +18,8 @@ const nextConfig = {
     ]
   },
   experimental: {
-    typedRoutes: true
+    typedRoutes: true,
+    staticGenerationMaxConcurrency: 1
   }
 }
 

@@ -3,6 +3,10 @@ import { BlogEditor } from '@/components/blog-editor'
 
 import prisma from '@/lib/prisma'
 
+export async function generateStaticParams (): Promise<any> {
+  return true
+}
+
 const Page: React.FC = async () => {
   const authors = await prisma.user.findMany({ where: { isBlogAuthor: true } })
   return (
