@@ -1,7 +1,7 @@
 import './globals.css'
 import './embla.css'
 
-import { GoogleTagManager } from '@next/third-parties/google'
+import { GoogleAnalytics } from '@next/third-parties/google'
 
 import { dir } from 'i18next'
 import { Nav } from '@/components/nav'
@@ -39,7 +39,7 @@ const RootLayout: React.FC<RootProps> = async ({ children }): Promise<React.Reac
   return (
     <html lang={lng} dir={dir(lng)}>
       <head>
-        <GoogleTagManager gtmId='G-XCHH0MSJ6B' />
+        <GoogleAnalytics gaId='G-XCHH0MSJ6B' />
         <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css' crossOrigin='anonymous' />
       </head>
       <body className={inter.className}>
