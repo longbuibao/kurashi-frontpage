@@ -13,6 +13,11 @@ interface SanPhamPageProps {
   params: Promise<{ 'san-pham': string }>
 }
 
+export async function generateStaticParams (): Promise<any> {
+  const products = await prisma.product.findMany({ where: { isAccessoryProduct: true } })
+  return products.map(x => { return { 'san-pham': x.uniqueName } })
+}
+
 const RelatedProduct: React.FC = async () => {
   const products = await prisma.product.findMany({ take: 5, where: { isAccessoryProduct: true } })
   return <div className='grid grid-rows-1 grid-cols-5 gap-20 max-md:grid-cols-2 max-md:gap-5'>{products.map(x => <ProductAccessoryCard product={x} key={x.id} />)}</div>
