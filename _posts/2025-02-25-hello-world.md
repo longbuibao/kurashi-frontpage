@@ -1,13 +1,10 @@
 ---
 title: hello world
 excerpt: hello world
-coverImage: /assets/2025-01-11_16-43.png
 date: 2025-02-25T21:53:00.000Z
 author:
   name: anh long
   picture: /assets/2025-01-11_16-43.png
-ogImage:
-  url: /assets/Screenshot 2025-02-15 151515.png
 ---
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent elementum facilisis leo vel fringilla est ullamcorper eget. At imperdiet dui accumsan sit amet nulla facilities morbi tempus. Praesent elementum facilisis leo vel fringilla. Congue mauris rhoncus aenean vel. Egestas sed tempus urna et pharetra pharetra massa massa ultricies.
 
