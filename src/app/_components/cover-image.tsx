@@ -1,6 +1,7 @@
 import cn from 'classnames'
 import Link from 'next/link'
 import Image from 'next/image'
+import { UrlObject } from 'url'
 
 interface Props {
   title: string
@@ -22,9 +23,9 @@ const CoverImage = ({ title, src, slug }: Props): React.ReactElement => {
   )
   return (
     <div className='sm:mx-0'>
-      {slug
+      {slug !== null || slug !== undefined
         ? (
-          <Link href={`/posts/${slug}`} aria-label={title}>
+          <Link href={`/posts/${slug ?? ''}` as any as UrlObject} aria-label={title}>
             {image}
           </Link>
           )
