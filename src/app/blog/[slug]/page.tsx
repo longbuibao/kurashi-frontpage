@@ -1,7 +1,6 @@
 import { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import { getAllPosts, getPostBySlug } from '@/lib/api'
-import markdownToHtml from '@/lib/markdownToHtml'
 import Container from '@/app/_components/container'
 import { PostBody } from '@/app/_components/post-body'
 import { PostHeader } from '@/app/_components/post-header'
@@ -10,11 +9,9 @@ export default async function Post (props: Params): Promise<React.ReactElement> 
   const params = await props.params
   const post = getPostBySlug(params.slug)
 
-  if (!post) {
+  if (post === null || post === undefined) {
     return notFound()
   }
-
-  const content = await markdownToHtml(post.content || '')
 
   return (
     <main>
@@ -26,7 +23,7 @@ export default async function Post (props: Params): Promise<React.ReactElement> 
             date={post.date}
             author={post.author}
           />
-          <PostBody content={content} />
+          <PostBody content={post.content} />
         </article>
       </Container>
     </main>
@@ -43,7 +40,7 @@ export async function generateMetadata (props: Params): Promise<Metadata> {
   const params = await props.params
   const post = getPostBySlug(params.slug)
 
-  if (!post) {
+  if (post === null || post === undefined) {
     return notFound()
   }
 

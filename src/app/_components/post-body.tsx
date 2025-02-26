@@ -1,4 +1,6 @@
-import markdownStyles from './markdown-styles.module.css'
+import Markdown from 'react-markdown'
+import remarkGfm from 'remark-gfm'
+import rehypeRaw from 'rehype-raw'
 
 interface Props {
   content: string
@@ -7,10 +9,7 @@ interface Props {
 export function PostBody ({ content }: Props): React.ReactElement {
   return (
     <div className='max-w-2xl mx-auto'>
-      <div
-        className={markdownStyles.markdown}
-        dangerouslySetInnerHTML={{ __html: content }}
-      />
+      <Markdown remarkPlugins={[remarkGfm]} rehypePlugins={[rehypeRaw]}>{content}</Markdown>
     </div>
   )
 }
