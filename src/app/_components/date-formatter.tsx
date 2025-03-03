@@ -5,8 +5,12 @@ interface Props {
 }
 
 const DateFormatter = ({ dateString }: Props): React.ReactElement => {
-  const date = parseISO(dateString)
-  return <time dateTime={dateString}>{format(date, 'LLLL d, yyyy')}</time>
+  if (typeof (dateString) === 'string') {
+    const date = parseISO(dateString)
+    return <time dateTime={dateString}>{format(date, 'LLLL d, yyyy')}</time>
+  }
+
+  return <div />
 }
 
 export default DateFormatter
