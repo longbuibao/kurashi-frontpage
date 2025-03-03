@@ -1,13 +1,13 @@
 ---
-title: Learn How to Pre-render Pages Using Static Generation with Next.js
-excerpt: excerpt
-coverImage: /assets/Screenshot 2025-02-15 151515.png
-date: 2020-03-16T05:35:07.322Z
+title: my first blog
+excerpt: no excerpt
+date: 2020-03-16T05:35:00.000Z
 author:
-  name: Tim Neutkens
+  name: long bui bao
   picture: /assets/Screenshot 2025-02-15 151515.png
 ogImage:
   url: /assets/Screenshot 2025-02-15 151515.png
 ---
-## Lorem Ipsum
-<h1 style="text-align: center">Lorem Ipsum Center</h1>
+# this is the heading h1
+
+my first blog herea
