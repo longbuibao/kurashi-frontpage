@@ -10,7 +10,7 @@ const DateFormatter = ({ dateString }: Props): React.ReactElement => {
     return <time dateTime={dateString}>{format(date, 'LLLL d, yyyy')}</time>
   }
 
-  return <div />
+  return <div>{dateString}</div>
 }
 
 export default DateFormatter
