@@ -1,13 +1,27 @@
 ---
-title: my first blog
-excerpt: no excerpt
-date: 2020-03-16T05:35:00.000Z
+title: Thép tráng men
+excerpt: Thép tráng men cho căn bếp gọn gàng
+coverImage: /assets/thep-trang-men.webp
+date: 2025-03-04T05:35:00.000Z
 author:
-  name: long bui bao
-  picture: /assets/Screenshot 2025-02-15 151515.png
+  name: Diện Võ
+  picture: /assets/anhlonglike.png
 ogImage:
-  url: /assets/Screenshot 2025-02-15 151515.png
+  url: /assets/thep-trang-men.webp
 ---
-# this is the heading h1
+# Thép tráng men
 
-my first blog herea
+thép tráng men
+
+```
+this is a code
+```
+
+| h1  | h2  | h3  |
+| --- | --- | --- |
+| 1   | 12  | 12  |
+| 4   | 3   | 4   |
+
+![](/assets/thep-trang-men.webp)
+
+<p style="text-align: center">hello<br></p>
