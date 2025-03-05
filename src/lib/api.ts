@@ -9,7 +9,10 @@ export function getPostSlugs (): any {
   return fs.readdirSync(postsDirectory)
 }
 
-export function getPostBySlug (slug: string): Post {
+export function getPostBySlug (slug: string): Post | null {
+  if (slug === '.gitkeep') {
+    return null
+  }
   const realSlug = slug.replace(/\.md$/, '')
   const fullPath = join(postsDirectory, `${realSlug}.md`)
   const fileContents = fs.readFileSync(fullPath, 'utf8')
