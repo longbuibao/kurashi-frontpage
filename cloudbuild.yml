@@ -17,7 +17,7 @@ steps:
     entrypoint: sh
     args:
       - "-c"
-      - "(./cloud_sql_proxy --port 5432 kurashi-frontpage-419616:us-central1:kurashi-production-db & sleep 2 && npm run db:deploy)"
+      - "(./cloud_sql_proxy --port 5432 kurashi-frontpage-419616:us-central1:kurashi-production-db & sleep 2 && npx prisma migrate deploy)"
     timeout: '1200s'
   - name: "gcr.io/cloud-builders/docker"
     args: ["build", "--build-arg", "-t", "gcr.io/$PROJECT_ID/kurashi-frontpage-prod:$COMMIT_SHA", "."]
