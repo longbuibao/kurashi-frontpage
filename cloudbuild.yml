@@ -20,7 +20,7 @@ steps:
   #     - "(./cloud_sql_proxy --json-credentials '$_CLOUD_SQL_CREDENTIALS' --port 5432 kurashi-frontpage-419616:us-central1:kurashi-production-db & sleep 2)"
   #   timeout: '1200s'
   - name: "gcr.io/cloud-builders/docker"
-    args: ["build", "-t", "gcr.io/$PROJECT_ID/kurashi-frontpage-prod:$COMMIT_SHA", "."]
+    args: ["build", "--build-arg", "CLOUD_SQL_CREDENTIALS='$_CLOUD_SQL_CREDENTIALS'", "-t", "gcr.io/$PROJECT_ID/kurashi-frontpage-prod:$COMMIT_SHA", "."]
   - name: "gcr.io/cloud-builders/docker"
     args: ["push", "gcr.io/$PROJECT_ID/kurashi-frontpage-prod:$COMMIT_SHA"]
   - name: "gcr.io/google.com/cloudsdktool/cloud-sdk"
