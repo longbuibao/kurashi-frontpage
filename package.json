@@ -15,7 +15,8 @@
     "db:studio": "npx prisma studio",
     "db:deploy": "prisma migrate deploy",
     "db:rollback": "prisma migrate resolve --rolled-back",
-    "test": "echo testing kurashi-frontpage app"
+    "test": "echo testing kurashi-frontpage app",
+    "create-env": "printenv > .env"
   },
   "dependencies": {
     "@google-cloud/storage": "^7.15.0",
