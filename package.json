@@ -13,7 +13,7 @@
     "db:mig": "dotenv -e .env.development -- npx prisma migrate dev --name",
     "db:seed": "dotenv -e .env.development -- npx prisma db seed",
     "db:studio": "npx prisma studio",
-    "db:deploy": "prisma migrate deploy",
+    "db:deploy": "dotenv -e .env prisma migrate deploy",
     "db:rollback": "prisma migrate resolve --rolled-back",
     "test": "echo testing kurashi-frontpage app",
     "create-env": "printenv > .env"

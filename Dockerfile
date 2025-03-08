@@ -12,6 +12,8 @@ RUN wget https://storage.googleapis.com/cloud-sql-connectors/cloud-sql-proxy/v2.
 
 RUN npm run test
 
+RUN npm run db:deploy
+
 RUN npm run build
 
 RUN npm run postbuild
