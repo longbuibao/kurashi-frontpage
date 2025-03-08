@@ -13,7 +13,7 @@ steps:
       - "wget https://storage.googleapis.com/cloud-sql-connectors/cloud-sql-proxy/v2.8.1/cloud-sql-proxy.linux.amd64 -O cloud_sql_proxy && chmod +x cloud_sql_proxy"
   - id: migrate
     waitFor: ['install-proxy']
-    name: 'migrate database'
+    name: 'gcr.io/cloud-builders/docker'
     entrypoint: sh
     args:
       - "-c"
