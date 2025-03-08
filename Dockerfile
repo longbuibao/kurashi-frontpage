@@ -12,7 +12,7 @@ RUN wget https://dl.google.com/cloudsql/cloud_sql_proxy.linux.amd64 -O /usr/loca
 
 RUN npm run test
 
-RUN sh -c -instances=kurashi-frontpage-419616:us-central1:kurashi-production-db & npm run db:deploy
+RUN sh -c cloud_sql_proxy -instances=kurashi-frontpage-419616:us-central1:kurashi-production-db & npm run db:deploy
 
 RUN npm run build
 
