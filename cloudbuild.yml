@@ -5,15 +5,15 @@ steps:
     env:
       - 'DATABASE_URL=${_DATABASE_URL}'
       - 'SITE_URL=${_SITE_URL}'
-  - name: "gcr.io/google-appengine/exec-wrapper"
-    args: ["-i", "gcr.io/$PROJECT_ID/api:${SHORT_SHA}",
-          "-e", "DATABASE_URL=${_DATABASE_URL}",
-          "-s", "${_CLOUD_SQL_INSTANCE}",
-          "--", "npm", "run", "db:deploy"]
   - name: "gcr.io/cloud-builders/docker"
     args: ["build", "-t", "gcr.io/$PROJECT_ID/kurashi-frontpage-prod:$COMMIT_SHA", "."]
   - name: "gcr.io/cloud-builders/docker"
     args: ["push", "gcr.io/$PROJECT_ID/kurashi-frontpage-prod:$COMMIT_SHA"]
+  - name: "gcr.io/google-appengine/exec-wrapper"
+    args: ["-i", "gcr.io/$PROJECT_ID/kurashi-frontpage-prod:$COMMIT_SHA",
+          "-e", "DATABASE_URL=${_DATABASE_URL}",
+          "-s", "${_CLOUD_SQL_INSTANCE}",
+          "--", "npm", "run", "db:deploy"]
   - name: "gcr.io/google.com/cloudsdktool/cloud-sdk"
     entrypoint: gcloud
     args:
