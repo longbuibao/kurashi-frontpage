@@ -12,8 +12,6 @@ RUN wget https://storage.googleapis.com/cloud-sql-connectors/cloud-sql-proxy/v2.
 
 RUN npm run test
 
-RUN cloud_sql_proxy kurashi-frontpage-419616:us-central1:kurashi-production-db
-
 RUN npm run build
 
 RUN npm run postbuild
