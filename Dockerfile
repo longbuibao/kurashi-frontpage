@@ -7,7 +7,7 @@ RUN npm install
 
 COPY . .
 
-RUN wget https://dl.google.com/cloudsql/cloud_sql_proxy.linux.amd64 -O /usr/local/bin/cloud_sql_proxy && \
+RUN wget https://storage.googleapis.com/cloud-sql-connectors/cloud-sql-proxy/v2.15.1/cloud-sql-proxy.linux.amd64 -O /usr/local/bin/cloud_sql_proxy && \
 	chmod +x /usr/local/bin/cloud_sql_proxy
 
 RUN npm run test
