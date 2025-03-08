@@ -5,20 +5,20 @@ steps:
     env:
       - 'DATABASE_URL=${_DATABASE_URL}'
       - 'SITE_URL=${_SITE_URL}'
-  - id: install-proxy
-    name: 'gcr.io/cloud-builders/wget'
-    entrypoint: bash
-    args:
-      - "-c"
-      - "wget https://storage.googleapis.com/cloud-sql-connectors/cloud-sql-proxy/v2.8.1/cloud-sql-proxy.linux.amd64 -O cloud_sql_proxy && chmod +x cloud_sql_proxy"
-  - id: migrate
-    waitFor: ['install-proxy']
-    name: 'node:18'
-    entrypoint: sh
-    args:
-      - "-c"
-      - "(./cloud_sql_proxy --json-credentials '$_CLOUD_SQL_CREDENTIALS' --port 5432 kurashi-frontpage-419616:us-central1:kurashi-production-db & sleep 2)"
-    timeout: '1200s'
+  # - id: install-proxy
+  #   name: 'gcr.io/cloud-builders/wget'
+  #   entrypoint: bash
+  #   args:
+  #     - "-c"
+  #     - "wget https://storage.googleapis.com/cloud-sql-connectors/cloud-sql-proxy/v2.8.1/cloud-sql-proxy.linux.amd64 -O cloud_sql_proxy && chmod +x cloud_sql_proxy"
+  # - id: migrate
+  #   waitFor: ['install-proxy']
+  #   name: 'node:18'
+  #   entrypoint: sh
+  #   args:
+  #     - "-c"
+  #     - "(./cloud_sql_proxy --json-credentials '$_CLOUD_SQL_CREDENTIALS' --port 5432 kurashi-frontpage-419616:us-central1:kurashi-production-db & sleep 2)"
+  #   timeout: '1200s'
   - name: "gcr.io/cloud-builders/docker"
     args: ["build", "-t", "gcr.io/$PROJECT_ID/kurashi-frontpage-prod:$COMMIT_SHA", "."]
   - name: "gcr.io/cloud-builders/docker"
