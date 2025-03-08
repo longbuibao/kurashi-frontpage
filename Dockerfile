@@ -2,13 +2,6 @@ FROM node:18
 
 WORKDIR /app
 
-ARG CLOUD_SQL_CREDENTIALS
-
-ENV CLOUD_SQL_CREDENTIALS=$CLOUD_SQL_CREDENTIALS
-
-RUN echo "CLOUD_SQL_CREDENTIALS is set to: ${CLOUD_SQL_CREDENTIALS}"
-
-
 COPY package.json package-lock.json ./
 RUN npm install
 
