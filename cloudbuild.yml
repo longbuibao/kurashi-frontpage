@@ -5,6 +5,22 @@ steps:
     env:
       - 'DATABASE_URL=${_DATABASE_URL}'
       - 'SITE_URL=${_SITE_URL}'
+  # - id: install-proxy
+  #   name: gcr.io/cloud-builders/wget
+  #   entrypoint: sh
+  #   args:
+  #     - -c
+  #     - |
+  #       wget https://storage.googleapis.com/cloud-sql-connectors/cloud-sql-proxy/v2.15.1/cloud-sql-proxy.linux.amd64 -O /usr/local/bin/cloud_sql_proxy && \ 
+  #       chmod +x /usr/local/bin/cloud_sql_proxy
+  # - id: "run-proxy-auth"
+  #   waitFor: ['install-proxy']
+  #   name: kurashi-migrate
+  #   entrypoint: sh
+  #   args:
+  #     - "-c"
+  #     - |
+  #       /workspace/cloud-sql-proxy ${_INSTANCE_CONNECTION_NAME} --port 5432 & sleep 2;
   - name: "gcr.io/cloud-builders/docker"
     args: ["build", "-t", "gcr.io/$PROJECT_ID/kurashi-frontpage-prod:$COMMIT_SHA", "."]
   - name: "gcr.io/cloud-builders/docker"
