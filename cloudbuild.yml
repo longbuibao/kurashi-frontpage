@@ -11,7 +11,7 @@ steps:
     args:
       - "-c"
       - "wget https://storage.googleapis.com/cloud-sql-connectors/cloud-sql-proxy/v2.8.1/cloud-sql-proxy.linux.amd64 -O cloud_sql_proxy && chmod +x cloud_sql_proxy"
-  - id: migrate
+  - id: database-deploy
     waitFor: ['install-proxy']
     name: 'node:18'
     entrypoint: sh
@@ -19,7 +19,7 @@ steps:
       - "-c"
       - "(./cloud_sql_proxy --port 5432 kurashi-frontpage-419616:us-central1:kurashi-production-db & sleep 2 && npx prisma migrate deploy)"
   - id: build-nextjs-app
-    waitFor: ['migrate']
+    waitFor: ['database-deploy']
     name: 'node:18'
     entrypoint: sh
     args:
@@ -27,24 +27,27 @@ steps:
       - "(./cloud_sql_proxy --port 5432 kurashi-frontpage-419616:us-central1:kurashi-production-db & sleep 2 && npm run build)"
   - name: "gcr.io/cloud-builders/docker"
     id: build-docker-image
-    waitFor: ["build-nextjs-app", "migrate", "install-proxy"]
-    args: ["build", "--build-arg",  "SITE_URL=$_SITE_URL", "-t", "gcr.io/$PROJECT_ID/kurashi-frontpage-prod-$SHORT_SHA", "."]
+    waitFor: ["build-nextjs-app", "database-deploy", "install-proxy"]
+    args: ["build", "--build-arg", "SITE_URL=$_SITE_URL", "-t", "gcr.io/$PROJECT_ID/kurashi-frontpage-prod-$SHORT_SHA", "."]
   - name: "gcr.io/cloud-builders/docker"
-    waitFor: ["build-nextjs-app", "migrate", "install-proxy", "build-docker-image"]
+    waitFor: ["build-nextjs-app", "database-deploy", "install-proxy", "build-docker-image"]
     args: ["push", "gcr.io/$PROJECT_ID/kurashi-frontpage-prod-$SHORT_SHA"]
   - name: "gcr.io/google.com/cloudsdktool/cloud-sdk"
+    id: deploy-to-cloudrun
     entrypoint: gcloud
     args:
       - "run"
-      - "deploy"
-      - "kurashi-frontpage-prod-$SHORT_SHA"
+      - "services"
+      - "update"
+      - "kurashi-frontpage"
       - "--image"
-      - "gcr.io/$PROJECT_ID/kurashi-frontpage-prod-$SHORT_SHA"
+      - "us-central1-docker.pkg.dev/$PROJECT_ID/cloud-run-source-deploy/kurashi-frontpage/kurashi-frontpage-prod-$SHORT_SHA"
       - "--region"
       - "us-central1"
       - "--platform"
       - "managed"
-      - "--allow-unauthenticated"   
+      - "--labels"
+      - "managed-by=gcp-cloud-build-deploy-cloud-run,commit-sha=$SHORT_SHA,gcb-build-id=$BUILD_ID,gcb-trigger-id=$TRIGGER_NAME"
 options:
   logging: CLOUD_LOGGING_ONLY    
 timeout: "1800s"
