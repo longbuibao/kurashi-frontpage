@@ -21,7 +21,7 @@ steps:
   - id: build-nextjs-app
     waitFor: ['migrate']
     name: 'node:18'
-    entrypoint: sh
+    entrypoint: npm
     args: ["run", "build"]
   - name: "gcr.io/cloud-builders/docker"
     args: ["build", "-t", "gcr.io/$PROJECT_ID/kurashi-frontpage-prod:$COMMIT_SHA", "."]
