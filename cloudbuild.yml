@@ -25,10 +25,16 @@ steps:
     args:
       - "-c"
       - "(./cloud_sql_proxy --port 5432 kurashi-frontpage-419616:us-central1:kurashi-production-db & sleep 2 && npm run build)"
+    volumes:
+      - name: workspace
+        path: /workspace
   - name: "gcr.io/cloud-builders/docker"
     id: build-docker-image
     waitFor: ["build-nextjs-app", "database-deploy", "install-proxy"]
     args: ["build", "--build-arg", "SITE_URL=$_SITE_URL", "-t", "gcr.io/$PROJECT_ID/kurashi-frontpage-prod-$SHORT_SHA", "."]
+    volumes:
+      - name: workspace
+        path: /workspace
   - name: "gcr.io/cloud-builders/docker"
     waitFor: ["build-nextjs-app", "database-deploy", "install-proxy", "build-docker-image"]
     args: ["push", "gcr.io/$PROJECT_ID/kurashi-frontpage-prod-$SHORT_SHA"]

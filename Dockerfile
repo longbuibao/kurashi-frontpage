@@ -2,12 +2,15 @@ FROM node:18
 
 WORKDIR /app
 
-RUN echo ----------------------------------------------------------------------------------
-RUN npm -v
-
 COPY package.json package-lock.json ./
 
 RUN npm install
+
+COPY /workspace/.next .next
+
+COPY public public
+
+COPY next.config.js next.config.js
 
 COPY . .
 
