@@ -26,17 +26,17 @@ steps:
       - "-c"
       - "(./cloud_sql_proxy --port 5432 kurashi-frontpage-419616:us-central1:kurashi-production-db & sleep 2 && npm run build)"
   - name: "gcr.io/cloud-builders/docker"
-    args: ["build", "--build-arg","SITE_URL=$_SITE_URL", "-t", "gcr.io/$PROJECT_ID/kurashi-frontpage-prod:$COMMIT_SHA", "."]
+    args: ["build", "--build-arg","SITE_URL=$_SITE_URL", "-t", "gcr.io/$PROJECT_ID/kurashi-frontpage-prod:$SHORT_SHA", "."]
   - name: "gcr.io/cloud-builders/docker"
-    args: ["push", "gcr.io/$PROJECT_ID/kurashi-frontpage-prod:$COMMIT_SHA"]
+    args: ["push", "gcr.io/$PROJECT_ID/kurashi-frontpage-prod:$SHORT_SHA"]
   - name: "gcr.io/google.com/cloudsdktool/cloud-sdk"
     entrypoint: gcloud
     args:
       - "run"
       - "deploy"
-      - "kurashi-frontpage-prod:$COMMIT_SHA"
+      - "kurashi-frontpage-prod:$SHORT_SHA"
       - "--image"
-      - "gcr.io/$PROJECT_ID/kurashi-frontpage-prod:$COMMIT_SHA"
+      - "gcr.io/$PROJECT_ID/kurashi-frontpage-prod:$SHORT_SHA"
       - "--region"
       - "us-central1"
       - "--platform"
