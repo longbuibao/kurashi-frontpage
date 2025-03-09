@@ -13,4 +13,4 @@ COPY . .
 
 RUN npm run postbuild
 
-ENTRYPOINT ["npm run start"]
+CMD [ "npm", "run", "start"]
