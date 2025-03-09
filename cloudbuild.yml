@@ -41,13 +41,13 @@ steps:
       - "update"
       - "kurashi-frontpage"
       - "--image"
-      - "us-central1-docker.pkg.dev/$PROJECT_ID/cloud-run-source-deploy/kurashi-frontpage/kurashi-frontpage-prod-$SHORT_SHA"
+      - "gcr.io/$PROJECT_ID/kurashi-frontpage-prod-$SHORT_SHA"
       - "--region"
       - "us-central1"
       - "--platform"
       - "managed"
       - "--labels"
-      - "managed-by=gcp-cloud-build-deploy-cloud-run,commit-sha=$SHORT_SHA,gcb-build-id=$BUILD_ID,gcb-trigger-id=$TRIGGER_NAME"
+      - "managed-by=gcp-cloud-build-deploy-cloud-run,commit-sha=$SHORT_SHA,gcb-build-id=$BUILD_ID"
 options:
   logging: CLOUD_LOGGING_ONLY    
 timeout: "1800s"
