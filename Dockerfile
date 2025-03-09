@@ -4,15 +4,11 @@ WORKDIR /app
 
 COPY package.json package-lock.json ./
 
-RUN npm install
-
 COPY /workspace/.next .next
 
-COPY public public
-
-COPY next.config.js next.config.js
-
 COPY . .
+
+RUN npm install
 
 RUN npm run postbuild
 
