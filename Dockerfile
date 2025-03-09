@@ -2,9 +2,7 @@ FROM node:18
 
 WORKDIR /app
 
-COPY package.json package-lock.json ./
-
-COPY /workspace/.next .next
+COPY /workspace ./
 
 COPY . .
 
