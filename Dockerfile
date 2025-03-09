@@ -8,10 +8,6 @@ COPY .next ./.next
 
 COPY . .
 
-RUN ls -la
-
-RUN npm install
-
-RUN npm run postbuild
+RUN npm run postbuild && ls -la && npm install
 
 CMD [ "npm", "run", "start"]
