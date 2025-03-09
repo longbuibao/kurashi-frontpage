@@ -2,13 +2,13 @@ FROM node:18
 
 WORKDIR /app
 
-RUN pwd
+COPY package.json package-lock.json ./
 
-RUN ls /workspace
-
-COPY /workspace ./
+COPY .next ./.next
 
 COPY . .
+
+RUN ls -la
 
 RUN npm install
 
