@@ -9,7 +9,10 @@ export function getPostSlugs (): any {
   return fs.readdirSync(postsDirectory)
 }
 
-export function getPostBySlug (slug: string): Post {
+export function getPostBySlug (slug: string): Post | null {
+  if (slug === '.gitkeep') {
+    return null
+  }
   const realSlug = slug.replace(/\.md$/, '')
   const fullPath = join(postsDirectory, `${realSlug}.md`)
   const fileContents = fs.readFileSync(fullPath, 'utf8')
@@ -22,7 +25,7 @@ export function getAllPosts (): Post[] {
   const slugs = getPostSlugs()
   const posts = slugs
     .map((slug: any) => getPostBySlug(slug))
-    // sort posts by date in descending order
+    .filter((x: any) => x !== null)
     .sort((post1: any, post2: any) => (post1.date > post2.date ? -1 : 1))
   return posts
 }

@@ -6,15 +6,17 @@
     "dev": "dotenv -e .env.development -- next dev",
     "build": "npx prisma generate && rimraf .next && next build",
     "postbuild": "next-sitemap",
-    "start": "next start",
+    "start": "dotenv -e .env -- next start",
     "lint": "next lint",
     "db:manual-seed": "dotenv -e .env.development -- ts-node prisma/seed.mjs",
     "db:reset": "npx prisma migrate dev -n reset",
     "db:mig": "dotenv -e .env.development -- npx prisma migrate dev --name",
     "db:seed": "dotenv -e .env.development -- npx prisma db seed",
     "db:studio": "npx prisma studio",
-    "db:deploy": "prisma migrate deploy",
-    "db:rollback": "prisma migrate resolve --rolled-back"
+    "db:deploy": "dotenv -e .env prisma migrate deploy",
+    "db:rollback": "prisma migrate resolve --rolled-back",
+    "test": "echo testing kurashi-frontpage app",
+    "create-env": "printenv > .env"
   },
   "dependencies": {
     "@google-cloud/storage": "^7.15.0",
