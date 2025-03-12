@@ -10,4 +10,6 @@ COPY . .
 
 RUN npm run postbuild && ls -la && npm install
 
-CMD [ "npm", "run", "start"]
+RUN chmod +x start.sh
+
+CMD ["./start.sh"]
