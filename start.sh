@@ -17,5 +17,9 @@ fi
 
 echo "DATABASE_URL updated successfully."
 
+# Print all environment variables
+echo "============================================================ Current environment variables: ============================================================"
+cat "$ENV_FILE"
+
 # Run npm start
 npm run start
