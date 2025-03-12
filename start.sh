@@ -10,16 +10,14 @@ fi
 
 # Ensure DATABASE_URL is updated without duplication
 if grep -q '^DATABASE_URL=' "$ENV_FILE"; then
-  sed -i -E "s|^DATABASE_URL=.*|DATABASE_URL=\"postgresql://postgres:]AThfiXb5\`\"H~%Qj@localhost/kurashi-prod?schema=public?host=/cloudsql/kurashi-frontpage-419616:us-central1:kurashi-production-db\"|" "$ENV_FILE"
+  sed -i -E "s|^DATABASE_URL=.*|DATABASE_URL=\"postgresql://postgres:]AThfiXb5\`\"H~%Qj@localhost:5432/kurashi-prod?schema=public\"|" "$ENV_FILE"
 else
-  echo "DATABASE_URL=\"postgresql://postgres:]AThfiXb5\`\"H~%Qj@localhost/kurashi-prod?schema=public?host=/cloudsql/kurashi-frontpage-419616:us-central1:kurashi-production-db\"" >> "$ENV_FILE"
+  echo "DATABASE_URL=\"postgresql://postgres:]AThfiXb5\`\"H~%Qj@localhost:5432/kurashi-prod?schema=public\"" >> "$ENV_FILE"
 fi
 
 echo "DATABASE_URL updated successfully."
 
-# Print all environment variables
 echo "============================================================ Current environment variables: ============================================================"
 cat "$ENV_FILE"
 
-# Run npm start
-npm run start
+./cloud_sql_proxy --port 5432 kurashi-frontpage-419616:us-central1:kurashi-production-db & sleep 2 && npm run start
