@@ -10,9 +10,9 @@ fi
 
 # Ensure DATABASE_URL is updated without duplication
 if grep -q '^DATABASE_URL=' "$ENV_FILE"; then
-  sed -i -E "s|^DATABASE_URL=.*|DATABASE_URL=postgresql://postgres:]AThfiXb5\`\"H~%Qj@localhost/kurashi-prod?host=/cloudsql/kurashi-frontpage-419616:us-central1:kurashi-production-db|" "$ENV_FILE"
+  sed -i -E "s|^DATABASE_URL=.*|DATABASE_URL=\"postgresql://postgres:]AThfiXb5\`\"H~%Qj@localhost/kurashi-prod?host=/cloudsql/kurashi-frontpage-419616:us-central1:kurashi-production-db\"|" "$ENV_FILE"
 else
-  echo "DATABASE_URL=postgresql://postgres:]AThfiXb5\`\"H~%Qj@localhost/kurashi-prod?host=/cloudsql/kurashi-frontpage-419616:us-central1:kurashi-production-db" >> "$ENV_FILE"
+  echo "DATABASE_URL=\"postgresql://postgres:]AThfiXb5\`\"H~%Qj@localhost/kurashi-prod?host=/cloudsql/kurashi-frontpage-419616:us-central1:kurashi-production-db\"" >> "$ENV_FILE"
 fi
 
 echo "DATABASE_URL updated successfully."
