@@ -5,15 +5,13 @@ steps:
     args:
       - '-c'
       - |
-        gcloud secrets versions access latest --secret=cloudsql-access-key > /workspace/cloudsql-access.json &
+        gcloud secrets versions access latest --secret=cloudsql-access-key > cloudsql-access.json &
 
   - name: 'gcr.io/cloud-builders/docker'
     id: build-docker-image
     waitFor: ["get-secret"]
     args:
       - "build"
-      - "--build-arg"
-      - "CLOUDSQL_CREDENTIALS=/workspace/cloudsql-access.json"
       - "-t"
       - "gcr.io/$PROJECT_ID/kurashi-frontpage-prod-$SHORT_SHA"
       - "."
