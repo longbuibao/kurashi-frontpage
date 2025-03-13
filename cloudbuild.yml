@@ -31,7 +31,7 @@ steps:
   - name: "gcr.io/cloud-builders/docker"
     id: build-docker-image
     waitFor: ["build-nextjs-app", "database-deploy", "install-proxy"]
-    args: ["build", "-t", "--build-arg", "SITE_URL=$SITE_URL", "DATABASE_URL=$_DATABASE_URL", "gcr.io/$PROJECT_ID/kurashi-frontpage-prod-$SHORT_SHA", "."]
+    args: ["build", "--build-arg", "SITE_URL=$SITE_URL", "DATABASE_URL=$_DATABASE_URL", "-t", "gcr.io/$PROJECT_ID/kurashi-frontpage-prod-$SHORT_SHA", "."]
 
   - name: "gcr.io/cloud-builders/docker"
     waitFor: ["build-nextjs-app", "database-deploy", "install-proxy", "build-docker-image"]
