@@ -26,6 +26,9 @@ const inter = Inter({ subsets: ['latin'], weight: '200' })
 
 const RootLayout: React.FC<RootProps> = async ({ children }): Promise<React.ReactElement> => {
   const { t } = await useTranslation(lng)
+
+  await prisma.$connect()
+
   const productsRaw = await prisma.product.findMany({
     take: 3,
     where: { isAvailable: true },
