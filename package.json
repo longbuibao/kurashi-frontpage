@@ -6,7 +6,7 @@
     "dev": "dotenv -e .env.development -- next dev",
     "build": "npx prisma generate && rimraf .next && next build",
     "postbuild": "next-sitemap",
-    "start": "next start",
+    "start": "dotenv -e .env -- next start",
     "lint": "next lint",
     "db:manual-seed": "dotenv -e .env.development -- ts-node prisma/seed.mjs",
     "db:reset": "npx prisma migrate dev -n reset",
