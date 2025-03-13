@@ -5,11 +5,7 @@ steps:
     args:
       - '-c'
       - |
-        echo "Starting secret retrieval..."
-        gcloud secrets versions access latest --secret=cloudsql-access-key > /workspace/cloudsql-access.json || { echo "Secret retrieval failed"; exit 1; }
-        echo "Secret successfully retrieved."
-        ls -la /workspace/cloudsql-access.json
-        cat /workspace/cloudsql-access.json | head -n 5  # Print first 5 lines for debugging
+        gcloud secrets versions access latest --secret=cloudsql-access-key > /workspace/cloudsql-access.json &
 
   - name: 'gcr.io/cloud-builders/docker'
     id: build-docker-image
