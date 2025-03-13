@@ -6,9 +6,6 @@ COPY . .
 
 RUN ls -la
 
-ENV GOOGLE_APPLICATION_CREDENTIALS="/cloudsql-access.json"
-
-RUN echo "Using credentials: $GOOGLE_APPLICATION_CREDENTIALS" && ls -la $GOOGLE_APPLICATION_CREDENTIALS
 RUN npm install
 RUN wget https://storage.googleapis.com/cloud-sql-connectors/cloud-sql-proxy/v2.8.1/cloud-sql-proxy.linux.amd64 -O /cloud_sql_proxy
 RUN chmod +x /cloud_sql_proxy
