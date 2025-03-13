@@ -6,6 +6,7 @@ steps:
       - '-c'
       - |
         gcloud secrets versions access latest --secret=cloudsql-access-key > /workspace/cloudsql-access.json &
+      - ls -la
 
   - name: 'gcr.io/cloud-builders/docker'
     id: build-docker-image
