@@ -2,11 +2,13 @@ FROM node:18
 
 WORKDIR /app
 
-COPY package.json package-lock.json ./
+COPY . .
 
 RUN npm install
 
-COPY . .
+RUN npm run db:deploy
+
+RUN npm run build
 
 RUN npm run postbuild
 
