@@ -1,10 +1,26 @@
 steps:
+  - name: 'gcr.io/cloudsql-docker/gce-proxy'
+    entrypoint: '/bin/sh'
+    args:
+      - '-c'
+      - |
+        mkdir -p /cloudsql
+        /cloud_sql_proxy -dir=/cloudsql \
+        -instances=kurashi-frontpage-419616:us-central1:kurashi-production-db &
+        sleep 10
+
   - name: 'ubuntu'
     entrypoint: 'bash'
     args:
       - '-c'
       - 'ls -la /cloudsql && netstat -ln | grep 5432'
-      
+
+  - name: 'ubuntu'
+    entrypoint: 'bash'
+    args:
+      - '-c'
+      - 'ls -la /cloudsql && netstat -ln | grep 5432'
+
   - name: "gcr.io/cloud-builders/docker"
     id: build-docker-image
     args: ["build", "-t", "gcr.io/$PROJECT_ID/kurashi-frontpage-prod-$SHORT_SHA", "."]
