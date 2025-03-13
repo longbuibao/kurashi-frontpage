@@ -5,15 +5,15 @@ steps:
     args:
       - '-c'
       - |
-        gcloud secrets versions access latest --secret=cloudsql-access-key > /workspace/cloudsql-access.json &
+        gcloud secrets versions access latest --secret=cloudsql-access-key > cloudsql-access.json &
   - name: 'gcr.io/cloud-builders/gcloud'
-    id: MOVE-DOTENV-APP-YAML
+    id: move-credentials-file
     entrypoint: bash
     args:
       - '-e'
       - '-c'
       - |
-        cp /workspace/cloudsql-access.json cloudsql-access.json
+        cp cloudsql-access.json cloudsql-access.json
 
   - name: 'gcr.io/cloud-builders/docker'
     id: build-docker-image
