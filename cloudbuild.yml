@@ -1,13 +1,9 @@
 steps:
   - name: 'gcr.io/cloudsql-docker/gce-proxy'
-    entrypoint: '/bin/sh'
     args:
-      - '-c'
-      - |
-        mkdir -p /cloudsql
-        /cloud_sql_proxy -dir=/cloudsql \
-        -instances=kurashi-frontpage-419616:us-central1:kurashi-production-db &
-        sleep 10
+      - "/cloud_sql_proxy"
+      - "-dir=/cloudsql"
+      - "-instances=kurashi-frontpage-419616:us-central1:kurashi-production-db"
 
   - name: 'ubuntu'
     entrypoint: 'bash'
