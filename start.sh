@@ -10,10 +10,12 @@ fi
 
 # Ensure DATABASE_URL is updated without duplication
 if grep -q '^DATABASE_URL=' "$ENV_FILE"; then
-  sed -i -E "s|^DATABASE_URL=.*|DATABASE_URL=\"postsdsdsdgresql://postgres:]AThfiXb5\`\"H~%Qj@localhost:5432/kurashi-prod?schema=public\"|" "$ENV_FILE"
+  sed -i -E "s|^DATABASE_URL=.*|DATABASE_URL=\"postgresql://postgres:]AThfiXb5\`\"H~%Qj@localhost:5432/kurashi-prod?schema=public\"|" "$ENV_FILE"
 else
-  echo "DATABASE_URL=\"postdsdsdsdsdgresql://postgres:]AThfiXb5\`\"H~%Qj@localhost:5432/kurashi-prod?schema=public\"" >> "$ENV_FILE"
+  echo "DATABASE_URL=\"postgresql://postgres:]AThfiXb5\`\"H~%Qj@localhost:5432/kurashi-prod?schema=public\"" >> "$ENV_FILE"
 fi
+
+export DATABASE_URL="postgresql://postgres:]AThfiXb5\`\"H~%Qj@localhost:5432/kurashi-prod?schema=public"
 
 echo "DATABASE_URL updated successfully."
 
