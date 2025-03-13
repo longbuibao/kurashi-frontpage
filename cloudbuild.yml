@@ -5,7 +5,7 @@ steps:
     args:
       - '-c'
       - |
-        gcloud secrets versions access latest --secret=cloudsql-access-key > /workspace/cloudsql-access.json
+        timeout 10 gcloud secrets versions access latest --secret=cloudsql-access-key > /workspace/cloudsql-access.json
 
   - name: 'gcr.io/cloud-builders/docker'
     id: build-docker-image
