@@ -26,9 +26,9 @@ const Page = async (): Promise<React.ReactElement> => {
   const carouselSlidersMobile = carouselSliderImagesMobile.map(x => createCarouselItemImage(x, 4500, 5620))
   const blogs = await prisma.post.findMany({ take: 4, where: { published: true } })
 
-  console.log({ env: process.env })
+  console.error({ env: process.env })
   const a = await prisma.$executeRaw`SELECT 1`
-  console.log(a)
+  console.error(a)
 
   return (
     <main className='mt-0'>
