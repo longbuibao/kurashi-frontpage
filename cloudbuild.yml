@@ -3,19 +3,13 @@ steps:
     args:
       - "/cloud_sql_proxy"
       - "-dir=/tmp/cloudsql"
-      - "-instances=kurashi-frontpage-419616:us-central1:kurashi-production-db"
+      - "-instances=kurashi-frontpage-419616:us-central1:kurashi-production-db &"
 
   - name: 'ubuntu'
     entrypoint: 'bash'
     args:
       - '-c'
-      - 'ls -la /tmp/cloudsql && netstat -ln | grep 5432'
-
-  - name: 'ubuntu'
-    entrypoint: 'bash'
-    args:
-      - '-c'
-      - 'ls -la /cloudsql && netstat -ln | grep 5432'
+      - 'ls -la /tmp/cloudsql && netstat -ln | grep 5432
 
   - name: "gcr.io/cloud-builders/docker"
     id: build-docker-image
