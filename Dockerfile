@@ -1,13 +1,13 @@
 FROM node:18
 
 WORKDIR /app
+COPY . .
 
 ENV GOOGLE_APPLICATION_CREDENTIALS="/cloudsql-access.json"
 
 RUN pwd
 RUN ls -a
 
-COPY . .
 
 RUN npm install
 
