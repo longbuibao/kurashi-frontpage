@@ -6,10 +6,10 @@ COPY . .
 
 RUN npm install
 
-ADD https://dl.google.com/cloudsql/cloud_sql_proxy.linux.amd64 /cloud_sql_proxy
+RUN wget https://storage.googleapis.com/cloud-sql-connectors/cloud-sql-proxy/v2.8.1/cloud-sql-proxy.linux.amd64 -O /cloud_sql_proxy
 RUN chmod +x /cloud_sql_proxy
 
-RUN /cloud_sql_proxy -dir=/cloudsql -instances=kurashi-frontpage-419616:us-central1:kurashi-production-db & npm run db:deploy && npm run build
+RUN /cloud_sql_proxy -u /cloudsql -instances=kurashi-frontpage-419616:us-central1:kurashi-production-db & npm run db:deploy && npm run build
 
 RUN npm run postbuild
 
