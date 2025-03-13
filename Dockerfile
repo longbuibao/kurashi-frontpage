@@ -5,9 +5,9 @@ COPY . .
 
 ENV GOOGLE_APPLICATION_CREDENTIALS="/cloudsql-access.json"
 
-RUN pwd
-RUN ls -a
+COPY cloudsql-access.json /cloudsql-access.json
 
+RUN ls -la /cloudsql-access.json
 
 RUN npm install
 
