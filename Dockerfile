@@ -4,11 +4,11 @@ WORKDIR /app
 
 COPY package.json package-lock.json ./
 
-COPY .next ./.next
+RUN npm install
 
 COPY . .
 
-RUN npm run postbuild && ls -la && npm install
+RUN npm run postbuild
 
 RUN chmod +x start.sh
 

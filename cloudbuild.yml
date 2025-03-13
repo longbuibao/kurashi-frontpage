@@ -21,7 +21,7 @@ steps:
       - 'SITE_URL=${_SITE_URL}'
     args:
       - "-c"
-      - "(./cloud_sql_proxy --port 5432 kurashi-frontpage-419616:us-central1:kurashi-production-db & sleep 2 && npx prisma migrate deploy)"
+      - "npx prisma migrate deploy"
 
   - id: build-nextjs-app
     waitFor: ['database-deploy']
@@ -32,7 +32,7 @@ steps:
       - 'SITE_URL=${_SITE_URL}'
     args:
       - "-c"
-      - "(./cloud_sql_proxy --port 5432 kurashi-frontpage-419616:us-central1:kurashi-production-db & sleep 2 && npm run build)"
+      - "npm run build"
 
   - name: "gcr.io/cloud-builders/docker"
     id: build-docker-image
