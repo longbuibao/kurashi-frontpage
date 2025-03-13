@@ -2,11 +2,12 @@ FROM node:18
 
 WORKDIR /app
 
-COPY cloudsql-access.json ./cloudsql-access.json
+COPY . .
+
+RUN ls -la
 
 ENV GOOGLE_APPLICATION_CREDENTIALS="/cloudsql-access.json"
 
-COPY . .
 RUN echo "Using credentials: $GOOGLE_APPLICATION_CREDENTIALS" && ls -la $GOOGLE_APPLICATION_CREDENTIALS
 RUN npm install
 RUN wget https://storage.googleapis.com/cloud-sql-connectors/cloud-sql-proxy/v2.8.1/cloud-sql-proxy.linux.amd64 -O /cloud_sql_proxy
