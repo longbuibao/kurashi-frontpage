@@ -5,9 +5,8 @@ steps:
     args:
       - '-c'
       - |
-        gcloud secrets versions access latest --secret=cloudsql-access-key > cloudsql-access.json
-        ls -la /workspace/cloudsql-access.json  # Debugging step
-  - name: 'gcr.io/cloud-builders/gcloud'
+        gcloud secrets versions access latest --secret=cloudsql-access-key > /workspace/cloudsql-access.json
+        ls -la /workspace/cloudsql-access.json
     waitFor: ["get-secret"]
     id: move-credentials-file
     entrypoint: bash
@@ -15,7 +14,7 @@ steps:
       - '-e'
       - '-c'
       - |
-        cp cloudsql-access.json cloudsql-access.json
+        cp /workspace/cloudsql-access.json cloudsql-access.json
 
   - name: 'gcr.io/cloud-builders/docker'
     id: build-docker-image
