@@ -15,7 +15,7 @@ steps:
       - '-e'
       - '-c'
       - |
-        cp /workspace/cloudsql-access.json cloudsql-access.json
+        cp /workspace/cloudsql-access.json cloudsql-cre.json
 
   - name: 'gcr.io/cloud-builders/docker'
     id: build-docker-image
