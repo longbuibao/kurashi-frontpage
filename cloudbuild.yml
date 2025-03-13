@@ -1,4 +1,10 @@
 steps:
+  - name: "node:18"
+    entrypoint: npm
+    args: ["run", "create-env"]
+    env:
+      - 'SITE_URL=${_SITE_URL}'
+
   - id: install-proxy
     name: 'gcr.io/cloud-builders/wget'
     entrypoint: bash
@@ -31,7 +37,7 @@ steps:
   - name: "gcr.io/cloud-builders/docker"
     id: build-docker-image
     waitFor: ["build-nextjs-app", "database-deploy", "install-proxy"]
-    args: ["build", "--build-arg", "SITE_URL=$_SITE_URL", "--build-arg", "DATABASE_URL=$_DATABASE_URL", "-t", "gcr.io/$PROJECT_ID/kurashi-frontpage-prod-$SHORT_SHA", "."]
+    args: ["build", "--build-arg", "SITE_URL=$_SITE_URL", "-t", "gcr.io/$PROJECT_ID/kurashi-frontpage-prod-$SHORT_SHA", "."]
 
   - name: "gcr.io/cloud-builders/docker"
     waitFor: ["build-nextjs-app", "database-deploy", "install-proxy", "build-docker-image"]
