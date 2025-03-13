@@ -10,7 +10,7 @@ steps:
   - name: 'gcr.io/cloud-builders/docker'
     id: build-docker-image
     waitFor: ["get-secret"]
-    args: ["build", "-t", "gcr.io/$PROJECT_ID/kurashi-frontpage-prod", "."]
+    args: ["build", "-t", "gcr.io/$PROJECT_ID/kurashi-frontpage-prod-$SHORT_SHA", "."]
     env:
       - "GOOGLE_APPLICATION_CREDENTIALS=/workspace/cloudsql-access.json"
 
