@@ -18,6 +18,7 @@ model User {
   isBlogAuthor           Boolean @default(false)
   // test field
   pleaseWorkTheMigration Boolean @default(false)
+  testMigration          Boolean @default(false)
 }
 
 model Catalog {

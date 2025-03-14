@@ -5,7 +5,7 @@ const AdminPage: React.FC = async () => {
   return (
     <div>
       <div>KURASHI DASHBOARD</div>
-      <div><Link href='/admin/blog'>BLOG</Link></div>
+      <div><Link href='/'>BLOG</Link></div>
     </div>
   )
 }

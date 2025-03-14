@@ -1,37 +1,34 @@
 steps:
-  - name: "node:18"
-    entrypoint: npm
-    args: ["run", "create-env"]
-    env:
-      - 'DATABASE_URL=${_DATABASE_URL}'
-      - 'SITE_URL=${_SITE_URL}'
-  - id: install-proxy
-    name: 'gcr.io/cloud-builders/wget'
+  - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+    entrypoint: 'bash'
+    id: get-secret
+    args:
+      - '-c'
+      - |
+        gcloud secrets versions access latest --secret=cloudsql-access-key > /workspace/cloudsql-access.json
+        ls -la /workspace/cloudsql-access.json  # Debugging step
+  - name: 'gcr.io/cloud-builders/gcloud'
+    waitFor: ["get-secret"]
+    id: move-credentials-file
     entrypoint: bash
     args:
-      - "-c"
-      - "wget https://storage.googleapis.com/cloud-sql-connectors/cloud-sql-proxy/v2.8.1/cloud-sql-proxy.linux.amd64 -O cloud_sql_proxy && chmod +x cloud_sql_proxy"
-  - id: database-deploy
-    waitFor: ['install-proxy']
-    name: 'node:18'
-    entrypoint: sh
-    args:
-      - "-c"
-      - "(./cloud_sql_proxy --port 5432 kurashi-frontpage-419616:us-central1:kurashi-production-db & sleep 2 && npx prisma migrate deploy)"
-  - id: build-nextjs-app
-    waitFor: ['database-deploy']
-    name: 'node:18'
-    entrypoint: sh
-    args:
-      - "-c"
-      - "(./cloud_sql_proxy --port 5432 kurashi-frontpage-419616:us-central1:kurashi-production-db & sleep 2 && npm run build)"
-  - name: "gcr.io/cloud-builders/docker"
+      - '-e'
+      - '-c'
+      - |
+        cp /workspace/cloudsql-access.json cloudsql-cre.json
+
+  - name: 'gcr.io/cloud-builders/docker'
     id: build-docker-image
-    waitFor: ["build-nextjs-app", "database-deploy", "install-proxy"]
-    args: ["build", "--build-arg", "SITE_URL=$_SITE_URL", "-t", "gcr.io/$PROJECT_ID/kurashi-frontpage-prod-$SHORT_SHA", "."]
+    waitFor: ["get-secret"]
+    args:
+      - "build"
+      - "-t"
+      - "gcr.io/$PROJECT_ID/kurashi-frontpage-prod-$SHORT_SHA"
+      - "."
+
   - name: "gcr.io/cloud-builders/docker"
-    waitFor: ["build-nextjs-app", "database-deploy", "install-proxy", "build-docker-image"]
     args: ["push", "gcr.io/$PROJECT_ID/kurashi-frontpage-prod-$SHORT_SHA"]
+
   - name: "gcr.io/google.com/cloudsdktool/cloud-sdk"
     id: deploy-to-cloudrun
     entrypoint: gcloud
