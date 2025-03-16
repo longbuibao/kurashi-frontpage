@@ -11,6 +11,6 @@ content:
       fields: [ coverImage, title, date ]
     fields:
       - { name: title, label: Title, type: string, required: true }
-      - { name: title, label: Title, type: string, required: true }
-      - { name: title, label: Title, type: string, required: true }
+      - { name: title1, label: Title1, type: string, required: true }
+      - { name: title2, label: Title2, type: string, required: true }
     filename: '{fields.title}.md'
