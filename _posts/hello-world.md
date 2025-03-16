@@ -1,8 +1,5 @@
 ---
 title: hello world
-excerpt: hello world
-date: 2025-03-05T23:57:00.000Z
-author:
-  name: long bui bao
+title1: hello world 2
+title2: hello world 3
 ---
-# SAY HELLO
