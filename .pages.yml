@@ -8,13 +8,7 @@ media:
     name: files
     input: files
     output: /files
-content:
-  - name: tag
-    label: Tag
-    type: select
-    options:
-      multiple: true
-      values: [Technology, Programming, AI, Web, Data, ML, Cybersecurity, Cloud, DevOps, Software] 
+content: 
   - name: posts
     label: Posts
     type: collection
@@ -22,6 +16,12 @@ content:
     view:
       fields: [ coverImage, title, date ]
     fields:
+      - name: tag
+        label: Tag
+        type: select
+        options:
+          multiple: true
+          values: [Technology, Programming, AI, Web, Data, ML, Cybersecurity, Cloud, DevOps, Software]
       - { name: title, label: Title, type: string, required: true }
       - { name: excerpt, label: Excerpt, type: string }
       - { name: coverImage, label: Cover image, type: image }
