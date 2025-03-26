@@ -1,8 +1,20 @@
 media:
-  input: public/assets
-  output: /assets
-  categories: [ "image" ]
+  - label: Images
+    name: images
+    input: images
+    output: /images
+    categories: [ image ]
+  - label: Files
+    name: files
+    input: files
+    output: /files
 content:
+  - name: tag
+    label: Tag
+    type: select
+    options:
+      multiple: true
+      values: [Technology, Programming, AI, Web, Data, ML, Cybersecurity, Cloud, DevOps, Software] 
   - name: posts
     label: Posts
     type: collection
