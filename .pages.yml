@@ -1,8 +1,8 @@
 media:
   - label: Images
     name: images
-    input: images
-    output: images
+    input: public/images
+    output: /public/images
     categories: [ image ]
   - label: Files
     name: files
