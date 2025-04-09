@@ -1,12 +1,12 @@
 media:
   - label: Images
     name: images
-    input: images
+    input: public/images
     output: /public/images
     categories: [ image ]
   - label: Files
     name: files
-    input: files
+    input: public/files
     output: /public/files
 content: 
   - name: posts
