@@ -3,7 +3,7 @@ tag:
   - Technology
   - AI
 title: Tip Working From Home
-coverImage: /public/images/cover_image.jpg
+coverImage: /public/images/cover_image_2.webp
 date: 2025-04-10T22:20:00.000Z
 author:
   name: Diện Võ
