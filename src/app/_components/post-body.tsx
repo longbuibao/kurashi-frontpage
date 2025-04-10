@@ -7,9 +7,10 @@ interface Props {
 }
 
 export function PostBody ({ content }: Props): React.ReactElement {
+  const processedContent = content.replace(/\/public\/images/g, '/images')
   return (
-    <div className='max-w-2xl mx-auto'>
-      <Markdown remarkPlugins={[remarkGfm]} rehypePlugins={[rehypeRaw]}>{content}</Markdown>
+    <div className='prose mx-auto w-[80%]'>
+      <Markdown remarkPlugins={[remarkGfm]} rehypePlugins={[rehypeRaw]}>{processedContent}</Markdown>
     </div>
   )
 }

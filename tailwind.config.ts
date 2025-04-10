@@ -30,12 +30,23 @@ const config: Config = {
       },
       backgroundColor: {
         'kurashi-black': 'rgba(0, 0, 0, 0.25)'
+      },
+      typography: {
+        DEFAULT: {
+          css: {
+            'p[style*="text-align:center"] > img': {
+              marginLeft: 'auto',
+              marginRight: 'auto',
+              display: 'block'
+            }
+          }
+        }
       }
     },
     fontFamily: {
       body: ['Futura']
     }
   },
-  plugins: []
+  plugins: [require('@tailwindcss/typography')]
 }
 export default config
