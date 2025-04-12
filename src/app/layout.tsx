@@ -15,7 +15,8 @@ import { BackToTopButton } from '@/components/back-to-top'
 import { lng } from '@/app/const'
 
 export const metadata = {
-  title: 'Trang chủ Kurashi'
+  title: 'Trang chủ Kurashi',
+  metadataBase: new URL('https://kurashi.com.vn'),
 }
 
 interface RootProps {
