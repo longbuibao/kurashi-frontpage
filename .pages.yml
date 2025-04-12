@@ -23,7 +23,7 @@ content:
           multiple: true
           values: [Technology, Programming, AI, Web, Data, ML, Cybersecurity, Cloud, DevOps, Software]
       - { name: title, label: Title, type: string, required: true }
-      - { name: excerpt, label: Excerpt, type: string }
+      - { name: excerpt, label: Description, type: string, required: true }
       - { name: coverImage, label: Cover image, type: image, required: true }
       - { name: date, label: Date, type: date, options: { time: true, format: "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'" } }
       - name: author
