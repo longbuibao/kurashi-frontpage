@@ -1,10 +1,12 @@
 import React, { Suspense } from 'react'
 import { Metadata } from 'next'
+import * as fs from 'fs/promises'
+import path from 'path'
+import matter from 'gray-matter'
 
 import { BlogCardHomepage } from '@/components/blog-card'
 import { BlogRegister } from '@/components/blog-register'
 import * as skeleton from './skeleton'
-import prisma from '@/lib/prisma'
 import { getMetadata } from '@/utils'
 
 export async function generateMetadata (): Promise<Metadata> {
@@ -15,7 +17,33 @@ export async function generateMetadata (): Promise<Metadata> {
 
 // @ts-expect-error
 const AllBlogs: React.FC = async (): React.ReactElement => {
-  const blogs = await prisma.post.findMany({ where: { published: true }, skip: 0, take: 4, include: { postCategory: true, author: true } })
+  const postsDirectory = path.join(process.cwd(), '_posts')
+  const fileNames = await fs.readdir(postsDirectory)
+  const posts = await Promise.all(
+    fileNames
+      .filter((file) => file.endsWith('.md'))
+      .map(async (fileName) => {
+        const slug = fileName.replace(/\.md$/, '')
+        const fullPath = path.join(postsDirectory, fileName)
+        const fileContents = await fs.readFile(fullPath, 'utf8')
+        const { data, content } = matter(fileContents)
+        return {
+          slug,
+          ...data,
+          content
+        }
+      })
+  )
+  const blogs = posts.map(x => {
+    return {
+      url: `/blog/${x.slug}`,
+      thumbnail: (x as any).coverImage.replace('/public', ''),
+      title: (x as any).title,
+      summary: (x as any).excerpt,
+      id: (x as any).title
+    }
+  })
+
   return (
     <div className='w-4/5 mx-auto py-10'>
       <div className='max-md:w-full flex flex-col max-md:flex-col max-md:gap-10'>
@@ -31,7 +59,9 @@ const AllBlogs: React.FC = async (): React.ReactElement => {
               </p>
             </div>
           </div>
-          <div className='flex flex-row gap-5 max-md:flex-wrap max-md:pt-0 pt-10 pb-16 items-center justify-between'>{blogs.map(x => <BlogCardHomepage blog={x} key={x.id} />)}</div>
+          <div className='flex flex-row gap-5 max-md:flex-wrap max-md:pt-0 pt-10 pb-16 items-center justify-between'>
+            {blogs.map(x => <BlogCardHomepage blog={x} key={x.id} />)}
+          </div>
         </Suspense>
       </div>
     </div>
