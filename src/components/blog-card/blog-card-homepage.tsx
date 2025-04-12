@@ -5,7 +5,7 @@ import Link from 'next/link'
 import { UrlObject } from 'url'
 
 interface BlogCardHomepageProps {
-  blog: Partial<Post>
+  blog: Post
 }
 
 const BlogCardHomepage: React.FC<BlogCardHomepageProps> = ({ blog }) => {
