@@ -8,6 +8,7 @@ import { BlogCardHomepage } from '@/components/blog-card'
 import { BlogRegister } from '@/components/blog-register'
 import * as skeleton from './skeleton'
 import { getMetadata } from '@/utils'
+import { Post } from '@prisma/client'
 
 export async function generateMetadata (): Promise<Metadata> {
   const defaultTitle = 'Tất cả bài viết'
@@ -60,7 +61,7 @@ const AllBlogs: React.FC = async (): React.ReactElement => {
             </div>
           </div>
           <div className='flex flex-row gap-5 max-md:flex-wrap max-md:pt-0 pt-10 pb-16 items-center justify-between'>
-            {blogs.map(x => <BlogCardHomepage blog={x} key={x.id} />)}
+            {blogs.map(x => <BlogCardHomepage blog={x as any as Post} key={x.id} />)}
           </div>
         </Suspense>
       </div>
