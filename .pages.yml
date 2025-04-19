@@ -16,12 +16,24 @@ content:
     view:
       fields: [ coverImage, title, date ]
     fields:
-      - name: tag
-        label: Tag
+      - name: fileName
+        label: File name
+        type: string
+        required: true
+      - name: category
+        label: Category
+        type: select
+        required: true
+        options:
+          multiple: true
+          values: [Tấm ốp, Phụ kiện nam châm, Kinh nghiệm nội thất]
+      - name: subcategroy
+        label: Sub Category
+        required: true
         type: select
         options:
           multiple: true
-          values: [Technology, Programming, AI, Web, Data, ML, Cybersecurity, Cloud, DevOps, Software]
+          values: [Tấm ốp thép tráng men, Tấm ốp tường vân đá, Phụ kiện bếp, Nội thất hay]          
       - { name: title, label: Title, type: string, required: true }
       - { name: excerpt, label: Description, type: string, required: true }
       - { name: coverImage, label: Cover image, type: image, required: true }
@@ -38,4 +50,4 @@ content:
         fields:
           - { name: url, label: URL, type: image }
       - { name: body, label: Body, type: rich-text }
-    filename: '{fields.title}.md'
+    filename: '{fields.fileName}.md'
