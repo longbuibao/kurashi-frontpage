@@ -111,7 +111,8 @@ const AllBlogs: React.FC = async (): React.ReactElement => {
       }
     })
     .reduce<Record<string, BlogPost[]>>((acc, post) => {
-    const category = post.category || 'Uncategorized'
+    const hack = post as any
+    const category = hack.category || 'Uncategorized'
     if (!acc[category]) {
       acc[category] = []
     }

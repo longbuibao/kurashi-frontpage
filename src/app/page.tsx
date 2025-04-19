@@ -9,6 +9,11 @@ import { KurashiCategories, KurashiCategoriesSkeleton } from '@/components/kuras
 import { carouselSliderImages, carouselSliderImagesMobile } from '@/constants'
 import EmblaCarousel from '@/components/embla-carousel/embla-carousel'
 import { lng } from '@/app/const'
+import { Post } from '@prisma/client'
+
+interface Hack extends Post {
+  subcategroy: string[]
+}
 
 export const metadata = {
   title: 'Kurashi Corp'
@@ -68,7 +73,7 @@ const Page = async (): Promise<React.ReactElement> => {
           </div>
         </Link>
         <div className='flex flex-row gap-5 pt-10 pb-16 items-center justify-between max-md:flex-wrap max-md:mx-auto'>
-          {blogs.map(x => x).sort((x, y) => x.order - y.order).map(x => <BlogCardHomepage blog={x} key={x.id} />)}
+          {blogs.map(x => x).sort((x, y) => x.order - y.order).map(x => <BlogCardHomepage blog={x as any as Hack} key={x.id} />)}
         </div>
       </div>
       <div className='hidden max-md:block max-md:mt-10 text-secondary'>
