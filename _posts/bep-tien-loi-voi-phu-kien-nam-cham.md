@@ -4,6 +4,7 @@ category:
   - Phụ kiện nam châm
 subcategroy:
   - Phụ kiện bếp
+  - Tấm ốp tường vân đá
 title: BẾP TIỆN LỢI VỚI PHỤ KIỆN NAM CHÂM, DI CHUYỂN TỰ DO
 excerpt: Giải pháp lưu trữ mới nhất có nhiều điểm ưu việt hơn các giải pháp lưu
   trữ truyền thống trong không gian bếp.
@@ -51,5 +52,4 @@ Mỗi loại phụ kiện nam châm có một tiêu chuẩn kĩ thuật quan tr�
 
 Chỉ cần sử dụng đúng tải trọng qui định là bạn có thể an tâm về độ bám dính và thời gian sử dụng lâu dài.
 
-Với nhiều loại phụ kiện nam châm đa năng được thiết kế kĩ lưỡng, dễ dàng di chuyển bạn có thể tối ưu diện tích sử dụng và nâng cao độ tiện lợi cho căn bếp của gia đình.[  
-](http://localhost:3000/)
+Với nhiều loại phụ kiện nam châm đa năng được thiết kế kĩ lưỡng, dễ dàng di chuyển bạn có thể tối ưu diện tích sử dụng và nâng cao độ tiện lợi cho căn bếp của gia đình.[](http://localhost:3000/)
