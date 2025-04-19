@@ -33,7 +33,7 @@ content:
         type: select
         options:
           multiple: true
-          values: [Tấm ốp thép tráng men, Tấm ốp tường vân đá, Phụ kiện bếp]          
+          values: [Tấm ốp thép tráng men, Tấm ốp tường vân đá, Phụ kiện bếp, Nội thất hay]          
       - { name: title, label: Title, type: string, required: true }
       - { name: excerpt, label: Description, type: string, required: true }
       - { name: coverImage, label: Cover image, type: image, required: true }
