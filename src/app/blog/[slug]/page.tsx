@@ -16,8 +16,6 @@ export default async function Post (props: Params): Promise<React.ReactElement> 
     return notFound()
   }
 
-  console.log(post)
-
   return (
     <main>
       <Container>
@@ -37,9 +35,8 @@ export default async function Post (props: Params): Promise<React.ReactElement> 
                   </div>
                   <div>
                     <div className='hidden md:block md:mb-12'>
-                      <Avatar name={post.author.name} picture={post.author.picture} />
+                      <Avatar name={post.author.name} picture={post.author.picture} date={post.date.toLocaleDateString('vi-VN')} />
                     </div>
-                    <p className='text-black'>{post.date.toString()}</p>
                     <div className='flex flex-row gap-3 flex-nowrap items-center mt-3'>
                       <LogoFacebook />
                       <LogoZalo />

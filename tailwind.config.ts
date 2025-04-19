@@ -37,7 +37,7 @@ const config: Config = {
             'p[style*="text-align:center"] > img': {
               marginLeft: 'auto',
               marginRight: 'auto',
-              display: 'block'
+              display: 'inline-block'
             }
           }
         }
