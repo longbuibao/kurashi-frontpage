@@ -1,4 +1,8 @@
 ---
+category:
+  - Tấm ốp
+subcategroy:
+  - Tấm ốp thép tráng men
 title: Thép tráng men Kurashi
 excerpt: Cấu tạo 6 lớp và tính chất đặc biệt của thép tráng men Kurashi
 coverImage: /public/images/cover_image_2.webp
