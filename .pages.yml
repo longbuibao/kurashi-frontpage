@@ -50,4 +50,4 @@ content:
         fields:
           - { name: url, label: URL, type: image }
       - { name: body, label: Body, type: rich-text }
-    filename: '{fields.title}.md'
+    filename: '{fields.fileName}.md'
