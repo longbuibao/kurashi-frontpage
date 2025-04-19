@@ -9,6 +9,7 @@ excerpt: Tấm ốp tường thép tráng men là giải pháp ốp tường hi�
   giữa độ bền cao, khả năng chống bám bẩn và tính thẩm mỹ vượt trội, lý tưởng
   cho các công trình yêu cầu vệ sinh và độ bền lâu dài.
 coverImage: /public/images/cover_image_2.webp
+date: 2025-04-19T13:50:00.000Z
 author:
   name: Diện Võ
   picture: /public/images/author.png
