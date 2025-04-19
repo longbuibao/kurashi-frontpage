@@ -19,11 +19,13 @@ content:
       - name: category
         label: Category
         type: select
+        required: true
         options:
           multiple: true
           values: [Tấm ốp, Phụ kiện nam châm, Kinh nghiệm nội thất]
       - name: subcategroy
         label: Sub Category
+        required: true
         type: select
         options:
           multiple: true
