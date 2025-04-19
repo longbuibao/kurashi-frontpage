@@ -16,6 +16,10 @@ content:
     view:
       fields: [ coverImage, title, date ]
     fields:
+      - name: fileName
+        label: File name
+        type: string
+        required: true
       - name: category
         label: Category
         type: select
