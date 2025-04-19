@@ -16,18 +16,18 @@ content:
     view:
       fields: [ coverImage, title, date ]
     fields:
-      - name: tag
-        label: Tag
+      - name: category
+        label: Category
         type: select
         options:
           multiple: true
-          values: [Phụ kiện bếp, Phụ kiện nam châm, Thép tráng men]
+          values: [Tấm ốp, Phụ kiện nam châm, Kinh nghiệm nội thất]
       - name: subcategroy
         label: Sub Category
         type: select
         options:
           multiple: true
-          values: [Sub Phụ kiện bếp, Sub Phụ kiện nam châm, Sub Thép tráng men]          
+          values: [Tấm ốp thép tráng men, Tấm ốp tường vân đá, Phụ kiện bếp]          
       - { name: title, label: Title, type: string, required: true }
       - { name: excerpt, label: Description, type: string, required: true }
       - { name: coverImage, label: Cover image, type: image, required: true }
