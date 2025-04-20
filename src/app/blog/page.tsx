@@ -5,11 +5,9 @@ import path from 'path'
 import matter from 'gray-matter'
 import Image from 'next/image'
 import { v4 as uuidv4 } from 'uuid'
-import { Post } from '@prisma/client'
 import Link from 'next/link'
 import { UrlObject } from 'url'
 
-import { BlogCardHomepage } from '@/components/blog-card'
 import { BlogRegister } from '@/components/blog-register'
 import * as skeleton from './skeleton'
 import { getMetadata } from '@/utils'
@@ -32,13 +30,9 @@ export async function generateMetadata (): Promise<Metadata> {
   return await getMetadata(pageName, defaultTitle)
 }
 
-interface Hack extends Post {
-  subcategroy: string[]
-}
-
 interface BlogPost {
   slug: string
-  category: string[]
+  category: string
   subcategroy: string[]
   title: string
   excerpt: string
@@ -53,31 +47,29 @@ interface BlogPost {
   }
   content: string
   fileName: string
+  isSmallCard?: boolean
 }
 
-const MainBlogCard: React.FC<BlogPost> = ({ author, date, title, subcategroy, excerpt, fileName }) => {
+const SimpleMainBlogCard: React.FC<BlogPost> = ({ coverImage, title, category, author, date, fileName, isSmallCard = false }) => {
   return (
-    <div className='flex flex-col gap-8'>
-      <div className='flex flex-row gap-5 items-center'>
-        <Image src={author.picture.replace('/public', '')} width={30} height={30} alt='tác giả' />
-        <div>viết bởi <span className='font-semibold'>{author.name}</span> vào ngày <span className='font-semibold'>{date.toLocaleDateString('vi-VN')}</span></div>
-      </div>
-      <div>
-        <Link className='font-extrabold text-3xl hover:text-main duration-150 ease-in-out' href={`/blog/${fileName}`}>
-          {title}
-        </Link>
-        <div className='flex flex-row gap-2 my-3'>
-          {subcategroy.map(x => <Chip key={x} label={x} />)}
+    <Link href={`/blog/${fileName}`}>
+      <div className='rounded-xl shadow-xl'>
+        <Image className='rounded-tl-xl rounded-tr-xl' src={coverImage.replace('/public', '')} alt='test' width={640} height={640} />
+        <div className='p-5 flex flex-col gap-5'>
+          <div className='w-fit'>
+            <Chip label={category as any as string} />
+          </div>
+          {isSmallCard ? <p className='line-clamp-1 text-lg font-semibold'>{title}</p> : <div className='text-2xl font-semibold'>{title}</div>}
+          {isSmallCard
+            ? <></>
+            : (
+              <div className='flex flex-row gap-5 items-center'>
+                <Image src={author.picture.replace('/public', '')} width={30} height={30} alt='tác giả' />
+                <div>viết bởi <span className='font-semibold'>{author.name}</span> vào ngày <span className='font-semibold'>{date.toLocaleDateString('vi-VN')}</span></div>
+              </div>)}
         </div>
       </div>
-      <div>{excerpt}</div>
-      <Link href={`/blog/${fileName}`} className='transition-colors duration-300 group border border-main text-gray-800 text-sm px-3 py-1 rounded-full w-fit hover:bg-main hover:text-kurashiX'>
-        <div className='transition-colors duration-300 group-hover:text-kurashiX'>
-          <i className='fa-regular fa-circle-right mr-3' />
-          Tiếp tục đọc
-        </div>
-      </Link>
-    </div>
+    </Link>
   )
 }
 
@@ -96,28 +88,11 @@ const AllBlogs: React.FC = async (): React.ReactElement => {
         return {
           slug,
           ...data,
-          content
+          content,
+          realFileName: fileName
         }
       })
   )
-
-  const postsByCategory = posts
-    .map(x => {
-      return {
-        ...x,
-        url: `/blog/${x.slug}`,
-        thumbnail: (x as any).coverImage.replace('/public', ''),
-        summary: (x as any).excerpt
-      }
-    })
-    .reduce<Record<string, BlogPost[]>>((acc, post) => {
-    const category = post.category || 'Uncategorized'
-    if (!acc[category]) {
-      acc[category] = []
-    }
-    acc[category].push(post as any as BlogPost)
-    return acc
-  }, {})
 
   const blogs = posts.map(x => {
     return {
@@ -131,10 +106,10 @@ const AllBlogs: React.FC = async (): React.ReactElement => {
   })
 
   const firstBlog = posts[0] as any as BlogPost
-  const firstTwoBlogs = blogs.splice(0, 3)
+  const topArticles = blogs.splice(0, 3)
 
   return (
-    <div className='w-4/5 mx-auto py-10'>
+    <div className='w-[57%] mx-auto py-10 max-md:w-[90%]'>
       <div className='max-md:w-full flex flex-col max-md:flex-col max-md:gap-10'>
         <Suspense>
           <div className='flex flex-col max-md:w-full max-md:p-5'>
@@ -149,15 +124,15 @@ const AllBlogs: React.FC = async (): React.ReactElement => {
             </div>
           </div>
           <div className='flex flex-row gap-14 mt-5 max-md:flex-col'>
-            <div className='pr-16'>
-              <MainBlogCard {...firstBlog} />
+            <div className='w-1/2 max-md:w-[90%] max-md:mx-auto'>
+              <SimpleMainBlogCard {...firstBlog} />
             </div>
-            <div className='flex flex-col gap-6 w-1/3 max-md:w-full'>
+            <div className='flex flex-col gap-6 max-md:w-full mx-auto'>
               <div className='text-xl text-center text-kurashiX bg-main p-3'>
                 <i className='fa-regular fa-star' />Top bài viết dành cho bạn
               </div>
-              <div className='flex flex-col items-center justify-between h-full max-md:gap-5'>
-                {firstTwoBlogs.map((x, y) => {
+              <div className='flex flex-col items-center gap-10 h-full max-md:gap-5'>
+                {topArticles.map((x, y) => {
                   return (
                     <div key={uuidv4()} className='flex flex-row gap-3'>
                       <RibbonBadge number={y + 1} />
@@ -175,19 +150,11 @@ const AllBlogs: React.FC = async (): React.ReactElement => {
               </div>
             </div>
           </div>
-          <div className='flex flex-col gap-5 items-center justify-between mt-10'>
-            {Object.entries(postsByCategory).map(([category, posts]) => (
-              <div key={category} className='w-full'>
-                <h2 className='text-2xl font-semibold text-gray-800 my-10'>
-                  {category}
-                </h2>
-                <div className='flex flex-row gap-5 max-md:flex-wrap max-md:pt-0 items-center justify-between'>
-                  {posts.map((post) => (
-                    <BlogCardHomepage blog={post as any as Hack} key={post.slug} />
-                  ))}
-                </div>
-              </div>
-            ))}
+          <div className='flex flex-col gap-5 items-center justify-between mt-20 max-md:mt-4'>
+            <div className='text-2xl font-semibold mb-5'>Các bài viết khác</div>
+            <div className='grid grid-cols-3 grid-rows-2 gap-10 max-md:grid-cols-2 max-md:grid-rows-3 max-md:gap-5'>
+              {posts.splice(0, 6).map(x => <SimpleMainBlogCard {...(x as any as BlogPost)} key={x.realFileName} isSmallCard />)}
+            </div>
           </div>
         </Suspense>
       </div>

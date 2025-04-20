@@ -3,7 +3,7 @@ import Image from 'next/image'
 interface Props {
   name: string
   picture: string
-  date: string
+  date?: string
 }
 
 const Avatar = ({ name, picture, date }: Props): React.ReactElement => {

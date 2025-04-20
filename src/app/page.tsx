@@ -68,7 +68,7 @@ const Page = async (): Promise<React.ReactElement> => {
           </div>
         </Link>
         <div className='flex flex-row gap-5 pt-10 pb-16 items-center justify-between max-md:flex-wrap max-md:mx-auto'>
-          {blogs.map(x => x).sort((x, y) => x.order - y.order).map(x => <BlogCardHomepage blog={x} key={x.id} />)}
+          {blogs.map(x => x).sort((x, y) => x.order - y.order).map(x => <BlogCardHomepage blog={x as any} key={x.id} />)}
         </div>
       </div>
       <div className='hidden max-md:block max-md:mt-10 text-secondary'>
