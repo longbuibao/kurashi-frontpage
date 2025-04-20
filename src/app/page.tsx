@@ -9,6 +9,11 @@ import { KurashiCategories, KurashiCategoriesSkeleton } from '@/components/kuras
 import { carouselSliderImages, carouselSliderImagesMobile } from '@/constants'
 import EmblaCarousel from '@/components/embla-carousel/embla-carousel'
 import { lng } from '@/app/const'
+import { Post } from '@prisma/client'
+
+interface Hack extends Post {
+  subcategroy: string[]
+}
 
 export const metadata = {
   title: 'Kurashi Corp'

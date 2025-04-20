@@ -7,7 +7,7 @@ media:
   - label: Files
     name: files
     input: public/files
-    output: /public/files
+    output: files
 content: 
   - name: posts
     label: Posts
