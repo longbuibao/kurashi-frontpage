@@ -25,7 +25,6 @@ content:
         type: select
         required: true
         options:
-          multiple: true
           values: [Tấm ốp, Phụ kiện nam châm, Kinh nghiệm nội thất]
       - name: subcategroy
         label: Sub Category
