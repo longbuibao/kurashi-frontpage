@@ -54,7 +54,7 @@ const SimpleMainBlogCard: React.FC<BlogPost> = ({ coverImage, title, category, a
   return (
     <Link href={`/blog/${fileName}`}>
       <div className='rounded-xl shadow-xl'>
-        <Image className='rounded-tl-xl rounded-tr-xl' src={coverImage.replace('/public', '')} alt='test' width={640} height={640} />
+        <Image className='rounded-tl-xl rounded-tr-xl w-full' src={coverImage.replace('/public', '')} alt='test' width={640} height={640} />
         <div className='p-5 flex flex-col gap-5'>
           <div className='w-fit'>
             <Chip label={category as any as string} />
@@ -124,7 +124,7 @@ const AllBlogs: React.FC = async (): React.ReactElement => {
             </div>
           </div>
           <div className='flex flex-row gap-14 mt-5 max-md:flex-col'>
-            <div className='w-1/2 max-md:w-[90%] max-md:mx-auto'>
+            <div className='w-full max-md:w-[90%] max-md:mx-auto'>
               <SimpleMainBlogCard {...firstBlog} />
             </div>
             <div className='flex flex-col gap-6 max-md:w-full mx-auto'>
