@@ -16,7 +16,7 @@ import { Chip } from '@/components/blog-sub-category-chip'
 const RibbonBadge = ({ number = 1, color = 'bg-orange-500', textColor = 'text-white' }): React.ReactElement => {
   return (
     <div
-      className='w-6 h-10 bg-main text-kurashiX text-center text-sm font-bold relative max-md:px-2'
+      className='w-6 h-10 bg-main text-kurashiX text-center text-sm font-bold relative max-md:px-2 px-3'
       style={{ clipPath: 'polygon(0 0, 100% 0, 100% 80%, 50% 100%, 0 80%)' }}
     >
       <div className='flex items-center justify-center h-full'>{number}</div>
