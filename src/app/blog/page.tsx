@@ -12,8 +12,10 @@ import { BlogRegister } from '@/components/blog-register'
 import * as skeleton from './skeleton'
 import { getMetadata } from '@/utils'
 import { Chip } from '@/components/blog-sub-category-chip'
+import Dropdown from '@/components/dropdown/dropdown'
+import DropdownItem from '@/components/dropdown/dropdown-item'
 
-const RibbonBadge = ({ number = 1, color = 'bg-orange-500', textColor = 'text-white' }): React.ReactElement => {
+const RibbonBadge = ({ number = 1 }): React.ReactElement => {
   return (
     <div
       className='w-6 h-10 bg-main text-kurashiX text-center text-sm font-bold relative max-md:px-2 px-3'
@@ -105,8 +107,24 @@ const AllBlogs: React.FC = async (): React.ReactElement => {
     }
   })
 
+  const tags = new Set(posts.map(x => (x as any as BlogPost).subcategory).flat()).values()
   const firstBlog = posts[0] as any as BlogPost
   const topArticles = blogs.splice(0, 3)
+
+  const categoryMap: Record<string, Set<string>> = {}
+  posts.forEach(post => {
+    const hack = post as any as BlogPost
+    if (!categoryMap[hack.category]) {
+      categoryMap[hack.category] = new Set()
+    }
+    hack.subcategory.forEach(sub => categoryMap[hack.category].add(sub))
+  })
+
+  const groupSubCategoriesByCategory: Record<string, string[]> = {}
+
+  for (const [category, subSet] of Object.entries(categoryMap)) {
+    groupSubCategoriesByCategory[category] = Array.from(subSet)
+  }
 
   return (
     <div className='w-[57%] mx-auto py-10 max-md:w-[90%]'>
@@ -114,9 +132,22 @@ const AllBlogs: React.FC = async (): React.ReactElement => {
         <Suspense>
           <div className='flex flex-col max-md:w-full max-md:p-5'>
             <div className='flex flex-col gap-5 mb-10 max-md:mb-5'>
-              <div className='flex-row flex gap-3 border-b-[1px] border-main pb-5'>
+              <div className='flex-row flex gap-3 border-b-[1px] border-main pb-5 max-md:flex-col'>
                 <div className='mt-auto text-xl leading-9'>KURASHI</div>
                 <div className='text-7xl text-main font-bold'>BLOG</div>
+                <div className='flex flex-row gap-3 self-end justify-self-end ml-auto'>
+                  {Object.entries(groupSubCategoriesByCategory).map(([buttonText, items]) => (
+                    <Dropdown
+                      key={buttonText} buttonText={buttonText} content={
+                        <>
+                          {items.map((item, index) => (
+                            <DropdownItem key={index}>{item}</DropdownItem>
+                          ))}
+                        </>
+                    }
+                    />
+                  ))}
+                </div>
               </div>
               <p className='font-thin'>
                 Xu hướng, công nghệ và vật liệu về nội thất mới nhất từ Nhật Bản
@@ -153,7 +184,11 @@ const AllBlogs: React.FC = async (): React.ReactElement => {
             </div>
           </div>
           <div className='flex flex-col gap-5 items-center justify-between mt-20 max-md:mt-4'>
-            <div className='text-2xl font-semibold mb-5'>Các bài viết khác</div>
+            <div className='text-2xl font-semibold'>Các bài viết khác</div>
+            <div className='flex flex-row gap-5 self-start my-6'>
+              <div>Tags</div>
+              {[...tags].map(x => <Link key={x} href='/'><Chip label={x} /></Link>)}
+            </div>
             <div className='grid grid-cols-3 grid-rows-2 gap-10 max-md:grid-cols-2 max-md:grid-rows-3 max-md:gap-5'>
               {posts.splice(0, 6).map(x => <SimpleMainBlogCard {...(x as any as BlogPost)} key={x.realFileName} isSmallCard />)}
             </div>
@@ -175,6 +210,7 @@ const BlogsPage: React.FC = async () => {
         </div>
         <div className='flex flex-col gap-10 items-center mx-auto'>
           <BlogRegister />
+
         </div>
       </div>
     </div>

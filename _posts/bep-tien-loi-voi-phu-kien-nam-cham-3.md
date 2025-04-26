@@ -2,7 +2,7 @@
 fileName: bep-tien-loi-voi-phu-kien-nam-cham
 category:
   - Tấm ốp
-subcategroy:
+subcategory:
   - Phụ kiện bếp
   - Tấm ốp tường vân đá
   - Nội thất hay

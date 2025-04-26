@@ -12,7 +12,7 @@ import { lng } from '@/app/const'
 import { Post } from '@prisma/client'
 
 interface Hack extends Post {
-  subcategroy: string[]
+  subcategory: string[]
 }
 
 export const metadata = {

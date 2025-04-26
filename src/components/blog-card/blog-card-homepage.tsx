@@ -6,7 +6,7 @@ import { UrlObject } from 'url'
 import { Chip } from '@/components/blog-sub-category-chip'
 
 interface Hack extends Post {
-  subcategroy: string[]
+  subcategory: string[]
 }
 
 interface BlogCardHomepageProps {
@@ -22,7 +22,7 @@ const BlogCardHomepage: React.FC<BlogCardHomepageProps> = ({ blog }) => {
           <div className='flex flex-col gap-3'>
             <div className='font-bold line-clamp-2 group-hover:text-kurashiX'>{blog.title}</div>
             <div className='flex flex-row gap-2'>
-              {blog.subcategroy?.map(x => <Chip key={x} label={x} />)}
+              {blog.subcategory?.map(x => <Chip key={x} label={x} />)}
             </div>
             <p className='font-thin line-clamp-1 group-hover:text-kurashiX mt-3'>{blog.summary}</p>
           </div>
