@@ -33,7 +33,7 @@ export async function generateMetadata (): Promise<Metadata> {
 interface BlogPost {
   slug: string
   category: string
-  subcategroy: string[]
+  subcategory: string[]
   title: string
   excerpt: string
   coverImage: string
@@ -138,7 +138,9 @@ const AllBlogs: React.FC = async (): React.ReactElement => {
                       <RibbonBadge number={y + 1} />
                       <div className='flex flex-col'>
                         <Link className='font-semibold hover:text-main duration-150 ease-in-out' href={x.url as any as UrlObject}>
-                          {x.title}
+                          <p className='line-clamp-1'>
+                            {x.title}
+                          </p>
                         </Link>
                         <div className='w-fit'>
                           <Chip label={x.category} />
