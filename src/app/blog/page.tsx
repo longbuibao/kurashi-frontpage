@@ -17,10 +17,7 @@ import DropdownItem from '@/components/dropdown/dropdown-item'
 
 const RibbonBadge = ({ number = 1 }): React.ReactElement => {
   return (
-    <div
-      className='w-6 h-10 bg-main text-kurashiX text-center text-sm font-bold relative max-md:px-2 px-3'
-      style={{ clipPath: 'polygon(0 0, 100% 0, 100% 80%, 50% 100%, 0 80%)' }}
-    >
+    <div className='w-6 h-10 bg-[#F5F7F8] text-main font-semibold text-center text-sm relative max-md:px-2 px-5 rounded-md'>
       <div className='flex items-center justify-center h-full'>{number}</div>
     </div>
   )
@@ -66,8 +63,11 @@ const SimpleMainBlogCard: React.FC<BlogPost> = ({ coverImage, title, category, a
             ? <></>
             : (
               <div className='flex flex-row gap-5 items-center'>
-                <Image src={author.picture.replace('/public', '')} width={30} height={30} alt='tác giả' />
-                <div>viết bởi <span className='font-semibold'>{author.name}</span> vào ngày <span className='font-semibold'>{date.toLocaleDateString('vi-VN')}</span></div>
+                <i className='fa-solid fa-user text-main' />
+                <div className='flex flex-row gap-3'>
+                  <div>{author.name}</div>
+                  <div>{date.toLocaleDateString('vi-VN')}</div>
+                </div>
               </div>)}
         </div>
       </div>
@@ -127,7 +127,7 @@ const AllBlogs: React.FC = async (): React.ReactElement => {
   }
 
   return (
-    <div className='w-[57%] mx-auto py-10 max-md:w-[90%]'>
+    <div className='w-4/5 mx-auto py-10 max-md:w-[90%]'>
       <div className='max-md:w-full flex flex-col max-md:flex-col max-md:gap-10'>
         <Suspense>
           <div className='flex flex-col max-md:w-full max-md:p-5'>
@@ -155,27 +155,24 @@ const AllBlogs: React.FC = async (): React.ReactElement => {
             </div>
           </div>
           <div className='flex flex-row gap-14 mt-5 max-md:flex-col'>
-            <div className='w-full max-md:w-[90%] max-md:mx-auto'>
+            <div className='w-[50%] max-md:w-[90%] max-md:mx-auto'>
               <SimpleMainBlogCard {...firstBlog} />
             </div>
-            <div className='flex flex-col gap-6 max-md:w-full mx-auto'>
-              <div className='text-xl text-center text-kurashiX bg-main p-3'>
-                <i className='fa-regular fa-star' />Top bài viết dành cho bạn
+            <div className='flex flex-col gap-6 max-md:w-full w-1/3 mx-auto bg-[#fcfaf7] p-5 h-fit'>
+              <div className='text-xl text-center text-main font-semibold'>
+                {'Top bài viết dành cho bạn'.toUpperCase()}
               </div>
               <div className='flex flex-col items-center gap-10 h-full max-md:gap-5'>
                 {topArticles.map((x, y) => {
                   return (
-                    <div key={uuidv4()} className='flex flex-row gap-3'>
+                    <div key={uuidv4()} className='flex flex-row gap-3 mx-auto'>
                       <RibbonBadge number={y + 1} />
-                      <div className='flex flex-col'>
+                      <div className='flex flex-col items-center justify-center'>
                         <Link className='font-semibold hover:text-main duration-150 ease-in-out' href={x.url as any as UrlObject}>
-                          <p className='line-clamp-1'>
+                          <p className='text-wrap'>
                             {x.title}
                           </p>
                         </Link>
-                        <div className='w-fit'>
-                          <Chip label={x.category} />
-                        </div>
                       </div>
                     </div>
                   )
@@ -210,7 +207,6 @@ const BlogsPage: React.FC = async () => {
         </div>
         <div className='flex flex-col gap-10 items-center mx-auto'>
           <BlogRegister />
-
         </div>
       </div>
     </div>

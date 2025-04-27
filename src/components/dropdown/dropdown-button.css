@@ -3,9 +3,9 @@
 	align-items: center;
 	width: fit-content;
 	padding: 1rem;
-	background-color: white;
+	background-color: #F5F7F8;
 	border-radius: 0.5rem;
-	box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+
 	cursor: pointer;
 	border: solid transparent 2px;
 }
