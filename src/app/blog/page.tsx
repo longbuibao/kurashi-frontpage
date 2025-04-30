@@ -158,7 +158,7 @@ const AllBlogs: React.FC = async (): React.ReactElement => {
             <div className='w-[50%] max-md:w-[90%] max-md:mx-auto'>
               <SimpleMainBlogCard {...firstBlog} />
             </div>
-            <div className='flex flex-col gap-6 max-md:w-full w-1/3 mx-auto bg-[#fcfaf7] p-5 h-fit'>
+            <div className='flex flex-col gap-6 max-md:w-full w-1/3 ml-auto bg-[#fcfaf7] p-5 h-fit'>
               <div className='text-xl text-center text-main font-semibold'>
                 {'Top bài viết dành cho bạn'.toUpperCase()}
               </div>
@@ -169,7 +169,7 @@ const AllBlogs: React.FC = async (): React.ReactElement => {
                       <RibbonBadge number={y + 1} />
                       <div className='flex flex-col items-center justify-center'>
                         <Link className='font-semibold hover:text-main duration-150 ease-in-out' href={x.url as any as UrlObject}>
-                          <p className='text-wrap'>
+                          <p className='text-wrap text-sm'>
                             {x.title}
                           </p>
                         </Link>
