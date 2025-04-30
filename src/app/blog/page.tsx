@@ -49,7 +49,8 @@ interface BlogPost {
   isSmallCard?: boolean
 }
 
-const SimpleMainBlogCard: React.FC<BlogPost> = ({ coverImage, title, category, author, date, fileName, isSmallCard = false }) => {
+const SimpleMainBlogCard: React.FC<BlogPost> = ({ coverImage, title, category, author, date, fileName, excerpt, isSmallCard = false }) => {
+  console.log(excerpt)
   return (
     <Link href={`/blog/${fileName}`}>
       <div className='rounded-xl shadow-xl'>
@@ -58,7 +59,13 @@ const SimpleMainBlogCard: React.FC<BlogPost> = ({ coverImage, title, category, a
           <div className='w-fit'>
             <Chip label={category as any as string} />
           </div>
-          {isSmallCard ? <p className='line-clamp-1 text-lg font-semibold'>{title}</p> : <div className='text-2xl font-semibold'>{title}</div>}
+          {isSmallCard
+            ? (
+              <div className='flex flex-col gap-3'>
+                <p className='line-clamp-1 text-lg font-semibold'>{title}</p>
+                <p className='line-clamp-2'>{excerpt}</p>
+              </div>)
+            : <div className='text-2xl font-semibold'>{title}</div>}
           {isSmallCard
             ? <></>
             : (
@@ -180,13 +187,12 @@ const AllBlogs: React.FC = async (): React.ReactElement => {
               </div>
             </div>
           </div>
-          <div className='flex flex-col gap-5 items-center justify-between mt-20 max-md:mt-4'>
-            <div className='text-2xl font-semibold'>Các bài viết khác</div>
+          <div className='flex flex-col gap-5 items-center justify-between mt-10 max-md:mt-4'>
             <div className='flex flex-row gap-5 self-start my-6'>
               <div>Tags</div>
               {[...tags].map(x => <Link key={x} href='/'><Chip label={x} /></Link>)}
             </div>
-            <div className='grid grid-cols-3 grid-rows-2 gap-10 max-md:grid-cols-2 max-md:grid-rows-3 max-md:gap-5'>
+            <div className='grid grid-cols-2 grid-rows-2 gap-10 max-md:grid-cols-2 max-md:grid-rows-3 max-md:gap-10 w-4/5 max-md:w-full'>
               {posts.splice(0, 6).map(x => <SimpleMainBlogCard {...(x as any as BlogPost)} key={x.realFileName} isSmallCard />)}
             </div>
           </div>
