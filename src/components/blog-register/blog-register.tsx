@@ -45,19 +45,18 @@ const BlogRegister: React.FC = () => {
           <div>Thông tin về công nghệ vật liệu, công nghệ gia công và kinh nghiệm thiết kế nội thất từ Nhật Bản</div>
         </div>
       </div>
-      <div className='flex flex-row gap-5 justify-center items-center mt-auto'>
-        <div className='flex flex-row items-center'>
-          <form onSubmit={form.handleSubmit(onSubmit)} className='flex flex-row border-b-[1px] border-main'>
-            <input disabled={isPending} placeholder='Email' type='email' className='p-2' {...form.register('email', { required: true })} />
-            <button type='submit' aria-disabled={isPending}>
-              <div className='text-secondary bg-main border pb-1 px-3'>
-                {!isPending
-                  ? <div className='text-nowrap'>đăng kí</div>
-                  : <div className='w-full h-full'><ClipLoader color='#e5e5e5' loading speedMultiplier={2} size={15} /></div>}
-              </div>
-            </button>
-          </form>
-        </div>
+      <form onSubmit={form.handleSubmit(onSubmit)} className='border-b-[1px] border-main mt-5 w-full flex flex-row justify-between'>
+        <input disabled={isPending} placeholder='Email' type='email' className='p-2' {...form.register('email', { required: true })} />
+        <button type='submit' aria-disabled={isPending}>
+          <div className='text-secondary bg-main border pb-1 px-3'>
+            {!isPending
+              ? <div className='text-nowrap'>đăng kí</div>
+              : <div className='w-full h-full'><ClipLoader color='#e5e5e5' loading speedMultiplier={2} size={15} /></div>}
+          </div>
+        </button>
+      </form>
+      <div className='w-full'>
+        <div />
       </div>
       <FormSuccess message={success} />
       <FormError message={error} />

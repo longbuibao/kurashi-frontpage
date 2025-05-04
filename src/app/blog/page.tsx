@@ -159,7 +159,7 @@ const AllBlogs: React.FC = async (): React.ReactElement => {
               <MainBlogCard {...firstBlog} />
             </div>
             <div className='w-[1px] bg-kurashi-border-color' />
-            <div className='flex flex-col gap-5'>
+            <div className='flex flex-col gap-14'>
               {posts.slice(0, 4).map(x => <RightSideBlogCard {...(x as any as BlogPost)} key={x.realFileName} />)}
             </div>
           </div>
@@ -168,9 +168,9 @@ const AllBlogs: React.FC = async (): React.ReactElement => {
               {Object.keys(groupSubCategoriesByCategory).map((x, i) => <Navigator isSelected={i === 0} label={x} key={x} />)}
             </div>
           </div>
-          <div className='flex flex-row gap-5'>
-            <div className='grid grid-rows-3 grid-cols-3 gap-10'>
-              {posts.slice(0, 6).map(x => <BlogCardByCategory {...(x as any as BlogPost)} key={x.realFileName} />)}
+          <div className='flex flex-row justify-between gap-5'>
+            <div className='grid grid-rows-3 grid-cols-2 gap-10'>
+              {posts.slice(0, 4).map(x => <BlogCardByCategory {...(x as any as BlogPost)} key={x.realFileName} />)}
             </div>
             <div className='w-[30%]'>
               <BlogRegister />
