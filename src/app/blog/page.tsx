@@ -49,36 +49,55 @@ interface BlogPost {
   isSmallCard?: boolean
 }
 
-const SimpleMainBlogCard: React.FC<BlogPost> = ({ coverImage, title, category, author, date, fileName, excerpt, isSmallCard = false }) => {
-  console.log(excerpt)
+const Navigator: React.FC<{ label: string, isSelected: boolean }> = ({ label, isSelected }) => {
+  const className = isSelected ? 'bg-blog text-black px-4 py-1 rounded-sm text-sm font-medium transition ' : 'px-4 py-1 text-sm font-medium transition text-[rgb(134,135,135)]'
+  return (
+    <button className={className}>
+      {label}
+    </button>
+  )
+}
+
+const MainBlogCard: React.FC<BlogPost> = ({ coverImage, title, category, author, date, fileName, excerpt, isSmallCard = false }) => {
   return (
     <Link href={`/blog/${fileName}`}>
-      <div className='rounded-xl shadow-xl'>
-        <Image className='rounded-tl-xl rounded-tr-xl w-full' src={coverImage.replace('/public', '')} alt='test' width={640} height={640} />
-        <div className='p-5 flex flex-col gap-5'>
-          <div className='w-fit'>
-            <Chip label={category as any as string} />
-          </div>
-          {isSmallCard
-            ? (
-              <div className='flex flex-col gap-3'>
-                <p className='line-clamp-1 text-lg font-semibold'>{title}</p>
-                <p className='line-clamp-2'>{excerpt}</p>
-              </div>)
-            : <div className='text-2xl font-semibold'>{title}</div>}
-          {isSmallCard
-            ? <></>
-            : (
-              <div className='flex flex-row gap-5 items-center'>
-                <i className='fa-solid fa-user text-main' />
-                <div className='flex flex-row gap-3'>
-                  <div>{author.name}</div>
-                  <div>{date.toLocaleDateString('vi-VN')}</div>
-                </div>
-              </div>)}
+      <div className=''>
+        <Image className='rounded-sm w-full' src={coverImage.replace('/public', '')} alt='test' width={640} height={640} />
+        <div className='w-4/5 mx-auto text-center flex flex-col gap-4 p-3'>
+          <p className='font-extrabold text-2xl line-clamp-2 mx-auto mt-4'>{title}</p>
+          <p className='line-clamp-1'>{excerpt}</p>
+          <p className='uppercase text-[rgb(134,135,135)] font-semibold text-xs'>{date.toLocaleString('default', { month: 'short' })} {date.toLocaleString('default', { day: 'numeric' })} • {author.name}</p>
         </div>
       </div>
     </Link>
+  )
+}
+
+const RightSideBlogCard: React.FC<BlogPost> = ({ title, excerpt, date, author, coverImage }) => {
+  return (
+    <div className='flex flex-row justify-between'>
+      <div className='w-96'>
+        <p className='font-bold text-lg'>{title}</p>
+        <p className='text-sm my-3'>{excerpt}</p>
+        <p className='uppercase text-[rgb(134,135,135)] font-semibold text-xs'>{date.toLocaleString('default', { month: 'short' })} {date.toLocaleString('default', { day: 'numeric' })} • {author.name}</p>
+      </div>
+      <div>
+        <Image className='object-cover flex-shrink-0 rounded-sm' src={coverImage.replace('/public', '')} alt='test' width={200} height={100} />
+      </div>
+    </div>
+  )
+}
+
+const BlogCardByCategory: React.FC<BlogPost> = ({ coverImage, title, excerpt, date, author }) => {
+  return (
+    <div>
+      <Image className='object-cover flex-shrink-0 rounded-sm' src={coverImage.replace('/public', '')} alt='test' width={300} height={100} />
+      <div className='w-60'>
+        <p className='font-bold text-lg my-3'>{title}</p>
+        <p className='text-sm my-3 line-clamp-1'>{excerpt}</p>
+        <p className='uppercase text-[rgb(134,135,135)] font-semibold text-xs'>{date.toLocaleString('default', { month: 'short' })} {date.toLocaleString('default', { day: 'numeric' })}, {date.toLocaleDateString('default', { year: 'numeric' })} • {author.name}</p>
+      </div>
+    </div>
   )
 }
 
@@ -103,20 +122,7 @@ const AllBlogs: React.FC = async (): React.ReactElement => {
       })
   )
 
-  const blogs = posts.map(x => {
-    return {
-      url: `/blog/${x.slug}`,
-      thumbnail: (x as any).coverImage.replace('/public', ''),
-      title: (x as any).title,
-      summary: (x as any).excerpt,
-      id: (x as any).title,
-      category: (x as any).category
-    }
-  })
-
-  const tags = new Set(posts.map(x => (x as any as BlogPost).subcategory).flat()).values()
   const firstBlog = posts[0] as any as BlogPost
-  const topArticles = blogs.splice(0, 3)
 
   const categoryMap: Record<string, Set<string>> = {}
   posts.forEach(post => {
@@ -134,7 +140,7 @@ const AllBlogs: React.FC = async (): React.ReactElement => {
   }
 
   return (
-    <div className='w-4/5 mx-auto py-10 max-md:w-[90%]'>
+    <div className='w-[60%] mx-auto py-10 max-md:w-[90%]'>
       <div className='max-md:w-full flex flex-col max-md:flex-col max-md:gap-10'>
         <Suspense>
           <div className='flex flex-col max-md:w-full max-md:p-5'>
@@ -142,58 +148,32 @@ const AllBlogs: React.FC = async (): React.ReactElement => {
               <div className='flex-row flex gap-3 border-b-[1px] border-main pb-5 max-md:flex-col'>
                 <div className='mt-auto text-xl leading-9'>KURASHI</div>
                 <div className='text-7xl text-main font-bold'>BLOG</div>
-                <div className='flex flex-row gap-3 self-end justify-self-end ml-auto'>
-                  {Object.entries(groupSubCategoriesByCategory).map(([buttonText, items]) => (
-                    <Dropdown
-                      key={buttonText} buttonText={buttonText} content={
-                        <>
-                          {items.map((item, index) => (
-                            <DropdownItem key={index}>{item}</DropdownItem>
-                          ))}
-                        </>
-                    }
-                    />
-                  ))}
-                </div>
               </div>
               <p className='font-thin'>
                 Xu hướng, công nghệ và vật liệu về nội thất mới nhất từ Nhật Bản
               </p>
             </div>
           </div>
-          <div className='flex flex-row gap-14 mt-5 max-md:flex-col'>
-            <div className='w-[50%] max-md:w-[90%] max-md:mx-auto'>
-              <SimpleMainBlogCard {...firstBlog} />
+          <div className='flex flex-row gap-10 mt-3 max-md:flex-col'>
+            <div className='w-1/2 max-md:w-[90%] max-md:mx-auto'>
+              <MainBlogCard {...firstBlog} />
             </div>
-            <div className='flex flex-col gap-6 max-md:w-full w-1/3 ml-auto bg-[#fcfaf7] p-5 h-fit'>
-              <div className='text-xl text-center text-main font-semibold'>
-                {'Top bài viết dành cho bạn'.toUpperCase()}
-              </div>
-              <div className='flex flex-col items-center gap-10 h-full max-md:gap-5'>
-                {topArticles.map((x, y) => {
-                  return (
-                    <div key={uuidv4()} className='flex flex-row gap-3 mx-auto'>
-                      <RibbonBadge number={y + 1} />
-                      <div className='flex flex-col items-center justify-center'>
-                        <Link className='font-semibold hover:text-main duration-150 ease-in-out' href={x.url as any as UrlObject}>
-                          <p className='text-wrap text-sm'>
-                            {x.title}
-                          </p>
-                        </Link>
-                      </div>
-                    </div>
-                  )
-                })}
-              </div>
+            <div className='w-[1px] bg-kurashi-border-color' />
+            <div className='flex flex-col gap-5'>
+              {posts.slice(0, 4).map(x => <RightSideBlogCard {...(x as any as BlogPost)} key={x.realFileName} />)}
             </div>
           </div>
-          <div className='flex flex-col gap-5 items-center justify-between mt-10 max-md:mt-4'>
-            <div className='flex flex-row gap-5 self-start my-6'>
-              <div>Tags</div>
-              {[...tags].map(x => <Link key={x} href='/'><Chip label={x} /></Link>)}
+          <div className='border-t-[1px] border-kurashi-border-color my-5'>
+            <div className='border-[1px] border-kurashi-border-color my-10 w-fit rounded-md p-1'>
+              {Object.keys(groupSubCategoriesByCategory).map((x, i) => <Navigator isSelected={i === 0} label={x} key={x} />)}
             </div>
-            <div className='grid grid-cols-2 grid-rows-2 gap-10 max-md:grid-cols-2 max-md:grid-rows-3 max-md:gap-10 w-4/5 max-md:w-full'>
-              {posts.splice(0, 6).map(x => <SimpleMainBlogCard {...(x as any as BlogPost)} key={x.realFileName} isSmallCard />)}
+          </div>
+          <div className='flex flex-row gap-5'>
+            <div className='grid grid-rows-3 grid-cols-3 gap-10'>
+              {posts.slice(0, 6).map(x => <BlogCardByCategory {...(x as any as BlogPost)} key={x.realFileName} />)}
+            </div>
+            <div className='w-[30%]'>
+              <BlogRegister />
             </div>
           </div>
         </Suspense>
@@ -210,9 +190,6 @@ const BlogsPage: React.FC = async () => {
           <Suspense fallback={<skeleton.AllBlogsSkeleton />}>
             <AllBlogs />
           </Suspense>
-        </div>
-        <div className='flex flex-col gap-10 items-center mx-auto'>
-          <BlogRegister />
         </div>
       </div>
     </div>

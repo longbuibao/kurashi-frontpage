@@ -6,9 +6,8 @@ subcategory:
   - Phụ kiện bếp
   - Tấm ốp tường vân đá
   - Nội thất hay
-title: BẾP TIỆN LỢI VỚI PHỤ KIỆN NAM CHÂM, DI CHUYỂN TỰ DO
-excerpt: Giải pháp lưu trữ mới nhất có nhiều điểm ưu việt hơn các giải pháp lưu
-  trữ truyền thống trong không gian bếp.
+title: Bếp tiện lợi với phụ kiện nam châm
+excerpt: Giải pháp lưu trữ mới nhất có nhiều điểm ưu việt.
 coverImage: /public/images/cover_image_phu_kien.webp
 date: 2025-04-19T14:20:00.000Z
 author:
