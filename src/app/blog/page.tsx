@@ -4,24 +4,11 @@ import * as fs from 'fs/promises'
 import path from 'path'
 import matter from 'gray-matter'
 import Image from 'next/image'
-import { v4 as uuidv4 } from 'uuid'
 import Link from 'next/link'
-import { UrlObject } from 'url'
 
 import { BlogRegister } from '@/components/blog-register'
 import * as skeleton from './skeleton'
 import { getMetadata } from '@/utils'
-import { Chip } from '@/components/blog-sub-category-chip'
-import Dropdown from '@/components/dropdown/dropdown'
-import DropdownItem from '@/components/dropdown/dropdown-item'
-
-const RibbonBadge = ({ number = 1 }): React.ReactElement => {
-  return (
-    <div className='w-6 h-10 bg-[#F5F7F8] text-main font-semibold text-center text-sm relative max-md:px-2 px-5 rounded-md'>
-      <div className='flex items-center justify-center h-full'>{number}</div>
-    </div>
-  )
-}
 
 export async function generateMetadata (): Promise<Metadata> {
   const defaultTitle = 'Tất cả bài viết'
@@ -50,7 +37,9 @@ interface BlogPost {
 }
 
 const Navigator: React.FC<{ label: string, isSelected: boolean }> = ({ label, isSelected }) => {
-  const className = isSelected ? 'bg-blog text-black px-4 py-1 rounded-sm text-sm font-medium transition ' : 'px-4 py-1 text-sm font-medium transition text-[rgb(134,135,135)]'
+  const className = isSelected
+    ? 'bg-blog text-black px-4 py-1 rounded-sm text-sm font-medium'
+    : 'px-4 py-1 text-sm font-medium text-[rgb(134,135,135)]'
   return (
     <button className={className}>
       {label}
@@ -63,7 +52,7 @@ const MainBlogCard: React.FC<BlogPost> = ({ coverImage, title, category, author,
     <Link href={`/blog/${fileName}`}>
       <div className=''>
         <Image className='rounded-sm w-full' src={coverImage.replace('/public', '')} alt='test' width={640} height={640} />
-        <div className='w-4/5 mx-auto text-center flex flex-col gap-4 p-3'>
+        <div className='w-4/5 mx-auto text-center flex flex-col gap-4 p-3 max-md:w-full'>
           <p className='font-extrabold text-2xl line-clamp-2 mx-auto mt-4'>{title}</p>
           <p className='line-clamp-1'>{excerpt}</p>
           <p className='uppercase text-[rgb(134,135,135)] font-semibold text-xs'>{date.toLocaleString('default', { month: 'short' })} {date.toLocaleString('default', { day: 'numeric' })} • {author.name}</p>
@@ -93,7 +82,7 @@ const BlogCardByCategory: React.FC<BlogPost> = ({ coverImage, title, excerpt, da
     <div>
       <Image className='object-cover flex-shrink-0 rounded-sm' src={coverImage.replace('/public', '')} alt='test' width={300} height={100} />
       <div className='w-60'>
-        <p className='font-bold text-lg my-3'>{title}</p>
+        <p className='font-bold text-lg my-3 max-md:line-clamp-1'>{title}</p>
         <p className='text-sm my-3 line-clamp-1'>{excerpt}</p>
         <p className='uppercase text-[rgb(134,135,135)] font-semibold text-xs'>{date.toLocaleString('default', { month: 'short' })} {date.toLocaleString('default', { day: 'numeric' })}, {date.toLocaleDateString('default', { year: 'numeric' })} • {author.name}</p>
       </div>
@@ -155,7 +144,7 @@ const AllBlogs: React.FC = async (): React.ReactElement => {
             </div>
           </div>
           <div className='flex flex-row gap-10 mt-3 max-md:flex-col'>
-            <div className='w-1/2 max-md:w-[90%] max-md:mx-auto'>
+            <div className='w-1/2 max-md:w-full max-md:mx-auto'>
               <MainBlogCard {...firstBlog} />
             </div>
             <div className='w-[1px] bg-kurashi-border-color' />
@@ -168,11 +157,11 @@ const AllBlogs: React.FC = async (): React.ReactElement => {
               {Object.keys(groupSubCategoriesByCategory).map((x, i) => <Navigator isSelected={i === 0} label={x} key={x} />)}
             </div>
           </div>
-          <div className='flex flex-row justify-between gap-5'>
-            <div className='grid grid-rows-3 grid-cols-2 gap-10'>
+          <div className='flex flex-row justify-between gap-5 max-md:flex-col'>
+            <div className='grid grid-rows-3 grid-cols-2 gap-10 max-md:flex max-md:flex-wrap'>
               {posts.slice(0, 4).map(x => <BlogCardByCategory {...(x as any as BlogPost)} key={x.realFileName} />)}
             </div>
-            <div className='w-[30%]'>
+            <div className='w-[30%] max-md:w-full'>
               <BlogRegister />
             </div>
           </div>
