@@ -20,6 +20,8 @@ Phụ kiện nam châm sử dụng trên tấm ốp bếp bằng thép tráng me
 
 Các phụ kiện nam châm này không chỉ mang đến hiệu quả sử dụng không gian trong bếp mà còn mang đến sự tiện lợi cho người nội trợ trong công việc nấu ăn hàng ngày.
 
+# test h1
+
 ## **TĂNG HIỆU QUẢ SỬ DỤNG KHÔNG GIAN BẾP**
 
 Mảng tường ốp bếp thường có diện tích lớn. Ví dụ bếp chữ I với mảng tường 700x2700 có diện tích khoảng 1.9 m2. Mảng tường này thông thường được ốp kính hoặc đá với mục đích trang trí, chống ố hoặc khoan ổ điện. Nghĩa là diện tích khoảng 1.9 m2 đó gần như chưa được sử dụng hiệu quả để phục vụ công năng của bếp. Trong khi gian bếp thường có diện tích nhỏ, người nội trợ thường có nhu cầu lưu trữ dụng cụ nấu ăn ngay trước mặt, trong tầm tay để dễ thao tác.
@@ -27,6 +29,8 @@ Mảng tường ốp bếp thường có diện tích lớn. Ví dụ bếp ch�
 Vì nhu cầu đó, trên thị trường có nhiều phụ kiện để treo, nhất là phụ kiện inox để gắn lên khu ốp bếp. Tuy nhiên lại phải khoan tường, khó thay thế khi cũ hoặc hư hỏng, đôi khi phải thay cả khu ốp bếp tốn kém.
 
 Với phụ kiện nam châm gắn trên tấm ốp thép tráng men, diện tích tấm ốp bếp được sử dụng với hiệu quả tối đa, tăng tính công năng nhờ các giải pháp lưu trữ mới nhất, với giá cả hợp lý.
+
+### test h2
 
 <p style="text-align: center"><img src="/public/images/blog_phu_kien_nam_cham.webp"></p><p style="text-align: center"><em>Ví dụ mẫu Giải pháp kệ nam châm hoàn toàn khác biết để đựng gia vị hoặc để đồ decor trên tấm ốp bếp bằng thép tráng men.</em></p>
 
@@ -53,3 +57,9 @@ Mỗi loại phụ kiện nam châm có một tiêu chuẩn kĩ thuật quan tr�
 Chỉ cần sử dụng đúng tải trọng qui định là bạn có thể an tâm về độ bám dính và thời gian sử dụng lâu dài.
 
 Với nhiều loại phụ kiện nam châm đa năng được thiết kế kĩ lưỡng, dễ dàng di chuyển bạn có thể tối ưu diện tích sử dụng và nâng cao độ tiện lợi cho căn bếp của gia đình.[](http://localhost:3000/)
+
+# another
+
+## another 2
+
+### another 3

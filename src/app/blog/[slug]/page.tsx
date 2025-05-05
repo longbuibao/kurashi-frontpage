@@ -4,8 +4,8 @@ import { getAllPosts, getPostBySlug } from '@/lib/api'
 import Container from '@/app/_components/container'
 import { PostBody } from '@/app/_components/post-body'
 import Image from 'next/image'
-import { LinkIcon, LogoFacebook, LogoZalo } from '@/components/svg-icons'
-import Avatar from '@/app/_components/avatar'
+import { CopyButton, ShareFacebookWrapper } from '@/components/share-button'
+
 import './style.css'
 
 export default async function Post (props: Params): Promise<React.ReactElement> {
@@ -20,8 +20,6 @@ export default async function Post (props: Params): Promise<React.ReactElement> 
     <main>
       <Container>
         <article className='mb-32'>
-          {/* <PostHeader title={post.title} coverImage={post.coverImage} date={post.date} author={post.author} />
-          <PostBody content={post.content} /> */}
           <div className='my-10 max-md:w-full'>
             <div className='w-[80%] mx-auto max-md:w-full max-md:p-5'>
               <div className='flex flex-row gap-10 text-black max-md:flex-col'>
@@ -35,12 +33,11 @@ export default async function Post (props: Params): Promise<React.ReactElement> 
                   </div>
                   <div>
                     <div className='hidden md:block md:mb-12'>
-                      <Avatar name={post.author.name} picture={post.author.picture} date={post.date.toLocaleDateString('vi-VN')} />
+                      <p className='uppercase text-[rgb(134,135,135)] font-semibold text-xs'>{post.date.toLocaleString('default', { month: 'short' })} {post.date.toLocaleString('default', { day: 'numeric' })} • {post.author.name}</p>
                     </div>
                     <div className='flex flex-row gap-3 flex-nowrap items-center mt-3'>
-                      <LogoFacebook />
-                      <LogoZalo />
-                      <LinkIcon />
+                      <ShareFacebookWrapper url={`https://kurashi.com.vn/blog/${(post as any).fileName}`} />
+                      <CopyButton url={`https://kurashi.com.vn/blog/${(post as any).fileName}`} />
                     </div>
                   </div>
                 </div>
