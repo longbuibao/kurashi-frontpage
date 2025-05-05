@@ -98,6 +98,10 @@ Tham khảo thêm các nguyên tắc bố trí và an toàn từ [Hiệp hội N
 *   **Nhược điểm:** Dễ bám bẩn ở vân gạch, dễ nứt vỡ khi va đập, tốn công thi công.
     
 
+## Bảng So Sánh Chung
+
+![](/public/images/so-sanh-vat-lieu-op-tuong-bep.svg)
+
 ## Kết Luận
 
 Việc chọn tấm ốp bếp phù hợp không quá khó nếu bạn có đủ thông tin. Hãy cân nhắc các yếu tố kỹ thuật và thẩm mỹ để chọn đúng vật liệu phù hợp với nhu cầu và phong cách của bạn.
