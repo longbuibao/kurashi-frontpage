@@ -19,6 +19,9 @@ Khi thiết kế xây mới hoặc cải tạo nhà bếp, việc lựa chọn v
 
 Để lựa chọn đúng, bạn cần cân nhắc các yếu tố sau:
 
+*   **Yêu cầu chức năng**: Ưu tiên các yếu tố như độ bền, khả năng chống bám bẩn, chịu nhiệt, chống cháy, dễ lau chùi và bảo trì thấp.
+    
+
 *   **Thẩm mỹ**: Vật liệu nên phù hợp với phong cách thiết kế và thẩm mỹ tổng thể của không gian bếp.
     
 *   **Ngân sách**: Cân nhắc chi phí ban đầu và giá trị sử dụng lâu dài, bao gồm chi phí bảo trì.
@@ -27,12 +30,10 @@ Khi thiết kế xây mới hoặc cải tạo nhà bếp, việc lựa chọn v
     
 *   **Sự phối hợp tổng thể**: Vật liệu ốp nên hài hòa với tủ bếp, mặt bếp, bồn rửa, vòi nước và thiết bị bếp khác.
     
-*   **Yêu cầu chức năng**: Ưu tiên các yếu tố như độ bền, khả năng chống bám bẩn, chịu nhiệt, chống cháy, dễ lau chùi và bảo trì thấp.
-    
 
-## Tham Khảo Bổ Sung
+## Tham Khảo Thêm
 
-Để đảm bảo an toàn và chất lượng không khí trong nhà, nhiều bề mặt vật liệu đạt chứng nhận như [UL GREENGUARD Certification](https://www.ul.com/resources/ul-greenguard-certification-program) (link bằng tiếng Anh).
+Tìm hiểu về yêu cầu an toàn của vật liệu theo [UL GREENGUARD Certification](https://www.ul.com/resources/ul-greenguard-certification-program) (link bằng tiếng Anh).
 
 Tìm cảm hứng thiết kế tại [Houzz - xu hướng ốp tường bếp](https://www.houzz.com/magazine/kitchen-backsplashes) (link bằng tiếng Anh).
 
