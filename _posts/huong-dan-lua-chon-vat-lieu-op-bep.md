@@ -15,7 +15,7 @@ ogImage:
 ---
 Khi thiết kế xây mới hoặc cải tạo nhà bếp, việc lựa chọn **vật liệu ốp tường bếp** phù hợp là vô cùng quan trọng. Sự lựa chọn này ảnh hưởng đến tính **thẩm mỹ**, **công năng** và **sự tiện lợi** hàng ngày. Trong bài viết này, chúng ta sẽ phân tích các loại vật liệu ốp bếp phổ biến để giúp bạn đưa ra lựa chọn phù hợp nhất.
 
-## Cách Chọn Vật Liệu Ốp Tường Bếp Phù Hợp
+## CÁCH LỰA CHỌN VẬT LIỆU ỐP BẾP PHÙ HỢP
 
 Để lựa chọn đúng, bạn cần cân nhắc các yếu tố sau:
 
@@ -30,7 +30,7 @@ Khi thiết kế xây mới hoặc cải tạo nhà bếp, việc lựa chọn *
 *   **Sự phối hợp tổng thể**: Vật liệu ốp nên hài hòa với tủ bếp, mặt bếp, bồn rửa, vòi nước và thiết bị bếp khác.
     
 
-## Tham Khảo Thêm
+THAM KHẢO THÊM
 
 Tìm hiểu về yêu cầu an toàn của vật liệu theo [UL GREENGUARD Certification](https://www.ul.com/resources/ul-greenguard-certification-program) (link bằng tiếng Anh).
 
@@ -38,7 +38,7 @@ Tìm cảm hứng thiết kế tại [Houzz - xu hướng ốp tường bếp](h
 
 Tham khảo thêm các nguyên tắc bố trí và an toàn từ [Hiệp hội Nhà bếp & Phòng tắm Quốc gia - NKBA](https://nkba.org/guidelines/) (link bằng tiếng Anh).
 
-## Tổng Quan Về Các Loại Vật Liệu Ốp Tường Bếp
+## TỔNG QUAN VỀ CÁC LOẠI VẬT LIỆU ỐP TƯỜNG BẾP
 
 ### Đá Solid Surface
 
@@ -83,26 +83,30 @@ Tham khảo thêm các nguyên tắc bố trí và an toàn từ [Hiệp hội N
 
 *   Ưu điểm: Giá rẻ, nhiều hoa văn, dễ vệ sinh.
     
-*   Nhược điểm: Dễ hỏng khi gặp nước, dễ trầy xước.
+*   Nhược điểm: dễ trầy xước, hút ẩm
     
 
-### Tấm Kim Loại/Inox
+### Inox 304 (kim loại)
 
 *   Ưu điểm: Bền bỉ, chịu nhiệt cao.
     
 *   Nhược điểm: Dễ trầy, để lại dấu vân tay, giá cao, không ấm cúng
     
 
-### Gạch
+### Gạch (bao gồm Mozaic)
 
 *   Ưu điểm: Chống nhiệt, chống bám bẩn, vệ sinh tốt.
     
 *   Nhược điểm: Dễ bám bẩn ở vân gạch, dễ nứt vỡ khi va đập, tốn công thi công.
     
 
-## Bảng So Sánh Chung
+## BẢNG SO SÁNH CHUNG
 
-## Kết Luận
+Dưới đây là bảng so sánh chung 8 loại vật liệu ốp bếp thông dụng dựa trên 10 tiêu chí gồm độ bền, khả năng chống ố, chịu nhiệt, chống cháy, bảo trì, khả năng hút nam châm, vận chuyển, thi công, lựa chọn màu sắc và giá cả.
+
+![](/public/images/so-sanh-vat-lieu-op-bep.svg)
+
+## KẾT LUẬN
 
 Việc chọn tấm ốp bếp phù hợp không quá khó nếu bạn có đủ thông tin. Hãy cân nhắc các yếu tố kỹ thuật và thẩm mỹ để chọn đúng vật liệu phù hợp với nhu cầu và phong cách của bạn.
 
