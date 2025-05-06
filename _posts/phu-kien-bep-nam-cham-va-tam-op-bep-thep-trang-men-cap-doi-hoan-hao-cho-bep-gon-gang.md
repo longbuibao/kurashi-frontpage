@@ -33,7 +33,7 @@ Phụ kiện bếp bằng nam châm trên tấm ốp thép tráng men là lựa 
 
 ## PHỤ KIỆN NAM CHÂM ĐA DẠNG DÀNH RIÊNG CHO THÉP TRÁNG MEN
 
-Không phải phụ kiện nào cũng bám vào tấm ốp thép tráng men. KURASHI cung cấp các phụ kiện bếp nam châm dành riêng cho tấm ốp thép tráng men, thiết kế nhỏ gọn, tiện dụng để đáp ứng các nhu cầu của người nội trợ.
+Không phải phụ kiện nào cũng bám vào tấm ốp thép tráng men. [Thương hiệu KURASHI](https://www.kurashi.com.vn/) cung cấp các phụ kiện bếp nam châm dành riêng cho tấm ốp thép tráng men, thiết kế nhỏ gọn, tiện dụng để đáp ứng các nhu cầu của người nội trợ.
 
 > Xem toàn bộ bộ sưu tập phụ kiện tại đây: [Trang sản phẩm phụ kiện nhà bếp nam châm](https://www.kurashi.com.vn/san-pham/phu-kien-bep).
 
