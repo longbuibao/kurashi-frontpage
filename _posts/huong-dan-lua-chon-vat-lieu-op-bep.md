@@ -78,7 +78,7 @@ Trên thị trường hiện nay có nhiều lựa chọn vật liệu ốp tư�
 
 > Dưới đây là video ngắn giới thiệu tấm ốp tráng men và các tính năng thực tế:
 > 
-> 👉 Xem trên [YouTube](https://www.youtube.com/watch?v=PPpMjHjyWuo)
+> Xem trên [YouTube](https://www.youtube.com/watch?v=PPpMjHjyWuo)
 
 ### Tấm Laminate
 
@@ -112,6 +112,6 @@ Dưới đây là bảng so sánh tổng quan giữa 8 loại vật liệu ốp 
 
 Việc chọn tấm ốp bếp phù hợp không quá khó nếu bạn có đủ thông tin. Hãy cân nhắc các yếu tố kỹ thuật và thẩm mỹ để chọn đúng vật liệu phù hợp với nhu cầu và phong cách của bạn.
 
-> 👉 Khám phá công nghệ vật liệu, ưu điểm nối bật và kích thước màu sắc của thép tráng men tại trang [Tấm Ốp Tường Bằng Thép Tráng Men](https://www.kurashi.com.vn/san-pham/tam-op-tuong-bang-thep-trang-men)
+> Khám phá công nghệ vật liệu, ưu điểm nối bật và kích thước màu sắc của thép tráng men tại trang [Tấm Ốp Tường Bằng Thép Tráng Men](https://www.kurashi.com.vn/san-pham/tam-op-tuong-bang-thep-trang-men)
 
-> 👉 [Liên hệ KURASHI](https://www.kurashi.com.vn/lien-he) để được tư vấn miễn phí và nhận báo giá nhanh chóng.
+> [Liên hệ KURASHI](https://www.kurashi.com.vn/lien-he) để được tư vấn miễn phí và nhận báo giá nhanh chóng.
