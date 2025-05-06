@@ -84,13 +84,13 @@ Chính sự kết hợp giữa lõi thép và lớp men sứ đã tạo nên đi
 
 _Bạn muốn hiểu tại sao nam châm không hoạt động trên đá thạch anh hay kính?_ _Đọc thêm về_ [_vật liệu từ tính và vật liệu không từ tính_](https://www.bbc.co.uk/bitesize/articles/z8g996f)
 
-| Tiêu chí | Tấm tráng men | Đá thạch anh / Kính / Laminate |
+Bảng so sánh tấm ốp thép tráng men và các loại tấm ốp tường khác dựa trên 3 tiêu chí là khả năng hút phụ kiện nam châm, cần khoan tường để lắp đặt phụ kiện và linh hoạt thay đổi vị trí phụ kiện
+
+| Tiêu chí | Thép tráng men | Đá thạch anh / Kính / Laminate |
 | --- | --- | --- |
 | Hút phụ kiện bếp nam châm | Có  | Không |
-| Cần khoan tường để lắp đặt | Không | Có  |
-| Chống ố | Cao | Trung bình - thấp |
-| Khả năng lau chùi (nhất là vết dầu mỡ) | Dễ  | Khó lau chùi, dễ bám bẩn, ố vàng |
-| Linh hoạt khi thay đổi bố trí | Có  | Hư hỏng tấm ốp khi khoan thay đổi vị trí |
+| Cần khoan tường để lắp đặt phụ kiện | Không | Có  |
+| Linh hoạt thay đổi vị trí phụ kiện | Có  | Hư hỏng tấm ốp khi khoan thay đổi vị trí |
 
 ## HÌNH ẢNH ỨNG DỤNG PHỤ KIỆN BẾP NAM CHÂM THỰC TẾ
 
