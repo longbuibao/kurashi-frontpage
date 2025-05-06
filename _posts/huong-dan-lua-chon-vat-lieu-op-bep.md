@@ -21,7 +21,6 @@ Khi thiết kế xây mới hoặc cải tạo nhà bếp, việc lựa chọn *
 
 *   **Yêu cầu chức năng**: Ưu tiên các yếu tố như độ bền, khả năng chống ố, chịu nhiệt, chống cháy, dễ lau chùi và bảo trì thấp.
     
-
 *   **Thẩm mỹ**: Vật liệu nên phù hợp với phong cách thiết kế và thẩm mỹ tổng thể của không gian bếp.
     
 *   **Ngân sách**: Cân nhắc chi phí ban đầu và giá trị sử dụng lâu dài, bao gồm chi phí bảo trì.
@@ -102,8 +101,6 @@ Tham khảo thêm các nguyên tắc bố trí và an toàn từ [Hiệp hội N
     
 
 ## Bảng So Sánh Chung
-
-![](/public/images/so-sanh-vat-lieu-op-tuong-bep.svg)
 
 ## Kết Luận
 
