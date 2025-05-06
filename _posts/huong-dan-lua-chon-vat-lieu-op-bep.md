@@ -100,7 +100,7 @@ Tham khảo thêm các nguyên tắc bố trí và an toàn từ [Hiệp hội N
 *   Nhược điểm: Dễ bám bẩn ở vân gạch, dễ nứt vỡ khi va đập, tốn công thi công.
     
 
-## BẢNG SO SÁNH CHUNG
+## BẢNG SO SÁNH CHUNG CÁC LOẠI VẬT LIỆU ỐP BẾP
 
 Dưới đây là bảng so sánh chung 8 loại vật liệu ốp bếp thông dụng dựa trên 10 tiêu chí gồm độ bền, khả năng chống ố, chịu nhiệt, chống cháy, bảo trì, khả năng hút nam châm, vận chuyển, thi công, lựa chọn màu sắc và giá cả.
 
