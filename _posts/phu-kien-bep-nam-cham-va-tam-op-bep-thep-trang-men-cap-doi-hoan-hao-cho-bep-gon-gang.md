@@ -109,7 +109,6 @@ Hình ảnh thực tế luôn trực quan nhất. Dưới đây là hình ảnh 
 
 Phụ kiện nam châm là cách đơn giản và hiệu quả nhất để **tối đa hóa giá trị của tấm tráng men**. Bạn sẽ luôn có không gian gọn gàng, thao tác nấu nhanh và dễ tùy chỉnh theo nhu cầu.
 
-### 🛒 Sẵn sàng mua sắm?
+🛒 Sẵn sàng mua sắm?
 
-Khám phá bộ phụ kiện nam châm được thiết kế riêng để phù hợp với dòng [tấm tráng men nhà bếp](https://www.kurashi.com.vn/san-pham/tam-op-tuong-bang-thep-trang-men) của chúng tôi.  
-💡 Không cần khoan — chỉ cần gắn và dùng!
+> [Liên hệ KURASHI](https://www.kurashi.com.vn/lien-he) để được tư vấn miễn phí và nhận báo giá nhanh chóng.
