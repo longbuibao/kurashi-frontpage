@@ -37,7 +37,7 @@ Không phải phụ kiện nào cũng bám vào tấm ốp thép tráng men. KUR
 
 > Xem toàn bộ bộ sưu tập phụ kiện tại đây: [Trang sản phẩm phụ kiện nhà bếp nam châm](https://www.kurashi.com.vn/san-pham/phu-kien-bep).
 
-Dưới đây là các loại phụ kiện hiện có:
+Dưới đây là một số phụ kiện nam châm hiện KURASHI đang cung cấp
 
 ### 🔪 Giá Treo Dao Nam Châm
 
