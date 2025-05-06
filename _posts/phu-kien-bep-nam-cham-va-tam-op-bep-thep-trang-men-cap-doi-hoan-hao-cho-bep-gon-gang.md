@@ -80,21 +80,19 @@ Nhiều người thắc mắc vì sao phụ kiện nam châm có thể dính lê
 *   Lớp men bên ngoài sứ giúp bảo vệ lõi thép bên trong khỏi rỉ sét, đồng thời giữ bề mặt luôn sạch đẹp như mới.
     
 
-Chính sự kết hợp giữa thiết kế và vật liệu này tạo nên sự khác biệt rõ ràng với các loại tấm khác trên thị trường. Không có vật liệu ốp tường nào khác có thể gắn phụ kiện linh hoạt như vậy mà không gây hư hại.
+Chính sự kết hợp giữa lõi thép và lớp men sứ đã tạo nên điểm khác biệt nổi bật cho tấm ốp bếp Kurashi. Trong khi các vật liệu như đá, kính hay laminate không hỗ trợ nam châm vì không có lõi thép, cần khoan lắp, thì tấm thép tráng men cho phép gắn phụ kiện nam châm dễ dàng mà không làm hỏng bề mặt.
 
-Không phải bề mặt nào cũng giống nhau. Dưới đây là bảng so sánh đơn giản:
-
-_Bạn muốn hiểu tại sao nam châm không hoạt động trên đá thạch anh hay kính?_ [_Đọc giải thích rõ ràng từ Stanford Magnets (liên kết tiếng Anh)_](https://www.stanfordmagnets.com/magnetic-and-non-magnetic-materials.html)_._
+_Bạn muốn hiểu tại sao nam châm không hoạt động trên đá thạch anh hay kính?_ _Đọc thêm về_ [_vật liệu từ tính và vật liệu không từ tính_](https://www.bbc.co.uk/bitesize/articles/z8g996f)
 
 | Tiêu chí | Tấm tráng men | Đá thạch anh / Kính / Laminate |
 | --- | --- | --- |
-| Có hỗ trợ nam châm | Có  | Không |
-| Có cần khoan khi lắp | Không | Có  |
-| Chống trầy & bám bẩn | Cao | Trung bình - Cao |
-| Dễ lau chùi | Dễ  | Tùy vật liệu |
-| Linh hoạt khi thay đổi bố trí | Có  | Dễ hư hỏng khi thay đổi |
+| Hút phụ kiện bếp nam châm | Có  | Không |
+| Cần khoan tường để lắp đặt | Không | Có  |
+| Chống ố | Cao | Trung bình - thấp |
+| Khả năng lau chùi (nhất là vết dầu mỡ) | Dễ  | Khó lau chùi, dễ bám bẩn, ố vàng |
+| Linh hoạt khi thay đổi bố trí | Có  | Hư hỏng tấm ốp khi khoan thay đổi vị trí |
 
-## Thư Viện Hình Ảnh: Phụ Kiện Nam Châm Trong Thực Tế
+## HÌNH ẢNH ỨNG DỤNG PHỤ KIỆN BẾP NAM CHÂM THỰC TẾ
 
 Hình ảnh thực tế luôn trực quan nhất. Dưới đây là hình ảnh thật từ sản phẩm phụ kiện Kurashi được gắn trên tấm tráng men. Bạn sẽ thấy sự sạch sẽ, linh hoạt và đồng bộ trong thiết kế:
 
@@ -106,10 +104,6 @@ Hình ảnh thực tế luôn trực quan nhất. Dưới đây là hình ảnh 
     
 *   Giá treo khăn, kẹp khăn sạch sẽ
     
-
-👉 Các hình ảnh được chụp trực tiếp trong không gian bếp khách hàng.
-
-_Muốn chia sẻ góc bếp của bạn? Tag @Kurashi.Vietnam trên Instagram!_
 
 ## Kết Luận: Phong Cách & Tính Năng Song Hành
 
