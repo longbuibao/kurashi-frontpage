@@ -76,7 +76,7 @@ Trên thị trường hiện nay có nhiều lựa chọn vật liệu ốp tư�
 *   Nhược điểm: Giá cao hơn acrylic và laminate, chỉ có 3 màu cơ bản: trắng, xám nhạt, be.
     
 
-> Dưới đây là video ngắn giới thiệu tấm ốp tráng men và các tính năng thực tế:
+> Dưới đây là video ngắn giới thiệu tấm ốp tráng men và các tính năng thực tế từ [thương hiệu KURASHI](https://www.kurashi.com.vn/)
 > 
 > Xem trên [YouTube](https://www.youtube.com/watch?v=PPpMjHjyWuo)
 
