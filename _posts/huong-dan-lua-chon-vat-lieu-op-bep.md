@@ -9,7 +9,7 @@ coverImage: /public/images/tam-op-bep-bang-thep-trang-men.webp
 date: 2025-05-05T13:53:00.000Z
 author:
   name: Diện Võ
-  picture: /public/images/author.png
+  picture: undefined
 ogImage:
   url: /public/images/tam-op-bep-bang-thep-trang-men.webp
 ---
