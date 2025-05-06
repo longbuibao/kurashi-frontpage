@@ -37,51 +37,41 @@ Không phải phụ kiện nào cũng bám vào tấm ốp thép tráng men. [Th
 
 > Xem toàn bộ bộ sưu tập phụ kiện tại đây: [Trang sản phẩm phụ kiện nhà bếp nam châm](https://www.kurashi.com.vn/san-pham/phu-kien-bep).
 
-Dưới đây là một số phụ kiện nam châm hiện KURASHI đang cung cấp
+Dưới đây là một số phụ kiện nam châm hiện KURASHI đang cung cấp:
 
-### 🔪 Giá Treo Dao Nam Châm
+### Giá treo dao nhà bếp
 
-*   Giữ dao an toàn, dễ thấy và không chiếm chỗ trên mặt bếp
+*   Giữ dao an toàn, dễ thấy, tiện lợi ngay trước mặt
+    
+*   Không để ngay trên mặt bếp, giúp căn bếp gọn gàng hơn
     
 
-### 🧂 Kệ Gia Vị & Kệ Chai Lọ
+### Hũ đựng gia vị
 
 *   Đựng dầu ăn, nước tương, gia vị sử dụng hàng ngày
     
-*   Thiết kế nhỏ gọn, gắn được gần khu nấu nướng
+*   Thiết kế nhỏ gọn, gắn được gần khu nấu nướng và di chuyển qua lại dễ dàng
     
 
-### ☕ Thanh Treo Cốc & Dụng Cụ
+### Giá treo, móc treo
 
-*   Treo muỗng, vá, cốc dễ dàng tiếp cận
+*   Treo muỗng, vá, cốc, khăn giấy dễ dàng tiếp cận
     
 *   Giúp giải phóng không gian trong ngăn kéo
     
 
-### 🧻 Giá Treo Khăn & Giấy Lau
+### Kệ bếp
 
-*   Vị trí tiện dụng cho khăn tay hoặc giấy vệ sinh bếp
+*   Kệ đựng gia vị, kệ bếp đa năng và kệ nhà bếp thông minh
     
-*   Có thể tháo rời để vệ sinh hoặc di chuyển
-    
-
-### 📋 Thanh Treo Có Móc
-
-*   Đa năng, có thể treo kéo, thìa đong, giỏ nhỏ...
+*   Giúp giải phóng không gian trong tủ bếp, ngay tầm với
     
 
-### 🧼 Kẹp Giữ Khăn Lau
+Các phụ kiện này được thiết kế tỉ mỉ, có nhiều lựa chọn về màu sắc như trắng, đen và chất liệu từ nhựa đến kim loại.
 
-*   Thiết kế tối giản, giữ khăn sạch sẽ và khô thoáng
-    
+## VÌ SAO CHỈ THÉP TRÁNG MEN DÙNG ĐƯỢC VỚI PHỤ KIỆN BẾP NAM CHÂM
 
-Các phụ kiện này có màu sắc đa dạng như đen mờ, thép xước — phù hợp với nhiều phong cách bếp hiện đại.
-
-## Tại Sao Tấm Tráng Men Của Chúng Tôi Dùng Được Với Nam Châm – Còn Loại Khác Thì Không
-
-Nhiều người thắc mắc: làm sao phụ kiện nam châm có thể dính lên tường mà không cần khoan? Câu trả lời nằm ở cấu tạo đặc biệt của tấm tráng men Kurashi.
-
-Khác với đá thạch anh, acrylic hay kính cường lực, tấm của chúng tôi được làm từ **thép phủ men**. Điều đó nghĩa là:
+Nhiều người thắc mắc: làm sao phụ kiện nam châm có thể dính lên tường mà không cần khoan? Câu trả lời nằm ở cấu tạo đặc biệt của tấm tráng men Kurashi. Khác với đá thạch anh, acrylic hay kính cường lực, tấm của chúng tôi được làm từ **thép phủ men**. Điều đó nghĩa là:
 
 *   **Nam châm bám trực tiếp** như trên cửa tủ lạnh
     
