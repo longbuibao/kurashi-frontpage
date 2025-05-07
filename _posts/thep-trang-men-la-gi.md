@@ -3,7 +3,7 @@ fileName: thep-trang-men-la-gi
 category: Tấm ốp
 subCategory:
   - Tấm ốp thép tráng men
-title: Thép tráng men là gì? Vì sao được người Nhật tin dùng trong nội thất bếp
+title: Tấm Tráng Men Là Gì? Cấu Tạo, Ưu Điểm & Ứng Dụng Trong Bếp
 excerpt: Công nghệ vật liệu Made in Japan của thép tráng men
 coverImage: undefined
 date: 2025-05-07T12:46:00.000Z
