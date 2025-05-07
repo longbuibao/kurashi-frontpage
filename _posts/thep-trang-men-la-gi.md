@@ -52,6 +52,8 @@ Tấm ốp tường bằng thép tráng men có nhiều điểm khác biệt và
 
 **Lưu ý:** Tấm tráng men hỗ trợ **phụ kiện bếp nam châm** - không cần khoan, không gây hư hại.
 
+> Thép tráng men đáp ứng tiêu chuẩn JIS R 4301:2015 của Nhật Bản, đảm bảo độ bền, chống ố, chống cháy, khả năng chịu nhiệt và chống ăn mòn. [Xem chi tiết tiêu chuẩn JIS R 4301 tại đây](https://kikakurui.com/r4/R4301-2015-01.html).
+
 ## SẢN XUẤT TẠI NHẬT BẢN, CHẤT LƯỢNG MADE IN JAPAN
 
 ## VÌ SAO THÉP TRÁNG MEN PHÙ HỢP LÀM TẤM ỐP BẾP Ở VIỆT NAM
