@@ -93,7 +93,7 @@ Không gian bếp ở Việt Nam-nhất là trong các căn hộ hoặc nhà ph�
 6.  **Có thể thi công kích thước tấm ốp thép tráng men theo kích thước của không gian bếp nhà tôi?**  
     Có thể vì tấm ốp bếp thép tráng men có 3 khổ, chiều cao tối đa 890mm, chiều dài tối đa 2400. Với các bếp dài, bếp chữ L có thể nối dài được.
     
-7.  Thời gian bảo hành và tuổi thọ của tấm ốp tường bếp là bao lâu?  
+7.  **Thời gian bảo hành và tuổi thọ của tấm ốp tường bếp là bao lâu?**  
     Có 3 mẫu màu gồm trắng, be và xám nhạt, bề mặt sáng mờ hiện đại nên dễ phối hợp trong nội thất.
     
 
