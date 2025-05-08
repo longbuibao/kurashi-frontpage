@@ -75,17 +75,23 @@ Không gian bếp ở Việt Nam-nhất là trong các căn hộ hoặc nhà ph�
 
 ## CÂU HỎI THƯỜNG GẶP VỀ THÉP TRÁNG MEN
 
-1.  **Tấm tráng men có dễ vỡ không?**  
-    Không. Tấm tráng men rất bền nhờ lõi thép cứng, không dễ bị nứt vỡ như kính hoặc gạch.
+1.  **Cách vệ sinh, bảo dưỡng tấm ốp tường bếp thép tráng men để luôn sạch sẽ, bền đẹp?**  
+    Tấm ốp thép tráng men rất dễ vệ sinh, chống bám bẩn tốt nhất là dầu mỡ nhờ lớp men sứ vệ sinh phủ lên bề mặt, không thấm hút nước. Chỉ lau với nước và nước rửa chén với khăn là căn bếp luôn sạch sẽ.
     
-2.  **Tấm tráng men có dễ lau chùi không?**  
-    Có. Bề mặt tráng men rất dễ lau chùi, chống bám bẩn và không thấm dầu mỡ, giúp tiết kiệm thời gian vệ sinh.
+2.  **Tấm ốp bếp thép tráng men có bền không? Có dễ vỡ không?**  
+    Thép tráng men bền gấp nhiều lần các vật liệu ốp truyền thống khác, không dễ vỡ nhờ lõi thép cứng, không dễ bị nứt vỡ như kính hoặc gạch.
     
-3.  **Tấm tráng men có phù hợp với không gian bếp nhỏ không?**  
-    Rất phù hợp. Tấm tráng men nhẹ và dễ thi công, đặc biệt với khả năng gắn phụ kiện nam châm mà không cần khoan tường.
+3.  **Có cần khoan tường tấm ốp bếp thép tráng men để gắn phụ kiện không?**  
+    Không cần khoan tường, chỉ cần đặt lên và sử dụng ngay vì phụ kiện nam châm tự động hút vào lõi thép của tấm ốp.
     
 4.  **Tấm tráng men có bị ố màu theo thời gian không?**  
     Không. Tấm tráng men không bị ố màu hay thay đổi theo thời gian, ngay cả khi tiếp xúc với nhiệt độ cao hoặc hơi nước.
     
-5.  **Có thể sử dụng tấm tráng men cho các khu vực ngoài bếp không?**  
-    Có. Tấm tráng men có thể sử dụng cho cả khu vực tường trong phòng tắm hoặc phòng giặt nhờ khả năng chống nước và dễ vệ sinh.
+5.  **Thép tráng men có những mẫu ốp bếp nào?**  
+    Có 3 mẫu màu gồm trắng, be và xám nhạt, bề mặt sáng mờ hiện đại nên dễ phối hợp trong nội thất.
+    
+6.  **Có thể thi công kích thước tấm ốp thép tráng men theo kích thước của không gian bếp nhà tôi?**  
+    Có thể vì tấm ốp bếp thép tráng men có 3 khổ, chiều cao tối đa 890mm, chiều dài tối đa 2400. Với các bếp dài, bếp chữ L có thể nối dài được.
+    
+7.  Thời gian bảo hành và tuổi thọ của tấm ốp tường bếp là bao lâu?  
+    Có 3 mẫu màu gồm trắng, be và xám nhạt, bề mặt sáng mờ hiện đại nên dễ phối hợp trong nội thất.
