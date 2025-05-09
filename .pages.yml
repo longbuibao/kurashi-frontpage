@@ -20,10 +20,6 @@ content:
         label: File name
         type: string
         required: true
-      - name: isReadyForPublish
-        label: Publish
-        type: boolean
-        required: true  
       - name: category
         label: Category
         type: select
@@ -53,4 +49,8 @@ content:
         fields:
           - { name: url, label: URL, type: image }
       - { name: body, label: Body, type: rich-text }
+      - name: isReadyForPublish
+        label: Publish
+        type: boolean
+        required: true  
     filename: '{fields.fileName}.md'
