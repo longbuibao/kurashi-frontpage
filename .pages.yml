@@ -20,6 +20,10 @@ content:
         label: File name
         type: string
         required: true
+      - name: isReadyForPublish
+        label: Publish
+        type: boolean
+        required: true  
       - name: category
         label: Category
         type: select
