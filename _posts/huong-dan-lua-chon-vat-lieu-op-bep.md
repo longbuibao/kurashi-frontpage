@@ -31,7 +31,7 @@ Khi thiết kế xây mới hoặc cải tạo nhà bếp, việc lựa chọn *
 
 THAM KHẢO THÊM
 
-Tìm hiểu về yêu cầu an toàn của vật liệu theo [UL GREENGUARD Certification](https://www.ul.com/resources/ul-greenguard-certification-program) (link bằng tiếng Anh).
+Tìm hiểu về các yêu cầu kĩ thuật của vật tư bếp theo tiêu chuẩn [JIS A 4420:2018](https://kikakurui.com/a4/A4420-2018-01.html) của Nhật Bản
 
 Tìm cảm hứng thiết kế tại [Houzz - xu hướng ốp tường bếp](https://www.houzz.com/magazine/kitchen-backsplashes) (link bằng tiếng Anh).
 
