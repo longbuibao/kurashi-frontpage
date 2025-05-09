@@ -113,4 +113,4 @@ Việc chọn tấm ốp bếp phù hợp không quá khó nếu bạn có đủ
 
 > Khám phá công nghệ vật liệu, ưu điểm nối bật và kích thước màu sắc của thép tráng men tại trang [Tấm Ốp Tường Bằng Thép Tráng Men](https://www.kurashi.com.vn/san-pham/tam-op-tuong-bang-thep-trang-men)
 
-> [Liên hệ KURASHI](https://www.kurashi.com.vn/lien-he) để được tư vấn miễn phí và nhận báo giá nhanh chóng.
+> [**Liên hệ Kurashi ngay**](https://www.kurashi.com.vn/lien-he) để nhận tư vấn miễn phí và báo giá nhanh
