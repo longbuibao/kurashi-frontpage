@@ -1,7 +1,8 @@
 ---
 fileName: bep-tien-loi-voi-phu-kien-nam-cham
-isReadyForPublish: false
-category: Tấm ốp
+category: Phụ kiện nam châm
+subCategory:
+  - Tấm ốp tường vân đá
 title: Bếp tiện lợi với phụ kiện nam châm, di chuyển tự do
 excerpt: Giải pháp lưu trữ mới nhất.
 coverImage: /public/images/cover_image_phu_kien.webp
@@ -11,6 +12,7 @@ author:
   picture: /public/images/author.png
 ogImage:
   url: /public/images/cover_image_phu_kien.webp
+isReadyForPublish: false
 ---
 Phụ kiện nam châm sử dụng trên tấm ốp bếp bằng thép tráng men là giải pháp lưu trữ mới nhất có nhiều điểm ưu việt hơn các giải pháp lưu trữ truyền thống trong không gian bếp.
 
