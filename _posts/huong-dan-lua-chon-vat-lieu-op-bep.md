@@ -5,7 +5,9 @@ subCategory:
   - Tấm ốp thép tráng men
 title: Hướng dẫn lựa chọn vật liệu ốp bếp phù hợp nhất
 excerpt: So sánh các loại vật liệu ốp tường bếp
-coverImage: /public/images/tam-op-bep-bang-thep-trang-men.webp
+coverImage:
+  coverImage: /public/images/tam-op-bep-bang-thep-trang-men.webp
+  coverImageAlt: tấm ốp
 date: 2025-05-10T11:10:00.000Z
 author:
   name: Diện Võ
