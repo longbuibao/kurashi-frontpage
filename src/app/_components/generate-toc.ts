@@ -1,7 +1,7 @@
 import { unified } from 'unified'
 import remarkParse from 'remark-parse'
 import remarkRehype from 'remark-rehype'
-import rehypeToc from '@jsdevtools/rehype-toc'
+import rehypeToc, { HtmlElementNode } from '@jsdevtools/rehype-toc'
 import { visit } from 'unist-util-visit'
 import { toHtml } from 'hast-util-to-html'
 import rehypeSlug from 'rehype-slug'

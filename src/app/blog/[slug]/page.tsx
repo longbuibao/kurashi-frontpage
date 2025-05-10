@@ -12,6 +12,19 @@ export default async function Post (props: Params): Promise<React.ReactElement> 
   const params = await props.params
   const post = getPostBySlug(params.slug)
 
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: post?.title,
+    description: post?.title,
+    author: {
+      '@type': 'Organization',
+      name: 'Kurashi'
+    },
+    mainEntityOfPage: `https://www.kurashi.com.vn/blog/${(post as any).fileName}`,
+    datePublished: post?.date.toLocaleDateString()
+  }
+
   if (post === null || post === undefined) {
     return notFound()
   }
@@ -19,6 +32,10 @@ export default async function Post (props: Params): Promise<React.ReactElement> 
   return (
     <main>
       <Container>
+        <script
+          type='application/ld+json'
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
         <article className='mb-32'>
           <div className='my-10 max-md:w-full'>
             <div className='w-[80%] mx-auto max-md:w-full max-md:p-5'>
