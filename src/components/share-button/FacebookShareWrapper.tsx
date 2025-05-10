@@ -8,7 +8,7 @@ interface ShareFacebookWrapperProps {
 const ShareFacebookWrapper: React.FC<ShareFacebookWrapperProps> = ({ url }) => {
   return (
     <FacebookShareButton url={url}>
-      <FacebookIcon size={32} round />
+      <FacebookIcon size={25} round />
     </FacebookShareButton>
   )
 }
