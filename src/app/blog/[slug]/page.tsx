@@ -47,6 +47,7 @@ export default async function Post (props: Params): Promise<React.ReactElement> 
                       <p className='text-black'>Kurashi blog</p>
                     </div>
                     <h1 className='text-2xl font-bold mt-10'>{post.title.toUpperCase()}</h1>
+                    <div className='mt-4'>{post.excerpt}</div>
                   </div>
                   <div className='flex flex-col justify-center max-md:mt-10'>
                     <div className='max-md:mb-2'>
@@ -59,7 +60,7 @@ export default async function Post (props: Params): Promise<React.ReactElement> 
                   </div>
                 </div>
                 <div className='md:w-full'>
-                  <Image className='h-full' alt='blog phụ kiện nam châm' src={post.coverImage.replace('/public', '')} width={640} height={640} />
+                  <Image className='h-full' alt='blog phụ kiện nam châm' src={post.coverImage.coverImage.replace('/public', '')} width={640} height={640} />
                 </div>
               </div>
             </div>

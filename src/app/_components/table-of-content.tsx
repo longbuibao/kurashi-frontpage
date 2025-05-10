@@ -22,13 +22,13 @@ export function TableOfContents ({ html }: TableOfContentsProps): React.ReactEle
   }, [visible])
 
   return (
-    <div className='my-4 border border-kurashi-border rounded-md shadow-sm w-1/2'>
-      <div className='flex flex-row justify-between items-center px-4 text-secondary bg-main'>
+    <div className='my-4 border border-kurashi-border rounded-md shadow-sm w-full'>
+      <div className='flex flex-row justify-between items-center px-4 text-secondary bg-main opacity-90'>
         <button onClick={() => setVisible((v) => !v)} className='flex flex-row gap-3 items-center'>
           <i className='fa-solid fa-bars' />
           <div>Nội dung chính</div>
         </button>
-        <button onClick={() => setVisible((v) => !v)} className='w-fit px-4 py-2 bg-gray-100 text-left font-medium text-gray-700 hover:bg-gray-200 transition'>
+        <button onClick={() => setVisible((v) => !v)} className='w-fit px-4 py-1 bg-gray-100 text-left font-medium text-gray-700 hover:bg-gray-200 transition'>
           {visible ? '[Ẩn]' : '[Hiện]'}
         </button>
       </div>

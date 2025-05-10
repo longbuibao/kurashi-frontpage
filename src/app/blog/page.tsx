@@ -51,7 +51,7 @@ const MainBlogCard: React.FC<BlogPost> = ({ coverImage, title, category, author,
   return (
     <Link href={`/blog/${fileName}`}>
       <div className=''>
-        <Image className='rounded-sm w-full' src={coverImage.replace('/public', '')} alt='test' width={640} height={640} />
+        <Image className='rounded-sm w-full' src={coverImage.coverImage.replace('/public', '')} alt='test' width={640} height={640} />
         <div className='w-4/5 mx-auto text-center flex flex-col gap-4 p-3 max-md:w-full'>
           <p className='font-extrabold text-2xl line-clamp-2 mx-auto mt-4'>{title}</p>
           <p className='line-clamp-1'>{excerpt}</p>
@@ -71,7 +71,7 @@ const RightSideBlogCard: React.FC<BlogPost> = ({ title, excerpt, date, author, c
         <p className='uppercase text-[rgb(134,135,135)] font-semibold text-xs'>{date.toLocaleString('default', { month: 'short' })} {date.toLocaleString('default', { day: 'numeric' })} • {author.name}</p>
       </div>
       <div>
-        <Image className='object-cover flex-shrink-0 rounded-sm' src={coverImage.replace('/public', '')} alt='test' width={200} height={100} />
+        <Image className='object-cover flex-shrink-0 rounded-sm' src={coverImage.coverImage?.replace('/public', '')} alt='test' width={200} height={100} />
       </div>
     </div>
   )
@@ -80,7 +80,7 @@ const RightSideBlogCard: React.FC<BlogPost> = ({ title, excerpt, date, author, c
 const BlogCardByCategory: React.FC<BlogPost> = ({ coverImage, title, excerpt, date, author }) => {
   return (
     <div>
-      <Image className='object-cover flex-shrink-0 rounded-sm' src={coverImage.replace('/public', '')} alt='test' width={300} height={100} />
+      <Image className='object-cover flex-shrink-0 rounded-sm' src={coverImage.coverImage?.replace('/public', '')} alt='test' width={300} height={100} />
       <div className='w-60'>
         <p className='font-bold text-lg my-3 max-md:line-clamp-1'>{title}</p>
         <p className='text-sm my-3 line-clamp-1'>{excerpt}</p>
@@ -119,7 +119,7 @@ const AllBlogs: React.FC = async (): React.ReactElement => {
     if (!categoryMap[hack.category]) {
       categoryMap[hack.category] = new Set()
     }
-    hack.subcategory.forEach(sub => categoryMap[hack.category].add(sub))
+    hack.subcategory?.forEach(sub => categoryMap[hack.category].add(sub))
   })
 
   const groupSubCategoriesByCategory: Record<string, string[]> = {}
