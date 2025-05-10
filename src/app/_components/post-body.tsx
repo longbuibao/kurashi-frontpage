@@ -2,50 +2,44 @@ import Markdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
 import rehypeRaw from 'rehype-raw'
 import rehypeSlug from 'rehype-slug'
-import rehypeToc, { HtmlElementNode } from '@jsdevtools/rehype-toc'
+import Head from 'next/head'
+import { extractToc } from './generate-toc'
 
 import './post-body.css'
+import { TableOfContents } from './table-of-content'
+import { Post } from '@/interfaces/post'
 
 interface Props {
-  content: string
+  post: Post
 }
 
-export async function PostBody ({ content }: Props): Promise<React.ReactElement> {
-  const processedContent = content.replace(/\/public\/images/g, '/images')
+export async function PostBody ({ post }: Props): Promise<React.ReactElement> {
+  const processedContent = post.content.replace(/\/public\/images/g, '/images')
+  const toc = await extractToc(post.content)
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: post.title,
+    description: post.title,
+    author: {
+      '@type': 'Organization',
+      name: 'Kurashi'
+    },
+    mainEntityOfPage: `https://www.kurashi.com.vn/blog/${(post as any).fileName}`,
+    datePublished: post.date.toLocaleDateString()
+  }
   return (
     <div className='prose mx-auto w-[80%]'>
+      <Head>
+        <script
+          type='application/ld+json'
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      </Head>
+
+      <TableOfContents html={toc} />
       <Markdown
-        remarkPlugins={[remarkGfm]} rehypePlugins={[rehypeRaw, rehypeSlug, [rehypeToc, {
-          nav: false,
-          customizeTOC: (toc: HtmlElementNode) => {
-            const convertOlToUl = (node: any): any => {
-              if (node.type === 'element' && node.tagName === 'ol') {
-                node.tagName = 'ul'
-              }
-              if (node.children) {
-                node.children.forEach(convertOlToUl)
-              }
-              return node
-            }
-
-            const modifiedToc = convertOlToUl(toc)
-
-            return {
-              type: 'element',
-              tagName: 'div',
-              properties: { className: ['toc-wrapper'] },
-              children: [
-                {
-                  type: 'element',
-                  tagName: 'h2',
-                  properties: { className: ['toc-title'] },
-                  children: [{ type: 'text', value: 'Mục lục' }]
-                },
-                modifiedToc
-              ]
-            }
-          }
-        }]]}
+        remarkPlugins={[remarkGfm]} rehypePlugins={[rehypeRaw, rehypeSlug]}
       >{processedContent}
       </Markdown>
     </div>

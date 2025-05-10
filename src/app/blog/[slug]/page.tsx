@@ -47,7 +47,7 @@ export default async function Post (props: Params): Promise<React.ReactElement> 
               </div>
             </div>
             <div className='my-10'>
-              <PostBody content={post.content} />
+              <PostBody post={post} />
             </div>
           </div>
         </article>
