@@ -39,11 +39,11 @@ Tấm ốp có thể tích hợp các phụ kiện phổ biến như giá treo k
 
 THAM KHẢO THÊM
 
-Tìm hiểu về các yêu cầu kĩ thuật của vật tư bếp theo tiêu chuẩn [JIS A 4420:2018](https://kikakurui.com/a4/A4420-2018-01.html) của Nhật Bản
+> Tìm hiểu về các yêu cầu kĩ thuật của vật tư bếp theo tiêu chuẩn [JIS A 4420:2018](https://kikakurui.com/a4/A4420-2018-01.html) của Nhật Bản
 
-Tìm cảm hứng thiết kế tại [Houzz - xu hướng ốp tường bếp](https://www.houzz.com/magazine/kitchen-backsplashes) (link bằng tiếng Anh).
+> Tìm cảm hứng thiết kế tại [Houzz - xu hướng ốp tường bếp](https://www.houzz.com/magazine/kitchen-backsplashes) (link bằng tiếng Anh).
 
-Tham khảo thêm các nguyên tắc bố trí và an toàn từ [Hiệp hội Nhà bếp & Phòng tắm Quốc gia - NKBA](https://nkba.org/guidelines/) (link bằng tiếng Anh).
+> Tham khảo thêm các nguyên tắc bố trí và an toàn từ [Hiệp hội Nhà bếp & Phòng tắm Quốc gia - NKBA](https://nkba.org/guidelines/) (link bằng tiếng Anh).
 
 ## 2\. TỔNG QUAN VỀ CÁC LOẠI VẬT LIỆU ỐP TƯỜNG BẾP
 
@@ -114,7 +114,7 @@ Trên thị trường hiện nay có nhiều lựa chọn vật liệu ốp tư�
 Dưới đây là bảng so sánh tổng quan giữa 8 loại vật liệu ốp tường bếp thông dụng, dựa trên 10 tiêu chí gồm: độ bền, khả năng chống ố, chịu nhiệt, chống cháy, yêu cầu bảo trì, khả năng hút nam châm, dễ dàng vận chuyển, thi công, lựa chọn màu sắc và giá thành.  
 **Lưu ý:** Đây là bảng so sánh mang tính tổng quát. Các đặc điểm cụ thể có thể thay đổi tùy theo mã sản phẩm, nhà sản xuất và đặc biệt là nguồn gốc xuất xứ.
 
-![](/public/images/so-sanh-vat-lieu-op-bep.svg)
+![so sánh vật liệu ốp tường bếp](/public/images/so-sanh-vat-lieu-op-bep.svg)
 
 ## 4\. KẾT LUẬN
 
