@@ -12,14 +12,15 @@ author:
   picture: /public/images/author.png
 ogImage:
   url: /public/images/tam-op-bep-bang-thep-trang-men.webp
+isReadyForPublish: false
 ---
 Khi thiết kế xây mới hoặc cải tạo nhà bếp, việc lựa chọn **vật liệu ốp tường bếp** phù hợp là vô cùng quan trọng. Sự lựa chọn này ảnh hưởng đến tính **thẩm mỹ**, **công năng** và **sự tiện lợi** hàng ngày. Trong bài viết này, chúng ta sẽ phân tích các loại vật liệu ốp bếp phổ biến để giúp bạn đưa ra lựa chọn phù hợp nhất.
 
-## CÁCH LỰA CHỌN VẬT LIỆU ỐP BẾP PHÙ HỢP
+## 1\. CÁCH LỰA CHỌN VẬT LIỆU ỐP BẾP PHÙ HỢP
 
 Để lựa chọn đúng, bạn cần cân nhắc kĩ các yếu tố sau:
 
-### **Yêu cầu chức năng**
+### Yêu cầu chức năng
 
 Cần ưu tiên các yếu tố như độ bền, khả năng chống ố, chịu nhiệt, chống cháy, dễ lau chùi và ít cần bảo trì. Trong đó, yêu cầu chức năng quan trọng nhất là khả năng chống ố và dễ vệ sinh, do khu vực tấm ốp gần bếp nấu thường xuyên bị bám bẩn bởi dầu mỡ và vết ố từ thức ăn.Ngoài ra, khu vực tấm ốp phía trước chậu rửa cũng dễ bị văng nước bẩn trong quá trình rửa chén.Đặc biệt, tấm ốp cần có khả năng chịu nhiệt tốt, không bị đổi màu khi tiếp xúc với nhiệt độ cao, nhất là tại khu vực trước bếp nấu.  
 Yêu cầu chống cháy cũng cần được đặt ra nghiêm ngặt để đảm bảo an toàn, ngăn cháy lan. Hỏa hoạn là một nguy cơ nghiêm trọng và đang có xu hướng gia tăng trong thời gian gần đây.
@@ -44,7 +45,7 @@ Tìm cảm hứng thiết kế tại [Houzz - xu hướng ốp tường bếp](h
 
 Tham khảo thêm các nguyên tắc bố trí và an toàn từ [Hiệp hội Nhà bếp & Phòng tắm Quốc gia - NKBA](https://nkba.org/guidelines/) (link bằng tiếng Anh).
 
-## TỔNG QUAN VỀ CÁC LOẠI VẬT LIỆU ỐP TƯỜNG BẾP
+## 2\. TỔNG QUAN VỀ CÁC LOẠI VẬT LIỆU ỐP TƯỜNG BẾP
 
 Trên thị trường hiện nay có nhiều lựa chọn vật liệu ốp tường bếp như đá solid surface, đá thạch anh nhân tạo, kính cường lực, tấm acrylic, tấm thép tráng men sứ, laminate, inox và gạch. Mỗi loại vật liệu đều có những ưu điểm và hạn chế riêng.
 
@@ -108,14 +109,14 @@ Trên thị trường hiện nay có nhiều lựa chọn vật liệu ốp tư�
 *   Nhược điểm: Dễ bám bẩn ở vân gạch, dễ nứt vỡ khi va đập, tốn công thi công.
     
 
-## BẢNG SO SÁNH CHUNG CÁC LOẠI VẬT LIỆU ỐP BẾP
+## 3\. BẢNG SO SÁNH CHUNG CÁC LOẠI VẬT LIỆU ỐP BẾP
 
 Dưới đây là bảng so sánh tổng quan giữa 8 loại vật liệu ốp tường bếp thông dụng, dựa trên 10 tiêu chí gồm: độ bền, khả năng chống ố, chịu nhiệt, chống cháy, yêu cầu bảo trì, khả năng hút nam châm, dễ dàng vận chuyển, thi công, lựa chọn màu sắc và giá thành.  
 **Lưu ý:** Đây là bảng so sánh mang tính tổng quát. Các đặc điểm cụ thể có thể thay đổi tùy theo mã sản phẩm, nhà sản xuất và đặc biệt là nguồn gốc xuất xứ.
 
 ![](/public/images/so-sanh-vat-lieu-op-bep.svg)
 
-## KẾT LUẬN
+## 4\. KẾT LUẬN
 
 Việc chọn tấm ốp bếp phù hợp không quá khó nếu bạn có đủ thông tin. Hãy cân nhắc các yếu tố kỹ thuật và thẩm mỹ để chọn đúng vật liệu phù hợp với nhu cầu và phong cách của bạn.
 
