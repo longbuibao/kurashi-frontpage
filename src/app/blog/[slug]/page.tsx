@@ -18,8 +18,8 @@ export default async function Post (props: Params): Promise<React.ReactElement> 
     headline: post?.title,
     description: post?.title,
     author: {
-      '@type': 'Organization',
-      name: 'Kurashi'
+      '@type': 'Person',
+      name: 'Diện Võ'
     },
     mainEntityOfPage: `https://www.kurashi.com.vn/blog/${(post as any).fileName}`,
     datePublished: post?.date.toLocaleDateString()
@@ -48,8 +48,8 @@ export default async function Post (props: Params): Promise<React.ReactElement> 
                     </div>
                     <h1 className='text-2xl font-bold mt-10'>{post.title.toUpperCase()}</h1>
                   </div>
-                  <div>
-                    <div className='hidden md:block md:mb-12'>
+                  <div className='flex flex-col justify-center max-md:mt-10'>
+                    <div className='max-md:mb-2'>
                       <p className='uppercase text-[rgb(134,135,135)] font-semibold text-xs'>{post.date.toLocaleString('default', { month: 'short' })} {post.date.toLocaleString('default', { day: 'numeric' })} • {post.author.name}</p>
                     </div>
                     <div className='flex flex-row gap-3 flex-nowrap items-center mt-3'>
