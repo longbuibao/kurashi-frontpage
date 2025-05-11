@@ -55,6 +55,8 @@ Tấm ốp tường bằng thép tráng men có nhiều điểm khác biệt và
 
 **Lưu ý:** Tấm tráng men hỗ trợ **phụ kiện bếp nam châm** - không cần khoan, không gây hư hại.
 
+> Khám phá công nghệ vật liệu, ưu điểm nối bật và kích thước màu sắc của thép tráng men tại trang [Tấm Ốp Tường Bằng Thép Tráng Men](https://www.kurashi.com.vn/san-pham/tam-op-tuong-bang-thep-trang-men)
+
 ## 4\. SẢN XUẤT TẠI NHẬT BẢN, ĐẢM BẢO NGUỒN GỐC VÀ CHẤT LƯỢNG
 
 Tấm ốp tường bằng théptráng men Kurashi được sản xuất trực tiếp tại Nhật Bản, với xuất xứ rõ ràng và minh bạch. Mỗi lô hàng đều đi kèm:
