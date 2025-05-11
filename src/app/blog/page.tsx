@@ -48,46 +48,52 @@ const Navigator: React.FC<{ label: string, isSelected: boolean }> = ({ label, is
 }
 
 const MainBlogCard: React.FC<BlogPost> = ({ coverImage, title, category, author, date, fileName, excerpt, isSmallCard = false }) => {
-  return (
-    <Link href={`/blog/${fileName}`}>
-      <div className=''>
-        <Image className='rounded-sm w-full' src={coverImage.coverImage.replace('/public', '')} alt='test' width={640} height={640} />
-        <div className='w-4/5 mx-auto text-center flex flex-col gap-4 p-3 max-md:w-full'>
-          <p className='font-extrabold text-2xl line-clamp-2 mx-auto mt-4'>{title}</p>
-          <p className='line-clamp-1'>{excerpt}</p>
-          <p className='uppercase text-[rgb(134,135,135)] font-semibold text-xs'>{date.toLocaleString('default', { month: 'short' })} {date.toLocaleString('default', { day: 'numeric' })} • {author.name}</p>
+  if (coverImage !== undefined && coverImage.coverImage) {
+    return (
+      <Link href={`/blog/${fileName}`}>
+        <div className=''>
+          <Image className='rounded-sm w-full' src={coverImage.coverImage.replace('/public', '')} alt='test' width={640} height={640} />
+          <div className='w-4/5 mx-auto text-center flex flex-col gap-4 p-3 max-md:w-full'>
+            <p className='font-extrabold text-2xl line-clamp-2 mx-auto mt-4'>{title}</p>
+            <p className='line-clamp-1'>{excerpt}</p>
+            <p className='uppercase text-[rgb(134,135,135)] font-semibold text-xs'>{date.toLocaleString('default', { month: 'short' })} {date.toLocaleString('default', { day: 'numeric' })} • {author.name}</p>
+          </div>
         </div>
-      </div>
-    </Link>
-  )
+      </Link>
+    )
+  }
 }
 
 const RightSideBlogCard: React.FC<BlogPost> = ({ title, excerpt, date, author, coverImage }) => {
-  return (
-    <div className='flex flex-row justify-between'>
-      <div className='w-96'>
-        <p className='font-bold text-lg'>{title}</p>
-        <p className='text-sm my-3'>{excerpt}</p>
-        <p className='uppercase text-[rgb(134,135,135)] font-semibold text-xs'>{date.toLocaleString('default', { month: 'short' })} {date.toLocaleString('default', { day: 'numeric' })} • {author.name}</p>
+  if (coverImage !== undefined && coverImage.coverImage) {
+    return (
+      <div className='flex flex-row justify-between'>
+        <div className='w-96'>
+          <p className='font-bold text-lg'>{title}</p>
+          <p className='text-sm my-3'>{excerpt}</p>
+          <p className='uppercase text-[rgb(134,135,135)] font-semibold text-xs'>{date.toLocaleString('default', { month: 'short' })} {date.toLocaleString('default', { day: 'numeric' })} • {author.name}</p>
+        </div>
+        <div>
+          <Image className='object-cover flex-shrink-0 rounded-sm' src={coverImage.coverImage?.replace('/public', '')} alt='test' width={200} height={100} />
+        </div>
       </div>
-      <div>
-        <Image className='object-cover flex-shrink-0 rounded-sm' src={coverImage.coverImage?.replace('/public', '')} alt='test' width={200} height={100} />
-      </div>
-    </div>
-  )
+    )
+  }
 }
 
 const BlogCardByCategory: React.FC<BlogPost> = ({ coverImage, title, excerpt, date, author }) => {
-  return (
-    <div>
-      <Image className='object-cover flex-shrink-0 rounded-sm' src={coverImage.coverImage?.replace('/public', '')} alt='test' width={300} height={100} />
-      <div className='w-60'>
-        <p className='font-bold text-lg my-3 max-md:line-clamp-1'>{title}</p>
-        <p className='text-sm my-3 line-clamp-1'>{excerpt}</p>
-        <p className='uppercase text-[rgb(134,135,135)] font-semibold text-xs'>{date.toLocaleString('default', { month: 'short' })} {date.toLocaleString('default', { day: 'numeric' })}, {date.toLocaleDateString('default', { year: 'numeric' })} • {author.name}</p>
+  if (coverImage !== undefined && coverImage.coverImage) {
+    return (
+      <div>
+        <Image className='object-cover flex-shrink-0 rounded-sm' src={coverImage.coverImage?.replace('/public', '')} alt='test' width={300} height={100} />
+        <div className='w-60'>
+          <p className='font-bold text-lg my-3 max-md:line-clamp-1'>{title}</p>
+          <p className='text-sm my-3 line-clamp-1'>{excerpt}</p>
+          <p className='uppercase text-[rgb(134,135,135)] font-semibold text-xs'>{date.toLocaleString('default', { month: 'short' })} {date.toLocaleString('default', { day: 'numeric' })}, {date.toLocaleDateString('default', { year: 'numeric' })} • {author.name}</p>
+        </div>
       </div>
-    </div>
-  )
+    )
+  }
 }
 
 // @ts-expect-error
