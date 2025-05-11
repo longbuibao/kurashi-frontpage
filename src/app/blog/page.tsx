@@ -22,7 +22,7 @@ interface BlogPost {
   subcategory: string[]
   title: string
   excerpt: string
-  coverImage: string
+  coverImage: any
   date: Date
   author: {
     name: string
@@ -34,6 +34,7 @@ interface BlogPost {
   content: string
   fileName: string
   isSmallCard?: boolean
+  isReadyForPublish?: boolean
 }
 
 const Navigator: React.FC<{ label: string, isSelected: boolean }> = ({ label, isSelected }) => {

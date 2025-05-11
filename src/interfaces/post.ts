@@ -4,7 +4,7 @@ export interface Post {
   slug: string
   title: string
   date: Date
-  coverImage: string
+  coverImage: any
   author: Author
   excerpt: string
   ogImage: {
@@ -12,4 +12,5 @@ export interface Post {
   }
   content: string
   preview?: boolean
+  isReadyForPublish?: boolean
 }
