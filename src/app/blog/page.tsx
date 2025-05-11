@@ -64,34 +64,40 @@ const MainBlogCard: React.FC<BlogPost> = ({ coverImage, title, category, author,
   }
 }
 
-const RightSideBlogCard: React.FC<BlogPost> = ({ title, excerpt, date, author, coverImage }) => {
+const RightSideBlogCard: React.FC<BlogPost> = ({ title, excerpt, date, author, coverImage, fileName }) => {
   if (coverImage !== undefined && coverImage.coverImage) {
     return (
-      <div className='flex flex-row justify-between'>
-        <div className='w-96'>
-          <p className='font-bold text-lg'>{title}</p>
-          <p className='text-sm my-3'>{excerpt}</p>
-          <p className='uppercase text-[rgb(134,135,135)] font-semibold text-xs'>{date.toLocaleString('default', { month: 'short' })} {date.toLocaleString('default', { day: 'numeric' })} • {author.name}</p>
+      <Link href={`/blog/${fileName}`}>
+        <div className='flex flex-row justify-between'>
+          <div className='w-96'>
+            <p className='font-bold text-lg'>{title}</p>
+            <p className='text-sm my-3'>{excerpt}</p>
+            <p className='uppercase text-[rgb(134,135,135)] font-semibold text-xs'>{date.toLocaleString('default', { month: 'short' })} {date.toLocaleString('default', { day: 'numeric' })} • {author.name}</p>
+          </div>
+          <div>
+            <Image className='object-cover flex-shrink-0 rounded-sm' src={coverImage.coverImage?.replace('/public', '')} alt='test' width={200} height={100} />
+          </div>
         </div>
-        <div>
-          <Image className='object-cover flex-shrink-0 rounded-sm' src={coverImage.coverImage?.replace('/public', '')} alt='test' width={200} height={100} />
-        </div>
-      </div>
+      </Link>
+
     )
   }
 }
 
-const BlogCardByCategory: React.FC<BlogPost> = ({ coverImage, title, excerpt, date, author }) => {
+const BlogCardByCategory: React.FC<BlogPost> = ({ coverImage, title, excerpt, date, author, fileName }) => {
   if (coverImage !== undefined && coverImage.coverImage) {
     return (
-      <div>
-        <Image className='object-cover flex-shrink-0 rounded-sm' src={coverImage.coverImage?.replace('/public', '')} alt='test' width={300} height={100} />
-        <div className='w-60'>
-          <p className='font-bold text-lg my-3 max-md:line-clamp-1'>{title}</p>
-          <p className='text-sm my-3 line-clamp-1'>{excerpt}</p>
-          <p className='uppercase text-[rgb(134,135,135)] font-semibold text-xs'>{date.toLocaleString('default', { month: 'short' })} {date.toLocaleString('default', { day: 'numeric' })}, {date.toLocaleDateString('default', { year: 'numeric' })} • {author.name}</p>
+      <Link href={`/blog/${fileName}`}>
+        <div>
+          <Image className='object-cover flex-shrink-0 rounded-sm' src={coverImage.coverImage?.replace('/public', '')} alt='test' width={300} height={100} />
+          <div className='w-60'>
+            <p className='font-bold text-lg my-3 max-md:line-clamp-1'>{title}</p>
+            <p className='text-sm my-3 line-clamp-1'>{excerpt}</p>
+            <p className='uppercase text-[rgb(134,135,135)] font-semibold text-xs'>{date.toLocaleString('default', { month: 'short' })} {date.toLocaleString('default', { day: 'numeric' })}, {date.toLocaleDateString('default', { year: 'numeric' })} • {author.name}</p>
+          </div>
         </div>
-      </div>
+      </Link>
+
     )
   }
 }
@@ -100,7 +106,7 @@ const BlogCardByCategory: React.FC<BlogPost> = ({ coverImage, title, excerpt, da
 const AllBlogs: React.FC = async (): React.ReactElement => {
   const postsDirectory = path.join(process.cwd(), '_posts')
   const fileNames = await fs.readdir(postsDirectory)
-  const posts = await Promise.all(
+  const posts = (await Promise.all(
     fileNames
       .filter((file) => file.endsWith('.md'))
       .map(async (fileName) => {
@@ -115,7 +121,7 @@ const AllBlogs: React.FC = async (): React.ReactElement => {
           realFileName: fileName
         }
       })
-  )
+  )).filter(x => (x as any).isReadyForPublish)
 
   const firstBlog = posts[0] as any as BlogPost
 
