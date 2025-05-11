@@ -1,5 +1,5 @@
 ---
-fileName: huong-dan-lua-chon-vat-lieu-op-bep-phu-hop-nhat
+fileName: huong-dan-lua-chon-vat-lieu-op-bep
 category: Tấm ốp
 subCategory:
   - Tấm ốp thép tráng men
