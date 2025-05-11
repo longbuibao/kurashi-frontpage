@@ -14,7 +14,7 @@ author:
   picture: /public/images/author.png
 ogImage:
   url: /public/images/tam-op-bep-bang-thep-trang-men.webp
-isReadyForPublish: false
+isReadyForPublish: true
 ---
 Khi thiết kế xây mới hoặc cải tạo nhà bếp, việc lựa chọn **vật liệu ốp tường bếp** phù hợp là vô cùng quan trọng. Sự lựa chọn này ảnh hưởng đến tính **thẩm mỹ**, **công năng** và **sự tiện lợi** hàng ngày. Trong bài viết này, chúng ta sẽ phân tích các loại vật liệu ốp bếp phổ biến để giúp bạn đưa ra lựa chọn phù hợp nhất.
 
