@@ -5,7 +5,9 @@ subCategory:
   - Tấm ốp thép tráng men
 title: Thép Tráng Men Là Gì? Cấu Tạo, Ưu Điểm & Ứng Dụng Ốp Tường Bếp
 excerpt: Công nghệ vật liệu Made In Japan của thép tráng men
-coverImage: undefined
+coverImage:
+  coverImage: undefined
+  coverImageAlt: dfdf
 date: 2025-05-07T12:46:00.000Z
 author:
   name: Diện Võ
@@ -98,4 +100,4 @@ Không gian bếp ở Việt Nam-nhất là trong các căn hộ hoặc nhà ph�
     Có 3 mẫu màu gồm trắng, be và xám nhạt, bề mặt sáng mờ hiện đại nên dễ phối hợp trong nội thất.
     
 
-> [Liên hệ KURASHI](https://www.kurashi.com.vn/lien-he) để được tư vấn miễn phí và nhận báo giá nhanh chóng.
+> [Liên hệ ngay KURASHI](https://www.kurashi.com.vn/lien-he) để được tư vấn miễn phí và nhận báo giá nhanh chóng.
