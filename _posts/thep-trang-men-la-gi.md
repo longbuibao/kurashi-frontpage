@@ -31,6 +31,8 @@ Do đó cộng hưởng được điểm mạnh của 2 vật liệu là **độ
 
 Thép tráng men [thương hiệu KURASHI](https://www.kurashi.com.vn/) có cấu tạo đặc biệt gồm 6 lớp tích hợp giữa men kính và kim loại. Riêng lớp mặt gồm 2 lớp men kính (dual coating). Vật liệu được nung ở nhiệt độ cao, và sản xuất 100% tại Nhật Bản
 
+> Khám phá công nghệ vật liệu, ưu điểm nối bật và kích thước màu sắc của thép tráng men tại trang [Tấm Ốp Tường Bằng Thép Tráng Men](https://www.kurashi.com.vn/san-pham/tam-op-tuong-bang-thep-trang-men)
+
 ## 2\. TẠI SAO THÉP TRÁNG MEN ĐƯỢC NGƯỜI NHẬT TIN DÙNG TRONG SUỐT 60 NĂM
 
 Tấm ốp tường bằng thép tráng men cân bằng được các yêu cầu về công năng, giá cả, bề mặt sáng mờ trang nhã, dễ thi công và tích hợp được nhiều loại phụ kiện bếp — những yếu tố mà người Nhật luôn ưu tiên khi chọn vật liệu cho nhà bếp. Trong đó, **công năng** và **khả năng tích hợp phụ kiện bếp nam châm** là hai điểm nổi bật nhất.
