@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 1920 1080">
+  <!-- Generator: Adobe Illustrator 29.4.0, SVG Export Plug-In . SVG Version: 2.1.0 Build 152)  -->
+  <g>
+    <rect x=".5" y=".5" width="1919" height="204.87" fill="#437355"/>
+    <path d="M1919,1v203.87H1V1h1918M1920,0H0v205.87h1920V0h0Z" fill="#437355"/>
+  </g>
+  <g isolation="isolate">
+    <g isolation="isolate">
+      <text transform="translate(59.04 141.15)" fill="#fff" font-family="Arial-BoldMT, Arial" font-size="72" font-weight="700" isolation="isolate"><tspan x="0" y="0">CẤU TRÚC 6 LỚ</tspan></text>
+      <text transform="translate(620.45 141.15)" fill="#fff" font-family="Arial-BoldMT, Arial" font-size="72" font-weight="700" isolation="isolate"><tspan x="0" y="0">P</tspan></text>
+      <text transform="translate(667.17 141.15)" fill="#fff" font-family="Arial-BoldMT, Arial" font-size="72" font-weight="700" isolation="isolate"><tspan x="0" y="0" xml:space="preserve"> CỦ</tspan></text>
+      <text transform="translate(791.17 141.15)" fill="#fff" font-family="Arial-BoldMT, Arial" font-size="72" font-weight="700" isolation="isolate"><tspan x="0" y="0">A</tspan></text>
+      <text transform="translate(840.49 141.15)" fill="#fff" font-family="Arial-BoldMT, Arial" font-size="72" font-weight="700" isolation="isolate"><tspan x="0" y="0" xml:space="preserve"> THÉ</tspan></text>
+      <text transform="translate(1004.5 141.15)" fill="#fff" font-family="Arial-BoldMT, Arial" font-size="72" font-weight="700" isolation="isolate"><tspan x="0" y="0">P</tspan></text>
+      <text transform="translate(1051.22 141.15)" fill="#fff" font-family="Arial-BoldMT, Arial" font-size="72" font-weight="700" isolation="isolate"><tspan x="0" y="0" xml:space="preserve"> TRÁNG MEN KURASHI</tspan></text>
+    </g>
+  </g>
+  <g>
+    <rect x="158.04" y="242.75" width="684.67" height="99.75" fill="#2c4b7d"/>
+    <path d="M842.58,242.88v99.5H158.19v-99.5h684.39M842.87,242.63H157.91v100h684.96v-100h0Z" fill="#2c4b7d"/>
+  </g>
+  <g>
+    <rect x="158.33" y="383.91" width="684.39" height="99.75" fill="#5a7ca6"/>
+    <path d="M842.58,384.03v99.5H158.48v-99.5h684.1M842.87,383.78H158.19v100h684.67v-100h0Z" fill="#5a7ca6"/>
+  </g>
+  <g>
+    <rect x="158.04" y="525.06" width="684.67" height="99.75" fill="#d6572b"/>
+    <path d="M842.58,525.19v99.5H158.19v-99.5h684.39M842.87,524.94H157.91v100h684.96v-100h0Z" fill="#d6572b"/>
+  </g>
+  <g>
+    <rect x="158.04" y="666.22" width="684.67" height="99.75" fill="#3f3f3f"/>
+    <path d="M842.58,666.34v99.5H158.19v-99.5h684.39M842.87,666.09H157.91v100h684.96v-100h0Z" fill="#3f3f3f"/>
+  </g>
+  <g>
+    <rect x="158.04" y="807.37" width="684.67" height="99.75" fill="#b0b0b0"/>
+    <path d="M842.58,807.5v99.5H158.19v-99.5h684.39M842.87,807.25H157.91v100h684.96v-100h0Z" fill="#b0b0b0"/>
+  </g>
+  <g>
+    <rect x="158.04" y="948.53" width="684.67" height="99.75" fill="#e8d8b0"/>
+    <path d="M842.58,948.65v99.5H158.19v-99.5h684.39M842.87,948.4H157.91v100h684.96v-100h0Z" fill="#e8d8b0"/>
+  </g>
+  <text transform="translate(934.55 324.66)" fill="#333" font-family="ArialMT, Arial" font-size="68.58" isolation="isolate"><tspan x="0" y="0">1. Lớp men kính mặt</tspan></text>
+  <text transform="translate(934.55 461.83)" fill="#333" font-family="ArialMT, Arial" font-size="68.58" isolation="isolate"><tspan x="0" y="0">2. Lớp men kính nền</tspan></text>
+  <text transform="translate(934.55 599)" fill="#333" font-family="ArialMT, Arial" font-size="68.58" isolation="isolate"><tspan x="0" y="0">3. Lớp Niken</tspan></text>
+  <text transform="translate(934.55 736.17)" fill="#333" font-family="ArialMT, Arial" font-size="68.58" isolation="isolate"><tspan x="0" y="0">4. Lớp kim loại nền</tspan></text>
+  <text transform="translate(934.55 873.34)" fill="#333" font-family="ArialMT, Arial" font-size="68.58" isolation="isolate"><tspan x="0" y="0">5. Lớp Niken</tspan></text>
+  <text transform="translate(934.55 1010.5)" fill="#333" font-family="ArialMT, Arial" font-size="68.58" isolation="isolate"><tspan x="0" y="0">6. Lớp men kính nền</tspan></text>
+</svg>
