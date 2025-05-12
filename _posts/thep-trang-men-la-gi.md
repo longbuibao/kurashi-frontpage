@@ -4,8 +4,10 @@ category: Tấm ốp
 subCategory:
   - Tấm ốp thép tráng men
 title: Thép Tráng Men Là Gì? Cấu Tạo, Ưu Điểm & Ứng Dụng Ốp Tường Bếp
-excerpt: Công nghệ vật liệu Made In Japan của thép tráng men
-coverImage: undefined
+excerpt: Công nghệ vật liệu Made In Japan của tấm ốp bếp bằng thép tráng men
+coverImage:
+  coverImage: undefined
+  coverImageAlt: Cấu tạo 6 lớp của thép tráng men Kurashi
 date: 2025-05-07T12:46:00.000Z
 author:
   name: Diện Võ
