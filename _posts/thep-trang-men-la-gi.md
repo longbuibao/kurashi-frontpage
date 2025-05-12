@@ -8,7 +8,7 @@ excerpt: Công nghệ vật liệu Made In Japan của thép tráng men
 coverImage:
   coverImage: /public/images/cau-tao-6-lop-cua-thep-trang-men-kurashi.svg
   coverImageAlt: Cấu tạo 6 lớp của thép tráng men Kurashi
-date: 2025-05-07T12:46:00.000Z
+date: 2025-05-12T21:30:00.000Z
 author:
   name: Diện Võ
   picture: undefined
