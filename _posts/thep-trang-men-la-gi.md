@@ -61,7 +61,7 @@ Tấm ốp tường bằng thép tráng men có nhiều điểm khác biệt và
 
 ## 4\. SẢN XUẤT TẠI NHẬT BẢN, ĐẢM BẢO NGUỒN GỐC VÀ CHẤT LƯỢNG
 
-Tấm ốp tường bằng théptráng men Kurashi được sản xuất trực tiếp tại Nhật Bản, với xuất xứ rõ ràng và minh bạch. Mỗi lô hàng đều đi kèm:
+Tấm ốp tường bằng thép tráng men Kurashi được sản xuất trực tiếp tại Nhật Bản, với xuất xứ rõ ràng và minh bạch. Mỗi lô hàng đều đi kèm:
 
 *   **Chứng nhận xuất xứ (CO - Certificate of Origin)**: trực tiếp từ nhà sản xuất Nhật Bản cho mỗi lô hàng được nhập khẩu, dễ dàng truy xuất nguồn gốc.
     
