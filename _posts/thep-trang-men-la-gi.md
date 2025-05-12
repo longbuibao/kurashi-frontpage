@@ -82,26 +82,32 @@ Không gian bếp ở Việt Nam-nhất là trong các căn hộ hoặc nhà ph�
 
 ## CÂU HỎI THƯỜNG GẶP VỀ THÉP TRÁNG MEN
 
-1.  **Cách vệ sinh, bảo dưỡng tấm ốp tường bếp thép tráng men để luôn sạch sẽ, bền đẹp?**  
-    Tấm ốp thép tráng men rất dễ vệ sinh, chống bám bẩn tốt nhất là dầu mỡ nhờ lớp men sứ vệ sinh phủ lên bề mặt, không thấm hút nước. Chỉ lau với nước và nước rửa chén với khăn là căn bếp luôn sạch sẽ.
-    
-2.  **Tấm ốp bếp thép tráng men có bền không? Có dễ vỡ không?**  
-    Thép tráng men bền gấp nhiều lần các vật liệu ốp truyền thống khác, không dễ vỡ nhờ lõi thép cứng, không dễ bị nứt vỡ như kính hoặc gạch.
-    
-3.  **Có cần khoan tường tấm ốp bếp thép tráng men để gắn phụ kiện không?**  
-    Không cần khoan tường, chỉ cần đặt lên và sử dụng ngay vì phụ kiện nam châm tự động hút vào lõi thép của tấm ốp.
-    
-4.  **Tấm tráng men có bị ố màu theo thời gian không?**  
-    Không. Tấm tráng men không bị ố màu hay thay đổi theo thời gian, ngay cả khi tiếp xúc với nhiệt độ cao hoặc hơi nước.
-    
-5.  **Thép tráng men có những mẫu ốp bếp nào?**  
-    Có 3 mẫu màu gồm trắng, be và xám nhạt, bề mặt sáng mờ hiện đại nên dễ phối hợp trong nội thất.
-    
-6.  **Có thể thi công kích thước tấm ốp thép tráng men theo kích thước của không gian bếp nhà tôi?**  
-    Có thể vì tấm ốp bếp thép tráng men có 3 khổ, chiều cao tối đa 890mm, chiều dài tối đa 2400. Với các bếp dài, bếp chữ L có thể nối dài được.
-    
-7.  **Thời gian bảo hành và tuổi thọ của tấm ốp tường bếp là bao lâu?**  
-    Có 3 mẫu màu gồm trắng, be và xám nhạt, bề mặt sáng mờ hiện đại nên dễ phối hợp trong nội thất.
-    
+### Cách vệ sinh, bảo dưỡng tấm ốp tường bếp thép tráng men để luôn sạch sẽ, bền đẹp?
+
+Tấm ốp thép tráng men rất dễ vệ sinh, chống bám bẩn tốt nhất là dầu mỡ nhờ lớp men sứ vệ sinh phủ lên bề mặt, không thấm hút nước. Chỉ lau với nước và nước rửa chén với khăn là căn bếp luôn sạch sẽ.
+
+### Tấm ốp bếp thép tráng men có bền không? Có dễ vỡ không?
+
+Thép tráng men bền gấp nhiều lần các vật liệu ốp truyền thống khác, không dễ vỡ nhờ lõi thép cứng, không dễ bị nứt vỡ như kính hoặc gạch.
+
+### Có cần khoan tường tấm ốp bếp thép tráng men để gắn phụ kiện không?
+
+Không cần khoan tường, chỉ cần đặt lên và sử dụng ngay vì phụ kiện nam châm tự động hút vào lõi thép của tấm ốp.
+
+### Tấm tráng men có bị ố màu theo thời gian không?
+
+Không. Tấm tráng men không bị ố màu hay thay đổi theo thời gian, ngay cả khi tiếp xúc với nhiệt độ cao hoặc hơi nước.
+
+### Thép tráng men có những mẫu ốp bếp nào?
+
+Có 3 mẫu màu gồm trắng, be và xám nhạt, bề mặt sáng mờ hiện đại nên dễ phối hợp trong nội thất.
+
+### Có thể thi công kích thước tấm ốp thép tráng men theo kích thước của không gian bếp nhà tôi?
+
+Có thể vì tấm ốp bếp thép tráng men có 3 khổ, chiều cao tối đa 890mm, chiều dài tối đa 2400. Với các bếp dài, bếp chữ L có thể nối dài được.
+
+### Thời gian bảo hành và tuổi thọ của tấm ốp tường bếp bằng thép tráng men là bao lâu?
+
+Thời gian bảo hành là 20 năm. Nếu sử dụng đúng theo hướng dẫn, tuổi thọ tấm ốp có thể lên đến 30-50 năm.
 
 > [Liên hệ ngay KURASHI](https://www.kurashi.com.vn/lien-he) để được tư vấn miễn phí và nhận báo giá nhanh chóng.
