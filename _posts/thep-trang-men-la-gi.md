@@ -31,7 +31,7 @@ Bạn có thể tưởng tượng thép tráng men một tấm có lõi bằng t
 
 Do đó cộng hưởng được điểm mạnh của 2 vật liệu là **độ bền** + **dễ vệ sinh**.
 
-Thép tráng men [thương hiệu KURASHI](https://www.kurashi.com.vn/) có cấu tạo đặc biệt gồm 6 lớp như mô tả bên dưới
+Thép tráng men [thương hiệu KURASHI](https://www.kurashi.com.vn/) có cấu tạo đặc biệt gồm 6 lớp tích hợp giữa men kính và kim loại. Riêng lớp mặt gồm 2 lớp men kính (dual coating). Vật liệu được nung ở nhiệt độ cao, và sản xuất 100% tại Nhật Bản
 
 ## 2\. TẠI SAO THÉP TRÁNG MEN ĐƯỢC NGƯỜI NHẬT TIN DÙNG TRONG SUỐT 60 NĂM
 
