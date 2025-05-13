@@ -42,7 +42,6 @@ content:
         fields:
           - { name: coverImage, label: Cover image, type: image, required: true }
           - { name: coverImageAlt, label: Cover image alt, type: string, required: true }
-          - { name: asasas, label: Cosasasver image alt, type: object, required: true }
       - { name: date, label: Date, type: date, options: { time: true, format: "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'" } }
       - name: author
         label: Author
