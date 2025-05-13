@@ -13,4 +13,5 @@ export interface Post {
   content: string
   preview?: boolean
   isReadyForPublish?: boolean
+  faq?: Array<{ q: string, a: string }>
 }

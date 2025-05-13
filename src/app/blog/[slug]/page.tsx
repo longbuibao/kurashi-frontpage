@@ -12,6 +12,26 @@ export default async function Post (props: Params): Promise<React.ReactElement> 
   const params = await props.params
   const post = getPostBySlug(params.slug)
 
+  const faq = post?.faq
+  const mainEntity = faq?.map(x => {
+    return {
+      '@type': 'Question',
+      name: x.q,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: x.a
+      }
+    }
+  })
+  const jsonLdFaq = mainEntity !== undefined
+    ? {
+
+        '@context': 'https://schema.org/',
+        '@type': 'FAQPage',
+        mainEntity
+      }
+    : undefined
+
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'Article',
@@ -36,6 +56,11 @@ export default async function Post (props: Params): Promise<React.ReactElement> 
           type='application/ld+json'
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
+        {jsonLdFaq !== undefined && (
+          <script
+            type='application/ld+json'
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdFaq) }}
+          />)}
         <article className='mb-32'>
           <div className='my-10 max-md:w-full'>
             <div className='w-[80%] mx-auto max-md:w-full max-md:p-5'>
