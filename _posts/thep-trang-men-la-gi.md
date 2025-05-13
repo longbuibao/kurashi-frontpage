@@ -1,5 +1,5 @@
 ---
-fileName: thep-trang-men-la-gi-cau-tao-uu-diem-va-ung-dung-op-tuong-bep
+fileName: thep-trang-men-la-gi
 category: Tấm ốp
 subCategory:
   - Tấm ốp thép tráng men
