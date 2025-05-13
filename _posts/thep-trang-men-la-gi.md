@@ -8,10 +8,36 @@ excerpt: Công nghệ vật liệu Made In Japan của thép tráng men
 coverImage:
   coverImage: /public/images/cau-tao-6-lop-cua-thep-trang-men-kurashi.svg
   coverImageAlt: Cấu tạo 6 lớp của thép tráng men Kurashi
+faq:
+  - q: Cách vệ sinh, bảo dưỡng tấm ốp tường bếp thép tráng men để luôn sạch sẽ, bền
+      đẹp?
+    a: Tấm ốp thép tráng men rất dễ vệ sinh, chống bám bẩn tốt nhất là dầu mỡ nhờ
+      lớp men sứ vệ sinh phủ lên bề mặt, không thấm hút nước. Chỉ lau với nước
+      và nước rửa chén với khăn là căn bếp luôn sạch sẽ.
+  - q: Tấm ốp bếp thép tráng men có bền không? Có dễ vỡ không?
+    a: Thép tráng men bền gấp nhiều lần các vật liệu ốp truyền thống khác, không dễ
+      vỡ nhờ lõi thép cứng, không dễ bị nứt vỡ như kính hoặc gạch.
+  - q: Có cần khoan tường tấm ốp bếp thép tráng men để gắn phụ kiện không?
+    a: Không cần khoan tường, chỉ cần đặt lên và sử dụng ngay vì phụ kiện nam châm
+      tự động hút vào lõi thép của tấm ốp.
+  - q: Tấm tráng men có bị ố màu theo thời gian không?
+    a: Không. Tấm tráng men không bị ố màu hay thay đổi theo thời gian, ngay cả khi
+      tiếp xúc với nhiệt độ cao hoặc hơi nước.
+  - q: Thép tráng men có những mẫu ốp bếp nào?
+    a: Có 3 mẫu màu gồm trắng, be và xám nhạt, bề mặt sáng mờ hiện đại nên dễ phối
+      hợp trong nội thất.
+  - q: Có thể thi công kích thước tấm ốp thép tráng men theo kích thước của không
+      gian bếp nhà tôi?
+    a: Có thể vì tấm ốp bếp thép tráng men có 3 khổ, chiều cao tối đa 890mm, chiều
+      dài tối đa 2400. Với các bếp dài, bếp chữ L có thể nối dài được.
+  - q: Thời gian bảo hành và tuổi thọ của tấm ốp tường bếp bằng thép tráng men là
+      bao lâu?
+    a: Thời gian bảo hành là 20 năm. Nếu sử dụng đúng theo hướng dẫn, tuổi thọ tấm
+      ốp có thể lên đến 30-50 năm.
 date: 2025-05-12T21:30:00.000Z
 author:
   name: Diện Võ
-  picture: undefined
+  picture: /public/images/author.png
 ogImage:
   url: /public/images/cau-tao-6-lop-cua-thep-trang-men-kurashi.svg
 isReadyForPublish: false
