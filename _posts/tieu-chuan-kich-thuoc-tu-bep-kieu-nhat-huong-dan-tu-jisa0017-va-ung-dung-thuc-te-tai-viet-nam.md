@@ -5,8 +5,13 @@ subCategory:
   - Nội thất hay
 title: "Tiêu chuẩn kích thước tủ bếp kiểu Nhật: Hướng dẫn từ JIS A 0017 và ứng
   dụng thực tế tại Việt Nam"
-excerpt: Tiêu chuẩn tủ bếp Nhật Bản theo JIS A 0017:2018
-coverImage: undefined
+excerpt: Tiêu chuẩn kích thước tủ bếp của Nhật Bản theo JIS A 0017:2018
+coverImage:
+  coverImage: undefined
+  coverImageAlt: Các kích thước tiêu chuẩn của tủ bếp tại Nhật Bản
+faq:
+  - q: dfdf
+    a: fdfd
 date: 2025-05-10T10:59:00.000Z
 author:
   name: Diện Võ
@@ -94,19 +99,24 @@ Thiết kế **tủ bếp dựa trên kích thước chuẩn Nhật Bản** giú
 
 ### CÂU HỎI THƯỜNG GẶP VỀ TỦ BẾP
 
-### **Tủ bếp tiêu chuẩn có chiều cao bao nhiêu?**  
+### **Tủ bếp tiêu chuẩn có chiều cao bao nhiêu?**
+
 Chiều cao phổ biến theo JIS là 800–850mm, phù hợp với người cao 1m55–1m65.
 
-### **Chiều cao tủ bếp phù hợp với người cao 1m55 là bao nhiêu?**  
+### **Chiều cao tủ bếp phù hợp với người cao 1m55 là bao nhiêu?**
+
 Khoảng 800mm là phù hợp, hạn chế đau lưng và dễ thao tác.
 
-### **Có thể điều chỉnh kích thước tủ bếp không?**  
+### **Có thể điều chỉnh kích thước tủ bếp không?**
+
 Có. Kurashi cung cấp giải pháp panel linh hoạt, cắt theo yêu cầu và thói quen sử dụng.
 
-### **Tủ bếp kiểu Nhật có phù hợp nhà phố ở Việt Nam?**  
+### **Tủ bếp kiểu Nhật có phù hợp nhà phố ở Việt Nam?**
+
 Rất phù hợp. Bố cục tủ bếp Nhật tiết kiệm diện tích và dễ sắp xếp với phụ kiện gắn nam châm.
 
-### **Nên chọn chất liệu gì để dễ lau chùi và bền?**  
+### **Nên chọn chất liệu gì để dễ lau chùi và bền?**
+
 Tấm tráng men là lựa chọn tối ưu: bền, chống ẩm mốc, dễ vệ sinh.
 
 👉 [**Liên hệ Kurashi ngay**](https://www.kurashi.com.vn/lien-he) để nhận tư vấn miễn phí và báo giá nhanh
