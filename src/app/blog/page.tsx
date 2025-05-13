@@ -75,7 +75,7 @@ const RightSideBlogCard: React.FC<BlogPost> = ({ title, excerpt, date, author, c
             <p className='text-sm my-3'>{excerpt}</p>
             <p className='uppercase text-[rgb(134,135,135)] font-semibold text-xs'>{date.toLocaleString('default', { month: 'short' })} {date.toLocaleString('default', { day: 'numeric' })} • {author.name}</p>
           </div>
-          <div>
+          <div className='ml-2'>
             <Image className='object-cover flex-shrink-0 rounded-sm' src={coverImage.coverImage?.replace('/public', '')} alt='test' width={200} height={100} />
           </div>
         </div>
