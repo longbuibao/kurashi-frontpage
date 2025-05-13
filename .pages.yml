@@ -35,6 +35,16 @@ content:
           values: [Tấm ốp thép tráng men, Tấm ốp tường vân đá, Phụ kiện bếp, Nội thất hay]          
       - { name: title, label: Title, type: string, required: true }
       - { name: excerpt, label: Description, type: string, required: true }
+      - name: faq
+        label: Frequently Asked Questions
+        type: object
+        list:
+          min: 1
+          max: 10
+        required: true
+        fields:
+          - { name: q, label: Question, type: string, required: true }
+          - { name: a, label: Answer, type: string, required: true }      
       - name: coverImage
         label: Cover image
         type: object
