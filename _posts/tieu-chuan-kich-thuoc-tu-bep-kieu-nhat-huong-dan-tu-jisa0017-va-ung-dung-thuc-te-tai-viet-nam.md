@@ -5,7 +5,7 @@ subCategory:
   - Nội thất hay
 title: "Tiêu chuẩn kích thước tủ bếp kiểu Nhật: Hướng dẫn từ JIS A 0017 và ứng
   dụng thực tế tại Việt Nam"
-excerpt: Tiêu chuẩn kích thước tủ bếp của Nhật Bản theo JIS A 0017:2018
+excerpt: Kích thước tủ bếp của Nhật Bản theo tiêu chuẩn JIS A 0017:2018
 coverImage:
   coverImage: undefined
   coverImageAlt: Các kích thước tiêu chuẩn của tủ bếp tại Nhật Bản
