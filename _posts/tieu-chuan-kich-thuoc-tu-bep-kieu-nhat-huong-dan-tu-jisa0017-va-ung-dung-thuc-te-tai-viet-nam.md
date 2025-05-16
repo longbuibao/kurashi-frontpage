@@ -10,8 +10,18 @@ coverImage:
   coverImage: /public/images/Kich-thuoc-tu-bep-theo-tieu-chuan-nhat-ban.svg
   coverImageAlt: Các kích thước tiêu chuẩn của tủ bếp tại Nhật Bản
 faq:
-  - q: dfdf
-    a: dfdf
+  - q: Tủ bếp tiêu chuẩn có chiều cao bao nhiêu?
+    a: Chiều cao phổ biến theo JIS là 800–850mm, phù hợp với người cao 1m55–1m65.
+  - q: Chiều cao tủ bếp phù hợp với người cao 1m55 là bao nhiêu?
+    a: Khoảng 800mm là phù hợp, hạn chế đau lưng và dễ thao tác.
+  - q: Có thể điều chỉnh kích thước tủ bếp không?
+    a: Có. Kurashi cung cấp giải pháp panel linh hoạt, cắt theo yêu cầu và thói quen
+      sử dụng.
+  - q: Tủ bếp kiểu Nhật có phù hợp nhà phố ở Việt Nam?
+    a: Rất phù hợp. Bố cục tủ bếp Nhật tiết kiệm diện tích và dễ sắp xếp với phụ
+      kiện gắn nam châm.
+  - q: Nên chọn chất liệu gì để dễ lau chùi và bền?
+    a: "Tấm tráng men là lựa chọn tối ưu: bền, chống ẩm mốc, dễ vệ sinh."
 date: 2025-05-15T20:00:00.000Z
 author:
   name: Diện Võ
@@ -100,25 +110,5 @@ Nguồn tham khảo: [JIS A 0017:2018 - Tiêu chuẩn thiết kế bếp kiểu 
 Thiết kế **tủ bếp dựa trên kích thước chuẩn Nhật Bản** giúp bếp an toàn, đẹp và hiệu quả. Kurashi cung cấp **panel tráng men** và **hệ sinh thái phụ kiện linh hoạt** nhập khẩu Nhật Bản, lý tưởng cho những ai đang tìm kiếm **giải pháp tủ bếp nhỏ gọn và tiện nghi**.
 
 ### CÂU HỎI THƯỜNG GẶP VỀ TỦ BẾP
-
-### **Tủ bếp tiêu chuẩn có chiều cao bao nhiêu?**
-
-Chiều cao phổ biến theo JIS là 800–850mm, phù hợp với người cao 1m55–1m65.
-
-### **Chiều cao tủ bếp phù hợp với người cao 1m55 là bao nhiêu?**
-
-Khoảng 800mm là phù hợp, hạn chế đau lưng và dễ thao tác.
-
-### **Có thể điều chỉnh kích thước tủ bếp không?**
-
-Có. Kurashi cung cấp giải pháp panel linh hoạt, cắt theo yêu cầu và thói quen sử dụng.
-
-### **Tủ bếp kiểu Nhật có phù hợp nhà phố ở Việt Nam?**
-
-Rất phù hợp. Bố cục tủ bếp Nhật tiết kiệm diện tích và dễ sắp xếp với phụ kiện gắn nam châm.
-
-### **Nên chọn chất liệu gì để dễ lau chùi và bền?**
-
-Tấm tráng men là lựa chọn tối ưu: bền, chống ẩm mốc, dễ vệ sinh.
 
 👉 [**Liên hệ Kurashi ngay**](https://www.kurashi.com.vn/lien-he) để nhận tư vấn miễn phí và báo giá nhanh
