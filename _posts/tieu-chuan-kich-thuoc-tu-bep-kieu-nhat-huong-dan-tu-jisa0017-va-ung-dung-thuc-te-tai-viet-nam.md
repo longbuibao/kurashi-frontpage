@@ -17,7 +17,7 @@ author:
   name: Diện Võ
   picture: undefined
 ogImage:
-  url: /public/images/social Kich-thuoc-tu-bep-theo-tieu-chuan-nhat-ban-01.jpg
+  url: /public/images/social Kich-thuoc-tu-bep-theo-tieu-chuan-nhat-ban.jpg
 isReadyForPublish: false
 ---
 ### 1\. GIỚI THIỆU VỀ TIÊU CHUẨN JIS TRONG THIẾT KẾ BẾP
