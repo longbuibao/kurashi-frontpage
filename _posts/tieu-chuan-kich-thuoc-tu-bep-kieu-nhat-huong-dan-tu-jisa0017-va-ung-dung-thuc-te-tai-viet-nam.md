@@ -31,11 +31,9 @@ Kích thước tủ bếp không chỉ ảnh hưởng đến công năng sử d�
 
 Thiết kế **tủ bếp theo kích thước chuẩn Nhật Bản** giúp:
 
-*   Tránh mệt mỏi khi nấu ăn
+*   Sức khỏe và an toàn: ví dụ chiều cao tủ được thiết kế phù hợp với nhiều dùng nên dễ thao tác và nhất là không phải cúi xuống sâu, tránh đau cột sống. Bố trí hợp lý giúp tránh các vấn đề an toàn cháy nổ, rỉ nước, điện từ các thiết bị như bếp nấu, ổ cắm, vòi nóng lạnh, máy hút mùi. Đặc biệt ở Nhật hay xảy ra động đất nên tủ bếp trên cần đạt yêu cầu chống rơi đồ khi rung lắc xảy ra.
     
-*   An toàn khi thao tác với bên từa, bếp gas, tủ treo
-    
-*   Tối ưu hóa diện tích, nhất là trong các căn hộ nhỏ
+*   Tiện lợi và tối ưu hóa diện tích: ví dụ bố trí đúng tam giác công năng để hạn chế di chuyển thừa và tiện để nấu ăn giữa bếp nấu, chậu rửa chén và tủ lạnh.
     
 
 ### 3\. CÁC KÍCH THƯỚC BẾP TIÊU CHUẨN THEO JIS A 0017:2018
