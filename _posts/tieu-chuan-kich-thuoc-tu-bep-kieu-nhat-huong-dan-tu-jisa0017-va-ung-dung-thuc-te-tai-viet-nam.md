@@ -41,9 +41,9 @@ Các thiết kế tuân theo tiêu chuẩn thường áp dụng bố cục **tam
 
 _Sơ đồ kích thước các bộ phận trong tủ bếp kiểu Nhật (theo tiêu chuẩn JIS A 0017:2018)_
 
-Dưới đây là một số số đo cơ bản trong tiêu chuẩn JIS và được áp dụng rộng rãi tại Nhật Bản:
+Dưới đây là một số kích thước cơ bản trong tiêu chuẩn JIS và được áp dụng rộng rãi tại Nhật Bản:
 
-| Hạng mục | Kích thước khuyến nghị |
+| Hạng mục | Kích thước khuyến cáo |
 | --- | --- |
 | Chiều cao bàn bếp | 800 – 850 mm |
 | Chiều sâu tủ dưới | 600 mm |
