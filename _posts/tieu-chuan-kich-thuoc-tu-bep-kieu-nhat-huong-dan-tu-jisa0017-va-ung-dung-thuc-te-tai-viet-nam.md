@@ -43,10 +43,6 @@ Dưới đây là một số kích thước cơ bản trong tiêu chuẩn JIS v�
 
 ![Kích thước tủ bếp theo tiêu chuẩn Nhật Bản](/public/images/kich-thuoc-chi-tiet-t%E1%BB%A7-be-nhat-ban.svg)
 
-_Sơ đồ kích thước các bộ phận trong tủ bếp kiểu Nhật (theo tiêu chuẩn JIS A 0017:2018)_
-
-Dưới đây là một số kích thước cơ bản trong tiêu chuẩn JIS và được áp dụng rộng rãi tại Nhật Bản:
-
 Các số đo trên rất phù hợp với chiều cao trung bình của người Việt và đặc biệt lý tưởng cho những ai đang tìm hiểu **kích thước tủ bếp tiêu chuẩn cho người châu Á**.
 
 ### 4\. SO SÁNH VỚI KÍCH THƯỚC TỦ BẾP TẠI VIỆT NAM
