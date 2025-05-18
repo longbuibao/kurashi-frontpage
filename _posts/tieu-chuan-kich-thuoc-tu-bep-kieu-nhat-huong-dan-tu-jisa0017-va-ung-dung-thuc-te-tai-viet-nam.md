@@ -16,6 +16,8 @@ date: 2025-05-10T10:59:00.000Z
 author:
   name: Diện Võ
   picture: undefined
+ogImage:
+  url: /public/images/social Kich-thuoc-tu-bep-theo-tieu-chuan-nhat-ban.jpg
 isReadyForPublish: false
 ---
 ### 1\. GIỚI THIỆU VỀ TIÊU CHUẨN JIS NHẬT BẢN TRONG THIẾT KẾ TỦ BẾP
