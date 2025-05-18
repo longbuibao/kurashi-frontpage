@@ -58,7 +58,6 @@ content:
         type: object
         fields:
           - { name: name, label: Name, type: string, required: true }
-          - { name: picture, label: Picture, type: image, required: true }
       - name: ogImage
         label: Image (social sharing)
         type: object
