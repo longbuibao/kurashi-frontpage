@@ -14,7 +14,7 @@ content:
     type: collection
     path: _posts
     view:
-      fields: [ coverImage, title, date ]
+      fields: [ coverImage, title, date, isReadyForPublish ]
     fields:
       - name: fileName
         label: File name
