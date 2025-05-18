@@ -27,14 +27,15 @@ Tại Nhật Bản, mọi chi tiết trong thiết kế đều được quy đ�
 
 ### 2\. TẠI SAO NÊN QUAN TÂM ĐẾN KÍCH THƯỚC TỦ BẾP
 
-Kích thước tủ bếp không chỉ ảnh hưởng đến công năng sử dụng mà còn là yếu tố được nhiều người quan tâm khi cải tạo hoặc thiết kế mới gian bếp. Đặc biệt với các nhu cầu như **thiết kế tủ bếp nhỏ gọn theo yêu cầu**, lựa chọn **vật liệu dễ vệ sinh**, hay cần **báo giá tủ bếp theo kích thước**, người dùng ngày càng tìm đến những giải pháp phù hợp không gian sống hiện đại.
+**Kích thước tủ bếp** không chỉ ảnh hưởng đến công năng sử dụng mà còn là yếu tố được nhiều người quan tâm khi cải tạo hoặc thiết kế mới không gian bếp. Đặc biệt với các nhu cầu như **thiết kế tủ bếp nhỏ gọn theo yêu cầu**, **lựa chọn vật liệu dễ vệ sinh**, hay **báo giá tủ bếp theo kích thước**, người dùng ngày càng hướng đến những giải pháp phù hợp với lối sống hiện đại và diện tích nhà ở tại Việt Nam.
 
-Thiết kế **tủ bếp theo kích thước chuẩn Nhật Bản** giúp:
+Thiết kế tủ bếp theo **kích thước chuẩn Nhật Bản** mang lại nhiều lợi ích, trong đó nổi bật là hai yếu tố sau:
 
-*   Sức khỏe và an toàn: ví dụ chiều cao tủ được thiết kế phù hợp với nhiều dùng nên dễ thao tác và nhất là không phải cúi xuống sâu, tránh đau cột sống. Bố trí hợp lý giúp tránh các vấn đề an toàn cháy nổ, rỉ nước, điện từ các thiết bị như bếp nấu, ổ cắm, vòi nóng lạnh, máy hút mùi. Đặc biệt ở Nhật hay xảy ra động đất nên tủ bếp trên cần đạt yêu cầu chống rơi đồ khi rung lắc xảy ra.
-    
-*   Tiện lợi và tối ưu hóa diện tích: ví dụ bố trí đúng tam giác công năng để hạn chế di chuyển thừa và tiện để nấu ăn giữa bếp nấu, chậu rửa chén và tủ lạnh.
-    
+**Sức khỏe và an toàn:**  
+Ví dụ, chiều cao tủ được thiết kế phù hợp với đa số người dùng nên dễ thao tác, đặc biệt là **không phải cúi thấp**, giúp hạn chế đau lưng và tổn thương cột sống. Việc bố trí thiết bị hợp lý còn giúp **tránh nguy cơ cháy nổ, rò rỉ nước, hoặc rò điện** từ các thiết bị như bếp nấu, ổ cắm, vòi nóng lạnh và máy hút mùi. Đặc biệt, tại Nhật – nơi thường xuyên xảy ra động đất – tủ bếp trên cần được thiết kế đạt chuẩn để **ngăn ngừa rơi vỡ đồ dùng khi xảy ra rung lắc**.
+
+**Tiện lợi và tối ưu hóa diện tích:**  
+Các thiết kế tuân theo tiêu chuẩn thường áp dụng bố cục **tam giác công năng** giữa bếp nấu – bồn rửa – tủ lạnh, giúp người dùng **hạn chế di chuyển không cần thiết**, từ đó tiết kiệm thời gian và thao tác thuận tiện hơn khi nấu ăn.
 
 ### 3\. CÁC KÍCH THƯỚC BẾP TIÊU CHUẨN THEO JIS A 0017:2018
 
