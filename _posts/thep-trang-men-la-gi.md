@@ -40,7 +40,7 @@ author:
   picture: /public/images/author.png
 ogImage:
   url: /public/images/cau-tao-6-lop-cua-thep-trang-men-kurashi.svg
-isReadyForPublish: false
+isReadyForPublish: true
 ---
 Điều gì xảy ra nếu tường bếp của bạn vừa chắc như thép, vừa dễ lau sạch như một chậu men sứ? Đó chính là **thép tráng men** — và tại Nhật Bản, đây là vật liệu ốp tường bếp phổ biến suốt hơn 60 năm qua.
 
