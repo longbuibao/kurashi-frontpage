@@ -12,7 +12,7 @@ coverImage:
 faq:
   - q: dfdf
     a: fdfd
-date: 2025-05-10T10:59:00.000Z
+date: 2025-05-18T15:00:00.000Z
 author:
   name: Diện Võ
 ogImage:
@@ -39,17 +39,13 @@ Các thiết kế tuân theo tiêu chuẩn thường áp dụng bố cục **tam
 
 ### 3\. CÁC KÍCH THƯỚC BẾP TIÊU CHUẨN THEO JIS A 0017:2018
 
+Dưới đây là một số kích thước cơ bản trong tiêu chuẩn JIS và được áp dụng rộng rãi tại Nhật Bản
+
+![Kích thước tủ bếp theo tiêu chuẩn Nhật Bản](/public/images/kich-thuoc-chi-tiet-t%E1%BB%A7-be-nhat-ban.svg)
+
 _Sơ đồ kích thước các bộ phận trong tủ bếp kiểu Nhật (theo tiêu chuẩn JIS A 0017:2018)_
 
 Dưới đây là một số kích thước cơ bản trong tiêu chuẩn JIS và được áp dụng rộng rãi tại Nhật Bản:
-
-| Hạng mục | Kích thước khuyến cáo |
-| --- | --- |
-| Chiều cao bàn bếp | 800 – 850 mm |
-| Chiều sâu tủ dưới | 600 mm |
-| Chiều cao tủ treo | 500 – 700 mm |
-| Khoảng cách giữa tủ treo và mặt bàn bếp | 500 – 600 mm |
-| Độ cao chẫu rửa so với sàn nhà | 800 mm (lý tưởng cho người cao 155–160 cm) |
 
 Các số đo trên rất phù hợp với chiều cao trung bình của người Việt và đặc biệt lý tưởng cho những ai đang tìm hiểu **kích thước tủ bếp tiêu chuẩn cho người châu Á**.
 
