@@ -1,5 +1,5 @@
 ---
-fileName: tieu-chuan-kich-thuoc-tu-bep-kieu-nhat-huong-dan-tu-JISA0017-va-ung-dung-thuc-te-tai-viet-nam
+fileName: tieu-chuan-kich-thuoc-tu-bep-kieu-nhat-huong-dan-tu-jisa0017-va-ung-dung-thuc-te-tai-viet-nam
 category: Kinh nghiệm nội thất
 subCategory:
   - Nội thất hay
