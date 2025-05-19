@@ -40,7 +40,7 @@ const ProductAccessoryCard: React.FC<ProductAccessoryCardProps> = ({ product: x 
               })
               : null}
           </div>
-          <div className='text-main font-bold relative'><span>{formatCurrency(x.price ?? 0)} <sub className='absolute top-1'>₫</sub></span></div>
+          <div className='text-main font-bold relative'>Liên hệ</div>
         </div>
       </div>
     </Link>

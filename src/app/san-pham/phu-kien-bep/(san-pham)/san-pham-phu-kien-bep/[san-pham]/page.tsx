@@ -97,8 +97,8 @@ const SanPhamPage: React.FC<SanPhamPageProps> = async props => {
                   })}
                 </div>
                 <div className='flex flex-row gap-2 my-10 text-xl relative'>
-                  <div>ĐƠN GIÁ: </div>
-                  <div>{formatCurrency(accessoryProduct?.price ?? 0)} <sub className='absolute top-1'>₫</sub></div>
+                  <div>ĐƠN GIÁ: Liên hệ</div>
+                  {/* <div>{formatCurrency(accessoryProduct?.price ?? 0)} <sub className='absolute top-1'>₫</sub></div> */}
                 </div>
                 <OnlineStore isCenter />
               </div>
