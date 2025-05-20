@@ -41,7 +41,11 @@ Các thiết kế tuân theo tiêu chuẩn thường áp dụng bố cục **tam
 
 Dưới đây là một số kích thước cơ bản trong tiêu chuẩn JIS và được áp dụng rộng rãi tại Nhật Bản
 
+![](/public/images/kich-thuoc-chi-tiet-t%E1%BB%A7-be-nhat-ban.svg)
+
 Ngoài các kích thước tủ bếp cơ bản trên, tủ bếp tại Nhật cũng qui chuẩn về khu vực đi ống nước và khi vực đi dây điện.
+
+![](/public/images/kich-thuoc-khu-vuc-ong-nuoc-va-day-dien.svg)
 
 Các số đo trên rất phù hợp với chiều cao trung bình của người Việt và đặc biệt lý tưởng cho những ai đang tìm hiểu **kích thước tủ bếp tiêu chuẩn cho người châu Á**.
 
