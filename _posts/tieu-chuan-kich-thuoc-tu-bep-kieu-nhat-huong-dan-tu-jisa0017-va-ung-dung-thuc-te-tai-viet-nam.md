@@ -49,6 +49,8 @@ Ngoài các kích thước tủ bếp cơ bản trên, tủ bếp tại Nhật c
 
 ![](/public/images/kich-thuoc-khu-vuc-ong-nuoc-va-day-dien.svg)
 
+![](/public/images/tam-giac-cong-nang.svg)
+
 Các số đo trên rất phù hợp với chiều cao trung bình của người Việt và đặc biệt lý tưởng cho những ai đang tìm hiểu **kích thước tủ bếp tiêu chuẩn cho người châu Á**.
 
 ### 4\. SO SÁNH VỚI KÍCH THƯỚC TỦ BẾP TẠI VIỆT NAM
