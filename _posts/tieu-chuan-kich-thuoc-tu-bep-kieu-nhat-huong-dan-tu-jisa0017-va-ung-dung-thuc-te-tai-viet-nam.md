@@ -47,6 +47,8 @@ Dưới đây là một số kích thước cơ bản trong tiêu chuẩn JIS v�
 
 > Tham khảo chi tiết kích thước [tấm ốp tường bằng thép tráng men](https://www.kurashi.com.vn/san-pham/tam-op-tuong-bang-thep-trang-men) của thương hiệu Kurashi
 
+Điểm thú vị về tấm ốp bếp ở Nhật đó là không khoan và bố trí ổ cắm điện lên tấm ốp bếp mà được bố trí 1 vị trí nhỏ trên tủ bếp dưới và có 1 khu riêng để đặt lò vi sóng, nồi cơm điện chứ không đặt trên bàn đá bếp.
+
 Một trong những điểm quan trọng về kích thước tủ bếp là chiều cao bàn đá bếp. Tại Nhật, tùy theo chiều cao cơ thể của người dùng mà bàn đá bếp có các chiều cao khác nhau. Để chuẩn hóa, các công ty sản xuất tủ bếp tại Nhật sử dụng công thức tính là: chiều cao bàn đá bếp = chiều cao cơ thể/2 + 5 cm để tính toán chiều cao bàn đá tối ưu để khách hàng không bị đau lưng và các vấn đề về cột sống trong thời gian đứng nấu ăn. Ví dụ với người có chiều cao 160cm thì chiều cao bàn đá bếp tối ưu là 160/2+5 = 85cm. Các số đo trên rất phù hợp với chiều cao trung bình của người Việt và đặc biệt lý tưởng cho những ai đang tìm hiểu **kích thước tủ bếp tiêu chuẩn cho người châu Á**.
 
 ![](/public/images/cach-tinh-chieu-cao-ban-da-bep.svg)
