@@ -43,15 +43,21 @@ Dưới đây là một số kích thước cơ bản trong tiêu chuẩn JIS v�
 
 ![](/public/images/kich-thuoc-chi-tiet-t%E1%BB%A7-be-nhat-ban.svg)
 
+Đa phần bếp chữ I và chữ L tại Nhật sâu 600 hoặc 650, trong đó bếp sâu 650 phổ biến và dần thay thế bếp sâu 600. Chiều cao từ sàn đến đáy trên và dưới của tủ trên được qui chuẩn hóa theo công thức 50xn. Một điểm khác biệt so với tủ bếp ở Việt Nam là chiều cao phần ốp bếp ở Nhật thường khoảng 770 hoặc 800; trong khi ở Việt Nam thường thấp hơn chỉ khoảng 600. Do đó các hãng sản xuất tấm ốp bếp phải sản xuất khổ tấm ốp phù hợp cho yêu cầu kích thước này.
+
+> Tham khảo chi tiết kích thước [tấm ốp tường bằng thép tráng men](https://www.kurashi.com.vn/san-pham/tam-op-tuong-bang-thep-trang-men) của thương hiệu Kurashi
+
+Một trong những điểm quan trọng về kích thước tủ bếp là chiều cao bàn đá bếp. Tại Nhật, tùy theo chiều cao cơ thể của người dùng mà bàn đá bếp có các chiều cao khác nhau. Để chuẩn hóa, các công ty sản xuất tủ bếp tại Nhật sử dụng công thức tính là: chiều cao bàn đá bếp = chiều cao cơ thể/2 + 5 cm để tính toán chiều cao bàn đá tối ưu để khách hàng không bị đau lưng và các vấn đề về cột sống trong thời gian đứng nấu ăn. Ví dụ với người có chiều cao 160cm thì chiều cao bàn đá bếp tối ưu là 160/2+5 = 85cm. Các số đo trên rất phù hợp với chiều cao trung bình của người Việt và đặc biệt lý tưởng cho những ai đang tìm hiểu **kích thước tủ bếp tiêu chuẩn cho người châu Á**.
+
 ![](/public/images/cach-tinh-chieu-cao-ban-da-bep.svg)
 
-Ngoài các kích thước tủ bếp cơ bản trên, tủ bếp tại Nhật cũng qui chuẩn về khu vực đi ống nước và khi vực đi dây điện.
+Một điểm khác biệt nữa của tủ bếp Nhật đó là thiết kế 1 khu để che bộ xả tại module chậu rửa chén gọi là service area. Họ cũng chuẩn hóa các vị trí để cấp thoát nước, đi đường dây điện và đường ga.
 
 ![](/public/images/kich-thuoc-khu-vuc-ong-nuoc-va-day-dien.svg)
 
-![](/public/images/tam-giac-cong-nang.svg)
+Một trong những yêu cầu không thể bỏ qua trong việc lên kích thước tủ bếp đó là tam giác công năng để giảm việc di chuyển giữa 3 điểm thường xuyên tương tác nhất khu bếp đó là chậu rửa chén, bếp nấu và tủ lạnh. Chu vi của tam giác này thường nằm trong khoảng 3,6 m để giảm thiểu phạm vi cần di chuyển của người nội trợ.
 
-Các số đo trên rất phù hợp với chiều cao trung bình của người Việt và đặc biệt lý tưởng cho những ai đang tìm hiểu **kích thước tủ bếp tiêu chuẩn cho người châu Á**.
+![](/public/images/tam-giac-cong-nang.svg)
 
 ### 4\. CÁC LOẠI LAYOUT TỦ BẾP
 
