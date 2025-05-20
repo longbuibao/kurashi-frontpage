@@ -43,6 +43,8 @@ Dưới đây là một số kích thước cơ bản trong tiêu chuẩn JIS v�
 
 ![](/public/images/kich-thuoc-chi-tiet-t%E1%BB%A7-be-nhat-ban.svg)
 
+![](/public/images/cach-tinh-chieu-cao-ban-da-bep.svg)
+
 Ngoài các kích thước tủ bếp cơ bản trên, tủ bếp tại Nhật cũng qui chuẩn về khu vực đi ống nước và khi vực đi dây điện.
 
 ![](/public/images/kich-thuoc-khu-vuc-ong-nuoc-va-day-dien.svg)
