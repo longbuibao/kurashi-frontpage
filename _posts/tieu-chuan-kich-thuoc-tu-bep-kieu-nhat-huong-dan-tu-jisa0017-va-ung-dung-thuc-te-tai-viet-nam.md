@@ -53,6 +53,10 @@ Ngoài các kích thước tủ bếp cơ bản trên, tủ bếp tại Nhật c
 
 Các số đo trên rất phù hợp với chiều cao trung bình của người Việt và đặc biệt lý tưởng cho những ai đang tìm hiểu **kích thước tủ bếp tiêu chuẩn cho người châu Á**.
 
+### 4\. CÁC LOẠI LAYOUT TỦ BẾP
+
+Bếp ở Nhật được chuẩn hóa về hình dáng và kích thước. Về hình dáng chỉ có bếp chữ I, chữ L, bếp bán đảo và bếp đảo. Về kích thước, tủ bếp chỉ có một số chiều dài và chiều sâu để chuẩn hóa. Dưới đây là thông tin chi tiết về hình dáng và kích thước của một số loại tủ bếp phổ biến tại Nhật.
+
 ### 4\. SO SÁNH VỚI KÍCH THƯỚC TỦ BẾP TẠI VIỆT NAM
 
 Bạn cũng có thể tham khảo thêm các lựa chọn **tủ bếp chữ L nhỏ gọn**, hoặc cân nhắc **báo giá thi công tủ bếp trọn gói kiểu Nhật** nếu đang trong giai đoạn tìm kiếm đơn vị thi công phù hợp.
@@ -62,6 +66,8 @@ Tại Việt Nam, nhiều gia đình thiết kế tủ bếp với chiều cao 8
 Ngoài ra, nhiều nhà thiếu khoảng cách an toàn giữa bếp nấu và tủ treo, dẫn đến nguy hiểm khi nấu nướng.
 
 Nếu bạn đang tìm kiếm **cách bố trí tủ bếp tiện lợi cho nhà nhỏ** hoặc **tủ bếp thông minh cho căn hộ nhỏ**, tiêu chuẩn Nhật Bản là một hướng tham khảo lý tưởng.
+
+Layout mặt cắt để thấy chứa nhiều đồ
 
 ### 5\. ỨNG DỤNG THỰC TẾ TẠI KURASHI: BẾP NHẬT LINH HOẠT CHO NGƯỜI VIỆT
 
