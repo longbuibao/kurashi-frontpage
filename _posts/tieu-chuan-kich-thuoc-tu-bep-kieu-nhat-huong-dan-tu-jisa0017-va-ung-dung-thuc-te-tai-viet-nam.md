@@ -18,6 +18,8 @@ faq:
   - q: Tủ bếp kiểu Nhật có phù hợp nhà phố ở Việt Nam?
     a: Rất phù hợp. Bố cục tủ bếp Nhật tiết kiệm diện tích và dễ sắp xếp với phụ
       kiện gắn nam châm.
+  - q: Nên chọn chất liệu gì để dễ lau chùi và bền?
+    a: "Tấm tráng men là lựa chọn tối ưu: bền, chống ẩm mốc, dễ vệ sinh."
 date: 2025-05-18T15:00:00.000Z
 author:
   name: Diện Võ
