@@ -13,6 +13,11 @@ faq:
   - q: Tủ bếp tiêu chuẩn có chiều cao bao nhiêu?
     a: Chiều cao tủ bếp (bàn đá) tối ưu tùy theo chiều cao của bạn nhưng thường là
       80, 85 hoặc 90cm
+  - q: Chiều cao tủ bếp phù hợp với người cao 1m6 là bao nhiêu?
+    a: Khoảng 85cm là phù hợp, hạn chế đau lưng và dễ thao tác.
+  - q: Tủ bếp kiểu Nhật có phù hợp nhà phố ở Việt Nam?
+    a: Rất phù hợp. Bố cục tủ bếp Nhật tiết kiệm diện tích và dễ sắp xếp với phụ
+      kiện gắn nam châm.
 date: 2025-05-18T15:00:00.000Z
 author:
   name: Diện Võ
@@ -114,15 +119,11 @@ Thiết kế **tủ bếp dựa trên kích thước chuẩn Nhật Bản** giú
 
 ### **Tủ bếp tiêu chuẩn có chiều cao bao nhiêu?**
 
-Chiều cao phổ biến theo JIS là 800–850mm, phù hợp với người cao 1m55–1m65.
+Chiều cao tủ bếp (bàn đá) tối ưu tùy theo chiều cao của bạn nhưng thường là 80, 85 hoặc 90cm.
 
-### **Chiều cao tủ bếp phù hợp với người cao 1m55 là bao nhiêu?**
+### **Chiều cao tủ bếp phù hợp với người cao 1m6 là bao nhiêu?**
 
-Khoảng 800mm là phù hợp, hạn chế đau lưng và dễ thao tác.
-
-### **Có thể điều chỉnh kích thước tủ bếp không?**
-
-Có. Kurashi cung cấp giải pháp panel linh hoạt, cắt theo yêu cầu và thói quen sử dụng.
+Khoảng 85cm là phù hợp, hạn chế đau lưng và dễ thao tác.
 
 ### **Tủ bếp kiểu Nhật có phù hợp nhà phố ở Việt Nam?**
 
