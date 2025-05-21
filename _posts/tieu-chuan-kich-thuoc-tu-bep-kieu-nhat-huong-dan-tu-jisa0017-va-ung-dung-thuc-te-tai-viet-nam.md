@@ -100,8 +100,6 @@ Kurashi thiết kế **tủ bếp kiểu Nhật** và panel theo đúng tiêu ch
 *   Phù hợp **căn hộ nhỏ và nhà phố**, hỗ trợ **thiết kế tủ bếp hiện đại phù hợp nhà Việt**
     
 
-### 6\. LƯU Ý KHI THIẾT KẾ TỦ BẾP THEO CHUẨN NHẬT
-
 Ngoài ra, nếu bạn đang cần **phụ kiện treo không cần khoan tường**, tấm panel Kurashi hỗ trợ gắn trực tiếp bằng nam châm — rất phù hợp cho nhà thuê hoặc căn hộ hiện đại.
 
 *   Chiều cao trung bình người sử dụng là yếu tố then chốt
@@ -113,7 +111,7 @@ Ngoài ra, nếu bạn đang cần **phụ kiện treo không cần khoan tườ
 *   Lựa chọn vật liệu dễ lau chùi như **tấm tráng men** là xu hướng thiết kế bếp hiện đại
     
 
-### 7\. KẾT LUẬN VỀ KÍCH THƯỚC BẾP KIỂU NHẬT
+### 6\. KẾT LUẬN VỀ KÍCH THƯỚC BẾP KIỂU NHẬT
 
 Thiết kế **tủ bếp dựa trên kích thước chuẩn Nhật Bản** giúp bếp an toàn, đẹp và hiệu quả. Kurashi cung cấp **tấm ốp bếp tráng men** và **hệ sinh thái phụ kiện linh hoạt** nhập khẩu Nhật Bản, lý tưởng cho những ai đang tìm kiếm **giải pháp tủ bếp nhỏ gọn và tiện nghi**.
 
