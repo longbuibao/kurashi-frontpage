@@ -37,9 +37,9 @@ Ví dụ, chiều cao tủ được thiết kế phù hợp với đa số ngư�
 **Tiện lợi và tối ưu hóa diện tích:**  
 Các thiết kế tuân theo tiêu chuẩn thường áp dụng bố cục **tam giác công năng** giữa bếp nấu – bồn rửa – tủ lạnh, giúp người dùng **hạn chế di chuyển không cần thiết**, từ đó tiết kiệm thời gian và thao tác thuận tiện hơn khi nấu ăn.
 
-### 3\. CÁC KÍCH THƯỚC BẾP TIÊU CHUẨN THEO JIS A 0017:2018
+### 3\. CÁC KÍCH THƯỚC BẾP TIÊU CHUẨN THEO JIS A 0017:2018 CỦA NHẬT BẢN
 
-Dưới đây là một số kích thước cơ bản trong tiêu chuẩn JIS và được áp dụng rộng rãi tại Nhật Bản
+Dưới đây là một số kích thước cơ bản trong tiêu chuẩn JIS và được áp dụng rộng rãi tại Nhật Bản.
 
 ![](/public/images/kich-thuoc-chi-tiet-t%E1%BB%A7-be-nhat-ban.svg)
 
@@ -59,10 +59,6 @@ Một điểm khác biệt nữa của tủ bếp Nhật đó là thiết kế 1
 
 Một trong những yêu cầu không thể bỏ qua trong việc lên kích thước tủ bếp đó là tam giác công năng để giảm việc di chuyển giữa 3 điểm thường xuyên tương tác nhất khu bếp đó là chậu rửa chén, bếp nấu và tủ lạnh. Chu vi của tam giác này thường nằm trong khoảng 3,6 m để giảm thiểu phạm vi cần di chuyển của người nội trợ.
 
-![](/public/images/tam-giac-cong-nang.svg)
-
-### 4\. TỐI ƯU HÓA KHÔNG GIAN CHỨA
-
 ### 4\. CÁC LOẠI LAYOUT TỦ BẾP
 
 Bếp ở Nhật được chuẩn hóa về hình dáng và kích thước. Về hình dáng chỉ có bếp chữ I, chữ L, bếp bán đảo và bếp đảo. Về kích thước, tủ bếp chỉ có một số chiều dài và chiều sâu để chuẩn hóa. Dưới đây là thông tin chi tiết về hình dáng và kích thước của một số loại tủ bếp phổ biến tại Nhật.
@@ -78,8 +74,6 @@ Tại Việt Nam, nhiều gia đình thiết kế tủ bếp với chiều cao 8
 Ngoài ra, nhiều nhà thiếu khoảng cách an toàn giữa bếp nấu và tủ treo, dẫn đến nguy hiểm khi nấu nướng.
 
 Nếu bạn đang tìm kiếm **cách bố trí tủ bếp tiện lợi cho nhà nhỏ** hoặc **tủ bếp thông minh cho căn hộ nhỏ**, tiêu chuẩn Nhật Bản là một hướng tham khảo lý tưởng.
-
-Layout mặt cắt để thấy chứa nhiều đồ
 
 ### 5\. ỨNG DỤNG THỰC TẾ TẠI KURASHI: BẾP NHẬT LINH HOẠT CHO NGƯỜI VIỆT
 
