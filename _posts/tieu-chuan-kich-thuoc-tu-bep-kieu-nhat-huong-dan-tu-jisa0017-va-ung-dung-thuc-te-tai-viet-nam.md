@@ -71,8 +71,6 @@ Một trong những yêu cầu không thể bỏ qua trong việc lên kích th�
 
 Bếp ở Nhật được chuẩn hóa về hình dáng và kích thước. Về hình dáng chỉ có bếp chữ I, chữ L, bếp bán đảo và bếp đảo. Về kích thước, tủ bếp chỉ có một số chiều dài và chiều sâu để chuẩn hóa. Dưới đây là thông tin chi tiết về hình dáng và kích thước của một số loại tủ bếp phổ biến tại Nhật.
 
-Dựa trên các tiêu chuẩn được qui định rõ ràng này, các công ty sản xuất tủ bếp và thiết bị phụ trợ liên tục cải tiến, phát minh các giải pháp mới trong khuôn khổ JIS từ đó góp phần nâng cao chất lượng sống của người dân và sự lớn mạnh của cả ngành công nghiệp về bếp và thiết bị nhà ở.
-
 ### 4\. SO SÁNH VỚI KÍCH THƯỚC TỦ BẾP TẠI VIỆT NAM
 
 Bạn cũng có thể tham khảo thêm các lựa chọn **tủ bếp chữ L nhỏ gọn**, hoặc cân nhắc **báo giá thi công tủ bếp trọn gói kiểu Nhật** nếu đang trong giai đoạn tìm kiếm đơn vị thi công phù hợp.
@@ -113,9 +111,11 @@ Ngoài ra, nếu bạn đang cần **phụ kiện treo không cần khoan tườ
 
 ### 7\. KẾT LUẬN VÀ ĐĂNG KÍ TƯ VẤN BẾP KIỂU NHẬT
 
-Nguồn tham khảo: [JIS A 0017:2018 - Tiêu chuẩn thiết kế bếp kiểu Nhật](https://kikakurui.com/a0/A0017-2018-01.html)
-
 Thiết kế **tủ bếp dựa trên kích thước chuẩn Nhật Bản** giúp bếp an toàn, đẹp và hiệu quả. Kurashi cung cấp **panel tráng men** và **hệ sinh thái phụ kiện linh hoạt** nhập khẩu Nhật Bản, lý tưởng cho những ai đang tìm kiếm **giải pháp tủ bếp nhỏ gọn và tiện nghi**.
+
+Dựa trên các tiêu chuẩn được qui định rõ ràng này, các công ty sản xuất tủ bếp và thiết bị phụ trợ liên tục cải tiến, phát minh các giải pháp mới trong khuôn khổ JIS từ đó góp phần nâng cao chất lượng sống của người dân và sự lớn mạnh của cả ngành công nghiệp về bếp và thiết bị nhà ở.
+
+Các kích thước tiêu chuẩn trên là các kích thước chung. Phong cách sống và yêu cầu về thiết kế không gian sống liên tục thay đổi nên các qui chuẩn trên cũng liên tục được cập nhật mới.
 
 ### CÂU HỎI THƯỜNG GẶP VỀ TỦ BẾP
 
