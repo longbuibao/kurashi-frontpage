@@ -67,19 +67,23 @@ Một điểm khác biệt nữa của tủ bếp Nhật đó là thiết kế 1
 
 Một trong những yêu cầu không thể bỏ qua trong việc lên kích thước tủ bếp đó là tam giác công năng để giảm việc di chuyển giữa 3 điểm thường xuyên tương tác nhất khu bếp đó là chậu rửa chén, bếp nấu và tủ lạnh. Chu vi của tam giác này thường nằm trong khoảng 3,6 m để giảm thiểu phạm vi cần di chuyển của người nội trợ.
 
-### 4\. CÁC LOẠI LAYOUT TỦ BẾP
+### 3\. CÁC LOẠI LAYOUT TỦ BẾP
 
 Bếp ở Nhật được chuẩn hóa về hình dáng và kích thước. Về hình dáng chỉ có bếp chữ I, chữ L, bếp bán đảo và bếp đảo. Về kích thước, tủ bếp chỉ có một số chiều dài và chiều sâu để chuẩn hóa. Dưới đây là thông tin chi tiết về hình dáng và kích thước của một số loại tủ bếp phổ biến tại Nhật.
 
-### 4\. SO SÁNH VỚI KÍCH THƯỚC TỦ BẾP TẠI VIỆT NAM
+### 4\. SO SÁNH KÍCH THƯỚC TỦ BẾP NHẬT BẢN VÀ VIỆT NAM
 
-Bạn cũng có thể tham khảo thêm các lựa chọn **tủ bếp chữ L nhỏ gọn**, hoặc cân nhắc **báo giá thi công tủ bếp trọn gói kiểu Nhật** nếu đang trong giai đoạn tìm kiếm đơn vị thi công phù hợp.
+Tủ bếp Nhật Bản và tủ bếp Việt Nam có nhiều khác biệt về thiết kế và thông số kỹ thuật. Bảng dưới đây tổng hợp các điểm khác nhau tiêu biểu giữa hai phong cách tủ bếp này.
 
-Tại Việt Nam, nhiều gia đình thiết kế tủ bếp với chiều cao 860 – 900 mm để phù hợp người cao hơn. Tuy nhiên điều này có thể gây mệt mỏi cho phụ nữ nội trợ.
-
-Ngoài ra, nhiều nhà thiếu khoảng cách an toàn giữa bếp nấu và tủ treo, dẫn đến nguy hiểm khi nấu nướng.
-
-Nếu bạn đang tìm kiếm **cách bố trí tủ bếp tiện lợi cho nhà nhỏ** hoặc **tủ bếp thông minh cho căn hộ nhỏ**, tiêu chuẩn Nhật Bản là một hướng tham khảo lý tưởng.
+| **Tiêu chí** | **Tủ bếp Nhật Bản** | **Tủ bếp Việt Nam** |
+| --- | --- | --- |
+| **Chiều cao bàn bếp** | Chuẩn hóa theo công thức tính dựa trên chiều cao người dùng (JIS) | Theo kinh nghiệm hoặc thợ, không theo chuẩn cố định |
+| **Chiều cao tấm ốp bếp** | Thường 770mm hoặc 800mm | Thường khoảng 600mm |
+| **Ổ điện trên tấm ốp** | Không khoan ổ điện trên tấm ốp | Khoan ổ điện trực tiếp vào tấm ốp (1 hoặc vài cái) |
+| **Chiều sâu mặt bàn** | 650mm cho bếp I/L; 750–970mm cho đảo/bán đảo | Tùy chỉnh theo từng khách hàng, hay dựa theo phong thủy |
+| **Chiều dài tủ bếp** | Thường 2100–2700mm | Đa dạng, nhiều bếp dài từ 3000–5000mm |
+| **Thiết kế che bộ xả** | Có khu vực riêng che ống nước, sát tường | Thường không che kỹ bộ xả, để lộ ống nước |
+| **Sức chứa tủ bếp** | Thiết kế hộc tối ưu, tận dụng tốt không gian bên trong | Thường lắp theo thói quen, không tối ưu các ngăn chứa |
 
 ### 5\. ỨNG DỤNG THỰC TẾ TẠI KURASHI: BẾP NHẬT LINH HOẠT CHO NGƯỜI VIỆT
 
