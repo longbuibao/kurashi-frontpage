@@ -10,8 +10,9 @@ coverImage:
   coverImage: /public/images/Kich-thuoc-tu-bep-theo-tieu-chuan-nhat-ban.svg
   coverImageAlt: Các kích thước tiêu chuẩn của tủ bếp tại Nhật Bản
 faq:
-  - q: dfdf
-    a: fdfd
+  - q: Tủ bếp tiêu chuẩn có chiều cao bao nhiêu?
+    a: Chiều cao tủ bếp (bàn đá) tối ưu tùy theo chiều cao của bạn nhưng thường là
+      80, 85 hoặc 90cm
 date: 2025-05-18T15:00:00.000Z
 author:
   name: Diện Võ
