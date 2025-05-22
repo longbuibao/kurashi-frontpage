@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1200 675">
+  <defs>
+    <style>
+      .cls-1, .cls-2, .cls-3, .cls-4, .cls-5, .cls-6, .cls-7, .cls-8, .cls-9, .cls-10, .cls-11, .cls-12, .cls-13, .cls-14, .cls-15, .cls-16, .cls-17 {
+        stroke-miterlimit: 10;
+      }
+
+      .cls-1, .cls-2, .cls-3, .cls-4, .cls-5, .cls-6, .cls-7, .cls-8, .cls-9, .cls-10, .cls-11, .cls-12, .cls-14, .cls-15, .cls-16 {
+        fill: none;
+      }
+
+      .cls-1, .cls-2, .cls-12, .cls-13 {
+        stroke: #000;
+      }
+
+      .cls-1, .cls-3, .cls-4, .cls-5, .cls-6, .cls-7, .cls-8, .cls-10, .cls-11, .cls-13, .cls-15, .cls-17 {
+        stroke-width: .5px;
+      }
+
+      .cls-3 {
+        stroke-dasharray: 3.05 3.05;
+      }
+
+      .cls-3, .cls-4, .cls-5, .cls-7, .cls-10, .cls-15 {
+        stroke: #666;
+      }
+
+      .cls-18 {
+        font-size: 30.05px;
+      }
+
+      .cls-18, .cls-19, .cls-20, .cls-21 {
+        font-family: ArialMT, Arial;
+      }
+
+      .cls-22 {
+        letter-spacing: -.02em;
+      }
+
+      .cls-22, .cls-23 {
+        font-size: 26.04px;
+      }
+
+      .cls-22, .cls-23, .cls-24 {
+        font-family: Arial-BoldMT, Arial;
+        font-weight: 700;
+      }
+
+      .cls-25, .cls-24 {
+        fill: #fff;
+      }
+
+      .cls-4 {
+        stroke-dasharray: 3.2 3.2;
+      }
+
+      .cls-5 {
+        stroke-dasharray: 2.8 2.8;
+      }
+
+      .cls-6, .cls-8, .cls-11 {
+        stroke: gray;
+      }
+
+      .cls-8 {
+        stroke-dasharray: 3.03 3.03;
+      }
+
+      .cls-9 {
+        stroke: #999;
+      }
+
+      .cls-10 {
+        stroke-dasharray: 3 3;
+      }
+
+      .cls-26, .cls-13 {
+        fill: #437355;
+      }
+
+      .cls-19, .cls-21 {
+        font-size: 24px;
+      }
+
+      .cls-20 {
+        font-size: 19.72px;
+      }
+
+      .cls-27 {
+        letter-spacing: -.02em;
+      }
+
+      .cls-28 {
+        fill: #ccc;
+      }
+
+      .cls-11 {
+        stroke-dasharray: 2.98 2.98;
+      }
+
+      .cls-12 {
+        stroke-dasharray: 6.17 6.17;
+      }
+
+      .cls-14 {
+        stroke: #b3b3b3;
+      }
+
+      .cls-29, .cls-21 {
+        letter-spacing: -.04em;
+      }
+
+      .cls-24 {
+        font-size: 38px;
+        opacity: .95;
+      }
+
+      .cls-15 {
+        stroke-dasharray: 2.88 2.88;
+      }
+
+      .cls-16 {
+        stroke: #333;
+      }
+
+      .cls-17 {
+        fill: #4d4d4d;
+        stroke: #4d4d4d;
+      }
+    </style>
+  </defs>
+  <g>
+    <rect class="cls-25" x="130.11" y="137.71" width="290.61" height="262.1"/>
+    <path d="M420.22,138.21v261.1H130.61V138.21h289.61M421.22,137.21H129.61v263.1h291.61V137.21h0Z"/>
+  </g>
+  <g>
+    <rect class="cls-28" x="146.09" y="400.81" width="274.63" height="34.41"/>
+    <path d="M420.22,401.31v33.41H146.59v-33.41h273.63M421.22,400.31H145.59v35.41h275.63v-35.41h0Z"/>
+  </g>
+  <g>
+    <rect class="cls-28" x="124.9" y="125.69" width="295.82" height="11.02"/>
+    <path d="M420.22,126.19v10.02H125.4v-10.02h294.82M421.22,125.19H124.4v12.02h296.82v-12.02h0Z"/>
+  </g>
+  <g>
+    <rect class="cls-26" x="366.86" y="347.39" width="53.86" height="87.83"/>
+    <path d="M420.22,347.89v86.83h-52.86v-86.83h52.86M421.22,346.89h-54.86v88.83h54.86v-88.83h0Z"/>
+  </g>
+  <line class="cls-17" x1="420.35" y1="445.88" x2="420.35" y2="479.33"/>
+  <g>
+    <line class="cls-2" x1="419.85" y1="489.07" x2="366.86" y2="489.07"/>
+    <rect x="419.35" y="485.82" width="1" height="6.5"/>
+    <rect x="366.36" y="485.82" width="1" height="6.5"/>
+  </g>
+  <text class="cls-22" transform="translate(386.94 474.08)"><tspan x="0" y="0">L</tspan></text>
+  <line class="cls-17" x1="366.53" y1="446.99" x2="366.53" y2="480.45"/>
+  <g>
+    <line class="cls-2" x1="464.98" y1="348.37" x2="464.98" y2="435.75"/>
+    <rect x="461.73" y="347.87" width="6.5" height="1"/>
+    <rect x="461.73" y="435.25" width="6.5" height="1"/>
+  </g>
+  <text class="cls-23" transform="translate(475.97 401.63)"><tspan x="0" y="0">G</tspan></text>
+  <g>
+    <line class="cls-2" x1="366.36" y1="346.89" x2="366.36" y2="343.89"/>
+    <line class="cls-12" x1="366.36" y1="337.72" x2="366.36" y2="143.3"/>
+    <line class="cls-2" x1="366.36" y1="140.21" x2="366.36" y2="137.21"/>
+  </g>
+  <line class="cls-1" x1="386.94" y1="377.05" x2="304.96" y2="289.53"/>
+  <text class="cls-18" transform="translate(188.43 260.92)"><tspan x="0" y="0">Khu che</tspan><tspan x="14.21" y="36.06" xml:space="preserve"> bộ xả</tspan></text>
+  <line class="cls-16" x1="61.02" y1="508.91" x2="574.41" y2="508.91"/>
+  <line class="cls-16" x1="61.02" y1="651.96" x2="574.41" y2="651.96"/>
+  <line class="cls-16" x1="61.02" y1="556.59" x2="574.41" y2="556.59"/>
+  <line class="cls-16" x1="61.02" y1="604.28" x2="574.41" y2="604.28"/>
+  <line class="cls-16" x1="61.02" y1="508.91" x2="61.02" y2="651.96"/>
+  <line class="cls-16" x1="574.41" y1="508.91" x2="574.41" y2="651.96"/>
+  <line class="cls-16" x1="153.59" y1="508.91" x2="152.69" y2="651.96"/>
+  <line class="cls-16" x1="364.67" y1="508.91" x2="364.67" y2="651.96"/>
+  <text class="cls-19" transform="translate(82.6 540.23)"><tspan x="0" y="0">Kí tự</tspan></text>
+  <text class="cls-19" transform="translate(172.13 540.23)"><tspan x="0" y="0">Loại kích thước</tspan></text>
+  <text class="cls-19" transform="translate(378.95 540.23)"><tspan x="0" y="0">Kích thước chuẩn</tspan></text>
+  <text class="cls-19" transform="translate(96.05 586.94)"><tspan x="0" y="0">G</tspan></text>
+  <text class="cls-21" transform="translate(98.71 636.24)"><tspan x="0" y="0">L</tspan></text>
+  <text class="cls-19" transform="translate(208.58 586.94)"><tspan x="0" y="0">Chiều cao</tspan></text>
+  <text class="cls-19" transform="translate(205.76 638.92)"><tspan x="0" y="0">Chiều sâu</tspan></text>
+  <text class="cls-19" transform="translate(416.39 589.55)"><tspan class="cls-29" x="0" y="0">T</tspan><tspan x="13.77" y="0">rên 100</tspan></text>
+  <text class="cls-19" transform="translate(426.93 635.29)"><tspan x="0" y="0">70~100</tspan></text>
+  <rect class="cls-2" x="754.53" y="204.73" width="278.47" height="311.05"/>
+  <rect class="cls-26" x="770.68" y="220.98" width="79.83" height="18.78"/>
+  <circle class="cls-26" cx="853.33" cy="404.88" r="53.45"/>
+  <circle class="cls-26" cx="1006.53" cy="490.8" r="15.75"/>
+  <circle class="cls-26" cx="1012.52" cy="249.53" r="9.77"/>
+  <circle class="cls-26" cx="1012.52" cy="276.05" r="9.77"/>
+  <g>
+    <line class="cls-7" x1="1012.52" y1="226.28" x2="1012.52" y2="227.78"/>
+    <line class="cls-10" x1="1012.52" y1="230.78" x2="1012.52" y2="301.4"/>
+    <line class="cls-7" x1="1012.52" y1="302.9" x2="1012.52" y2="304.4"/>
+  </g>
+  <g>
+    <line class="cls-7" x1="992.46" y1="249.53" x2="993.96" y2="249.53"/>
+    <line class="cls-4" x1="997.16" y1="249.53" x2="1027.58" y2="249.53"/>
+    <line class="cls-7" x1="1029.18" y1="249.53" x2="1030.68" y2="249.53"/>
+  </g>
+  <g>
+    <line class="cls-7" x1="994.98" y1="276.05" x2="996.48" y2="276.05"/>
+    <line class="cls-5" x1="999.28" y1="276.05" x2="1025.89" y2="276.05"/>
+    <line class="cls-7" x1="1027.29" y1="276.05" x2="1028.79" y2="276.05"/>
+  </g>
+  <g>
+    <line class="cls-7" x1="1005.31" y1="463.37" x2="1005.31" y2="464.87"/>
+    <line class="cls-3" x1="1005.31" y1="467.92" x2="1005.31" y2="527.43"/>
+    <line class="cls-7" x1="1005.31" y1="528.96" x2="1005.31" y2="530.46"/>
+  </g>
+  <g>
+    <line class="cls-7" x1="971.28" y1="490.8" x2="972.78" y2="490.8"/>
+    <line class="cls-15" x1="975.67" y1="490.8" x2="1037.64" y2="490.8"/>
+    <line class="cls-7" x1="1039.09" y1="490.8" x2="1040.59" y2="490.8"/>
+  </g>
+  <g>
+    <line class="cls-6" x1="853.33" y1="327.44" x2="853.33" y2="328.94"/>
+    <line class="cls-8" x1="853.33" y1="331.97" x2="853.33" y2="487.79"/>
+    <line class="cls-6" x1="853.33" y1="489.3" x2="853.33" y2="490.8"/>
+  </g>
+  <g>
+    <line class="cls-6" x1="770.68" y1="404.88" x2="772.18" y2="404.88"/>
+    <line class="cls-11" x1="775.16" y1="404.88" x2="928.6" y2="404.88"/>
+    <line class="cls-6" x1="930.09" y1="404.88" x2="931.59" y2="404.88"/>
+  </g>
+  <text class="cls-20" transform="translate(1081.17 226.15)"><tspan x="0" y="0">ống</tspan><tspan x="-28.41" y="23.67" xml:space="preserve"> cấp nước</tspan></text>
+  <line class="cls-14" x1="1152.12" y1="261.17" x2="1018.82" y2="261.17"/>
+  <line class="cls-14" x1="1146.07" y1="490.8" x2="1048.09" y2="490.8"/>
+  <text class="cls-20" transform="translate(1062.72 474.57)"><tspan x="0" y="0">ống gas</tspan></text>
+  <text class="cls-20" transform="translate(668.46 159.26)"><tspan x="0" y="0">đường dây điện</tspan></text>
+  <line class="cls-9" x1="810.6" y1="217.86" x2="738.01" y2="174.48"/>
+  <text class="cls-20" transform="translate(731.08 564.54)"><tspan x="0" y="0">đường ống </tspan><tspan x=".56" y="23.67">thoát nước</tspan></text>
+  <line class="cls-14" x1="827.03" y1="463.37" x2="785.03" y2="549.11"/>
+  <rect class="cls-13" x=".23" y=".08" width="1199" height="89.43"/>
+  <text class="cls-24" transform="translate(248.64 59.56)"><tspan x="0" y="0">KHU CHE BỘ XẢ VÀ KHU ĐI ỐNG, DÂ</tspan><tspan class="cls-27" x="681.92" y="0">Y</tspan></text>
+  <image width="1230" height="371" transform="translate(1004.6 593.84) scale(.15)" xlink:href="../ドキュメント/K/Logo Kurashi/lOGO-01.png"/>
+</svg>
