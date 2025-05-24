@@ -23,6 +23,8 @@ faq:
   - q: Tủ bếp sâu bao nhiêu là hợp lý?
     a: Tủ bếp dưới sâu 600mm hoặc 650mm là hợp lý, tủ bếp trên chiều sâu nhỏ hơn
       400mm là hợp lý.
+  - q: Bếp chữ L nên dài và sâu bao nhiêu cho căn hộ nhỏ?
+    a: Nên dài trong khoảng 2100mm ~ 2700mm, chiều sâu 600
 date: 2025-05-18T15:00:00.000Z
 author:
   name: Diện Võ
@@ -154,5 +156,9 @@ Tấm tráng men là lựa chọn tối ưu: bền, chống ẩm mốc, dễ v�
 ### Tủ bếp sâu bao nhiêu là hợp lý?
 
 Tủ bếp dưới sâu 600mm hoặc 650mm là hợp lý, tủ bếp trên chiều sâu nhỏ hơn 400mm là hợp lý.
+
+### Bếp chữ L nên dài và sâu bao nhiêu cho căn hộ nhỏ?
+
+Nên dài trong khoảng 2100mm ~ 2700mm, chiều sâu 600
 
 👉 [**Liên hệ Kurashi ngay**](https://www.kurashi.com.vn/lien-he) để nhận tư vấn miễn phí và báo giá nhanh
