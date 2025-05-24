@@ -1,10 +1,10 @@
 ---
-fileName: phu-kien-bep-nam-cham-va-tam-op-bep-thep-trang-men-cap-doi-hoan-hao-cho-bep-gon-gang
+fileName: phu-kien-bep-nam-cham-va-tam-op-bep-thep-trang-men-cap-doi-toi-uu-cho-gian-bep-hien-dai
 category: Phụ kiện nam châm
 subCategory:
   - Phụ kiện bếp
-title: Phụ Kiện Bếp Nam Châm & Tấm Ốp Bếp Tráng Men – Cặp Đôi Hoàn Hảo Cho Bếp
-  Gọn Gàng
+title: Phụ kiện bếp nam châm & tấm ốp thép tráng men – Cặp đôi tối ưu cho gian
+  bếp hiện đại
 excerpt: "Giải pháp bếp hiện đại: Tấm thép tráng men + phụ kiện nam châm, không
   khoan, dễ vệ sinh, lý tưởng cho căn hộ nhỏ."
 coverImage:
