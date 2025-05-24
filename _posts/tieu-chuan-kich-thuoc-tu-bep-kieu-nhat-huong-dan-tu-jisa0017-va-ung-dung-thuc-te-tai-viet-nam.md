@@ -33,13 +33,13 @@ ogImage:
   url: /public/images/social kich-thuoc-tu-bep-theo-tieu-chuan-nhat-ban.jpg
 isReadyForPublish: true
 ---
-### 1\. GIỚI THIỆU VỀ TIÊU CHUẨN JIS NHẬT BẢN TRONG THIẾT KẾ TỦ BẾP
+## 1\. GIỚI THIỆU VỀ TIÊU CHUẨN JIS NHẬT BẢN TRONG THIẾT KẾ TỦ BẾP
 
 Tại Nhật Bản, mọi chi tiết trong thiết kế đều được quy định cụ thể bằng hệ thống tiêu chuẩn JIS (Japanese Industrial Standards). Đối với không gian bếp, tiêu chuẩn **JIS A 0017:2018** được xem là "cẩm nang vàng" để thiết kế **tủ bếp kiểu Nhật** với đầy đủ thông số kỹ thuật như: chiều cao, chiều sâu, khoảng cách an toàn khi thao tác.
 
 > Bạn có thể xem chi tiết tiêu chuẩn đầy đủ tại trang chính thức: [JIS A 0017:2018 - Tiêu chuẩn thiết kế bếp kiểu Nhật](https://kikakurui.com/a0/A0017-2018-01.html)
 
-### 2\. TẠI SAO NÊN QUAN TÂM ĐẾN KÍCH THƯỚC TỦ BẾP
+## 2\. TẠI SAO NÊN QUAN TÂM ĐẾN KÍCH THƯỚC TỦ BẾP
 
 **Kích thước tủ bếp** không chỉ ảnh hưởng đến công năng sử dụng mà còn là yếu tố được nhiều người quan tâm khi cải tạo hoặc thiết kế mới không gian bếp. Đặc biệt với các nhu cầu như **thiết kế tủ bếp nhỏ gọn theo yêu cầu**, **lựa chọn vật liệu dễ vệ sinh**, hay **báo giá tủ bếp theo kích thước**, người dùng ngày càng hướng đến những giải pháp phù hợp với lối sống hiện đại và diện tích nhà ở tại Việt Nam.
 
@@ -51,7 +51,7 @@ Ví dụ, chiều cao tủ được thiết kế phù hợp với đa số ngư�
 **Tiện lợi và tối ưu hóa diện tích:**  
 Các thiết kế tuân theo tiêu chuẩn thường áp dụng bố cục **tam giác công năng** giữa bếp nấu – bồn rửa – tủ lạnh, giúp người dùng **hạn chế di chuyển không cần thiết**, từ đó tiết kiệm thời gian và thao tác thuận tiện hơn khi nấu ăn.
 
-### 3\. CÁC KÍCH THƯỚC BẾP TIÊU CHUẨN THEO JIS A 0017:2018 CỦA NHẬT BẢN
+## 3\. CÁC KÍCH THƯỚC BẾP TIÊU CHUẨN THEO JIS A 0017:2018 CỦA NHẬT BẢN
 
 Dưới đây là một số kích thước cơ bản trong tiêu chuẩn JIS và được áp dụng rộng rãi tại Nhật Bản cho phần tủ bếp trên, tủ bếp dưới, tấm ốp bếp, bàn đá bếp và chân tủ.
 
@@ -83,7 +83,7 @@ Một nguyên tắc quan trọng không thể bỏ qua khi thiết kế kích th
 
 Việc bố trí ba điểm này theo dạng hình tam giác giúp **giảm thiểu việc di chuyển không cần thiết**, từ đó tối ưu hiệu suất nấu nướng và mang lại trải nghiệm tiện lợi hơn cho người sử dụng. Theo các khuyến nghị thiết kế, **tổng chiều dài chu vi của tam giác công năng nên nằm trong khoảng từ 3600mm đến 6600mm**, đảm bảo người nội trợ thao tác dễ dàng mà không bị mỏi mệt.
 
-### 3\. CÁC LOẠI LAYOUT TỦ BẾP
+## 3\. CÁC LOẠI LAYOUT TỦ BẾP
 
 **Tại Nhật Bản, thiết kế tủ bếp được chuẩn hóa cả về hình dáng lẫn kích thước.** Về bố cục, chỉ phổ biến các kiểu bếp chữ I, chữ L, bếp bán đảo và bếp đảo. Về kích thước, chiều dài và chiều sâu tủ bếp cũng được giới hạn trong một số lựa chọn nhất định để đảm bảo đồng bộ trong sản xuất và thi công.
 
