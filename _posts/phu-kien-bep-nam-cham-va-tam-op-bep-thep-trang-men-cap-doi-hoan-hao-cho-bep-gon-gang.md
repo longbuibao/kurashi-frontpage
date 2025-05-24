@@ -86,7 +86,7 @@ Không phải phụ kiện nào cũng sử dụng được trên mọi loại t�
 *   🧱 **Kệ bếp thông minh:** chứa gia vị, vật dụng nhỏ – **giúp giải phóng không gian trong ngăn kéo và tủ bếp**
     
 
-> ➤ _Xem bộ sưu tập_ [_phụ kiện bếp nam châm_](https://www.kurashi.com.vn/san-pham/phu-kien-bep) _của_ [_thương hiệu Kurashi_](https://www.kurashi.com.vn/)
+> ➤ _Xem bộ sưu tập_ [_phụ kiện bếp nam châm_](https://www.kurashi.com.vn/san-pham/phu-kien-bep) _của_ _thương hiệu Kurashi_
 
 ## 3\. VÌ SAO CHỈ THÉP TRÁNG MEN DÙNG ĐƯỢC VỚI PHỤ KIỆN BẾP NAM CHÂM
 
