@@ -6,7 +6,7 @@ subCategory:
 title: Thép Tráng Men Là Gì? Cấu Tạo, Ưu Điểm & Ứng Dụng Ốp Tường Bếp
 excerpt: Công nghệ vật liệu Made In Japan của thép tráng men
 coverImage:
-  coverImage: /public/images/cau-tao-6-lop-cua-thep-trang-men-kurashi.svg
+  coverImage: /public/images/Social_cau-tao-6-lop-cua-thep-trang-men-kurashi-01.jpg
   coverImageAlt: Cấu tạo 6 lớp của thép tráng men Kurashi
 faq:
   - q: Cách vệ sinh, bảo dưỡng tấm ốp tường bếp thép tráng men để luôn sạch sẽ, bền
@@ -37,7 +37,6 @@ faq:
 date: 2025-05-12T21:30:00.000Z
 author:
   name: Diện Võ
-  picture: /public/images/author.png
 ogImage:
   url: /public/images/cau-tao-6-lop-cua-thep-trang-men-kurashi.svg
 isReadyForPublish: true
