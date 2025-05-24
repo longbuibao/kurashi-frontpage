@@ -114,7 +114,7 @@ Hình ảnh thực tế luôn là minh chứng rõ ràng nhất cho hiệu quả
 **Giá treo dao gọn gàng và an toàn**  
 Giữ dao đúng vị trí, dễ lấy khi nấu nướng. Gắn trực tiếp lên tấm tráng men bằng nam châm, không cần khoan, không chiếm diện tích mặt bếp.
 
-![](/public/images/gia-treo-thot.webp)
+![Giá treo dao gọn gàng và an toàn](/public/images/gia-treo-thot.webp)
 
 **Giá treo thớt bằng nam châm**  
 Giữ thớt luôn khô thoáng, sạch sẽ. Gắn trực tiếp lên tấm tráng men, không cần khoan, tiết kiệm không gian bếp.
@@ -125,12 +125,12 @@ Giữ thớt luôn khô thoáng, sạch sẽ. Gắn trực tiếp lên tấm tr�
 **Móc treo đa năng bằng nam châm**  
 Treo muỗng, vá, khăn hoặc cốc. Thiết kế nhỏ gọn, tiện lợi, giúp giữ bếp gọn gàng mà không cần khoan tường.
 
-![](/public/images/gia-treo-thot-va-ke-dung-gia-vi.webp)
+![Giá treo thớt, kệ đựng gia vị và móc treo đa năng hút nam châm](/public/images/gia-treo-thot-va-ke-dung-gia-vi.webp)
 
-**Giá treo khăn, kẹp khăn bằng nam châm**  
+**Giá treo khăn hút nam châm**  
 Giữ khăn khô ráo, dễ lấy khi dùng. Gắn chắc lên tấm tráng men mà không cần khoan, giữ không gian bếp sạch sẽ và ngăn nắp.
 
-![](/public/images/moc-treo-khan.webp)
+![Giá treo khăn hút nam châm](/public/images/moc-treo-khan.webp)
 
 ## 5\. KẾT LUẬN: TỐI ƯU HÓA NHÀ BẾP KHÔNG CẦN KHOAN ĐỤC
 
