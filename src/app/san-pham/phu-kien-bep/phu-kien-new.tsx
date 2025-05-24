@@ -26,7 +26,7 @@ const PhuKienNew: React.FC = async () => {
           </div>
           <div className='flex flex-col justify-center gap-2'>
             <div className='text-main font-bold group-hover:text-kurashiX text-nowrap'>{x.name}</div>
-            <div className='text-opacity-10 text-black relative text-sm'>{formatCurrency(x.price)} <sub className='absolute top-1'>₫</sub></div>
+            <div className='text-opacity-10 text-black relative text-sm'>Liên hệ</div>
           </div>
         </div>))}
     </div>
