@@ -8,8 +8,8 @@ title: Phụ kiện bếp nam châm & tấm ốp thép tráng men – Cặp đô
 excerpt: "Giải pháp bếp hiện đại: Tấm thép tráng men + phụ kiện nam châm, không
   khoan, dễ vệ sinh, lý tưởng cho căn hộ nhỏ."
 coverImage:
-  coverImage: undefined
-  coverImageAlt: dd
+  coverImage: /public/images/phu-kien-bep-nam-cham-va-tam-op-bep-thep-trang-men.webp
+  coverImageAlt: Phụ kiện bếp nam châm và tấm ốp bếp thép tráng men
 faq:
   - q: Tại sao nên chọn tấm ốp bếp bằng thép tráng men thay vì kính hoặc đá thạch
       anh?
