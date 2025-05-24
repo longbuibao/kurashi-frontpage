@@ -26,7 +26,7 @@ faq:
   - q: Bếp chữ L nên dài và sâu bao nhiêu cho căn hộ nhỏ?
     a: Cho căn hộ nhỏ, bếp chữ L nên dài trong khoảng 2100mm ~ 2700mm, chiều sâu 600
       là hợp lý.
-date: 2025-05-18T15:00:00.000Z
+date: 2025-05-24T00:00:00.000Z
 author:
   name: Diện Võ
 ogImage:
