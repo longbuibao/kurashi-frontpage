@@ -83,7 +83,7 @@ Một nguyên tắc quan trọng không thể bỏ qua khi thiết kế kích th
 
 Việc bố trí ba điểm này theo dạng hình tam giác giúp **giảm thiểu việc di chuyển không cần thiết**, từ đó tối ưu hiệu suất nấu nướng và mang lại trải nghiệm tiện lợi hơn cho người sử dụng. Theo các khuyến nghị thiết kế, **tổng chiều dài chu vi của tam giác công năng nên nằm trong khoảng từ 3600mm đến 6600mm**, đảm bảo người nội trợ thao tác dễ dàng mà không bị mỏi mệt.
 
-## 3\. CÁC LOẠI LAYOUT TỦ BẾP
+## 4\. CÁC LOẠI LAYOUT TỦ BẾP
 
 **Tại Nhật Bản, thiết kế tủ bếp được chuẩn hóa cả về hình dáng lẫn kích thước.** Về bố cục, chỉ phổ biến các kiểu bếp chữ I, chữ L, bếp bán đảo và bếp đảo. Về kích thước, chiều dài và chiều sâu tủ bếp cũng được giới hạn trong một số lựa chọn nhất định để đảm bảo đồng bộ trong sản xuất và thi công.
 
@@ -101,7 +101,7 @@ Tại Nhật Bản, **các mẫu bếp đảo và bán đảo** thường có ch
 
 Dòng bếp này rất được ưa chuộng tại Nhật vì mang lại **cảm giác cởi mở (open kitchen)**. Người nội trợ có thể **giao tiếp thoải mái với người trong nhà** hoặc khách khứa trong lúc nấu, thay vì phải quay mặt vào tường như các kiểu bếp truyền thống.
 
-### 4\. SO SÁNH KÍCH THƯỚC TỦ BẾP NHẬT BẢN VÀ VIỆT NAM
+## 5\. SO SÁNH KÍCH THƯỚC TỦ BẾP NHẬT BẢN VÀ VIỆT NAM
 
 **Tủ bếp Nhật Bản và tủ bếp Việt Nam có nhiều khác biệt rõ rệt** về cả thiết kế, vật liệu lẫn thông số kỹ thuật. Bảng dưới đây tổng hợp những điểm khác biệt tiêu biểu giữa hai phong cách tủ bếp này nhằm giúp người đọc dễ dàng so sánh và lựa chọn giải pháp phù hợp với nhu cầu sử dụng.
 
@@ -115,7 +115,7 @@ Dòng bếp này rất được ưa chuộng tại Nhật vì mang lại **cảm
 | **Thiết kế che bộ xả** | Có khu vực riêng che ống nước, sát tường | Thường không che kỹ bộ xả, để lộ ống nước |
 | **Sức chứa tủ bếp** | Thiết kế hộc tối ưu, tận dụng tốt không gian bên trong | Thường lắp theo thói quen, không tối ưu các ngăn chứa |
 
-### 5\. ỨNG DỤNG THỰC TẾ TẠI KURASHI: TỦ BẾP CHUẨN NHẬT, LINH HOẠT CHO NGƯỜI VIỆT
+## 6\. ỨNG DỤNG THỰC TẾ TẠI KURASHI: TỦ BẾP CHUẨN NHẬT, LINH HOẠT CHO NGƯỜI VIỆT
 
 Tại Kurashi, chúng tôi áp dụng các **kích thước tấm ốp bếp tiêu chuẩn theo JIS của Nhật Bản**, đồng thời điều chỉnh linh hoạt để phù hợp với chiều cao và thói quen sử dụng của người Việt. Việc xác định đúng kích thước không chỉ giúp bếp đẹp và hài hòa, mà còn tăng hiệu quả sử dụng, đảm bảo an toàn và dễ bảo trì.
 
@@ -128,7 +128,7 @@ Một số giải pháp Kurashi đang triển khai:
 
 Ngoài ra, trong quá trình thiết kế, Kurashi luôn cân nhắc đến **thói quen nấu ăn của người dùng**, đặc biệt là việc sử dụng các loại **gia vị treo**, đồng thời đảm bảo sự cân bằng giữa **công năng, tính thẩm mỹ và khả năng vệ sinh**. Việc lựa chọn vật liệu dễ lau chùi như **tấm tráng men** cũng là một phần trong xu hướng thiết kế bếp hiện đại phù hợp với khí hậu nóng ẩm tại Việt Nam.
 
-### 6\. KẾT LUẬN VỀ KÍCH THƯỚC BẾP KIỂU NHẬT
+## 7\. KẾT LUẬN VỀ KÍCH THƯỚC BẾP KIỂU NHẬT
 
 Thiết kế **tủ bếp dựa trên kích thước chuẩn Nhật Bản** giúp bếp an toàn, đẹp và hiệu quả. Kurashi cung cấp **tấm ốp bếp tráng men** và hệ sinh thái phụ kiện linh hoạt nhập khẩu Nhật Bản, lý tưởng cho những ai đang tìm kiếm **giải pháp tủ bếp nhỏ gọn và tiện nghi**.
 
@@ -136,7 +136,7 @@ Dựa trên các tiêu chuẩn được quy định rõ ràng này, các công t
 
 Các kích thước nêu trên là các thông số chuẩn được xây dựng dựa trên nghiên cứu thực tiễn. Tuy nhiên, phong cách sống và nhu cầu thẩm mỹ của người dùng luôn thay đổi, vì vậy các tiêu chuẩn JIS cũng liên tục được điều chỉnh và cập nhật định kỳ để phù hợp hơn với xu hướng mới và nhu cầu thực tế.
 
-### CÂU HỎI THƯỜNG GẶP VỀ TỦ BẾP
+## CÂU HỎI THƯỜNG GẶP VỀ TỦ BẾP
 
 ### Tủ bếp tiêu chuẩn có chiều cao bao nhiêu?
 
