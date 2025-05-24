@@ -63,7 +63,7 @@ So với Việt Nam, **chiều cao phần tấm ốp bếp tại Nhật thườn
 
 ![Chiều cao bàn đá bếp theo tiêu chuẩn Nhật Bản](/public/images/chieu-cao-ban-da-bep.svg)
 
-Một trong những điểm quan trọng về kích thước tủ bếp là chiều cao bàn đá bếp. Tại Nhật, tùy theo chiều cao cơ thể của người dùng mà bàn đá bếp có các chiều cao khác nhau. Để chuẩn hóa, các công ty sản xuất tủ bếp tại Nhật sử dụng công thức tính là: chiều cao bàn đá bếp = chiều cao cơ thể/2 + 5 cm để tính toán chiều cao bàn đá tối ưu để khách hàng không bị đau lưng và các vấn đề về cột sống trong thời gian đứng nấu ăn. Ví dụ với người có chiều cao 160cm thì chiều cao bàn đá bếp tối ưu là 160/2+5 = 85cm. Các số đo trên rất phù hợp với chiều cao trung bình của người Việt và đặc biệt lý tưởng cho những ai đang tìm hiểu **kích thước tủ bếp tiêu chuẩn cho người châu Á**.
+Một trong những điểm quan trọng về kích thước tủ bếp là **chiều cao bàn đá bếp**. Tại Nhật, tùy theo chiều cao cơ thể của người dùng mà bàn đá bếp có các chiều cao khác nhau. Để chuẩn hóa, các công ty sản xuất tủ bếp tại Nhật sử dụng công thức tính là: chiều cao bàn đá bếp = chiều cao cơ thể/2 + 5 cm để tính toán chiều cao bàn đá tối ưu để khách hàng không bị đau lưng và các vấn đề về cột sống trong thời gian đứng nấu ăn. Ví dụ với người có chiều cao 160cm thì chiều cao bàn đá bếp tối ưu là 160/2+5 = 85cm. Các số đo trên rất phù hợp với chiều cao trung bình của người Việt và đặc biệt lý tưởng cho những ai đang tìm hiểu **kích thước tủ bếp tiêu chuẩn cho người châu Á**.
 
 ![Kích thước khi vực để che bộ xả và khu vực đi dây, đường ống](/public/images/kich-thuoc-khu-vuc-che-bo-xa-va-khu-di-ong-day.svg)
 
@@ -73,9 +73,7 @@ Bên cạnh đó, các hệ thống như **cấp – thoát nước, dây điệ
 
 ![Kích thước tam giác công năng tủ bếp](/public/images/tam-giac-cong-nang-cua-tu-bep.svg)
 
-**Một nguyên tắc quan trọng không thể bỏ qua khi thiết kế kích thước tủ bếp** là đảm bảo **tam giác công năng** – kết nối ba khu vực có tần suất sử dụng cao nhất: **chậu rửa chén, bếp nấu và tủ lạnh**.
-
-Việc bố trí ba điểm này theo dạng hình tam giác giúp **giảm thiểu việc di chuyển không cần thiết**, từ đó tối ưu hiệu suất nấu nướng và mang lại trải nghiệm tiện lợi hơn cho người sử dụng. Theo các khuyến nghị thiết kế, **tổng chiều dài chu vi của tam giác công năng nên nằm trong khoảng từ 3600mm đến 6600mm**, đảm bảo người nội trợ thao tác dễ dàng mà không bị mỏi mệt.**Một nguyên tắc quan trọng không thể bỏ qua khi thiết kế kích thước tủ bếp** là đảm bảo **tam giác công năng** – kết nối ba khu vực có tần suất sử dụng cao nhất: **chậu rửa chén, bếp nấu và tủ lạnh**.
+Một nguyên tắc quan trọng không thể bỏ qua khi thiết kế kích thước tủ bếp là đảm bảo **tam giác công năng** – kết nối ba khu vực có tần suất sử dụng cao nhất: **chậu rửa chén, bếp nấu và tủ lạnh**.
 
 Việc bố trí ba điểm này theo dạng hình tam giác giúp **giảm thiểu việc di chuyển không cần thiết**, từ đó tối ưu hiệu suất nấu nướng và mang lại trải nghiệm tiện lợi hơn cho người sử dụng. Theo các khuyến nghị thiết kế, **tổng chiều dài chu vi của tam giác công năng nên nằm trong khoảng từ 3600mm đến 6600mm**, đảm bảo người nội trợ thao tác dễ dàng mà không bị mỏi mệt.
 
