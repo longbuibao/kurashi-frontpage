@@ -20,6 +20,9 @@ faq:
       kiện gắn nam châm.
   - q: Nên chọn chất liệu gì để dễ lau chùi và bền?
     a: "Tấm tráng men là lựa chọn tối ưu: bền, chống ẩm mốc, dễ vệ sinh."
+  - q: Tủ bếp sâu bao nhiêu là hợp lý?
+    a: Tủ bếp dưới sâu 600mm hoặc 650mm là hợp lý, tủ bếp trên chiều sâu nhỏ hơn
+      400mm là hợp lý.
 date: 2025-05-18T15:00:00.000Z
 author:
   name: Diện Võ
@@ -103,7 +106,7 @@ Dòng bếp này rất được ưa chuộng tại Nhật vì mang lại **cảm
 | --- | --- | --- |
 | **Chiều cao bàn bếp** | Chuẩn hóa theo công thức tính dựa trên chiều cao người dùng (JIS) | Theo kinh nghiệm hoặc thợ, không theo chuẩn cố định |
 | **Chiều cao tấm ốp bếp** | Thường 770mm hoặc 800mm | Thường khoảng 600mm |
-| **Ổ điện trên tấm ốp** | Không khoan ổ điện trên tấm ốp | Khoan ổ điện trực tiếp vào tấm ốp (1 hoặc vài cái) |
+| **Ổ điện** | Không khoan ổ điện trên tấm ốp | Khoan ổ điện trực tiếp vào tấm ốp (1 hoặc vài cái) |
 | **Chiều sâu mặt bàn** | 650mm cho bếp I/L; 750–970mm cho đảo/bán đảo | Tùy chỉnh theo từng khách hàng, hay dựa theo phong thủy |
 | **Chiều dài tủ bếp** | Thường 2100–2700mm | Đa dạng, nhiều bếp dài từ 3000–5000mm |
 | **Thiết kế che bộ xả** | Có khu vực riêng che ống nước, sát tường | Thường không che kỹ bộ xả, để lộ ống nước |
@@ -124,7 +127,7 @@ Ngoài ra, trong quá trình thiết kế, Kurashi luôn cân nhắc đến **th
 
 ### 6\. KẾT LUẬN VỀ KÍCH THƯỚC BẾP KIỂU NHẬT
 
-Thiết kế **tủ bếp dựa trên kích thước chuẩn Nhật Bản** giúp bếp an toàn, đẹp và hiệu quả. Kurashi cung cấp **tấm ốp bếp tráng men** và **hệ sinh thái phụ kiện linh hoạt** nhập khẩu Nhật Bản, lý tưởng cho những ai đang tìm kiếm **giải pháp tủ bếp nhỏ gọn và tiện nghi**.
+Thiết kế **tủ bếp dựa trên kích thước chuẩn Nhật Bản** giúp bếp an toàn, đẹp và hiệu quả. Kurashi cung cấp **tấm ốp bếp tráng men** và hệ sinh thái phụ kiện linh hoạt nhập khẩu Nhật Bản, lý tưởng cho những ai đang tìm kiếm **giải pháp tủ bếp nhỏ gọn và tiện nghi**.
 
 Dựa trên các tiêu chuẩn được quy định rõ ràng này, các công ty sản xuất tủ bếp và thiết bị phụ trợ tại Nhật Bản không ngừng cải tiến và sáng tạo các giải pháp mới, nhưng vẫn tuân thủ trong khuôn khổ JIS. Chính điều này góp phần nâng cao chất lượng sống của người dân và thúc đẩy sự phát triển bền vững của ngành công nghiệp bếp và thiết bị nhà ở.
 
@@ -147,5 +150,9 @@ Rất phù hợp. Bố cục tủ bếp Nhật tiết kiệm diện tích và d�
 ### **Nên chọn chất liệu gì để dễ lau chùi và bền?**
 
 Tấm tráng men là lựa chọn tối ưu: bền, chống ẩm mốc, dễ vệ sinh.
+
+Tủ bếp sâu bao nhiêu là hợp lý?
+
+Tủ bếp dưới sâu 600mm hoặc 650mm là hợp lý, tủ bếp trên chiều sâu nhỏ hơn 400mm là hợp lý.
 
 👉 [**Liên hệ Kurashi ngay**](https://www.kurashi.com.vn/lien-he) để nhận tư vấn miễn phí và báo giá nhanh
