@@ -77,9 +77,9 @@ Không phải phụ kiện nào cũng sử dụng được trên mọi loại t�
 
 **Một số sản phẩm tiêu biểu:**
 
-*   🔪 **Giá treo dao:** giữ dao an toàn, dễ thấy – không cần chiếm chỗ mặt bếp
+*   🔪 **Giá treo dao:** giữ dao an toàn, dễ thấy – không cần chiếm chỗ trên mặt bàn bếp
     
-*   🧂 **Hũ đựng gia vị:** đựng dầu ăn, nước tương… gắn gần bếp, dễ di chuyển
+*   🧂 **Hũ đựng gia vị:** đựng dầu ăn, nước tương… gắn gần bếp, dễ di chuyển, thao tác
     
 *   🪝 **Móc treo:** treo muỗng, vá, cốc, khăn giấy – **giải pháp treo dụng cụ bếp không khoan**
     
@@ -99,7 +99,7 @@ Nhiều người băn khoăn: **làm sao để treo dao mà không cần khoan t
 
 Trong khi đó, **đá thạch anh, kính cường lực hoặc laminate** là **vật liệu không từ tính**, không thể sử dụng phụ kiện nam châm. Với các loại này, bạn bắt buộc phải khoan lắp, gây hư hại tường.
 
-Bảng so sánh tấm ốp thép tráng men và các loại tấm ốp tường khác dựa trên 3 tiêu chí là khả năng hút phụ kiện nam châm, cần khoan tường để lắp đặt phụ kiện và linh hoạt thay đổi vị trí phụ kiện
+Bảng so sánh tấm ốp thép tráng men và các loại tấm ốp tường khác dựa trên 3 tiêu chí là khả năng hút phụ kiện nam châm, cần khoan tường để lắp đặt phụ kiện và linh hoạt thay đổi vị trí phụ kiện.
 
 | Tiêu chí | Thép tráng men | Đá thạch anh / Kính / Laminate |
 | --- | --- | --- |
@@ -111,15 +111,24 @@ Bảng so sánh tấm ốp thép tráng men và các loại tấm ốp tường 
 
 Hình ảnh thực tế luôn là minh chứng rõ ràng nhất cho hiệu quả sử dụng. Dưới đây là những hình ảnh thật từ phụ kiện Kurashi gắn trực tiếp trên tấm tráng men — thể hiện rõ sự gọn gàng, linh hoạt và tính đồng bộ trong thiết kế tổng thể của gian bếp.
 
-Giá treo dao gọn gàng và an toàn
+**Giá treo dao gọn gàng và an toàn**  
+Giữ dao đúng vị trí, dễ lấy khi nấu nướng. Gắn trực tiếp lên tấm tráng men bằng nam châm, không cần khoan, không chiếm diện tích mặt bếp.
 
 ![](/public/images/gia-treo-thot.webp)
 
-Giá treo thớt, kệ đựng gia vị và móc treo bằng nam châm
+**Giá treo thớt bằng nam châm**  
+Giữ thớt luôn khô thoáng, sạch sẽ. Gắn trực tiếp lên tấm tráng men, không cần khoan, tiết kiệm không gian bếp.
+
+**Kệ đựng gia vị bằng nam châm**  
+Đựng lọ gia vị dùng hàng ngày ngay cạnh bếp nấu. Dính chắc lên tấm tráng men, dễ tháo lắp và di chuyển khi cần.
+
+**Móc treo đa năng bằng nam châm**  
+Treo muỗng, vá, khăn hoặc cốc. Thiết kế nhỏ gọn, tiện lợi, giúp giữ bếp gọn gàng mà không cần khoan tường.
 
 ![](/public/images/gia-treo-thot-va-ke-dung-gia-vi.webp)
 
-Giá treo khăn, kẹp khăn sạch sẽ
+**Giá treo khăn, kẹp khăn bằng nam châm**  
+Giữ khăn khô ráo, dễ lấy khi dùng. Gắn chắc lên tấm tráng men mà không cần khoan, giữ không gian bếp sạch sẽ và ngăn nắp.
 
 ![](/public/images/moc-treo-khan.webp)
 
