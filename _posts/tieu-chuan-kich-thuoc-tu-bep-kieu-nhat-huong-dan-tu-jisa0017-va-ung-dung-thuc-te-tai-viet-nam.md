@@ -49,7 +49,11 @@ Dưới đây là một số kích thước cơ bản trong tiêu chuẩn JIS v�
 
 ![kích thước chi tiết tủ bếp kiểu Nhật Bản](/public/images/kich-thuoc-chi-tiet-tu-bep-nhat-ban.svg)
 
-Đa phần bếp chữ I và chữ L tại Nhật sâu 600 hoặc 650, trong đó bếp sâu 650 phổ biến và dần thay thế bếp sâu 600. Chiều cao từ sàn đến đáy trên và dưới của tủ trên được qui chuẩn hóa theo công thức 50xn. Một điểm khác biệt so với tủ bếp ở Việt Nam là chiều cao phần ốp bếp ở Nhật thường khoảng 770 hoặc 800; trong khi ở Việt Nam thường thấp hơn chỉ khoảng 600. Do đó các hãng sản xuất tấm ốp bếp phải sản xuất khổ tấm ốp phù hợp cho yêu cầu kích thước này.
+**Đối với các mẫu bếp chữ I và chữ L tại Nhật Bản**, chiều sâu tiêu chuẩn thường là **600mm hoặc 650mm**. Trong đó, **650mm ngày càng trở nên phổ biến hơn** và dần thay thế các thiết kế sâu 600mm nhờ khả năng chứa rộng rãi và phù hợp với thiết bị hiện đại.
+
+Một đặc điểm kỹ thuật khác được chuẩn hóa trong thiết kế tủ treo của Nhật là **chiều cao từ sàn đến đáy tủ trên**, được tính theo công thức **50 × n** (n là đơn vị module), giúp đảm bảo sự đồng bộ và dễ dàng khi lắp đặt.
+
+So với Việt Nam, **chiều cao phần tấm ốp bếp tại Nhật thường cao hơn**, phổ biến ở mức **770mm hoặc 800mm**, trong khi tại Việt Nam chỉ khoảng **600mm**. Sự khác biệt này khiến các nhà sản xuất tấm ốp bếp tại Nhật phải thiết kế và sản xuất các khổ tấm riêng biệt để phù hợp với tiêu chuẩn chiều cao của tủ bếp Nhật.
 
 > Tham khảo chi tiết kích thước [tấm ốp tường bằng thép tráng men](https://www.kurashi.com.vn/san-pham/tam-op-tuong-bang-thep-trang-men) của thương hiệu Kurashi
 
