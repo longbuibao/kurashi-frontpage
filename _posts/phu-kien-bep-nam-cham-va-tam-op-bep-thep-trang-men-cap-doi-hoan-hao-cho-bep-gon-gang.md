@@ -113,11 +113,17 @@ Hình ảnh thực tế luôn là minh chứng rõ ràng nhất cho hiệu quả
 
 Giá treo dao gọn gàng và an toàn
 
+![](/public/images/gia-treo-thot.webp)
+
 Kệ gia vị đặt phía trên bếp nấu
 
 Móc treo cốc, thìa tiện lợi không cần khoan
 
+![](/public/images/gia-treo-thot-va-ke-dung-gia-vi.webp)
+
 Giá treo khăn, kẹp khăn sạch sẽ
+
+![](/public/images/moc-treo-khan.webp)
 
 ## 5\. KẾT LUẬN: TỐI ƯU HÓA NHÀ BẾP KHÔNG CẦN KHOAN ĐỤC
 
