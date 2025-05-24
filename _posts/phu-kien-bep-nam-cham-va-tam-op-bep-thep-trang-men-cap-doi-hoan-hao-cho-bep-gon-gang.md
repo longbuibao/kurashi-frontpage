@@ -47,6 +47,8 @@ faq:
 date: 2025-05-25T17:00:00.000Z
 author:
   name: Diện Võ
+ogImage:
+  url: /public/images/Social phụ kiện nam châm và tấm ốp thép tráng men.jpg
 isReadyForPublish: false
 ---
 Bạn có biết tại Nhật Bản – nơi nổi tiếng với không gian sống tối ưu – **tấm ốp bếp bằng thép tráng men Nhật Bản** là lựa chọn hàng đầu nhờ khả năng gắn trực tiếp phụ kiện bằng nam châm mà không cần khoan hay lắp đặt phức tạp?
