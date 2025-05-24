@@ -135,23 +135,23 @@ Các kích thước nêu trên là các thông số chuẩn được xây dựng
 
 ### CÂU HỎI THƯỜNG GẶP VỀ TỦ BẾP
 
-### **Tủ bếp tiêu chuẩn có chiều cao bao nhiêu?**
+### Tủ bếp tiêu chuẩn có chiều cao bao nhiêu?
 
 Chiều cao tủ bếp (bàn đá) tối ưu tùy theo chiều cao của bạn nhưng thường là 80, 85 hoặc 90cm.
 
-### **Chiều cao tủ bếp phù hợp với người cao 1m6 là bao nhiêu?**
+### Chiều cao tủ bếp phù hợp với người cao 1m6 là bao nhiêu?
 
 Khoảng 85cm là phù hợp, hạn chế đau lưng và dễ thao tác.
 
-### **Tủ bếp kiểu Nhật có phù hợp nhà phố ở Việt Nam?**
+### Tủ bếp kiểu Nhật có phù hợp nhà phố ở Việt Nam?
 
 Rất phù hợp. Bố cục tủ bếp Nhật tiết kiệm diện tích và dễ sắp xếp với phụ kiện gắn nam châm.
 
-### **Nên chọn chất liệu gì để dễ lau chùi và bền?**
+### Nên chọn chất liệu gì để dễ lau chùi và bền?
 
 Tấm tráng men là lựa chọn tối ưu: bền, chống ẩm mốc, dễ vệ sinh.
 
-Tủ bếp sâu bao nhiêu là hợp lý?
+### Tủ bếp sâu bao nhiêu là hợp lý?
 
 Tủ bếp dưới sâu 600mm hoặc 650mm là hợp lý, tủ bếp trên chiều sâu nhỏ hơn 400mm là hợp lý.
 
