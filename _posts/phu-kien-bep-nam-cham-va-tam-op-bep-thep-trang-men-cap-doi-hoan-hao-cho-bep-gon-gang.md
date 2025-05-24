@@ -132,6 +132,18 @@ Giữ khăn khô ráo, dễ lấy khi dùng. Gắn chắc lên tấm tráng men 
 
 ![Giá treo khăn hút nam châm](/public/images/moc-treo-khan.webp)
 
+### 📺 Video thực tế: Gắn giá treo khăn lên tấm tráng men không cần khoan
+
+> Xem video ngắn dưới đây để thấy rõ cách **giá treo khăn nam châm Kurashi** được gắn chắc lên **tấm ốp bếp bằng thép tráng men**, chỉ trong vài giây mà không cần khoan hay dùng ốc vít.
+
+```
+<iframe width="560" height="315" 
+src="https://www.youtube.com/embed/DX7lmvu8GLs" 
+title="Hướng dẫn sử dụng giá treo dao bằng nam châm Kurashi" 
+frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+allowfullscreen></iframe>
+```
+
 ## 5\. KẾT LUẬN: TỐI ƯU HÓA NHÀ BẾP KHÔNG CẦN KHOAN ĐỤC
 
 Nếu bạn đang tìm kiếm **vật liệu ốp bếp hiện đại cho căn hộ nhỏ**, dễ vệ sinh và linh hoạt – thì **sự kết hợp giữa tấm ốp bếp thép tráng men và phụ kiện nam châm** chính là câu trả lời.
