@@ -49,6 +49,8 @@ Dưới đây là một số kích thước cơ bản trong tiêu chuẩn JIS v�
 
 ![](/public/images/kich-thuoc-chi-tiet-t%E1%BB%A7-be-nhat-ban.svg)
 
+![](/public/images/kich-thuoc-chi-tiet-tu-bep-nhat-ban.svg)
+
 Đa phần bếp chữ I và chữ L tại Nhật sâu 600 hoặc 650, trong đó bếp sâu 650 phổ biến và dần thay thế bếp sâu 600. Chiều cao từ sàn đến đáy trên và dưới của tủ trên được qui chuẩn hóa theo công thức 50xn. Một điểm khác biệt so với tủ bếp ở Việt Nam là chiều cao phần ốp bếp ở Nhật thường khoảng 770 hoặc 800; trong khi ở Việt Nam thường thấp hơn chỉ khoảng 600. Do đó các hãng sản xuất tấm ốp bếp phải sản xuất khổ tấm ốp phù hợp cho yêu cầu kích thước này.
 
 > Tham khảo chi tiết kích thước [tấm ốp tường bằng thép tráng men](https://www.kurashi.com.vn/san-pham/tam-op-tuong-bang-thep-trang-men) của thương hiệu Kurashi
@@ -59,15 +61,25 @@ Một trong những điểm quan trọng về kích thước tủ bếp là chi�
 
 ![](/public/images/cach-tinh-chieu-cao-ban-da-bep.svg)
 
+![](/public/images/chieu-cao-ban-da-bep.svg)
+
 Một điểm khác biệt nữa của tủ bếp Nhật đó là thiết kế 1 khu để che bộ xả tại module chậu rửa chén gọi là service area. Họ cũng chuẩn hóa các vị trí để cấp thoát nước, đi đường dây điện và đường ga.
 
 ![](/public/images/kich-thuoc-khu-vuc-ong-nuoc-va-day-dien.svg)
 
+![](/public/images/kich-thuoc-khu-vuc-che-bo-xa-va-khu-di-ong-day.svg)
+
 Một trong những yêu cầu không thể bỏ qua trong việc lên kích thước tủ bếp đó là tam giác công năng để giảm việc di chuyển giữa 3 điểm thường xuyên tương tác nhất khu bếp đó là chậu rửa chén, bếp nấu và tủ lạnh. Chu vi của tam giác này thường nằm trong khoảng 3,6 m để giảm thiểu phạm vi cần di chuyển của người nội trợ.
+
+![](/public/images/tam-giac-cong-nang-cua-tu-bep.svg)
 
 ### 3\. CÁC LOẠI LAYOUT TỦ BẾP
 
 Bếp ở Nhật được chuẩn hóa về hình dáng và kích thước. Về hình dáng chỉ có bếp chữ I, chữ L, bếp bán đảo và bếp đảo. Về kích thước, tủ bếp chỉ có một số chiều dài và chiều sâu để chuẩn hóa. Dưới đây là thông tin chi tiết về hình dáng và kích thước của một số loại tủ bếp phổ biến tại Nhật.
+
+![](/public/images/kich-thuoc-bep-chu-I-chu-L.svg)
+
+![](/public/images/kich-thuoc-bep-dao-va-ban-dao.svg)
 
 ### 4\. SO SÁNH KÍCH THƯỚC TỦ BẾP NHẬT BẢN VÀ VIỆT NAM
 
