@@ -107,22 +107,25 @@ const BlogCardByCategory: React.FC<BlogPost> = ({ coverImage, title, excerpt, da
 const AllBlogs: React.FC = async (): React.ReactElement => {
   const postsDirectory = path.join(process.cwd(), '_posts')
   const fileNames = await fs.readdir(postsDirectory)
-  const posts = (await Promise.all(
-    fileNames
-      .filter((file) => file.endsWith('.md'))
-      .map(async (fileName) => {
-        const slug = fileName.replace(/\.md$/, '')
-        const fullPath = path.join(postsDirectory, fileName)
-        const fileContents = await fs.readFile(fullPath, 'utf8')
-        const { data, content } = matter(fileContents)
-        return {
-          slug,
-          ...data,
-          content,
-          realFileName: fileName
-        }
-      })
-  )).filter(x => (x as any).isReadyForPublish)
+  const posts = (
+    await Promise.all(
+      fileNames
+        .filter((file) => file.endsWith('.md'))
+        .map(async (fileName) => {
+          const slug = fileName.replace(/\.md$/, '')
+          const fullPath = path.join(postsDirectory, fileName)
+          const fileContents = await fs.readFile(fullPath, 'utf8')
+          const { data, content } = matter(fileContents)
+          return {
+            slug,
+            ...data,
+            content,
+            realFileName: fileName
+          }
+        })
+    ))
+    .sort((a, b) => b.date - a.date)
+    .filter(x => (x as any).isReadyForPublish)
 
   const firstBlog = posts[0] as any as BlogPost
 
