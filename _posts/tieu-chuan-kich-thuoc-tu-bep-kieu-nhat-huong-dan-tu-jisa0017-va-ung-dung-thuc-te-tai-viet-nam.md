@@ -7,7 +7,7 @@ title: "Tiêu chuẩn kích thước tủ bếp kiểu Nhật: Hướng dẫn t�
   dụng thực tế tại Việt Nam"
 excerpt: Kích thước tủ bếp của Nhật Bản theo tiêu chuẩn JIS A 0017:2018
 coverImage:
-  coverImage: /public/images/Kich-thuoc-tu-bep-theo-tieu-chuan-nhat-ban.svg
+  coverImage: /public/images/kich-thuoc-tu-bep-theo-tieu-chuan-nhat-ban.svg
   coverImageAlt: Các kích thước tiêu chuẩn của tủ bếp tại Nhật Bản
 faq:
   - q: Tủ bếp tiêu chuẩn có chiều cao bao nhiêu?
@@ -23,8 +23,6 @@ faq:
 date: 2025-05-18T15:00:00.000Z
 author:
   name: Diện Võ
-ogImage:
-  url: /public/images/social Kich-thuoc-tu-bep-theo-tieu-chuan-nhat-ban.jpg
 isReadyForPublish: false
 ---
 ### 1\. GIỚI THIỆU VỀ TIÊU CHUẨN JIS NHẬT BẢN TRONG THIẾT KẾ TỦ BẾP
