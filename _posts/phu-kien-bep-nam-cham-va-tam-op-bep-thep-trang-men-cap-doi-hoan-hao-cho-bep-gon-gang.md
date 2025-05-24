@@ -145,4 +145,4 @@ Hoàn toàn có! **Phụ kiện bếp gắn nam châm không cần khoan** là l
 
 Hãy thử ngay các **giá treo, kệ gia vị hoặc móc nam châm thông minh**. Chúng giúp **tận dụng tối đa tường bếp**, giải phóng ngăn kéo và mặt bàn. Đây là **giải pháp lưu trữ cho bếp nhỏ hẹp** đang được nhiều người sống ở chung cư lựa chọn.
 
-> [Liên hệ KURASHI](https://www.kurashi.com.vn/lien-he) để được tư vấn miễn phí và nhận báo giá nhanh chóng.
+> ➤ [Liên hệ KURASHI](https://www.kurashi.com.vn/lien-he) để được tư vấn miễn phí và nhận báo giá nhanh chóng.
