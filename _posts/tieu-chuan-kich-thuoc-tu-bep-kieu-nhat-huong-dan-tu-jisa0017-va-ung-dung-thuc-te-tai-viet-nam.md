@@ -23,6 +23,8 @@ faq:
 date: 2025-05-18T15:00:00.000Z
 author:
   name: Diện Võ
+ogImage:
+  url: /public/images/social kich-thuoc-tu-bep-theo-tieu-chuan-nhat-ban.jpg
 isReadyForPublish: false
 ---
 ### 1\. GIỚI THIỆU VỀ TIÊU CHUẨN JIS NHẬT BẢN TRONG THIẾT KẾ TỦ BẾP
