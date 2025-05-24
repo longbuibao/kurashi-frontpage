@@ -115,9 +115,7 @@ Giá treo dao gọn gàng và an toàn
 
 ![](/public/images/gia-treo-thot.webp)
 
-Kệ gia vị đặt phía trên bếp nấu
-
-Móc treo cốc, thìa tiện lợi không cần khoan
+Giá treo thớt, kệ đựng gia vị và móc treo bằng nam châm
 
 ![](/public/images/gia-treo-thot-va-ke-dung-gia-vi.webp)
 
