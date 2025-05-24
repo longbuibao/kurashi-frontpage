@@ -124,7 +124,7 @@ const AllBlogs: React.FC = async (): React.ReactElement => {
           }
         })
     ))
-    .sort((a, b) => (b as any).date - (b as any).date)
+    .sort((a, b) => (b as any).date - (a as any).date)
     .filter(x => (x as any).isReadyForPublish)
 
   const firstBlog = posts[0] as any as BlogPost
