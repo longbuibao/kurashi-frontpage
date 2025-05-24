@@ -45,11 +45,9 @@ Các thiết kế tuân theo tiêu chuẩn thường áp dụng bố cục **tam
 
 ### 3\. CÁC KÍCH THƯỚC BẾP TIÊU CHUẨN THEO JIS A 0017:2018 CỦA NHẬT BẢN
 
-Dưới đây là một số kích thước cơ bản trong tiêu chuẩn JIS và được áp dụng rộng rãi tại Nhật Bản.
+Dưới đây là một số kích thước cơ bản trong tiêu chuẩn JIS và được áp dụng rộng rãi tại Nhật Bản cho phần tủ bếp trên, tủ bếp dưới, tấm ốp bếp, bàn đá bếp và chân tủ.
 
-![](/public/images/kich-thuoc-chi-tiet-t%E1%BB%A7-be-nhat-ban.svg)
-
-![](/public/images/kich-thuoc-chi-tiet-tu-bep-nhat-ban.svg)
+![kích thước chi tiết tủ bếp kiểu Nhật Bản](/public/images/kich-thuoc-chi-tiet-tu-bep-nhat-ban.svg)
 
 Đa phần bếp chữ I và chữ L tại Nhật sâu 600 hoặc 650, trong đó bếp sâu 650 phổ biến và dần thay thế bếp sâu 600. Chiều cao từ sàn đến đáy trên và dưới của tủ trên được qui chuẩn hóa theo công thức 50xn. Một điểm khác biệt so với tủ bếp ở Việt Nam là chiều cao phần ốp bếp ở Nhật thường khoảng 770 hoặc 800; trong khi ở Việt Nam thường thấp hơn chỉ khoảng 600. Do đó các hãng sản xuất tấm ốp bếp phải sản xuất khổ tấm ốp phù hợp cho yêu cầu kích thước này.
 
@@ -57,29 +55,39 @@ Dưới đây là một số kích thước cơ bản trong tiêu chuẩn JIS v�
 
 Điểm thú vị về tấm ốp bếp ở Nhật đó là không khoan và bố trí ổ cắm điện lên tấm ốp bếp mà được bố trí 1 vị trí nhỏ trên tủ bếp dưới và có 1 khu riêng để đặt lò vi sóng, nồi cơm điện chứ không đặt trên bàn đá bếp.
 
+![Chiều cao bàn đá bếp theo tiêu chuẩn Nhật Bản](/public/images/chieu-cao-ban-da-bep.svg)
+
 Một trong những điểm quan trọng về kích thước tủ bếp là chiều cao bàn đá bếp. Tại Nhật, tùy theo chiều cao cơ thể của người dùng mà bàn đá bếp có các chiều cao khác nhau. Để chuẩn hóa, các công ty sản xuất tủ bếp tại Nhật sử dụng công thức tính là: chiều cao bàn đá bếp = chiều cao cơ thể/2 + 5 cm để tính toán chiều cao bàn đá tối ưu để khách hàng không bị đau lưng và các vấn đề về cột sống trong thời gian đứng nấu ăn. Ví dụ với người có chiều cao 160cm thì chiều cao bàn đá bếp tối ưu là 160/2+5 = 85cm. Các số đo trên rất phù hợp với chiều cao trung bình của người Việt và đặc biệt lý tưởng cho những ai đang tìm hiểu **kích thước tủ bếp tiêu chuẩn cho người châu Á**.
 
-![](/public/images/cach-tinh-chieu-cao-ban-da-bep.svg)
+![Kích thước khi vực để che bộ xả và khu vực đi dây, đường ống](/public/images/kich-thuoc-khu-vuc-che-bo-xa-va-khu-di-ong-day.svg)
 
-![](/public/images/chieu-cao-ban-da-bep.svg)
+**Một điểm khác biệt đáng chú ý của tủ bếp Nhật** là việc thiết kế một khu vực riêng biệt gọi là **service area** – nằm tại module chậu rửa chén – nhằm **che đi bộ xả và đường ống kỹ thuật**. Thiết kế này không chỉ giúp tăng tính thẩm mỹ mà còn hỗ trợ việc bảo trì, sửa chữa thuận tiện hơn.
 
-Một điểm khác biệt nữa của tủ bếp Nhật đó là thiết kế 1 khu để che bộ xả tại module chậu rửa chén gọi là service area. Họ cũng chuẩn hóa các vị trí để cấp thoát nước, đi đường dây điện và đường ga.
+Bên cạnh đó, các hệ thống như **cấp – thoát nước, dây điện và đường ống gas** cũng được **chuẩn hóa vị trí lắp đặt** ngay từ giai đoạn thiết kế. Nhờ vậy, việc thi công, lắp đặt và thay thế thiết bị trở nên đồng bộ và tiết kiệm thời gian.
 
-![](/public/images/kich-thuoc-khu-vuc-ong-nuoc-va-day-dien.svg)
+![Kích thước tam giác công năng tủ bếp](/public/images/tam-giac-cong-nang-cua-tu-bep.svg)
 
-![](/public/images/kich-thuoc-khu-vuc-che-bo-xa-va-khu-di-ong-day.svg)
+**Một nguyên tắc quan trọng không thể bỏ qua khi thiết kế kích thước tủ bếp** là đảm bảo **tam giác công năng** – kết nối ba khu vực có tần suất sử dụng cao nhất: **chậu rửa chén, bếp nấu và tủ lạnh**.
 
-Một trong những yêu cầu không thể bỏ qua trong việc lên kích thước tủ bếp đó là tam giác công năng để giảm việc di chuyển giữa 3 điểm thường xuyên tương tác nhất khu bếp đó là chậu rửa chén, bếp nấu và tủ lạnh. Chu vi của tam giác này thường nằm trong khoảng 3,6 m để giảm thiểu phạm vi cần di chuyển của người nội trợ.
+Việc bố trí ba điểm này theo dạng hình tam giác giúp **giảm thiểu việc di chuyển không cần thiết**, từ đó tối ưu hiệu suất nấu nướng và mang lại trải nghiệm tiện lợi hơn cho người sử dụng. Theo các khuyến nghị thiết kế, **tổng chiều dài chu vi của tam giác công năng nên nằm trong khoảng từ 3600mm đến 6600mm**, đảm bảo người nội trợ thao tác dễ dàng mà không bị mỏi mệt.**Một nguyên tắc quan trọng không thể bỏ qua khi thiết kế kích thước tủ bếp** là đảm bảo **tam giác công năng** – kết nối ba khu vực có tần suất sử dụng cao nhất: **chậu rửa chén, bếp nấu và tủ lạnh**.
 
-![](/public/images/tam-giac-cong-nang-cua-tu-bep.svg)
+Việc bố trí ba điểm này theo dạng hình tam giác giúp **giảm thiểu việc di chuyển không cần thiết**, từ đó tối ưu hiệu suất nấu nướng và mang lại trải nghiệm tiện lợi hơn cho người sử dụng. Theo các khuyến nghị thiết kế, **tổng chiều dài chu vi của tam giác công năng nên nằm trong khoảng từ 3600mm đến 6600mm**, đảm bảo người nội trợ thao tác dễ dàng mà không bị mỏi mệt.
 
 ### 3\. CÁC LOẠI LAYOUT TỦ BẾP
 
 Bếp ở Nhật được chuẩn hóa về hình dáng và kích thước. Về hình dáng chỉ có bếp chữ I, chữ L, bếp bán đảo và bếp đảo. Về kích thước, tủ bếp chỉ có một số chiều dài và chiều sâu để chuẩn hóa. Dưới đây là thông tin chi tiết về hình dáng và kích thước của một số loại tủ bếp phổ biến tại Nhật.
 
-![](/public/images/kich-thuoc-bep-chu-I-chu-L.svg)
+![Kích thước bếp chữ I và chữ L theo tiêu chuẩn Nhật Bản](/public/images/kich-thuoc-bep-chu-I-chu-L.svg)
 
-![](/public/images/kich-thuoc-bep-dao-va-ban-dao.svg)
+**Bếp chữ I và chữ L** là hai kiểu bố trí phổ biến và phù hợp với các căn hộ có diện tích nhỏ tại Nhật Bản. Chiều dài của bếp chữ I, cũng như mỗi cánh của bếp chữ L, thường dao động trong khoảng **1800mm đến 3000mm**. Tuy nhiên, tại Nhật, các chiều dài này được **chuẩn hóa theo module**, bao gồm: **1800, 1950, 2100, 2250, 2400, 2550 và 2700mm**.
+
+Thực tế cho thấy, **rất hiếm căn bếp ở Nhật có chiều dài vượt quá 3000mm**, do đặc thù không gian sống nhỏ gọn. Về chiều sâu mặt bàn, có hai kích thước phổ biến là **600mm và 650mm**, trong đó **650mm** là lựa chọn được sử dụng nhiều nhất.
+
+![Kích thước bếp đảo và bán đảo theo tiêu chuẩn Nhật Bản](/public/images/kich-thuoc-bep-dao-va-ban-dao.svg)
+
+Tại Nhật Bản, **các mẫu bếp đảo và bán đảo** thường có chiều dài dao động từ **2400mm đến 2700mm**, với chiều sâu phổ biến là **750mm hoặc 970mm**. Thiết kế này thường được tích hợp cả **bếp nấu và chậu rửa chén**, đi kèm **tấm kính chắn dầu mỡ** để chống văng khi nấu ăn.
+
+Dòng bếp này rất được ưa chuộng tại Nhật vì mang lại **cảm giác cởi mở (open kitchen)**. Người nội trợ có thể **giao tiếp thoải mái với người trong nhà** hoặc khách khứa trong lúc nấu, thay vì phải quay mặt vào tường như các kiểu bếp truyền thống.
 
 ### 4\. SO SÁNH KÍCH THƯỚC TỦ BẾP NHẬT BẢN VÀ VIỆT NAM
 
