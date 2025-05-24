@@ -79,7 +79,9 @@ Việc bố trí ba điểm này theo dạng hình tam giác giúp **giảm thi�
 
 ### 3\. CÁC LOẠI LAYOUT TỦ BẾP
 
-Bếp ở Nhật được chuẩn hóa về hình dáng và kích thước. Về hình dáng chỉ có bếp chữ I, chữ L, bếp bán đảo và bếp đảo. Về kích thước, tủ bếp chỉ có một số chiều dài và chiều sâu để chuẩn hóa. Dưới đây là thông tin chi tiết về hình dáng và kích thước của một số loại tủ bếp phổ biến tại Nhật.
+**Tại Nhật Bản, thiết kế tủ bếp được chuẩn hóa cả về hình dáng lẫn kích thước.** Về bố cục, chỉ phổ biến các kiểu bếp chữ I, chữ L, bếp bán đảo và bếp đảo. Về kích thước, chiều dài và chiều sâu tủ bếp cũng được giới hạn trong một số lựa chọn nhất định để đảm bảo đồng bộ trong sản xuất và thi công.
+
+Dưới đây là tổng hợp thông tin chi tiết về **hình dáng và kích thước tiêu chuẩn** của các kiểu tủ bếp phổ biến tại Nhật Bản.
 
 ![Kích thước bếp chữ I và chữ L theo tiêu chuẩn Nhật Bản](/public/images/kich-thuoc-bep-chu-I-chu-L.svg)
 
