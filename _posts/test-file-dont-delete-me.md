@@ -16,5 +16,3 @@ author:
 isReadyForPublish: false
 ---
 fgfgfg
-
-<iframe width="640" height="480" allowfullscreen="true" autoplay="false" disablekbcontrols="false" enableiframeapi="false" endtime="0" ivloadpolicy="0" loop="false" modestbranding="false" origin="" playlist="" rel="1" src="https://www.youtube-nocookie.com/embed/SCEMmM65xf0" start="0"></iframe>
