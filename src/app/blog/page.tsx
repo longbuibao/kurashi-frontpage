@@ -10,31 +10,13 @@ import { BlogRegister } from '@/components/blog-register'
 import * as skeleton from './skeleton'
 import { getMetadata } from '@/utils'
 
+import { BlogPost } from './interface'
+import BlogCategoryFilter from './blog-by-category'
+
 export async function generateMetadata (): Promise<Metadata> {
   const defaultTitle = 'Tất cả bài viết'
   const pageName = 'all-blogs'
   return await getMetadata(pageName, defaultTitle)
-}
-
-interface BlogPost {
-  slug: string
-  category: string
-  subcategory: string[]
-  title: string
-  excerpt: string
-  coverImage: any
-  date: Date
-  author: {
-    name: string
-    picture: string
-  }
-  ogImage: {
-    url: string
-  }
-  content: string
-  fileName: string
-  isSmallCard?: boolean
-  isReadyForPublish?: boolean
 }
 
 const Navigator: React.FC<{ label: string, isSelected: boolean }> = ({ label, isSelected }) => {
@@ -85,22 +67,31 @@ const RightSideBlogCard: React.FC<BlogPost> = ({ title, excerpt, date, author, c
   }
 }
 
-const BlogCardByCategory: React.FC<BlogPost> = ({ coverImage, title, excerpt, date, author, fileName }) => {
-  if (coverImage !== undefined && coverImage.coverImage) {
-    return (
-      <Link href={`/blog/${fileName}`}>
-        <div>
-          <Image className='object-cover flex-shrink-0 rounded-sm' src={coverImage.coverImage?.replace('/public', '')} alt='test' width={300} height={100} />
-          <div className='w-60'>
-            <p className='font-bold text-lg my-3 max-md:line-clamp-1'>{title}</p>
-            <p className='text-sm my-3 line-clamp-1'>{excerpt}</p>
-            <p className='uppercase text-[rgb(134,135,135)] font-semibold text-xs'>{date.toLocaleString('default', { month: 'short' })} {date.toLocaleString('default', { day: 'numeric' })}, {date.toLocaleDateString('default', { year: 'numeric' })} • {author.name}</p>
-          </div>
-        </div>
-      </Link>
+const createCategoriesNavigator = (posts: any[]): React.ReactElement[] => {
+  const categoryMap: Record<string, Set<string>> = {}
+  posts.forEach(post => {
+    const hack = post as BlogPost
+    if (!categoryMap[hack.category]) {
+      categoryMap[hack.category] = new Set()
+    }
+    hack.subcategory?.forEach(sub => categoryMap[hack.category].add(sub))
+  })
 
-    )
+  const groupSubCategoriesByCategory: Record<string, string[]> = {}
+
+  for (const [category, subSet] of Object.entries(categoryMap)) {
+    groupSubCategoriesByCategory[category] = Array.from(subSet)
   }
+
+  const categoryKeys = Object.keys(groupSubCategoriesByCategory)
+  const navigators = [
+    <Navigator isSelected label='Tất cả' key='all' />,
+    ...categoryKeys.map((x, i) => (
+      <Navigator isSelected={false} label={x} key={x} />
+    ))
+  ]
+
+  return navigators
 }
 
 // @ts-expect-error
@@ -129,21 +120,6 @@ const AllBlogs: React.FC = async (): React.ReactElement => {
 
   const firstBlog = posts[0] as any as BlogPost
 
-  const categoryMap: Record<string, Set<string>> = {}
-  posts.forEach(post => {
-    const hack = post as any as BlogPost
-    if (!categoryMap[hack.category]) {
-      categoryMap[hack.category] = new Set()
-    }
-    hack.subcategory?.forEach(sub => categoryMap[hack.category].add(sub))
-  })
-
-  const groupSubCategoriesByCategory: Record<string, string[]> = {}
-
-  for (const [category, subSet] of Object.entries(categoryMap)) {
-    groupSubCategoriesByCategory[category] = Array.from(subSet)
-  }
-
   return (
     <div className='w-[60%] mx-auto py-10 max-md:w-[90%]'>
       <div className='max-md:w-full flex flex-col max-md:flex-col max-md:gap-10'>
@@ -168,19 +144,7 @@ const AllBlogs: React.FC = async (): React.ReactElement => {
               {posts.slice(0, 4).map(x => <RightSideBlogCard {...(x as any as BlogPost)} key={x.realFileName} />)}
             </div>
           </div>
-          <div className='border-t-[1px] border-kurashi-border-color my-5'>
-            <div className='border-[1px] border-kurashi-border-color my-10 w-fit rounded-md p-1'>
-              {Object.keys(groupSubCategoriesByCategory).map((x, i) => <Navigator isSelected={i === 0} label={x} key={x} />)}
-            </div>
-          </div>
-          <div className='flex flex-row justify-between gap-5 max-md:flex-col'>
-            <div className='grid grid-rows-3 grid-cols-2 gap-10 max-md:flex max-md:flex-wrap'>
-              {posts.slice(0, 4).map(x => <BlogCardByCategory {...(x as any as BlogPost)} key={x.realFileName} />)}
-            </div>
-            <div className='w-[30%] max-md:w-full'>
-              <BlogRegister />
-            </div>
-          </div>
+          <BlogCategoryFilter posts={posts as any as BlogPost[]} />
         </Suspense>
       </div>
     </div>
