@@ -15,3 +15,4 @@ author:
   name: test-file-dont-delete-me
 isReadyForPublish: false
 ---
+<iframe width="640" height="480" src="https://youtu.be/vBCeSQSCrqY" frameborder="0" allowfullscreen="true" ></iframe>
