@@ -1,5 +1,5 @@
 ---
-fileName: phu-kien-bep-nam-cham-va-tam-op-bep-thep-trang-men-cap-doi-toi-uu-cho-gian-bep-hien-dai
+fileName: phu-kien-bep-nam-cham-va-tam-op-bep-thep-trang-men-cap-doi-hoan-hao-cho-bep-gon-gang
 category: Phụ kiện nam châm
 subCategory:
   - Phụ kiện bếp
