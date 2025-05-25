@@ -15,6 +15,3 @@ author:
   name: test-file-dont-delete-me
 isReadyForPublish: false
 ---
-![](/public/images/author.png)
-
-<iframe width="640" height="480" src="https://youtu.be/vBCeSQSCrqY" frameborder="0" allowfullscreen="true" ></iframe>
