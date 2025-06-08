@@ -6,7 +6,6 @@ import matter from 'gray-matter'
 import Image from 'next/image'
 import Link from 'next/link'
 
-import { BlogRegister } from '@/components/blog-register'
 import * as skeleton from './skeleton'
 import { getMetadata } from '@/utils'
 
@@ -17,17 +16,6 @@ export async function generateMetadata (): Promise<Metadata> {
   const defaultTitle = 'Tất cả bài viết'
   const pageName = 'all-blogs'
   return await getMetadata(pageName, defaultTitle)
-}
-
-const Navigator: React.FC<{ label: string, isSelected: boolean }> = ({ label, isSelected }) => {
-  const className = isSelected
-    ? 'bg-blog text-black px-4 py-1 rounded-sm text-sm font-medium'
-    : 'px-4 py-1 text-sm font-medium text-[rgb(134,135,135)]'
-  return (
-    <button className={className}>
-      {label}
-    </button>
-  )
 }
 
 const MainBlogCard: React.FC<BlogPost> = ({ coverImage, title, category, author, date, fileName, excerpt, isSmallCard = false }) => {
@@ -65,33 +53,6 @@ const RightSideBlogCard: React.FC<BlogPost> = ({ title, excerpt, date, author, c
 
     )
   }
-}
-
-const createCategoriesNavigator = (posts: any[]): React.ReactElement[] => {
-  const categoryMap: Record<string, Set<string>> = {}
-  posts.forEach(post => {
-    const hack = post as BlogPost
-    if (!categoryMap[hack.category]) {
-      categoryMap[hack.category] = new Set()
-    }
-    hack.subcategory?.forEach(sub => categoryMap[hack.category].add(sub))
-  })
-
-  const groupSubCategoriesByCategory: Record<string, string[]> = {}
-
-  for (const [category, subSet] of Object.entries(categoryMap)) {
-    groupSubCategoriesByCategory[category] = Array.from(subSet)
-  }
-
-  const categoryKeys = Object.keys(groupSubCategoriesByCategory)
-  const navigators = [
-    <Navigator isSelected label='Tất cả' key='all' />,
-    ...categoryKeys.map((x, i) => (
-      <Navigator isSelected={false} label={x} key={x} />
-    ))
-  ]
-
-  return navigators
 }
 
 // @ts-expect-error

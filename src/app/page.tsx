@@ -1,6 +1,9 @@
 import React, { Suspense } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
+import * as fs from 'fs/promises'
+import path from 'path'
+import matter from 'gray-matter'
 
 import prisma from '@/lib/prisma'
 import { BlogCardHomepage } from '@/components/blog-card'
@@ -9,11 +12,8 @@ import { KurashiCategories, KurashiCategoriesSkeleton } from '@/components/kuras
 import { carouselSliderImages, carouselSliderImagesMobile } from '@/constants'
 import EmblaCarousel from '@/components/embla-carousel/embla-carousel'
 import { lng } from '@/app/const'
-import { Post } from '@prisma/client'
-
-interface Hack extends Post {
-  subcategory: string[]
-}
+import { BlogPost } from './blog/interface'
+import { getAllPosts } from '@/lib/api'
 
 export const metadata = {
   title: 'Kurashi Corp'
@@ -26,10 +26,36 @@ const createCarouselItemImage = (imageSrc: string, width = 1920, height = 1080):
   }
 }
 
+const allPosts = async (): Promise<BlogPost[]> => {
+  const postsDirectory = path.join(process.cwd(), '_posts')
+  const fileNames = await fs.readdir(postsDirectory)
+  const posts = (
+    await Promise.all(
+      fileNames
+        .filter((file) => file.endsWith('.md'))
+        .map(async (fileName) => {
+          const slug = fileName.replace(/\.md$/, '')
+          const fullPath = path.join(postsDirectory, fileName)
+          const fileContents = await fs.readFile(fullPath, 'utf8')
+          const { data, content } = matter(fileContents)
+          return {
+            slug,
+            ...data,
+            content,
+            realFileName: fileName
+          } as any
+        })
+    ))
+    .sort((a, b) => (b).date - (a).date)
+    .filter(x => (x).isReadyForPublish)
+
+  return posts as any as BlogPost[]
+}
+
 const Page = async (): Promise<React.ReactElement> => {
   const carouselSliders = carouselSliderImages.map(x => createCarouselItemImage(x))
   const carouselSlidersMobile = carouselSliderImagesMobile.map(x => createCarouselItemImage(x, 4500, 5620))
-  const blogs = await prisma.post.findMany({ take: 4, where: { published: true } })
+  const posts = await allPosts()
 
   return (
     <main className='mt-0'>
@@ -73,7 +99,7 @@ const Page = async (): Promise<React.ReactElement> => {
           </div>
         </Link>
         <div className='flex flex-row gap-5 pt-10 pb-16 items-center justify-between max-md:flex-wrap max-md:mx-auto'>
-          {blogs.map(x => x).sort((x, y) => x.order - y.order).map(x => <BlogCardHomepage blog={x as any} key={x.id} />)}
+          {posts.map(x => x).map(x => <BlogCardHomepage blog={x as any} key={x.fileName} />)}
         </div>
       </div>
       <div className='hidden max-md:block max-md:mt-10 text-secondary'>
