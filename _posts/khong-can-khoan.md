@@ -77,6 +77,8 @@ Không cần khoan, không cần vít – chỉ cần gắn lên là dùng ngay!
 
 Dưới đây là hình minh họa mô tả nguyên lý hoạt động của phụ kiện nam châm gắn lên tấm tráng men:
 
+![Nguyên lý hoạt động của phụ kiện nam châm gắn tường](/public/images/nguyen-tac-hoat-dong-cua-phu-kien-nam-cham-gan-tuong.svg)
+
 ## 4\. Lắp Đặt Dễ Dàng – Không Cần Dụng Cụ, Không Gây Hư Hại
 
 1.  Chọn vị trí phù hợp trên tấm tráng men
