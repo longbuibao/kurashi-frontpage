@@ -7,7 +7,7 @@ title: "Không Cần Khoan: Giải Pháp Phụ Kiện Bếp Nam Châm Thông Min
 excerpt: Phụ kiện bếp không cần khoan – gắn chắc với tấm ốp bếp thép tráng men từ tính.
 coverImage:
   coverImage: undefined
-  coverImageAlt: dfd
+  coverImageAlt: Phụ kiện bếp nam châm không cần khoan
 faq:
   - {}
 date: 2025-06-14T15:00:00.000Z
