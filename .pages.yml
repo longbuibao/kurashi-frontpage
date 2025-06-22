@@ -31,7 +31,7 @@ content:
         description: Link videos để tạo Schema
         type: string
         list:
-          min: 0
+          min: 1
           max: 10
         required: false    
       - name: subCategory
