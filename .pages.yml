@@ -19,13 +19,20 @@ content:
       - name: fileName
         label: File name
         type: string
-        required: true
+        required: true  
       - name: category
         label: Category
         type: select
         required: true
         options:
           values: [Tấm ốp, Phụ kiện nam châm, Kinh nghiệm nội thất]
+      - name: videoLinks
+        label: Video
+        type: string
+        list:
+          min: 0
+          max: 10
+        required: false    
       - name: subCategory
         label: Sub Category
         required: true
