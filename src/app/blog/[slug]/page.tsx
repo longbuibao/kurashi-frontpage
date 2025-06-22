@@ -13,17 +13,20 @@ export default async function Post (props: Params): Promise<React.ReactElement> 
   const post = getPostBySlug(params.slug)
 
   const faq = post?.faq
-  const mainEntity = faq?.map(x => {
-    return {
-      '@type': 'Question',
-      name: x.q,
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: x.a
+  const mainEntity = faq === undefined
+    ? []
+    : faq?.filter(x => Object.keys(x).length > 0).map(x => {
+      return {
+        '@type': 'Question',
+        name: x.q,
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: x.a
+        }
       }
-    }
-  })
-  const jsonLdFaq = mainEntity !== undefined
+    })
+
+  const jsonLdFaq = mainEntity?.length > 0
     ? {
 
         '@context': 'https://schema.org/',
