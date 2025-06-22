@@ -28,7 +28,7 @@ content:
           values: [Tấm ốp, Phụ kiện nam châm, Kinh nghiệm nội thất]
       - name: videoLinks
         label: Videos
-        type: date
+        type: code
         list:
           min: 1
           max: 10
