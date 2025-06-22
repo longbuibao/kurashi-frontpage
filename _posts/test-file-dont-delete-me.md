@@ -1,6 +1,9 @@
 ---
 fileName: test-file-dont-delete-me
 category: Tấm ốp
+videoLinks:
+  - youTubeLink: https://www.youtube.com/shorts/1SAHZSwpMLs
+  - youTubeLink: https://www.youtube.com/watch?v=GEleN2E5yTE
 subCategory:
   - Tấm ốp thép tráng men
 title: test-file-dont-delete-me
