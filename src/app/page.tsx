@@ -99,7 +99,7 @@ const Page = async (): Promise<React.ReactElement> => {
           </div>
         </Link>
         <div className='flex flex-row gap-5 pt-10 pb-16 items-center justify-between max-md:flex-wrap max-md:mx-auto'>
-          {posts.map(x => x).map(x => <BlogCardHomepage blog={x as any} key={x.fileName} />)}
+          {posts.slice(0, 4).map(x => <BlogCardHomepage blog={x as any} key={x.fileName} />)}
         </div>
       </div>
       <div className='hidden max-md:block max-md:mt-10 text-secondary'>
