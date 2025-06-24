@@ -5,10 +5,9 @@ videoLinks:
   - youTubeLink: gfg
 subCategory:
   - Nội thất hay
-title: Kính ốp bếp có thật sự tốt? So sánh với thép tráng men – Giải pháp mới
-  cho căn bếp hiện đại
-excerpt: "So sánh kính ốp bếp và tấm tráng men Nhật Bản: giải pháp bền, dễ vệ
-  sinh, tối ưu không gian bếp."
+title: "So sánh kính ốp bếp và tấm tráng men: Nên chọn loại nào cho nhà bếp hiện đại?"
+excerpt: "So sánh kính ốp bếp và tráng men Nhật: sạch dầu mỡ, chịu nhiệt 800°C,
+  treo phụ kiện dễ dàng."
 coverImage:
   coverImage: undefined
   coverImageAlt: fdfdfd
