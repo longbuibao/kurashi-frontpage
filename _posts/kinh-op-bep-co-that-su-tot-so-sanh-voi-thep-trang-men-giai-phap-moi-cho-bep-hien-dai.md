@@ -1,6 +1,8 @@
 ---
 fileName: kinh-op-bep-co-that-su-tot-?-so-sanh-voi-thep-trang-men-giai-phap-moi-cho-bep-hien-dai
 category: Kinh nghiệm nội thất
+videoLinks:
+  - {}
 subCategory:
   - Nội thất hay
 title: Kính ốp bếp có thật sự tốt? So sánh với thép tráng men – Giải pháp mới
@@ -10,9 +12,10 @@ excerpt: "So sánh kính ốp bếp và tấm tráng men Nhật Bản: giải ph
 coverImage:
   coverImage: undefined
   coverImageAlt: fdfdfd
+faq:
+  - {}
 author:
   name: Diện Võ
-  picture: undefined
 isReadyForPublish: false
 ---
 ## Giới thiệu: Kính ốp bếp – Lựa chọn phổ biến nhưng có thực sự hoàn hảo?
@@ -38,7 +41,7 @@ Liệu có lựa chọn nào tốt hơn, bền hơn và tiện lợi hơn?
 
 *   Dễ vỡ khi bị va đập hoặc nhiệt cao
     
-*   Dễ bị loang keo, nấm mốc nếu dán không kĩ
+*   nnDễ bị loang keo, nấm mốc nếu dán không kĩ
     
 *   Không treo được phụ kiện, móc treo
     
