@@ -13,6 +13,7 @@ coverImage:
   coverImageAlt: fdfdfd
 faq:
   - {}
+date: 2025-06-24T10:00:00.000Z
 author:
   name: Diện Võ
 isReadyForPublish: false
