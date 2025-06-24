@@ -12,7 +12,27 @@ coverImage:
   coverImage: undefined
   coverImageAlt: fdfdfd
 faq:
-  - {}
+  - q: Kính ốp bếp có dễ đổi màu theo thời gian?
+    a: Có. Đặc biệt nếu sử dụng keo kém chất lượng, hoặc tiếp xúc lâu với ánh nắng
+      và nhiệt độ cao. Tấm tráng men Kurashi không bị đổi màu vì lớp men được
+      nung ở 800°C.
+  - q: Kính cường lực có dễ nứt không?
+    a: Có thể, nếu chịu va đập hoặc sốc nhiệt. Tấm tráng men có lõi thép chịu lực,
+      không bị ảnh hưởng bởi nhiệt độ hay lực tác động thông thường.
+  - q: Có gắn được phụ kiện lên kính không?
+    a: Không. Kính không hỗ trợ phụ kiện nam châm, nếu muốn treo kệ phải khoan
+      tường. Tráng men thì có thể dùng phụ kiện nam châm đa năng rất tiện.
+  - q: Vì sao kính dễ bị ố viền, loang keo?
+    a: Keo dán thường bị lão hóa, ẩm mốc sau thời gian. Tráng men không dùng keo mặt
+      ngoài, nên không bị loang hay bong tróc.
+  - q: Có nên dùng kính ốp bếp không nếu nhà nhỏ?
+    a: Nhà bếp nhỏ thường cần tối ưu không gian. Kính không hỗ trợ gắn phụ kiện, còn
+      tấm tráng men có thể dùng phụ kiện nam châm, giúp treo kệ, dao, khăn mà
+      không cần khoan.
+  - q: Kính ốp bếp bị hỏng thì có thay từng phần được không?
+    a: Không dễ. Kính thường là tấm lớn, dán keo toàn bộ. Khi bị vỡ hoặc ố vàng,
+      thường phải tháo toàn bộ tấm. Tấm tráng men có thể thay từng phần riêng
+      biệt, tiết kiệm chi phí hơn.
 date: 2025-06-24T10:00:00.000Z
 author:
   name: Diện Võ
