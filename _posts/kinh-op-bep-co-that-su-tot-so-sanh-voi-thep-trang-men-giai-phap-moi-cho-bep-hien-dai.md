@@ -55,13 +55,11 @@ Trong nhiều năm qua, **kính ốp bếp** là lựa chọn phổ biến tại
 
 ## 2\. NGUỒN GỐC XUẤT XỨ KÍNH ỐP BẾP VÀ THÉP TRÁNG MEN
 
-Tại Việt Nam, kính ốp bếp chủ yếu được sản xuất bởi các đơn vị như Viglacera, Phú Phong, Hải Long Glass. Đây là các loại kính được cắt, mài và sơn màu tại chỗ, tùy theo từng đơn hàng. Tuy nhiên, chất lượng thi công phụ thuộc nhiều vào tay nghề và keo dán, dễ gây ra hiện tượng ố vàng, bong keo hoặc nứt vỡ sau thời gian sử dụng.
+Tại Việt Nam, kính ốp bếp thường được sản xuất trong nước và tùy biến theo từng đơn hàng, dựa trên việc cắt kính cường lực và sơn màu theo yêu cầu. tùy biến theo từng đơn hàng. Chất lượng phụ thuộc vào tay nghề thi công và loại keo sử dụng – yếu tố gây ra hiện tượng bong tróc và ố vàng sau thời gian.
 
-Tấm tráng men Kurashi được nhập khẩu trực tiếp từ Nhật Bản, sản xuất theo tiêu chuẩn công nghiệp JIS và ISO, đảm bảo độ chính xác, an toàn sức khỏe và độ bền vượt trội. Sản phẩm có đầy đủ chứng chỉ chất lượng, lý tưởng cho các không gian bếp hiện đại, yêu cầu cao về vệ sinh và thẩm mỹ.
+Ngược lại, **tấm tráng men Kurashi** được **nhập khẩu trực tiếp từ Nhật Bản**, sản xuất theo tiêu chuẩn công nghiệp **JIS** và **ISO**, có chứng nhận đầy đủ về **độ an toàn, độ bền và vệ sinh bề mặt**. Đây là **vật liệu chống nhiệt nhà bếp** có tuổi thọ cao, bề mặt **trơn nhẵn dễ vệ sinh** và hạn chế bám bẩn.
 
-* * *
-
-## Tấm tráng men: Giải pháp thay thế mới cho tường bếp
+## 3\. THÉP TRÁNG MEN-GIẢI PHÁP MỚI CHO TƯỜNG BẾP
 
 **Tấm tráng men** là vật liệu kim loại được phủ men sức nóng cao, tạo ra bề mặt siêu nhẵn, chống bám bẩn, dễ lau chùi.
 
