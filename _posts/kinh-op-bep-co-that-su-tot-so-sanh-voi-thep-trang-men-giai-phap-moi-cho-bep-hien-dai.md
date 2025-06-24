@@ -26,29 +26,34 @@ Trong nhiều năm qua, **kính ốp bếp** là lựa chọn phổ biến tại
 
 ## 1\. KÍNH ỐP BẾP LÀ GÌ? ƯU-NHƯỢC ĐIỂM
 
-**Kính ốp bếp** thường là loại kính cường lực sơn màu ở mặt sau hoặc kính in hoa văn, được dán trực tiếp lên tường bếp.
+**Kính ốp bếp** thường là kính cường lực sơn màu hoặc in hoa văn ở mặt sau, được dán trực tiếp lên tường bếp bằng keo.
 
-**• Ưu điểm:**
+### Ưu điểm:
 
-*   Bóng đẹp, nhiều màu sắc
+*   Bề mặt **bóng đẹp**, nhiều màu sắc
     
-*   Dễ lau chùi, chống thấm nước
-    
-
-**• Nhược điểm:**
-
-*   Dễ vỡ khi bị va đập hoặc nhiệt cao
-    
-*   nnDễ bị loang keo, nấm mốc nếu dán không kĩ
-    
-*   Không treo được phụ kiện, móc treo
+*   **Dễ lau chùi**, chống thấm nước, phù hợp với **không gian bếp hiện đại**
     
 
-**• Độ dày phổ biến:** từ 3mm đến 6mm, có loại dày đến 10–12mm cho yêu cầu đặc biệt **• Tính chất vật liệu:** chịu nhiệt tốt trong điều kiện thường, nhưng dễ nứt khi có sự thay đổi nhiệt độ đột ngột hoặc va đập mạnh
+### Nhược điểm:
 
-* * *
+*   **Dễ vỡ** khi bị va đập hoặc sốc nhiệt
+    
+*   **Loang keo**, ố vàng theo thời gian nếu thi công không kỹ
+    
+*   **Không gắn được phụ kiện** (móc, kệ, giỏ gia vị) nếu không khoan
+    
 
-## Tổng quan về nguồn gốc: Kính ốp bếp Việt Nam vs. Tấm tráng men Nhật Bản
+### Đặc điểm vật liệu:
+
+*   **Độ dày phổ biến**: 6–10 mm
+    
+*   **Chịu nhiệt** trong điều kiện thường, nhưng dễ nứt nếu thay đổi nhiệt độ đột ngột
+    
+*   Khó xử lý khi muốn **thay thế kính ốp cũ** từng phần
+    
+
+## 2\. NGUỒN GỐC XUẤT XỨ KÍNH ỐP BẾP VÀ THÉP TRÁNG MEN
 
 Tại Việt Nam, kính ốp bếp chủ yếu được sản xuất bởi các đơn vị như Viglacera, Phú Phong, Hải Long Glass. Đây là các loại kính được cắt, mài và sơn màu tại chỗ, tùy theo từng đơn hàng. Tuy nhiên, chất lượng thi công phụ thuộc nhiều vào tay nghề và keo dán, dễ gây ra hiện tượng ố vàng, bong keo hoặc nứt vỡ sau thời gian sử dụng.
 
