@@ -2,7 +2,7 @@
 fileName: kinh-op-bep-co-that-su-tot-?-so-sanh-voi-thep-trang-men-giai-phap-moi-cho-bep-hien-dai
 category: Kinh nghiệm nội thất
 videoLinks:
-  - {}
+  - youTubeLink: gfg
 subCategory:
   - Nội thất hay
 title: Kính ốp bếp có thật sự tốt? So sánh với thép tráng men – Giải pháp mới
