@@ -87,7 +87,7 @@ Ngược lại, **tấm tráng men của** [**thương hiệu Kurashi**](https:/
 
 ### Ưu điểm nổi bật:
 
-*   **Chịu nhiệt lên tới 800°C** – lý tưởng cho khu vực bếp gas
+*   **Chịu nhiệt độ cao, chống cháy** – lý tưởng cho khu vực bếp gas
     
 *   **Chống nấm mốc**, không bám dầu mỡ
     
