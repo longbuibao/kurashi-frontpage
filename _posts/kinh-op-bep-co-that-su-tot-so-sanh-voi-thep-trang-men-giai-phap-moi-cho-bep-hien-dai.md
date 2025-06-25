@@ -112,6 +112,8 @@ Ngược lại, **tấm tráng men của** [**thương hiệu Kurashi**](https:/
 | **Thi công** | Cắt kính dễ vỡ, cần keo | Dễ tùy biến, thi công nhanh |
 | **Nguồn gốc** | Việt Nam (sản xuất nội địa) | Nhật Bản, đạt chuẩn JIS/ISO |
 
+> Tìm hiểu thêm về [Hướng dẫn lựa chọn vật liệu ốp bếp](https://www.kurashi.com.vn/blog/huong-dan-lua-chon-vat-lieu-op-bep)
+
 ## 5\. KHI NÀO NÊN THAY KÍNH ỐP BẾP BẰNG VẬT LIỆU KHÁC
 
 Nếu bạn gặp một trong các vấn đề sau, đã đến lúc cân nhắc thay kính:
