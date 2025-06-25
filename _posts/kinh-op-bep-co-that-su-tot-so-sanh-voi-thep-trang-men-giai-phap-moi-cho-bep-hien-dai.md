@@ -79,7 +79,7 @@ Trong nhiều năm qua, **kính ốp bếp** là lựa chọn phổ biến tại
 
 Tại Việt Nam, kính ốp bếp thường được sản xuất trong nước và tùy biến theo từng đơn hàng, dựa trên việc cắt kính cường lực và sơn màu theo yêu cầu. tùy biến theo từng đơn hàng. Chất lượng phụ thuộc vào tay nghề thi công và loại keo sử dụng – yếu tố gây ra hiện tượng bong tróc và ố vàng sau thời gian.
 
-Ngược lại, **tấm tráng men của** [**thương hiệu Kurashi**](https://www.kurashi.com.vn/) được **nhập khẩu trực tiếp từ Nhật Bản**, sản xuất theo tiêu chuẩn công nghiệp **JIS** và **ISO**, có chứng nhận đầy đủ về **độ an toàn, độ bền và vệ sinh bề mặt**. Đây là **vật liệu chống nhiệt nhà bếp** có tuổi thọ cao, bề mặt **trơn nhẵn dễ vệ sinh** và hạn chế bám bẩn.
+Ngược lại, **tấm tráng men của** [**thương hiệu Kurashi**](https://www.kurashi.com.vn/) được **nhập khẩu trực tiếp từ Nhật Bản**, sản xuất theo tiêu chuẩn công nghiệp **JIS**, có chứng nhận đầy đủ về **độ an toàn, độ bền và vệ sinh bề mặt**. Đây là **vật liệu chống nhiệt nhà bếp** có tuổi thọ cao, bề mặt **trơn nhẵn dễ vệ sinh** và hạn chế bám bẩn.
 
 ## 3\. THÉP TRÁNG MEN-GIẢI PHÁP MỚI CHO TƯỜNG BẾP
 
