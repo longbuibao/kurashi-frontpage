@@ -153,6 +153,6 @@ Không dễ. Kính thường là tấm lớn, dán keo toàn bộ. Khi bị vỡ
 
 ## Liên hệ ngay để được tư vấn
 
-👉 [Liên hệ Kurashi ngay](https://www.kurashi.com.vn/lien-he) để nhận tư vấn miễn phí và báo giá nhanh
+**_➤_** [Liên hệ Kurashi ngay](https://www.kurashi.com.vn/lien-he) để nhận tư vấn miễn phí và báo giá nhanh
 
 * * *
