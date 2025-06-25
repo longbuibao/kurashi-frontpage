@@ -9,8 +9,8 @@ title: "So sánh kính ốp bếp và tấm tráng men: Nên chọn loại nào 
 excerpt: "So sánh kính ốp bếp và tráng men Nhật: sạch dầu mỡ, chịu nhiệt 800°C,
   treo phụ kiện dễ dàng."
 coverImage:
-  coverImage: undefined
-  coverImageAlt: fdfdfd
+  coverImage: /public/images/phu-kien-bep-nam-cham-tren-op-bep-thep-trang-men.webp
+  coverImageAlt: Phụ kiện nam châm trên tường bếp bằng thép tráng men
 faq:
   - q: Kính ốp bếp có dễ đổi màu theo thời gian?
     a: Có. Đặc biệt nếu sử dụng keo kém chất lượng, hoặc tiếp xúc lâu với ánh nắng
@@ -36,6 +36,8 @@ faq:
 date: 2025-06-24T10:00:00.000Z
 author:
   name: Diện Võ
+ogImage:
+  url: /public/images/social phu kien nam cham tren op bep thep trang men.jpg
 isReadyForPublish: false
 ---
 **Kính ốp bếp – Đẹp nhưng có thực sự hoàn hảo?**
