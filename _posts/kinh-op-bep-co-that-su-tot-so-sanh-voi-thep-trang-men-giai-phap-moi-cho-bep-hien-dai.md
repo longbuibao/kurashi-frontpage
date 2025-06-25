@@ -98,7 +98,7 @@ Ngược lại, **tấm tráng men Kurashi** được **nhập khẩu trực ti�
 *   **Dễ thi công** trên cả bề mặt tường cũ và có thể **tùy biến kích thước linh hoạt**
     
 
-## 4\. SO SÁNH KÍNH ỐP BẾP VÀ THÉP TRÁNG ME
+## 4\. SO SÁNH KÍNH ỐP BẾP VÀ THÉP TRÁNG MEN
 
 | **Tiêu chí** | **Kính ốp bếp** | **Tấm tráng men Kurashi** |
 | --- | --- | --- |
