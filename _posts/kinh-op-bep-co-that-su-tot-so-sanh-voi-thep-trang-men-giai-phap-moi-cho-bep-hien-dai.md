@@ -105,9 +105,9 @@ Ngược lại, **tấm tráng men của** [**thương hiệu Kurashi**](https:/
 | **Tiêu chí** | **Kính ốp bếp** | **Tấm tráng men Kurashi** |
 | --- | --- | --- |
 | **Độ bền** | Trung bình, dễ vỡ | Cao, chống va đập |
-| **Chịu nhiệt** | Hạn chế, dễ nứt nếu sốc nhiệt | Rất tốt, chịu tới 800°C |
-| **Dễ vệ sinh** | Tốt | Xuất sắc, **bề mặt trơn nhẵn dễ vệ sinh** |
-| **Gắn phụ kiện** | Không | Có, dùng **phụ kiện treo không khoan** |
+| **Chịu nhiệt** | Hạn chế, dễ nứt nếu sốc nhiệt | Rất tốt, chống cháy |
+| **Dễ vệ sinh** | Tốt | Xuất sắc, **bề mặt trơn nhẵn dễ vệ sinh nhờ lớp men sứ** |
+| **Gắn phụ kiện** | Không | Có, dùng **phụ kiện nam châm treo, không cần khoan tường** |
 | **Thẩm mỹ** | Bóng đẹp | Nhiều màu, có vân đá tự nhiên |
 | **Thi công** | Cắt kính dễ vỡ, cần keo | Dễ tùy biến, thi công nhanh |
 | **Nguồn gốc** | Việt Nam (sản xuất nội địa) | Nhật Bản, đạt chuẩn JIS |
