@@ -110,7 +110,7 @@ Ngược lại, **tấm tráng men của** [**thương hiệu Kurashi**](https:/
 | **Gắn phụ kiện** | Không | Có, dùng **phụ kiện treo không khoan** |
 | **Thẩm mỹ** | Bóng đẹp | Nhiều màu, có vân đá tự nhiên |
 | **Thi công** | Cắt kính dễ vỡ, cần keo | Dễ tùy biến, thi công nhanh |
-| **Nguồn gốc** | Việt Nam (sản xuất nội địa) | Nhật Bản, đạt chuẩn JIS/ISO |
+| **Nguồn gốc** | Việt Nam (sản xuất nội địa) | Nhật Bản, đạt chuẩn JIS |
 
 > Tìm hiểu thêm về [Hướng dẫn lựa chọn vật liệu ốp bếp](https://www.kurashi.com.vn/blog/huong-dan-lua-chon-vat-lieu-op-bep)
 
