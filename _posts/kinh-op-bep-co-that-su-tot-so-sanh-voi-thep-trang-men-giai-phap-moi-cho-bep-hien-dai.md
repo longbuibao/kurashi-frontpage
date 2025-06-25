@@ -89,7 +89,7 @@ Ngược lại, **tấm tráng men của** [**thương hiệu Kurashi**](https:/
 
 *   **Chịu nhiệt lên tới 800°C** – lý tưởng cho khu vực bếp gas
     
-*   **Kháng khuẩn, chống nấm mốc**, không bám dầu mỡ
+*   **Chống nấm mốc**, không bám dầu mỡ
     
 *   **Treo phụ kiện bằng nam châm** – không cần khoan đục, phù hợp với **bếp nhỏ** cần tiết kiệm không gian
     
