@@ -104,15 +104,18 @@ Ngược lại, **tấm tráng men của** [**thương hiệu Kurashi**](https:/
 
 ## 4\. SO SÁNH KÍNH ỐP BẾP VÀ THÉP TRÁNG MEN
 
+Dưới đây là bảng so sánh tổng quan giữa kính ốp bếp và tấm tráng men Nhật Bản về độ bền, khả năng chịu nhiệt, vệ sinh, gắn phụ kiện, thẩm mỹ, thi công và nguồn gốc.
+
 | **Tiêu chí** | **Kính ốp bếp** | **Tấm tráng men Kurashi** |
 | --- | --- | --- |
 | **Độ bền** | Trung bình, dễ vỡ | Cao, chống va đập |
 | **Chịu nhiệt** | Hạn chế, dễ nứt nếu sốc nhiệt | Rất tốt, chống cháy |
 | **Dễ vệ sinh** | Tốt | Xuất sắc, **bề mặt trơn nhẵn dễ vệ sinh nhờ lớp men sứ** |
-| **Gắn phụ kiện** | Không | Có, dùng **phụ kiện nam châm treo, không cần khoan tường** |
-| **Thẩm mỹ** | Bóng đẹp | Bề mặt bóng mờ sang trọng |
+| **Gắn phụ kiện** | Cần khoan, cố định vị trí, không di chuyển được | Dùng **phụ kiện nam châm treo, không cần khoan tường, di chuyển tự do** |
+| **Thẩm mỹ** | Bóng đẹp, nhiều màu sắc | Bề mặt bóng mờ sang trọng |
 | **Thi công** | Cắt kính dễ vỡ, cần keo | Dễ tùy biến, thi công nhanh |
 | **Nguồn gốc** | Việt Nam (sản xuất nội địa) | Nhật Bản, đạt chuẩn JIS |
+| **Giá cả** | Thấp | Cao hơn kính ốp bếp |
 
 > Tìm hiểu thêm về [Hướng dẫn lựa chọn vật liệu ốp bếp](https://www.kurashi.com.vn/blog/huong-dan-lua-chon-vat-lieu-op-bep)
 
