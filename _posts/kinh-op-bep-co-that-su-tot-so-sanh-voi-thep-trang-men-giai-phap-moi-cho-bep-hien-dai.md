@@ -20,8 +20,8 @@ faq:
     a: Có thể, nếu chịu va đập hoặc sốc nhiệt. Tấm tráng men có lõi thép chịu lực,
       không bị ảnh hưởng bởi nhiệt độ hay lực tác động thông thường.
   - q: Có gắn được phụ kiện lên kính không?
-    a: Không. Kính không hỗ trợ phụ kiện nam châm, nếu muốn treo kệ phải khoan
-      tường. Tráng men thì có thể dùng phụ kiện nam châm đa năng rất tiện.
+    a: Có thể nhưng cần khoan tường và phụ kiện cố định không di chuyển tự do được.
+      Tráng men thì có thể dùng phụ kiện nam châm đa năng rất tiện.
   - q: Vì sao kính dễ bị ố viền, loang keo?
     a: Keo dán thường bị lão hóa, ẩm mốc sau thời gian. Tráng men không dùng keo mặt
       ngoài, nên không bị loang hay bong tróc.
@@ -144,7 +144,7 @@ Có thể, nếu chịu va đập hoặc sốc nhiệt. Tấm tráng men có lõ
 
 ### Có gắn được phụ kiện lên kính không?
 
-Không. Kính không hỗ trợ phụ kiện nam châm, nếu muốn treo kệ phải khoan tường. Tráng men thì có thể dùng **phụ kiện nam châm đa năng** rất tiện.
+Có thể nhưng cần khoan tường và phụ kiện cố định không di chuyển tự do được. Tráng men thì có thể dùng **phụ kiện nam châm đa năng** rất tiện.
 
 ### Vì sao kính dễ bị ố viền, loang keo?
 
