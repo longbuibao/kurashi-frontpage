@@ -23,8 +23,7 @@ faq:
     a: Có thể nhưng cần khoan tường và phụ kiện cố định không di chuyển tự do được.
       Tráng men thì có thể dùng phụ kiện nam châm đa năng rất tiện.
   - q: Vì sao kính dễ bị ố viền, loang keo?
-    a: Keo dán thường bị lão hóa, ẩm mốc sau thời gian. Tráng men không dùng keo mặt
-      ngoài, nên không bị loang hay bong tróc.
+    a: Keo dán thường bị lão hóa, ẩm mốc sau thời gian.
   - q: Có nên dùng kính ốp bếp không nếu nhà nhỏ?
     a: Nhà bếp nhỏ thường cần tối ưu không gian. Kính không hỗ trợ gắn phụ kiện, còn
       tấm tráng men có thể dùng phụ kiện nam châm, giúp treo kệ, dao, khăn mà
