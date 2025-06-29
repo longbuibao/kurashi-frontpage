@@ -110,6 +110,8 @@ Cách lắp đặt và sử dụng kệ treo dao bằng nam châm, di chuyển t
 
 Dưới đây là bảng so sánh tổng quan giữa kính ốp bếp và tấm tráng men Nhật Bản về độ bền, khả năng chịu nhiệt, vệ sinh, gắn phụ kiện, thẩm mỹ, thi công và nguồn gốc.
 
+**Lưu ý:** Bảng so sánh chỉ mang tính tham khảo. Mỗi loại vật liệu đều có ưu – nhược điểm riêng, vì vậy bạn nên lựa chọn dựa trên ngân sách, yêu cầu kỹ thuật và thẩm mỹ tổng thể của căn bếp.
+
 | **Tiêu chí** | **Kính ốp bếp** | **Tấm tráng men Kurashi** |
 | --- | --- | --- |
 | **Độ bền** | Trung bình, dễ vỡ | Cao, chống va đập |
