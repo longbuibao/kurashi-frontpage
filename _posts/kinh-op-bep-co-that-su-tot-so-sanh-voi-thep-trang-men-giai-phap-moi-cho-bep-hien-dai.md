@@ -112,16 +112,16 @@ Dưới đây là bảng so sánh tổng quan giữa kính ốp bếp và tấm 
 
 **Lưu ý:** Bảng so sánh chỉ mang tính tham khảo. Mỗi loại vật liệu đều có ưu – nhược điểm riêng, vì vậy bạn nên lựa chọn dựa trên ngân sách, yêu cầu kỹ thuật và thẩm mỹ tổng thể của căn bếp.
 
-| **Tiêu chí** | **Kính ốp bếp** | **Tấm tráng men Kurashi** |
+| Tiêu chí | Kính ốp bếp | Tấm tráng men Kurashi |
 | --- | --- | --- |
-| **Độ bền** | Trung bình, dễ vỡ | Cao, chống va đập |
-| **Chịu nhiệt** | Hạn chế, dễ nứt nếu sốc nhiệt | Rất tốt, chống cháy |
-| **Dễ vệ sinh** | Tốt | Xuất sắc, **bề mặt trơn nhẵn dễ vệ sinh nhờ lớp men sứ** |
-| **Gắn phụ kiện** | Cần khoan, cố định vị trí, không di chuyển được | Dùng **phụ kiện nam châm treo, không cần khoan tường, di chuyển tự do** |
-| **Thẩm mỹ** | Bóng đẹp, nhiều màu sắc | Bề mặt bóng mờ sang trọng |
-| **Thi công** | Cắt kính dễ vỡ, cần keo | Dễ tùy biến, thi công nhanh |
-| **Nguồn gốc** | Việt Nam (sản xuất nội địa) | Nhật Bản, đạt chuẩn JIS |
-| **Giá cả** | Thấp | Cao hơn kính ốp bếp |
+| Độ bền | Trung bình, dễ vỡ | Cao, chống va đập |
+| Chịu nhiệt | Hạn chế, dễ nứt nếu sốc nhiệt | Rất tốt, chống cháy |
+| Dễ vệ sinh | Tốt | Xuất sắc, bề mặt trơn nhẵn dễ vệ sinh nhờ lớp men sứ |
+| Gắn phụ kiện | Cần khoan, cố định vị trí, không di chuyển được | Dùng phụ kiện nam châm treo, không cần khoan tường, di chuyển tự do |
+| Thẩm mỹ | Bóng đẹp, nhiều màu sắc | Bề mặt bóng mờ sang trọng |
+| Thi công | Cắt kính dễ vỡ, cần keo | Dễ tùy biến, thi công nhanh |
+| Nguồn gốc | Việt Nam (sản xuất nội địa) | Nhật Bản, đạt chuẩn JIS |
+| Giá cả | Thấp | Cao hơn kính ốp bếp |
 
 > Tìm hiểu thêm về [Hướng dẫn lựa chọn vật liệu ốp bếp](https://www.kurashi.com.vn/blog/huong-dan-lua-chon-vat-lieu-op-bep)
 
