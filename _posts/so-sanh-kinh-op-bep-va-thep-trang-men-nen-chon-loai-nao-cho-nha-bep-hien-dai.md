@@ -104,7 +104,7 @@ Ngược lại, **tấm tráng men của** [**thương hiệu Kurashi**](https:/
 
 Cách lắp đặt và sử dụng kệ treo dao bằng nam châm, di chuyển tự do:
 
-<div data-youtube-video=""><iframe width="640" height="480" allowfullscreen="true" autoplay="false" disablekbcontrols="false" enableiframeapi="false" endtime="0" ivloadpolicy="0" loop="false" modestbranding="false" origin="" playlist="" rel="1" src="https://www.youtube-nocookie.com/embed/q3flseUgiqY&amp;rel=1" start="0"></iframe></div>
+<div data-youtube-video=""><iframe width="640" height="480" allowfullscreen="true" autoplay="false" disablekbcontrols="false" enableiframeapi="false" endtime="0" ivloadpolicy="0" loop="false" modestbranding="false" origin="" playlist="" rel="1" src="https://www.youtube.com/embed/q3flseUgiqY" start="0"></iframe></div>
 
 ## 4\. SO SÁNH KÍNH ỐP BẾP VÀ THÉP TRÁNG MEN
 
