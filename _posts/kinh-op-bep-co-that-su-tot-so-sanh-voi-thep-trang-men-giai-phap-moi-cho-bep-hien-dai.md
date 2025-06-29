@@ -31,7 +31,7 @@ faq:
   - q: Kính ốp bếp bị hỏng thì có thay từng phần được không?
     a: Không dễ. Kính thường là tấm lớn, dán keo toàn bộ. Khi bị vỡ hoặc ố vàng,
       thường phải tháo toàn bộ tấm.
-date: 2025-06-24T10:00:00.000Z
+date: 2025-06-29T10:00:00.000Z
 author:
   name: Diện Võ
 ogImage:
