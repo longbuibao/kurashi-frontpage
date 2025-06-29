@@ -130,7 +130,7 @@ Nếu bạn gặp một trong các vấn đề sau, đã đến lúc cân nhắc
 *   **Khó vệ sinh** khu vực gần bếp gas
     
 
-## CÂU HỎI THƯỜNG GẶP
+## CÂU HỎI THƯỜNG GẶP VỀ KÍNH ỐP BẾP
 
 ### Kính ốp bếp có dễ đổi màu theo thời gian?
 
