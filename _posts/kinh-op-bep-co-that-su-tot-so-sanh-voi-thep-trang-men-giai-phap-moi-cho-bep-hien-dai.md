@@ -30,8 +30,7 @@ faq:
       không cần khoan.
   - q: Kính ốp bếp bị hỏng thì có thay từng phần được không?
     a: Không dễ. Kính thường là tấm lớn, dán keo toàn bộ. Khi bị vỡ hoặc ố vàng,
-      thường phải tháo toàn bộ tấm. Tấm tráng men có thể thay từng phần riêng
-      biệt, tiết kiệm chi phí hơn.
+      thường phải tháo toàn bộ tấm.
 date: 2025-06-24T10:00:00.000Z
 author:
   name: Diện Võ
@@ -151,11 +150,11 @@ Keo dán thường bị lão hóa, ẩm mốc sau thời gian.
 
 ### Có nên dùng kính ốp bếp không nếu nhà nhỏ?
 
-Nhà bếp nhỏ thường cần tối ưu không gian. Kính không hỗ trợ gắn phụ kiện, còn tấm tráng men có thể dùng **phụ kiện nam châm**, giúp treo kệ, dao, khăn mà không cần khoan.
+Nhà bếp nhỏ thường cần tối ưu không gian. Kính không hỗ trợ gắn phụ kiện, còn tấm tráng men có thể dùng **phụ kiện nam châm**, giúp treo kệ, dao, khăn mà không cần khoan, di chuyển tự do được.
 
 ### Kính ốp bếp bị hỏng thì có thay từng phần được không?
 
-Không dễ. Kính thường là tấm lớn, dán keo toàn bộ. Khi bị vỡ hoặc ố vàng, thường phải tháo toàn bộ tấm. Tấm tráng men có thể thay từng phần riêng biệt, tiết kiệm chi phí hơn.
+Không dễ. Kính thường là tấm lớn, dán keo toàn bộ. Khi bị vỡ hoặc ố vàng, thường phải tháo toàn bộ tấm.
 
 ## Liên hệ ngay để được tư vấn
 
