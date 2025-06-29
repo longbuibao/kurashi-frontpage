@@ -148,7 +148,7 @@ Có thể nhưng cần khoan tường và phụ kiện cố định không di ch
 
 ### Vì sao kính dễ bị ố viền, loang keo?
 
-Keo dán thường bị lão hóa, ẩm mốc sau thời gian. Tráng men không dùng keo mặt ngoài, nên không bị loang hay bong tróc.
+Keo dán thường bị lão hóa, ẩm mốc sau thời gian.
 
 ### Có nên dùng kính ốp bếp không nếu nhà nhỏ?
 
