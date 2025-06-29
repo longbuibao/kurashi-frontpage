@@ -36,7 +36,7 @@ author:
   name: Diện Võ
 ogImage:
   url: /public/images/social phu kien nam cham tren op bep thep trang men.jpg
-isReadyForPublish: false
+isReadyForPublish: true
 ---
 **Kính ốp bếp – Đẹp nhưng có thực sự hoàn hảo?**
 
