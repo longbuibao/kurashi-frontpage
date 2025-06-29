@@ -2,7 +2,7 @@
 fileName: so-sanh-kinh-op-bep-va-thep-trang-men-nen-chon-loai-nao-cho-nha-bep-hien-dai
 category: Kinh nghiệm nội thất
 videoLinks:
-  - youTubeLink: gfg
+  - youTubeLink: https://www.youtube.com/shorts/q3flseUgiqY
 subCategory:
   - Nội thất hay
 title: "So sánh kính ốp bếp và tấm tráng men: Nên chọn loại nào cho nhà bếp hiện đại?"
@@ -99,6 +99,12 @@ Ngược lại, **tấm tráng men của** [**thương hiệu Kurashi**](https:/
     
 
 > Tìm hiểu thêm về [Tấm ốp tường bằng thép tráng men](https://www.kurashi.com.vn/san-pham/tam-op-tuong-bang-thep-trang-men)
+
+### **🎥 Video Giới Thiệu**
+
+Để hiểu rõ hơn về cách lắp đặt và sử dụng phụ kiện nam châm, mời bạn xem video dưới đây:
+
+<div data-youtube-video=""><iframe width="640" height="480" allowfullscreen="true" autoplay="false" disablekbcontrols="false" enableiframeapi="false" endtime="0" ivloadpolicy="0" loop="false" modestbranding="false" origin="" playlist="" rel="1" src="https://www.youtube-nocookie.com/embed/q3flseUgiqY&amp;rel=1" start="0"></iframe></div>
 
 ## 4\. SO SÁNH KÍNH ỐP BẾP VÀ THÉP TRÁNG MEN
 
