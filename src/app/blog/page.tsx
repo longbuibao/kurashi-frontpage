@@ -102,7 +102,7 @@ const AllBlogs: React.FC = async (): React.ReactElement => {
             </div>
             <div className='w-[1px] bg-kurashi-border-color' />
             <div className='flex flex-col gap-14'>
-              {posts.filter(x => (x as any as BlogPost).fileName !== firstBlog.fileName).slice(0, 4).map(x => <RightSideBlogCard {...(x as any as BlogPost)} key={x.realFileName} />)}
+              {posts.filter(x => (x as any as BlogPost).fileName !== firstBlog.fileName).slice(0, 3).map(x => <RightSideBlogCard {...(x as any as BlogPost)} key={x.realFileName} />)}
             </div>
           </div>
           <BlogCategoryFilter posts={posts as any as BlogPost[]} />
