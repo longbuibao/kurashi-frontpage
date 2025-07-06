@@ -14,4 +14,8 @@ export interface Post {
   preview?: boolean
   isReadyForPublish?: boolean
   faq?: Array<{ q: string, a: string }>
+  videoLinks: Array<{
+    youTubeLink: string
+  }>
+  fileName: string
 }

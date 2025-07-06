@@ -7,46 +7,12 @@ import Image from 'next/image'
 import { CopyButton, ShareFacebookWrapper } from '@/components/share-button'
 
 import './style.css'
+import { createSchema } from './create-schema'
 
 export default async function Post (props: Params): Promise<React.ReactElement> {
   const params = await props.params
   const post = getPostBySlug(params.slug)
-
-  const faq = post?.faq
-  const mainEntity = faq === undefined
-    ? []
-    : faq?.filter(x => Object.keys(x).length > 0).map(x => {
-      return {
-        '@type': 'Question',
-        name: x.q,
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: x.a
-        }
-      }
-    })
-
-  const jsonLdFaq = mainEntity?.length > 0
-    ? {
-
-        '@context': 'https://schema.org/',
-        '@type': 'FAQPage',
-        mainEntity
-      }
-    : undefined
-
-  const jsonLd = {
-    '@context': 'https://schema.org',
-    '@type': 'Article',
-    headline: post?.title,
-    description: post?.title,
-    author: {
-      '@type': 'Person',
-      name: 'Diện Võ'
-    },
-    mainEntityOfPage: `https://www.kurashi.com.vn/blog/${(post as any).fileName}`,
-    datePublished: post?.date.toLocaleDateString()
-  }
+  const schemas = await createSchema(post)
 
   if (post === null || post === undefined) {
     return notFound()
@@ -55,15 +21,13 @@ export default async function Post (props: Params): Promise<React.ReactElement> 
   return (
     <main>
       <Container>
-        <script
-          type='application/ld+json'
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-        />
-        {jsonLdFaq !== undefined && (
+        {schemas.map((schema: any, index: any) => (
           <script
+            key={index}
             type='application/ld+json'
-            dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdFaq) }}
-          />)}
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+          />
+        ))}
         <article className='mb-32'>
           <div className='my-10 max-md:w-full'>
             <div className='w-[80%] mx-auto max-md:w-full max-md:p-5'>
@@ -82,8 +46,8 @@ export default async function Post (props: Params): Promise<React.ReactElement> 
                       <p className='uppercase text-[rgb(134,135,135)] font-semibold text-xs'>{post.date.toLocaleString('default', { month: 'short' })} {post.date.toLocaleString('default', { day: 'numeric' })} • {post.author.name}</p>
                     </div>
                     <div className='flex flex-row gap-3 flex-nowrap items-center mt-3'>
-                      <ShareFacebookWrapper url={`https://kurashi.com.vn/blog/${(post as any).fileName}`} />
-                      <CopyButton url={`https://kurashi.com.vn/blog/${(post as any).fileName}`} />
+                      <ShareFacebookWrapper url={`https://kurashi.com.vn/blog/${post.fileName}`} />
+                      <CopyButton url={`https://kurashi.com.vn/blog/${post.fileName}`} />
                     </div>
                   </div>
                 </div>
@@ -117,7 +81,6 @@ export async function generateMetadata (props: Params): Promise<Metadata> {
   }
 
   const title = `${post.title}`
-
   return {
     title,
     openGraph: {
