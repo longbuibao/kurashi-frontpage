@@ -20,14 +20,6 @@ content:
         label: File name
         type: string
         required: true
-      - name: filesasasaName
-        label: File nsasasasame
-        type: string
-        required: true
-        list:
-          collapsible: true
-          min: 1
-          max: 10
       - name: category
         label: Category
         type: select
