@@ -7,6 +7,7 @@ steps:
       - |
         gcloud secrets versions access latest --secret=cloudsql-access-key > /workspace/cloudsql-access.json
         ls -la /workspace/cloudsql-access.json  # Debugging step
+        printenv
   - name: 'gcr.io/cloud-builders/gcloud'
     waitFor: ["get-secret"]
     id: move-credentials-file
