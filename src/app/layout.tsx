@@ -27,7 +27,7 @@ const inter = Inter({ subsets: ['latin'], weight: '200' })
 
 const RootLayout: React.FC<RootProps> = async ({ children }): Promise<React.ReactElement> => {
   const { t } = await useTranslation(lng)
-  console.log(process.env.YOUTUBE_API_KEY)
+  const a = process.env.YOUTUBE_API_KEY
 
   const productsRaw = await prisma.product.findMany({
     take: 3,
@@ -46,6 +46,7 @@ const RootLayout: React.FC<RootProps> = async ({ children }): Promise<React.Reac
         <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css' crossOrigin='anonymous' />
       </head>
       <body className={inter.className}>
+        <div>{a}</div>
         <div className='sticky top-0 z-50'>
           <Nav products={productsRaw} links={navItems.map(item => { return { label: t(item.label), url: item.url } })} />
         </div>
