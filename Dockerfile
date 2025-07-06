@@ -1,10 +1,13 @@
 FROM node:18
 
+ARG YOUTUBE_API_KEY
+
 WORKDIR /app
 
 COPY . .
 
 RUN ls -la
+RUN npm run create-env
 RUN cat .env
 
 RUN npm install

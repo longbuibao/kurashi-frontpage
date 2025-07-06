@@ -19,11 +19,10 @@ steps:
   - name: 'gcr.io/cloud-builders/docker'
     id: build-docker-image
     waitFor: ["get-secret"]
-    env:
-      - 'YOUTUBE_API_KEY=${_YOUTUBE_API_KEY}'
     args:
       - "build"
       - "-t"
+      - "YOUTUBE_API_KEY=${_YOUTUBE_API_KEY}"
       - "gcr.io/$PROJECT_ID/kurashi-frontpage-prod-$SHORT_SHA"
       - "."
 

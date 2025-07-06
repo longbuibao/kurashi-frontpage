@@ -16,7 +16,7 @@
     "db:deploy": "dotenv -e .env prisma migrate deploy",
     "db:rollback": "prisma migrate resolve --rolled-back",
     "test": "echo testing kurashi-frontpage app",
-    "create-env": "printenv > .env"
+    "create-env": "printenv >> .env"
   },
   "dependencies": {
     "@google-cloud/storage": "^7.15.0",
