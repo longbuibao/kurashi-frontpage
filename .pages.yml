@@ -19,7 +19,15 @@ content:
       - name: fileName
         label: File name
         type: string
-        required: true  
+        required: true
+      - name: filesasasaName
+        label: File nsasasasame
+        type: string
+        required: true
+        list:
+          collapsible: true
+          min: 1
+          max: 10
       - name: category
         label: Category
         type: select
@@ -30,6 +38,7 @@ content:
         label: Videos
         type: object
         list:
+          collapsible: true
           min: 1
           max: 10
         fields:
