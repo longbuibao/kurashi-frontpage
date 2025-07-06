@@ -16,7 +16,7 @@ import { lng } from '@/app/const'
 
 export const metadata = {
   title: 'Trang chủ Kurashi',
-  metadataBase: new URL('https://kurashi.com.vn'),
+  metadataBase: new URL('https://kurashi.com.vn')
 }
 
 interface RootProps {
@@ -27,6 +27,7 @@ const inter = Inter({ subsets: ['latin'], weight: '200' })
 
 const RootLayout: React.FC<RootProps> = async ({ children }): Promise<React.ReactElement> => {
   const { t } = await useTranslation(lng)
+  console.log(process.env.YOUTUBE_API_KEY)
 
   const productsRaw = await prisma.product.findMany({
     take: 3,
