@@ -4,10 +4,7 @@ import Link from 'next/link'
 
 import prisma from '@/lib/prisma'
 import { LeftArrow } from '@/components/svg-icons'
-import { OnlineStore } from '@/components/online-store-card'
 import { ProductAccessoryCard } from '@/components/product'
-
-import { formatCurrency } from '@/utils'
 
 interface SanPhamPageProps {
   params: Promise<{ 'san-pham': string }>
@@ -98,9 +95,7 @@ const SanPhamPage: React.FC<SanPhamPageProps> = async props => {
                 </div>
                 <div className='flex flex-row gap-2 my-10 text-xl relative'>
                   <div>ĐƠN GIÁ: Liên hệ</div>
-                  {/* <div>{formatCurrency(accessoryProduct?.price ?? 0)} <sub className='absolute top-1'>₫</sub></div> */}
                 </div>
-                <OnlineStore isCenter />
               </div>
             </div>
           </div>

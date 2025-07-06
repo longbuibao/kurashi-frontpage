@@ -13,7 +13,7 @@ const SanPhamLayout: React.FC<SanPhamLayoutProps> = async ({ children }) => {
   return (
     <Suspense>
       {children}
-      <div className='w-4/5 mx-auto mb-36'>
+      <div className='w-4/5 max-md:w-[90%] mx-auto mb-36'>
         <div className='text-2xl my-10 max-md:text-center'>Mua hàng theo loại phụ kiện</div>
         <ShopByCategory categories={categories} />
       </div>

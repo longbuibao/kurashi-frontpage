@@ -28,7 +28,7 @@ const ShopByCategoryCard: React.FC<ShopByCategoryCardProps> = ({ category }) => 
 }
 
 const ShopByCategory: React.FC<ShopByCategoryProps> = ({ categories }) => {
-  return <div className='flex flex-row justify-between max-md:flex-wrap max-md:gap-3 max-md:justify-center'>{categories.map(x => <ShopByCategoryCard key={x.key} category={x} />)}</div>
+  return <div className='flex flex-row justify-between max-md:flex-wrap max-md:gap-3'>{categories.map(x => <ShopByCategoryCard key={x.key} category={x} />)}</div>
 }
 
 export default ShopByCategory
