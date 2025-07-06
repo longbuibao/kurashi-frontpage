@@ -21,8 +21,9 @@ steps:
     waitFor: ["get-secret"]
     args:
       - "build"
-      - "-t"
+      - "--build-arg"
       - "YOUTUBE_API_KEY=${_YOUTUBE_API_KEY}"
+      - "-t"
       - "gcr.io/$PROJECT_ID/kurashi-frontpage-prod-$SHORT_SHA"
       - "."
 
