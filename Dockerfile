@@ -5,6 +5,7 @@ WORKDIR /app
 COPY . .
 
 RUN ls -la
+RUN cat .env
 
 RUN npm install
 RUN wget https://storage.googleapis.com/cloud-sql-connectors/cloud-sql-proxy/v2.8.1/cloud-sql-proxy.linux.amd64 -O /cloud_sql_proxy
