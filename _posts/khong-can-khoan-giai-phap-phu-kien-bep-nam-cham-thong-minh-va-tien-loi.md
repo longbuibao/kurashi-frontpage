@@ -16,6 +16,8 @@ author:
 ogImage:
   url: /public/images/Social phu-kien-bep-nam-cham-khong-can-khoan.jpg
 isReadyForPublish: true
+videoLinks:
+  - youTubeLink: https://www.youtube.com/embed/1SAHZSwpMLs
 ---
 Trong các căn hộ hiện đại, người dùng ngày càng tìm kiếm **phụ kiện nhà bếp không cần khoan** để tránh làm hỏng tường gạch men hoặc bê tông. Giải pháp tốt nhất hiện nay? **Tấm ốp bếp tráng men kết hợp với phụ kiện nam châm** – không cần khoan, không cần đục, dễ lắp đặt và giữ cho căn bếp luôn gọn gàng, hiện đại.
 
