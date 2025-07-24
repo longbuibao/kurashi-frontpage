@@ -46,7 +46,7 @@ const StorySlider: React.FC = () => {
       return (
         <WithSeeMore story={story} action={action}>
           <div className='w-full flex flex-row ml-10 gap-20'>
-            <Image src={thumbnail} width={200} height={106} alt={title} />
+            <Image src={thumbnail} width={200} height={106} alt={title} priority />
             <div className='flex flex-col gap-3'>
               <div className='text-2xl'>{title}</div>
               <div>{summary}</div>
@@ -124,7 +124,7 @@ const StorySlider: React.FC = () => {
             defaultInterval={5000}
             stories={stories}
             onStoryStart={(s: any, st: any) => setCurrentStoryImage(st.topImage)}
-            storyContainerStyles={{ background: 'rgba(229, 229, 229, 0.7)', borderRadius: 8 }}
+            storyContainerStyles={{ background: 'rgba(255, 255, 255, 0.5)', borderRadius: 8, backdropFilter: 'blur(1px)' }}
           />
         </Suspense>
       </div>
