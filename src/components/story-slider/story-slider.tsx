@@ -124,7 +124,7 @@ const StorySlider: React.FC = () => {
             defaultInterval={5000}
             stories={stories}
             onStoryStart={(s: any, st: any) => setCurrentStoryImage(st.topImage)}
-            storyContainerStyles={{ background: 'rgba(255, 255, 255, 0.4)', borderRadius: 8, backdropFilter: 'blur(1px)' }}
+            storyContainerStyles={{ background: 'rgba(217, 217, 217, 0.10)', borderRadius: 8, backdropFilter: 'blur(20px)', boxShadow: '0 4px 10px rgba(0, 0, 0, 0.2)' }}
           />
         </Suspense>
       </div>
