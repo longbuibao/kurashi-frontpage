@@ -28,13 +28,14 @@ const BackToTopButton = (): React.ReactElement => {
   return (
     isVisible
       ? (
-        <button
+        <div
           onClick={scrollToTop}
-          className='font-bold text-2xl fixed size-16 max-md:size-10 z-10 bottom-4 right-4 bg-main text-kurashi-bg-main rounded-full shadow-lg hover:bg-blue-600 focus:outline-none focus:ring focus:ring-blue-300'
+          className='fixed hover:cursor-pointer border-[1px] border-main size-14 z-10 bottom-4 right-4 text-main flex items-center flex-col justify-center'
           aria-label='Back to top'
         >
-          ↑
-        </button>
+          <div className='rotate-90 h-[1px] w-1/2 top-0 absolute bg-main' />
+          UP
+        </div>
         )
       : <></>
   )
