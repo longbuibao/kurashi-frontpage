@@ -24,7 +24,7 @@ interface NavProps {
 const Nav: FC<NavProps> = ({ links, products }) => {
   const [isOpen, setIsOpen] = useState(false)
   const isVisible = useHideOnScrollDown()
-  const cls = isVisible ? 'relative nav-visible bg-secondary-opacity backdrop-blur-md' : 'relative nav-hidden bg-secondary-opacity backdrop-blur-md'
+  const cls = isVisible ? 'relative nav-visible bg-[rgba(217,217,217,0.10)] backdrop-blur-[20px] shadow-[0_4px_10px_rgba(0,0,0,0.2)]' : 'relative nav-hidden bg-[rgba(217,217,217,0.10)] backdrop-blur-[20px] shadow-[0_4px_10px_rgba(0,0,0,0.2)]'
 
   return (
     <div className={cls}>
