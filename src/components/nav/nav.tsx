@@ -7,7 +7,7 @@ import { KurashiLink } from '@/components/kurashi-link'
 import { v4 as uuidv4 } from 'uuid'
 import { ProductCard } from '@/components/product'
 import { Product } from '@prisma/client'
-import { LogoFacebook, LogoYoutube, LogoZalo, ShoppingCart } from '@/components/svg-icons'
+import { LogoFacebook, LogoYoutube, LogoZalo, LocationIcon, ProAccountIcon } from '@/components/svg-icons'
 import { useHideOnScrollDown } from './useHideOnScroll'
 import { UrlObject } from 'url'
 
@@ -45,8 +45,8 @@ const Nav: FC<NavProps> = ({ links, products }) => {
             </div>
             <div className='max-md:hidden max-md:mr-1 max-md:px-5 flex flex-row items-center gap-10 z-10'>
               <div className='flex flex-row gap-10 text-2xl'>
-                <i className='fa-solid fa-location-dot' />
-                <i className='fa-regular fa-user' />
+                <LocationIcon width='30' height='30' />
+                <ProAccountIcon width='30' height='30' />
               </div>
               {/* <Link href='/san-pham/phu-kien-bep'>
                 <div className='flex flex-col items-center gap-1'>
