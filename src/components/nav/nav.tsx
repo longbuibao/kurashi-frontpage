@@ -24,7 +24,9 @@ interface NavProps {
 const Nav: FC<NavProps> = ({ links, products }) => {
   const [isOpen, setIsOpen] = useState(false)
   const isVisible = useHideOnScrollDown()
-  const cls = isVisible ? 'relative nav-visible bg-[rgba(217,217,217,0.10)] backdrop-blur-[20px] shadow-[0_4px_10px_rgba(0,0,0,0.2)]' : 'relative nav-hidden bg-[rgba(217,217,217,0.10)] backdrop-blur-[20px] shadow-[0_4px_10px_rgba(0,0,0,0.2)]'
+  const cls = isVisible
+    ? 'relative nav-visible bg-[rgba(217,217,217,0.10)] backdrop-blur-[20px] shadow-[0_4px_10px_rgba(0,0,0,0.2)]'
+    : 'relative nav-hidden bg-[rgba(217,217,217,0.10)] backdrop-blur-[20px] shadow-[0_4px_10px_rgba(0,0,0,0.2)]'
 
   return (
     <div className={cls}>
@@ -42,12 +44,16 @@ const Nav: FC<NavProps> = ({ links, products }) => {
               </Link>
             </div>
             <div className='max-md:hidden max-md:mr-1 max-md:px-5 flex flex-row items-center gap-10 z-10'>
-              <Link href='/san-pham/phu-kien-bep'>
+              <div className='flex flex-row gap-10 text-2xl'>
+                <i className='fa-solid fa-location-dot' />
+                <i className='fa-regular fa-user' />
+              </div>
+              {/* <Link href='/san-pham/phu-kien-bep'>
                 <div className='flex flex-col items-center gap-1'>
                   <ShoppingCart width='25' height='25' />
                   <div className='text-xs'>Phụ kiện bếp nam châm</div>
                 </div>
-              </Link>
+              </Link> */}
             </div>
           </nav>
         </div>

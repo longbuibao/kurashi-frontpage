@@ -121,7 +121,7 @@ const Page = async (): Promise<React.ReactElement> => {
         </Link>
         <Link href='#' className='w-1/2 bg-[#BFAF92] flex flex-row items-center max-md:w-full'>
           <div className='flex flex-col gap-5 items-center self-center w-full'>
-            <div className='text-secondary font-bold'>TÀI KHOẢN PRO</div>
+            <div className='text-secondary font-bold'>My Kurashi</div>
             <div>hệ thống giao dịch số</div>
           </div>
           <Image className='w-full' src='https://storage.googleapis.com/kurashi_frontpage_files/images/footer-image-3.png' width={300} height={300} alt='Về kurashi' />
@@ -151,7 +151,7 @@ const Page = async (): Promise<React.ReactElement> => {
           <Link href='#' className='w-1/2 bg-[#BFAF92] flex flex-row items-center max-md:w-full'>
             <Image src='https://storage.googleapis.com/kurashi_frontpage_files/images/footer-image-3.png' width={300} height={300} alt='Về kurashi' />
             <div className='flex flex-col gap-5 items-center self-center w-full'>
-              <div className='text-3xl text-secondary font-bold'>TÀI KHOẢN PRO</div>
+              <div className='text-3xl text-secondary font-bold'>My Kurashi</div>
               <div>hệ thống giao dịch số</div>
             </div>
           </Link>
