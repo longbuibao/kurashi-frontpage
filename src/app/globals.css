@@ -76,9 +76,9 @@
 	transition: transform 200ms ease-in;
 }
 
-.product-card--hover:hover div:nth-child(2) {
+/* .product-card--hover:hover div:nth-child(2) {
 	animation: fade-and-disappear 200ms ease-in forwards;
-}
+} */
 
 .product-card--hover:hover div:nth-child(1) img {
 	transform: scale(110%);
