@@ -118,7 +118,7 @@ const Page: React.FC = () => {
             <div className='px-10 py-2 w-1/2 bg-[#ADADAD] text-center text-secondary'>Vòi rửa chén</div>
             <div className='px-10 py-2 w-1/2 bg-[#D9D9D9] text-center'>Vòi rửa mặt</div>
           </div>
-          <div className='grid grid-cols-3 grid-rows-3 w-full my-10 gap-10'>
+          <div className='grid grid-cols-3 grid-rows-3 w-full my-10 gap-20'>
             {products.map(x =>
               <div key={x.id} className='flex flex-col gap-3 items-center justify-center'>
                 <Image src={x.thumbnail} width={100} height={100} alt={x.alt} />
