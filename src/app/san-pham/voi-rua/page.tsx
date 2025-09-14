@@ -64,10 +64,12 @@ const Page: React.FC = () => {
     <div>
       <div>
         <Image
-          className='w-full'
-          alt=''
+          className='w-full h-auto'
+          alt='Vòi rửa KURASHI — ảnh bìa bộ sưu tập'
           width={1000}
           height={1000}
+          sizes='100vw'
+          priority
           src='https://storage.googleapis.com/kurashi_frontpage_files/images/voi-rua/voi_rua_cover.png'
         />
       </div>
