@@ -2,51 +2,82 @@ import React from 'react'
 import Image from 'next/image'
 import { useInView } from 'react-intersection-observer'
 
-import { FeatureCardProps, featuresDataDauMo } from './const'
 import * as transKey from '@/i18n/thep-trang-men'
 
 interface PartThuNghiemDauMoProps {
   setCurrentInViewDivId: (id: string) => void
 }
 
-const FeatureCard: React.FC<FeatureCardProps> = ({ content, title, imageUrl }) => {
-  return (
-    <div className='w-full'>
-      <div className='text-xl mb-10 max-md:mb-5'>{title}</div>
-      <Image width={2792} height={1500} className='w-full' alt='chống dầu mỡ thép tráng men' src={imageUrl} />
-      <div className='mt-10 max-md:mt-5'>{content.map(x => <div className='my-3' key={x}>{x}</div>)}</div>
-    </div>
-  )
-}
-
-const PartThuNghiemDauMo: React.FC<PartThuNghiemDauMoProps> = ({ setCurrentInViewDivId }) => {
+const TinhChat: React.FC<PartThuNghiemDauMoProps> = ({ setCurrentInViewDivId }) => {
   const { ref } = useInView({
     threshold: 1,
     onChange: (inView, _) => {
       if (inView) {
-        setCurrentInViewDivId(transKey.ungDungLauDauMo)
+        setCurrentInViewDivId(transKey.tinhChat)
       }
     },
     root: null
   })
 
+  const features = [
+    {
+      url: 'https://storage.googleapis.com/kurashi_frontpage_files/phu-kien-thep-trang-men/category-icon/moc_treo_icon.svg',
+      title: 'CLICK SENSE',
+      content: 'Âm thanh click tinh tế xác nhận mỗi lần chuyển đổi giữa nước nóng',
+      id: 0
+    },
+    {
+      url: 'https://storage.googleapis.com/kurashi_frontpage_files/phu-kien-thep-trang-men/category-icon/moc_treo_icon.svg',
+      title: 'CLICK SENSE',
+      content: 'Âm thanh click tinh tế xác nhận mỗi lần chuyển đổi giữa nước nóng',
+      id: 1
+    },
+    {
+      url: 'https://storage.googleapis.com/kurashi_frontpage_files/phu-kien-thep-trang-men/category-icon/moc_treo_icon.svg',
+      title: 'CLICK SENSE',
+      content: 'Âm thanh click tinh tế xác nhận mỗi lần chuyển đổi giữa nước nóng',
+      id: 2
+    },
+    {
+      url: 'https://storage.googleapis.com/kurashi_frontpage_files/phu-kien-thep-trang-men/category-icon/moc_treo_icon.svg',
+      title: 'CLICK SENSE',
+      content: 'Âm thanh click tinh tế xác nhận mỗi lần chuyển đổi giữa nước nóng',
+      id: 3
+    }
+  ]
+
   return (
     <>
       <div className='my-10 flex flex-col gap-5'>
-        <div className='text-3xl'>THÍ NGHIỆM SO SÁNH</div>
-        <div className='my-3'>Dưới đây là thí nghiệm so sánh khả năng chống dầu mỡ và chống cháy của thép tráng men và vật liệu khác. </div>
+        <div className='text-3xl'>Tính chất</div>
       </div>
-      <div ref={ref} id={transKey.ungDungLauDauMo} className='flex flex-row justify-between max-md:flex-col max-md:gap-10'>
-        <div key={featuresDataDauMo[0].imageUrl} className='w-[45%] max-md:w-full'>
-          <FeatureCard content={featuresDataDauMo[0].content} imageUrl={featuresDataDauMo[0].imageUrl} title={featuresDataDauMo[0].title} />
+      <div ref={ref} id={transKey.tinhChat} className='grid grid-cols-2 grid-rows-2 gap-10'>
+        {features.map(x => (
+          <div key={x.id} className='flex flex-row gap-5 w-[300px]'>
+            <div className='w-[80%]'>
+              <Image src={x.url} width={80} height={80} alt='Tính năng thép tráng men' />
+            </div>
+            <div className='flex flex-col gap-5'>
+              <div className='text-2xl'>{x.title}</div>
+              <div>{x.content}</div>
+            </div>
+          </div>))}
+      </div>
+      <div className='my-10'>
+        <div>
+          Vui lòng liên hệ KURASHI để được tư vấn chi tiết
         </div>
-        <div className='w-[0.25px] bg-kurashi-black max-md:hidden' />
-        <div key={featuresDataDauMo[1].imageUrl} className='w-[45%] max-md:w-full'>
-          <FeatureCard content={featuresDataDauMo[1].content} imageUrl={featuresDataDauMo[1].imageUrl} title={featuresDataDauMo[1].title} />
+        <div className='flex flex-row gap-5 bg-main text-secondary w-fit p-3 mt-10'>
+          <div className=''>
+            Liên hệ
+          </div>
+          <div>
+            <i className='fa-solid fa-chevron-right' />
+          </div>
         </div>
       </div>
     </>
   )
 }
 
-export default PartThuNghiemDauMo
+export default TinhChat

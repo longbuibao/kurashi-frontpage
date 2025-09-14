@@ -103,12 +103,23 @@ const Page: React.FC = () => {
               src='https://storage.googleapis.com/kurashi_frontpage_files/images/voi-rua/made_in_japan.png'
             />
             <div className='flex flex-col gap-5 w-1/2'>
-              <div className='border-l-2 border-r-black font-bold px-5'>
-                <span className='text-3xl'>146</span> năm lịch sử
+              <div className='font-bold px-5'>
+                <Image src='https://storage.googleapis.com/kurashi_frontpage_files/images/voi-rua/146_year.png' width={365} height={252} alt='146 năm' />
               </div>
-              <div>Mô tả target SEO あなたはどんなキッチンスタイルをお望みですか？自然と人が集まるような心地よいナチュラルスタイル。ステンレスでしつらえた、プロの厨房を思わせるプロフェッショナルスタイル。</div>
+              <div className='mt-3'>Mô tả target SEO あなたはどんなキッチンスタイルをお望みですか？自然と人が集まるような心地よいナチュラルスタイル。ステンレスでしつらえた、プロの厨房を思わせるプロフェッショナルスタイル。</div>
             </div>
           </div>
+        </div>
+        <div className='my-20 flex flex-row gap-10'>
+          <div className='flex flex-col gap-10'>
+            <div className='font-bold text-2xl'>GOLD COLLECTION</div>
+            <div className='text-2xl'>DẤU ẤN THƯỢNG LƯU</div>
+            <div className='w-full h-[1px] bg-black opacity-50' />
+            <div>
+              Bộ sưu tập là sự hòa quyện giữa nghệ thuật cổ điển và nét tinh giản hiện đại, mang đến vẻ thanh lịch vượt thời gian. Thiết kế linh hoạt cùng tông màu vàng kim được lựa chọn tỉ mỉ, hoàn thiện đến từng chi tiết, giúp sản phẩm nổi bật theo cách thật tinh tế, trở thành biểu tượng của phong cách sống thượng lưu.
+            </div>
+          </div>
+          <Image className='w-1/3' src='https://storage.googleapis.com/kurashi_frontpage_files/images/voi-rua/voi-rua-golden.png' width={428} height={1148} alt='Vòi golden' />
         </div>
         <div className='my-20'>
           <div className='border-l-2 border-r-black font-bold px-5 text-2xl'>

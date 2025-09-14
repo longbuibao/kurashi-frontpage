@@ -40,24 +40,15 @@ export const applications = [
 ]
 
 export const imageUrls = [
-  'https://storage.googleapis.com/kurashi_frontpage_files/images/thep_trang_men_slider/10.jpg',
-  'https://storage.googleapis.com/kurashi_frontpage_files/images/thep_trang_men_slider/11.jpg',
-  'https://storage.googleapis.com/kurashi_frontpage_files/images/thep_trang_men_slider/12.jpg',
-  'https://storage.googleapis.com/kurashi_frontpage_files/images/thep_trang_men_slider/13.jpg',
-  'https://storage.googleapis.com/kurashi_frontpage_files/images/thep_trang_men_slider/14.jpg',
-  'https://storage.googleapis.com/kurashi_frontpage_files/images/thep_trang_men_slider/15-01.jpg',
-  'https://storage.googleapis.com/kurashi_frontpage_files/images/thep_trang_men_slider/15.jpg',
-  'https://storage.googleapis.com/kurashi_frontpage_files/images/thep_trang_men_slider/16.jpg',
-  'https://storage.googleapis.com/kurashi_frontpage_files/images/thep_trang_men_slider/17.jpg',
-  'https://storage.googleapis.com/kurashi_frontpage_files/images/thep_trang_men_slider/7.jpg',
-  'https://storage.googleapis.com/kurashi_frontpage_files/images/thep_trang_men_slider/8.jpg'
+  'https://storage.googleapis.com/kurashi_frontpage_files/images/voi-rua/ung_dung_1.png',
+  'https://storage.googleapis.com/kurashi_frontpage_files/images/voi-rua/ung_dung_2.png',
+  'https://storage.googleapis.com/kurashi_frontpage_files/images/voi-rua/ung_dung_3.png',
+  'https://storage.googleapis.com/kurashi_frontpage_files/images/voi-rua/ung_dung_4.png'
 ].map(x => {
   return {
     key: x,
     content: (
-      <div>
-        <Image src={x} width={500} height={500} alt='Ứng dụng của thép tráng men' />
-      </div>
+      <Image src={x} width={500} height={300} alt='Ứng dụng của thép tráng men' />
     )
   }
 })
