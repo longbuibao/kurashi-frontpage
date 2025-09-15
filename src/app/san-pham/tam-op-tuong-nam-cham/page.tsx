@@ -1,9 +1,48 @@
+'use client'
 import React from 'react'
-
 import { SideBar } from '@/components/side-bar'
+import * as c from './const'
+
+import PartIntro from './part-intro'
+import PartMauSac from './part-mau-sac'
+import PartUngDungTamOp from './part-ung-dung'
+import PartQuyCach from './part-quy-cach'
+import PartCauTao from './part-cau-tao'
+import PartTinhChat from './part-tinh-chat'
 
 const Page: React.FC = () => {
-  return <div />
+  const imageUrl = 'https://storage.googleapis.com/kurashi_frontpage_files/images/thep-trang-men-page/thep-trang-men-cover.png'
+  const [currentInViewDivId, setCurrentInViewDivId] = React.useState('')
+  const sectionTitles = [
+    c.intro,
+    c.mauSac,
+    c.ungDung,
+    c.quyCach,
+    c.cauTao,
+    c.tinhChat
+  ]
+  return (
+    <div className='w-4/5 mx-auto max-md:w-full gap-10 flex flex-col'>
+      <div className='aspect-[16/9] flex items-end bg-cover bg-center text-white text-5xl font-bold text-secondary' style={{ backgroundImage: `url(${imageUrl})` }}>
+        <div className='text-3xl pb-36 pl-40'>
+          TẤM ỐP TƯỜNG NAM CHÂM <span className='text-main text-7xl font-extrabold'>KURASHI</span>
+        </div>
+      </div>
+      <div className='flex flex-row gap-10 my-10 max-md:my-0'>
+        <div className='max-md:hidden min-w-fit mt-10'>
+          <SideBar sectionTitles={sectionTitles} currentDivId={currentInViewDivId} ns='thep-trang-men' />
+        </div>
+        <div className='max-md:w-4/5 max-md:mx-auto'>
+          <PartIntro setCurrentInViewDivId={setCurrentInViewDivId} />
+          <PartMauSac setCurrentInViewDivId={setCurrentInViewDivId} />
+          <PartUngDungTamOp setCurrentInViewDivId={setCurrentInViewDivId} />
+          <PartQuyCach setCurrentInViewDivId={setCurrentInViewDivId} />
+          <PartCauTao setCurrentInViewDivId={setCurrentInViewDivId} />
+          <PartTinhChat setCurrentInViewDivId={setCurrentInViewDivId} />
+        </div>
+      </div>
+    </div>
+  )
 }
 
 export default Page
