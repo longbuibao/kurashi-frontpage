@@ -108,21 +108,19 @@ model SecondaryCategory {
 }
 
 model ProductImages {
-  id            String       @id @default(uuid())
-  title         String
-  content       String
-  imageUrl      String
-  Product       Product?     @relation(fields: [productId], references: [id])
-  productId     String?
-  ProductSize   ProductSize? @relation(fields: [productSizeId], references: [id])
-  productSizeId String?
+  id        String   @id @default(uuid())
+  title     String
+  content   String
+  imageUrl  String
+  Product   Product? @relation(fields: [productId], references: [id])
+  productId String?
 }
 
 model ProductIntro {
   id            String   @id @default(uuid())
   title         String
   content       String
-  introImg      String
+  introImg      String?
   isMainIntro   Boolean  @default(false)
   Product       Product? @relation(fields: [productId], references: [id])
   productId     String?
@@ -131,15 +129,14 @@ model ProductIntro {
 }
 
 model ProductSize {
-  id               String             @id @default(uuid())
-  unit             String             @default("mm")
-  quantity         Int
-  twoDimCad        String
-  productManual    String
-  product          Product?           @relation(fields: [productId], references: [id])
-  productId        String?            @unique
-  productSizeImage ProductImages[]
-  dimension        ProductDimension[]
+  id            String             @id @default(uuid())
+  unit          String             @default("mm")
+  quantity      Int
+  twoDimCad     String
+  productManual String
+  product       Product?           @relation(fields: [productId], references: [id])
+  productId     String?            @unique
+  dimension     ProductDimension[]
 }
 
 model ProductDimension {
