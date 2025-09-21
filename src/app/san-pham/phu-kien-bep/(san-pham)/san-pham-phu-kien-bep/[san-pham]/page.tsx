@@ -62,7 +62,7 @@ const SanPhamPage: React.FC<SanPhamPageProps> = async props => {
         <div className='w-1/2 flex flex-col gap-14 max-md:w-full'>
           {secondaryIntros?.sort((x, y) => x.order - y.order).filter(y => !y.isProductInfo).map(x => (
             <div key={x.id} className='flex flex-col gap-2'>
-              <Image src={x.introImg} width={800} height={800} alt={x.title} />
+              <Image src={x.introImg as any as string} width={800} height={800} alt={x.title} />
               <div>{x.content}</div>
             </div>
           ))}
