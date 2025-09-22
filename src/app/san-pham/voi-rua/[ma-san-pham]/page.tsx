@@ -37,8 +37,14 @@ const images = [
 })
 
 export async function generateStaticParams (): Promise<any> {
-  const products = await prisma.product.findMany({ where: { isAccessoryProduct: true } })
-  return products.map(x => { return { 'san-pham': x.uniqueName } })
+  const products = await prisma.product.findMany({
+    where: {
+      category: {
+        categoryUniqueName: 'voi-rua'
+      }
+    }
+  })
+  return products.map(x => { return { 'ma-san-pham': x.uniqueName } })
 }
 
 const Page: React.FC<PageProps> = async (props) => {
