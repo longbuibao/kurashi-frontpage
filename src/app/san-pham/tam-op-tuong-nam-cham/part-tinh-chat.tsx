@@ -50,8 +50,9 @@ const PartTinhChat: React.FC<PartThuNghiemDauMoProps> = ({ setCurrentInViewDivId
     <>
       <div className='my-10 flex flex-col gap-5'>
         <div className='text-3xl'>Tính chất</div>
+        <div className='my-10'>META Tấm ốp tường vân đá sang trọng, sản xuất bằng công nghệ in nhiều lớp từ Nhật Bản. Tấm ốp tường vân đá sang trọng, sản xuất bằng công nghệ in nhiều lớp từ Nhật Bản</div>
       </div>
-      <div ref={ref} id={c.tinhChat} className='grid grid-cols-2 grid-rows-2 gap-10'>
+      <div ref={ref} id={c.tinhChat} className='grid grid-cols-2 grid-rows-2 gap-14'>
         {features.map(x => (
           <div key={x.id} className='flex flex-row gap-5 w-[300px]'>
             <div className='w-[80%]'>

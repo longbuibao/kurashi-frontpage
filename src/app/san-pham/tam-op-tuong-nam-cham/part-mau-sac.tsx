@@ -28,6 +28,7 @@ const PartMauSac: React.FC<Props> = ({ setCurrentInViewDivId }) => {
   return (
     <div ref={ref} id={`${c.mauSac}`}>
       <div className='text-3xl mt-10'>Màu sắc</div>
+      <div className='my-10 w-4/5'>META Tấm ốp tường vân đá sang trọng, sản xuất bằng công nghệ in nhiều lớp từ Nhật Bản. Tấm ốp tường vân đá sang trọng, sản xuất bằng công nghệ in nhiều lớp từ Nhật Bản</div>
       <div className='flex flex-row gap-10 my-10'>
         <div className='flex flex-col gap-5'>
           {imageUrls.map(x => <Image key={x.url} width={x.width} height={x.height} src={x.url} alt='Thép tráng men' />)}

@@ -19,10 +19,9 @@ const SizeCard: React.FC<SizeCardProps> = ({ size }) => {
   return (
     <div className='w-fit'>
       <div className={className}>
-        <div className='rounded-lg w-full h-full' />
-      </div>
-      <div className='text-center mt-3'>
-        {`${sizes.get(size) ?? ''}`}
+        <div className='rounded-lg w-full h-full flex flex-row items-center justify-center'>
+          {`${sizes.get(size) ?? ''}`}
+        </div>
       </div>
     </div>
   )

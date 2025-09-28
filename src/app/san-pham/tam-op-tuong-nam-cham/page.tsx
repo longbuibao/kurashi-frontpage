@@ -23,11 +23,7 @@ const Page: React.FC = () => {
   ]
   return (
     <div className='w-4/5 mx-auto max-md:w-full gap-10 flex flex-col'>
-      <div className='aspect-[16/9] flex items-end bg-cover bg-center text-white text-5xl font-bold text-secondary' style={{ backgroundImage: `url(${imageUrl})` }}>
-        <div className='text-3xl pb-36 pl-40'>
-          TẤM ỐP TƯỜNG NAM CHÂM <span className='text-main text-7xl font-extrabold'>KURASHI</span>
-        </div>
-      </div>
+      <div className='aspect-[16/9] flex items-end bg-cover bg-center text-white text-5xl font-bold text-secondary' style={{ backgroundImage: `url(${imageUrl})` }} />
       <div className='flex flex-row gap-10 my-10 max-md:my-0'>
         <div className='max-md:hidden min-w-fit mt-10'>
           <SideBar sectionTitles={sectionTitles} currentDivId={currentInViewDivId} ns='thep-trang-men' />
