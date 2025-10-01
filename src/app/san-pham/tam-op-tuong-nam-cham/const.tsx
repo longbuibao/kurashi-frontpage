@@ -7,6 +7,7 @@ export const quyCach = 'Quy cách'
 export const cauTao = 'Cấu tạo'
 export const tinhChat = 'Tính chất'
 export const lienHe = 'Liên hệ'
+export const sanPhamLienQuan = 'Sản phẩm liên quan'
 
 export const imageUrls = [
   'https://storage.googleapis.com/kurashi_frontpage_files/images/voi-rua/ung_dung_1.png',

@@ -9,6 +9,7 @@ import PartUngDungTamOp from './part-ung-dung'
 import PartQuyCach from './part-quy-cach'
 import PartCauTao from './part-cau-tao'
 import PartTinhChat from './part-tinh-chat'
+import PartSanPhamLienQuan from './part-san-pham-lien-quan'
 
 const Page: React.FC = () => {
   const imageUrl = 'https://storage.googleapis.com/kurashi_frontpage_files/images/thep-trang-men-page/thep-trang-men-cover.png'
@@ -19,7 +20,8 @@ const Page: React.FC = () => {
     c.ungDung,
     c.quyCach,
     c.cauTao,
-    c.tinhChat
+    c.tinhChat,
+    c.sanPhamLienQuan
   ]
   return (
     <div className='w-4/5 mx-auto max-md:w-full gap-10 flex flex-col leading-relaxed'>
@@ -36,6 +38,7 @@ const Page: React.FC = () => {
           <PartQuyCach setCurrentInViewDivId={setCurrentInViewDivId} />
           <PartCauTao setCurrentInViewDivId={setCurrentInViewDivId} />
           <PartTinhChat setCurrentInViewDivId={setCurrentInViewDivId} />
+          <PartSanPhamLienQuan setCurrentInViewDivId={setCurrentInViewDivId} />
         </div>
       </div>
     </div>
