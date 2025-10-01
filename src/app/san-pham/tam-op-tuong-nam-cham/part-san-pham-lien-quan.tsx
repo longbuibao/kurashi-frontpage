@@ -43,7 +43,7 @@ const PartSanPhamLienQuan: React.FC<PartSanPhamLienQuanProps> = ({ setCurrentInV
       <div className='text-3xl mb-10'>SẢN PHẨM LIÊN QUAN</div>
       <div className='flex flex-row justify-between'>
         {relatedProducts.map(x =>
-          <Link key={x.thumb} href={x.url}>
+          <Link key={x.thumb} href={x.url as any}>
             <div className='flex flex-col gap-5 justify-center w-fit'>
               <Image src={x.thumb} width={300} height={300} alt={x.alt} />
               <div className='text-center'>{x.alt}</div>
