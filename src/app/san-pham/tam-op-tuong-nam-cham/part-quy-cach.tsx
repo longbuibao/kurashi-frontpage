@@ -20,11 +20,12 @@ const PartQuyCach: React.FC<PartKichThuocMauSacProps> = ({ setCurrentInViewDivId
   })
 
   return (
-    <div ref={ref} id={`${c.quyCach}`}>
-      <div className='text-3xl mb-10'>QUY CÁCH</div>
-      <div>Tấm ốp có các kích thước khác nhau tùy vào màu sắc bao gồm 3 khổ chính 900x600, 600x300 và 900x2400. Phần ốp góc chuyên dụng có 2 khổ 600x (18+18) và 300x (18+18).</div>
+    <div ref={ref} id={`${c.quyCach}`} className='mt-40'>
+      <div className='text-3xl mb-10'>QUY CÁCH TẤM</div>
+      <div>Tấm ốp tường hút nam châm Nhật Bản có 2 kích thước tiêu chuẩn: 910 x 1820mm tiện dụng và 910 x 2400mm cho mảng tường lớn. Cả hai đều dày 3.4mm với cấu tạo 3 lớp bền chắc.</div>
       <div className='w-4/5 mx-auto max-md:w-full my-10'>
         <div className='flex flex-row justify-between items-end max-md:mt-10'>
+          <SizeCard size='l' />
           <SizeCard size='m' />
         </div>
       </div>

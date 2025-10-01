@@ -19,22 +19,45 @@ const PartMauSac: React.FC<Props> = ({ setCurrentInViewDivId }) => {
     root: null
   })
 
-  const imageUrls = [
-    { url: 'https://storage.googleapis.com/kurashi_frontpage_files/images/voi-rua/mau_sac_1.png', width: 414, height: 414 },
-    { url: 'https://storage.googleapis.com/kurashi_frontpage_files/images/voi-rua/mau_sac_2.png', width: 414, height: 302 },
-    { url: 'https://storage.googleapis.com/kurashi_frontpage_files/images/voi-rua/mau_sac_3.png', width: 414, height: 358 }
-  ]
-
   return (
-    <div ref={ref} id={`${c.mauSac}`}>
-      <div className='text-3xl mt-10'>Màu sắc</div>
-      <div className='my-10 w-4/5'>META Tấm ốp tường vân đá sang trọng, sản xuất bằng công nghệ in nhiều lớp từ Nhật Bản. Tấm ốp tường vân đá sang trọng, sản xuất bằng công nghệ in nhiều lớp từ Nhật Bản</div>
-      <div className='flex flex-row gap-10 my-10'>
-        <div className='flex flex-col gap-5'>
-          {imageUrls.map(x => <Image key={x.url} width={x.width} height={x.height} src={x.url} alt='Thép tráng men' />)}
+    <div ref={ref} id={`${c.mauSac}`} className='mt-40'>
+      <div className='text-3xl mt-10'>Màu sắc sang trọng</div>
+      <div className='my-10 w-4/5'>Sonic Silver, Champagne Gold, Cement Gray, Matte Black – bốn sắc màu cao cấp giúp tấm ốp tường hút nam châm hòa hợp hoàn hảo với mọi không gian hiện đại.</div>
+      <div className='grid grid-cols-[300px_auto] grid-rows-[auto_auto_auto] h-screen gap-10'>
+        <div className='relative'>
+          <Image
+            src='https://storage.googleapis.com/kurashi_frontpage_files/images/voi-rua/mau_sac_1.png'
+            alt='Tấm ốp tường nam châm màu cement gray'
+            fill
+            className='object-cover'
+          />
         </div>
-        <Image className='self-stretch' alt='Thép tráng men' src='https://storage.googleapis.com/kurashi_frontpage_files/images/voi-rua/mau_sac_4.png' width={779} height={1134} />
+        <div className='relative row-span-3'>
+          <Image
+            src='https://storage.googleapis.com/kurashi_frontpage_files/images/voi-rua/mau_sac_4.png'
+            alt='Tấm ốp tường nam châm màu cement gray'
+            fill
+            className='object-cover'
+          />
+        </div>
+        <div className='relative'>
+          <Image
+            src='https://storage.googleapis.com/kurashi_frontpage_files/images/voi-rua/mau_sac_2.png'
+            alt='Tấm ốp tường nam châm màu cement gray'
+            fill
+            className='object-cover'
+          />
+        </div>
+        <div className='relative'>
+          <Image
+            src='https://storage.googleapis.com/kurashi_frontpage_files/images/voi-rua/mau_sac_3.png'
+            alt='Tấm ốp tường nam châm màu cement gray'
+            fill
+            className='object-cover'
+          />
+        </div>
       </div>
+
     </div>
   )
 }

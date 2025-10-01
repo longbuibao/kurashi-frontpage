@@ -20,11 +20,11 @@ const PartCauTao: React.FC<PartSpecTableProps> = ({ setCurrentInViewDivId }) => 
   })
 
   return (
-    <div ref={ref} className='max-md:mt-5' id={`${c.cauTao}`}>
-      <div className='text-3xl mb-10'>Cấu tạo</div>
-      <div className='flex flex-row gap-10'>
-        <div className='w-1/3'>Tấm ốp có các kích thước khác nhau tùy vào màu sắc bao gồm 3 khổ chính 900x600, 600x300 và 900x2400. Phần ốp góc chuyên dụng có 2 khổ 600x (18+18) và 300x (18+18).</div>
-        <Image width={607} height={300} alt='Cấu tạo thép tráng men' src='https://storage.googleapis.com/kurashi_frontpage_files/images/voi-rua/cau_tao.png' />
+    <div ref={ref} className='max-md:mt-5 mt-40' id={`${c.cauTao}`}>
+      <div className='text-3xl mb-10'>CẤU TẠO VẬT LIỆU</div>
+      <div className='flex flex-col gap-10 items-center'>
+        <div>Cấu tạo gồm 3 lớp: lớp thép trung tâm tạo khả năng hút nam châm, lớp board nền phía dưới gia tăng độ ổn định, và lớp hard coating bề mặt giúp chống trầy, giữ màu sắc và hoa văn tinh tế. Độ dày tổng thể 3.4 mm – mỏng nhẹ nhưng bền chắc.</div>
+        <Image width={607} height={300} alt='Cấu tạo thép tráng men' src='https://storage.googleapis.com/kurashi_frontpage_files/images/voi-rua/cautao.png' />
       </div>
     </div>
   )

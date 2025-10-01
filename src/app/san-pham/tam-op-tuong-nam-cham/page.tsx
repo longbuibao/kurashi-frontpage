@@ -22,13 +22,14 @@ const Page: React.FC = () => {
     c.tinhChat
   ]
   return (
-    <div className='w-4/5 mx-auto max-md:w-full gap-10 flex flex-col'>
+    <div className='w-4/5 mx-auto max-md:w-full gap-10 flex flex-col leading-relaxed'>
       <div className='aspect-[16/9] flex items-end bg-cover bg-center text-white text-5xl font-bold text-secondary' style={{ backgroundImage: `url(${imageUrl})` }} />
-      <div className='flex flex-row gap-10 my-10 max-md:my-0'>
+      <div className='flex flex-row gap-32 my-36 max-md:my-0'>
         <div className='max-md:hidden min-w-fit mt-10'>
           <SideBar sectionTitles={sectionTitles} currentDivId={currentInViewDivId} ns='thep-trang-men' />
         </div>
-        <div className='max-md:w-4/5 max-md:mx-auto'>
+        <div className='max-md:w-4/5 max-md:mx-auto relative'>
+          <div className='text-3xl top-[-120px] mt-10 absolute'>{'Tấm ốp tường nam châm nhật bản'.toUpperCase()}</div>
           <PartIntro setCurrentInViewDivId={setCurrentInViewDivId} />
           <PartMauSac setCurrentInViewDivId={setCurrentInViewDivId} />
           <PartUngDungTamOp setCurrentInViewDivId={setCurrentInViewDivId} />
