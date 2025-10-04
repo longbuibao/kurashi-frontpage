@@ -39,13 +39,13 @@ const PartSanPhamLienQuan: React.FC<PartSanPhamLienQuanProps> = ({ setCurrentInV
   ]
 
   return (
-    <div ref={ref} id={c.sanPhamLienQuan} className='mt-40'>
+    <div ref={ref} id={c.sanPhamLienQuan} className='mt-40 '>
       <div className='text-3xl mb-10'>SẢN PHẨM LIÊN QUAN</div>
       <div className='flex flex-row justify-between'>
         {relatedProducts.map(x =>
           <Link key={x.thumb} href={x.url as any}>
             <div className='flex flex-col gap-5 justify-center w-fit'>
-              <Image src={x.thumb} width={300} height={300} alt={x.alt} />
+              <Image src={x.thumb} width={300} height={300} alt={x.alt} className='transition-shadow hover:shadow-lg' />
               <div className='text-center'>{x.alt}</div>
             </div>
           </Link>
