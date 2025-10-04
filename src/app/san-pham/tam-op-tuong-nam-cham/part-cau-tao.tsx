@@ -10,7 +10,7 @@ interface PartSpecTableProps {
 
 const PartCauTao: React.FC<PartSpecTableProps> = ({ setCurrentInViewDivId }) => {
   const { ref } = useInView({
-    threshold: 1,
+    threshold: 0.6,
     onChange: (inView, _) => {
       if (inView) {
         setCurrentInViewDivId(`${c.cauTao}`)
