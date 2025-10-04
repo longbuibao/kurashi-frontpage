@@ -2,7 +2,7 @@
 import { FC, useState } from 'react'
 import Link from 'next/link'
 
-import { Logo } from '@/components/logo'
+import { KurashiLogoSvg } from '@/components/logo'
 import { KurashiLink } from '@/components/kurashi-link'
 import { v4 as uuidv4 } from 'uuid'
 import { ProductCard } from '@/components/product'
@@ -39,7 +39,7 @@ const Nav: FC<NavProps> = ({ links, products }) => {
             <div className='absolute flex flex-col justify-center items-center pt-3 w-full'>
               <Link href='/' className='max-md:w-1/2'>
                 <div className='max-md:w-full w-1/2 mx-auto'>
-                  <Logo isMxAuto width={450} height={157} />
+                  <KurashiLogoSvg width='500' height='87' />
                 </div>
               </Link>
             </div>

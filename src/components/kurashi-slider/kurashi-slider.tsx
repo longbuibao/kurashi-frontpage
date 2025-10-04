@@ -15,7 +15,7 @@ const KurashiSlider = (): React.ReactElement => {
   useEffect(() => {
     const timer = setInterval(() => {
       setIndex(prev => (prev + 1) % steps.length)
-    }, 4000)
+    }, 2000)
 
     return () => clearInterval(timer)
   }, [steps.length])
@@ -31,7 +31,7 @@ const KurashiSlider = (): React.ReactElement => {
           </div>
         </div>
       </div>
-      <div className='w-full bg-[#737475] h-[1px] relative mt-14]'>
+      <div className='w-full bg-[#737475] h-[1px] relative mt-10]'>
         <div className='w-4/5 mx-auto flex flex-row justify-between absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2'>
           {steps.map((x, y) => {
             const isActive = index === y

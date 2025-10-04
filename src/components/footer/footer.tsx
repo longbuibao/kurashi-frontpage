@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { TFunction } from 'i18next'
 import { v4 as uuidv4 } from 'uuid'
 
-import { Logo } from '@/components/logo'
+import { KurashiLogoSvg } from '@/components/logo'
 import { LogoFacebook, LogoYoutube, LogoZalo } from '@/components/svg-icons'
 import { footerLinks, phoneNumber } from '@/constants'
 import { address, addressName, tel } from '@/i18n/translation-key'
@@ -20,7 +20,7 @@ const Footer: React.FC<FooterProps> = ({ t }) => {
         <div className='w-4/5 mx-auto border-b-2 border-secondary pb-7'>
           <div className='mb-5 pt-10 pb-5 w-fit max-md:w-[60%] max-md:pb-0 max-md:pt-5'>
             <Link href='/' className='w-fit'>
-              <Logo width={300} srcImage='https://storage.googleapis.com/kurashi_frontpage_files/images/logo_white.png' />
+              <KurashiLogoSvg width='300' height='52' color='white' />
             </Link>
           </div>
           <div className='flex flex-row justify-between max-md:flex-col'>
