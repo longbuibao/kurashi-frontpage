@@ -3,13 +3,11 @@
 import React, { useEffect, useRef, useState } from 'react'
 import Image from 'next/image'
 
-const steps = [
-  { summary: 'Tích hợp phụ kiện', thumbnail: 'https://storage.googleapis.com/kurashi_frontpage_files/images/voi-rua/thumb_feature_1.png', label: 'TÍCH HỢP PHỤ KIỆN', title: 'PHỤ KIỆN NAM CHÂM, KHÔNG CẦN KHOAN', content: 'Tấm ốp tường hút nam châm cho phép gắn, tháo và di chuyển phụ kiện từ tính tự do mà không cần khoan, giúp bề mặt tường luôn nguyên vẹn.' },
-  { summary: 'chống ố', thumbnail: 'https://storage.googleapis.com/kurashi_frontpage_files/images/voi-rua/thumb_feature_1.png', label: 'CHỐNG Ố', title: 'KHÓ BÁM BẨN VÀ DỄ VỆ SINH', content: 'Bề mặt hard coating chống bám dầu mỡ và bụi bẩn, giúp lau chùi nhanh chóng, đặc biệt phù hợp cho khu bếp thường xuyên có nhiều vết bẩn.' },
-  { summary: 'Dễ thi công', thumbnail: 'https://storage.googleapis.com/kurashi_frontpage_files/images/voi-rua/thumb_feature_1.png', label: 'DỄ THI CÔNG', title: 'DỄ CẮT GHÉP VÀ THI CÔNG NHANH CHÓNG', content: 'Tấm ốp tường hút nam châm có trọng lượng nhẹ hơn nhiều so với ốp đá tự nhiên, dễ cắt ghép và thi công, giúp giảm đáng kể chi phí nhân công và thời gian lắp đặt.' }
-]
+interface Props {
+  steps: Array<{ summary: string, thumbnail: string, title: string, content: string }>
+}
 
-const KurashiSlider = (): React.ReactElement => {
+const KurashiSlider: React.FC<Props> = ({ steps }): React.ReactElement => {
   const [index, setIndex] = useState(0)
   const timerRef = useRef<NodeJS.Timeout | null>(null)
 
@@ -55,8 +53,8 @@ const KurashiSlider = (): React.ReactElement => {
             const className = `size-9 rounded-full transition-colors ${isActive ? 'bg-main text-secondary' : 'bg-secondary border-black'}`
             const textClassName = isActive ? 'text-main font-bold' : 'text-black font-bold'
             return (
-              <div key={x.title} className='flex flex-col items-center gap-5'>
-                <button onClick={() => handleClick(y)} className={className}>
+              <div key={x.title} onClick={() => handleClick(y)} className='hover:cursor-pointer flex flex-col items-center gap-5'>
+                <button className={className}>
                   <i className='fa-solid fa-chevron-right' />
                 </button>
                 <div className={textClassName}>{x.summary.toUpperCase()}</div>

@@ -32,7 +32,7 @@ const PartThuNghiemDauMo: React.FC<PartThuNghiemDauMoProps> = ({ setCurrentInVie
 
   return (
     <>
-      <div className='my-10 flex flex-col gap-5'>
+      <div className='my-20 flex flex-col gap-5'>
         <div className='text-3xl'>THÍ NGHIỆM SO SÁNH</div>
         <div className='my-3'>Dưới đây là thí nghiệm so sánh khả năng chống dầu mỡ và chống cháy của thép tráng men và vật liệu khác. </div>
       </div>

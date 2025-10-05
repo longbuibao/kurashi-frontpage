@@ -21,7 +21,7 @@ const PartMauSac: React.FC<Props> = ({ setCurrentInViewDivId }) => {
 
   return (
     <div ref={ref} id={`${c.mauSac}`} className='mt-40'>
-      <div className='text-3xl mt-10'>Màu sắc sang trọng</div>
+      <div className='text-3xl mt-10'>{'Màu sắc sang trọng'.toUpperCase()}</div>
       <div className='my-10 w-4/5'>Sonic Silver, Champagne Gold, Cement Gray, Matte Black – bốn sắc màu cao cấp giúp tấm ốp tường hút nam châm hòa hợp hoàn hảo với mọi không gian hiện đại.</div>
       <div className='grid grid-cols-[300px_auto] grid-rows-[auto_auto_auto] h-screen gap-10'>
         <div className='relative'>
