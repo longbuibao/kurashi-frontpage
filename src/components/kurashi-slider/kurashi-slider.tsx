@@ -53,12 +53,13 @@ const KurashiSlider = (): React.ReactElement => {
           {steps.map((x, y) => {
             const isActive = index === y
             const className = `size-9 rounded-full transition-colors ${isActive ? 'bg-main text-secondary' : 'bg-secondary border-black'}`
+            const textClassName = isActive ? 'text-main font-bold' : 'text-black font-bold'
             return (
               <div key={x.title} className='flex flex-col items-center gap-5'>
                 <button onClick={() => handleClick(y)} className={className}>
                   <i className='fa-solid fa-chevron-right' />
                 </button>
-                {x.summary.toUpperCase()}
+                <div className={textClassName}>{x.summary.toUpperCase()}</div>
               </div>
             )
           })}
