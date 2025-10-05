@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import Image from 'next/image'
 
 const steps = [
@@ -11,18 +11,35 @@ const steps = [
 
 const KurashiSlider = (): React.ReactElement => {
   const [index, setIndex] = useState(0)
+  const timerRef = useRef<NodeJS.Timeout | null>(null)
+
+  const startAutoSlide = (): void => {
+    timerRef.current = setInterval(() => {
+      setIndex(prev => (prev + 1) % steps.length)
+    }, 3000)
+  }
+
+  const stopAutoSlide = (): void => {
+    if (timerRef.current != null) {
+      clearInterval(timerRef.current)
+      timerRef.current = null
+    }
+  }
 
   useEffect(() => {
-    const timer = setInterval(() => {
-      setIndex(prev => (prev + 1) % steps.length)
-    }, 2000)
+    startAutoSlide()
+    return () => stopAutoSlide()
+  }, [])
 
-    return () => clearInterval(timer)
-  }, [steps.length])
+  const handleClick = (y: number): void => {
+    stopAutoSlide()
+    setIndex(y)
+    startAutoSlide()
+  }
 
   return (
     <div>
-      <div className='w-full flex-col items-center justify-center my-14 h-80'>
+      <div className='w-full flex-col items-center justify-center mt-14 h-80'>
         <div key={steps[index].title} className='flex flex-row gap-10 w-4/5 mx-auto animate-fade-in'>
           <Image src={steps[index].thumbnail} width={308} height={191} alt={steps[index].content} />
           <div className='flex flex-col gap-5'>
@@ -31,13 +48,15 @@ const KurashiSlider = (): React.ReactElement => {
           </div>
         </div>
       </div>
-      <div className='w-full bg-[#737475] h-[1px] relative mt-10]'>
+      <div className='w-full bg-secondary h-[1px] relative -mt-10]'>
         <div className='w-4/5 mx-auto flex flex-row justify-between absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2'>
           {steps.map((x, y) => {
             const isActive = index === y
-            const className = `size-9 transition-colors ${isActive ? 'bg-main' : 'bg-[#737475]'}`
+            const className = `size-9 rounded-full transition-colors ${isActive ? 'bg-main text-secondary' : 'bg-secondary border-black'}`
             return (
-              <button onClick={() => setIndex(y)} key={x.title} className={className} />
+              <button onClick={() => handleClick(y)} key={x.title} className={className}>
+                <i className='fa-solid fa-chevron-right' />
+              </button>
             )
           })}
         </div>
