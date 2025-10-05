@@ -2,6 +2,7 @@ import React from 'react'
 import { useInView } from 'react-intersection-observer'
 import Image from 'next/image'
 
+import { CauTaoVatLieu } from '@/components/svg-images'
 import * as c from './const'
 
 interface PartSpecTableProps {
@@ -24,7 +25,7 @@ const PartCauTao: React.FC<PartSpecTableProps> = ({ setCurrentInViewDivId }) => 
       <div className='text-3xl mb-10'>CẤU TẠO VẬT LIỆU</div>
       <div className='flex flex-col gap-10 items-center'>
         <div>Cấu tạo gồm 3 lớp: lớp thép trung tâm tạo khả năng hút nam châm, lớp board nền phía dưới gia tăng độ ổn định, và lớp hard coating bề mặt giúp chống trầy, giữ màu sắc và hoa văn tinh tế. Độ dày tổng thể 3.4 mm – mỏng nhẹ nhưng bền chắc.</div>
-        <Image width={607} height={300} alt='Cấu tạo thép tráng men' src='https://storage.googleapis.com/kurashi_frontpage_files/images/voi-rua/cautao.png' />
+        <CauTaoVatLieu />
       </div>
     </div>
   )
