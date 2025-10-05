@@ -13,6 +13,7 @@ import prisma from '@/lib/prisma'
 import { Inter } from 'next/font/google'
 import { BackToTopButton } from '@/components/back-to-top'
 import { lng } from '@/app/const'
+import localFont from 'next/font/local'
 
 export const metadata = {
   title: 'Trang chủ Kurashi',
@@ -24,6 +25,18 @@ interface RootProps {
 }
 
 const inter = Inter({ subsets: ['latin'], weight: '200' })
+
+const gtFont = localFont({
+  src: [
+    {
+      path: '../../public/fonts/GT_Super_Display_Regular.otf',
+      weight: '400',
+      style: 'normal'
+    }
+  ],
+  variable: '--font-gtFont',
+  display: 'swap'
+})
 
 const RootLayout: React.FC<RootProps> = async ({ children }): Promise<React.ReactElement> => {
   const { t } = await useTranslation(lng)
@@ -39,7 +52,7 @@ const RootLayout: React.FC<RootProps> = async ({ children }): Promise<React.Reac
   })
 
   return (
-    <html lang={lng} dir={dir(lng)}>
+    <html lang={lng} dir={dir(lng)} className={`${gtFont.variable}`}>
       <head>
         <GoogleAnalytics gaId='G-XCHH0MSJ6B' />
         <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css' crossOrigin='anonymous' />

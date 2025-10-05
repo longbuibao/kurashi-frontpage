@@ -45,7 +45,8 @@ const config: Config = {
       }
     },
     fontFamily: {
-      body: ['Futura']
+      body: ['Futura'],
+      gtFont: ['var(--font-gtFont)']
     }
   },
   plugins: [require('@tailwindcss/typography')]
