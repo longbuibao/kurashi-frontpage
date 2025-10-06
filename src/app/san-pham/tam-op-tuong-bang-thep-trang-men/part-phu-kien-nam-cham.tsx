@@ -12,7 +12,7 @@ interface PartPartPhuKienNamChamProps {
 
 const PartPhuKienNamCham: React.FC<PartPartPhuKienNamChamProps> = ({ setCurrentInViewDivId }) => {
   const { ref } = useInView({
-    threshold: 1,
+    threshold: 0.4,
     onChange: (inView, _) => {
       if (inView) {
         setCurrentInViewDivId(`${transKey.magnetAccessories}`)
