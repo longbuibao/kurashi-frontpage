@@ -28,6 +28,7 @@ const Page: React.FC = () => {
           <PartIntroThepTrangMen setCurrentInViewDivId={setCurrentInViewDivId} />
           <PartTinhNangNoiBatThepTrangMen setCurrentInViewDivId={setCurrentInViewDivId} />
           <PartUngDungThepTrangMen setCurrentInViewDivId={setCurrentInViewDivId} />
+          <PartKichThuocMauSac setCurrentInViewDivId={setCurrentInViewDivId} />
           <PartPhuKienNamCham setCurrentInViewDivId={setCurrentInViewDivId} />
           <PartSpecTable setCurrentInViewDivId={setCurrentInViewDivId} />
           <PartThuNghiemDauMo setCurrentInViewDivId={setCurrentInViewDivId} />

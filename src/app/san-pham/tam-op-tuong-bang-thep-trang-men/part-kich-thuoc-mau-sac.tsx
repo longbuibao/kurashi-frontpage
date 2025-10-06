@@ -23,7 +23,7 @@ const PartKichThuocMauSac: React.FC<PartKichThuocMauSacProps> = ({ setCurrentInV
     <div ref={ref} id={`${transKey.colorAndSize}`} className='my-10'>
       <div className='text-3xl mb-10'>KÍCH THƯỚC VÀ MÀU SẮC</div>
       <div className='my-10'>Tấm ốp tường bằng thép tráng men có 3 màu là trắng, xám và be với 3 khổ kích thước khác nhau là 890x1800, 890x2400 và 1210x2400 mm.</div>
-      <div className='w-4/5 mx-auto max-md:w-full'>
+      <div className='max-md:w-full'>
         <div className='flex flex-row justify-between mt-6 items-end max-md:mt-10'>
           <SizeCard size='s' />
           <SizeCard size='m' />

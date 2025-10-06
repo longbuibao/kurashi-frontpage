@@ -30,10 +30,10 @@ const PartIntroThepTrangMen: React.FC<Props> = ({ setCurrentInViewDivId }) => {
         <Image src='https://storage.googleapis.com/kurashi_frontpage_files/images/thep-trang-men-page/homepage_ttm1.png' width={786} height={442} alt='Ứng dụng thép tráng men' />
       </div>
       <div className='flex flex-row gap-16 my-10'>
-        <Image src='https://storage.googleapis.com/kurashi_frontpage_files/images/thep-trang-men-page/intro_structure.png' width={450} height={289} alt='cấu tạo thép tráng men' />
-        <div className='flex flex-col w-1/2 gap-10'>
+        <Image src='https://storage.googleapis.com/kurashi_frontpage_files/images/rework-thep-trang-men/gioi_thieu_ttm.png' width={450} height={289} alt='cấu tạo thép tráng men' />
+        <div className='flex flex-col w-1/2 gap-10 items-center'>
           <div className='font-gtFont text-3xl'>MADE IN JAPAN</div>
-          <div>Thép tráng men là vật liệu gồm 6 lớp tích hợp giữa men kính và kim loại. Riêng lớp mặt gồm 2 lớp men kính (dual coating). Vật liệu được nung ở nhiệt độ cao và được  sản xuất 100% tại Nhật Bản</div>
+          <div className='w-4/5 self-center'>Thép tráng men là vật liệu gồm 6 lớp tích hợp giữa men kính và kim loại. Riêng lớp mặt gồm 2 lớp men kính (dual coating). Vật liệu được nung ở nhiệt độ cao và được  sản xuất 100% tại Nhật Bản</div>
         </div>
       </div>
     </div>
