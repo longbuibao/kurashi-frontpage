@@ -23,37 +23,38 @@ const PartMauSac: React.FC<Props> = ({ setCurrentInViewDivId }) => {
     <div ref={ref} id={`${c.mauSac}`} className='mt-40'>
       <div className='text-3xl mt-10'>{'Màu sắc sang trọng'.toUpperCase()}</div>
       <div className='my-10 w-4/5'>Sonic Silver, Champagne Gold, Cement Gray, Matte Black – bốn sắc màu cao cấp giúp tấm ốp tường hút nam châm hòa hợp hoàn hảo với mọi không gian hiện đại.</div>
-      <div className='grid grid-cols-[300px_auto] grid-rows-[auto_auto_auto] h-screen gap-10'>
+      <div className='grid grid-cols-[400px_auto] grid-rows-[auto_auto_auto] h-screen gap-10'>
         <div className='relative'>
           <Image
-            src='https://storage.googleapis.com/kurashi_frontpage_files/images/voi-rua/mau_sac_1.png'
-            alt='Tấm ốp tường nam châm màu cement gray'
+            src='https://storage.googleapis.com/kurashi_frontpage_files/images/tam-op-tuong-nam-cham/mau-champagne-gold.webp'
+            alt='Tấm ốp tường nam châm màu champagne gold'
             fill
-            className='object-cover'
+            className='object-fill'
           />
         </div>
         <div className='relative row-span-3'>
           <Image
-            src='https://storage.googleapis.com/kurashi_frontpage_files/images/voi-rua/mau_sac_4.png'
-            alt='Tấm ốp tường nam châm màu cement gray'
-            fill
-            className='object-cover'
+            src='https://storage.googleapis.com/kurashi_frontpage_files/images/tam-op-tuong-nam-cham/mau-matte-black.webp'
+            alt='Tấm ốp tường nam châm màu matte black'
+            width={700}
+            height={1001}
+            className='object-center'
           />
         </div>
         <div className='relative'>
           <Image
-            src='https://storage.googleapis.com/kurashi_frontpage_files/images/voi-rua/mau_sac_2.png'
-            alt='Tấm ốp tường nam châm màu cement gray'
+            src='https://storage.googleapis.com/kurashi_frontpage_files/images/tam-op-tuong-nam-cham/mau-sonic-silver.webp'
+            alt='Tấm ốp tường nam châm màu sonic silver'
             fill
-            className='object-cover'
+            className='object-fill'
           />
         </div>
         <div className='relative'>
           <Image
-            src='https://storage.googleapis.com/kurashi_frontpage_files/images/voi-rua/mau_sac_3.png'
+            src='https://storage.googleapis.com/kurashi_frontpage_files/images/tam-op-tuong-nam-cham/mau-cement-gray.webp'
             alt='Tấm ốp tường nam châm màu cement gray'
             fill
-            className='object-cover'
+            className='object-fill'
           />
         </div>
       </div>

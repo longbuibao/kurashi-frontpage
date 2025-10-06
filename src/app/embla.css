@@ -5,6 +5,13 @@
 	--slide-size: 33%;
 }
 
+.embla__size-50 {
+	margin: auto;
+	--slide-height: 30rem;
+	--slide-spacing: 1rem;
+	--slide-size: 100%;
+}
+
 @media not all and (min-width: 768px) {
 	.embla__size-30 {
 		--slide-size: 100%;

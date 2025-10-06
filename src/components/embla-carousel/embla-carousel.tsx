@@ -13,10 +13,11 @@ interface PropType {
   options?: EmblaOptionsType
   useControlButton?: boolean
   useFlatControlButton?: boolean
+  biggerSlider?: boolean
 }
 
 const EmblaCarousel: React.FC<PropType> = (props) => {
-  const { slides, options, useControlButton = false, useFlatControlButton = false } = props
+  const { slides, options, useControlButton = false, useFlatControlButton = false, biggerSlider = false } = props
   const [emblaRef, emblaApi] = useEmblaCarousel(options, [
     Autoplay({ playOnInit: true, delay: 3000 })
   ])
@@ -28,9 +29,10 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
     autoplay?.play()
   }, [emblaApi])
   const className = useFlatControlButton ? 'embla__size-30 theme-light' : 'embla theme-light'
+  const biggerSliderClassName = biggerSlider ? 'embla__size-50 theme-light' : 'embla theme-light'
 
   return (
-    <section className={className}>
+    <section className={biggerSlider ? biggerSliderClassName : className}>
       {useFlatControlButton && (
         <div className='my-7 embla__flat-dots'>
           {scrollSnaps.map((_, index) => (

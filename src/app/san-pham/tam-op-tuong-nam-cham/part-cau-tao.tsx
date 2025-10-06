@@ -1,6 +1,5 @@
 import React from 'react'
 import { useInView } from 'react-intersection-observer'
-import Image from 'next/image'
 
 import { CauTaoVatLieu } from '@/components/svg-images'
 import * as c from './const'

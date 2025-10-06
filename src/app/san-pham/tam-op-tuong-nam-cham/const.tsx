@@ -10,15 +10,15 @@ export const lienHe = 'Liên hệ'
 export const sanPhamLienQuan = 'Sản phẩm liên quan'
 
 export const imageUrls = [
-  'https://storage.googleapis.com/kurashi_frontpage_files/images/voi-rua/ung_dung_1.png',
-  'https://storage.googleapis.com/kurashi_frontpage_files/images/voi-rua/ung_dung_2.png',
-  'https://storage.googleapis.com/kurashi_frontpage_files/images/voi-rua/ung_dung_3.png',
-  'https://storage.googleapis.com/kurashi_frontpage_files/images/voi-rua/ung_dung_4.png'
+  'https://storage.googleapis.com/kurashi_frontpage_files/images/tam-op-tuong-nam-cham/ung-dung-op-bep.webp',
+  'https://storage.googleapis.com/kurashi_frontpage_files/images/tam-op-tuong-nam-cham/ung-dung-op-lavabo.webp',
+  'https://storage.googleapis.com/kurashi_frontpage_files/images/tam-op-tuong-nam-cham/ung-dung-op-tuong-ban-lam-viec.webp',
+  'https://storage.googleapis.com/kurashi_frontpage_files/images/tam-op-tuong-nam-cham/ung-dung-op-tuong-phong-khach.webp'
 ].map(x => {
   return {
     key: x,
     content: (
-      <Image src={x} width={500} height={300} alt='Ứng dụng của tấm ốp tường nam châm' />
+      <Image src={x} width={1281} height={701} alt='Ứng dụng của tấm ốp tường nam châm' />
     )
   }
 })

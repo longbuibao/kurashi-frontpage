@@ -12,7 +12,7 @@ import PartTinhChat from './part-tinh-chat'
 import PartSanPhamLienQuan from './part-san-pham-lien-quan'
 
 const Page: React.FC = () => {
-  const imageUrl = 'https://storage.googleapis.com/kurashi_frontpage_files/images/thep-trang-men-page/thep-trang-men-cover.png'
+  const imageUrl = 'https://storage.googleapis.com/kurashi_frontpage_files/images/tam-op-tuong-nam-cham/tam-op-tuong-nam-cham-nhat-ban.webp'
   const [currentInViewDivId, setCurrentInViewDivId] = React.useState('')
   const sectionTitles = [
     c.intro,
