@@ -13,7 +13,7 @@ import PartThuNghiemDauMo from './part-thu-nghiem-dau-mo'
 import PartSanPhamLienQuan from '../tam-op-tuong-nam-cham/part-san-pham-lien-quan'
 
 const Page: React.FC = () => {
-  const imageUrl = 'https://storage.googleapis.com/kurashi_frontpage_files/images/thep-trang-men-page/ttm_landingpage.jpg'
+  const imageUrl = 'https://storage.googleapis.com/kurashi_frontpage_files/images/rework-thep-trang-men/tam-op-tuong-thep-trang-men-nhat-ban.webp'
   const [currentInViewDivId, setCurrentInViewDivId] = React.useState('')
   const sectionTitles = [transKey.thepTrangMen, transKey.standoutFeatures, transKey.application, transKey.colorAndSize, transKey.magnetAccessories, transKey.specInfo, transKey.ungDungLauDauMo]
   return (

@@ -40,23 +40,19 @@ export const applications = [
 ]
 
 export const imageUrls = [
-  'https://storage.googleapis.com/kurashi_frontpage_files/images/thep_trang_men_slider/10.jpg',
-  'https://storage.googleapis.com/kurashi_frontpage_files/images/thep_trang_men_slider/11.jpg',
-  'https://storage.googleapis.com/kurashi_frontpage_files/images/thep_trang_men_slider/12.jpg',
-  'https://storage.googleapis.com/kurashi_frontpage_files/images/thep_trang_men_slider/13.jpg',
-  'https://storage.googleapis.com/kurashi_frontpage_files/images/thep_trang_men_slider/14.jpg',
-  'https://storage.googleapis.com/kurashi_frontpage_files/images/thep_trang_men_slider/15-01.jpg',
-  'https://storage.googleapis.com/kurashi_frontpage_files/images/thep_trang_men_slider/15.jpg',
-  'https://storage.googleapis.com/kurashi_frontpage_files/images/thep_trang_men_slider/16.jpg',
-  'https://storage.googleapis.com/kurashi_frontpage_files/images/thep_trang_men_slider/17.jpg',
-  'https://storage.googleapis.com/kurashi_frontpage_files/images/thep_trang_men_slider/7.jpg',
-  'https://storage.googleapis.com/kurashi_frontpage_files/images/thep_trang_men_slider/8.jpg'
+  'https://storage.googleapis.com/kurashi_frontpage_files/images/rework-thep-trang-men/ke-bep-nam-cham--nho.webp',
+  'https://storage.googleapis.com/kurashi_frontpage_files/images/rework-thep-trang-men/ke-bep-nam-cham-lon.webp',
+  'https://storage.googleapis.com/kurashi_frontpage_files/images/rework-thep-trang-men/moc-treo-nam-cham-lon.webp',
+  'https://storage.googleapis.com/kurashi_frontpage_files/images/rework-thep-trang-men/moc-treo-nam-cham-nho.webp',
+  'https://storage.googleapis.com/kurashi_frontpage_files/images/rework-thep-trang-men/treo-khan-nam-cham.webp',
+  'https://storage.googleapis.com/kurashi_frontpage_files/images/rework-thep-trang-men/treo-nap-noi-nam-cham.webp',
+  'https://storage.googleapis.com/kurashi_frontpage_files/images/rework-thep-trang-men/treo-thot-nam-cham.webp'
 ].map(x => {
   return {
     key: x,
     content: (
       <div>
-        <Image src={x} width={500} height={500} alt='Ứng dụng của thép tráng men' />
+        <Image src={x} width={1281} height={701} alt='Ứng dụng của thép tráng men' />
       </div>
     )
   }

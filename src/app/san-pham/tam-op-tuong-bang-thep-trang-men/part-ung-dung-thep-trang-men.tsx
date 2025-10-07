@@ -10,15 +10,14 @@ interface PartUngDungThepTrangMenProps {
 }
 
 const imageUrls = [
-  'https://storage.googleapis.com/kurashi_frontpage_files/images/voi-rua/ung_dung_1.png',
-  'https://storage.googleapis.com/kurashi_frontpage_files/images/voi-rua/ung_dung_2.png',
-  'https://storage.googleapis.com/kurashi_frontpage_files/images/voi-rua/ung_dung_3.png',
-  'https://storage.googleapis.com/kurashi_frontpage_files/images/voi-rua/ung_dung_4.png'
+  'https://storage.googleapis.com/kurashi_frontpage_files/images/rework-thep-trang-men/ung-dung-op-bep.webp',
+  'https://storage.googleapis.com/kurashi_frontpage_files/images/rework-thep-trang-men/ung-dung-op-lavabo.webp',
+  'https://storage.googleapis.com/kurashi_frontpage_files/images/rework-thep-trang-men/ung-dung-op-tuong-phong-lam-viec.webp'
 ].map(x => {
   return {
     key: x,
     content: (
-      <Image src={x} width={500} height={300} alt='Ứng dụng của tấm ốp tường nam châm' />
+      <Image src={x} width={1281} height={701} alt='Ứng dụng của tấm ốp tường nam châm' />
     )
   }
 })
@@ -39,7 +38,7 @@ const PartUngDungThepTrangMen: React.FC<PartUngDungThepTrangMenProps> = ({ setCu
       <div className='text-3xl'>ỨNG DỤNG ỐP TƯỜNG</div>
       <div>Thép tráng men được sử dụng để làm tấm ốp tường như ốp tường bếp, ốp tường lavabo phòng tắm hoặc ốp tường văn phòng.</div>
       <div className='flex flex-col gap-10'>
-        <EmblaCarousel useFlatControlButton slides={imageUrls} />
+        <EmblaCarousel biggerSlider useFlatControlButton slides={imageUrls} />
       </div>
     </div>
 

@@ -25,7 +25,7 @@ const PartPhuKienNamCham: React.FC<PartPartPhuKienNamChamProps> = ({ setCurrentI
     <div ref={ref} id={`${transKey.magnetAccessories}`} className='my-32'>
       <div className='text-3xl'>PHỤ KIỆN BẾP HÚT NAM CHÂM</div>
       <div className='my-10'>Do tấm ốp bếp bằng thép tráng men có lớp thép kim loại bên trong nên có thể kết hợp được các loại phụ kiện bếp hút nam châm. Bạn không cần phải khoan tường bếp và sử dụng ốc vít để treo phụ kiện. Đặc biệt bạn có thể di chuyển tự do các loại phụ kiện này đến bất kì vị trí nào mong muốn, giúp mang lại sự tiện lợi và gọn gàng cho gian bếp.Kurashi cung cấp nhiều loại <><Link className='text-main' href='/san-pham/phu-kien-bep'>phụ kiện bếp hút nam châm</Link></> thông minh và đa năng như kệ bếp, kệ đựng gia vị, hũ đựng gia vị, móc treo và giá treo dao thớt.</div>
-      <EmblaCarousel useFlatControlButton slides={imageUrls} />
+      <EmblaCarousel biggerSlider useFlatControlButton slides={imageUrls} />
       <div className='flex flex-row gap-5 max-md:flex-col my-32'>
         <iframe
           src='https://www.youtube.com/embed/PPpMjHjyWuo'

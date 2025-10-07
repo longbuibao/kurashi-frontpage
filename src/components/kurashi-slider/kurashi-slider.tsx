@@ -41,7 +41,7 @@ const KurashiSlider: React.FC<Props> = ({ steps }): React.ReactElement => {
         <div key={steps[index].title} className='flex flex-row gap-10 w-4/5 mx-auto animate-fade-in'>
           <Image src={steps[index].thumbnail} width={308} height={191} alt={steps[index].content} />
           <div className='flex flex-col gap-5'>
-            <div>{steps[index].title}</div>
+            <div className='text-main font-bold text-xl text-center'>{steps[index].title}</div>
             <div>{steps[index].content}</div>
           </div>
         </div>
