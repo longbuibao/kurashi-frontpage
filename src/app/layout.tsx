@@ -14,6 +14,8 @@ import { Inter } from 'next/font/google'
 import { BackToTopButton } from '@/components/back-to-top'
 import { lng } from '@/app/const'
 import localFont from 'next/font/local'
+import { KurashiLogoSvg } from '@/components/logo'
+import Link from 'next/link'
 
 export const metadata = {
   title: 'Trang chủ Kurashi',
@@ -40,6 +42,20 @@ const gtFont = localFont({
 
 const RootLayout: React.FC<RootProps> = async ({ children }): Promise<React.ReactElement> => {
   const { t } = await useTranslation(lng)
+  const footerItems = [
+    {
+      title: 'Hệ thống phân phối chính hãng',
+      content: 'Tra cứu điểm bán hàng chính hãng gần bạn nhất trên cả nước'
+    },
+    {
+      title: 'Catalog',
+      content: 'Thông tin sản phẩm và bộ sưu tập mới nhất'
+    },
+    {
+      title: 'Tài khoản my K',
+      content: 'Hệ thống giao dịch số và điểm thưởng dành riêng cho đối tác'
+    }
+  ]
 
   const productsRaw = await prisma.product.findMany({
     take: 3,
@@ -65,9 +81,26 @@ const RootLayout: React.FC<RootProps> = async ({ children }): Promise<React.Reac
           {children}
         </ProgressBarProviders>
         <BackToTopButton />
+        <div className='flex flex-row justify-between w-4/5 mx-auto py-36'>
+          {footerItems.map(x => {
+            return (
+              <Link key={x.title} href='#'>
+                <div className='flex flex-col gap-10 w-96'>
+                  <div className='flex flex-row items-center gap-10'>
+                    <i className='text-5xl fa-solid fa-chevron-right' />
+                    <div className='font-bold'>{x.title}</div>
+                  </div>
+                  <div className='mt-5'>{x.content}</div>
+                </div>
+              </Link>
+
+            )
+          })}
+        </div>
         <Footer t={t} />
-        <div className='bg-[#24292e] pt-5 pb-10'>
+        <div className='bg-[#24292e] pt-5 overflow-hidden'>
           <div className='text-secondary hover:cursor-default text-left w-4/5 mx-auto text-xs'>Copyright 2024 Kurashi Corporation. All rights reserved</div>
+          <div className='w-4/5 mx-auto mt-10 translate-y-10'><KurashiLogoSvg width='300' height='52' color='white' /></div>
         </div>
       </body>
     </html>

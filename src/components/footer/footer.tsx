@@ -3,7 +3,6 @@ import Link from 'next/link'
 import { TFunction } from 'i18next'
 import { v4 as uuidv4 } from 'uuid'
 
-import { KurashiLogoSvg } from '@/components/logo'
 import { LogoFacebook, LogoYoutube, LogoZalo } from '@/components/svg-icons'
 import { footerLinks, phoneNumber } from '@/constants'
 import { address, addressName, tel } from '@/i18n/translation-key'
@@ -16,13 +15,8 @@ interface FooterProps {
 const Footer: React.FC<FooterProps> = ({ t }) => {
   return (
     <div className='flex flex-col gap-10'>
-      <div className='bg-[#24292e] text-secondary'>
+      <div className='bg-[#24292e] text-secondary pt-10'>
         <div className='w-4/5 mx-auto border-b-2 border-secondary pb-7'>
-          <div className='mb-5 pt-10 pb-5 w-fit max-md:w-[60%] max-md:pb-0 max-md:pt-5'>
-            <Link href='/' className='w-fit'>
-              <KurashiLogoSvg width='300' height='52' color='white' />
-            </Link>
-          </div>
           <div className='flex flex-row justify-between max-md:flex-col'>
             <div className='flex flex-row w-1/2 max-md:w-full max-md:gap-5 max-md:hidden'>
               {footerLinks.map(footerLink =>
