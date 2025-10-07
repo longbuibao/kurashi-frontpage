@@ -85,15 +85,14 @@ const RootLayout: React.FC<RootProps> = async ({ children }): Promise<React.Reac
           {footerItems.map(x => {
             return (
               <Link key={x.title} href='#'>
-                <div className='flex flex-col gap-10 w-96'>
+                <div className='flex flex-col gap-5 w-96'>
                   <div className='flex flex-row items-center gap-10'>
                     <i className='text-5xl fa-solid fa-chevron-right' />
-                    <div className='font-bold'>{x.title}</div>
+                    <div className='font-bold text-xl'>{x.title}</div>
                   </div>
                   <div className='mt-5'>{x.content}</div>
                 </div>
               </Link>
-
             )
           })}
         </div>
