@@ -16,6 +16,7 @@ import { lng } from '@/app/const'
 import localFont from 'next/font/local'
 import { KurashiLogoSvg } from '@/components/logo'
 import Link from 'next/link'
+import Image from 'next/image'
 
 export const metadata = {
   title: 'Trang chủ Kurashi',
@@ -88,7 +89,8 @@ const RootLayout: React.FC<RootProps> = async ({ children }): Promise<React.Reac
                 <div className='flex flex-col gap-5 w-96'>
                   <div className='flex flex-row items-center gap-10'>
                     <div className='size-8 flex items-center'>
-                      <i className='opacity-50 text-5xl fa-solid fa-chevron-right' />
+                      {/* <i className='opacity-50 text-5xl fa-solid fa-chevron-right' /> */}
+                      <Image src='https://storage.googleapis.com/kurashi_frontpage_files/images/rework-thep-trang-men/Icon.png' width={20} height={38} alt='' />
                     </div>
                     <div className='font-bold text-xl'>{x.title}</div>
                   </div>
