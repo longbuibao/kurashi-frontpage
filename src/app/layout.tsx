@@ -87,10 +87,15 @@ const RootLayout: React.FC<RootProps> = async ({ children }): Promise<React.Reac
               <Link key={x.title} href='#'>
                 <div className='flex flex-col gap-5 w-96'>
                   <div className='flex flex-row items-center gap-10'>
-                    <i className='text-5xl fa-solid fa-chevron-right' />
+                    <div className='size-8 flex items-center'>
+                      <i className='opacity-50 text-5xl fa-solid fa-chevron-right' />
+                    </div>
                     <div className='font-bold text-xl'>{x.title}</div>
                   </div>
-                  <div className='mt-5'>{x.content}</div>
+                  <div className='flex flex-row items-center gap-16'>
+                    <div className='size-8 collapse' />
+                    <div className=''>{x.content}</div>
+                  </div>
                 </div>
               </Link>
             )

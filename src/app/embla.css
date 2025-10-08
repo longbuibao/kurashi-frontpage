@@ -146,13 +146,14 @@
 }
 
 .embla__flat-dot--selected {
-	background: #000;
+	background: #437254;
 	height: 3px;
 	width: 50px;
 }
 
 .embla__flat-dot {
 	height: 1px;
+	opacity: 0.1;
 	width: 50px;
 	background: #000;
 }

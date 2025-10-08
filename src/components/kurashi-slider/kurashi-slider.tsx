@@ -42,26 +42,29 @@ const KurashiSlider: React.FC<Props> = ({ steps }): React.ReactElement => {
           <Image src={steps[index].thumbnail} width={308} height={191} alt={steps[index].content} />
           <div className='flex flex-col gap-5'>
             <div className='text-main font-bold text-xl text-center'>{steps[index].title}</div>
-            <div>{steps[index].content}</div>
+            <div className='text-center'>{steps[index].content}</div>
           </div>
         </div>
       </div>
-      <div className='w-full bg-secondary h-[1px] relative'>
-        <div className='w-4/5 mx-auto flex justify-between items-center -translate-y-[1.125rem]'>
-          {steps.map((x, y) => {
-            const isActive = index === y
-            const className = `size-9 rounded-full transition-colors ${isActive ? 'bg-main text-secondary' : 'bg-secondary border-black'}`
-            const textClassName = isActive ? 'text-main font-bold' : 'text-black font-bold'
-            return (
-              <div key={x.title} onClick={() => handleClick(y)} className='hover:cursor-pointer flex flex-col items-center gap-5'>
-                <button className={className}>
-                  <i className='fa-solid fa-chevron-right' />
-                </button>
-                <div className={textClassName}>{x.summary.toUpperCase()}</div>
-              </div>
-            )
-          })}
+      <div className='w-full bg-secondary h-[1px] relative -translate-y-16'>
+        <div className='w-4/5 mx-auto'>
+          <div className='w-4/5 mx-auto flex justify-between items-center -translate-y-[1.125rem]'>
+            {steps.map((x, y) => {
+              const isActive = index === y
+              const className = `size-9 rounded-full transition-colors ${isActive ? 'bg-main text-secondary' : 'bg-secondary border-black'}`
+              const textClassName = isActive ? 'text-main font-bold' : 'text-black font-bold'
+              return (
+                <div key={x.title} onClick={() => handleClick(y)} className='hover:cursor-pointer flex flex-col items-center gap-5'>
+                  <button className={className}>
+                    <i className='fa-solid fa-chevron-right' />
+                  </button>
+                  <div className={textClassName}>{x.summary.toUpperCase()}</div>
+                </div>
+              )
+            })}
+          </div>
         </div>
+
       </div>
 
     </div>

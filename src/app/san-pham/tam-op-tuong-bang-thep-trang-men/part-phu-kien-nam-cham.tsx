@@ -38,7 +38,7 @@ const PartPhuKienNamCham: React.FC<PartPartPhuKienNamChamProps> = ({ setCurrentI
           <div className='text-2xl'>
             SỰ KHÁC BIỆT
           </div>
-          <div>
+          <div className='text-center'>
             Thép tráng men là vật liệu gồm 6 lớp tích hợp giữa men kính và kim loại. Riêng lớp mặt gồm 2 lớp men kính (dual coating). Vật liệu được nung ở nhiệt độ cao và được  sản xuất 100% tại Nhật Bản
           </div>
         </div>
