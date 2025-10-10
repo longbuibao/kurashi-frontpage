@@ -82,27 +82,30 @@ const RootLayout: React.FC<RootProps> = async ({ children }): Promise<React.Reac
           {children}
         </ProgressBarProviders>
         <BackToTopButton />
-        <div className='flex flex-row justify-between w-4/5 mx-auto py-36'>
-          {footerItems.map(x => {
-            return (
-              <Link key={x.title} href='#'>
-                <div className='flex flex-col gap-5 w-96'>
+        <div className='bg-[#DADADA]'>
+          <div className='flex flex-row justify-between w-4/5 mx-auto py-36 '>
+            {footerItems.map(x => {
+              return (
+                <Link key={x.title} href='#'>
                   <div className='flex flex-row items-center gap-10'>
-                    <div className='size-8 flex items-center'>
-                      {/* <i className='opacity-50 text-5xl fa-solid fa-chevron-right' /> */}
+                    <div className='size-8 flex items-center self-start'>
                       <Image src='https://storage.googleapis.com/kurashi_frontpage_files/images/rework-thep-trang-men/Icon.png' width={20} height={38} alt='' />
                     </div>
-                    <div className='font-bold text-xl'>{x.title}</div>
+                    <div className='flex flex-col gap-5 w-96'>
+                      <div className='flex flex-row items-center gap-10'>
+                        <div className='font-bold text-xl'>{x.title}</div>
+                      </div>
+                      <div className='flex flex-row items-center gap-10'>
+                        <div className=''>{x.content}</div>
+                      </div>
+                    </div>
                   </div>
-                  <div className='flex flex-row items-center gap-16'>
-                    <div className='size-8 collapse' />
-                    <div className=''>{x.content}</div>
-                  </div>
-                </div>
-              </Link>
-            )
-          })}
+                </Link>
+              )
+            })}
+          </div>
         </div>
+
         <Footer t={t} />
         <div className='bg-[#24292e] pt-5 overflow-hidden'>
           <div className='text-secondary hover:cursor-default text-left w-4/5 mx-auto text-xs'>Copyright 2024 Kurashi Corporation. All rights reserved</div>

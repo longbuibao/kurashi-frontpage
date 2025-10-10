@@ -28,7 +28,7 @@ const PartIntroThepTrangMen: React.FC<Props> = ({ setCurrentInViewDivId }) => {
       </div>
       <div className='flex flex-row gap-5 max-md:flex-col'>
         <Image src='https://storage.googleapis.com/kurashi_frontpage_files/images/rework-thep-trang-men/thep-trang-men-op-bep.webp' width={353} height={441} alt='Ứng dụng thép tráng men' />
-        <Image src='https://storage.googleapis.com/kurashi_frontpage_files/images/rework-thep-trang-men/thep-trang-men.webp' width={786} height={442} alt='Ứng dụng thép tráng men' />
+        <Image src='https://storage.googleapis.com/kurashi_frontpage_files/images/rework-thep-trang-men/thep-trang-men-it-mau.webp' width={786} height={442} alt='Ứng dụng thép tráng men' />
       </div>
       <div className='flex flex-row gap-16 my-10'>
         <CauTaoVatLieuTTM width='500' height='390' />

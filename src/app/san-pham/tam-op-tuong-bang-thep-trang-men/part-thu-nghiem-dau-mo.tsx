@@ -38,11 +38,11 @@ const PartThuNghiemDauMo: React.FC<PartThuNghiemDauMoProps> = ({ setCurrentInVie
       </div>
       <div ref={ref} id={transKey.ungDungLauDauMo} className='flex flex-row justify-between max-md:flex-col max-md:gap-10'>
         <div key={featuresDataDauMo[0].imageUrl} className='w-[45%] max-md:w-full'>
-          <FeatureCard content={featuresDataDauMo[0].content} imageUrl={featuresDataDauMo[0].imageUrl} title={featuresDataDauMo[0].title} />
+          <FeatureCard alt={featuresDataDauMo[0].alt} content={featuresDataDauMo[0].content} imageUrl={featuresDataDauMo[0].imageUrl} title={featuresDataDauMo[0].title} />
         </div>
         <div className='w-[0.25px] bg-kurashi-black max-md:hidden' />
         <div key={featuresDataDauMo[1].imageUrl} className='w-[45%] max-md:w-full'>
-          <FeatureCard content={featuresDataDauMo[1].content} imageUrl={featuresDataDauMo[1].imageUrl} title={featuresDataDauMo[1].title} />
+          <FeatureCard alt={featuresDataDauMo[1].alt} content={featuresDataDauMo[1].content} imageUrl={featuresDataDauMo[1].imageUrl} title={featuresDataDauMo[1].title} />
         </div>
       </div>
     </>
