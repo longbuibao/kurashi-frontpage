@@ -83,7 +83,7 @@ const RootLayout: React.FC<RootProps> = async ({ children }): Promise<React.Reac
         </ProgressBarProviders>
         <BackToTopButton />
         <div className='bg-[#DADADA]'>
-          <div className='flex flex-row justify-between w-4/5 mx-auto py-28'>
+          <div className='flex flex-row justify-between w-4/5 mx-auto py-28 max-md:py-10 max-md:mt-10 max-md:flex-col max-md:gap-20'>
             {footerItems.map(x => {
               return (
                 <Link key={x.title} href='#'>
@@ -105,7 +105,6 @@ const RootLayout: React.FC<RootProps> = async ({ children }): Promise<React.Reac
             })}
           </div>
         </div>
-
         <Footer t={t} />
         <div className='bg-[#24292e] pt-5 overflow-hidden'>
           <div className='text-secondary hover:cursor-default text-left w-4/5 mx-auto text-xs'>Copyright 2024 Kurashi Corporation. All rights reserved</div>

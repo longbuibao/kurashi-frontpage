@@ -46,7 +46,7 @@ const PartTinhNangNoiBatThepTrangMen: React.FC<Props> = ({ setCurrentInViewDivId
   return (
     <div ref={ref} id={`${transKey.standoutFeatures}`}>
       <div className='text-3xl mt-10'>{'tính chất ưu việt'.toUpperCase()}</div>
-      <div className='my-10'>Nhờ cấu trúc vật liệu tích hợp giữa lõi kim loại và phủ men sứ, thép trang men có nhiều ưu điểm nổi bật hơn so với các vật liệu ốp tường khác về khả năng chống xước, chống cháy, chống ố và dễ thi công.</div>
+      <div className='my-10 max-md:text-center'>Nhờ cấu trúc vật liệu tích hợp giữa lõi kim loại và phủ men sứ, thép trang men có nhiều ưu điểm nổi bật hơn so với các vật liệu ốp tường khác về khả năng chống xước, chống cháy, chống ố và dễ thi công.</div>
       <KurashiSlider steps={steps} />
     </div>
   )

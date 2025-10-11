@@ -11,7 +11,7 @@ interface PartThuNghiemDauMoProps {
 
 const FeatureCard: React.FC<FeatureCardProps> = ({ content, title, imageUrl }) => {
   return (
-    <div className='w-full'>
+    <div className='w-full max-md:text-center'>
       <div className='text-xl mb-10 max-md:mb-5'>{title}</div>
       <Image width={2792} height={1500} className='w-full' alt='chống dầu mỡ thép tráng men' src={imageUrl} />
       <div className='mt-10 max-md:mt-5'>{content.map(x => <div className='my-3' key={x}>{x}</div>)}</div>
@@ -32,7 +32,7 @@ const PartThuNghiemDauMo: React.FC<PartThuNghiemDauMoProps> = ({ setCurrentInVie
 
   return (
     <>
-      <div className='my-20 flex flex-col gap-5'>
+      <div className='my-20 flex flex-col gap-5 max-md:text-center'>
         <div className='text-3xl'>THÍ NGHIỆM SO SÁNH</div>
         <div className='my-3'>Dưới đây là thí nghiệm so sánh khả năng chống dầu mỡ và chống cháy của thép tráng men và vật liệu khác. </div>
       </div>

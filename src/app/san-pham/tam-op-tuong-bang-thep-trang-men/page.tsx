@@ -24,7 +24,7 @@ const Page: React.FC = () => {
           <SideBar sectionTitles={sectionTitles} currentDivId={currentInViewDivId} ns='thep-trang-men' />
         </div>
         <div className='max-md:w-4/5 max-md:mx-auto relative'>
-          <div className='text-3xl top-[-120px] mt-10 absolute'>{'TẤM ỐP TƯỜNG BẰNG THÉP TRÁNG MEN NHẬT BẢN'.toUpperCase()}</div>
+          <div className='text-3xl top-[-120px] max-md:top-0 max-md:static mt-10 absolute'>{'TẤM ỐP TƯỜNG BẰNG THÉP TRÁNG MEN NHẬT BẢN'.toUpperCase()}</div>
           <PartIntroThepTrangMen setCurrentInViewDivId={setCurrentInViewDivId} />
           <PartTinhNangNoiBatThepTrangMen setCurrentInViewDivId={setCurrentInViewDivId} />
           <PartUngDungThepTrangMen setCurrentInViewDivId={setCurrentInViewDivId} />

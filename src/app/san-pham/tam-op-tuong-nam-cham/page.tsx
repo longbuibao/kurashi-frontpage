@@ -31,7 +31,7 @@ const Page: React.FC = () => {
           <SideBar sectionTitles={sectionTitles} currentDivId={currentInViewDivId} ns='thep-trang-men' />
         </div>
         <div className='max-md:w-4/5 max-md:mx-auto relative'>
-          <div className='text-3xl top-[-120px] mt-10 absolute'>{'Tấm ốp tường nam châm nhật bản'.toUpperCase()}</div>
+          <div className='text-3xl top-[-120px] mt-10 absolute max-md:static max-md:text-center'>{'Tấm ốp tường nam châm nhật bản'.toUpperCase()}</div>
           <PartIntro setCurrentInViewDivId={setCurrentInViewDivId} />
           <PartMauSac setCurrentInViewDivId={setCurrentInViewDivId} />
           <PartUngDungTamOp setCurrentInViewDivId={setCurrentInViewDivId} />

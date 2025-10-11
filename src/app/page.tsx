@@ -65,8 +65,8 @@ const Page = async (): Promise<React.ReactElement> => {
       </div>
       <div className='w-4/5 mx-auto my-16 max-md:mt-5 max-md:mb-0'>
         <div className='w-full '>
-          <div className='text-4xl max-md:text-xl max-md:text-left font-bold text-center max-md:w-full max-md:pb-5'>
-            GIẢI PHÁP NỘI THẤT TIÊN TIẾN TỪ NHẬT BẢN
+          <div className='text-4xl max-md:text-xl max-md:text-left font-bold text-center max-md:w-full max-md:pb-5 font-gtFont'>
+            MADE IN JAPAN
           </div>
         </div>
         <div className='max-md:py-5 pt-5 max-md:w-full text-center'>

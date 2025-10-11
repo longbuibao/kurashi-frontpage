@@ -20,10 +20,10 @@ const PartMauSac: React.FC<Props> = ({ setCurrentInViewDivId }) => {
   })
 
   return (
-    <div ref={ref} id={`${c.mauSac}`} className='mt-40'>
+    <div ref={ref} id={`${c.mauSac}`} className='mt-40 max-md:mt-20 max-md:text-center'>
       <div className='text-3xl mt-10'>{'Màu sắc sang trọng'.toUpperCase()}</div>
-      <div className='my-10 w-4/5'>Sonic Silver, Champagne Gold, Cement Gray, Matte Black – bốn sắc màu cao cấp giúp tấm ốp tường hút nam châm hòa hợp hoàn hảo với mọi không gian hiện đại.</div>
-      <div className='grid grid-cols-[400px_auto] grid-rows-[auto_auto_auto] h-screen gap-10'>
+      <div className='my-10 w-4/5 max-md:w-full'>Sonic Silver, Champagne Gold, Cement Gray, Matte Black - bốn sắc màu cao cấp giúp tấm ốp tường hút nam châm hòa hợp hoàn hảo với mọi không gian hiện đại.</div>
+      <div className='grid grid-cols-[400px_auto] grid-rows-[auto_auto_auto] h-screen gap-10 max-md:flex-col max-md:gap-5'>
         <div className='relative'>
           <Image
             src='https://storage.googleapis.com/kurashi_frontpage_files/images/tam-op-tuong-nam-cham/mau-champagne-gold.webp'

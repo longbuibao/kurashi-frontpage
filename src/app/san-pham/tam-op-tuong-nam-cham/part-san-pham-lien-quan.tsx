@@ -39,9 +39,9 @@ const PartSanPhamLienQuan: React.FC<PartSanPhamLienQuanProps> = ({ setCurrentInV
   ]
 
   return (
-    <div ref={ref} id={c.sanPhamLienQuan} className='mt-40 '>
+    <div ref={ref} id={c.sanPhamLienQuan} className='mt-40 max-md:mt-40 max-md:text-center'>
       <div className='text-3xl mb-10'>SẢN PHẨM LIÊN QUAN</div>
-      <div className='flex flex-row justify-between'>
+      <div className='flex flex-row justify-between max-md:flex-col max-md:gap-10'>
         {relatedProducts.map(x =>
           <Link key={x.thumb} href={x.url as any}>
             <div className='flex flex-col gap-5 justify-center w-fit'>
