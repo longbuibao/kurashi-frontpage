@@ -83,7 +83,7 @@ const RootLayout: React.FC<RootProps> = async ({ children }): Promise<React.Reac
         </ProgressBarProviders>
         <BackToTopButton />
         <div className='bg-[#DADADA]'>
-          <div className='flex flex-row justify-between w-4/5 mx-auto py-36 '>
+          <div className='flex flex-row justify-between w-4/5 mx-auto py-28'>
             {footerItems.map(x => {
               return (
                 <Link key={x.title} href='#'>

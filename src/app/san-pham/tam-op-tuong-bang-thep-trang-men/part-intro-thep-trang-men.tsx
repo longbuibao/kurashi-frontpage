@@ -26,9 +26,9 @@ const PartIntroThepTrangMen: React.FC<Props> = ({ setCurrentInViewDivId }) => {
       <div>
         Tấm ốp tường bếp thép tráng men Nhật Bản, chống ố, xước, cháy vượt trội. Tích hợp phụ kiện nam châm, dễ vệ sinh, bền đẹp. Giải pháp tiện lợi cho bếp hiện đại.
       </div>
-      <div className='flex flex-row gap-5 max-md:flex-col'>
+      <div className='flex flex-row gap-5 max-md:flex-col w-4/5'>
         <Image src='https://storage.googleapis.com/kurashi_frontpage_files/images/rework-thep-trang-men/thep-trang-men-op-bep.webp' width={353} height={441} alt='Ứng dụng thép tráng men' />
-        <Image src='https://storage.googleapis.com/kurashi_frontpage_files/images/rework-thep-trang-men/thep-trang-men-it-mau.webp' width={786} height={442} alt='Ứng dụng thép tráng men' />
+        <Image src='https://storage.googleapis.com/kurashi_frontpage_files/images/rework-thep-trang-men/thep-trang-men-it-mau.webp' width={1440} height={700} alt='Ứng dụng thép tráng men' />
       </div>
       <div className='flex flex-row gap-16 my-10'>
         <CauTaoVatLieuTTM width='500' height='390' />
