@@ -4,11 +4,12 @@ export const phoneNumber = '(+84) 979988617'
 export const email = 'kurashi-corp@kurashi.com.vn'
 
 export const navItems = [
-  { label: transKey.home, url: '/' },
-  { label: transKey.products, url: '/san-pham' },
-  { label: transKey.catalog, url: '/catalog' },
-  { label: transKey.contact, url: '/lien-he' },
-  { label: transKey.blog, url: '/blog' }
+  { label: 'Trang chủ', url: '/' },
+  { label: 'Sản phẩm', url: '/san-pham' },
+  { label: 'Về Kurashi', url: '/ve-kurashi-corp' },
+  { label: 'K Journal', url: '/blog' },
+  { label: 'Catalog', url: '/catalog' },
+  { label: 'Liên hệ', url: '/lien-he' }
 ]
 
 export const carouselSliderImages = [

@@ -9,7 +9,6 @@ import { Footer } from '@/components/footer'
 import { navItems } from '@/constants'
 import { useTranslation } from '@/i18n'
 import ProgressBarProviders from '@/components/progress-bar-provider'
-import prisma from '@/lib/prisma'
 import { Inter } from 'next/font/google'
 import { BackToTopButton } from '@/components/back-to-top'
 import { lng } from '@/app/const'
@@ -58,16 +57,6 @@ const RootLayout: React.FC<RootProps> = async ({ children }): Promise<React.Reac
     }
   ]
 
-  const productsRaw = await prisma.product.findMany({
-    take: 3,
-    where: { isAvailable: true },
-    include: {
-      category: { select: { name: true, id: true } },
-      ProductColor: true,
-      ProductTag: true
-    }
-  })
-
   return (
     <html lang={lng} dir={dir(lng)} className={`${gtFont.variable}`}>
       <head>
@@ -76,7 +65,7 @@ const RootLayout: React.FC<RootProps> = async ({ children }): Promise<React.Reac
       </head>
       <body className={inter.className}>
         <div className='sticky top-0 z-50'>
-          <Nav products={productsRaw} links={navItems.map(item => { return { label: t(item.label), url: item.url } })} />
+          <Nav links={navItems.map(item => { return { label: item.label, url: item.url } })} />
         </div>
         <ProgressBarProviders>
           {children}
