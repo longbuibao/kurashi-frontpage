@@ -46,13 +46,13 @@ const KurashiSlider: React.FC<Props> = ({ steps }): React.ReactElement => {
           </div>
         </div>
       </div>
-      <div className='w-full bg-secondary h-[1px] relative -translate-y-16 max-md:translate-y-0 max-md:hidden'>
+      <div className='w-full bg-secondary h-[1px] relative -translate-y-16 max-md:translate-y-0'>
         <div className='w-4/5 mx-auto max-md:mt-32 max-md:w-full'>
           <div className='w-4/5 max-md:w-full max-md:justify-center mx-auto flex justify-between items-center -translate-y-[1.125rem]'>
             {steps.map((x, y) => {
               const isActive = index === y
               const className = `size-9 rounded-full transition-colors ${isActive ? 'bg-main text-secondary' : 'bg-secondary border-black'}`
-              const textClassName = isActive ? 'text-main font-bold' : 'text-black font-bold'
+              const textClassName = isActive ? 'text-main font-bold max-md:hidden' : 'text-black font-bold max-md:hidden'
               return (
                 <div key={x.title} onClick={() => handleClick(y)} className='hover:cursor-pointer flex flex-col items-center gap-5'>
                   <button className={className}>
