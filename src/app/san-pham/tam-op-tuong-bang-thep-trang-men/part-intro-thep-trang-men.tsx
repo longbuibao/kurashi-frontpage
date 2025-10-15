@@ -27,8 +27,8 @@ const PartIntroThepTrangMen: React.FC<Props> = ({ setCurrentInViewDivId }) => {
         Tấm ốp tường bếp thép tráng men Nhật Bản, chống ố, xước, cháy vượt trội. Tích hợp phụ kiện nam châm, dễ vệ sinh, bền đẹp. Giải pháp tiện lợi cho bếp hiện đại.
       </div>
       <div className='flex flex-row gap-5 max-md:flex-col max-md:w-full h-96'>
-        <Image className='w-full h-auto object-fill' src='https://storage.googleapis.com/kurashi_frontpage_files/images/rework-thep-trang-men/thep-trang-men-op-bep-resized.webp' width={575} height={384} alt='Ứng dụng thép tráng men' />
-        <Image className='w-full h-auto object-fill' src='https://storage.googleapis.com/kurashi_frontpage_files/images/rework-thep-trang-men/thep-trang-men-resized.webp' width={575} height={384} alt='Ứng dụng thép tráng men' />
+        <Image className='w-full h-auto object-cover' src='https://storage.googleapis.com/kurashi_frontpage_files/images/rework-thep-trang-men/theo-trang-men-op-bep-intro-part.webp' width={575} height={384} alt='Ứng dụng thép tráng men' />
+        <Image className='w-full h-auto object-cover' src='https://storage.googleapis.com/kurashi_frontpage_files/images/rework-thep-trang-men/thep-trang-men-intro-part.webp' width={575} height={384} alt='Ứng dụng thép tráng men' />
       </div>
       <div className='flex flex-row gap-16 my-10 max-md:flex-col'>
         <div className='max-md:hidden'>
