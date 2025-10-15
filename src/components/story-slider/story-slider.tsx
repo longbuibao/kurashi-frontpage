@@ -13,7 +13,7 @@ const StorySlider: React.FC = () => {
   const [currentStoryImage, setCurrentStoryImage] = useState('https://storage.googleapis.com/kurashi_frontpage_files/images/sliders-homepage/Slider_1-01.webp')
   const storyData = [
     {
-      topImage: 'https://storage.googleapis.com/kurashi_frontpage_files/images/thep_trang_men_slider/Slider01.webp',
+      topImage: 'https://storage.googleapis.com/kurashi_frontpage_files/images/rework-homepage/thep-trang-men-kurashi.webp',
       thumbnail: 'https://storage.googleapis.com/kurashi_frontpage_files/images/thep_trang_men_slider/Slider01_thumb.webp',
       title: 'THÉP TRÁNG MEN ỐP BẾP',
       button: 'Khám phá công nghệ vật liệu',
@@ -21,20 +21,20 @@ const StorySlider: React.FC = () => {
       link: '/san-pham/tam-op-tuong-bang-thep-trang-men'
     },
     {
-      topImage: 'https://storage.googleapis.com/kurashi_frontpage_files/images/thep_trang_men_slider/Slider02.webp',
-      thumbnail: 'https://storage.googleapis.com/kurashi_frontpage_files/images/thep_trang_men_slider/Slider02_thumb.webp',
-      title: 'PHỤ KIỆN BẾP',
+      topImage: 'https://storage.googleapis.com/kurashi_frontpage_files/images/rework-homepage/voi-rua-cao-cap-kurashi.webp',
+      thumbnail: 'https://storage.googleapis.com/kurashi_frontpage_files/images/rework-homepage/voi-rua-cao-cap-kurashi.webp',
+      title: 'VÒI RỬA CAO CẤP',
       button: 'Tìm hiểu bộ giải pháp',
-      summary: 'Không cần khoan tường và cực tiện lợi',
-      link: '/san-pham/phu-kien-bep'
+      summary: 'Vòi lavabo & vòi rửa chén Nhật Bản',
+      link: '/san-pham/voi-rua-cao-cap'
     },
     {
-      topImage: 'https://storage.googleapis.com/kurashi_frontpage_files/images/thep_trang_men_slider/Slider03.webp',
+      topImage: 'https://storage.googleapis.com/kurashi_frontpage_files/images/rework-homepage/tam-op-nam-cham-kurashi.webp',
       thumbnail: 'https://storage.googleapis.com/kurashi_frontpage_files/images/thep_trang_men_slider/Slider03_thumb.webp',
-      title: 'ỐP TƯỜNG VÂN ĐÁ',
-      summary: 'Bề mặt sần sùi tự nhiên và siêu dễ thi công',
+      title: 'TẤM ỐP NAM CHÂM',
+      summary: 'Vật liệu ốp tường Nhật Bản có lớp thép từ tính,',
       button: 'Khám phá bộ sưu tập',
-      link: '/san-pham/tam-op-tuong-van-da'
+      link: '/san-pham/tam-op-tuong-nam-cham'
     }
   ]
 
@@ -42,7 +42,6 @@ const StorySlider: React.FC = () => {
     topImage,
     content: (props: any) => {
       const { action, story } = props
-      console.log(props)
       return (
         <WithSeeMore story={story} action={action}>
           <div className='w-full flex flex-row ml-10 gap-20'>
