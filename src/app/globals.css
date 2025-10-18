@@ -162,7 +162,7 @@
 .header__burger:before {
 	-webkit-backface-visibility: hidden;
 	backface-visibility: hidden;
-	background-color: #437254;
+	background-color: #000;
 	content: "";
 	height: 1px;
 	position: absolute;

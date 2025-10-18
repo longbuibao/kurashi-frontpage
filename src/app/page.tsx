@@ -30,8 +30,8 @@ const createCarouselItems = (src: { imageLink: string, url: string, title: strin
     content: (
       <div>
         <Image src={src.imageLink} width={width} height={height} alt='picture' quality={100} />
-        <div className='absolute bottom-3 left-1/2 -translate-x-1/2'>
-          <Link href={src.url as any} className='transition-all duration-300 hover:[text-shadow:_0_2px_10px_rgba(0,0,0,0.9)] text-secondary flex flex-col gap-5 items-center justify-center'>
+        <div className='absolute bottom-10 left-1/2 -translate-x-1/2'>
+          <Link href={src.url as any} className='transition-all duration-300 hover:[text-shadow:_0_2px_10px_rgba(0,0,0,0.9)] text-secondary flex flex-col gap-10 items-center justify-center'>
             <Image src='/images/ArrowDownIcon.svg' width={50} height={50} alt={src.title} />
             <div className='text-2xl'>
               {src.title.toUpperCase()}
@@ -81,14 +81,14 @@ const Page = async (): Promise<React.ReactElement> => {
       <div className='max-lg:w-full relative w-4/5 mx-auto hidden max-md:block'>
         <EmblaCarousel slides={carouselSlidersMobile} options={{ loop: true }} />
       </div>
-      <div className='w-4/5 mx-auto my-16 max-md:mt-5 max-md:mb-0'>
+      <div className='w-4/5 mx-auto mt-36 mb-16 max-md:mt-5 max-md:mb-0'>
         <div className='w-full '>
           <div className='text-4xl max-md:text-xl max-md:text-left font-bold text-center max-md:w-full max-md:pb-5 font-gtFont'>
             MADE IN JAPAN
           </div>
         </div>
         <div className='max-md:py-5 pt-5 max-md:w-full text-center'>
-          <div>Các giải pháp nội thất tiên tiến nhất về công nghệ vật liệu, thiết kế và gia công với chất lượng made in Japan để ngôi nhà luôn là nơi thoải mái nhất cho cả gia đình bạn.</div>
+          <div className='text-xl'>Sản xuất tại Nhật Bản</div>
         </div>
       </div>
       <Suspense fallback={<KurashiCategoriesSkeleton />}>
@@ -97,39 +97,39 @@ const Page = async (): Promise<React.ReactElement> => {
           <KurashiCategories lng={lng} />
         </div>
       </Suspense>
-      <div className='w-4/5 mx-auto mt-24 max-lg:w-full'>
+      <div className='w-4/5 mx-auto mt-32 max-lg:w-full'>
         <div className='my-10 overflow-hidden max-md:my-0'>
           <AboutKurashiCard lng={lng} />
         </div>
       </div>
-      <div className='w-4/5 mx-auto'>
-        <Link href='/blog' className='w-fit flex flex-row items-center justify-center gap-10 mx-auto'>
+      <div className='w-4/5 mx-auto mt-28'>
+        <Link href='/blog' className='w-fit flex flex-row items-center justify-center gap-5 mx-auto'>
           <Image src='/images/RightArrow.svg' width={20} height={20} alt='Kurashi JOURNAL' />
-          <Image src='https://storage.googleapis.com/kurashi_frontpage_files/images/rework-homepage/IconMenu.png' width={60} height={60} alt='Kurashi JOURNAL' />
+          <Image src='https://storage.googleapis.com/kurashi_frontpage_files/images/rework-homepage/IconMenu.png' width={82} height={82} alt='Kurashi JOURNAL' />
           <div className='text-2xl font-gtFont'>JOURNAL</div>
         </Link>
         <div className='flex flex-row gap-10 pt-10 pb-16 mt-5 items-center justify-between max-md:flex-wrap mx-auto w-fit'>
           {posts.slice(0, 3).map(x => <BlogCardHomepage blog={x as any} key={x.fileName} />)}
         </div>
       </div>
-      <div className='w-1/2 mx-auto flex flex-row gap-10 items-center my-10 max-md:flex-col max-md:text-center max-md:justify-center'>
-        <div className='flex flex-col h-full'>
+      <div className='w-4/5 mx-auto flex flex-row gap-10 items-center max-md:flex-col max-md:text-center max-md:justify-center'>
+        <div className='flex flex-col h-full w-[60%] self-start mt-20'>
           <div className='flex flex-col items-end gap-10 pb-10 h-full'>
             <div className='font-gtFont text-3xl max-md:text-center max-md:w-full'>GOLD COLLECTION</div>
-            <div className='text-3xl opacity-50 font-semibold text-[#6D6E71 ]'>{'Dấu ấn thượng lưu'.toUpperCase()}</div>
+            <div className='text-5xl opacity-50 font-semibold text-[#6D6E71 ]'>{'Dấu ấn thượng lưu'.toUpperCase()}</div>
             <div className='w-full h-[0.5px] bg-[#6D6E71] opacity-20' />
-            <div className='text-right max-md:text-center '>
+            <div className='text-right max-md:text-center text-xl leading-loose mt-5'>
               Bộ sưu tập là sự hòa quyện giữa nghệ thuật cổ điển và nét tinh giản hiện đại, mang đến vẻ thanh lịch vượt thời gian. Thiết kế linh hoạt cùng tông màu vàng kim được lựa chọn tỉ mỉ, hoàn thiện đến từng chi tiết, giúp sản phẩm nổi bật theo cách thật tinh tế, trở thành biểu tượng của phong cách sống thượng lưu.
             </div>
-            <Link href='/san-pham/voi-rua-cao-cap' className='self-end mt-20 max-md:self-center max-md:mt-10'>
-              <div className='bg-main text-secondary p-3 flex flex-row gap-3 items-center'>
+            <Link href='/san-pham/voi-rua-cao-cap' className='self-end mt-12 max-md:self-center max-md:mt-10'>
+              <div className='bg-main text-secondary px-9 py-5 flex flex-row gap-3 items-center'>
                 Khám phá
                 <i className='fa-solid fa-chevron-right' />
               </div>
             </Link>
           </div>
         </div>
-        <Image src='https://storage.googleapis.com/kurashi_frontpage_files/images/voi-rua-cao-cap-rework/gold-collection.webp' width={451} height={721} alt='vòi rửa cao cấp golden collection' />
+        <Image src='https://storage.googleapis.com/kurashi_frontpage_files/images/voi-rua-cao-cap-rework/gold-collection.webp' width={700} height={1112} alt='vòi rửa cao cấp golden collection' />
       </div>
     </main>
   )
