@@ -71,7 +71,7 @@ const RootLayout: React.FC<RootProps> = async ({ children }): Promise<React.Reac
           {children}
         </ProgressBarProviders>
         <BackToTopButton />
-        <Link href={zaloLink} className='bg-main max-md:right-14 h-40 text-secondary fixed right-0 top-1/2 -translate-y-1/2 text-white shadow-lg  transition duration-300 z-50'>
+        <Link href={zaloLink} className='bg-main h-40 text-secondary fixed right-0 top-1/2 -translate-y-1/2 text-white shadow-lg  transition duration-300 z-50'>
           <div className='flex flex-col gap-5 items-center justify-center h-full p-4'>
             <i className='text-3xl fa-regular fa-message' />
             <div className='font-bold'>
