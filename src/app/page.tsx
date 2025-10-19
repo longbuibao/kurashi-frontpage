@@ -112,7 +112,7 @@ const Page = async (): Promise<React.ReactElement> => {
           {posts.slice(0, 3).map(x => <BlogCardHomepage blog={x as any} key={x.fileName} />)}
         </div>
       </div>
-      <div className='w-4/5 mx-auto flex flex-row gap-10 items-center max-md:flex-col max-md:text-center max-md:justify-center'>
+      <div className='w-4/5 mx-auto pb-20 flex flex-row gap-10 items-center max-md:flex-col max-md:text-center max-md:justify-center'>
         <div className='flex flex-col h-full w-[60%] self-start mt-20'>
           <div className='flex flex-col items-end gap-10 pb-10 h-full'>
             <div className='font-gtFont text-3xl max-md:text-center max-md:w-full'>GOLD COLLECTION</div>
