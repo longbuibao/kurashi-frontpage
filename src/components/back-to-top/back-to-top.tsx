@@ -30,7 +30,7 @@ const BackToTopButton = (): React.ReactElement => {
       ? (
         <div
           onClick={scrollToTop}
-          className='fixed hover:cursor-pointer border-[1px] border-main size-14 z-10 bottom-4 right-4 text-main flex items-center flex-col justify-center'
+          className='fixed hover:cursor-pointer border-[1px] border-main size-14 z-10 bottom-4 max-md:right-14 right-4 text-main flex items-center flex-col justify-center'
           aria-label='Back to top'
         >
           <div className='rotate-90 h-[1px] w-1/2 top-0 absolute bg-main' />
