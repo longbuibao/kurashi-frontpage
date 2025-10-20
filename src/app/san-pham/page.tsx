@@ -32,9 +32,6 @@ const AllProducts: React.FC<{ lng: string }> = async () => {
 
   return (
     <div className='w-4/5 mx-auto my-10'>
-      <div className='w-full border-b-2 border-main'>
-        <div className='text-3xl font-bold w-[30%] max-md:w-full pb-10'>GIẢI PHÁP NỘI THẤT TIÊN TIẾN TỪ NHẬT BẢN</div>
-      </div>
       <div className='w-4/5 mx-auto my-20 max-md:mt-5 max-md:mb-0'>
         <div className='w-full '>
           <div className='text-4xl max-md:text-xl max-md:text-left font-bold text-center max-md:w-full max-md:pb-5 font-gtFont'>
