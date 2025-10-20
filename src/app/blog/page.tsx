@@ -85,16 +85,10 @@ const AllBlogs: React.FC = async (): React.ReactElement => {
     <div className='w-[60%] mx-auto py-10 max-md:w-[90%]'>
       <div className='max-md:w-full flex flex-col max-md:flex-col max-md:gap-10'>
         <Suspense>
-          <div className='flex flex-col max-md:w-full max-md:p-5'>
-            <div className='flex flex-col gap-5 mb-10 max-md:mb-5'>
-              <div className='flex-row flex gap-3 border-b-[1px] border-main pb-5 max-md:flex-col'>
-                <div className='mt-auto text-xl leading-9'>KURASHI</div>
-                <div className='text-7xl text-main font-bold'>BLOG</div>
-              </div>
-              <p className='font-thin'>
-                Xu hướng, công nghệ và vật liệu về nội thất mới nhất từ Nhật Bản
-              </p>
-            </div>
+          <div className='w-fit flex flex-row items-center justify-center gap-5 mx-auto my-20 max-md:my-10'>
+            <Image src='/images/RightArrow.svg' width={20} height={20} alt='Kurashi JOURNAL' />
+            <Image src='https://storage.googleapis.com/kurashi_frontpage_files/images/rework-homepage/IconMenu.png' width={82} height={82} alt='Kurashi JOURNAL' />
+            <div className='text-2xl font-gtFont'>JOURNAL</div>
           </div>
           <div className='flex flex-row gap-10 mt-3 max-md:flex-col'>
             <div className='w-1/2 max-md:w-full max-md:mx-auto'>
