@@ -40,7 +40,7 @@ const AllProducts: React.FC<{ lng: string }> = async () => {
       </div>
       <div className='my-5 flex flex-row max-lg:flex-col'>
         <div className='flex-1 my-10'>
-          <div className='flex flex-row gap-5 justify-center items-center max-md:flex-col'>
+          <div className='grid grid-cols-3 grid-rows-2 gap-10 mx-auto place-items-center w-full max-md:grid-cols-1'>
             {products.sort((x, y) => x.order - y.order).map(x => {
               const url = x.landingPageUrl as any as UrlObject
               return (
