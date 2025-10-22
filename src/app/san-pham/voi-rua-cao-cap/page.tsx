@@ -99,12 +99,30 @@ const products = [
   }
 ]
 
+const relatedProducts = [
+  {
+    url: '/san-pham/tam-op-tuong-bang-thep-trang-men',
+    thumb: 'https://storage.googleapis.com/kurashi_frontpage_files/images/voi-rua/thep-trang-men.png',
+    alt: 'Thép tráng men'
+  },
+  {
+    url: '/san-pham/phu-kien-bep',
+    thumb: 'https://storage.googleapis.com/kurashi_frontpage_files/images/voi-rua/phu-kien-nam-cham.png',
+    alt: 'Phụ kiện bếp'
+  },
+  {
+    url: '/san-pham/tam-op-tuong-van-da',
+    thumb: 'https://storage.googleapis.com/kurashi_frontpage_files/images/voi-rua/tam-op-van-da.png',
+    alt: 'Tấm ốp tường vân đá'
+  }
+]
+
 const Page: React.FC = () => {
   return (
     <div className='leading-loose'>
       <Image className='w-full h-auto' src='/images/voi-rua-cao-cap-kurashi.svg' alt='Hero' width={1920} height={900} />
       <div className='w-[70%] mx-auto'>
-        <h1 className='text-3xl my-10 max-md:text-nowrap max-md:text-2xl max-md:text-center'>
+        <h1 className='text-3xl my-20 max-md:text-nowrap max-md:text-2xl max-md:text-center'>
           VÒI RỬA CAO CẤP KURASHI
         </h1>
         <div className='flex flex-col gap-5 my-10 max-md:text-center'>
@@ -132,7 +150,7 @@ const Page: React.FC = () => {
         </div>
         <div className='my-10'>
           <div className='text-3xl font-gtFont'>MADE IN JAPAN</div>
-          <div className='flex flex-row gap-10 mt-10 max-md:flex-col'>
+          <div className='flex flex-row gap-40 mt-10 max-md:flex-col'>
             <Image
               className='w-1/2 max-md:w-full'
               alt='Vòi rửa Nhật Bản'
@@ -164,6 +182,7 @@ const Page: React.FC = () => {
           <div className='border-l-2 border-r-black font-bold px-5 text-2xl my-10'>
             BỘ SƯU TẬP VÒI
           </div>
+          <div className='my-10'>Bộ sưu tập vòi nước KURASHI - nơi tập hợp đầy đủ các mẫu vòi Nhật Bản chính hãng. Bạn có thể lọc nhanh theo loại sản phẩm (vòi lavabo hoặc vòi rửa chén) để tìm được mẫu phù hợp nhất.</div>
           <div className='flex flex-row my-5'>
             <div className='px-10 max-md:px-5 py-2 w-1/2 bg-[#ADADAD] text-center text-secondary'>Vòi rửa chén</div>
             <div className='px-10 max-md:px-5 py-2 w-1/2 bg-[#D9D9D9] text-center'>Vòi rửa mặt</div>
@@ -175,6 +194,19 @@ const Page: React.FC = () => {
                   <Image src={x.thumbnail} className='object-fill' fill alt={x.alt} />
                 </div>
                 <div className='text-center'>Mã số {x.id}</div>
+              </Link>
+            )}
+          </div>
+        </div>
+        <div className='my-40 max-md:mt-40 max-md:text-center'>
+          <div className='text-3xl my-16'>SẢN PHẨM LIÊN QUAN</div>
+          <div className='flex flex-row justify-between max-md:flex-col max-md:gap-10'>
+            {relatedProducts.map(x =>
+              <Link key={x.thumb} href={x.url as any}>
+                <div className='flex flex-col gap-5 justify-center w-fit'>
+                  <Image src={x.thumb} width={300} height={300} alt={x.alt} className='transition-shadow hover:shadow-lg' />
+                  <div className='text-center'>{x.alt}</div>
+                </div>
               </Link>
             )}
           </div>
