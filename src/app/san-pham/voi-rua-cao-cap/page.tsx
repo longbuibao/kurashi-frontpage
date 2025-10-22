@@ -103,7 +103,7 @@ const Page: React.FC = () => {
   return (
     <div className='leading-loose'>
       <Image className='w-full h-auto' src='/images/voi-rua-cao-cap-kurashi.svg' alt='Hero' width={1920} height={900} />
-      <div className='w-[50%] mx-auto max-md:w-4/5'>
+      <div className='w-[70%] mx-auto'>
         <h1 className='text-3xl my-10 max-md:text-nowrap max-md:text-2xl max-md:text-center'>
           VÒI RỬA CAO CẤP KURASHI
         </h1>
@@ -165,16 +165,16 @@ const Page: React.FC = () => {
             BỘ SƯU TẬP VÒI
           </div>
           <div className='flex flex-row my-5'>
-            <div className='px-10 py-2 w-1/2 bg-[#ADADAD] text-center text-secondary'>Vòi rửa chén</div>
-            <div className='px-10 py-2 w-1/2 bg-[#D9D9D9] text-center'>Vòi rửa mặt</div>
+            <div className='px-10 max-md:px-5 py-2 w-1/2 bg-[#ADADAD] text-center text-secondary'>Vòi rửa chén</div>
+            <div className='px-10 max-md:px-5 py-2 w-1/2 bg-[#D9D9D9] text-center'>Vòi rửa mặt</div>
           </div>
-          <div className='grid grid-cols-3 grid-rows-3 w-full my-10 gap-20 max-md:gap-10 max-md:grid-cols-[repeat(auto-fit,minmax(100px,1fr))]'>
+          <div className='grid grid-cols-3 grid-rows-3 w-full my-10 gap-20 max-md:gap-10 max-md:grid-cols-1'>
             {products.map(x =>
-              <Link key={x.id} href={x.link as any as UrlObject}>
-                <div className='flex flex-col gap-3 items-center justify-center'>
-                  <Image src={x.thumbnail} width={100} height={100} alt={x.alt} />
-                  <div className='text-center'>Mã số {x.id}</div>
+              <Link key={x.id} href={x.link as any as UrlObject} className='size-80 flex flex-col gap-3 items-center justify-center relative'>
+                <div className='relative w-4/5 h-[90%]'>
+                  <Image src={x.thumbnail} className='object-fill' fill alt={x.alt} />
                 </div>
+                <div className='text-center'>Mã số {x.id}</div>
               </Link>
             )}
           </div>
