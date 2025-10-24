@@ -3,8 +3,6 @@ import Image from 'next/image'
 import { Prisma } from '@prisma/client'
 import Link from 'next/link'
 
-import { formatCurrency } from '@/utils'
-
 type ProductQueryType = Prisma.ProductGetPayload<{
   where: {
     isTrendingProduct: true
@@ -29,8 +27,8 @@ const ProductAccessoryCard: React.FC<ProductAccessoryCardProps> = ({ product: x 
       </div>
       <div className='m-3'>
         <div className='flex flex-col gap-2'>
-          <div className='text-opacity-20 text-black group-hover:text-kurashiX'>{x.category?.name}</div>
-          <div className='font-bold group-hover:text-kurashiX'>{x.name}</div>
+          <div className='text-opacity-20 text-black'>{x.category?.name}</div>
+          <div className='font-bold'>{x.name}</div>
         </div>
         <div className='flex flex-row justify-between mt-3'>
           <div className='flex flex-row gap-3'>

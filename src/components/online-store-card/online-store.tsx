@@ -9,10 +9,10 @@ interface OnlineStoreProps {
 
 const OnlineStore: React.FC<OnlineStoreProps> = ({ isCenter = false }) => {
   const linksToOnlineStore: LinkToOnlineStoreCardProps[] = [
-    { url: 'shopee.com', icon: <Image className='w-full' width={30} height={30} alt='Phụ kiện thép tráng men trên Shopee' src='https://storage.googleapis.com/kurashi_frontpage_files/phu-kien-thep-trang-men/category-icon/shopee-icon.svg' />, label: 'Shopee' },
-    { url: 'tiktok.com', icon: <Image className='w-full' width={30} height={30} alt='Phụ kiện thép tráng men trên Tiktok' src='https://storage.googleapis.com/kurashi_frontpage_files/phu-kien-thep-trang-men/category-icon/tiktok-icon.svg' />, label: 'TikTok Shop' }
+    { url: 'shopee.com', icon: <Image className='w-full' width={15} height={15} alt='Phụ kiện thép tráng men trên Shopee' src='https://storage.googleapis.com/kurashi_frontpage_files/images/rework-phu-kien-nam-cham/dev-images/shopee.svg' />, label: 'Shopee' },
+    { url: 'tiktok.com', icon: <Image className='w-full' width={15} height={15} alt='Phụ kiện thép tráng men trên Tiktok' src='https://storage.googleapis.com/kurashi_frontpage_files/images/rework-phu-kien-nam-cham/dev-images/tiktokshop.svg' />, label: 'TikTok Shop' }
   ]
-  const className = isCenter ? 'flex flex-row gap-5 w-fit max-md:justify-center' : 'flex flex-row gap-5 max-md:justify-center'
+  const className = isCenter ? 'flex flex-row gap-10 w-fit max-md:justify-center' : 'flex flex-row gap-20 max-md:justify-center'
   return (
     <div className={className}>
       {linksToOnlineStore.map(x =>

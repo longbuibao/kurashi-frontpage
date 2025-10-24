@@ -18,11 +18,11 @@ const config: Config = {
       kurashiT: '#CCE2ED',
       kurashiB: '#F6EFD7',
       'kurashi-bg-main': '#f4f4f4',
-      'kurashi-border': '#D9D9D9',
-      'count-bg': '#BCE3C9',
+      'kurashi-border': '#ECECEC',
+      'count-bg': '#E3D8CC',
       'count-text': '#253D4E',
-      'main-phu-kien': '#9EB8A0',
-      'text-phu-kien': '#424143',
+      'main-phu-kien': '#F1E9DF',
+      'text-phu-kien': '#2E2E2E',
       'kurashi-border-color': 'rgba(134,135,135,0.2)'
     },
     extend: {
