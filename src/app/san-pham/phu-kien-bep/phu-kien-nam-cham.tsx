@@ -1,9 +1,7 @@
 import { CategoryItem } from '@/components/category-item'
-import React, { ReactElement, Suspense } from 'react'
+import React, { Suspense } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import Skeleton from 'react-loading-skeleton'
-import 'react-loading-skeleton/dist/skeleton.css'
 
 import prisma from '@/lib/prisma'
 import { FilterCard, PriceFilter } from '@/components/filter-card'
@@ -12,22 +10,8 @@ import PhuKienNew from './phu-kien-new'
 import AllAccessoriesProducts from './all-accessories-product'
 import SubCategories from './sub-categories'
 import ShopByCategory from './shop-by-category'
-
-const LoadingSpinner = (): ReactElement => {
-  return (
-    <div className='flex flex-col flex-1 mb-20'>
-      <div className='grid grid-cols-4 gap-10 max-md:grid-cols-2 max-md:gap-3'>
-        {Array.from({ length: 8 }).map((_, i) => (
-          <div key={i} className='flex flex-col space-y-3'>
-            <Skeleton className='h-[25vh] w-full rounded-xl' />
-            <Skeleton className='h-4 w-3/4 rounded' />
-            <Skeleton className='h-4 w-1/2 rounded' />
-          </div>
-        ))}
-      </div>
-    </div>
-  )
-}
+import FilterCardSkeleton from './filter-card-skeleton'
+import LoadingSpinner from './accessories-product-skeleton'
 
 const relatedProducts = [
   {
@@ -99,7 +83,7 @@ const PhuKienNamCham: React.FC = async () => {
               </div>
             </div>
           </div>
-          <Suspense>
+          <Suspense fallback={<FilterCardSkeleton />}>
             <FilterCard title='Danh mục'>
               <div className='flex flex-col gap-5'>
                 {categories.sort((x, y) => y.order - x.order).map(category =>
@@ -114,7 +98,7 @@ const PhuKienNamCham: React.FC = async () => {
           </div>
           <FilterCard title='Phụ kiện mới'>
             <div className='flex flex-col gap-5'>
-              <Suspense>
+              <Suspense fallback={<FilterCardSkeleton />}>
                 <PhuKienNew />
               </Suspense>
             </div>

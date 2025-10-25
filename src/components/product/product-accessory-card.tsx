@@ -27,8 +27,8 @@ const ProductAccessoryCard: React.FC<ProductAccessoryCardProps> = ({ product: x 
       </div>
       <div className='m-3 flex flex-row justify-between mt-10'>
         <div className='flex flex-col gap-2'>
-          <div className='text-opacity-20 text-black'>{x.category?.name}</div>
-          <div className='font-bold line-clamp-1'>{x.name}</div>
+          <div className='font-bold text-text-phu-kien'>{x.category?.name}</div>
+          <div className='line-clamp-1'>{x.name}</div>
         </div>
         <div className='flex flex-col gap-3 justify-between'>
           <div className='flex flex-row gap-3 justify-end'>

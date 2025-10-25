@@ -16,6 +16,7 @@ const PhuKienNew: React.FC = async () => {
       id: true
     }
   })
+
   return (
     <div className='flex flex-col gap-5'>
       {newAccessories.map(x => (

@@ -42,7 +42,7 @@ const SanPhamPage: React.FC<SanPhamPageProps> = async props => {
     <div className='mx-auto w-full mb-20'>
       <div className='w-full bg-main-phu-kien'>
         <div className='flex flex-row gap-28 w-4/5 mx-auto max-md:flex-col max-md:gap-5'>
-          <div className='flex flex-col gap-16 w-1/2 mx-auto justify-center text-secondary pt-28 pb-40 pl-28 max-md:pb-0 max-md:w-full max-md:pt-5 max-md:pl-5 max-md:text-center'>
+          <div className='flex flex-col gap-16 w-1/2 mx-auto justify-center text-text-phu-kien pt-28 pb-40 pl-28 max-md:pb-0 max-md:w-full max-md:pt-5 max-md:pl-5 max-md:text-center'>
             <div className='font-bold text-4xl'>
               {mainIntro?.title}
             </div>
