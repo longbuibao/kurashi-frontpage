@@ -8,7 +8,7 @@ import { UrlObject } from 'url'
 
 const SubCategoryCard: React.FC<{ subCategory: SecondaryCategory }> = ({ subCategory }) => {
   return (
-    <div className='flex flex-row gap-3 bg-main-phu-kien p-3 rounded-xl shadow-lg w-1/3 max-md:w-full'>
+    <div className='flex flex-row gap-3 bg-main-phu-kien p-3 rounded-xl w-1/3 max-md:w-full'>
       <div className='flex flex-col gap-5 justify-center w-1/2 ml-5'>
         <div className='text-xl'>{subCategory.content}</div>
         <Link className='p-2 rounded-lg flex flex-row items-center gap-5 mt-5' href={subCategory.url as any as UrlObject}>

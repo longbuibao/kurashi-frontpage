@@ -1,7 +1,9 @@
 import { CategoryItem } from '@/components/category-item'
-import React, { Suspense } from 'react'
+import React, { ReactElement, Suspense } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
+import Skeleton from 'react-loading-skeleton'
+import 'react-loading-skeleton/dist/skeleton.css'
 
 import prisma from '@/lib/prisma'
 import { FilterCard, PriceFilter } from '@/components/filter-card'
@@ -10,6 +12,22 @@ import PhuKienNew from './phu-kien-new'
 import AllAccessoriesProducts from './all-accessories-product'
 import SubCategories from './sub-categories'
 import ShopByCategory from './shop-by-category'
+
+const LoadingSpinner = (): ReactElement => {
+  return (
+    <div className='flex flex-col flex-1 mb-20'>
+      <div className='grid grid-cols-4 gap-10 max-md:grid-cols-2 max-md:gap-3'>
+        {Array.from({ length: 8 }).map((_, i) => (
+          <div key={i} className='flex flex-col space-y-3'>
+            <Skeleton className='h-[25vh] w-full rounded-xl' />
+            <Skeleton className='h-4 w-3/4 rounded' />
+            <Skeleton className='h-4 w-1/2 rounded' />
+          </div>
+        ))}
+      </div>
+    </div>
+  )
+}
 
 const relatedProducts = [
   {
@@ -125,12 +143,12 @@ const PhuKienNamCham: React.FC = async () => {
           </div>
 
           <div className='text-2xl my-10'>Phụ kiện thông dụng</div>
-          <Suspense>
+          <Suspense fallback={<LoadingSpinner />}>
             <AllAccessoriesProducts />
           </Suspense>
         </div>
       </div>
-      <Suspense>
+      <Suspense fallback='loading'>
         <SubCategories />
       </Suspense>
       <div className='text-2xl my-10 max-md:text-center'>Mua hàng theo loại phụ kiện</div>
