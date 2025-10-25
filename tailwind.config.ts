@@ -22,7 +22,7 @@ const config: Config = {
       'count-bg': '#E3D8CC',
       'count-text': '#253D4E',
       'main-phu-kien': '#F1E9DF',
-      'text-phu-kien': '#2E2E2E',
+      'text-phu-kien': '#424143',
       'kurashi-border-color': 'rgba(134,135,135,0.2)'
     },
     extend: {

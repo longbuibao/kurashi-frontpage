@@ -21,7 +21,7 @@ interface ProductAccessoryCardProps {
 const ProductAccessoryCard: React.FC<ProductAccessoryCardProps> = ({ product: x }) => {
   const productUniqueName = x.uniqueName === null || x.uniqueName === undefined ? '#' : x.uniqueName
   return (
-    <Link href={`/san-pham/phu-kien-bep/san-pham-phu-kien-bep/${productUniqueName}`} key={x.id} className='rounded-lg w-full group hover:bg-main-phu-kien'>
+    <Link href={`/san-pham/phu-kien-bep/san-pham-phu-kien-bep/${productUniqueName}`} key={x.id} className='rounded-lg w-full group'>
       <div className='mx-auto p-3'>
         <Image className='rounded-xl' src={x.thumbnail ?? '#'} width={1080} height={1080} alt='Phụ kiện nam châm' />
       </div>
@@ -31,7 +31,7 @@ const ProductAccessoryCard: React.FC<ProductAccessoryCardProps> = ({ product: x 
           <div className='font-bold line-clamp-1'>{x.name}</div>
         </div>
         <div className='flex flex-col gap-3 justify-between'>
-          <div className='flex flex-row gap-3'>
+          <div className='flex flex-row gap-3 justify-end'>
             {x.ProductColor !== undefined
               ? x.ProductColor.map(y => {
                 const className = y.colorHex === '#000' ? 'w-5 h-5 rounded-xl' : 'w-5 h-5 rounded-xl border border-kurashi-border'
@@ -39,9 +39,9 @@ const ProductAccessoryCard: React.FC<ProductAccessoryCardProps> = ({ product: x 
               })
               : null}
           </div>
-          <div className='text-main font-bold relative flex flex-row items-center gap-3 text-nowrap pl-1'>
+          <div className='text-text-phu-kien font-bold relative flex flex-row items-center gap-3 text-nowrap pl-1'>
             <Image src='/images/RightArrow.svg' width={10} height={10} alt='Kurashi JOURNAL' />
-            Hỏi giá
+            <div className='text-sm'>Hỏi giá</div>
           </div>
         </div>
       </div>

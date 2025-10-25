@@ -2,7 +2,6 @@ import React from 'react'
 import Image from 'next/image'
 
 import prisma from '@/lib/prisma'
-import { formatCurrency } from '@/utils'
 
 const PhuKienNew: React.FC = async () => {
   const newAccessories = await prisma.product.findMany({
@@ -18,15 +17,14 @@ const PhuKienNew: React.FC = async () => {
     }
   })
   return (
-    <div className='flex flex-col gap-10'>
+    <div className='flex flex-col gap-5'>
       {newAccessories.map(x => (
-        <div key={x.id} className='p-3 flex group flex-row gap-3 border-b-[0.5px] border-kurashi-border border-dashed w-[90%] pb-3 hover:bg-main-phu-kien hover:rounded-xl max-md:w-full'>
+        <div key={x.id} className='p-3 flex group flex-row gap-3 border-b-[0.5px] border-kurashi-border border-dashed w-[90%] pb-3 max-md:w-full'>
           <div className='w-12'>
             <Image src={x.thumbnail} alt='Phụ kiện thép tráng men' width={1080} height={1080} />
           </div>
-          <div className='flex flex-col justify-center gap-2'>
-            <div className='text-main font-bold group-hover:text-kurashiX text-nowrap'>{x.name}</div>
-            <div className='text-opacity-10 text-black relative text-sm'>Liên hệ</div>
+          <div className='flex flex-col gap-2'>
+            <div className='text-text-phu-kien font-bold text-nowrap'>{x.name}</div>
           </div>
         </div>))}
     </div>
