@@ -28,7 +28,7 @@ const SubCategories: React.FC = async () => {
     take: 3
   })
   return (
-    <div className='flex flex-row gap-10 my-24 max-md:flex-col max-md:px-3'>
+    <div className='flex flex-row gap-10 mb-24 mt-40 max-md:flex-col max-md:px-3'>
       {subCategories.map(x => <SubCategoryCard key={x.id} subCategory={x} />)}
     </div>
   )

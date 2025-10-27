@@ -134,10 +134,14 @@ const PhuKienNamCham: React.FC = async () => {
       <Suspense fallback='loading'>
         <SubCategories />
       </Suspense>
-      <div className='text-2xl my-10 max-md:text-center'>Mua hàng theo loại phụ kiện</div>
-      <ShopByCategory categories={categories} />
-      <div className='max-md:text-center text-2xl mb-10 mt-16 pb-5'>Online store</div>
-      <OnlineStore />
+      <div className='my-28'>
+        <div className='text-2xl my-10 max-md:text-center'>Mua hàng theo loại phụ kiện</div>
+        <ShopByCategory categories={categories} />
+      </div>
+      <div className='mt-40'>
+        <div className='max-md:text-center text-2xl mb-10 mt-16 pb-5'>Online store</div>
+        <OnlineStore />
+      </div>
       <div className='my-40 max-md:mt-40 max-md:text-center'>
         <div className='text-3xl my-16'>SẢN PHẨM LIÊN QUAN</div>
         <div className='flex flex-row gap-20 max-md:flex-col max-md:gap-10'>
