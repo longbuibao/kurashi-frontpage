@@ -71,11 +71,14 @@ const RootLayout: React.FC<RootProps> = async ({ children }): Promise<React.Reac
           {children}
         </ProgressBarProviders>
         <BackToTopButton />
-        <Link href={zaloLink} className='bg-main h-40 text-secondary fixed right-0 top-1/2 -translate-y-1/2 text-white shadow-lg  transition duration-300 z-50'>
-          <div className='flex flex-col gap-5 items-center justify-center h-full p-4'>
-            <i className='text-3xl fa-regular fa-message' />
-            <div className='font-bold'>
-              ZALO <br /> NGAY
+        <Link href={zaloLink} className='bg-main h-40 text-secondary fixed right-0 top-1/2 -translate-y-1/2 text-white shadow-lg transition duration-300 z-50'>
+          <div className='flex flex-col gap-5 items-center justify-center h-full p-4 max-md:p-0'>
+            <div className='max-md:hidden'>
+              <i className='text-3xl fa-regular fa-message' />
+            </div>
+            <div className='font-bold max-md:rotate-90'>
+              <div className='max-md:hidden'>ZALO <br /> NGAY</div>
+              <div className='hidden max-md:block max-md:text-xs'>ZALO NGAY</div>
             </div>
           </div>
         </Link>
@@ -83,14 +86,15 @@ const RootLayout: React.FC<RootProps> = async ({ children }): Promise<React.Reac
           <div className='flex flex-row justify-between w-4/5 mx-auto py-20 max-md:py-10 max-md:mt-10 max-md:flex-col max-md:gap-20'>
             {footerItems.map(x => {
               return (
-                <Link key={x.title} href='#'>
-                  <div className='flex flex-row items-center gap-10'>
-                    <div className='size-8 flex items-center self-start'>
-                      <Image src='https://storage.googleapis.com/kurashi_frontpage_files/images/rework-thep-trang-men/Icon.png' width={20} height={38} alt='' />
+                <Link className='max-md:pb-5 max-md:border-b-[0.5px] max-md:border-kurashi-border-color' key={x.title} href='#'>
+                  <div className='flex flex-row items-center gap-10 max-md:gap-8'>
+                    <div className='size-8 flex items-center justify-center self-start'>
+                      <Image className='max-md:hidden' src='/images/RightArrow.svg' width={20} height={20} alt='Kurashi JOURNAL' />
+                      <Image className='max-md:block hidden' src='/images/RightArrow.svg' width={10} height={10} alt='Kurashi JOURNAL' />
                     </div>
                     <div className='flex flex-col gap-5 w-96'>
                       <div className='flex flex-row items-center gap-10'>
-                        <div className='font-bold text-xl'>{x.title}</div>
+                        <div className='font-bold text-xl max-md:text-base'>{x.title}</div>
                       </div>
                       <div className='flex flex-row items-center gap-10'>
                         <div className=''>{x.content}</div>
@@ -105,7 +109,7 @@ const RootLayout: React.FC<RootProps> = async ({ children }): Promise<React.Reac
         <Footer t={t} />
         <div className='bg-[#24292e] pt-5 overflow-hidden'>
           <div className='text-secondary hover:cursor-default text-left w-4/5 mx-auto text-xs'>Copyright 2024 Kurashi Corporation. All rights reserved</div>
-          <div className='w-4/5 mx-auto mt-10 translate-y-10'><KurashiLogoSvg width='300' height='52' color='white' /></div>
+          <div className='w-4/5 mx-auto mt-10 translate-y-10 max-md:translate-y-3'><KurashiLogoSvg width='300' height='52' color='white' /></div>
         </div>
       </body>
     </html>

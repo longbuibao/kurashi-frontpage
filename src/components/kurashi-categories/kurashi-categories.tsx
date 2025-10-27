@@ -24,7 +24,7 @@ const KurashiCategories: Promise<React.JSX.Element> = async ({ lng }: KurashiCat
   })
 
   return (
-    <div className='grid grid-cols-3 grid-rows-2 gap-10 mx-auto place-items-center w-full max-md:grid-cols-1'>
+    <div className='grid grid-cols-3 grid-rows-2 gap-10 mx-auto place-items-center w-full max-md:grid-cols-2'>
       {productsRaw.sort((x, y) => x.order - y.order).map(x => {
         const url = x.landingPageUrl as any as UrlObject
         return (

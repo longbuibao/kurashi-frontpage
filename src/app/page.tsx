@@ -83,12 +83,12 @@ const Page = async (): Promise<React.ReactElement> => {
       </div>
       <div className='w-4/5 mx-auto mt-36 mb-16 max-md:mt-5 max-md:mb-0'>
         <div className='w-full '>
-          <div className='text-4xl max-md:text-xl max-md:text-left font-bold text-center max-md:w-full max-md:pb-5 font-gtFont'>
+          <div className='text-4xl max-md:text-center max-md:text-xl max-md:mt-14 font-bold text-center max-md:w-full max-md:pb-5 font-gtFont'>
             MADE IN JAPAN
           </div>
         </div>
-        <div className='max-md:py-5 pt-5 max-md:w-full text-center'>
-          <div className='text-xl'>Sản xuất tại Nhật Bản</div>
+        <div className='max-md:py-1 pt-5 max-md:w-full text-center'>
+          <div className='text-xl max-md:text-base max-md:mb-10'>Sản xuất tại Nhật Bản</div>
         </div>
       </div>
       <Suspense fallback={<KurashiCategoriesSkeleton />}>
@@ -97,7 +97,7 @@ const Page = async (): Promise<React.ReactElement> => {
           <KurashiCategories lng={lng} />
         </div>
       </Suspense>
-      <div className='w-4/5 mx-auto mt-32 max-lg:w-full'>
+      <div className='w-4/5 mx-auto mt-32 max-md:mt-20 max-lg:w-full'>
         <div className='my-10 overflow-hidden max-md:my-0'>
           <AboutKurashiCard lng={lng} />
         </div>
@@ -108,11 +108,11 @@ const Page = async (): Promise<React.ReactElement> => {
           <Image src='https://storage.googleapis.com/kurashi_frontpage_files/images/rework-homepage/IconMenu.png' width={82} height={82} alt='Kurashi JOURNAL' />
           <div className='text-2xl font-gtFont'>JOURNAL</div>
         </Link>
-        <div className='flex flex-row gap-10 pt-10 pb-16 mt-5 items-center justify-between max-md:flex-wrap mx-auto w-fit'>
+        <div className='flex flex-row gap-10 max-md:gap-16 pt-10 pb-16 mt-5 items-center justify-between max-md:flex-wrap mx-auto w-fit'>
           {posts.slice(0, 3).map(x => <BlogCardHomepage blog={x as any} key={x.fileName} />)}
         </div>
       </div>
-      <div className='w-4/5 mx-auto pb-20 flex flex-row gap-10 items-center max-md:flex-col max-md:text-center max-md:justify-center'>
+      <div className='w-4/5 mx-auto pb-20 flex flex-row gap-10 items-center max-md:flex-col max-md:text-center max-md:justify-center max-md:hidden'>
         <div className='flex flex-col h-full w-[60%] self-start mt-20'>
           <div className='flex flex-col items-end gap-10 pb-10 h-full'>
             <div className='font-gtFont text-3xl max-md:text-center max-md:w-full'>GOLD COLLECTION</div>
@@ -130,6 +130,17 @@ const Page = async (): Promise<React.ReactElement> => {
           </div>
         </div>
         <Image src='https://storage.googleapis.com/kurashi_frontpage_files/images/voi-rua-cao-cap-rework/gold-collection.webp' width={451} height={721} alt='vòi rửa cao cấp golden collection' />
+      </div>
+
+      <div className='hidden max-md:block pb-20 bg-main-phu-kien max-md:translate-y-11 pt-20'>
+        <Image src='https://storage.googleapis.com/kurashi_frontpage_files/images/voi-rua-cao-cap-rework/gold-collection.webp' width={451} height={721} alt='vòi rửa cao cấp golden collection' />
+        <div className='font-gtFont text-xl max-md:text-center max-md:w-full'>GOLD COLLECTION</div>
+        <Link href='/san-pham/voi-rua-cao-cap' className='self-end mt-12 max-md:self-center max-md:mt-10'>
+          <div className='bg-main text-secondary p-3 my-10 flex flex-row gap-3 items-center w-fit mx-auto'>
+            Khám phá
+            <i className='fa-solid fa-chevron-right' />
+          </div>
+        </Link>
       </div>
     </main>
   )

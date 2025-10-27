@@ -25,7 +25,7 @@ const Nav: FC<NavProps> = ({ links }) => {
     ? 'relative nav-visible bg-[rgba(217,217,217,0.10)] backdrop-blur-[20px] shadow-[0_4px_10px_rgba(0,0,0,0.2)]'
     : 'relative nav-hidden bg-[rgba(217,217,217,0.10)] backdrop-blur-[20px] shadow-[0_4px_10px_rgba(0,0,0,0.2)]'
 
-  const className = !isOpen ? 'header__burger max-md:mt-2' : 'header__burger is-active'
+  const className = !isOpen ? 'header__burger max-md:mt-8' : 'header__burger is-active'
 
   return (
     <div className={cls}>
