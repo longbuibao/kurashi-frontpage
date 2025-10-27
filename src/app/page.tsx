@@ -129,7 +129,7 @@ const Page = async (): Promise<React.ReactElement> => {
             </Link>
           </div>
         </div>
-        <Image src='https://storage.googleapis.com/kurashi_frontpage_files/images/voi-rua-cao-cap-rework/gold-collection.webp' width={700} height={1112} alt='vòi rửa cao cấp golden collection' />
+        <Image src='https://storage.googleapis.com/kurashi_frontpage_files/images/voi-rua-cao-cap-rework/gold-collection.webp' width={451} height={721} alt='vòi rửa cao cấp golden collection' />
       </div>
     </main>
   )

@@ -125,7 +125,7 @@ const PhuKienNamCham: React.FC = async () => {
               </div>
             </div>
           </div>
-          <div className='text-2xl my-20'>Phụ kiện thông dụng</div>
+          <div className='text-2xl mt-28 mb-10'>Phụ kiện thông dụng</div>
           <Suspense fallback={<LoadingSpinner />}>
             <AllAccessoriesProducts />
           </Suspense>

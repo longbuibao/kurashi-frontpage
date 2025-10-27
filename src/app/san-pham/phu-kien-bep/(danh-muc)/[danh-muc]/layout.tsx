@@ -2,6 +2,7 @@ import React, { Suspense } from 'react'
 import Link from 'next/link'
 import Skeleton from 'react-loading-skeleton'
 import 'react-loading-skeleton/dist/skeleton.css'
+import Image from 'next/image'
 
 import { CategoryItem } from '@/components/category-item'
 import { FilterCard } from '@/components/filter-card'
@@ -66,8 +67,8 @@ const PhuKienNamChamLayout: React.FC<PhuKienNamChamCategoryLayoutProps> = async 
             </div>
             <div className='w-[20%] max-md:w-full'>
               <Link href='/san-pham/phu-kien-bep' className='w-full flex flex-row items-center justify-end gap-5'>
-                <div className='text-main'>tất cả sản phẩm</div>
-                <div><i className='fa-solid fa-arrow-left' /></div>
+                <div className=''>tất cả sản phẩm</div>
+                <Image src='/images/LeftArrow.svg' width={10} height={10} alt='Trở về' />
               </Link>
             </div>
           </div>

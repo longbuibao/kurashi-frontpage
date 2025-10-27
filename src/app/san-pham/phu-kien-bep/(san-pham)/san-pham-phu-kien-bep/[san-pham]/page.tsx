@@ -53,9 +53,9 @@ const SanPhamPage: React.FC<SanPhamPageProps> = async props => {
           </div>
         </div>
       </div>
-      <div className='w-4/5 mx-auto my-10'>
+      <div className='w-4/5 mx-auto mt-14 mb-10'>
         <Link className='w-fit' href={`/san-pham/phu-kien-bep/${accessoryProduct?.category?.categoryUniqueName ?? ''}`}>
-          <LeftArrow width='30' height='30' />
+          <Image src='/images/LeftArrow.svg' width={20} height={20} alt='Trở về' />
         </Link>
       </div>
       <div className='flex flex-row gap-28 w-4/5 mx-auto mb-10 max-md:flex-col'>
