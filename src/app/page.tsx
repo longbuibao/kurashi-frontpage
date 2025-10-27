@@ -118,7 +118,7 @@ const Page = async (): Promise<React.ReactElement> => {
             <div className='font-gtFont text-3xl max-md:text-center max-md:w-full'>GOLD COLLECTION</div>
             <div className='text-5xl opacity-50 font-semibold text-[#6D6E71 ]'>{'Dấu ấn thượng lưu'.toUpperCase()}</div>
             <div className='w-full h-[0.5px] bg-[#6D6E71] opacity-20' />
-            <div className='text-right max-md:text-center text-xl leading-loose mt-5'>
+            <div className='text-right max-md:text-center text-xl leading-loose mt-5 w-4/5'>
               Bộ sưu tập là sự hòa quyện giữa nghệ thuật cổ điển và nét tinh giản hiện đại, mang đến vẻ thanh lịch vượt thời gian. Thiết kế linh hoạt cùng tông màu vàng kim được lựa chọn tỉ mỉ, hoàn thiện đến từng chi tiết, giúp sản phẩm nổi bật theo cách thật tinh tế, trở thành biểu tượng của phong cách sống thượng lưu.
             </div>
             <Link href='/san-pham/voi-rua-cao-cap' className='self-end mt-12 max-md:self-center max-md:mt-10'>
