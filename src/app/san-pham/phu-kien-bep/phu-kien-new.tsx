@@ -25,7 +25,7 @@ const PhuKienNew: React.FC = async () => {
             <Image src={x.thumbnail} alt='Phụ kiện thép tráng men' width={1080} height={1080} />
           </div>
           <div className='flex flex-col gap-2'>
-            <div className='text-text-phu-kien font-bold text-nowrap'>{x.name}</div>
+            <div className='text-text-phu-kien text-nowrap'>{x.name}</div>
           </div>
         </div>))}
     </div>

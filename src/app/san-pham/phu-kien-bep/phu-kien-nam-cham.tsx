@@ -73,7 +73,7 @@ const PhuKienNamCham: React.FC = async () => {
           <div className='w-full hidden max-md:block'>
             <div className='bg-main-phu-kien w-full flex flex-row rounded-xl max-md:flex-col-reverse'>
               <div className='flex flex-col gap-10 w-full py-10 pl-10 justify-center'>
-                <div className='text-4xl font-bold max-md:text-2xl'>
+                <div className='text-4xl font-semibold max-md:text-2xl'>
                   PHỤ KIỆN BẾP NAM CHÂM KURASHI
                 </div>
                 <div className='text-2xl'>Đa chủng loại, tự do xê dịch</div>
@@ -108,7 +108,7 @@ const PhuKienNamCham: React.FC = async () => {
           <div className='w-full block max-md:hidden'>
             <div className='bg-main-phu-kien text-text-phu-kien w-full flex flex-row rounded-xl max-md:flex-col-reverse'>
               <div className='flex flex-col gap-10 w-full py-10 pl-10 justify-center'>
-                <div className='text-4xl font-bold max-md:text-2xl'>
+                <div className='text-4xl font-semibold max-md:text-2xl'>
                   PHỤ KIỆN BẾP NAM CHÂM KURASHI
                 </div>
                 <div className='text-2xl'>THIẾT KẾ HIỆN ĐẠI, TINH GIẢN KIỂU NHẬT</div>
@@ -125,8 +125,7 @@ const PhuKienNamCham: React.FC = async () => {
               </div>
             </div>
           </div>
-
-          <div className='text-2xl my-10'>Phụ kiện thông dụng</div>
+          <div className='text-2xl my-20'>Phụ kiện thông dụng</div>
           <Suspense fallback={<LoadingSpinner />}>
             <AllAccessoriesProducts />
           </Suspense>
@@ -138,9 +137,7 @@ const PhuKienNamCham: React.FC = async () => {
       <div className='text-2xl my-10 max-md:text-center'>Mua hàng theo loại phụ kiện</div>
       <ShopByCategory categories={categories} />
       <div className='max-md:text-center text-2xl mb-10 mt-16 pb-5'>Online store</div>
-      <div className='mb-36'>
-        <OnlineStore />
-      </div>
+      <OnlineStore />
       <div className='my-40 max-md:mt-40 max-md:text-center'>
         <div className='text-3xl my-16'>SẢN PHẨM LIÊN QUAN</div>
         <div className='flex flex-row gap-20 max-md:flex-col max-md:gap-10'>
