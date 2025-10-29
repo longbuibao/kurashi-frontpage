@@ -17,10 +17,21 @@ export const metadata = {
   title: 'Kurashi Corp'
 }
 
-const createCarouselItemImage = (imageSrc: string, width = 1920, height = 1080): { key: string, content: React.ReactElement } => {
+const createCarouselItemImage = (src: { imageLink: string, url: string, title: string }, width = 1920, height = 1080): { key: string, content: React.ReactElement } => {
   return {
-    key: imageSrc,
-    content: <Image src={imageSrc} width={width} height={height} alt='picture' quality={100} />
+    key: src.imageLink,
+    content: (
+      <div>
+        <Image src={src.imageLink} width={width} height={height} alt='picture' quality={100} />
+        <div className='absolute bottom-5 left-1/2 -translate-x-1/2'>
+          <Link href={src.url as any} className='transition-all duration-300 hover:[text-shadow:_0_2px_10px_rgba(0,0,0,0.9)] text-secondary flex flex-col gap-5 items-center justify-center'>
+            <Image src='/images/ArrowDownIcon.svg' width={30} height={30} alt={src.title} />
+            <div className='text-sm [text-shadow:_0_2px_8px_rgba(0,0,0,1)] text-[#fff] font-semibold'>
+              {src.title.toUpperCase()}
+            </div>
+          </Link>
+        </div>
+      </div>)
   }
 }
 

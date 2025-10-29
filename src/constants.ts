@@ -19,9 +19,9 @@ export const carouselSliderImages = [
 ]
 
 export const carouselSliderImagesMobile = [
-  'https://storage.googleapis.com/kurashi_frontpage_files/images/sliders-homepage/Mobile_slider_1.jpg',
-  'https://storage.googleapis.com/kurashi_frontpage_files/images/sliders-homepage/Mobile_slider_2.jpg',
-  'https://storage.googleapis.com/kurashi_frontpage_files/images/sliders-homepage/Mobile_slider_3.jpg'
+  { title: 'tấm ốp nam châm', url: '/san-pham/tam-op-tuong-nam-cham', imageLink: 'https://storage.googleapis.com/kurashi_frontpage_files/images/rework-homepage/sliders/tam-op-nam-cham-mobile.webp' },
+  { title: 'thép tráng men', url: '/san-pham/tam-op-tuong-bang-thep-trang-men', imageLink: 'https://storage.googleapis.com/kurashi_frontpage_files/images/rework-homepage/sliders/thep-trang-men-mobile.webp' },
+  { title: 'vòi rửa cao cấp', url: '/san-pham/voi-rua-cao-cap', imageLink: 'https://storage.googleapis.com/kurashi_frontpage_files/images/rework-homepage/sliders/voi-rua-cao-cap-mobile.webp' }
 ]
 
 export const footerLinks = [{
