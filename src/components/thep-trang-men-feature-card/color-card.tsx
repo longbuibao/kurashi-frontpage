@@ -18,7 +18,7 @@ const ColorCard: React.FC<ColorCardProps> = ({ color, colorName }) => {
       <div className={className?.size}>
         <div className='w-full h-full'>
           <Image className='w-full h-full' alt='Màu sắp thép tráng men' src={className?.imageUrl ?? ''} width={282} height={143} />
-          <div className='flex flex-col mt-3 w-full h-full items-center'>
+          <div className='flex flex-col mt-3 w-full h-full items-center max-md:text-xs'>
             {colorName}
           </div>
         </div>

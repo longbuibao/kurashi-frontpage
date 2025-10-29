@@ -63,7 +63,7 @@ const Nav: FC<NavProps> = ({ links }) => {
         >
           <div className='flex flex-col justify-between items-center w-4/5 mx-auto max-md:w-full mt-16 max-md:mt-0 mb-10'>
             <div className='w-[60%] max-md:w-full'>
-              <div className='max-md:flex max-md:justify-center border-b-[1px] mb-10 border-[#5C5C5C]' style={{ borderColor: 'rgba(92, 92, 92, 0.3)' }}>
+              <div className='max-md:hidden max-md:justify-center border-b-[1px] mb-10 border-[#5C5C5C]' style={{ borderColor: 'rgba(92, 92, 92, 0.3)' }}>
                 <Image className='mb-5' src='https://storage.googleapis.com/kurashi_frontpage_files/images/rework-homepage/IconMenu.png' width={50} height={50} alt='Thép tráng men Kurashi' />
               </div>
               <div className='flex flex-col gap-5 max-md:gap-2 font-bold pr-10 justify-center max-lg:items-center max-md:p-3'>
@@ -73,8 +73,8 @@ const Nav: FC<NavProps> = ({ links }) => {
                     className='w-fit max-md:w-full text-center max-md:mt-8'
                     onClick={(e) => { e.stopPropagation(); setIsOpen(!isOpen) }}
                   >
-                    <div className='flex flex-row items-center justify-center gap-5'>
-                      <i className='fa-solid fa-angle-right' />
+                    <div className='max-md:grid max-md:grid-cols-[auto_1fr] flex max-md:w-1/2 max-md:mx-auto flex-row items-center justify-center gap-5'>
+                      <i className='fa-solid fa-angle-right max-md:w-fit max-md:col-start-1' />
                       <Link className='text-xl' href={link.url as any as UrlObject}>{link.label}</Link>
                     </div>
 
@@ -82,7 +82,7 @@ const Nav: FC<NavProps> = ({ links }) => {
                 ))}
               </div>
             </div>
-            <div className='flex flex-row gap-3 mb-16 max-md:self-center'>
+            <div className='flex flex-row gap-3 mb-16 max-md:self-center max-md:mt-10'>
               <LogoFacebook color='#000' width='30' height='30' />
               <LogoYoutube color='#000' width='30' height='30' />
               <LogoZalo width='30' height='30' />

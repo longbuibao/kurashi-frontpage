@@ -16,6 +16,10 @@
 	.embla__size-30 {
 		--slide-size: 100%;
 	}
+
+	.embla__size-50 {
+		--slide-height: 20rem;
+	}
 }
 
 .embla {

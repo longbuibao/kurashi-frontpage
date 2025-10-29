@@ -32,11 +32,11 @@ const PartThuNghiemDauMo: React.FC<PartThuNghiemDauMoProps> = ({ setCurrentInVie
 
   return (
     <>
-      <div className='my-20 flex flex-col gap-5 max-md:text-center'>
-        <div className='text-3xl'>THÍ NGHIỆM SO SÁNH</div>
-        <div className='my-3'>Dưới đây là thí nghiệm so sánh khả năng chống dầu mỡ và chống cháy của thép tráng men và vật liệu khác. </div>
+      <div className='my-20 flex flex-col gap-5 max-md:text-center max-md:my-10'>
+        <div className='text-3xl max-md:text-xl max-md:text-center'>THÍ NGHIỆM SO SÁNH</div>
+        <div className='my-3 max-md:text-center max-md:px-5'>Dưới đây là thí nghiệm so sánh khả năng chống dầu mỡ và chống cháy của thép tráng men và vật liệu khác. </div>
       </div>
-      <div ref={ref} id={transKey.ungDungLauDauMo} className='flex flex-row justify-between max-md:flex-col max-md:gap-10'>
+      <div ref={ref} id={transKey.ungDungLauDauMo} className='flex flex-row justify-between max-md:flex-col max-md:gap-10 max-md:px-5'>
         <div key={featuresDataDauMo[0].imageUrl} className='w-[45%] max-md:w-full'>
           <FeatureCard alt={featuresDataDauMo[0].alt} content={featuresDataDauMo[0].content} imageUrl={featuresDataDauMo[0].imageUrl} title={featuresDataDauMo[0].title} />
         </div>

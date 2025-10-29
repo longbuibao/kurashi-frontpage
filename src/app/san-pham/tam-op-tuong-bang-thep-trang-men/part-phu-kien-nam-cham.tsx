@@ -22,11 +22,11 @@ const PartPhuKienNamCham: React.FC<PartPartPhuKienNamChamProps> = ({ setCurrentI
   })
 
   return (
-    <div ref={ref} id={`${transKey.magnetAccessories}`} className='my-32'>
-      <div className='text-3xl'>PHỤ KIỆN BẾP HÚT NAM CHÂM</div>
-      <div className='my-10'>Do tấm ốp bếp bằng thép tráng men có lớp thép kim loại bên trong nên có thể kết hợp được các loại phụ kiện bếp hút nam châm. Bạn không cần phải khoan tường bếp và sử dụng ốc vít để treo phụ kiện. Đặc biệt bạn có thể di chuyển tự do các loại phụ kiện này đến bất kì vị trí nào mong muốn, giúp mang lại sự tiện lợi và gọn gàng cho gian bếp.Kurashi cung cấp nhiều loại <><Link className='font-bold' href='/san-pham/phu-kien-bep'>{'phụ kiện bếp hút nam châm'.toUpperCase()}</Link></> thông minh và đa năng như kệ bếp, kệ đựng gia vị, hũ đựng gia vị, móc treo và giá treo dao thớt.</div>
+    <div ref={ref} id={`${transKey.magnetAccessories}`} className='my-32 max-md:my-20'>
+      <div className='text-3xl max-md:text-xl max-md:text-center'>PHỤ KIỆN BẾP NAM CHÂM</div>
+      <div className='my-10 max-md:text-center max-md:px-5 max-md:leading-loose'>Do tấm ốp bếp bằng thép tráng men có lớp thép kim loại bên trong nên có thể kết hợp được các loại phụ kiện bếp hút nam châm. Bạn không cần phải khoan tường bếp và sử dụng ốc vít để treo phụ kiện. Đặc biệt bạn có thể di chuyển tự do các loại phụ kiện này đến bất kì vị trí nào mong muốn, giúp mang lại sự tiện lợi và gọn gàng cho gian bếp.Kurashi cung cấp nhiều loại <><Link className='font-bold' href='/san-pham/phu-kien-bep'>{'phụ kiện bếp hút nam châm'.toUpperCase()}</Link></> thông minh và đa năng như kệ bếp, kệ đựng gia vị, hũ đựng gia vị, móc treo và giá treo dao thớt.</div>
       <EmblaCarousel biggerSlider useFlatControlButton slides={imageUrls} />
-      <div className='flex flex-row gap-5 max-md:flex-col my-32'>
+      <div className='flex flex-row gap-5 max-md:flex-col my-32 max-md:my-10'>
         <iframe
           src='https://www.youtube.com/embed/PPpMjHjyWuo'
           allowFullScreen
@@ -34,8 +34,8 @@ const PartPhuKienNamCham: React.FC<PartPartPhuKienNamChamProps> = ({ setCurrentI
           allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
           title='video'
         />
-        <div className='flex flex-col gap-10 items-center justify-center w-4/5 max-md:text-center max-md:mx-auto max-md:mt-10'>
-          <div className='text-2xl'>
+        <div className='flex flex-col max-md:gap-5 gap-10 items-center justify-center w-4/5 max-md:text-center max-md:mx-auto max-md:mt-5'>
+          <div className='text-2xl max-md:text-xl max-md:text-center'>
             SỰ KHÁC BIỆT
           </div>
           <div className='text-center'>

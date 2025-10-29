@@ -83,7 +83,7 @@ const RootLayout: React.FC<RootProps> = async ({ children }): Promise<React.Reac
           </div>
         </Link>
         <div className='bg-[#DADADA]'>
-          <div className='flex flex-row justify-between w-4/5 mx-auto py-20 max-md:py-10 max-md:mt-10 max-md:flex-col max-md:gap-20'>
+          <div className='flex flex-row justify-between w-4/5 mx-auto py-20 max-md:py-10 max-md:mt-10 max-md:flex-col max-md:gap-10'>
             {footerItems.map(x => {
               return (
                 <Link className='max-md:pb-5 max-md:border-b-[0.5px] max-md:border-kurashi-border-color' key={x.title} href='#'>

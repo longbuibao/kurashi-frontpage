@@ -34,9 +34,9 @@ const PartUngDungThepTrangMen: React.FC<PartUngDungThepTrangMenProps> = ({ setCu
   })
 
   return (
-    <div ref={ref} id={`${transKey.application}`} className='flex flex-col gap-5 my-44'>
-      <div className='text-3xl'>ỨNG DỤNG ỐP TƯỜNG</div>
-      <div>Thép tráng men được sử dụng để làm tấm ốp tường như ốp tường bếp, ốp tường lavabo phòng tắm hoặc ốp tường văn phòng.</div>
+    <div ref={ref} id={`${transKey.application}`} className='flex flex-col gap-5 my-44 max-md:my-24'>
+      <div className='text-xl max-md:text-center'>ỨNG DỤNG ỐP TƯỜNG</div>
+      <div className='max-md:text-center max-md:px-5'>Thép tráng men được sử dụng để làm tấm ốp tường như ốp tường bếp, ốp tường lavabo phòng tắm hoặc ốp tường văn phòng.</div>
       <div className='flex flex-col gap-10'>
         <EmblaCarousel biggerSlider useFlatControlButton slides={imageUrls} />
       </div>
