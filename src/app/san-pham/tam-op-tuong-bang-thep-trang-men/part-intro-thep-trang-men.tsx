@@ -27,8 +27,8 @@ const PartIntroThepTrangMen: React.FC<Props> = ({ setCurrentInViewDivId }) => {
         Tấm ốp tường bếp thép tráng men Nhật Bản, chống ố, xước, cháy vượt trội. Tích hợp phụ kiện nam châm, dễ vệ sinh, bền đẹp. Giải pháp tiện lợi cho bếp hiện đại.
       </div>
       <div className='flex flex-row gap-5 max-md:flex-col max-md:w-full h-96 max-md:h-full'>
-        <Image className='w-full h-auto object-cover max-md:hidden' src='https://storage.googleapis.com/kurashi_frontpage_files/images/rework-thep-trang-men/theo-trang-men-op-bep-intro-part.webp' width={575} height={384} alt='Ứng dụng thép tráng men' />
-        <Image className='w-full h-auto object-cover max-md:hidden' src='https://storage.googleapis.com/kurashi_frontpage_files/images/rework-thep-trang-men/thep-trang-men-intro-part.webp' width={575} height={384} alt='Ứng dụng thép tráng men' />
+        <Image className='w-full h-auto object-cover max-md:hidden' src='https://storage.googleapis.com/kurashi_frontpage_files/images/rework-thep-trang-men/intro-thep-trang-men/theo-trang-men-op-bep.webp' width={575} height={384} alt='Ứng dụng thép tráng men' />
+        <Image className='w-full h-auto object-cover max-md:hidden' src='https://storage.googleapis.com/kurashi_frontpage_files/images/rework-thep-trang-men/intro-thep-trang-men/thep-trang-men.webp' width={575} height={384} alt='Ứng dụng thép tráng men' />
 
         <Image className='w-full h-auto object-cover hidden max-md:block' src='https://storage.googleapis.com/kurashi_frontpage_files/images/rework-thep-trang-men/phu-kien-nam-cham-1-mobile.webp' width={575} height={384} alt='Ứng dụng thép tráng men' />
         <Image className='w-full h-auto object-cover hidden max-md:block' src='https://storage.googleapis.com/kurashi_frontpage_files/images/rework-thep-trang-men/phu-kien-nam-cham-2-mobile.webp' width={575} height={384} alt='Ứng dụng thép tráng men' />
