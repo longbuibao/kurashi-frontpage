@@ -5,11 +5,17 @@ import { useInView } from 'react-intersection-observer'
 import * as c from './const'
 import EmblaCarousel from '@/components/embla-carousel/embla-carousel'
 
-const images = [
-  'https://storage.googleapis.com/kurashi_frontpage_files/images/tam-op-tuong-nam-cham/mau-cement-gray.webp',
-  'https://storage.googleapis.com/kurashi_frontpage_files/images/tam-op-tuong-nam-cham/mau-champagne-gold.webp',
-  'https://storage.googleapis.com/kurashi_frontpage_files/images/tam-op-tuong-nam-cham/mau-sonic-silver.webp'
-]
+const sliders = [
+  { imageUrl: 'https://storage.googleapis.com/kurashi_frontpage_files/images/tam-op-tuong-nam-cham/mau-cement-gray.webp', alt: 'tấm ốp nam châm màu cement gray' },
+  { imageUrl: 'https://storage.googleapis.com/kurashi_frontpage_files/images/tam-op-tuong-nam-cham/mau-champagne-gold.webp', alt: 'tấm ốp nam châm màu champagne gold' },
+  { imageUrl: 'https://storage.googleapis.com/kurashi_frontpage_files/images/tam-op-tuong-nam-cham/mau-sonic-silver.webp', alt: 'tấm ốp nam châm màu sonic silver' },
+  { imageUrl: 'https://storage.googleapis.com/kurashi_frontpage_files/images/tam-op-tuong-nam-cham/mau-matte-black-1.webp', alt: 'tấm ốp nam châm màu matte' }
+].map(x => {
+  return {
+    key: x.imageUrl,
+    content: <Image src={x.imageUrl} width={600} height={400} alt={x.alt} />
+  }
+})
 
 interface Props {
   setCurrentInViewDivId: (id: string) => void
@@ -65,7 +71,9 @@ const PartMauSac: React.FC<Props> = ({ setCurrentInViewDivId }) => {
           />
         </div>
       </div>
-      <div className='hidden max-md:block' />
+      <div className='hidden max-md:block'>
+        <EmblaCarousel blogSlider slides={sliders} />
+      </div>
     </div>
   )
 }
