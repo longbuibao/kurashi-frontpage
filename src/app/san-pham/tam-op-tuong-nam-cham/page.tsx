@@ -1,6 +1,7 @@
 'use client'
 import React from 'react'
 import { SideBar } from '@/components/side-bar'
+import Image from 'next/image'
 import * as c from './const'
 
 import PartIntro from './part-intro'
@@ -25,13 +26,14 @@ const Page: React.FC = () => {
   ]
   return (
     <div className='w-4/5 mx-auto max-md:w-full gap-10 flex flex-col leading-relaxed'>
-      <div className='aspect-[16/9] flex items-end bg-cover bg-center text-white text-5xl font-bold text-secondary' style={{ backgroundImage: `url(${imageUrl})` }} />
+      <div className='max-md:hidden aspect-[16/9] flex items-end bg-cover bg-center text-white text-5xl font-bold text-secondary' style={{ backgroundImage: `url(${imageUrl})` }} />
+      <div><Image className='hidden max-md:block' width={1081} height={1351} alt='Tấm ốp nam châm' src='https://storage.googleapis.com/kurashi_frontpage_files/images/tam-op-tuong-nam-cham/tam-op-nam-cham.webp' /></div>
       <div className='flex flex-row gap-32 my-36 max-md:my-0'>
         <div className='max-md:hidden min-w-fit mt-10'>
           <SideBar sectionTitles={sectionTitles} currentDivId={currentInViewDivId} ns='thep-trang-men' />
         </div>
-        <div className='max-md:w-4/5 max-md:mx-auto relative'>
-          <div className='text-3xl top-[-120px] mt-10 absolute max-md:static max-md:text-center'>{'Tấm ốp tường nam châm nhật bản'.toUpperCase()}</div>
+        <div className='max-md:w-full max-md:mx-auto relative'>
+          <div className='text-3xl top-[-120px] mt-10 absolute max-md:static max-md:text-center'>{'Tấm ốp nam châm'.toUpperCase()}</div>
           <PartIntro setCurrentInViewDivId={setCurrentInViewDivId} />
           <PartMauSac setCurrentInViewDivId={setCurrentInViewDivId} />
           <PartUngDungTamOp setCurrentInViewDivId={setCurrentInViewDivId} />

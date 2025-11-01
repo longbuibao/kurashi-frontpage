@@ -21,12 +21,13 @@ const PartIntro: React.FC<Props> = ({ setCurrentInViewDivId }) => {
   })
   return (
     <div ref={ref} id={`${c.intro}`} className='relative'>
-      <div className='my-10 max-md:text-center'>Vật liệu ốp tường Nhật Bản có lớp thép từ tính, không cần khoan khi gắn phụ kiện. Giải pháp sang trọng cho bếp, lavabo, lối ra vào và các mảng tường nội thất.</div>
+      <div className='my-10 max-md:text-center max-md:px-3'>Vật liệu ốp tường Nhật Bản có lớp thép từ tính, không cần khoan khi gắn phụ kiện. Giải pháp sang trọng cho bếp, lavabo, lối ra vào và các mảng tường nội thất.</div>
       <div className='flex flex-row gap-20 max-md:flex-col mt-14'>
-        <Image className='w-1/2 max-md:w-full' src='https://storage.googleapis.com/kurashi_frontpage_files/images/tam-op-tuong-nam-cham/tam-op-made-in-japan.webp' width={1003} height={741} alt='Thép tráng men' />
+        <Image className='max-md:hidden w-1/2 max-md:w-full' src='https://storage.googleapis.com/kurashi_frontpage_files/images/tam-op-tuong-nam-cham/tam-op-made-in-japan.webp' width={1003} height={741} alt='Thép tráng men' />
+        <Image className='hidden max-md:block w-full' src='https://storage.googleapis.com/kurashi_frontpage_files/images/tam-op-tuong-nam-cham/tam-op-nam-cham-mobile.webp' width={1081} height={1351} alt='Thép tráng men' />
         <div className='w-1/3 flex flex-col gap-10 items-center justify-center max-md:w-full'>
           <div className='font-gtFont'><span className='text-3xl'>{'Made in Japan'.toUpperCase()}</span></div>
-          <div className='text-center'>Tấm ốp tường hút nam châm Nhật Bản với phụ kiện nam châm đi kèm, gắn không cần khoan. Đa dạng bảng màu trendy như bạc, vàng, xám và đen, mang đến không gian sang trọng và hiện đại.</div>
+          <div className='text-center max-md:px-3'>Tấm ốp tường hút nam châm Nhật Bản với phụ kiện nam châm đi kèm, gắn không cần khoan. Đa dạng bảng màu trendy như bạc, vàng, xám và đen, mang đến không gian sang trọng và hiện đại.</div>
         </div>
       </div>
     </div>
