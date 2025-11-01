@@ -12,9 +12,10 @@ import { carouselSliderImagesMobile, carouselSliderImages } from '@/constants'
 import EmblaCarousel from '@/components/embla-carousel/embla-carousel'
 import { lng } from '@/app/const'
 import { BlogPost } from './blog/interface'
+import { LogoTradeMark } from '@/components/logo'
 
 export const metadata = {
-  title: 'Kurashi Corp'
+  title: 'Giải pháp nội thất từ Nhật Bản'
 }
 
 const createCarouselItemImage = (src: { imageLink: string, url: string, title: string }, width = 1920, height = 1080): { key: string, content: React.ReactElement } => {
@@ -83,6 +84,13 @@ const Page = async (): Promise<React.ReactElement> => {
   const carouselSliders = carouselSliderImages.map(x => createCarouselItems(x))
   const carouselSlidersMobile = carouselSliderImagesMobile.map(x => createCarouselItemImage(x, 4500, 5620))
   const posts = await allPosts()
+  const postContent = posts.slice(0, 3).map(x => <BlogCardHomepage blog={x as any} key={x.fileName} />)
+  const postsMobile = posts.slice(0, 3).map(x => {
+    return {
+      key: x.fileName,
+      content: <BlogCardHomepage blog={x as any} key={x.fileName} />
+    }
+  })
 
   return (
     <main className='mt-0'>
@@ -113,14 +121,18 @@ const Page = async (): Promise<React.ReactElement> => {
           <AboutKurashiCard lng={lng} />
         </div>
       </div>
-      <div className='w-4/5 mx-auto mt-28'>
+      <div className='w-4/5 mx-auto mt-28 max-md:mt-10'>
         <Link href='/blog' className='w-fit flex flex-row items-center justify-center gap-5 mx-auto'>
-          <Image src='/images/RightArrow.svg' width={20} height={20} alt='Kurashi JOURNAL' />
-          <Image src='https://storage.googleapis.com/kurashi_frontpage_files/images/rework-homepage/IconMenu.png' width={82} height={82} alt='Kurashi JOURNAL' />
-          <div className='text-2xl font-gtFont'>JOURNAL</div>
+          <Image className='max-md:hidden' src='/images/RightArrow.svg' width={20} height={20} alt='Kurashi JOURNAL' />
+          <Image className='max-md:block hidden' src='/images/RightArrow.svg' width={10} height={10} alt='Kurashi JOURNAL' />
+          <LogoTradeMark width={82} height={82} />
+          <div className='text-2xl max-md:text-base font-gtFont'>JOURNAL</div>
         </Link>
-        <div className='flex flex-row gap-10 max-md:gap-16 pt-10 pb-16 mt-5 items-center justify-between max-md:flex-wrap mx-auto w-fit'>
-          {posts.slice(0, 3).map(x => <BlogCardHomepage blog={x as any} key={x.fileName} />)}
+        <div className='max-md:hidden flex flex-row gap-10 max-md:gap-16 pt-10 pb-16 mt-5 items-center justify-between max-md:flex-wrap mx-auto w-fit'>
+          {postContent}
+        </div>
+        <div className='hidden max-md:block mt-10'>
+          <EmblaCarousel blogSlider slides={postsMobile} />
         </div>
       </div>
       <div className='w-4/5 mx-auto pb-20 flex flex-row gap-10 items-center max-md:flex-col max-md:text-center max-md:justify-center max-md:hidden'>
@@ -143,7 +155,7 @@ const Page = async (): Promise<React.ReactElement> => {
         <Image src='https://storage.googleapis.com/kurashi_frontpage_files/images/voi-rua-cao-cap-rework/gold-collection.webp' width={451} height={721} alt='vòi rửa cao cấp golden collection' />
       </div>
 
-      <div className='hidden max-md:block pb-20 bg-main-phu-kien max-md:translate-y-11 pt-20'>
+      <div className='hidden max-md:block py-10 bg-main-phu-kien max-md:translate-y-11'>
         <Image src='https://storage.googleapis.com/kurashi_frontpage_files/images/voi-rua-cao-cap-rework/gold-collection.webp' width={451} height={721} alt='vòi rửa cao cấp golden collection' />
         <div className='font-gtFont text-xl max-md:text-center max-md:w-full'>GOLD COLLECTION</div>
         <Link href='/san-pham/voi-rua-cao-cap' className='self-end mt-12 max-md:self-center max-md:mt-10'>

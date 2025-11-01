@@ -11,6 +11,7 @@ import { getMetadata } from '@/utils'
 
 import { BlogPost } from './interface'
 import BlogCategoryFilter from './blog-by-category'
+import { LogoTradeMark } from '@/components/logo'
 
 export async function generateMetadata (): Promise<Metadata> {
   const defaultTitle = 'Tất cả bài viết'
@@ -87,7 +88,7 @@ const AllBlogs: React.FC = async (): React.ReactElement => {
         <Suspense>
           <div className='w-fit flex flex-row items-center justify-center gap-5 mx-auto my-20 max-md:my-10'>
             <Image src='/images/RightArrow.svg' width={20} height={20} alt='Kurashi JOURNAL' />
-            <Image src='https://storage.googleapis.com/kurashi_frontpage_files/images/rework-homepage/IconMenu.png' width={82} height={82} alt='Kurashi JOURNAL' />
+            <LogoTradeMark width={82} height={82} />
             <div className='text-2xl font-gtFont'>JOURNAL</div>
           </div>
           <div className='flex flex-row gap-10 mt-3 max-md:flex-col'>

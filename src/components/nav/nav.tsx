@@ -1,9 +1,8 @@
 'use client'
 import { FC, useState } from 'react'
 import Link from 'next/link'
-import Image from 'next/image'
 
-import { KurashiLogoSvg } from '@/components/logo'
+import { KurashiLogoSvg, LogoTradeMark } from '@/components/logo'
 import { v4 as uuidv4 } from 'uuid'
 import { LogoFacebook, LogoYoutube, LogoZalo, LocationIcon, ProAccountIcon } from '@/components/svg-icons'
 import { useHideOnScrollDown } from './useHideOnScroll'
@@ -64,7 +63,9 @@ const Nav: FC<NavProps> = ({ links }) => {
           <div className='flex flex-col justify-between items-center w-4/5 mx-auto max-md:w-full mt-16 max-md:mt-0 mb-10'>
             <div className='w-[60%] max-md:w-full'>
               <div className='max-md:hidden max-md:justify-center border-b-[1px] mb-10 border-[#5C5C5C]' style={{ borderColor: 'rgba(92, 92, 92, 0.3)' }}>
-                <Image className='mb-5' src='https://storage.googleapis.com/kurashi_frontpage_files/images/rework-homepage/IconMenu.png' width={50} height={50} alt='Thép tráng men Kurashi' />
+                <div className='mb-5'>
+                  <LogoTradeMark width={50} height={50} />
+                </div>
               </div>
               <div className='flex flex-col gap-5 max-md:gap-2 font-bold pr-10 justify-center max-lg:items-center max-md:p-3'>
                 {links.map(link => (

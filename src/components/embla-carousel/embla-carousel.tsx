@@ -13,11 +13,12 @@ interface PropType {
   options?: EmblaOptionsType
   useControlButton?: boolean
   useFlatControlButton?: boolean
+  blogSlider?: boolean
   biggerSlider?: boolean
 }
 
 const EmblaCarousel: React.FC<PropType> = (props) => {
-  const { slides, options, useControlButton = false, useFlatControlButton = false, biggerSlider = false } = props
+  const { slides, options, useControlButton = false, useFlatControlButton = false, biggerSlider = false, blogSlider = false } = props
   const [emblaRef, emblaApi] = useEmblaCarousel(options, [
     Autoplay({ playOnInit: true, delay: 3000 })
   ])
@@ -28,11 +29,19 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
     if (autoplay == null) return
     autoplay?.play()
   }, [emblaApi])
-  const className = useFlatControlButton ? 'embla__size-30 theme-light' : 'embla theme-light'
-  const biggerSliderClassName = biggerSlider ? 'embla__size-50 theme-light' : 'embla theme-light'
+  const baseClass = 'theme-light'
+  const variantClass = useFlatControlButton
+    ? 'embla__size-30'
+    : biggerSlider
+      ? 'embla__size-50'
+      : blogSlider
+        ? 'embla__size-40'
+        : 'embla'
+
+  const finalClass = `${variantClass} ${baseClass}`
 
   return (
-    <section className={biggerSlider ? biggerSliderClassName : className}>
+    <section className={finalClass}>
       {useFlatControlButton && (
         <div className='my-14 max-md:my-5 embla__flat-dots'>
           {scrollSnaps.map((_, index) => (

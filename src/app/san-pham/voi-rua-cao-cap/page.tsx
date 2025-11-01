@@ -3,6 +3,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { UrlObject } from 'url'
 import { EmblaCarousel } from '@/components/embla-carousel'
+import { LogoTradeMark } from '@/components/logo'
 
 const imageUrls = [
   { url: 'https://storage.googleapis.com/kurashi_frontpage_files/images/voi-rua-cao-cap-rework/voi-lavabo-dung-1.webp', alt: 'vòi cao cấp lavabo dựng' },
@@ -170,7 +171,7 @@ const Page: React.FC = () => {
         </div>
         <div className='mt-40 max-md:mt-20'>
           <div className='flex flex-row items-center justify-center'>
-            <Image src='https://storage.googleapis.com/kurashi_frontpage_files/images/rework-homepage/IconMenu.png' width={82} height={82} alt='Thương hiệu Kurashi' />
+            <LogoTradeMark width={82} height={82} />
             <div className='font-gtFont text-2xl'>SIGNATURE</div>
           </div>
           <div className='my-10 max-md:text-center'>Mỗi chiếc vòi <span className='font-bold'>KURASHI</span> được tạo ra để phản chiếu phong cách sống riêng của bạn — <span className='font-bold'>khác biệt, tinh tế và có cá tính.</span> Không chỉ là một vật dụng, đó là <span className='font-bold'>dấu ấn trong từng khoảnh khắc</span> bạn chạm vào nước, nấu ăn hay bắt đầu ngày mới.</div>
