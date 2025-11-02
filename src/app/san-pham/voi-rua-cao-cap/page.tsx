@@ -5,6 +5,10 @@ import { UrlObject } from 'url'
 import { EmblaCarousel } from '@/components/embla-carousel'
 import { LogoTradeMark } from '@/components/logo'
 
+export const metadata = {
+  title: 'Vòi rửa cao cấp'
+}
+
 const imageUrls = [
   { url: 'https://storage.googleapis.com/kurashi_frontpage_files/images/voi-rua-cao-cap-rework/voi-lavabo-dung-1.webp', alt: 'vòi cao cấp lavabo dựng' },
   { url: 'https://storage.googleapis.com/kurashi_frontpage_files/images/voi-rua-cao-cap-rework/voi-lavabo-dung-1a.webp', alt: 'vòi cao cấp lavabo dựng' },

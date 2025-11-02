@@ -25,10 +25,10 @@ const ProductAccessoryCard: React.FC<ProductAccessoryCardProps> = ({ product: x 
       <div className='mx-auto p-3'>
         <Image className='rounded-xl' src={x.thumbnail ?? '#'} width={1080} height={1080} alt='Phụ kiện nam châm' />
       </div>
-      <div className='m-3 flex flex-row justify-between mt-10'>
+      <div className='m-3 flex flex-row justify-between mt-10 max-md:mt-3'>
         <div className='flex flex-col gap-2'>
           <div className='font-bold text-text-phu-kien'>{x.category?.name}</div>
-          <div className='line-clamp-1'>{x.name}</div>
+          <div className='line-clamp-1 max-md:text-sm'>{x.name}</div>
         </div>
         <div className='flex flex-col gap-3 justify-between'>
           <div className='flex flex-row gap-3 justify-end'>
@@ -39,7 +39,7 @@ const ProductAccessoryCard: React.FC<ProductAccessoryCardProps> = ({ product: x 
               })
               : null}
           </div>
-          <div className='text-text-phu-kien font-bold relative flex flex-row items-center gap-3 text-nowrap pl-1'>
+          <div className='text-text-phu-kien font-bold relative flex flex-row items-center gap-3 text-nowrap pl-1 max-md:hidden'>
             <Image src='/images/RightArrow.svg' width={10} height={10} alt='Kurashi JOURNAL' />
             <div className='text-sm'>Hỏi giá</div>
           </div>

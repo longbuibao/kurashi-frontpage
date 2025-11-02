@@ -52,7 +52,7 @@ const KurashiSlider: React.FC<Props> = ({ steps }): React.ReactElement => {
             {steps.map((x, y) => {
               const isActive = index === y
               const className = `size-9 rounded-full transition-colors ${isActive ? 'bg-[#000] text-secondary' : 'bg-secondary border-black'}`
-              const textClassName = isActive ? 'text-main font-bold max-md:hidden' : 'text-black font-bold max-md:hidden'
+              const textClassName = isActive ? 'font-bold max-md:hidden' : 'text-black font-bold max-md:hidden'
               return (
                 <div key={x.title} onClick={() => handleClick(y)} className='hover:cursor-pointer flex flex-col items-center gap-5'>
                   <button className={className}>

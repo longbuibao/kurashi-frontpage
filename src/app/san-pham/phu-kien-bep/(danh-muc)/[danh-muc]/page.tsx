@@ -2,9 +2,23 @@ import React, { Suspense } from 'react'
 
 import prisma from '@/lib/prisma'
 import { ProductAccessoryCard } from '@/components/product'
+import { Metadata } from 'next'
 
 interface PageParam {
   params: Promise<{ 'danh-muc': string }>
+}
+
+export async function generateMetadata ({ params }: PageParam): Promise<Metadata> {
+  const category = (await params)['danh-muc']
+  const cate = await prisma.category.findFirst({
+    where: {
+      categoryUniqueName: category
+    }
+  })
+
+  return {
+    title: `Phụ kiện ${cate?.name.toLowerCase() ?? 'nam châm'}`
+  }
 }
 
 export async function generateStaticParams (): Promise<any> {

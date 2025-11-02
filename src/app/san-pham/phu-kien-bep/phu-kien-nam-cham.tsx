@@ -6,7 +6,6 @@ import Link from 'next/link'
 import prisma from '@/lib/prisma'
 import { FilterCard, PriceFilter } from '@/components/filter-card'
 import { OnlineStore } from '@/components/online-store-card'
-import PhuKienNew from './phu-kien-new'
 import AllAccessoriesProducts from './all-accessories-product'
 import SubCategories from './sub-categories'
 import ShopByCategory from './shop-by-category'
@@ -72,37 +71,32 @@ const PhuKienNamCham: React.FC = async () => {
         <div className='w-[20%] flex-col flex gap-10 max-md:w-full'>
           <div className='w-full hidden max-md:block'>
             <div className='bg-main-phu-kien w-full flex flex-row rounded-xl max-md:flex-col-reverse'>
-              <div className='flex flex-col gap-10 w-full py-10 pl-10 justify-center'>
-                <div className='text-4xl font-semibold max-md:text-2xl'>
+              <div className='flex flex-col gap-10 w-full py-10 px-5 justify-center'>
+                <div className='text-2xl font-semibold max-md:text-xl text-center w-fit mx-auto'>
                   PHỤ KIỆN BẾP NAM CHÂM KURASHI
                 </div>
-                <div className='text-2xl'>Đa chủng loại, tự do xê dịch</div>
+                <div className='text-sm w-4/5 mx-auto leading-loose text-center'>Bộ sưu tập phụ kiện bếp nam châm Nhật Bản Kurashi. Thiết kế sang trọng, công năng và chất lượng Nhật Bản. Dễ gắn, dễ di chuyển, không cần khoan tường.</div>
               </div>
               <div className='w-[60%] p-5 max-md:w-full'>
-                <Image className='rounded-xl' src='https://storage.googleapis.com/kurashi_frontpage_files/images/thep_trang_men_slider/10.jpg' alt='Phụ kiện thép tráng men' width={1080} height={1080} />
+                <Image className='rounded-xl' src='https://storage.googleapis.com/kurashi_frontpage_files/images/rework-phu-kien-nam-cham/dev-images/hero-image.png' alt='Phụ kiện thép tráng men' width={1080} height={1080} />
               </div>
             </div>
           </div>
           <Suspense fallback={<FilterCardSkeleton />}>
-            <FilterCard title='Danh mục'>
-              <div className='flex flex-col gap-5'>
-                {categories.sort((x, y) => y.order - x.order).map(category =>
-                  <CategoryItem url={category.url} name={category.name ?? ''} numberOfProducts={category.count ?? 0} thumbnail={category.thumbnail ?? ''} key={category.key} />)}
-              </div>
-            </FilterCard>
+            <div className='sticky top-10'>
+              <FilterCard title='Danh mục'>
+                <div className='flex flex-col gap-5'>
+                  {categories.sort((x, y) => y.order - x.order).map(category =>
+                    <CategoryItem url={category.url} name={category.name ?? ''} numberOfProducts={category.count ?? 0} thumbnail={category.thumbnail ?? ''} key={category.key} />)}
+                </div>
+              </FilterCard>
+            </div>
           </Suspense>
           <div className='hidden'>
             <FilterCard title='Lọc sản phẩm'>
               <PriceFilter colors={[{ color: 'Trắng', quantity: 54 }, { color: 'Đen', quantity: 54 }, { color: 'Bạc', quantity: 54 }]} />
             </FilterCard>
           </div>
-          <FilterCard title='Phụ kiện mới'>
-            <div className='flex flex-col gap-5'>
-              <Suspense fallback={<FilterCardSkeleton />}>
-                <PhuKienNew />
-              </Suspense>
-            </div>
-          </FilterCard>
         </div>
         <div className='w-[80%] max-md:w-full'>
           <div className='w-full block max-md:hidden'>
@@ -125,7 +119,7 @@ const PhuKienNamCham: React.FC = async () => {
               </div>
             </div>
           </div>
-          <div className='text-2xl mt-28 mb-10'>Phụ kiện thông dụng</div>
+          <div className='text-2xl mb-10 text-center'>Phụ kiện thông dụng</div>
           <Suspense fallback={<LoadingSpinner />}>
             <AllAccessoriesProducts />
           </Suspense>
@@ -134,22 +128,22 @@ const PhuKienNamCham: React.FC = async () => {
       <Suspense fallback='loading'>
         <SubCategories />
       </Suspense>
-      <div className='my-28'>
+      <div className='my-28 max-md:my-0'>
         <div className='text-2xl my-10 max-md:text-center'>Mua hàng theo loại phụ kiện</div>
         <ShopByCategory categories={categories} />
       </div>
-      <div className='mt-40'>
-        <div className='max-md:text-center text-2xl mb-10 mt-16 pb-5'>Online store</div>
+      <div className='mt-40 max-md:mt-20'>
+        <div className='max-md:text-center text-2xl mb-10 mt-16 pb-5 max-md:pb-0'>Online store</div>
         <OnlineStore />
       </div>
-      <div className='my-40 max-md:mt-40 max-md:text-center'>
-        <div className='text-3xl my-16'>SẢN PHẨM LIÊN QUAN</div>
-        <div className='flex flex-row gap-20 max-md:flex-col max-md:gap-10'>
+      <div className='my-40 max-md:mt-20 max-md:mb-16 max-md:text-center'>
+        <div className='text-3xl my-16 max-md:text-2xl'>SẢN PHẨM LIÊN QUAN</div>
+        <div className='max-md:grid max-md:grid-cols-3 flex flex-row justify-between max-md:gap-2 max-md:px-3'>
           {relatedProducts.map(x =>
             <Link key={x.thumb} href={x.url as any}>
               <div className='flex flex-col gap-5 justify-center w-fit'>
                 <Image src={x.thumb} width={300} height={300} alt={x.alt} className='transition-shadow hover:shadow-lg' />
-                <div className='text-center'>{x.alt}</div>
+                <div className='text-center max-md:text-xs'>{x.alt}</div>
               </div>
             </Link>
           )}
