@@ -23,9 +23,9 @@ const PartQuyCach: React.FC<PartKichThuocMauSacProps> = ({ setCurrentInViewDivId
     <div ref={ref} id={`${c.quyCach}`} className='mt-40 max-md:mt-20 max-md:text-center'>
       <div className='text-3xl mb-10'>QUY CÁCH TẤM</div>
       <div>Tấm ốp tường hút nam châm Nhật Bản có 2 kích thước tiêu chuẩn: 910 x 1820mm tiện dụng và 910 x 2400mm cho mảng tường lớn. Cả hai đều dày 3.4mm với cấu tạo 3 lớp bền chắc.</div>
-      <div className='flex flex-row gap-6 items-end mt-10 max-md:flex-col max-md:items-center'>
-        <SizeCard size='m' orient='horizontal' />
-        <SizeCard size='l' orient='horizontal' />
+      <div className='flex flex-row justify-around gap-10 mt-20 items-end max-md:mt-10 w-[70%] mx-auto max-md:w-[90%] max-md:gap-3'>
+        <SizeCard size='m' orient='vertical' />
+        <SizeCard size='l' orient='vertical' />
       </div>
     </div>
 

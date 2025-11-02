@@ -8,7 +8,7 @@ interface SizeCardProps {
 const availableCssClassesVertical: Map<string, string> = new Map([
   ['s', 'text-xs max-md:p-12 w-[150px] h-[300px] max-md:w-[75px] max-md:h-[125px] border p-5 border-opacity-25 border-[#000] '],
   ['m', 'text-xs max-md:p-12 w-[150px] h-[400px] max-md:w-[75px] max-md:h-[175px] border p-5 border-opacity-25 border-[#000] '],
-  ['l', 'text-xs max-md:p-12 w-[220px] h-[400px] max-md:w-[100px] max-md:h-[175px] border p-5 border-opacity-25 border-[#000] ']
+  ['l', 'text-xs max-md:p-12 w-[220px] h-[400px] max-md:w-[130px] max-md:h-[175px] border p-5 border-opacity-25 border-[#000] ']
 ])
 
 const sizesVertical: Map<string, string> = new Map([
