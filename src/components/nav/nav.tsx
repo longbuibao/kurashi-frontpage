@@ -83,7 +83,7 @@ const Nav: FC<NavProps> = ({ links }) => {
                 ))}
               </div>
             </div>
-            <div className='flex flex-row gap-3 mb-16 max-md:self-center max-md:mt-10'>
+            <div className='flex flex-row gap-3 mb-auto mt-16 max-md:self-center max-md:mt-10'>
               <LogoFacebook color='#000' width='30' height='30' />
               <LogoYoutube color='#000' width='30' height='30' />
               <LogoZalo width='30' height='30' />

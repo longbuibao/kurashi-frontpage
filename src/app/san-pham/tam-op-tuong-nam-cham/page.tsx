@@ -25,7 +25,7 @@ const Page: React.FC = () => {
     c.sanPhamLienQuan
   ]
   return (
-    <div className='w-4/5 mx-auto max-md:w-full gap-10 flex flex-col leading-relaxed'>
+    <div className='w-4/5 mx-auto max-md:w-full gap-10 flex flex-col leading-relaxed max-md:leading-loose'>
       <div className='max-md:hidden aspect-[16/9] flex items-end bg-cover bg-center text-white text-5xl font-bold text-secondary' style={{ backgroundImage: `url(${imageUrl})` }} />
       <div><Image className='hidden max-md:block' width={1081} height={1351} alt='Tấm ốp nam châm' src='https://storage.googleapis.com/kurashi_frontpage_files/images/tam-op-tuong-nam-cham/tam-op-nam-cham.webp' /></div>
       <div className='flex flex-row gap-32 my-36 max-md:my-0'>
