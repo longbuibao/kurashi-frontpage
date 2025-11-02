@@ -34,7 +34,7 @@ const PartMauSac: React.FC<Props> = ({ setCurrentInViewDivId }) => {
 
   return (
     <div ref={ref} id={`${c.mauSac}`} className='mt-40 max-md:mt-20 max-md:text-center'>
-      <div className='text-3xl mt-10'>{'Màu sắc sang trọng'.toUpperCase()}</div>
+      <div className='text-3xl mt-10 max-md:text-2xl'>{'Màu sắc sang trọng'.toUpperCase()}</div>
       <div className='my-10 w-4/5 max-md:mx-auto'>Sonic Silver, Champagne Gold, Cement Gray, Matte Black - bốn sắc màu cao cấp giúp tấm ốp tường hút nam châm hòa hợp hoàn hảo với mọi không gian hiện đại.</div>
       <div className='max-md:hidden grid grid-cols-[400px_auto] grid-rows-[auto_auto_auto] h-screen gap-10 max-md:flex-col max-md:gap-5'>
         <div className='relative'>
@@ -71,7 +71,7 @@ const PartMauSac: React.FC<Props> = ({ setCurrentInViewDivId }) => {
           />
         </div>
       </div>
-      <div className='hidden max-md:block'>
+      <div className='hidden max-md:block px-10'>
         <EmblaCarousel blogSlider slides={sliders} />
       </div>
     </div>

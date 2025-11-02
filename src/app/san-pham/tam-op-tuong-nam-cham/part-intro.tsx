@@ -27,7 +27,7 @@ const PartIntro: React.FC<Props> = ({ setCurrentInViewDivId }) => {
         <Image className='hidden max-md:block w-full' src='https://storage.googleapis.com/kurashi_frontpage_files/images/tam-op-tuong-nam-cham/tam-op-nam-cham-mobile.webp' width={1081} height={1351} alt='Thép tráng men' />
         <div className='w-1/3 flex flex-col gap-10 items-center justify-center max-md:w-full'>
           <div className='font-gtFont'><span className='text-3xl'>{'Made in Japan'.toUpperCase()}</span></div>
-          <div className='text-center max-md:px-3'>Tấm ốp tường hút nam châm Nhật Bản với phụ kiện nam châm đi kèm, gắn không cần khoan. Đa dạng bảng màu trendy như bạc, vàng, xám và đen, mang đến không gian sang trọng và hiện đại.</div>
+          <div className='text-center max-md:px-10'>Tấm ốp tường hút nam châm Nhật Bản với phụ kiện nam châm đi kèm, gắn không cần khoan. Đa dạng bảng màu trendy như bạc, vàng, xám và đen, mang đến không gian sang trọng và hiện đại.</div>
         </div>
       </div>
     </div>

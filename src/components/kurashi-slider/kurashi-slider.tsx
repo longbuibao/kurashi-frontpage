@@ -42,7 +42,7 @@ const KurashiSlider: React.FC<Props> = ({ steps }): React.ReactElement => {
           <Image src={steps[index].thumbnail} width={308} height={191} alt={steps[index].content} />
           <div className='flex flex-col gap-5'>
             <div className='font-bold text-xl text-center'>{steps[index].title}</div>
-            <div className='text-center'>{steps[index].content}</div>
+            <div className='text-center max-md:text-sm max-md:leading-loose'>{steps[index].content}</div>
           </div>
         </div>
       </div>
