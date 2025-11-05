@@ -13,7 +13,7 @@ export const Thumb = (props: Props): React.ReactElement => {
   return (
     <div className={'embla-thumbs__slide'.concat(selected ? ' border  border-secondary-opacity' : '')}>
       <button onClick={onClick} type='button' className='embla-thumbs__slide__number'>
-        <div className='size-14'>
+        <div className='size-14 p-2'>
           {content}
         </div>
       </button>

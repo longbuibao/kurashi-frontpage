@@ -53,7 +53,7 @@ const EmblaCarouselWithThumbnail: React.FC<Props> = (props) => {
 
       <div className='embla-thumbs pt-5 border-t-[0.5px] border-secondary-opacity'>
         <div className='embla-thumbs__viewport' ref={emblaThumbsRef}>
-          <div className='embla-thumbs__container flex flex-row gap-5'>
+          <div className='embla-thumbs__container flex flex-row gap-5 pt-2'>
             {slides.map((x, index) => (
               <Thumb
                 key={index}
