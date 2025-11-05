@@ -24,9 +24,9 @@ const CategoryItem: React.FC<CategoryItemProps> = ({ name, thumbnail, numberOfPr
     <Link href={`/san-pham/phu-kien-bep/${url}`} className={className}>
       <div className='flex flex-row gap-3 items-center'>
         <Image src={thumbnail} alt={`Phụ kiện ${name}`} width={40} height={40} />
-        <div>{name}</div>
+        <div className='max-md:text-sm max-md:text-nowrap'>{name}</div>
       </div>
-      <div className='w-[30px] h-[30px] rounded-full flex flex-col justify-center group-hover:bg-count-bg bg-count-bg text-center text-count-text'>{numberOfProducts}</div>
+      <div className='max-md:text-sm max-md:w-[25px] max-md:h-[25px] w-[30px] h-[30px] rounded-full flex flex-col justify-center group-hover:bg-count-bg bg-count-bg text-center text-count-text'>{numberOfProducts}</div>
     </Link>
   )
 }
