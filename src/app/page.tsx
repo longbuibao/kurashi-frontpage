@@ -13,6 +13,7 @@ import EmblaCarousel from '@/components/embla-carousel/embla-carousel'
 import { lng } from '@/app/const'
 import { BlogPost } from './blog/interface'
 import { LogoTradeMark } from '@/components/logo'
+import { GoldenCollection } from '@/components/golden-collection'
 
 export const metadata = {
   title: 'Giải pháp nội thất từ Nhật Bản'
@@ -155,16 +156,7 @@ const Page = async (): Promise<React.ReactElement> => {
         <Image src='https://storage.googleapis.com/kurashi_frontpage_files/images/voi-rua-cao-cap-rework/gold-collection.webp' width={451} height={721} alt='vòi rửa cao cấp golden collection' />
       </div>
 
-      <div className='hidden max-md:block py-10 bg-main-phu-kien max-md:translate-y-11'>
-        <Image src='https://storage.googleapis.com/kurashi_frontpage_files/images/voi-rua-cao-cap-rework/gold-collection.webp' width={451} height={721} alt='vòi rửa cao cấp golden collection' />
-        <div className='font-gtFont text-xl max-md:text-center max-md:w-full'>GOLD COLLECTION</div>
-        <Link href='/san-pham/voi-rua-cao-cap' className='self-end mt-12 max-md:self-center max-md:mt-10'>
-          <div className='bg-main text-secondary p-3 my-10 flex flex-row gap-3 items-center w-fit mx-auto'>
-            Khám phá
-            <i className='fa-solid fa-chevron-right' />
-          </div>
-        </Link>
-      </div>
+      <GoldenCollection />
     </main>
   )
 }

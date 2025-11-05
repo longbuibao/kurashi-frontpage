@@ -4,6 +4,8 @@ import Link from 'next/link'
 import { UrlObject } from 'url'
 import { EmblaCarousel } from '@/components/embla-carousel'
 import { LogoTradeMark } from '@/components/logo'
+import { GoldenCollection } from '@/components/golden-collection'
+import { SanPhamLienQuan } from '@/components/san-pham-lien-quan'
 
 export const metadata = {
   title: 'Vòi rửa cao cấp'
@@ -104,39 +106,24 @@ const products = [
   }
 ]
 
-const relatedProducts = [
-  {
-    url: '/san-pham/tam-op-tuong-bang-thep-trang-men',
-    thumb: 'https://storage.googleapis.com/kurashi_frontpage_files/images/voi-rua/thep-trang-men.png',
-    alt: 'Thép tráng men'
-  },
-  {
-    url: '/san-pham/phu-kien-bep',
-    thumb: 'https://storage.googleapis.com/kurashi_frontpage_files/images/voi-rua/phu-kien-nam-cham.png',
-    alt: 'Phụ kiện bếp'
-  },
-  {
-    url: '/san-pham/tam-op-tuong-van-da',
-    thumb: 'https://storage.googleapis.com/kurashi_frontpage_files/images/voi-rua/tam-op-van-da.png',
-    alt: 'Tấm ốp tường vân đá'
-  }
-]
-
 const Page: React.FC = () => {
   return (
     <div className='leading-loose'>
-      <Image className='w-full h-auto' src='/images/voi-rua-cao-cap-kurashi.svg' alt='Hero' width={1920} height={900} />
-      <div className='w-[70%] mx-auto'>
-        <h1 className='text-3xl my-20 max-md:text-nowrap max-md:text-2xl max-md:text-center'>
-          VÒI RỬA CAO CẤP KURASHI
+      <Image className='w-full h-auto max-md:hidden' src='/images/voi-rua-cao-cap-kurashi.svg' alt='Hero' width={1920} height={900} />
+      <Image className='w-full h-auto hidden max-md:block' src='https://storage.googleapis.com/kurashi_frontpage_files/images/voi-rua-cao-cap-rework/voi-rua-cao-cap-mobile.webp' alt='Hero' width={1018} height={1351} />
+      <div className='w-[70%] mx-auto max-md:w-full'>
+        <h1 className='text-3xl my-20 max-md:mt-14 max-md:mb-10 max-md:text-nowrap max-md:text-2xl max-md:text-center'>
+          VÒI RỬA CAO CẤP
         </h1>
-        <div className='flex flex-col gap-5 my-10 max-md:text-center'>
+        <div className='flex flex-col gap-5 my-10 max-md:text-center max-md:mt-0'>
           Bộ sưu tập vòi hand-made KURASHI - PVD và bề mặt cao cấp. Vòi lavabo & vòi rửa chén Nhật Bản, sang trọng, bền bỉ, tiết kiệm nước, bảo hành chính hãng.
         </div>
-        <EmblaCarousel biggerSlider={false} slides={imageUrls} useFlatControlButton />
-        <div className='flex flex-row gap-10 items-center my-10 max-md:flex-col max-md:text-center max-md:justify-center'>
-          <div className='flex flex-col h-full'>
-            <div className='flex flex-col items-end gap-10 pb-10 h-full'>
+        <div className='max-md:w-[100%] max-md:mx-auto'>
+          <EmblaCarousel biggerSlider={false} slides={imageUrls} useFlatControlButton />
+        </div>
+        <div className='flex flex-row gap-10 items-center my-10 max-md:flex-col max-md:text-center max-md:justify-center '>
+          <div className='flex flex-col h-full max-md:w-full max-md:items-center'>
+            <div className='flex flex-col items-end gap-10 pb-10 h-full max-md:hidden'>
               <div className='font-gtFont text-3xl max-md:text-center max-md:w-full'>GOLD COLLECTION</div>
               <div className='text-3xl opacity-50 font-semibold text-[#6D6E71 ]'>{'Dấu ấn thượng lưu'.toUpperCase()}</div>
               <div className='w-full h-[0.5px] bg-[#6D6E71] opacity-20' />
@@ -150,12 +137,13 @@ const Page: React.FC = () => {
                 </div>
               </Link>
             </div>
+            <GoldenCollection />
           </div>
-          <Image src='https://storage.googleapis.com/kurashi_frontpage_files/images/voi-rua-cao-cap-rework/gold-collection.webp' width={451} height={721} alt='vòi rửa cao cấp golden collection' />
+          <Image className='max-md:hidden' src='https://storage.googleapis.com/kurashi_frontpage_files/images/voi-rua-cao-cap-rework/gold-collection.webp' width={451} height={721} alt='vòi rửa cao cấp golden collection' />
         </div>
-        <div className='my-10'>
-          <div className='text-3xl font-gtFont'>MADE IN JAPAN</div>
-          <div className='flex flex-row gap-40 mt-10 max-md:flex-col'>
+        <div className='my-10 max-md:mt-28 max-md:mb-20'>
+          <div className='text-3xl font-gtFont max-md:text-center'>MADE IN JAPAN</div>
+          <div className='flex flex-row gap-40 mt-10 max-md:flex-col max-md:gap-14'>
             <Image
               className='w-1/2 max-md:w-full'
               alt='Vòi rửa Nhật Bản'
@@ -163,31 +151,34 @@ const Page: React.FC = () => {
               height={325}
               src='https://storage.googleapis.com/kurashi_frontpage_files/images/voi-rua/made_in_japan.png'
             />
-            <div className='flex flex-col gap-5 w-1/3 max-md:w-full'>
+            <div className='flex flex-col gap-5 w-1/3 max-md:w-full max-md:items-center'>
               <div className='font-bold px-5'>
-                <Image src='https://storage.googleapis.com/kurashi_frontpage_files/images/voi-rua-cao-cap-rework/lich-su-146-nam-voi-rua-kurashi.webp' width={365} height={252} alt='vòi rửa nhật bản 146 năm' />
+                <Image className='max-md:hidden ' src='https://storage.googleapis.com/kurashi_frontpage_files/images/voi-rua-cao-cap-rework/lich-su-146-nam-voi-rua-kurashi.webp' width={365} height={252} alt='vòi rửa nhật bản 146 năm' />
+                <Image className='max-md:block hidden' src='https://storage.googleapis.com/kurashi_frontpage_files/images/voi-rua-cao-cap-rework/lich-su-146-nam-voi-rua-kurashi.webp' width={300} height={207} alt='vòi rửa nhật bản 146 năm' />
               </div>
-              <div className='mt-3 text-center leading-loose'>
-                Mỗi chiếc vòi KURASHI được chế tác thủ công tỉ mỉ: bắt đầu từ công đoạn đổ đồng nguyên chất vào khuôn, sau đó gia công cơ khí chính xác bằng máy tinh tại Nhật. Tiếp đến là bước chà nhám hoàn toàn bằng tay để tạo bề mặt mịn tinh tế, trước khi phủ lớp mạ PVD công nghệ Nhật cho độ bền màu vượt trội. Cuối cùng, sản phẩm được lắp ráp và kiểm tra nghiêm ngặt trước khi xuất xưởng, đảm bảo vừa sang trọng vừa bền bỉ cho mọi không gian bếp và phòng tắm.
+              <div className='mt-3 text-center leading-loose max-md:px-7'>
+                Vòi KURASHI được đúc từ đồng nguyên khối, gia công cơ khí chính xác tại Nhật, sau đó được chà nhám thủ công tạo bề mặt mịn tinh tế. Lớp mạ PVD công nghệ Nhật hoàn thiện sang trọng. Cuối cùng, sản phẩm được lắp ráp và kiểm định nghiêm ngặt để đảm bảo chất lượng và độ bền.
               </div>
             </div>
           </div>
         </div>
-        <div className='mt-40 max-md:mt-20'>
+        <div className='mt-40 max-md:mt-0'>
           <div className='flex flex-row items-center justify-center'>
             <LogoTradeMark width={82} height={82} />
             <div className='font-gtFont text-2xl'>SIGNATURE</div>
           </div>
-          <div className='my-10 max-md:text-center'>Mỗi chiếc vòi <span className='font-bold'>KURASHI</span> được tạo ra để phản chiếu phong cách sống riêng của bạn — <span className='font-bold'>khác biệt, tinh tế và có cá tính.</span> Không chỉ là một vật dụng, đó là <span className='font-bold'>dấu ấn trong từng khoảnh khắc</span> bạn chạm vào nước, nấu ăn hay bắt đầu ngày mới.</div>
+          <div className='my-10 max-md:text-center max-md:px-7'>Mỗi chiếc vòi <span className='font-bold'>KURASHI</span> được tạo ra để phản chiếu phong cách sống riêng của bạn — <span className='font-bold'>khác biệt, tinh tế và có cá tính.</span> Không chỉ là một vật dụng, đó là <span className='font-bold'>dấu ấn trong từng khoảnh khắc</span> bạn chạm vào nước, nấu ăn hay bắt đầu ngày mới.</div>
           <div className='my-16'>
             <EmblaCarousel biggerSlider={false} slides={kieuDangImages} useFlatControlButton />
           </div>
         </div>
-        <div className='my-40'>
-          <div className='border-l-2 border-r-black font-bold px-5 text-2xl my-10'>
+        <div className='my-40 max-md:my-20 max-md:w-4/5 max-md:mx-auto'>
+          <div className='border-l-2 border-r-black font-bold px-5 text-2xl my-10 max-md:pl-3'>
             BỘ SƯU TẬP VÒI
           </div>
           <div className='my-10'>Bộ sưu tập vòi nước KURASHI - nơi tập hợp đầy đủ các mẫu vòi Nhật Bản chính hãng. Bạn có thể lọc nhanh theo loại sản phẩm (vòi lavabo hoặc vòi rửa chén) để tìm được mẫu phù hợp nhất.</div>
+        </div>
+        <div>
           <div className='flex flex-row my-5'>
             <div className='px-10 max-md:px-5 py-2 w-1/2 bg-[#ADADAD] text-center text-secondary'>Vòi rửa chén</div>
             <div className='px-10 max-md:px-5 py-2 w-1/2 bg-[#D9D9D9] text-center'>Vòi rửa mặt</div>
@@ -203,19 +194,7 @@ const Page: React.FC = () => {
             )}
           </div>
         </div>
-        <div className='my-40 max-md:mt-40 max-md:text-center'>
-          <div className='text-3xl my-16'>SẢN PHẨM LIÊN QUAN</div>
-          <div className='flex flex-row justify-between max-md:flex-col max-md:gap-10'>
-            {relatedProducts.map(x =>
-              <Link key={x.thumb} href={x.url as any}>
-                <div className='flex flex-col gap-5 justify-center w-fit'>
-                  <Image src={x.thumb} width={300} height={300} alt={x.alt} className='transition-shadow hover:shadow-lg' />
-                  <div className='text-center'>{x.alt}</div>
-                </div>
-              </Link>
-            )}
-          </div>
-        </div>
+        <SanPhamLienQuan />
       </div>
     </div>
   )
