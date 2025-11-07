@@ -1,6 +1,10 @@
 import Link from 'next/link'
 import Image from 'next/image'
 
+interface Props {
+  className?: string
+}
+
 const relatedProducts = [
   {
     url: '/san-pham/tam-op-tuong-bang-thep-trang-men',
@@ -19,9 +23,9 @@ const relatedProducts = [
   }
 ]
 
-const SanPhamLienQuan: React.FC = () => {
+const SanPhamLienQuan: React.FC<Props> = ({ className = 'my-40 max-md:mt-20 max-md:mb-16 max-md:text-center' }) => {
   return (
-    <div className='my-40 max-md:mt-20 max-md:mb-16 max-md:text-center'>
+    <div className={className}>
       <div className='text-3xl my-16 max-md:text-2xl'>SẢN PHẨM LIÊN QUAN</div>
       <div className='max-md:grid max-md:grid-cols-3 flex flex-row justify-between max-md:gap-2 max-md:px-3'>
         {relatedProducts.map(x =>

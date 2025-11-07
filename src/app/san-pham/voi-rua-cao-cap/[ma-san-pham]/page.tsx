@@ -16,7 +16,7 @@ interface PageProps {
 const DownloadLink: React.FC<{ title: string, url: string }> = ({ title, url }) => {
   return (
     <Link href={url as any as UrlObject}>
-      <div className='border border-main flex flex-row gap-10 items-center p-3'>
+      <div className='border border-kurashi-border flex flex-row gap-10 items-center p-3 max-md:w-fit'>
         <div>{title}</div>
         <i className='fa-solid fa-chevron-right' />
       </div>
@@ -68,22 +68,28 @@ const Page: React.FC<PageProps> = async (props) => {
     { summary: 'Dễ thi công', thumbnail: 'https://storage.googleapis.com/kurashi_frontpage_files/images/tam-op-tuong-nam-cham/de-thi-cong.webp', label: 'DỄ THI CÔNG', title: 'DỄ THI CÔNG', content: 'Tấm ốp tường hút nam châm có trọng lượng nhẹ hơn nhiều so với ốp đá tự nhiên, dễ cắt ghép và thi công, giúp giảm đáng kể chi phí nhân công và thời gian lắp đặt.' }
   ]
 
+  const cadImages = product.productImages.filter(x => x.isCadImage)
+  const mobileHero = product.productImages.filter(x => x.isMobileImage)
+
   return (
     <div className='w-full'>
-      <div className='bg-cover bg-no-repeat bg-center w-full h-[60vh] relative'>
+      <div className='bg-cover bg-no-repeat bg-center w-full h-[60vh] relative max-md:hidden'>
         <Image className='object-cover' src={product.thumbnail} fill alt={product.name} />
       </div>
+      <div className='relative h-[60vh]'>
+        <Image className='hidden max-md:block' src={mobileHero[0].mobileImageUrl} alt={mobileHero[0].content} fill />
+      </div>
       <div className='my-20'>
-        <div className='text-[#6D6E71] flex flex-col gap-10 w-[50%] mx-auto'>
-          <div className='text-3xl font-bold w-4/5'>
+        <div className='text-[#6D6E71] flex flex-col gap-10 w-[60%] max-md:w-4/5 mx-auto'>
+          <div className='text-3xl font-bold w-4/5 max-md:w-full max-md:mx-auto max-md:text-2xl max-md:text-center'>
             {product.name.toUpperCase()}
           </div>
-          <div>
+          <div className='max-md:text-center'>
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perspiciatis veniam, ipsa, fugit ex unde dignissimos incidunt similique distinctio quis quos eveniet voluptatibus est aliquam. Harum eveniet earum maxime architecto reprehenderit.
           </div>
         </div>
-        <div className='flex flex-row justify-center mt-16 gap-20 w-4/5 mx-auto items-stretch'>
-          <div className='w-[40%]'>
+        <div className='flex flex-row justify-center mt-16 gap-20 max-md:gap-10 w-4/5 mx-auto items-stretch max-md:flex-col'>
+          <div className='w-[30%] max-md:w-full'>
             <EmblaCarouselWithThumbnail slides={images} options={{}} />
           </div>
           <div className='h-full'>
@@ -106,30 +112,33 @@ const Page: React.FC<PageProps> = async (props) => {
           </div>
         </div>
       </div>
-      <div className='w-4/5 mx-auto my-20'>
-        <div className='pl-3 border-l-2 border-black text-black text-xl'>
+      <div className='w-[60%] max-md:w-4/5 mx-auto mt-28 mb-20'>
+        <div className='pl-3 border-l-2 border-black text-black text-xl '>
           {'Công nghệ nổi bật'.toUpperCase()}
         </div>
-        <div className='w-4/5 mx-auto py-20'>
+        <div className='w-4/5 mx-auto py-20 max-md:py-0'>
           <KurashiSlider steps={steps} />
         </div>
       </div>
-      <div className='w-4/5 mx-auto mt-10'>
+      <div className='w-[60%] max-md:w-4/5 mx-auto my-10'>
+        <div className='pl-3 border-l-2 border-black text-black text-xl'>
+          {'Cấu tạo'.toUpperCase()}
+        </div>
+        <div className='relative w-1/2 my-20 mx-auto max-md:w-full'>
+          <Image className='object-fill aspect-[1.31166518255]' src={cadImages[0].imageUrl} width={1473} height={1123} alt={cadImages[0].content} />
+        </div>
+      </div>
+      <div className='w-[60%] max-md:w-4/5 mx-auto mt-10 mb-1'>
         <div className='pl-3 border-l-2 border-black text-black text-xl'>
           {'Tải dữ liệu'.toUpperCase()}
         </div>
-        <div className='flex flex-row gap-10 my-10'>
+        <div className='flex flex-row gap-10 my-10 max-md:flex-col'>
           <DownloadLink title='Bản vẽ sản phẩm (PDF)' url='#' />
           <DownloadLink title='Bản vẽ sản phẩm (DXF)' url='#' />
         </div>
       </div>
-      <div className='w-4/5 mx-auto my-10'>
-        <div className='pl-3 border-l-2 border-black text-black text-xl'>
-          {'Cấu tạo'.toUpperCase()}
-        </div>
-      </div>
-      <div className='w-4/5 mx-auto my-10'>
-        <SanPhamLienQuan />
+      <div className='w-[60%] mx-auto max-md:w-full'>
+        <SanPhamLienQuan className='my-24 max-md:mt-20 max-md:mb-16 max-md:text-center' />
       </div>
     </div>
   )

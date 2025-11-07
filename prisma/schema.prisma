@@ -108,12 +108,15 @@ model SecondaryCategory {
 }
 
 model ProductImages {
-  id        String   @id @default(uuid())
-  title     String
-  content   String
-  imageUrl  String
-  Product   Product? @relation(fields: [productId], references: [id])
-  productId String?
+  id             String   @id @default(uuid())
+  title          String
+  content        String
+  imageUrl       String
+  Product        Product? @relation(fields: [productId], references: [id])
+  productId      String?
+  isCadImage     Boolean  @default(false)
+  mobileImageUrl String   @default("#")
+  isMobileImage  Boolean  @default(false)
 }
 
 model ProductIntro {

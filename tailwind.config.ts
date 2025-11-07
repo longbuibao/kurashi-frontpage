@@ -23,7 +23,8 @@ const config: Config = {
       'count-text': '#253D4E',
       'main-phu-kien': '#F1E9DF',
       'text-phu-kien': '#424143',
-      'kurashi-border-color': 'rgba(134,135,135,0.2)'
+      'kurashi-border-color': 'rgba(134,135,135,0.2)',
+      'secondary-border': '#ADADAD'
     },
     extend: {
       boxShadow: {
