@@ -23,10 +23,10 @@ const Navigator = ({ label, isSelected, onClick }: { label: string, isSelected: 
 const BlogCardByCategory: React.FC<BlogPost> = ({ coverImage, title, excerpt, date, author, fileName }) => {
   if (coverImage !== undefined && coverImage.coverImage) {
     return (
-      <Link href={`/blog/${fileName}`}>
+      <Link href={`/blog/${fileName}`} className='w-full'>
         <div>
-          <Image className='object-cover flex-shrink-0 rounded-sm' src={coverImage.coverImage?.replace('/public', '')} alt='test' width={300} height={100} />
-          <div className='w-60'>
+          <Image className='object-cover flex-shrink-0 rounded-sm w-full' src={coverImage.coverImage?.replace('/public', '')} alt='test' width={300} height={100} />
+          <div className='w-60 max-md:w-full'>
             <p className='font-bold text-lg my-3 max-md:line-clamp-1'>{title}</p>
             <p className='text-sm my-3 line-clamp-1'>{excerpt}</p>
             <p className='uppercase text-[rgb(134,135,135)] font-semibold text-xs'>{date.toLocaleString('default', { month: 'short' })} {date.toLocaleString('default', { day: 'numeric' })}, {date.toLocaleDateString('default', { year: 'numeric' })} • {author.name}</p>
@@ -49,8 +49,6 @@ function slugifyVietnamese (str: string): string {
     .replace(/[^a-z0-9\\-]/g, '')
 }
 
-const POSTS_PER_PAGE = 4
-
 const BlogCategoryFilter: React.FC<{ posts: BlogPost[] }> = ({ posts }) => {
   const searchParams = useSearchParams()
   const router = useRouter()
@@ -71,7 +69,7 @@ const BlogCategoryFilter: React.FC<{ posts: BlogPost[] }> = ({ posts }) => {
 
   return (
     <>
-      <div className='border-t-[1px] border-kurashi-border-color my-5'>
+      <div className='my-5'>
         <div className='border-[1px] border-kurashi-border-color my-10 w-fit rounded-md p-1 flex flex-wrap gap-2'>
           <Navigator
             label='Tất cả'
@@ -93,12 +91,12 @@ const BlogCategoryFilter: React.FC<{ posts: BlogPost[] }> = ({ posts }) => {
       </div>
 
       <div className='flex flex-row justify-between gap-5 max-md:flex-col'>
-        <div className='grid grid-rows-3 grid-cols-2 gap-10 max-md:flex max-md:flex-wrap'>
+        <div className='grid grid-rows-3 grid-cols-2 gap-10 max-md:gap-16 max-md:flex max-md:flex-wrap'>
           {filtered.map(post => (
             <BlogCardByCategory {...post} key={post.fileName} />
           ))}
         </div>
-        <div className='w-[30%] max-md:w-full'>
+        <div className='w-[30%] max-md:w-full max-md:mt-20 max-md:mb-0'>
           <BlogRegister />
         </div>
       </div>
