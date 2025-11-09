@@ -95,6 +95,9 @@ model Product {
   secondaryCategoryId String?
   secondaryCategory   SecondaryCategory? @relation(fields: [secondaryCategoryId], references: [id])
   idToShowUser        String             @default("")
+  finishId            String?
+  finish              ProductFinish?     @relation(fields: [finishId], references: [id])
+  sku                 String             @default("#")
 }
 
 model SecondaryCategory {
@@ -105,6 +108,12 @@ model SecondaryCategory {
   url       String    @default("#")
   content   String    @default("")
   Product   Product[]
+}
+
+model ProductFinish {
+  id       String    @id @default(uuid())
+  name     String
+  products Product[]
 }
 
 model ProductImages {

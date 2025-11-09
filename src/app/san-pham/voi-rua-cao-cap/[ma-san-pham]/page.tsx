@@ -56,7 +56,10 @@ const Page: React.FC<PageProps> = async (props) => {
     where: { uniqueName: productId },
     include: {
       productImages: true,
-      productIntro: true
+      productIntro: true,
+      category: true,
+      secondaryCategory: true,
+      finish: true
     }
   })
 
@@ -76,8 +79,8 @@ const Page: React.FC<PageProps> = async (props) => {
       <div className='bg-cover bg-no-repeat bg-center w-full h-[60vh] relative max-md:hidden'>
         <Image className='object-cover' src={product.thumbnail} fill alt={product.name} />
       </div>
-      <div className='relative h-[60vh]'>
-        <Image className='hidden max-md:block' src={mobileHero[0].mobileImageUrl} alt={mobileHero[0].content} fill />
+      <div className='relative h-[60vh] hidden max-md:block'>
+        <Image src={mobileHero[0].mobileImageUrl} alt={mobileHero[0].content} fill />
       </div>
       <div className='my-20'>
         <div className='text-[#6D6E71] flex flex-col gap-10 w-[60%] max-md:w-4/5 mx-auto'>
@@ -92,22 +95,36 @@ const Page: React.FC<PageProps> = async (props) => {
           <div className='w-[30%] max-md:w-full'>
             <EmblaCarouselWithThumbnail slides={images} options={{}} />
           </div>
-          <div className='h-full'>
-            <div className='border-b-[0.5px] border-secondary-opacity pb-10'>
-              <div className='mt-10'>
-                <div>Mã số: {product.idToShowUser}</div>
-                <div>Giá niêm yết: VND {formatCurrency(product.price)} (chưa VAT)</div>
-              </div>
+          <div className='w-1/3 flex flex-col justify-between'>
+            <div className='text-[#6D6E71] pb-10 border-b-[0.5px] border-secondary-opacity'>
+              {product.productIntro.filter(x => x.isMainIntro)[0].content}
             </div>
-            <div className='mt-10 flex flex-col gap-3'>
-              {product.productIntro.filter(x => !x.isMainIntro).map(x => (
-                <div key={x.content} className='flex flex-row gap-3 items-center'>
-                  <i className='fa-solid fa-circle opacity-50' />
-                  <div>
-                    {x.content}
-                  </div>
+            <div className='grid grid-cols-2 grid-rows-7 gap-5'>
+              <div className='bg-red-200 flex items-center justify-start font-bold text-[#6D6E71]'>Thông tin</div>
+              <div className='bg-green-200 flex items-center justify-start font-bold text-[#6D6E71]'>Chi tiết</div>
+              <div className='bg-blue-200 flex items-center justify-start'>Mã sản phẩm</div>
+              <div className='bg-yellow-200 flex items-center justify-start'>4</div>
+              <div className='bg-purple-200 flex items-center justify-start'>Loại</div>
+              <div className='bg-pink-200 flex items-center justify-start'>6</div>
+              <div className='bg-orange-200 flex items-center justify-start'>Chất liệu</div>
+              <div className='bg-lime-200 flex items-center justify-start'>8</div>
+              <div className='bg-teal-200 flex items-center justify-start'>Bề mặt</div>
+              <div className='bg-sky-200 flex items-center justify-start'>10</div>
+              <div className='bg-amber-200 flex items-center justify-start'>Xuất xứ</div>
+              <div className='bg-indigo-200 flex items-center justify-start'>12</div>
+              <div className='bg-rose-200 flex items-center justify-start'>Bảo hành</div>
+              <div className='bg-slate-200 flex items-center justify-start'>14</div>
+            </div>
+
+            <div className='justify-self-end'>
+              <div className='grid grid-cols-2'>
+                <div>Giá niêm yết</div>
+                <div className='flex flex-row gap-5'>
+                  <div className='text-main'>{formatCurrency(product.price)}</div>
+                  <div>(chưa VAT)</div>
                 </div>
-              ))}
+              </div>
+
             </div>
           </div>
         </div>
