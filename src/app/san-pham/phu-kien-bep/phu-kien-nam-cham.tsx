@@ -108,7 +108,7 @@ const PhuKienNamCham: React.FC = async () => {
         </div>
       </div>
       <Suspense fallback='loading'>
-        <SubCategories />
+        <SubCategories type='PHU_KIEN_NAM_CHAM' />
       </Suspense>
       <div className='my-28 max-md:my-0'>
         <div className='text-2xl my-10 max-md:text-center'>Mua hàng theo loại phụ kiện</div>

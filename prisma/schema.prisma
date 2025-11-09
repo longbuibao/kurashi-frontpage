@@ -101,13 +101,14 @@ model Product {
 }
 
 model SecondaryCategory {
-  id        String    @id @default(uuid())
+  id        String          @id @default(uuid())
   name      String
   thumbnail String
   // this should be a readable url id
-  url       String    @default("#")
-  content   String    @default("")
+  url       String          @default("#")
+  content   String          @default("")
   Product   Product[]
+  subType   SubCategoryType @default(PHU_KIEN_NAM_CHAM)
 }
 
 model ProductFinish {
@@ -196,6 +197,11 @@ model SubCategory {
   products   Product[]
   categoryId String?
   category   Category? @relation(fields: [categoryId], references: [id])
+}
+
+enum SubCategoryType {
+  PHU_KIEN_NAM_CHAM
+  VOI_RUA_CAO_CAP
 }
 
 model ProductMaterial {

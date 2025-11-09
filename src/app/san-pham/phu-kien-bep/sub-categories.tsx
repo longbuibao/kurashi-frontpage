@@ -3,8 +3,12 @@ import Link from 'next/link'
 import Image from 'next/image'
 
 import prisma from '@/lib/prisma'
-import { SecondaryCategory } from '@prisma/client'
+import { SecondaryCategory, SubCategoryType } from '@prisma/client'
 import { UrlObject } from 'url'
+
+interface Props {
+  type: SubCategoryType
+}
 
 const SubCategoryCard: React.FC<{ subCategory: SecondaryCategory }> = ({ subCategory }) => {
   return (
@@ -24,9 +28,12 @@ const SubCategoryCard: React.FC<{ subCategory: SecondaryCategory }> = ({ subCate
   )
 }
 
-const SubCategories: React.FC = async () => {
+const SubCategories: React.FC<Props> = async ({ type }) => {
   const subCategories = await prisma.secondaryCategory.findMany({
-    take: 3
+    take: 3,
+    where: {
+      subType: type
+    }
   })
   return (
     <div className='flex flex-row gap-10 mb-24 mt-20 max-md:flex-col max-md:px-3'>
