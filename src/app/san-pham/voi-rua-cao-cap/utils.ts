@@ -7,12 +7,15 @@ type ProductWithRelations = Prisma.ProductGetPayload<{
     category: true
     secondaryCategory: true
     finish: true
+    material: true
+    productInterface: true
   }
 }>
 
 export const createTitleVoiRuaDetailPage = (product: ProductWithRelations): string => {
   const secondaryCategoryName = product.secondaryCategory?.name ?? 'Uncategorized'
   const productFinish = product.finish?.name as unknown as string
+  const categoryName = product.category?.name as unknown as string
 
-  return product.name + secondaryCategoryName + productFinish
+  return `${categoryName} ${secondaryCategoryName} ${productFinish} ${product.sku}`
 }

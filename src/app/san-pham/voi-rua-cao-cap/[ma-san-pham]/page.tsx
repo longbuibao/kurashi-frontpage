@@ -8,6 +8,7 @@ import { formatCurrency } from '@/utils'
 import { UrlObject } from 'url'
 import { KurashiSlider } from '@/components/kurashi-slider'
 import { SanPhamLienQuan } from '@/components/san-pham-lien-quan'
+import { createTitleVoiRuaDetailPage } from '../utils'
 
 interface PageProps {
   params: Promise<{ 'ma-san-pham': string }>
@@ -67,6 +68,8 @@ const Page: React.FC<PageProps> = async (props) => {
 
   if (product === null) return <div>not found product {productId}</div>
 
+  const productName = createTitleVoiRuaDetailPage(product)
+
   const steps = [
     { summary: 'Tích hợp phụ kiện', thumbnail: 'https://storage.googleapis.com/kurashi_frontpage_files/images/tam-op-tuong-nam-cham/tich-hop-phu-kien.webp', label: 'TÍCH HỢP PHỤ KIỆN', title: 'PHỤ KIỆN NAM CHÂM', content: 'Tấm ốp tường hút nam châm cho phép gắn, tháo và di chuyển phụ kiện từ tính tự do mà không cần khoan, giúp bề mặt tường luôn nguyên vẹn.' },
     { summary: 'chống ố', thumbnail: 'https://storage.googleapis.com/kurashi_frontpage_files/images/tam-op-tuong-nam-cham/chong-o.webp', label: 'CHỐNG Ố', title: 'KHÓ BÁM BẨN', content: 'Bề mặt hard coating chống bám dầu mỡ và bụi bẩn, giúp lau chùi nhanh chóng, đặc biệt phù hợp cho khu bếp thường xuyên có nhiều vết bẩn.' },
@@ -87,7 +90,7 @@ const Page: React.FC<PageProps> = async (props) => {
       <div className='my-20'>
         <div className='text-[#6D6E71] flex flex-col gap-10 w-[60%] max-md:w-4/5 mx-auto'>
           <div className='text-3xl font-bold w-4/5 max-md:w-full max-md:mx-auto max-md:text-2xl max-md:text-center'>
-            {product.name.toUpperCase()}
+            {productName.toUpperCase()}
           </div>
           <div className='max-md:text-center'>
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perspiciatis veniam, ipsa, fugit ex unde dignissimos incidunt similique distinctio quis quos eveniet voluptatibus est aliquam. Harum eveniet earum maxime architecto reprehenderit.
@@ -102,20 +105,20 @@ const Page: React.FC<PageProps> = async (props) => {
               {product.productIntro.filter(x => x.isMainIntro)[0].content}
             </div>
             <div className='grid grid-cols-2 grid-rows-7 gap-5'>
-              <div className='bg-red-200 flex items-center justify-start font-bold text-[#6D6E71]'>Thông tin</div>
-              <div className='bg-green-200 flex items-center justify-start font-bold text-[#6D6E71]'>Chi tiết</div>
-              <div className='bg-blue-200 flex items-center justify-start'>Mã sản phẩm</div>
-              <div className='bg-yellow-200 flex items-center justify-start'>4</div>
-              <div className='bg-purple-200 flex items-center justify-start'>Loại</div>
-              <div className='bg-pink-200 flex items-center justify-start'>6</div>
-              <div className='bg-orange-200 flex items-center justify-start'>Chất liệu</div>
-              <div className='bg-lime-200 flex items-center justify-start'>8</div>
-              <div className='bg-teal-200 flex items-center justify-start'>Bề mặt</div>
-              <div className='bg-sky-200 flex items-center justify-start'>10</div>
-              <div className='bg-amber-200 flex items-center justify-start'>Xuất xứ</div>
-              <div className='bg-indigo-200 flex items-center justify-start'>12</div>
-              <div className='bg-rose-200 flex items-center justify-start'>Bảo hành</div>
-              <div className='bg-slate-200 flex items-center justify-start'>14</div>
+              <div className='flex items-center justify-start font-bold'>Thông tin</div>
+              <div className='flex items-center justify-start font-bold'>Chi tiết</div>
+              <div className='flex items-center justify-start'>Mã sản phẩm</div>
+              <div className='flex items-center justify-start'>{product.sku}</div>
+              <div className='flex items-center justify-start'>Loại</div>
+              <div className='flex items-center justify-start'>{product.secondaryCategory?.name}</div>
+              <div className='flex items-center justify-start'>Chất liệu</div>
+              <div className='flex items-center justify-start'>{product.material?.name}</div>
+              <div className='flex items-center justify-start'>Bề mặt</div>
+              <div className='flex items-center justify-start'>{product.productInterface?.name}</div>
+              <div className='flex items-center justify-start'>Xuất xứ</div>
+              <div className='flex items-center justify-start'>{product.xuatXu}</div>
+              <div className='flex items-center justify-start'>Bảo hành</div>
+              <div className='flex items-center justify-start'>{product.baoHanh}</div>
             </div>
 
             <div className='justify-self-end'>
