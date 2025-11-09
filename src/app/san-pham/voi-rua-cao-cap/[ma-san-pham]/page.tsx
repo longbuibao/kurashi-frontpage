@@ -59,7 +59,9 @@ const Page: React.FC<PageProps> = async (props) => {
       productIntro: true,
       category: true,
       secondaryCategory: true,
-      finish: true
+      finish: true,
+      material: true,
+      productInterface: true
     }
   })
 

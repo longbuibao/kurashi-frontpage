@@ -98,6 +98,24 @@ model Product {
   finishId            String?
   finish              ProductFinish?     @relation(fields: [finishId], references: [id])
   sku                 String             @default("#")
+  material            Material?          @relation(fields: [materialId], references: [id])
+  materialId          String?
+  productInterface    ProductInterface?  @relation(fields: [productInterfaceId], references: [id])
+  productInterfaceId  String?
+  xuatXu              String             @default("Nhật Bản")
+  baoHanh             String             @default("")
+}
+
+model ProductInterface {
+  id       String    @unique @default(uuid())
+  name     String
+  products Product[]
+}
+
+model Material {
+  id       String    @unique @default(uuid())
+  name     String    @default("#")
+  products Product[]
 }
 
 model SecondaryCategory {
@@ -189,6 +207,7 @@ model CategoryIntro {
   categoryId String?
 }
 
+// dont use this thing
 model SubCategory {
   id         String    @id @default(uuid())
   name       String
