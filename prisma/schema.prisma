@@ -119,20 +119,22 @@ model Material {
 }
 
 model SecondaryCategory {
-  id        String          @id @default(uuid())
-  name      String
-  thumbnail String
+  id             String          @id @default(uuid())
+  name           String
+  thumbnail      String
   // this should be a readable url id
-  url       String          @default("#")
-  content   String          @default("")
-  Product   Product[]
-  subType   SubCategoryType @default(PHU_KIEN_NAM_CHAM)
+  url            String          @default("#")
+  content        String          @default("")
+  Product        Product[]
+  subType        SubCategoryType @default(PHU_KIEN_NAM_CHAM)
+  normalizedName String          @default("")
 }
 
 model ProductFinish {
-  id       String    @id @default(uuid())
-  name     String
-  products Product[]
+  id             String    @id @default(uuid())
+  name           String
+  normalizedName String    @default("")
+  products       Product[]
 }
 
 model ProductImages {
@@ -197,6 +199,7 @@ model Category {
   order                          Int             @default(-1)
   categoryUniqueName             String          @default("")
   isCategoryOfKitchenAccessories Boolean         @default(false)
+  normalizedName                 String          @default("")
 }
 
 model CategoryIntro {

@@ -19,3 +19,12 @@ export const createTitleVoiRuaDetailPage = (product: ProductWithRelations): stri
 
   return `${categoryName} ${secondaryCategoryName} ${productFinish} ${product.sku}`
 }
+
+export const createTitleVoiRuaDetailPageNormalized = (x: Partial<ProductWithRelations>): string => {
+  const categoryName = x.category?.normalizedName as string
+  const secondaryName = x.secondaryCategory?.normalizedName as string
+  const finish = x.finish?.normalizedName as string
+  const sku = x.sku as string
+
+  return `${categoryName}-${secondaryName}-${finish}-${sku}`
+}

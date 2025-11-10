@@ -8,7 +8,7 @@ import { formatCurrency } from '@/utils'
 import { UrlObject } from 'url'
 import { KurashiSlider } from '@/components/kurashi-slider'
 import { SanPhamLienQuan } from '@/components/san-pham-lien-quan'
-import { createTitleVoiRuaDetailPage } from '../utils'
+import { createTitleVoiRuaDetailPage, createTitleVoiRuaDetailPageNormalized } from '../utils'
 
 interface PageProps {
   params: Promise<{ 'ma-san-pham': string }>
@@ -43,18 +43,29 @@ export async function generateStaticParams (): Promise<any> {
   const products = await prisma.product.findMany({
     where: {
       category: {
-        categoryUniqueName: 'voi-rua'
+        categoryUniqueName: 'voi-rua-chen'
       }
+    },
+    include: {
+      secondaryCategory: true,
+      finish: true,
+      category: true
     }
   })
-  return products.map(x => { return { 'ma-san-pham': x.uniqueName } })
+
+  return products.map(x => {
+    return { 'ma-san-pham': createTitleVoiRuaDetailPageNormalized(x) }
+  })
 }
 
 const Page: React.FC<PageProps> = async (props) => {
   const params = await props.params
-  const productId = params['ma-san-pham']
-  const product = await prisma.product.findUnique({
-    where: { uniqueName: productId },
+  const param = params['ma-san-pham']
+
+  const sku = param.split('-').slice(-1)[0]
+
+  const product = await prisma.product.findFirst({
+    where: { sku },
     include: {
       productImages: true,
       productIntro: true,
@@ -66,7 +77,7 @@ const Page: React.FC<PageProps> = async (props) => {
     }
   })
 
-  if (product === null) return <div>not found product {productId}</div>
+  if (product === null) return <div>not found product {param}</div>
 
   const productName = createTitleVoiRuaDetailPage(product)
 
