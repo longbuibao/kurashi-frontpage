@@ -17,7 +17,7 @@ interface PageProps {
 const DownloadLink: React.FC<{ title: string, url: string }> = ({ title, url }) => {
   return (
     <Link href={url as any as UrlObject}>
-      <div className='border border-kurashi-border flex flex-row gap-10 items-center p-3 max-md:w-fit'>
+      <div className='border border-kurashi-border max-md:gap-3 flex flex-row gap-10 items-center p-3 max-md:w-fit'>
         <div>{title}</div>
         <i className='fa-solid fa-chevron-right' />
       </div>
@@ -100,11 +100,11 @@ const Page: React.FC<PageProps> = async (props) => {
           <div className='w-[30%] max-md:w-full'>
             <EmblaCarouselWithThumbnail slides={images} options={{}} />
           </div>
-          <div className='w-1/3 flex flex-col justify-between'>
-            <div className='text-[#6D6E71] pb-10 border-b-[0.5px] border-secondary-opacity'>
+          <div className='w-1/3 flex flex-col max-md:w-full'>
+            <div className='text-[#6D6E71] pb-10 border-b-[0.5px] border-secondary-opacity max-md:text-center'>
               {product.productIntro.filter(x => x.isMainIntro)[0].content}
             </div>
-            <div className='grid grid-cols-2 grid-rows-7 gap-5'>
+            <div className='grid grid-cols-2 grid-rows-7 gap-5 mt-5 max-md:gap-[.3rem]'>
               <div className='flex items-center justify-start font-bold'>Thông tin</div>
               <div className='flex items-center justify-start font-bold'>Chi tiết</div>
               <div className='flex items-center justify-start'>Mã sản phẩm</div>
@@ -120,16 +120,14 @@ const Page: React.FC<PageProps> = async (props) => {
               <div className='flex items-center justify-start'>Bảo hành</div>
               <div className='flex items-center justify-start'>{product.baoHanh}</div>
             </div>
-
-            <div className='justify-self-end'>
+            <div className='justify-self-end mt-auto max-md:mt-10'>
               <div className='grid grid-cols-2'>
                 <div>Giá niêm yết</div>
-                <div className='flex flex-row gap-5'>
-                  <div className='text-main'>{formatCurrency(product.price)}</div>
+                <div className='flex flex-row gap-5 max-md:flex-col max-md:gap-0'>
+                  <div className='text-main font-bold'>{formatCurrency(product.price)}</div>
                   <div>(chưa VAT)</div>
                 </div>
               </div>
-
             </div>
           </div>
         </div>
@@ -146,7 +144,7 @@ const Page: React.FC<PageProps> = async (props) => {
         <div className='pl-3 border-l-2 border-black text-black text-xl'>
           {'Cấu tạo'.toUpperCase()}
         </div>
-        <div className='relative w-1/2 my-20 mx-auto max-md:w-full'>
+        <div className='relative w-[65%] my-20 mx-auto max-md:w-full'>
           <Image className='object-fill aspect-[1.31166518255]' src={cadImages[0].imageUrl} width={1473} height={1123} alt={cadImages[0].content} />
         </div>
       </div>
