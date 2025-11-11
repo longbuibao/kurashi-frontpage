@@ -25,11 +25,11 @@ const DownloadLink: React.FC<{ title: string, url: string }> = ({ title, url }) 
   )
 }
 
-const images = [
-  { imageUrl: 'https://storage.googleapis.com/kurashi_frontpage_files/images/voi-rua/test-product/voi-rua-product-image.png', key: '1', index: 0 },
-  { imageUrl: 'https://storage.googleapis.com/kurashi_frontpage_files/images/voi-rua/test-product/voi-rua-product-image.png', key: '2', index: 1 },
-  { imageUrl: 'https://storage.googleapis.com/kurashi_frontpage_files/images/voi-rua/test-product/voi-rua-product-image.png', key: '3', index: 2 }
-].map(x => {
+const createImageSlider = (images: Array<{ imageUrl: string, key: string, index: number }>): Array<{
+  key: string
+  index: number
+  content: any
+}> => images.map(x => {
   return {
     key: x.key,
     index: x.index,
@@ -65,7 +65,7 @@ const Page: React.FC<PageProps> = async (props) => {
   const sku = param.split('-').slice(-1)[0]
 
   const product = await prisma.product.findFirst({
-    where: { sku },
+    where: { sku, isAvailable: true },
     include: {
       productImages: true,
       productIntro: true,
@@ -87,6 +87,13 @@ const Page: React.FC<PageProps> = async (props) => {
     { summary: 'Dễ thi công', thumbnail: 'https://storage.googleapis.com/kurashi_frontpage_files/images/tam-op-tuong-nam-cham/de-thi-cong.webp', label: 'DỄ THI CÔNG', title: 'DỄ THI CÔNG', content: 'Tấm ốp tường hút nam châm có trọng lượng nhẹ hơn nhiều so với ốp đá tự nhiên, dễ cắt ghép và thi công, giúp giảm đáng kể chi phí nhân công và thời gian lắp đặt.' }
   ]
 
+  const thumbnailImages = product.productImages.filter(x => !x.isCadImage).map((x, i) => {
+    return {
+      key: x.id,
+      index: i,
+      imageUrl: x.imageUrl
+    }
+  })
   const cadImages = product.productImages.filter(x => x.isCadImage)
   const mobileHero = product.productImages.filter(x => x.isMobileImage)
 
@@ -109,7 +116,7 @@ const Page: React.FC<PageProps> = async (props) => {
         </div>
         <div className='flex flex-row justify-center mt-16 gap-20 max-md:gap-10 w-4/5 mx-auto items-stretch max-md:flex-col'>
           <div className='w-[30%] max-md:w-full'>
-            <EmblaCarouselWithThumbnail slides={images} options={{}} />
+            <EmblaCarouselWithThumbnail slides={createImageSlider(thumbnailImages)} options={{}} />
           </div>
           <div className='w-1/3 flex flex-col max-md:w-full'>
             <div className='text-[#6D6E71] pb-10 border-b-[0.5px] border-secondary-opacity max-md:text-center'>
