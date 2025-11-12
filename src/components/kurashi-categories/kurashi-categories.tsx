@@ -15,7 +15,7 @@ interface KurashiCategoriesProps {
 const KurashiCategories: Promise<React.JSX.Element> = async ({ lng }: KurashiCategoriesProps) => {
   const productsRaw = await prisma.product.findMany({
     take: 20,
-    where: { isAvailable: true },
+    where: { isAvailable: true, hasLandingPage: true },
     include: {
       category: { select: { name: true, id: true } },
       ProductColor: true,

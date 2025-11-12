@@ -8,6 +8,8 @@ import { CopyButton, ShareFacebookWrapper } from '@/components/share-button'
 
 import './style.css'
 import { createSchema } from './create-schema'
+import Link from 'next/link'
+import { LogoTradeMark } from '@/components/logo'
 
 export default async function Post (props: Params): Promise<React.ReactElement> {
   const params = await props.params
@@ -30,16 +32,23 @@ export default async function Post (props: Params): Promise<React.ReactElement> 
         ))}
         <article className='mb-32'>
           <div className='my-10 max-md:w-full'>
-            <div className='w-[80%] mx-auto max-md:w-full max-md:p-5'>
+            <div className='w-full max-md:p-5'>
               <div className='flex flex-row gap-10 text-black max-md:flex-col'>
                 <div className='w-3/5 md:w-full flex justify-between flex-col max-md:w-full'>
-                  <div>
-                    <div className='flex flex-row gap-5 items-center'>
-                      <i className='fa-solid fa-square-full text-main' />
-                      <p className='text-black'>Kurashi blog</p>
-                    </div>
-                    <h1 className='text-2xl font-bold mt-10'>{post.title.toUpperCase()}</h1>
-                    <div className='mt-4'>{post.excerpt}</div>
+                  <div className='h-full flex flex-col'>
+                    <Link href='/blog' className='flex flex-row items-center justify-start gap-5'>
+                      <Image className='max-md:hidden' src='/images/RightArrow.svg' width={20} height={20} alt='Kurashi JOURNAL' />
+                      <Image className='max-md:block hidden' src='/images/RightArrow.svg' width={10} height={10} alt='Kurashi JOURNAL' />
+                      <div className='max-md:hidden'>
+                        <LogoTradeMark width={50} height={50} />
+                      </div>
+                      <div className='hidden max-md:block'>
+                        <LogoTradeMark width={20} height={20} />
+                      </div>
+                      <div className='text-2xl max-md:text-base font-gtFont'>JOURNAL</div>
+                    </Link>
+                    <h1 className='text-2xl font-bold mt-20 max-md:mt-10'>{post.title.toUpperCase()}</h1>
+                    <div className='mt-10'>{post.excerpt}</div>
                   </div>
                   <div className='flex flex-col justify-center max-md:mt-10'>
                     <div className='max-md:mb-2'>

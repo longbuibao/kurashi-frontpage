@@ -17,7 +17,7 @@ export async function PostBody ({ post }: Props): Promise<React.ReactElement> {
   const toc = await extractToc(post.content)
 
   return (
-    <div className='prose mx-auto w-[80%]'>
+    <div className='prose mx-auto w-full'>
       <TableOfContents html={toc} />
       <Markdown
         remarkPlugins={[remarkGfm]} rehypePlugins={[rehypeRaw, rehypeSlug]}

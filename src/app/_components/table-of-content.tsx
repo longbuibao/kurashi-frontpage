@@ -23,7 +23,7 @@ export function TableOfContents ({ html }: TableOfContentsProps): React.ReactEle
 
   return (
     <div className='my-4 border border-kurashi-border rounded-md shadow-sm w-full'>
-      <div className='flex flex-row justify-between items-center px-4 text-secondary bg-main opacity-90'>
+      <div className='flex flex-row justify-between items-center px-4 bg-secondary opacity-90'>
         <button onClick={() => setVisible((v) => !v)} className='flex flex-row gap-3 items-center'>
           <i className='fa-solid fa-bars' />
           <div>Nội dung chính</div>
