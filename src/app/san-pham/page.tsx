@@ -17,7 +17,7 @@ export async function generateMetadata (): Promise<Metadata> {
 
 const AllProducts: React.FC<{ lng: string }> = async () => {
   const products = await prisma.product.findMany({
-    where: { isAvailable: true },
+    where: { isAvailable: true, hasLandingPage: true },
     take: 20,
     include: {
       category: {

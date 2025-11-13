@@ -95,7 +95,9 @@ const Page: React.FC<PageProps> = async (props) => {
     }
   })
   const cadImages = product.productImages.filter(x => x.isCadImage)
-  const mobileHero = product.productImages.filter(x => x.isMobileImage)
+  const mobileHero = product.productImages.filter(x => x.isMobileImage)[0]
+  const productIntro = product.productIntro.filter(x => x.isMainIntro)[0]
+  const cadImage = cadImages[0]
 
   return (
     <div className='w-full'>
@@ -103,7 +105,9 @@ const Page: React.FC<PageProps> = async (props) => {
         <Image className='object-cover' src={product.thumbnail} fill alt={product.name} />
       </div>
       <div className='relative h-[60vh] hidden max-md:block'>
-        <Image src={mobileHero[0].mobileImageUrl} alt={mobileHero[0].content} fill />
+        {mobileHero !== undefined
+          ? <Image src={mobileHero.mobileImageUrl} alt={mobileHero.content} fill />
+          : 'miss mobile image'}
       </div>
       <div className='my-20'>
         <div className='text-[#6D6E71] flex flex-col gap-10 w-[60%] max-md:w-4/5 mx-auto'>
@@ -111,16 +115,18 @@ const Page: React.FC<PageProps> = async (props) => {
             {productName.toUpperCase()}
           </div>
           <div className='max-md:text-center'>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perspiciatis veniam, ipsa, fugit ex unde dignissimos incidunt similique distinctio quis quos eveniet voluptatibus est aliquam. Harum eveniet earum maxime architecto reprehenderit.
+            {product.shortIntro}
           </div>
         </div>
         <div className='flex flex-row justify-center mt-16 gap-20 max-md:gap-10 w-4/5 mx-auto items-stretch max-md:flex-col'>
           <div className='w-[30%] max-md:w-full'>
-            <EmblaCarouselWithThumbnail slides={createImageSlider(thumbnailImages)} options={{}} />
+            {thumbnailImages.length > 0
+              ? <EmblaCarouselWithThumbnail slides={createImageSlider(thumbnailImages)} options={{}} />
+              : 'miss sliders, add image in ProductImages'}
           </div>
           <div className='w-1/3 flex flex-col max-md:w-full'>
             <div className='text-[#6D6E71] pb-10 border-b-[0.5px] border-secondary-opacity max-md:text-center'>
-              {product.productIntro.filter(x => x.isMainIntro)[0].content}
+              {productIntro !== undefined ? productIntro.content : <>miss content product intro</>}
             </div>
             <div className='grid grid-cols-2 grid-rows-7 gap-5 mt-5 max-md:gap-[.3rem]'>
               <div className='flex items-center justify-start font-bold'>Thông tin</div>
@@ -163,7 +169,9 @@ const Page: React.FC<PageProps> = async (props) => {
           {'Cấu tạo'.toUpperCase()}
         </div>
         <div className='relative w-[65%] my-20 mx-auto max-md:w-full'>
-          <Image className='object-fill aspect-[1.31166518255]' src={cadImages[0].imageUrl} width={1473} height={1123} alt={cadImages[0].content} />
+          {cadImage !== undefined
+            ? <Image className='object-fill aspect-[1.31166518255]' src={cadImage.imageUrl} width={1473} height={1123} alt={cadImage.content} />
+            : 'miss cad image'}
         </div>
       </div>
       <div className='w-[60%] max-md:w-4/5 mx-auto mt-10 mb-1'>
