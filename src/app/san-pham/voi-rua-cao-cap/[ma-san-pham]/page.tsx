@@ -166,31 +166,31 @@ const Page: React.FC<PageProps> = async (props) => {
 
   const steps = [
     {
-      summary: 'Tích hợp phụ kiện',
+      summary: 'E-LEVER',
       thumbnail:
-        'https://storage.googleapis.com/kurashi_frontpage_files/images/tam-op-tuong-nam-cham/tich-hop-phu-kien.webp',
-      label: 'TÍCH HỢP PHỤ KIỆN',
-      title: 'PHỤ KIỆN NAM CHÂM',
+        'https://storage.googleapis.com/kurashi_frontpage_files/images/products/voi-rua/e-lever.webp',
+      label: 'E-LEVER',
+      title: 'E-LEVER',
       content:
-        'Tấm ốp tường hút nam châm cho phép gắn, tháo và di chuyển phụ kiện từ tính tự do mà không cần khoan, giúp bề mặt tường luôn nguyên vẹn.'
+        'Cần gạt tạo điểm "tick" ở vị trí nước lạnh, giúp nhận biết ranh giới nước lạnh - nước nóng và tránh kích hoạt máy nước nóng không cần thiết.'
     },
     {
-      summary: 'chống ố',
+      summary: 'DUAL FLOW',
       thumbnail:
-        'https://storage.googleapis.com/kurashi_frontpage_files/images/tam-op-tuong-nam-cham/chong-o.webp',
-      label: 'CHỐNG Ố',
-      title: 'KHÓ BÁM BẨN',
+        'https://storage.googleapis.com/kurashi_frontpage_files/images/products/voi-rua/dual-flow.webp',
+      label: 'DUAL FLOW',
+      title: 'DUAL FLOW',
       content:
-        'Bề mặt hard coating chống bám dầu mỡ và bụi bẩn, giúp lau chùi nhanh chóng, đặc biệt phù hợp cho khu bếp thường xuyên có nhiều vết bẩn.'
+        'Hai chế độ nước - tia sen và bọt khí - chuyển đổi tinh tế, mang đến trải nghiệm vừa mạnh mẽ vừa mềm mại, phù hợp hoàn hảo cho mọi thao tác rửa.'
     },
     {
-      summary: 'Dễ thi công',
+      summary: 'SMOOTH-PULL',
       thumbnail:
-        'https://storage.googleapis.com/kurashi_frontpage_files/images/tam-op-tuong-nam-cham/de-thi-cong.webp',
-      label: 'DỄ THI CÔNG',
-      title: 'DỄ THI CÔNG',
+        'https://storage.googleapis.com/kurashi_frontpage_files/images/products/voi-rua/smooth-pull.webp',
+      label: 'SMOOTH-PULL',
+      title: 'SMOOTH-PULL',
       content:
-        'Tấm ốp tường hút nam châm có trọng lượng nhẹ hơn nhiều so với ốp đá tự nhiên, dễ cắt ghép và thi công, giúp giảm đáng kể chi phí nhân công và thời gian lắp đặt.'
+        'Chuyển động dây rút nhẹ, mượt và êm ái, mang lại trải nghiệm linh hoạt mà không cần dùng lực.'
     }
   ]
 
@@ -204,7 +204,6 @@ const Page: React.FC<PageProps> = async (props) => {
       }
     })
   const cadImages = product.productImages.filter((x) => x.isCadImage)
-  const mobileHero = product.productImages.filter((x) => x.isMobileImage)[0]
   const productIntro = product.productIntro.filter((x) => x.isMainIntro)[0]
   const cadImage = cadImages[0]
 
@@ -281,11 +280,7 @@ const Page: React.FC<PageProps> = async (props) => {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
       />
       <main className='w-full'>
-        <div
-          className='bg-cover bg-no-repeat bg-center w-full h-[60vh] relative max-md:hidden'
-          role='img'
-          aria-label={`Hình ảnh sản phẩm ${productName}`}
-        >
+        <div className='bg-cover bg-no-repeat bg-center w-full h-[60vh] relative max-md:hidden' role='img' aria-label={`Hình ảnh sản phẩm ${productName}`}>
           <Image
             className='object-cover'
             src={product.thumbnail}
@@ -295,22 +290,7 @@ const Page: React.FC<PageProps> = async (props) => {
           />
         </div>
         <div className='relative h-[60vh] hidden max-md:block'>
-          {mobileHero !== undefined
-            ? (
-              <Image
-                src={mobileHero.mobileImageUrl}
-                alt={
-                mobileHero.content !== null && mobileHero.content !== ''
-                  ? mobileHero.content
-                  : `${productName} - Vòi rửa cao cấp Kurashi`
-              }
-                fill
-                priority
-              />
-              )
-            : (
-                'miss mobile image'
-              )}
+          <Image src='https://storage.googleapis.com/kurashi_frontpage_files/images/products/voi-rua/voi-rua-cao-cap-mobile-1.webp' alt={`${productName} - Vòi rửa cao cấp Kurashi`} fill priority />
         </div>
         <article className='my-20'>
           <header className='text-[#6D6E71] flex flex-col gap-10 w-[60%] max-md:w-4/5 mx-auto'>
@@ -375,10 +355,10 @@ const Page: React.FC<PageProps> = async (props) => {
           </section>
         </article>
         <section className='w-[60%] max-md:w-4/5 mx-auto mt-28 mb-20'>
-          <h2 className='pl-3 border-l-2 border-black text-black text-xl '>
+          <h2 className='pl-3 border-l-2 border-black text-black text-xl'>
             {'Công nghệ nổi bật'.toUpperCase()}
           </h2>
-          <div className='w-4/5 mx-auto py-20 max-md:py-0'>
+          <div className='w-4/5 mx-auto max-md:w-full py-20 max-md:py-0'>
             <KurashiSlider steps={steps} />
           </div>
         </section>
