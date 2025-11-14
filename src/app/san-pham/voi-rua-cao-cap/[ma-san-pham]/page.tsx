@@ -283,7 +283,7 @@ const Page: React.FC<PageProps> = async (props) => {
         <div className='bg-cover bg-no-repeat bg-center w-full h-[60vh] relative max-md:hidden' role='img' aria-label={`Hình ảnh sản phẩm ${productName}`}>
           <Image
             className='object-cover'
-            src={product.thumbnail}
+            src='https://storage.googleapis.com/kurashi_frontpage_files/images/products/voi-rua/cover-page-voi-rua.svg'
             fill
             alt={`${productName} - Vòi rửa cao cấp Kurashi`}
             priority
