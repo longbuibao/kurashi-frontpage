@@ -23,7 +23,7 @@ const ProductAccessoryCard: React.FC<ProductAccessoryCardProps> = ({ product: x 
   return (
     <Link href={`/san-pham/phu-kien-bep/san-pham-phu-kien-bep/${productUniqueName}`} key={x.id} className='rounded-lg w-full group'>
       <div className='mx-auto p-3'>
-        <Image className='rounded-xl' src={x.thumbnail ?? '#'} width={1080} height={1080} alt='Phụ kiện nam châm' />
+        <Image className='rounded-xl' src={x.thumbnail ?? '#'} width={1080} height={1080} alt={x.shortIntro ?? ''} />
       </div>
       <div className='m-3 flex flex-row justify-between mt-10 max-md:mt-3'>
         <div className='flex flex-col gap-2'>

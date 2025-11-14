@@ -1,11 +1,15 @@
-import React from 'react'
+import React, { Suspense } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import { UrlObject } from 'url'
 import { EmblaCarousel } from '@/components/embla-carousel'
 import { LogoTradeMark } from '@/components/logo'
 import { GoldenCollection } from '@/components/golden-collection'
 import { SanPhamLienQuan } from '@/components/san-pham-lien-quan'
+import prisma from '@/lib/prisma'
+import { FilterCard } from '@/components/filter-card'
+import { CategoryItem } from '@/components/category-item'
+import LoadingSpinner from '../phu-kien-bep/accessories-product-skeleton'
+import { ProductAccessoryCard } from '@/components/product'
 
 export const metadata = {
   title: 'Vòi rửa cao cấp'
@@ -49,64 +53,67 @@ const kieuDangImages = [
   }
 })
 
-const products = [
-  {
-    thumbnail: 'https://storage.googleapis.com/kurashi_frontpage_files/images/voi-rua/voi_1.png',
-    id: '001',
-    alt: 'sản phẩm 1',
-    link: '#'
-  },
-  {
-    thumbnail: 'https://storage.googleapis.com/kurashi_frontpage_files/images/voi-rua/voi_2.png',
-    id: '002',
-    alt: 'sản phẩm 2',
-    link: '#'
-  },
-  {
-    thumbnail: 'https://storage.googleapis.com/kurashi_frontpage_files/images/voi-rua/voi_3.png',
-    id: '003',
-    alt: 'sản phẩm 3',
-    link: '#'
-  },
-  {
-    thumbnail: 'https://storage.googleapis.com/kurashi_frontpage_files/images/voi-rua/voi_1.png',
-    id: '004',
-    alt: 'sản phẩm 1',
-    link: '#'
-  },
-  {
-    thumbnail: 'https://storage.googleapis.com/kurashi_frontpage_files/images/voi-rua/voi_2.png',
-    id: '005',
-    alt: 'sản phẩm 2',
-    link: '#'
-  },
-  {
-    thumbnail: 'https://storage.googleapis.com/kurashi_frontpage_files/images/voi-rua/voi_3.png',
-    id: '006',
-    alt: 'sản phẩm 3',
-    link: '#'
-  },
-  {
-    thumbnail: 'https://storage.googleapis.com/kurashi_frontpage_files/images/voi-rua/voi_1.png',
-    id: '007',
-    alt: 'sản phẩm 1',
-    link: '#'
-  },
-  {
-    thumbnail: 'https://storage.googleapis.com/kurashi_frontpage_files/images/voi-rua/voi_2.png',
-    id: '008',
-    alt: 'sản phẩm 2',
-    link: '#'
-  },
-  {
-    thumbnail: 'https://storage.googleapis.com/kurashi_frontpage_files/images/voi-rua/voi_3.png',
-    id: '009',
-    alt: 'sản phẩm 3',
-    link: '#'
-  }
-]
+const AllProducts: React.FC = async () => {
+  const products = await prisma.product.findMany({
+    where: {
+      isAvailable: true,
+      categoryId: {
+        in: [
+          'f051e783-1535-4822-a78c-341e28b92457'
+        ]
+      }
+    }
+  })
 
-const Page: React.FC = () => {
+  return (
+    <div className='grid grid-cols-3 grid-rows-3 w-full my-10 gap-20 max-md:gap-10 max-md:grid-cols-1'>
+      {products.map(x => {
+        return <ProductAccessoryCard key={x.id} product={x} />
+      })}
+    </div>
+  )
+}
+
+const Page: React.FC = async () => {
+  const allCategoriesWithCount = await prisma.product.groupBy({
+    by: ['categoryId'],
+    where: {
+      isAvailable: true,
+      categoryId: {
+        in: [
+          'f051e783-1535-4822-a78c-341e28b92457'
+        ]
+      }
+    },
+    _count: {
+      _all: true
+    }
+  })
+
+  const categoriesWithNameAndThumbnail = await prisma.category.findMany({
+    select: {
+      name: true,
+      thumbnail: true,
+      id: true,
+      order: true,
+      categoryUniqueName: true
+    }
+  })
+
+  const categories = allCategoriesWithCount.map(x => {
+    const count = x._count._all
+    const category = categoriesWithNameAndThumbnail.find(y => y.id === x.categoryId)
+
+    return {
+      count,
+      name: category?.name,
+      thumbnail: category?.thumbnail,
+      key: category?.id,
+      order: category?.order ?? 0,
+      url: category?.categoryUniqueName ?? ''
+    }
+  })
+
   return (
     <div className='leading-loose'>
       <Image className='w-full h-auto max-md:hidden' src='/images/voi-rua-cao-cap-kurashi.svg' alt='Hero' width={1920} height={900} />
@@ -172,26 +179,25 @@ const Page: React.FC = () => {
             <EmblaCarousel biggerSlider={false} slides={kieuDangImages} useFlatControlButton />
           </div>
         </div>
-        <div className='my-40 max-md:my-20 max-md:w-4/5 max-md:mx-auto'>
+        <div className='mt-40 mb-20 max-md:my-20 max-md:w-4/5 max-md:mx-auto'>
           <div className='border-l-2 border-r-black font-bold px-5 text-2xl my-10 max-md:pl-3'>
             BỘ SƯU TẬP VÒI
           </div>
           <div className='my-10'>Bộ sưu tập vòi nước KURASHI - nơi tập hợp đầy đủ các mẫu vòi Nhật Bản chính hãng. Bạn có thể lọc nhanh theo loại sản phẩm (vòi lavabo hoặc vòi rửa chén) để tìm được mẫu phù hợp nhất.</div>
         </div>
-        <div>
-          <div className='flex flex-row my-5'>
-            <div className='px-10 max-md:px-5 py-2 w-1/2 bg-[#ADADAD] text-center text-secondary'>Vòi rửa chén</div>
-            <div className='px-10 max-md:px-5 py-2 w-1/2 bg-[#D9D9D9] text-center'>Vòi rửa mặt</div>
+        <div className='flex flex-row'>
+          <div className='w-[25%]'>
+            <FilterCard title='Danh mục'>
+              <div className='flex flex-col gap-5'>
+                {categories.sort((x, y) => y.order - x.order).map(category =>
+                  <CategoryItem url={category.url} name={category.name ?? ''} numberOfProducts={category.count ?? 0} thumbnail={category.thumbnail ?? ''} key={category.key} />)}
+              </div>
+            </FilterCard>
           </div>
-          <div className='grid grid-cols-3 grid-rows-3 w-full my-10 gap-20 max-md:gap-10 max-md:grid-cols-1'>
-            {products.map(x =>
-              <Link key={x.id} href={x.link as any as UrlObject} className='size-80 flex flex-col gap-3 items-center justify-center relative'>
-                <div className='relative w-4/5 h-[90%]'>
-                  <Image src={x.thumbnail} className='object-fill' fill alt={x.alt} />
-                </div>
-                <div className='text-center'>Mã số {x.id}</div>
-              </Link>
-            )}
+          <div className='w-[60%]'>
+            <Suspense fallback={<LoadingSpinner />}>
+              <AllProducts />
+            </Suspense>
           </div>
         </div>
         <SanPhamLienQuan />
