@@ -9,7 +9,7 @@ import prisma from '@/lib/prisma'
 import { FilterCard } from '@/components/filter-card'
 import { CategoryItem } from '@/components/category-item'
 import LoadingSpinner from '../phu-kien-bep/accessories-product-skeleton'
-import { ProductAccessoryCard } from '@/components/product'
+import { ProductVoiRuaCard } from '@/components/product'
 
 export const metadata = {
   title: 'Vòi rửa cao cấp'
@@ -68,7 +68,7 @@ const AllProducts: React.FC = async () => {
   return (
     <div className='grid grid-cols-3 grid-rows-3 w-full my-10 gap-20 max-md:gap-10 max-md:grid-cols-1'>
       {products.map(x => {
-        return <ProductAccessoryCard key={x.id} product={x} />
+        return <ProductVoiRuaCard key={x.id} product={x} />
       })}
     </div>
   )
@@ -185,8 +185,8 @@ const Page: React.FC = async () => {
           </div>
           <div className='my-10'>Bộ sưu tập vòi nước KURASHI - nơi tập hợp đầy đủ các mẫu vòi Nhật Bản chính hãng. Bạn có thể lọc nhanh theo loại sản phẩm (vòi lavabo hoặc vòi rửa chén) để tìm được mẫu phù hợp nhất.</div>
         </div>
-        <div className='flex flex-row'>
-          <div className='w-[25%]'>
+        <div className='flex flex-row max-md:flex-col'>
+          <div className='w-[25%] max-md:w-4/5 max-md:mx-auto'>
             <FilterCard title='Danh mục'>
               <div className='flex flex-col gap-5'>
                 {categories.sort((x, y) => y.order - x.order).map(category =>
@@ -194,7 +194,7 @@ const Page: React.FC = async () => {
               </div>
             </FilterCard>
           </div>
-          <div className='w-[60%]'>
+          <div className='w-[60%] max-md:w-4/5 max-md:mx-auto'>
             <Suspense fallback={<LoadingSpinner />}>
               <AllProducts />
             </Suspense>
