@@ -76,7 +76,7 @@ const AllProducts: React.FC = async () => {
   return (
     <div className='grid grid-cols-3 grid-rows-3 w-full my-10 gap-20 max-md:gap-10 max-md:grid-cols-1'>
       {products.map(x => {
-        return <ProductVoiRuaCard key={x.id} product={x} />
+        return <ProductVoiRuaCard key={x.id} product={x as any} />
       })}
     </div>
   )

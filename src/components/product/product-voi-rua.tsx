@@ -6,8 +6,12 @@ import { createTitleVoiRuaDetailPage } from '@/app/san-pham/voi-rua-cao-cap/util
 
 type ProductQueryType = Prisma.ProductGetPayload<{
   where: {
-    isTrendingProduct: true
-    isAccessoryProduct: true
+    isAvailable: true
+    categoryId: {
+      in: [
+        'f051e783-1535-4822-a78c-341e28b92457'
+      ]
+    }
   }
   include: {
     ProductColor: true
