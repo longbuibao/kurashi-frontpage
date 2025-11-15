@@ -2,6 +2,7 @@ import React from 'react'
 import Image from 'next/image'
 import { Prisma } from '@prisma/client'
 import Link from 'next/link'
+import { createTitleVoiRuaDetailPage } from '@/app/san-pham/voi-rua-cao-cap/utils'
 
 type ProductQueryType = Prisma.ProductGetPayload<{
   where: {
@@ -9,17 +10,24 @@ type ProductQueryType = Prisma.ProductGetPayload<{
     isAccessoryProduct: true
   }
   include: {
-    category: true
     ProductColor: true
+    productImages: true
+    productIntro: true
+    category: true
+    secondaryCategory: true
+    finish: true
+    material: true
+    productInterface: true
   }
 }>
 
 interface ProductVoiRuaCardProps {
-  product: Partial<ProductQueryType>
+  product: ProductQueryType
 }
 
 const VoiRuaCard: React.FC<ProductVoiRuaCardProps> = ({ product: x }) => {
   const productUniqueName = x.uniqueName === null || x.uniqueName === undefined ? '#' : x.uniqueName
+  const productName = createTitleVoiRuaDetailPage(x)
   return (
     <Link href={`/san-pham/phu-kien-bep/san-pham-phu-kien-bep/${productUniqueName}`} key={x.id} className='rounded-lg w-full group'>
       <div className='mx-auto p-3'>
@@ -27,8 +35,7 @@ const VoiRuaCard: React.FC<ProductVoiRuaCardProps> = ({ product: x }) => {
       </div>
       <div className='m-3 flex flex-row justify-between mt-10 max-md:mt-3'>
         <div className='flex flex-col gap-2'>
-          <div className='font-bold text-text-phu-kien'>{x.category?.name}</div>
-          <div className='line-clamp-1 max-md:text-sm'>{x.name}</div>
+          <div className='line-clamp-1 max-md:text-sm'>{productName}</div>
         </div>
         <div className='flex flex-col gap-3 justify-between'>
           <div className='flex flex-row gap-3 justify-end'>
@@ -38,10 +45,6 @@ const VoiRuaCard: React.FC<ProductVoiRuaCardProps> = ({ product: x }) => {
                 return <div style={{ background: y.colorHex }} className={className} key={y.id} />
               })
               : null}
-          </div>
-          <div className='text-text-phu-kien font-bold relative flex flex-row items-center gap-3 text-nowrap pl-1 max-md:hidden'>
-            <Image src='/images/RightArrow.svg' width={10} height={10} alt='Kurashi JOURNAL' />
-            <div className='text-sm'>Hỏi giá</div>
           </div>
         </div>
       </div>

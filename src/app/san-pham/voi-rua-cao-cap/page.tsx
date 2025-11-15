@@ -6,7 +6,6 @@ import { LogoTradeMark } from '@/components/logo'
 import { GoldenCollection } from '@/components/golden-collection'
 import { SanPhamLienQuan } from '@/components/san-pham-lien-quan'
 import prisma from '@/lib/prisma'
-import { FilterCard } from '@/components/filter-card'
 import { CategoryItem } from '@/components/category-item'
 import LoadingSpinner from '../phu-kien-bep/accessories-product-skeleton'
 import { ProductVoiRuaCard } from '@/components/product'
@@ -62,6 +61,15 @@ const AllProducts: React.FC = async () => {
           'f051e783-1535-4822-a78c-341e28b92457'
         ]
       }
+    },
+    include: {
+      productImages: true,
+      productIntro: true,
+      category: true,
+      secondaryCategory: true,
+      finish: true,
+      material: true,
+      productInterface: true
     }
   })
 
@@ -179,22 +187,20 @@ const Page: React.FC = async () => {
             <EmblaCarousel biggerSlider={false} slides={kieuDangImages} useFlatControlButton />
           </div>
         </div>
-        <div className='mt-40 mb-20 max-md:my-20 max-md:w-4/5 max-md:mx-auto'>
+        <div className='mt-40 mb-10 max-md:my-20 max-md:w-4/5 max-md:mx-auto'>
           <div className='border-l-2 border-r-black font-bold px-5 text-2xl my-10 max-md:pl-3'>
             BỘ SƯU TẬP VÒI
           </div>
           <div className='my-10'>Bộ sưu tập vòi nước KURASHI - nơi tập hợp đầy đủ các mẫu vòi Nhật Bản chính hãng. Bạn có thể lọc nhanh theo loại sản phẩm (vòi lavabo hoặc vòi rửa chén) để tìm được mẫu phù hợp nhất.</div>
         </div>
-        <div className='flex flex-row max-md:flex-col'>
-          <div className='w-[25%] max-md:w-4/5 max-md:mx-auto'>
-            <FilterCard title='Danh mục'>
-              <div className='flex flex-col gap-5'>
-                {categories.sort((x, y) => y.order - x.order).map(category =>
-                  <CategoryItem url={category.url} name={category.name ?? ''} numberOfProducts={category.count ?? 0} thumbnail={category.thumbnail ?? ''} key={category.key} />)}
-              </div>
-            </FilterCard>
+        <div className='max-md:w-4/5 max-md:mx-auto'>
+          <div className='flex flex-row gap-5 justify-start'>
+            {categories.sort((x, y) => y.order - x.order).map(category =>
+              <CategoryItem url={category.url} name={category.name ?? ''} numberOfProducts={category.count ?? 0} thumbnail={category.thumbnail ?? ''} key={category.key} />)}
           </div>
-          <div className='w-[60%] max-md:w-4/5 max-md:mx-auto'>
+        </div>
+        <div className='flex flex-row max-md:flex-col'>
+          <div className='max-md:w-4/5 max-md:mx-auto'>
             <Suspense fallback={<LoadingSpinner />}>
               <AllProducts />
             </Suspense>
