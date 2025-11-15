@@ -9,7 +9,6 @@ import prisma from '@/lib/prisma'
 import { CategoryItem } from '@/components/category-item'
 import LoadingSpinner from '../phu-kien-bep/accessories-product-skeleton'
 import { ProductVoiRuaCard } from '@/components/product'
-import { sleep } from '@/utils'
 
 export const metadata = {
   title: 'Vòi rửa cao cấp'
@@ -54,7 +53,6 @@ const kieuDangImages = [
 })
 
 const AllProducts: React.FC = async () => {
-  await sleep(5000)
   const products = await prisma.product.findMany({
     where: {
       isAvailable: true,
