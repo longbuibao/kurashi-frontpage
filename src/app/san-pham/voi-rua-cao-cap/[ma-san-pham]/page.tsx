@@ -294,7 +294,7 @@ const Page: React.FC<PageProps> = async (props) => {
         </div>
         <article className='my-20'>
           <header className='text-[#6D6E71] flex flex-col gap-10 w-[60%] max-md:w-4/5 mx-auto'>
-            <h1 className='text-3xl font-bold w-4/5 max-md:w-full max-md:mx-auto max-md:text-2xl max-md:text-center'>
+            <h1 className='text-3xl font-bold w-full max-md:mx-auto max-md:text-2xl max-md:text-center'>
               {productName.toUpperCase()}
             </h1>
             <p className='max-md:text-center'>{product.shortIntro}</p>
