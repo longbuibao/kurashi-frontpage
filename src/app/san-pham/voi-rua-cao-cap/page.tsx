@@ -9,6 +9,7 @@ import prisma from '@/lib/prisma'
 import { CategoryItem } from '@/components/category-item'
 import LoadingSpinner from '../phu-kien-bep/accessories-product-skeleton'
 import { ProductVoiRuaCard } from '@/components/product'
+import { sleep } from '@/utils'
 
 export const metadata = {
   title: 'Vòi rửa cao cấp'
@@ -53,6 +54,7 @@ const kieuDangImages = [
 })
 
 const AllProducts: React.FC = async () => {
+  await sleep(5000)
   const products = await prisma.product.findMany({
     where: {
       isAvailable: true,
@@ -75,7 +77,9 @@ const AllProducts: React.FC = async () => {
 
   return (
     <div className='grid grid-cols-3 grid-rows-3 w-full my-10 gap-20 max-md:gap-10 max-md:grid-cols-1'>
-      {products.map(x => {
+      {products.sort((a, b) => {
+        return a.order > b.order ? 1 : -1
+      }).map(x => {
         return <ProductVoiRuaCard key={x.id} product={x as any} />
       })}
     </div>
