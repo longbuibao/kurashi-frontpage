@@ -44,8 +44,6 @@ steps:
       - "us-central1"
       - "--platform"
       - "managed"
-      - "--add-cloudsql-instances"
-      - "kurashi-frontpage-419616:us-central1:kurashi-production-db"
       - "--labels"
       - "managed-by=gcp-cloud-build-deploy-cloud-run,commit-sha=$SHORT_SHA,gcb-build-id=$BUILD_ID"
 options:
