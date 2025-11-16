@@ -74,7 +74,7 @@ const AllProducts: React.FC = async () => {
   })
 
   return (
-    <div className='grid grid-cols-3 grid-rows-3 w-full my-10 gap-20 max-md:gap-10 max-md:grid-cols-1'>
+    <div className='grid grid-cols-3 grid-rows-3 w-full my-10 gap-20 max-md:gap-10 max-md:grid-cols-2'>
       {products.sort((a, b) => {
         return a.order > b.order ? 1 : -1
       }).map(x => {
@@ -132,7 +132,7 @@ const Page: React.FC = async () => {
         <h1 className='text-3xl my-20 max-md:mt-14 max-md:mb-10 max-md:text-nowrap max-md:text-2xl max-md:text-center'>
           VÒI RỬA CAO CẤP
         </h1>
-        <div className='flex flex-col gap-5 my-10 max-md:text-center max-md:mt-0'>
+        <div className='flex flex-col gap-5 my-10 max-md:text-center max-md:mt-0 max-md:px-10'>
           Bộ sưu tập vòi hand-made KURASHI - PVD và bề mặt cao cấp. Vòi lavabo & vòi rửa chén Nhật Bản, sang trọng, bền bỉ, tiết kiệm nước, bảo hành chính hãng.
         </div>
         <div className='max-md:w-[100%] max-md:mx-auto'>

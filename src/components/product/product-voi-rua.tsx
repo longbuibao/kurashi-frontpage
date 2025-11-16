@@ -43,9 +43,9 @@ const VoiRuaCard: React.FC<ProductVoiRuaCardProps> = ({ product: x }) => {
       <div className='mx-auto p-3'>
         <Image className='rounded-xl' src={x.thumbnail ?? '#'} width={1080} height={1080} alt={x.shortIntro ?? ''} />
       </div>
-      <div className='text-center'>
+      <div className='text-center max-md:text-sm max-md:mt-3'>
         <div className='font-bold text-text-phu-kien'>{finalTitle}</div>
-        <div className='flex flex-row justify-center'>
+        <div className='flex flex-row justify-center max-md:mt-3'>
           {x.finish?.name} {x.sku}
         </div>
       </div>
