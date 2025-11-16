@@ -14,7 +14,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product, lng }) => {
       <div className='bg-secondary overflow-hidden z-10 h-full'>
         <Image className='transform transition-transform duration-500 h-full' src={product.thumbnail ?? '#'} alt='product thumbnail' width={640} height={360} />
       </div>
-      <div className='font-semibold mt-5 max-md:text-[0.75rem] max-md:font-normal max-md:text-left max-md:w-full'>
+      <div className='font-semibold mt-5 max-md:text-[0.75rem] max-md:font-normal max-md:text-left max-md:w-full max-md:text-nowrap'>
         {product.name?.toUpperCase() ?? '#'}
       </div>
     </div>
