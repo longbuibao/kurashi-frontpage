@@ -39,7 +39,7 @@ const VoiRuaCard: React.FC<ProductVoiRuaCardProps> = ({ product: x }) => {
 
   const finalTitle = title.charAt(0).toUpperCase() + title.slice(1)
   return (
-    <Link href={url as unknown as UrlObject} key={x.id} className='rounded-lg w-full group hover:bg-[#F1E9DF] transition-colors duration-300 max-md:p-3'>
+    <Link href={url as unknown as UrlObject} key={x.id} className='max-md:h-64 max-md:px-3 rounded-lg w-full group hover:bg-[#F1E9DF] transition-colors duration-300'>
       <div className='mx-auto p-3'>
         <Image className='rounded-xl' src={x.thumbnail ?? '#'} width={1080} height={1080} alt={x.shortIntro ?? ''} />
       </div>
