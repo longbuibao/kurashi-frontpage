@@ -119,8 +119,8 @@ export async function generateMetadata (props: PageProps): Promise<Metadata> {
     description,
     keywords,
     robots: {
-      index: false,
-      follow: false
+      index: true,
+      follow: true
     },
     alternates: {
       canonical: `/san-pham/voi-rua-cao-cap/${param}`
