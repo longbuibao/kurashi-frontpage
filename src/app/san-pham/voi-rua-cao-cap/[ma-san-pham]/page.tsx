@@ -15,19 +15,19 @@ interface PageProps {
   params: Promise<{ 'ma-san-pham': string }>
 }
 
-const DownloadLink: React.FC<{ title: string, url: string }> = ({ title, url }) => {
+const DownloadLink: React.FC<{ title: string; url: string }> = ({ title, url }) => {
   return (
     <Link href={url as any as UrlObject}>
-      <div className='border border-kurashi-border max-md:gap-3 flex flex-row gap-10 items-center p-3 max-md:w-fit'>
+      <div className="border border-kurashi-border max-md:gap-3 flex flex-row gap-10 items-center p-3 max-md:w-fit">
         <div>{title}</div>
-        <i className='fa-solid fa-chevron-right' />
+        <i className="fa-solid fa-chevron-right" />
       </div>
     </Link>
   )
 }
 
 const createImageSlider = (
-  images: Array<{ imageUrl: string, key: string, index: number }>,
+  images: Array<{ imageUrl: string; key: string; index: number }>,
   productName: string
 ): Array<{
   key: string
@@ -49,7 +49,7 @@ const createImageSlider = (
     }
   })
 
-export async function generateStaticParams (): Promise<any> {
+export async function generateStaticParams(): Promise<any> {
   const products = await prisma.product.findMany({
     where: {
       category: {
@@ -68,7 +68,7 @@ export async function generateStaticParams (): Promise<any> {
   })
 }
 
-export async function generateMetadata (props: PageProps): Promise<Metadata> {
+export async function generateMetadata(props: PageProps): Promise<Metadata> {
   const params = await props.params
   const param = params['ma-san-pham']
   const sku = param.split('-').slice(-1)[0]
@@ -119,8 +119,8 @@ export async function generateMetadata (props: PageProps): Promise<Metadata> {
     description,
     keywords,
     robots: {
-      index: false,
-      follow: false
+      index: true,
+      follow: true
     },
     alternates: {
       canonical: `/san-pham/voi-rua-cao-cap/${param}`
@@ -272,81 +272,85 @@ const Page: React.FC<PageProps> = async (props) => {
   return (
     <>
       <script
-        type='application/ld+json'
+        type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(productJsonLd) }}
       />
       <script
-        type='application/ld+json'
+        type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
       />
-      <main className='w-full'>
-        <div className='bg-cover bg-no-repeat bg-center w-full h-[60vh] relative max-md:hidden' role='img' aria-label={`Hình ảnh sản phẩm ${productName}`}>
+      <main className="w-full">
+        <div
+          className="bg-cover bg-no-repeat bg-center w-full h-[60vh] relative max-md:hidden"
+          role="img"
+          aria-label={`Hình ảnh sản phẩm ${productName}`}>
           <Image
-            className='object-cover'
-            src='https://storage.googleapis.com/kurashi_frontpage_files/images/products/voi-rua/cover-page-voi-rua.svg'
+            className="object-cover"
+            src="https://storage.googleapis.com/kurashi_frontpage_files/images/products/voi-rua/cover-page-voi-rua.svg"
             fill
             alt={`${productName} - Vòi rửa cao cấp Kurashi`}
             priority
           />
         </div>
-        <div className='relative h-[60vh] hidden max-md:block'>
-          <Image src='https://storage.googleapis.com/kurashi_frontpage_files/images/products/voi-rua/voi-rua-cao-cap-mobile-1.webp' alt={`${productName} - Vòi rửa cao cấp Kurashi`} fill priority />
+        <div className="relative h-[60vh] hidden max-md:block">
+          <Image
+            src="https://storage.googleapis.com/kurashi_frontpage_files/images/products/voi-rua/voi-rua-cao-cap-mobile-1.webp"
+            alt={`${productName} - Vòi rửa cao cấp Kurashi`}
+            fill
+            priority
+          />
         </div>
-        <article className='my-20'>
-          <header className='text-[#6D6E71] flex flex-col gap-10 w-[60%] max-md:w-4/5 mx-auto'>
-            <h1 className='text-3xl font-bold w-full max-md:mx-auto max-md:text-2xl max-md:text-center'>
+        <article className="my-20">
+          <header className="text-[#6D6E71] flex flex-col gap-10 w-[60%] max-md:w-4/5 mx-auto">
+            <h1 className="text-3xl font-bold w-full max-md:mx-auto max-md:text-2xl max-md:text-center">
               {productName.toUpperCase()}
             </h1>
-            <p className='max-md:text-center'>{product.shortIntro}</p>
+            <p className="max-md:text-center">{product.shortIntro}</p>
           </header>
-          <section className='flex flex-row justify-center mt-16 gap-20 max-md:gap-10 w-4/5 mx-auto items-stretch max-md:flex-col'>
-            <div className='w-[30%] max-md:w-full'>
-              {thumbnailImages.length > 0
-                ? (
-                  <EmblaCarouselWithThumbnail
-                    slides={createImageSlider(thumbnailImages, productName)}
-                    options={{}}
-                  />
-                  )
-                : (
-                    'miss sliders, add image in ProductImages'
-                  )}
+          <section className="flex flex-row justify-center mt-16 gap-20 max-md:gap-10 w-4/5 mx-auto items-stretch max-md:flex-col">
+            <div className="w-[30%] max-md:w-full">
+              {thumbnailImages.length > 0 ? (
+                <EmblaCarouselWithThumbnail
+                  slides={createImageSlider(thumbnailImages, productName)}
+                  options={{}}
+                />
+              ) : (
+                'miss sliders, add image in ProductImages'
+              )}
             </div>
-            <div className='w-1/3 flex flex-col max-md:w-full'>
-              <div className='text-[#6D6E71] pb-10 border-b-[0.5px] border-secondary-opacity max-md:text-center'>
-                {productIntro !== undefined
-                  ? (
-                      productIntro.content
-                    )
-                  : (
-                    <>miss content product intro</>
-                    )}
+            <div className="w-1/3 flex flex-col max-md:w-full">
+              <div className="text-[#6D6E71] pb-10 border-b-[0.5px] border-secondary-opacity max-md:text-center">
+                {productIntro !== undefined ? (
+                  productIntro.content
+                ) : (
+                  <>miss content product intro</>
+                )}
               </div>
-              <div className='grid grid-cols-2 grid-rows-7 gap-5 mt-5 max-md:gap-[.3rem]'>
-                <div className='flex items-center justify-start font-bold'>Thông tin</div>
-                <div className='flex items-center justify-start font-bold'>Chi tiết</div>
-                <div className='flex items-center justify-start'>Mã sản phẩm</div>
-                <div className='flex items-center justify-start'>{product.sku}</div>
-                <div className='flex items-center justify-start'>Loại</div>
-                <div className='flex items-center justify-start'>
+              <div className="grid grid-cols-2 grid-rows-7 gap-5 mt-5 max-md:gap-[.3rem]">
+                <div className="flex items-center justify-start font-bold">Thông tin</div>
+                <div className="flex items-center justify-start font-bold">Chi tiết</div>
+                <div className="flex items-center justify-start">Mã sản phẩm</div>
+                <div className="flex items-center justify-start">{product.sku}</div>
+                <div className="flex items-center justify-start">Loại</div>
+                <div className="flex items-center justify-start">
                   {product.secondaryCategory?.name}
                 </div>
-                <div className='flex items-center justify-start'>Chất liệu</div>
-                <div className='flex items-center justify-start'>{product.material?.name}</div>
-                <div className='flex items-center justify-start'>Bề mặt</div>
-                <div className='flex items-center justify-start'>
+                <div className="flex items-center justify-start">Chất liệu</div>
+                <div className="flex items-center justify-start">{product.material?.name}</div>
+                <div className="flex items-center justify-start">Bề mặt</div>
+                <div className="flex items-center justify-start">
                   {product.productInterface?.name}
                 </div>
-                <div className='flex items-center justify-start'>Xuất xứ</div>
-                <div className='flex items-center justify-start'>{product.xuatXu}</div>
-                <div className='flex items-center justify-start'>Bảo hành</div>
-                <div className='flex items-center justify-start'>{product.baoHanh}</div>
+                <div className="flex items-center justify-start">Xuất xứ</div>
+                <div className="flex items-center justify-start">{product.xuatXu}</div>
+                <div className="flex items-center justify-start">Bảo hành</div>
+                <div className="flex items-center justify-start">{product.baoHanh}</div>
               </div>
-              <div className='justify-self-end mt-auto max-md:mt-10'>
-                <div className='grid grid-cols-2'>
+              <div className="justify-self-end mt-auto max-md:mt-10">
+                <div className="grid grid-cols-2">
                   <div>Giá niêm yết</div>
-                  <div className='flex flex-row gap-5 max-md:flex-col max-md:gap-0'>
-                    <div className='text-main font-bold'>{formatCurrency(product.price)}</div>
+                  <div className="flex flex-row gap-5 max-md:flex-col max-md:gap-0">
+                    <div className="text-main font-bold">{formatCurrency(product.price)}</div>
                     <div>(chưa VAT)</div>
                   </div>
                 </div>
@@ -354,52 +358,49 @@ const Page: React.FC<PageProps> = async (props) => {
             </div>
           </section>
         </article>
-        <section className='w-[60%] max-md:w-4/5 mx-auto mt-28 mb-20'>
-          <h2 className='pl-3 border-l-2 border-black text-black text-xl'>
+        <section className="w-[60%] max-md:w-4/5 mx-auto mt-28 mb-20">
+          <h2 className="pl-3 border-l-2 border-black text-black text-xl">
             {'Công nghệ nổi bật'.toUpperCase()}
           </h2>
-          <div className='w-4/5 mx-auto max-md:w-full py-20 max-md:py-0'>
+          <div className="w-4/5 mx-auto max-md:w-full py-20 max-md:py-0">
             <KurashiSlider steps={steps} />
           </div>
         </section>
-        <section className='w-[60%] max-md:w-4/5 mx-auto my-10'>
-          <h2 className='pl-3 border-l-2 border-black text-black text-xl'>
+        <section className="w-[60%] max-md:w-4/5 mx-auto my-10">
+          <h2 className="pl-3 border-l-2 border-black text-black text-xl">
             {'Cấu tạo'.toUpperCase()}
           </h2>
-          <div className='relative w-[65%] my-20 mx-auto max-md:w-full'>
-            {cadImage !== undefined
-              ? (
-                <Image
-                  className='object-fill aspect-[1.31166518255]'
-                  src={cadImage.imageUrl}
-                  width={1473}
-                  height={1123}
-                  alt={
+          <div className="relative w-[65%] my-20 mx-auto max-md:w-full">
+            {cadImage !== undefined ? (
+              <Image
+                className="object-fill aspect-[1.31166518255]"
+                src={cadImage.imageUrl}
+                width={1473}
+                height={1123}
+                alt={
                   cadImage.content !== null && cadImage.content !== ''
                     ? cadImage.content
                     : `${productName} - Bản vẽ cấu tạo sản phẩm`
                 }
-                />
-                )
-              : (
-                  'miss cad image'
-                )}
+              />
+            ) : (
+              'miss cad image'
+            )}
           </div>
         </section>
-        <section className='w-[60%] max-md:w-4/5 mx-auto mt-10 mb-1'>
-          <h2 className='pl-3 border-l-2 border-black text-black text-xl'>
+        <section className="w-[60%] max-md:w-4/5 mx-auto mt-10 mb-1">
+          <h2 className="pl-3 border-l-2 border-black text-black text-xl">
             {'Tải dữ liệu'.toUpperCase()}
           </h2>
           <nav
-            className='flex flex-row gap-10 my-10 max-md:flex-col'
-            aria-label='Tải tài liệu sản phẩm'
-          >
-            <DownloadLink title='Bản vẽ sản phẩm (PDF)' url='#' />
-            <DownloadLink title='Bản vẽ sản phẩm (DXF)' url='#' />
+            className="flex flex-row gap-10 my-10 max-md:flex-col"
+            aria-label="Tải tài liệu sản phẩm">
+            <DownloadLink title="Bản vẽ sản phẩm (PDF)" url="#" />
+            <DownloadLink title="Bản vẽ sản phẩm (DXF)" url="#" />
           </nav>
         </section>
-        <section className='w-[60%] mx-auto max-md:w-full'>
-          <SanPhamLienQuan className='my-24 max-md:mt-20 max-md:mb-16 max-md:text-center' />
+        <section className="w-[60%] mx-auto max-md:w-full">
+          <SanPhamLienQuan className="my-24 max-md:mt-20 max-md:mb-16 max-md:text-center" />
         </section>
       </main>
     </>
